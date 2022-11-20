@@ -1,0 +1,161 @@
+\input{preamble}
+
+
+%\usepackage[color]{showkeys}
+%\definecolor{refkey}{rgb}{0,0,1}
+
+
+
+
+\title{The notion of complex analytic spaces}
+
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\tableofcontents
+
+
+
+\section{Introduction}
+
+\section{\texorpdfstring{$\mathbb{C}$}{C}-ringed space}
+
+\begin{definition}
+    A \emph{$\mathbb{C}$-ringed space} is a pair $(X,\mathcal{O}_X)$ consisting of a topological space $X$ and a sheaf $\mathcal{O}_X$ of $\mathbb{C}$-algebras on $X$.
+
+    A \emph{morphism of $\mathbb{C}$-ringed spaces $f:(Y,\mathcal{O}_Y)\rightarrow (X,\mathcal{O}_X)$} is a pair consisting of a continuous map $f:Y\rightarrow X$ and a morphism of sheaves of $\mathbb{C}$-algebras $f^{\#}:f^{-1}\mathcal{O}_X\rightarrow \mathcal{O}_Y$.
+
+    Given two morphisms of $\mathbb{C}$-ringed spaces $f:(Y,\mathcal{O}_Y)\rightarrow (X,\mathcal{O}_X)$ and $g:(Z,\mathcal{O}_Z)\rightarrow (Y,\mathcal{O}_Y)$, their \emph{composition} is the morphism $f\circ g:(Z,\mathcal{O}_Z)\rightarrow (X,\mathcal{O}_X)$ consisting of the continuous map $f\circ g:Z\rightarrow X$ and a morphism of sheaves $(f\circ g)^{\#}=g^{\#}\circ g^{-1}f^{\#}:(f\circ g)^{-1}\mathcal{O}_X\cn g^{-1}f^{-1}\mathcal{O}_X\rightarrow \mathcal{O}_Z$.
+\end{definition}
+It is straightforward to verify that $\mathbb{C}$-ringed spaces form a category, which we denote by $\CRSCat$. Similarly, we denote by $\RSCat$ the category of ringed spaces defined in \cite[\href{https://stacks.math.columbia.edu/tag/0090}{Tag 0090}]{stacks-project}.
+
+There is an obvious faithful forget functor $\CRSCat\rightarrow \RSCat$.
+
+\begin{definition}
+    A \emph{locally $\mathbb{C}$-ringed space} is a $\mathbb{C}$-ringed space $(X,\mathcal{O}_X)$ which when regarded as a ringed space is a locally ringed space.
+
+    A \emph{morphism} between two locally $\mathbb{C}$-ringed spaces is a morphism between the underlying $\mathbb{C}$-ringed spaces which is a morphism of locally ringed spaces at the same time.
+\end{definition}
+We refer to \cite[\href{https://stacks.math.columbia.edu/tag/01HA}{Tag 01HA}]{stacks-project} for the notion of locally ringed spaces.
+
+\begin{example}\label{ex-Cnringed}
+    Let $n\in \mathbb{N}$, we define a sheaf of $\mathbb{C}$-algebras $\mathcal{O}_{\mathbb{C}^n}$ on $\mathbb{C}^n$ as follows: for any open subset $U\subseteq \mathbb{C}^n$, $\mathcal{O}_{\mathbb{C}^n}(U)$ is the $\mathbb{C}$-algebra of holomorphic functions on $U$. It is easy to see that $\mathcal{O}_{\mathbb{C}^n}$ is a sheaf and $(\mathbb{C}^n,\mathcal{O}_{\mathbb{C}^n})$ is a $\mathbb{C}$-ringed space. Moreover, it is easy to show that $(\mathbb{C}^n,\mathcal{O}_{\mathbb{C}^n})$ is a locally $\mathbb{C}$-ringed space.
+\end{example}
+
+\section{Complex model spaces and complex analytic spaces}
+
+
+
+\begin{definition}\label{def-sheafondomain}
+Given any domain $D$ in $\mathbb{C}^n$, we can define a sheaf of $\mathbb{C}$-algebras $\mathcal{O}_D$ on $D$ as the restriction of $\mathcal{O}_{\mathbb{C}^n}$ defined in \cref{ex-Cnringed} to $D$. Observe that $(D,\mathcal{O}_D)$ is a locally $\mathbb{C}$-ringed space. 
+\end{definition}
+
+
+\begin{definition}\label{def-complexmodelspace}
+    A \emph{complex model space} is a $\mathbb{C}$-ringed space $(X,\mathcal{O}_X)$ such that there exist
+    \begin{enumerate}
+        \item a domain $D$ in $\mathbb{C}^n$ for some $n\in \mathbb{N}$ and
+        \item an ideal sheaf $\mathcal{I}$ in $\mathcal{O}_D$ of finite type
+    \end{enumerate}
+    such that thre is an isomorphism
+    \[
+        (X,\mathcal{O}_X)\cong (\Supp \mathcal{O}_D/\mathcal{I},i^{-1}(\mathcal{O}_D/\mathcal{I}))
+    \]
+    in the category of $\CRSCat$, where $i:\Supp \mathcal{O}_D/\mathcal{I}\rightarrow D$ is the inclusion map. Here $\mathcal{O}_D$ is the sheaf of $\mathbb{C}$-algebras defined in \cref{def-sheafondomain}.
+
+    Clearly, $(X,\mathcal{O}_X)$ is a locally $\mathbb{C}$-ringed space.
+\end{definition}
+Observe that $X$ is always a Hausdorff space.
+
+\begin{definition}\label{def-complexanalyticspace}
+    A \emph{complex analytic space} is a $\mathbb{C}$-ringed space $(X,\mathcal{O}_X)$ such that 
+    \begin{enumerate}
+        \item $X$ is a Hausdorff space.
+        \item For any $x\in X$, there is an open neighbourhood $U\subseteq X$ of $x$ such that $(U,\mathcal{O}_U:=\mathcal{O}_X|_U)$ is isomorphic to a complex model space in the sense of \cref{def-complexmodelspace} in the category $\CRSCat$.
+    \end{enumerate}
+    When there is no risk of confusion, we also omit $\mathcal{O}_X$ from the notation say $X$ is a $\mathbb{C}$-ringed space.
+
+    A morphism between complex analytic spaces is a morphism of the underlying locally $\mathbb{C}$-ringed spaces. Such a morphism is also known as a \emph{holomorphic map}.
+\end{definition}
+\begin{remark}
+    It seems that all authors on this subject requires that complex analytic spaces be Hausdorff, which may seem unnatural from the eyes of an algebro-geometrist. Morally, Hausdorffness corresponds to separatedness in the scheme world. However, non-Hausdorff analytic spaces do not seem to play a major role, in contrast to non-separated schemes, so we stick to the current definition.
+\end{remark}
+\begin{remark}
+    Most of the authors require extra conditions in the definition of a complex analytic space: $\sigma$-compactness, paracompactness, having countable basis etc. We will not put these constraints in the definition, instead, we choose to include them into the assumptions of the theorems.
+\end{remark}
+Observe that a complex analytic space is always a locally $\mathbb{C}$-ringed space.
+
+\section{Oka's property}
+
+\section{Implicit function theorem}
+
+\section{Rückert Nullstellensatz}
+
+Let $X$ be a complex analytic space. It is a sheaf of $\mathbb{C}$-algebras.
+For any sheaf of local $\mathbb{C}$-algebras $\mathcal{A}$ on $X$, any open set $U\subseteq X$ and any $s\in \mathcal{A}_X(U)$. We want to construct a function $[s]:U\rightarrow \mathbb{C}$.
+
+Take $x\in U$, there is a canonical splitting
+\begin{equation}\label{eq:Axdecomp}
+  \mathcal{A}_{x}\cong \mathbb{C}\oplus \mathfrak{m}_{x}, 
+\end{equation}
+where $\mathfrak{m}_x$ is the maximal ideal of $\mathcal{A}_{x}$. Then we define $[s](x)$ as the image of $s_x$ in the $\mathbb{C}$-factor in \eqref{eq:Axdecomp}.
+
+\begin{definition}\label{def-valuesectionatapoint}
+    Let $X,\mathcal{A},U,x,s$ be as above. The value $[s](x)\in \mathbb{C}$ is called the \emph{value} of $s$ at $x$. We sometimes denote it by $s(x)$ as well.
+\end{definition}
+
+\begin{lemma}
+    Let $X$ be a complex analytic space. We denote by $\mathcal{C}_X$ the sheaf of continuous functions on $X$. 
+    The association $s\mapsto [s]$ in \cref{def-valuesectionatapoint} defines a homomorphism of sheaves of $\mathbb{C}$-algebras $\mathcal{O}_X\rightarrow \mathcal{C}_X$. 
+\end{lemma}
+When there is no risk of confusion, we also write $s$ instead of $[s]$.
+\begin{proof}
+    We need to show that for any open set $U\subseteq X$ and any $s\in \mathcal{O}_X(U)$, $[s]$ is a continuous function on $U$. 
+    
+    We may clearly assume that $U=X$. The problem is local on $X$, so we may assume that $X$ is a complex model space in the sense of \cref{def-complexmodelspace} defined by a coherent ideal $\mathcal{I}$ in a domain $D$ in $\mathbb{C}^n$. By further localizing, we may assume that $s$ can be lifted to a section $f\in\mathcal{O}_D(D)$. Then $[s]=f|_X$ by definition. So the assertion follows from the fact that a holomorphic function on a domain is continuous.
+\end{proof}
+
+\begin{theorem}[Rückert Nullstellensatz]
+    Let $X$ be a complex analytic space and $\mathcal{F}$ be a coherent sheaf of $\mathcal{O}_X$-modules. Let $f\in \mathcal{O}_X(X)$ be a function that vanishes on $\Supp \mathcal{F}$. Then for any $x\in X$, there is an open neighbourhood $U\subseteq X$ of $x$ and $m\in \mathbb{Z}_{>0}$ such that $f^m\mathcal{F}|_U=0$.
+\end{theorem}
+\begin{proof}
+    We may assume that $x\in \Supp \mathcal{F}$ as otherwise there is nothing to prove. In particular, $f(x)=0$.
+
+    \textbf{Step~1}. We first reduce the problem to a relatively simple situation.
+
+    The problem is local on $X$, so we may assume that there is a domain $D$ containing $0$ in $\mathbb{C}^n$ and a closed immersion $\iota:X\rightarrow D$ sending $x$ to $0$. Consider the closed immersion $g:V\rightarrow D\times \mathbb{C}$ induced by $\iota$ and $f$. Assume that this theorem has been proved for $w$, $B\times \mathbb{C}$, $g_*\mathcal{F}$ in place of $f$, $X$, $\mathcal{F}$ respectively, then we would find an integer $m\in \mathbb{Z}_{>0}$ such that $w^m(g_*\mathcal{F})_0=0$. In particular, $f^m\mathcal{F}_x=0$. As $\mathcal{F}$ is coherent, there is an open neighbourhood $U\subseteq X$ of $x$ such that $f^t\mathcal{F}|_U=0$.
+
+    \textbf{Step~2}. We are reduced to prove the following special case: let $D$ be a domain in $\mathbb{C}^n$ containing $0$, $\mathcal{F}$ is a coherent sheaf on $D$ whose support is contained in $\{(z,w)\in \mathbb{C}^{n-1}\times \mathbb{C}:(z,w)\in D,w=0\}$. Then there is $m\in \mathbb{Z}_{>0}$ such that $w^m\mathcal{F}_0=0$.
+
+    Let $\mathcal{G}$ be the annihilator sheaf of $\mathcal{F}$: 
+    \[
+       \mathcal{G}:=\ker \left(\mathcal{O}_D\rightarrow \Homint_{\mathcal{O}_D}(\mathcal{F},\mathcal{F})\right),
+    \]
+    where the map $\mathcal{O}_D\rightarrow \Homint_{\mathcal{O}_D}(\mathcal{F},\mathcal{F})$ sends a local section $f$ of $\mathcal{O}_D$ to the endohomomorphism of multiplying by $f$ of $\mathcal{F}$.
+    Then $\mathcal{G}$ is a coherent sheaf \textcolor{red}{We need to prove a weak version of Oka's property first}. So it has closed supports. But by our assumtion, the support of $\mathcal{G}$ contains all $w\neq 0$, so $\Supp \mathcal{G}=D$.
+
+    Let $f\in \mathcal{G}_0$ be a non-zero element. We write \textcolor{red}{The structure of the local ring needs to be presented earlier}
+    \[
+      f=\sum_{j=b}^{\infty}a_jw^j,\quad a_j\in \mathcal{O}_{\mathbb{C}^{n-1},0},a_b\neq 0
+    \]
+    for some $b\in \mathbb{N}$.
+    We may assume that $b=0$ by replacing $f$ and $\mathcal{F}$ with $w^{-b}f$ and  $w^b\mathcal{F}$ respectively. We want to show that $w^m\mathcal{F}_0=0$ for some positive integer $m$. 
+    
+    When $a_0$ is a unit, namely when $a_0(0)\neq 0$, then $f$ is a unit, so $\mathcal{F}_0=0$. We make an induction on $n$. The case $n=1$ is trivial, as $a_0$ is always a unit.
+    So we may assume that $a_0(0)=0$ and $n>1$. By perturbing the coordinates in $\mathbb{C}^{n-1}$, we may assume that $a_0$ is not identically zero in the variable $z_1$. \textcolor{red}{We need to finish the Weierstrass theory first.}
+
+    Shrinking $D$, we may assume that $f$ can be lifted to a holomorphic function $g\in \mathcal{O}_D(D)$ with $g\mathcal{F}=0$. By our assumption on $a_0$, we may assume that $Z(g)\cap \{(z_1,0,\ldots,0)\in D\}=\{0\}$. Hence, $D\cap \Supp \mathcal{F}$, which is a subset of $Z(g)$ also intersects the $z_1$-axis only at the origin.
+
+    By \textcolor{red}{To be included}, we can find a product domain $B\times W\subseteq D$ with $B\subseteq \mathbb{C}$ and $W\subseteq \mathbb{C}^{n-1}$ containing $0$ such that the projection $h:(B\times W)\cap \Supp \mathcal{F}\rightarrow B$ is finite and $\mathcal{F}':=h_*(\mathcal{F}|_{B\times W})$ is a coherent sheaf of $\mathcal{O}_B$-modules. Observe that $\Supp \mathcal{F}'\subseteq \{(z_2,\ldots,z_{n-1},w)\in B:w=0\}$, we can apply the induction hypothesis to obtain $m\in \mathbb{Z}_{>0}$ such that $w^{m}\mathcal{F}'_0=0$. It follows that $w^{m}\mathcal{F}_0=0$.
+\end{proof}
+
+\section{Fiber products}
+
+\printbibliography
+\end{document}
