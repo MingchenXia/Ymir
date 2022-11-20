@@ -1,13 +1,13 @@
 # Fdb version 3
-["biber Complex-Analytic-Spaces"] 1668960980 "Complex-Analytic-Spaces.bcf" "Complex-Analytic-Spaces.bbl" "Complex-Analytic-Spaces" 1668967425
-  "Complex-Analytic-Spaces.bcf" 1668967425 107059 b0cfe327ea8b52032b6e826373323dcf "pdflatex"
+["biber Complex-Analytic-Spaces"] 1668960980 "Complex-Analytic-Spaces.bcf" "Complex-Analytic-Spaces.bbl" "Complex-Analytic-Spaces" 1668969409
+  "Complex-Analytic-Spaces.bcf" 1668969409 107059 b0cfe327ea8b52032b6e826373323dcf "pdflatex"
   "Ymir.bib" 1668953666 143179 a30a6363b189c7e8680ef55a227a5367 ""
   (generated)
-  "Complex-Analytic-Spaces.blg"
   "Complex-Analytic-Spaces.bbl"
-["pdflatex"] 1668967424 "/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.tex" "/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.pdf" "Complex-Analytic-Spaces" 1668967425
-  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.aux" 1668967425 6648 93bf2963c5b0ef37a2b316400e717576 ""
-  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.tex" 1668967423 11541 8bf8237ae8b7f948b8f8a605486abf40 ""
+  "Complex-Analytic-Spaces.blg"
+["pdflatex"] 1668969408 "/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.tex" "/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.pdf" "Complex-Analytic-Spaces" 1668969409
+  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.aux" 1668969409 6902 73c72552c404e531e0c49c6fddf7b8cc ""
+  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.tex" 1668969406 13998 630ef77a262c5849d07745675147099b ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -264,18 +264,18 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1617824274 2724736 0c0239ea1191084b1df8548fe9e48c7a ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "Complex-Analytic-Spaces.aux" 1668967425 6648 93bf2963c5b0ef37a2b316400e717576 "pdflatex"
+  "Complex-Analytic-Spaces.aux" 1668969409 6902 73c72552c404e531e0c49c6fddf7b8cc "pdflatex"
   "Complex-Analytic-Spaces.bbl" 1668960982 1562 8850a93fc76ab9476d0b13a2100ee2c6 "biber Complex-Analytic-Spaces"
-  "Complex-Analytic-Spaces.run.xml" 1668967425 2438 b52ca2483bad68544c6fc43d76b4bf4e "pdflatex"
-  "Complex-Analytic-Spaces.tex" 1668967423 11541 8bf8237ae8b7f948b8f8a605486abf40 ""
-  "Complex-Analytic-Spaces.toc" 1668967425 1083 addad980218f5f4a9210c8077b9190e2 "pdflatex"
+  "Complex-Analytic-Spaces.run.xml" 1668969409 2438 b52ca2483bad68544c6fc43d76b4bf4e "pdflatex"
+  "Complex-Analytic-Spaces.tex" 1668969406 13998 630ef77a262c5849d07745675147099b ""
+  "Complex-Analytic-Spaces.toc" 1668969409 1092 a5187e9150229bff091e258ec37b7ff9 "pdflatex"
   "preamble.tex" 1668962469 10025 5d41ac6870935f93e44ecb8099e5da63 ""
   (generated)
-  "Complex-Analytic-Spaces.bcf"
   "Complex-Analytic-Spaces.aux"
-  "Complex-Analytic-Spaces.log"
-  "Complex-Analytic-Spaces.pdf"
+  "Complex-Analytic-Spaces.bcf"
   "/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.log"
-  "Complex-Analytic-Spaces.toc"
-  "Complex-Analytic-Spaces.run.xml"
   "/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.pdf"
+  "Complex-Analytic-Spaces.run.xml"
+  "Complex-Analytic-Spaces.log"
+  "Complex-Analytic-Spaces.toc"
+  "Complex-Analytic-Spaces.pdf"
