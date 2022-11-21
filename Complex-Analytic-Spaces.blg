@@ -1,15 +1,15 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'Complex-Analytic-Spaces.blg'
-[64] biber-darwin:340> INFO - === Sun Nov 20, 2022, 17:16:21
-[78] Biber.pm:415> INFO - Reading 'Complex-Analytic-Spaces.bcf'
-[162] Biber.pm:952> INFO - Found 1 citekeys in bib section 0
-[175] Biber.pm:4340> INFO - Processing section 0
-[184] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
-[194] bibtex.pm:1689> INFO - LaTeX decoding ...
-[574] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
-[628] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[628] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[628] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[628] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[629] bbl.pm:654> INFO - Writing 'Complex-Analytic-Spaces.bbl' with encoding 'UTF-8'
-[630] bbl.pm:757> INFO - Output to Complex-Analytic-Spaces.bbl
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'Complex-Analytic-Spaces.blg'
+[85] biber-darwin:340> INFO - === Mon Nov 21, 2022, 08:48:36
+[99] Biber.pm:418> INFO - Reading 'Complex-Analytic-Spaces.bcf'
+[192] Biber.pm:972> INFO - Found 1 citekeys in bib section 0
+[211] Biber.pm:4383> INFO - Processing section 0
+[224] Biber.pm:4574> INFO - Looking for bibtex file 'Ymir.bib' for section 0
+[238] bibtex.pm:1713> INFO - LaTeX decoding ...
+[792] bibtex.pm:1518> INFO - Found BibTeX data source 'Ymir.bib'
+[858] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[858] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[859] Biber.pm:4203> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[859] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[860] bbl.pm:654> INFO - Writing 'Complex-Analytic-Spaces.bbl' with encoding 'UTF-8'
+[861] bbl.pm:757> INFO - Output to Complex-Analytic-Spaces.bbl

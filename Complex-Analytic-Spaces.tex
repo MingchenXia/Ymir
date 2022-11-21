@@ -32,17 +32,32 @@
     A \emph{morphism of $\mathbb{C}$-ringed spaces $f:(Y,\mathcal{O}_Y)\rightarrow (X,\mathcal{O}_X)$} is a pair consisting of a continuous map $f:Y\rightarrow X$ and a morphism of sheaves of $\mathbb{C}$-algebras $f^{\#}:f^{-1}\mathcal{O}_X\rightarrow \mathcal{O}_Y$.
 
     Given two morphisms of $\mathbb{C}$-ringed spaces $f:(Y,\mathcal{O}_Y)\rightarrow (X,\mathcal{O}_X)$ and $g:(Z,\mathcal{O}_Z)\rightarrow (Y,\mathcal{O}_Y)$, their \emph{composition} is the morphism $f\circ g:(Z,\mathcal{O}_Z)\rightarrow (X,\mathcal{O}_X)$ consisting of the continuous map $f\circ g:Z\rightarrow X$ and a morphism of sheaves $(f\circ g)^{\#}=g^{\#}\circ g^{-1}f^{\#}:(f\circ g)^{-1}\mathcal{O}_X\cn g^{-1}f^{-1}\mathcal{O}_X\rightarrow \mathcal{O}_Z$.
+
+    When there is no risk of confusion, we say $X$ is a $\mathbb{C}$-ringed space.
 \end{definition}
-It is straightforward to verify that $\mathbb{C}$-ringed spaces form a category, which we denote by $\CRSCat$. Similarly, we denote by $\RSCat$ the category of ringed spaces defined in \cite[\href{https://stacks.math.columbia.edu/tag/0090}{Tag 0090}]{stacks-project}.
+It is straightforward to verify that $\mathbb{C}$-ringed spaces form a category, which we denote by $\CRSCat$.
+Similarly, we denote by $\RSCat$ the category of ringed spaces defined in \cite[\href{https://stacks.math.columbia.edu/tag/0090}{Tag 0090}]{stacks-project}.
+
+In fact, by definition a $\mathbb{C}$-ringed space is nothing but a morphism in the category of ringed spaces $X\rightarrow \mathbb{C}^0$, where $\mathbb{C}^0$ is a single point $*$ endowed with the sheaf of rings $\mathcal{O}_{\mathbb{C}^0}$ with $\mathcal{O}_{\mathbb{C}^0}(*)=\mathbb{C}$. In terms of slice categories, we have a canonical equivalence of categories 
+\[
+    \CRSCat\approx\RSCat/\mathbb{C}^0. 
+\]
+From this identification, most of the basic results above $\CRSCat$ follows, which we will use freely.
 
 There is an obvious faithful forget functor $\CRSCat\rightarrow \RSCat$.
+
 
 \begin{definition}
     A \emph{locally $\mathbb{C}$-ringed space} is a $\mathbb{C}$-ringed space $(X,\mathcal{O}_X)$ which when regarded as a ringed space is a locally ringed space.
 
     A \emph{morphism} between two locally $\mathbb{C}$-ringed spaces is a morphism between the underlying $\mathbb{C}$-ringed spaces which is a morphism of locally ringed spaces at the same time.
+
+    The category of locally $\mathbb{C}$-ringed spaces is denoted by $\CLRSCat$.
 \end{definition}
-We refer to \cite[\href{https://stacks.math.columbia.edu/tag/01HA}{Tag 01HA}]{stacks-project} for the notion of locally ringed spaces.
+We refer to \cite[\href{https://stacks.math.columbia.edu/tag/01HA}{Tag 01HA}]{stacks-project} for the notion of locally ringed spaces. Similar to the case of $\mathbb{C}$-ringed space, we have a canonical equivalence of categories
+\[
+    \CLRSCat\approx\LRSCat/\mathbb{C}^0. 
+\]
 
 \begin{example}\label{ex-Cnringed}
     Let $n\in \mathbb{N}$, we define a sheaf of $\mathbb{C}$-algebras $\mathcal{O}_{\mathbb{C}^n}$ on $\mathbb{C}^n$ as follows: for any open subset $U\subseteq \mathbb{C}^n$, $\mathcal{O}_{\mathbb{C}^n}(U)$ is the $\mathbb{C}$-algebra of holomorphic functions on $U$. It is easy to see that $\mathcal{O}_{\mathbb{C}^n}$ is a sheaf and $(\mathbb{C}^n,\mathcal{O}_{\mathbb{C}^n})$ is a $\mathbb{C}$-ringed space. Moreover, it is easy to show that $(\mathbb{C}^n,\mathcal{O}_{\mathbb{C}^n})$ is a locally $\mathbb{C}$-ringed space.
@@ -74,12 +89,12 @@ Given any domain $D$ in $\mathbb{C}^n$, we can define a sheaf of $\mathbb{C}$-al
 Observe that $X$ is always a Hausdorff space.
 
 \begin{definition}\label{def-complexanalyticspace}
-    A \emph{complex analytic space} is a $\mathbb{C}$-ringed space $(X,\mathcal{O}_X)$ such that 
+    A \emph{complex analytic space} is a locally $\mathbb{C}$-ringed space $(X,\mathcal{O}_X)$ such that 
     \begin{enumerate}
         \item $X$ is a Hausdorff space.
-        \item For any $x\in X$, there is an open neighbourhood $U\subseteq X$ of $x$ such that $(U,\mathcal{O}_U:=\mathcal{O}_X|_U)$ is isomorphic to a complex model space in the sense of \cref{def-complexmodelspace} in the category $\CRSCat$.
+        \item For any $x\in X$, there is an open neighbourhood $U\subseteq X$ of $x$ such that $(U,\mathcal{O}_U:=\mathcal{O}_X|_U)$ is isomorphic to a complex model space in the sense of \cref{def-complexmodelspace} in the category $\CLRSCat$.
     \end{enumerate}
-    When there is no risk of confusion, we also omit $\mathcal{O}_X$ from the notation say $X$ is a $\mathbb{C}$-ringed space.
+    When there is no risk of confusion, we also omit $\mathcal{O}_X$ from the notation say $X$ is a complex analytic space.
 
     A morphism between complex analytic spaces is a morphism of the underlying locally $\mathbb{C}$-ringed spaces. Such a morphism is also known as a \emph{holomorphic map}.
 \end{definition}
@@ -89,7 +104,7 @@ Observe that $X$ is always a Hausdorff space.
 \begin{remark}
     Most of the authors require extra conditions in the definition of a complex analytic space: $\sigma$-compactness, paracompactness, having countable basis etc. We will not put these constraints in the definition, instead, we choose to include them into the assumptions of the theorems.
 \end{remark}
-Observe that a complex analytic space is always a locally $\mathbb{C}$-ringed space.
+
 
 \section{Weierstrass map}
 
@@ -170,7 +185,7 @@ When there is no risk of confusion, we also write $s$ instead of $[s]$.
        \mathcal{G}:=\ker \left(\mathcal{O}_D\rightarrow \Homint_{\mathcal{O}_D}(\mathcal{F},\mathcal{F})\right),
     \]
     where the map $\mathcal{O}_D\rightarrow \Homint_{\mathcal{O}_D}(\mathcal{F},\mathcal{F})$ sends a local section $f$ of $\mathcal{O}_D$ to the endohomomorphism of multiplying by $f$ of $\mathcal{F}$.
-    Then $\mathcal{G}$ is a coherent sheaf \textcolor{red}{We need to prove a weak version of Oka's property first}. So it has closed supports. But by our assumtion, the support of $\mathcal{G}$ contains all $w\neq 0$, so $\Supp \mathcal{G}=D$.
+    Then $\mathcal{G}$ is a coherent sheaf by Oka's coherence theorem \cref{thm-Okacoh}. So it has closed supports. But by our assumtion, the support of $\mathcal{G}$ contains all $w\neq 0$, so $\Supp \mathcal{G}=D$.
 
     Let $f\in \mathcal{G}_0$ be a non-zero element. We write \textcolor{red}{The structure of the local ring needs to be presented earlier}
     \[
@@ -188,6 +203,10 @@ When there is no risk of confusion, we also write $s$ instead of $[s]$.
 \end{proof}
 
 \section{Fiber products}
+
+The goal of this section is to show that the category of complex analytic spaces admits finite limits.
+
+\section{Complex analytic topos}
 
 \printbibliography
 \end{document}
