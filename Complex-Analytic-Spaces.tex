@@ -33,7 +33,7 @@
 
     Given two morphisms of $\mathbb{C}$-ringed spaces $f:(Y,\mathcal{O}_Y)\rightarrow (X,\mathcal{O}_X)$ and $g:(Z,\mathcal{O}_Z)\rightarrow (Y,\mathcal{O}_Y)$, their \emph{composition} is the morphism $f\circ g:(Z,\mathcal{O}_Z)\rightarrow (X,\mathcal{O}_X)$ consisting of the continuous map $f\circ g:Z\rightarrow X$ and a morphism of sheaves $(f\circ g)^{\#}=g^{\#}\circ g^{-1}f^{\#}:(f\circ g)^{-1}\mathcal{O}_X\cn g^{-1}f^{-1}\mathcal{O}_X\rightarrow \mathcal{O}_Z$.
 
-    When there is no risk of confusion, we say $X$ is a $\mathbb{C}$-ringed space.
+    When there is no risk of confusion, we say $X$ is a $\mathbb{C}$-ringed space. In this case, we write $|X|$ for the topological space underlying $X$.
 \end{definition}
 It is straightforward to verify that $\mathbb{C}$-ringed spaces form a category, which we denote by $\CRSCat$.
 Similarly, we denote by $\RSCat$ the category of ringed spaces defined in \cite[\href{https://stacks.math.columbia.edu/tag/0090}{Tag 0090}]{stacks-project}.
@@ -97,6 +97,8 @@ Observe that $X$ is always a Hausdorff space.
     When there is no risk of confusion, we also omit $\mathcal{O}_X$ from the notation say $X$ is a complex analytic space.
 
     A morphism between complex analytic spaces is a morphism of the underlying locally $\mathbb{C}$-ringed spaces. Such a morphism is also known as a \emph{holomorphic map}.
+
+    The category of complex analytic spaces is denoted as $\CASCat$.
 \end{definition}
 \begin{remark}
     It seems that all authors on this subject requires that complex analytic spaces be Hausdorff, which may seem unnatural from the eyes of an algebro-geometrist. Morally, Hausdorffness corresponds to separatedness in the scheme world. However, non-Hausdorff analytic spaces do not seem to play a major role, in contrast to non-separated schemes, so we stick to the current definition.
@@ -205,6 +207,98 @@ When there is no risk of confusion, we also write $s$ instead of $[s]$.
 \section{Fiber products}
 
 The goal of this section is to show that the category of complex analytic spaces admits finite limits.
+
+As the category $\CASCat$ admits a final object, namely $\mathbb{C}^0$, the existence of finite limits is the same as the existence of fiber products by general abstract nonsense \cite[\href{https://stacks.math.columbia.edu/tag/002O}{Tag 002O}]{stacks-project}.
+
+We begin by considering direct products, namely fiber products over $\mathbb{C}^0$. 
+
+\begin{lemma}\label{lma-CmCnproductexist}
+Let $m,n\in \mathbb{N}$. Then 
+\[
+    \mathbb{C}^m\times \mathbb{C}^n\cong \mathbb{C}^{m+n}. 
+\]    
+Here $\times$ denotes the product in $\CASCat$.
+\end{lemma}
+\begin{proof}
+    By Yoneda lemma \cite[\href{https://stacks.math.columbia.edu/tag/001P}{Tag 001P}]{stacks-project}, it suffices to establish
+    \[
+        h_{\mathbb{C}^m\times \mathbb{C}^n}\cong h_{\mathbb{C}^{m+n}},
+    \]
+    where $h_{\bullet}$ denotes the functor of points \cite[\href{https://stacks.math.columbia.edu/tag/001O}{Tag 001O}]{stacks-project}. Take $T\in \CASCat$, then there are isomorphisms
+    \[
+        h_{\mathbb{C}^m\times \mathbb{C}^n}(T)\cn h_{\mathbb{C}^m}(T)\times h_{\mathbb{C}^m}(T)\cn (\mathcal{O}_{T}(T))^{m+n}\cn   h_{\mathbb{C}^{m+n}}(T),
+    \]
+    which are all functorial in $T$. We conclude.
+\end{proof}
+
+\begin{lemma}\label{lma-existfiberproductimmersion}
+    Let $f:X\rightarrow Y$ be a morphism in $\CASCat$. Let $i:Z\rightarrow Y$ be a closed (resp. an open) immersion. Then the fiber product $X\times_Y Z$ exists. Moreover, $X\times_Y Z\rightarrow X$ is a closed (resp. an open) immersion.
+\end{lemma}
+We can draw a Cartesian diagram
+\[
+    \begin{tikzcd}
+        & X\times_Y Z \arrow[r]\arrow[d]\arrow[rd,"\square",phantom] & X \arrow[d,"f"]\\
+        & Z  \arrow[r,"i"] & Y
+    \end{tikzcd}
+\]
+\begin{proof}
+    When $i$ is an open immersion, it suffices to take $X\times_Y Z$ as the open subspace of $X$ defined by $f^{-1}(i(Z))$.
+
+    Let us consider the case where $i$ is a closed immersion defined by a coherent ideal sheaf $\mathcal{I}$. It is a general result that $X\times_Y Z$ in the category $\LRSCat$ exists \cite[\href{https://stacks.math.columbia.edu/tag/01HQ}{Tag 01HQ}]{stacks-project}. Let us show that $X\times_Y Z$ is a closed complex analytic subspace of $X$ and conclude. To do so, recall that $X\times_Y Z$ is by construction a closed subspace of $X$ defined by $\mathcal{J}:=\Img \left(f^*\mathcal{I}\rightarrow f^*\mathcal{O}_Y=\mathcal{O}_X\right)$. It suffices to show that $\mathcal{J}$ is of finite type. By this is clear as $\mathcal{I}$ is of finite type.
+\end{proof}
+
+\begin{lemma}\label{lma-existproductimplyexistimm}
+    Let $X$, $Y$ be complex analytic spaces. Consider open (resp. closed) immersions $X'\rightarrow X$ and $Y'\rightarrow Y$. If $X\times Y$ exists, then so is $X'\times Y'$ and the natural morphism $X'\times Y'\rightarrow X\times Y$ is an open (resp. a closed) immersion.
+\end{lemma}
+\begin{proof}
+    We form the following large Cartesian diagram
+    \[
+        \begin{tikzcd}
+            Z \arrow[r] \arrow[d] \arrow[rd, "\square", phantom]   & X'' \arrow[r] \arrow[d] \arrow[rd, "\square", phantom]       & X' \arrow[d] \\
+            Y'' \arrow[d] \arrow[r] \arrow[rd, "\square", phantom] & X\times Y \arrow[d] \arrow[r] \arrow[rd, "\square", phantom] & X \arrow[d]  \\
+            Y' \arrow[r]                                           & Y \arrow[r]                                                  & \mathbb{C}^0
+        \end{tikzcd}
+    \]
+    The existences of all but the lower right square are guaranteed by \cref{lma-existfiberproductimmersion}. More precisely, we first define the upper right square and the lower left square by \cref{lma-existfiberproductimmersion}. It follows from \cref{lma-existfiberproductimmersion} that $X''\rightarrow X\times Y$ is an open (resp. a closed) immersion. So we can apply \cref{lma-existfiberproductimmersion} again to construct the upper left square.
+
+    It follows from general abstract nonsense that the big square is also Cartesian. Moreover, by \cref{lma-existfiberproductimmersion} again, $Z\rightarrow Y''$ and $Y''\rightarrow X\times Y$ are both open (resp. closed) immersions. It follows that $Z\rightarrow X\times Y$ is also an open (resp. a closed) immersion.
+\end{proof}
+
+\begin{corollary}\label{cor-existproductmodel}
+    Let $X$, $Y$ be complex model spaces. Then $X\times Y$ exists.
+\end{corollary}
+\begin{proof}
+    By \cref{lma-existproductimplyexistimm}, we may assume that $X$ and $Y$ are both domains in some $\mathbb{C}^m$ and $\mathbb{C}^n$ respectively. Then applying \cref{lma-existproductimplyexistimm} again, we reduce to the case where $X=\mathbb{C}^m$ and $Y=\mathbb{C}^n$. This case is handled in \cref{lma-CmCnproductexist}.
+\end{proof}
+
+\begin{corollary}\label{cor-finitedirectproductexist}
+    Let $X$, $Y$ be complex analytic spaces. Then $X\times Y$ exists in $\CASCat$.
+\end{corollary}
+\begin{proof}
+    Let 
+    \[
+        X=\bigcup_{i\in I_X} X_i,\quad   X=\bigcup_{j\in I_Y} Y_j
+    \]
+    be open coverings of $X$ by complex model spaces. Let $K=I_X\times I_Y$. For each $k=(i,j)\in K$, we let $Z_k=X_i\times Y_j$, whose existence is guaranteed by \cref{cor-existproductmodel}. Take another $k'=(i',j')\in K$, then 
+    \[
+        Z_{kk'}:=Z_k\cap Z_{k'}=(X_i\times X_{i'})\cap (Y_{j}\times Y_{j'})
+    \]
+    is an open subspace of $Z_k$. It is clear that $Z_{kk'}$ forms a glueing data. From the general result \cite[\href{https://stacks.math.columbia.edu/tag/01JB}{Tag 01JB}]{stacks-project}, we can glue $Z_k$'s into a locally ringed space $Z$. From the construction, $|Z|=|X|\times |Y|$ in the category of topological spaces, so $|Z|$ is Hausdorff. On the other hand, from the construction, locally $Z$ is isomorphic to some $Z_k$, so $Z$ is a complex analytic space. As $Z$ is clearly the product in the category of locally $\mathbb{C}$-ringed spaces, we conclude that $Z=X\times Y$ in  $\CASCat$.
+\end{proof}
+
+\begin{corollary}
+    The category $\CASCat$ admits all finite limits.
+\end{corollary}
+\begin{proof}
+    By \cite[\href{https://stacks.math.columbia.edu/tag/002O}{Tag 002O}]{stacks-project}, \cref{cor-finitedirectproductexist} and the existence of a final object in $\CASCat$ (namely, $\mathbb{C}^0$), it suffices to show the existence of fiber products. In other words, suppose that we are given three complex analytic spaces $Z,X,Y$ and morphisms $X\rightarrow Z$ and $Y\rightarrow Z$ in $\CASCat$, we need to prove the existence of $X\times_Z Y$. From the general abstract non-sense, we can define $X\times_Z Y=(X\times Z)_{Y\times Y,\Delta_Y}Y$:
+    \[
+    \begin{tikzcd}
+        & X\times_Y Z \arrow[r]\arrow[d]\arrow[rd,"\square",phantom] & X\times Z \arrow[d]\\
+        & Y  \arrow[r,"\Delta_Y"] & Y\times Y
+    \end{tikzcd},
+    \]
+    where $\Delta_Y:Y\rightarrow Y\times Y$ is the diagonal closed immersion, the existence of $X\times Z$ is guaranteed by \cref{cor-finitedirectproductexist} and the existence of the fiber product is guaranteed by \cref{lma-existfiberproductimmersion}.
+\end{proof}
 
 \section{Complex analytic topos}
 
