@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  21 NOV 2022 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  21 NOV 2022 20:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.tex
-(/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.tex
+**/Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.tex
+(/Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/Users/mingchen/Documents/LaTeX_Github/Ymir/preamble.tex (/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsbook.cls
 Document Class: amsbook 2020/05/29 v2.20.6
@@ -897,21 +897,21 @@ Package bigints Info: This is Bigints by Merciadri Luca. on input line 5.
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 44.
 \c@theorem=\count460
-Package xr Info: IMPORTING LABELS FROM Introduction.aux on input line 295.
-Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 299.
+Package xr Info: IMPORTING LABELS FROM Introduction.aux on input line 296.
+Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 300.
 
 
 Package xr Warning: 
 No file Weierstrass.aux
 LABELS NOT IMPORTED.
- on input line 300.
+ on input line 301.
 
-Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 302.
+Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 303.
 
 Package xr Warning: 
 No file Morphisms.aux
 LABELS NOT IMPORTED.
- on input line 306.
+ on input line 307.
 
 )
 Package csquotes Info: Checking for multilingual support...
@@ -921,8 +921,8 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 15.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.aux)
-\openout1 = `Complex-Analytic-Spaces.aux'.
+) (/Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.aux)
+\openout1 = `Commutative-Algebra.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -1023,11 +1023,11 @@ Package biblatex Info: ... and expl3
  (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 )
-\openout4 = `Complex-Analytic-Spaces.bcf'.
+\openout4 = `Commutative-Algebra.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Complex-Analytic-Spaces.bbl' found.
- (/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.bbl)
+Package biblatex Info: ... file 'Commutative-Algebra.bbl' found.
+ (/Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.bbl)
 Package biblatex Info: Reference section=0 on input line 15.
 Package biblatex Info: Reference segment=0 on input line 15.
 LaTeX Info: Redefining \microtypecontext on input line 15.
@@ -1050,34 +1050,35 @@ Package caption Info: End \AtBeginDocument code.
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 Contents
-(/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.toc
+(/Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.toc)
+\tf@toc=\write5
+\openout5 = `Commutative-Algebra.toc'.
+
+ [3
+
+]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 6.
+(Font)              <10> on input line 28.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 6.
+(Font)              <7> on input line 28.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-))
-\tf@toc=\write5
-\openout5 = `Complex-Analytic-Spaces.toc'.
-
- [3
-
-] [4]
+)
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [5]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 154.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 61.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
-) [6] [7] [8] [9] [10]
+) [4] [5] [6
+
+]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 305.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 113.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1085,26 +1086,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [11
-
-] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.aux)
-Package logreq Info: Writing requests to 'Complex-Analytic-Spaces.run.xml'.
-\openout1 = `Complex-Analytic-Spaces.run.xml'.
+ [7] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.aux)
+Package logreq Info: Writing requests to 'Commutative-Algebra.run.xml'.
+\openout1 = `Commutative-Algebra.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37011 strings out of 478994
- 693835 string characters out of 5858185
- 1539534 words of memory out of 5000000
- 53547 multiletter control sequences out of 15000+600000
- 469150 words of font info for 142 fonts, out of 8000000 for 9000
+ 36641 strings out of 478994
+ 685937 string characters out of 5858185
+ 1526567 words of memory out of 5000000
+ 53257 multiletter control sequences out of 15000+600000
+ 466851 words of font info for 116 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,15n,133p,1271b,1834s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.pdf (11 pages, 288931 bytes).
+ 132i,7n,133p,796b,1733s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.pdf (7 pages, 226195 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
- 27229 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 160 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 27173 words of extra memory for PDF output out of 29859 (max. 10000000)
 

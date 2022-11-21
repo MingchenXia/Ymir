@@ -1,0 +1,120 @@
+\input{preamble}
+
+
+%\usepackage[color]{showkeys}
+%\definecolor{refkey}{rgb}{0,0,1}
+
+
+
+
+\title{Commutative algebra}
+
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\tableofcontents
+
+
+
+\section{Power ring series}
+
+\begin{definition}
+    For any $n\in \mathbb{N}$, let $\mathbb{C}\langle z_1,\ldots,z_n\rangle$ denote the subring of $\mathbb{C}[[z_1,\ldots,z_n]]$:
+    \[
+        \sum_{\alpha\in \mathbb{N}^n} a_{\alpha}z^{\alpha},\quad a_{\alpha}\in \mathbb{C},
+    \]
+    which is  convergent in a neighbourhood of $0$: there is $\epsilon>0$ such that for any $x_1,\ldots,x_n\in \mathbb{C}$ with $|x_i|<\epsilon$, $\sum_{\alpha}a_{\alpha} x^{\alpha}$ is a convergent power series.
+\end{definition}
+
+\begin{theorem}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is local, and the maximal ideal is given by convergent power series without constant terms.
+\end{theorem}
+
+\begin{theorem}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is noetherian and factorial.
+\end{theorem}
+
+\begin{theorem}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is strictly Henselian.
+\end{theorem}
+
+\section{Complex analytic local algebras}
+\textcolor{red}{I do not know the "official" translation of Analytische Stellenalgebren, so I choose the term complex analytic local algebra. Please contact me if you have a better name.}
+
+\begin{definition}
+    A \emph{complex analytic local algebra} is a $\mathbb{C}$-algebra $A$ such that $A\neq 0$ and there exists some $n\in \mathbb{N}$ and an ideal $I$ in $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ such that 
+    \[
+        A\cong \mathbb{C}\langle z_1,\ldots,z_n \rangle/I
+    \]
+    as $\mathbb{C}$-algebras.
+
+    A morphism between complex analytic local algebras $A$ and $B$ is a $\mathbb{C}$-algebra homomorphism $A\rightarrow B$.
+
+    The category of complex analytic local algebras is denoted by $\CLA$.
+\end{definition}
+Observe that a complex analytic local algebra is always local with residue field $\mathbb{C}$ and a morphism in $\CLA$ is always a local homomorphism. We will write $\mathfrak{m}_A$ for the maximal ideal in $A$.
+
+\begin{lemma}
+    Let $A$ be a complex analytic local algebra and $n\in \mathbb{N}$, then there is a natural bijection
+    \[
+        \Hom_{\CLA}(\mathbb{C}\langle z_1,\ldots,z_n \rangle,A)\cong \mathfrak{m}_{A}^n
+    \]
+    sending a morphism $f$ to $(f(z_1),\ldots,f(z_n))$.
+\end{lemma}
+\begin{proof}
+    As a morphism $f:\mathbb{C}\langle z_1,\ldots,z_n \rangle \rightarrow A$ is necessarily local, we see that $f(z_i)\in A$ for all $i=1,\ldots,n$. So the map $\Hom_{\CLA}(\mathbb{C}\langle z_1,\ldots,z_n \rangle,A)\rightarrow \mathfrak{m}_{A}^n$ is well-defined. Conversely, given $w_1,\ldots,w_n\in \mathfrak{m}_A$, we claim that there is a unique morphism $f:\mathbb{C}\langle z_1,\ldots,z_n \rangle \rightarrow A$ in $\CLA$ sending $z_i$ to $w_i$.
+
+    The uniqueness is easy \textcolor{red}{Add details about the topology}, so let us consider only the existence.
+    Let $\mathbb{C}\langle z_1,\ldots,z_m \rangle \rightarrow A$ be a surjective morphism. Lift $w_i$ to $w_i'\in \mathbb{C}\langle z_1,\ldots,z_m \rangle$, it suffices to construct a morphism $\mathbb{C}\langle z_1,\ldots,z_n \rangle\rightarrow \mathbb{C}\langle z_1,\ldots,z_m \rangle$ sending $z_i$ to $w_i'$. So we may assume that $A=\mathbb{C}\langle z_1,\ldots,z_m \rangle$. In this case, the result is well-known. \textcolor{red}{Include a proof later.}
+\end{proof}
+
+\textcolor{red}{Needs to be extended to relative situation}
+\begin{definition}
+    Let $A_1,A_2$ be complex analytic local algebras, \emph{an analytic tensor product} of $A_1$ and $A_2$ is a complex analytic local algebra $A$ together with morphisms $A_1\rightarrow A$ and $A_2\rightarrow A$ such that for any complex analytic local algebra $C$, the induced map
+    \[
+      \Hom_{\CLA}(A,C)\rightarrow  \Hom_{\CLA}(A_1,C)\times  \Hom_{\CLA}(A_2,C)
+    \]
+    is bijective.
+
+    As analytic tensor product is unique up to unique isomorphism, so we can choose a specific analytic tensor product $A_1\overline{\otimes} A_2$ and call it \emph{the analytic tensor product} of $A_1$ and $A_2$.
+\end{definition}
+By definition, there are natural morphisms 
+\[
+    A_1\otimes A_2\rightarrow A_1\overline{\otimes} A_2.
+\]
+
+The simplest example is 
+\begin{lemma}
+    For any $m,n\in \mathbb{N}$, we have
+    \[
+        \mathbb{C}\langle z_1,\ldots,z_m \rangle\overline{\otimes} \mathbb{C}\langle z_1,\ldots,z_n \rangle\cong  \mathbb{C}\langle z_1,\ldots,z_{m+n} \rangle
+    \]
+    as complex analytic local algebras.
+\end{lemma}
+\begin{proof}
+    
+\end{proof}
+
+\begin{lemma}
+    Assume that $f_i:A_i\rightarrow B_i$ are  surjective (i.e. the underlying homomorphisms of algebras are surjective) morphisms in $\CLA$ for $i=1,2$. Let $I_i$ be the kernel of $f_i$ as homomorphisms of algebras.
+    If $A_1\overline{\otimes} A_2$ exists, then so is $B_1 \overline{\otimes} B_2$ and
+    \[
+        B_1 \overline{\otimes} B_2\cong A_1\overline{\otimes} A_2/ (I_1\otimes 1+1\otimes I_2)(A_1\overline{\otimes} A_2).
+    \]
+\end{lemma}
+
+
+\begin{theorem}
+    Completion of the tensor product.
+\end{theorem}
+
+\cite{stacks-project}
+
+\printbibliography
+\end{document}

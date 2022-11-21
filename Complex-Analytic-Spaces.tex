@@ -291,7 +291,7 @@ We can draw a Cartesian diagram
 \end{corollary}
 \begin{proof}
     By \cite[\href{https://stacks.math.columbia.edu/tag/002O}{Tag 002O}]{stacks-project}, \cref{cor-finitedirectproductexist} and the existence of a final object in $\CASCat$ (namely, $\mathbb{C}^0$), it suffices to show the existence of fiber products. In other words, suppose that we are given three complex analytic spaces $Z,X,Y$ and morphisms $X\rightarrow Z$ and $Y\rightarrow Z$ in $\CASCat$, we need to prove the existence of $X\times_Z Y$. From the general abstract non-sense, we can define $X\times_Z Y=(X\times Z)_{Y\times Y,\Delta_Y}Y$:
-    \[
+    \[ 
     \begin{tikzcd}
         & X\times_Y Z \arrow[r]\arrow[d]\arrow[rd,"\square",phantom] & X\times Z \arrow[d]\\
         & Y  \arrow[r,"\Delta_Y"] & Y\times Y
@@ -299,7 +299,7 @@ We can draw a Cartesian diagram
     \]
     where $\Delta_Y:Y\rightarrow Y\times Y$ is the diagonal closed immersion, the existence of $X\times Z$ is guaranteed by \cref{cor-finitedirectproductexist} and the existence of the fiber product is guaranteed by \cref{lma-existfiberproductimmersion}.
 \end{proof}
-
+ 
 \section{Complex analytic topos}
 
 \printbibliography
