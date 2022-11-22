@@ -1321,7 +1321,6 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
@@ -1333,6 +1332,7 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmri7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmri7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd

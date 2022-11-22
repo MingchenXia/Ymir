@@ -25,20 +25,149 @@
 \section{Power ring series}
 
 \begin{definition}
-    For any $n\in \mathbb{N}$, let $\mathbb{C}\langle z_1,\ldots,z_n\rangle$ denote the subring of $\mathbb{C}[[z_1,\ldots,z_n]]$:
+    For any $n\in \mathbb{N}$, let $\mathbb{C}\langle z_1,\ldots,z_n\rangle$ denote the subring of $\mathbb{C}[[z_1,\ldots,z_n]]$ consisting of
     \[
-        \sum_{\alpha\in \mathbb{N}^n} a_{\alpha}z^{\alpha},\quad a_{\alpha}\in \mathbb{C},
+        f=\sum_{\alpha\in \mathbb{N}^n} a_{\alpha}z^{\alpha},\quad a_{\alpha}\in \mathbb{C},
     \]
-    which is  convergent in a neighbourhood of $0$: there is $\epsilon>0$ such that for any $x_1,\ldots,x_n\in \mathbb{C}$ with $|x_i|<\epsilon$, $\sum_{\alpha}a_{\alpha} x^{\alpha}$ is a convergent power series.
+    which is  convergent in a neighbourhood of $0$: there is $\epsilon>0$ such that for any $x_1,\ldots,x_n\in \mathbb{C}$ with $|x_i|<\epsilon$, $\sum_{\alpha}a_{\alpha} x^{\alpha}$ is a convergent power series. We will write $f(0)$ for $a_{0,\ldots,0}$.
 \end{definition}
 
-\begin{theorem}
-    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is local, and the maximal ideal is given by convergent power series without constant terms.
+
+\begin{definition}
+    Fix $n\in \mathbb{N}$ and $t=(t_1,\ldots,t_n)\in \mathbb{R}_{> 0}^n$. For any $f\in \mathbb{C}[[z_1,\ldots,z_n]]$ with an expansion
+    \[
+        f=\sum_{\alpha\in \mathbb{N}^n} a_{\alpha}z^{\alpha},\quad a_{\alpha}\in \mathbb{C},  
+    \]
+    we define
+    \[
+        \|f\|_t:=\sum_{\alpha\in \mathbb{N}^n} |a_{\alpha}| t^{\alpha}\in [0,\infty].
+    \]
+    We define
+    \[
+        \mathbb{C}\langle z_1,\ldots,z_n\rangle_t:=\left\{f\in \mathbb{C}[[z_1,\ldots,z_n]]: \|f\|_t<\infty \right\}.
+    \]
+\end{definition}
+Observe that $(\mathbb{C}\langle z_1,\ldots,z_n\rangle_t,\|\bullet\|_t)$ is a normed $\mathbb{C}$-vector space.
+
+\begin{theorem}[Cauchy coefficients estimate]
+    Let 
+    \[
+        f=\sum_{\alpha\in \mathbb{N}^n} a_{\alpha}z^{\alpha}\in  \mathbb{C}\langle z_1,\ldots,z_n\rangle_t. 
+    \]
+    Then for any $\alpha \in \mathbb{N}^n$,
+    \[
+      |a_{\alpha}|\leq  \frac{\|f\|_t}{t^{\alpha}}.
+    \]
 \end{theorem}
+
+\begin{proposition}\label{prop-CzztBanachalg}
+    $(\mathbb{C}\langle z_1,\ldots,z_n\rangle_t,\|\bullet\|_t)$ is a $\mathbb{C}$-Banach algebra.
+\end{proposition}
+
+\textcolor{red}{There has to be a section about Banach algebras.}
+\begin{lemma}\label{lma-Banachalgebracloseto1inv}
+    Let $A$ be a $\mathbb{C}$-Banach algebra. An element $f\in A$ with $\|1-f\|<1$ is invertible.
+\end{lemma}
+
+\begin{lemma}\label{lma-unitsinconvpowerseries}
+    For any $n\in \mathbb{N}$, an element $f\in \mathbb{C}\langle z_1,\ldots,z_n \rangle$ is a unit if and only if $f(0)\neq 0$.
+\end{lemma}
+\begin{proof}
+    In fact, as $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is a subring of $\mathbb{C}[[z_1,\ldots,z_n]]$, a unit $f$ in $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is also a unit in $\mathbb{C}[[z_1,\ldots,z_n]]$, hence $f(0)\neq 0$.
+
+    Conversely, assume that $f\in \mathbb{C}\langle z_1,\ldots,z_n \rangle$ and $f(0)\neq 0$, then
+    \[
+        \lim_{t\to 0+}\|1-f(0)^{-1}f\|_t=0.
+    \]
+    So by \cref{lma-Banachalgebracloseto1inv}, $a^{-1}f$ is a unit in $\mathbb{C}\langle z_1,\ldots,z_n \rangle_t$ when $t$ is small enough. As $\mathbb{C}\langle z_1,\ldots,z_n \rangle_t$ is a subring of $\mathbb{C}\langle z_1,\ldots,z_n \rangle$, it follows that $f(0)^{-1}f$ is invertible in $\mathbb{C}\langle z_1,\ldots,z_n \rangle$, hence so is $f$.
+\end{proof}
+
+
+
+\begin{theorem}\label{thm-converinglocal}
+    Let $m, n\in \mathbb{N}$.
+\begin{enumerate}
+    \item The ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is local, and the maximal ideal is given by convergent power series without constant terms.
+    \item Any homomorphism of $\mathbb{C}$-algebras $F:\mathbb{C}\langle z_1,\ldots,z_n \rangle\rightarrow \mathbb{C}\langle w_1,\ldots,w_m \rangle$ is local.
+\end{enumerate}
+
+
+\end{theorem}
+\begin{proof}
+(1) This follows from \cref{lma-unitsinconvpowerseries} and \cite[\href{https://stacks.math.columbia.edu/tag/00E9}{Tag 00E9}]{stacks-project}.
+
+(2) Suppose it is not the case. As $z_1,\ldots,z_n$ generate the maximal ideal in $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ by (1), at least one of $F(z_1),\ldots,F(z_n)$ is not in the maximal ideal of  $\mathbb{C}\langle w_1,\ldots,w_m \rangle$. We may assume that it is $F(z_1)$, namely
+\[
+    F(z_1)=a+\mathcal{O}(w)  
+\]
+with $a\in \mathbb{C}^{\times}$. As $F$ is a $\mathbb{C}$-algebra homomorphism, $F(z_1-a)=F(z_1)-a$ is a unit. This contradicts the fact that $z_1-a$ is a unit.
+\end{proof}
+
+
+
+
+\begin{lemma}\label{lma-univerpropconvspecialcase}
+    Let $m,n\in \mathbb{N}$ and $g_1,\ldots,g_m\in \mathbb{C}\langle w_1,\ldots,w_n\rangle$. Assume that $g_i(0)=0$ for all $i=1,\ldots,m$. 
+    Then the formal substitution 
+    \[
+        F:\mathbb{C}[[z_1,\ldots,z_m]]\rightarrow \mathbb{C}[[w_1,\ldots,w_n]]
+    \]
+    sending $z_i$ to $g_i$ restricts to a homomorphism of $\mathbb{C}$-algebras
+    \[
+        F:  \mathbb{C}\langle z_1,\ldots,z_m\rangle\rightarrow  \mathbb{C}\langle w_1,\ldots,w_n\rangle.
+    \]
+\end{lemma}
+\begin{proof}
+    Fix $t\in \mathbb{R}^m_{>0}$. Take $s\in \mathbb{R}^n_{>0}$ so that $\|g_i\|_s\leq t_i$ for $i=1,\ldots,m$. This is possible as $g_i(0)=0$.
+    Then we claim that $F$ sends $\mathbb{C}\langle z_1,\ldots,z_m \rangle_t$ to $\mathbb{C}\langle w_1,\ldots,w_n\rangle_s$. This implies our lemma.
+
+    To prove the assertion, let $f\in \mathbb{C}\langle z_1,\ldots,z_m \rangle_t$, which we expand as
+    \[
+        f=\sum_{\alpha\in \mathbb{N}^m} a_{\alpha}z^{\alpha}.
+    \]
+    Then
+    \[
+        \|F(f)\|_s=\sum_{j=0}^{\infty}\|\sum_{|\alpha|=j}a_{\alpha}g^{\alpha}\|_s\leq \sum_{\alpha}|a_{\alpha}|\|g\|_s^{\alpha}\leq \|f\|_t.
+    \]
+    Here the first inequality follows from \cref{prop-CzztBanachalg}.
+\end{proof}
+
+Conversely, we have
+\begin{lemma}\label{lma-homopowerringanalytic}
+    Let $m,n\in \mathbb{N}$. Then any homomorphism of $\mathbb{C}$-algebras 
+    \[
+        F:  \mathbb{C}\langle z_1,\ldots,z_m\rangle\rightarrow  \mathbb{C}\langle w_1,\ldots,w_n\rangle
+    \]
+    is the restriction of a substitution homomorphism
+    \[
+        \mathbb{C}[[z_1,\ldots,z_m]]\rightarrow  \mathbb{C} [[ w_1,\ldots,w_n]].
+    \]
+    In particular, $F$ is uniquely determined by $F(z_1),\ldots,F(z_m)$.  
+\end{lemma}
+\begin{proof}
+    Let $g_i=F(z_i)$. It follows from \cref{thm-converinglocal} that $g_i\in \mathfrak{m}$, the maximal ideal in $\mathbb{C} [[ w_1,\ldots,w_n]]$. Let $G:\mathbb{C}\langle z_1,\ldots,z_m\rangle\rightarrow  \mathbb{C}\langle w_1,\ldots,w_n\rangle$ be the substitution homomorphism sending $z_i$ to $g_i$. Then $F$ and $G$ agrees on $\mathbb{C}[z_1,\ldots,z_m]$. In particular, for any $f\in \mathbb{C}\langle z_1,\ldots,z_m\rangle$ and $a\in \mathbb{N}$ if we write $f_1$ the sum of the homogeneous parts of $f$ of degree no more than $a$ and $f_2=f-f_1$, we see that $f_2\in \mathfrak{m}_1^{a+1}$, where $\mathfrak{m}_1$ is the maximal ideal of $\mathbb{C}\langle z_1,\ldots,z_m\rangle$. It follows that $(F-G)(f_1)=0$ and $(F-G)(f_2)\in \mathfrak{m}^{a+1}$, the latter is a consequence of \cref{thm-converinglocal}.
+    As $a$ is arbitrary, we find that
+    \[
+      (F-G)(f)\in \bigcap_{a=1}^{\infty}\mathfrak{m}^a\subseteq  \bigcap_{a=1}^{\infty}\mathfrak{m}_2^a,
+    \]
+    where $\mathfrak{m}_2$ is the maximal ideal in $\mathbb{C} [[ w_1,\ldots,w_n]]$.
+    As $\mathbb{C}[[w_1,\ldots,w_n]] $ is Noetherian, it follows from Krull's intersection theorem \cite[\href{https://stacks.math.columbia.edu/tag/00IP}{Tag 00IP}]{stacks-project} that $\bigcap_{a=1}^{\infty}\mathfrak{m}_2^a=0$, so $F=G$.
+\end{proof}
 
 \begin{theorem}
     For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is noetherian and factorial.
 \end{theorem}
+
+\begin{proposition}\label{prop-completionconvergenseries}
+    Let $n\in \mathbb{N}$. Then the $\mathfrak{m}$-adic completion of the ring  $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is canonically isomorphic to $\mathbb{C}[[ z_1,\ldots,z_n ]]$, where $\mathfrak{m}$ is the maximal ideal of $\mathbb{C}\langle z_1,\ldots,z_n \rangle$. 
+\end{proposition}
+\begin{proof}
+    Let $\mathfrak{m}_1$ be the maximal ideal in $\mathbb{C}[z_1,\ldots,z_n]$. It suffices to observe that we have canonical identifications
+    \[
+        \mathbb{C}[z_1,\ldots,z_n]/\mathfrak{m}_1^n\cn \mathbb{C}\langle z_1,\ldots,z_n\rangle/\mathfrak{m}^n
+    \]
+    for any $n\in \mathbb{N}$. So in particular, the $\mathfrak{m}$-adic completion of $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is isomorphic to the $\mathfrak{m}_1$-adic completion of $\mathbb{C}[z_1,\ldots,z_n]$, which is $\mathbb{C}\langle z_1,\ldots,z_n \rangle$.
+\end{proof}
 
 \begin{theorem}
     For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is strictly Henselian.
@@ -60,7 +189,7 @@
 \end{definition}
 Observe that a complex analytic local algebra is always local with residue field $\mathbb{C}$ and a morphism in $\CLA$ is always a local homomorphism. We will write $\mathfrak{m}_A$ for the maximal ideal in $A$.
 
-\begin{lemma}
+\begin{lemma}\label{lma-powerseriesfunctorpoint}
     Let $A$ be a complex analytic local algebra and $n\in \mathbb{N}$, then there is a natural bijection
     \[
         \Hom_{\CLA}(\mathbb{C}\langle z_1,\ldots,z_n \rangle,A)\cong \mathfrak{m}_{A}^n
@@ -70,8 +199,8 @@ Observe that a complex analytic local algebra is always local with residue field
 \begin{proof}
     As a morphism $f:\mathbb{C}\langle z_1,\ldots,z_n \rangle \rightarrow A$ is necessarily local, we see that $f(z_i)\in A$ for all $i=1,\ldots,n$. So the map $\Hom_{\CLA}(\mathbb{C}\langle z_1,\ldots,z_n \rangle,A)\rightarrow \mathfrak{m}_{A}^n$ is well-defined. Conversely, given $w_1,\ldots,w_n\in \mathfrak{m}_A$, we claim that there is a unique morphism $f:\mathbb{C}\langle z_1,\ldots,z_n \rangle \rightarrow A$ in $\CLA$ sending $z_i$ to $w_i$.
 
-    The uniqueness is easy \textcolor{red}{Add details about the topology}, so let us consider only the existence.
-    Let $\mathbb{C}\langle z_1,\ldots,z_m \rangle \rightarrow A$ be a surjective morphism. Lift $w_i$ to $w_i'\in \mathbb{C}\langle z_1,\ldots,z_m \rangle$, it suffices to construct a morphism $\mathbb{C}\langle z_1,\ldots,z_n \rangle\rightarrow \mathbb{C}\langle z_1,\ldots,z_m \rangle$ sending $z_i$ to $w_i'$. So we may assume that $A=\mathbb{C}\langle z_1,\ldots,z_m \rangle$. In this case, the result is well-known. \textcolor{red}{Include a proof later.}
+    The uniqueness follows from \cref{lma-homopowerringanalytic}, so let us consider only the existence.
+    Let $\mathbb{C}\langle z_1,\ldots,z_m \rangle \rightarrow A$ be a surjective morphism. Lift $w_i$ to $w_i'\in \mathbb{C}\langle z_1,\ldots,z_m \rangle$, it suffices to construct a morphism $\mathbb{C}\langle z_1,\ldots,z_n \rangle\rightarrow \mathbb{C}\langle z_1,\ldots,z_m \rangle$ sending $z_i$ to $w_i'$. So we may assume that $A=\mathbb{C}\langle z_1,\ldots,z_m \rangle$. In this case, the result follows from \cref{lma-univerpropconvspecialcase}.
 \end{proof}
 
 \textcolor{red}{Needs to be extended to relative situation}
@@ -90,7 +219,7 @@ By definition, there are natural morphisms
 \]
 
 The simplest example is 
-\begin{lemma}
+\begin{lemma}\label{lma-Cmexistencetensor}
     For any $m,n\in \mathbb{N}$, we have
     \[
         \mathbb{C}\langle z_1,\ldots,z_m \rangle\overline{\otimes} \mathbb{C}\langle z_1,\ldots,z_n \rangle\cong  \mathbb{C}\langle z_1,\ldots,z_{m+n} \rangle
@@ -98,23 +227,53 @@ The simplest example is
     as complex analytic local algebras.
 \end{lemma}
 \begin{proof}
-    
+    This is a simple consequence of \cref{lma-powerseriesfunctorpoint} and Yoneda's lemma.    
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{lma-quotientimplyexistencetensor}
     Assume that $f_i:A_i\rightarrow B_i$ are  surjective (i.e. the underlying homomorphisms of algebras are surjective) morphisms in $\CLA$ for $i=1,2$. Let $I_i$ be the kernel of $f_i$ as homomorphisms of algebras.
     If $A_1\overline{\otimes} A_2$ exists, then so is $B_1 \overline{\otimes} B_2$ and
     \[
         B_1 \overline{\otimes} B_2\cong A_1\overline{\otimes} A_2/ (I_1\otimes 1+1\otimes I_2)(A_1\overline{\otimes} A_2).
     \]
 \end{lemma}
+\begin{proof}
+    That $A_1\overline{\otimes} A_2/ (I_1\otimes 1+1\otimes I_2)(A_1\overline{\otimes} A_2)$ is a complex analytic local algebra follows from our assumption. That it represents  $B_1 \overline{\otimes} B_2$ follows from general abstract nonsense. \textcolor{red}{Include details}
+\end{proof}
 
+\begin{corollary}
+    Let $A_1$, $A_2$ be complex analytic local algebras, then $A_1\overline{\otimes} A_2$ exists. 
+\end{corollary}
+\begin{proof}
+    This is a consequence of \cref{lma-quotientimplyexistencetensor} and \cref{lma-Cmexistencetensor}.
+\end{proof}
 
 \begin{theorem}
-    Completion of the tensor product.
+    Let $A_1,A_2$ be complex analytic local algebras, then there are natural isomorphisms
+    \[
+      A_1\hat{\otimes} A_2 \cn  (A_1\overline{\otimes} A_2)^{\hat{}}.
+    \]
+    Here the completed tensor product is taken over $\mathbb{C}$.
 \end{theorem}
+\begin{proof}
+    Observe that the existence of a morphism $A_1\hat{\otimes} A_2 \rightarrow  (A_1\overline{\otimes} A_2)^{\hat{}}$ follows from the universal property.
 
-\cite{stacks-project}
+    When $A_1$ and $A_2$ are both rings of convergent power series, this result follows from \cref{lma-Cmexistencetensor} and \cref{prop-completionconvergenseries}. 
+
+    In general, represent 
+    \[
+        A_1=\mathbb{C}\langle z_1,\ldots,z_m\rangle/I_1,\quad   A_2=\mathbb{C}\langle w_1,\ldots,w_n\rangle/I_2.
+    \]
+    Then we have a commutative diagram
+    \[ 
+    \begin{tikzcd}
+        & \mathbb{C}\langle z_1,\ldots,z_m\rangle \hat{\otimes}  \mathbb{C}\langle w_1,\ldots,w_n\rangle \arrow[r]\arrow[d] & (\mathbb{C}\langle z_1,\ldots,z_m\rangle\overline{\otimes} \mathbb{C}\langle w_1,\ldots,w_n\rangle)^{\hat{}} \arrow[d]\\
+        & A_1\hat{\otimes} A_2 \arrow[r] & (A_1\overline{\otimes} A_2)^{\hat{}}
+    \end{tikzcd}.
+    \]
+    We already know tha the upper arrow is an isomorphism, it suffices to identify the kernels of the two vertical maps. The kernel of the right vertical map before completion is given by \cref{lma-quotientimplyexistencetensor}, namely, the ideal generated by $I_1\otimes 1+1\otimes I_2$. Accordingly, the kernel of the right vertical map is the ideal generated by $I_1\otimes 1+1\otimes I_2$. On the other hand, it follows from classical commutative algebra that the kenrel of the left vertical map is also generated by $I_1\otimes 1+1\otimes I_2$. We conclude.
+\end{proof}
+
 
 \printbibliography
 \end{document}

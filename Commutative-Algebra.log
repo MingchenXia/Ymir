@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  21 NOV 2022 20:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  22 NOV 2022 20:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1069,16 +1069,15 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Trying to load font information for U+euf on input line 61.
+ [4]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 148.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
-) [4] [5] [6
-
-]
+) [5] [6] [7] [8]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 113.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 278.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1086,24 +1085,26 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [7] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.aux)
+ [9
+
+] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.aux)
 Package logreq Info: Writing requests to 'Commutative-Algebra.run.xml'.
 \openout1 = `Commutative-Algebra.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36641 strings out of 478994
- 685937 string characters out of 5858185
- 1526567 words of memory out of 5000000
- 53257 multiletter control sequences out of 15000+600000
- 466851 words of font info for 116 fonts, out of 8000000 for 9000
+ 36855 strings out of 478994
+ 691048 string characters out of 5858185
+ 1532073 words of memory out of 5000000
+ 53417 multiletter control sequences out of 15000+600000
+ 468638 words of font info for 136 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,7n,133p,796b,1733s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 132i,16n,133p,980b,1733s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.pdf (7 pages, 226195 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.pdf (9 pages, 250043 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
  27173 words of extra memory for PDF output out of 29859 (max. 10000000)
 
