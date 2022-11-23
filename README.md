@@ -1,4 +1,4 @@
-# Ymir
+
 
 ## Introduction
 This is intended to be a [Stacks Project](https://stacks.math.columbia.edu) for complex analytic spaces and non-Archimedean analytic spaces.
