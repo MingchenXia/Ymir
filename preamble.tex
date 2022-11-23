@@ -1,14 +1,17 @@
 
 \documentclass{amsbook} 
-\usepackage{xr}
+%\usepackage{xr}
 \usepackage{xr-hyper}
+\usepackage[unicode]{hyperref}
+
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{amssymb,tikz-cd}
 %\usepackage{natbib}
 \usepackage[english]{babel}
-\usepackage[unicode]{hyperref}
+
 \usepackage[nameinlink,capitalize]{cleveref}
 \usepackage[style=alphabetic,maxnames=99,maxalphanames=5, isbn=false, giveninits=true, doi=false]{biblatex}
 \usepackage{lipsum, physics}
@@ -71,15 +74,15 @@ linktoc=all
 
 %% Define various environments.
 
+\theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{thm}[theorem]{Theorem}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{question}[theorem]{Question}
 \newtheorem{example}[theorem]{Example}
-
-\theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{condition}[theorem]{Condition}
 
@@ -137,6 +140,7 @@ linktoc=all
 \DeclareMathOperator{\Red}{red}
 \DeclareMathOperator{\Spf}{Spf}
 \DeclareMathOperator{\Span}{Span}
+\DeclareMathOperator{\Der}{Der}
 %\DeclareMathOperator{\Mod}{mod}
 \DeclareMathOperator{\Hilb}{Hilb}
 \DeclareMathOperator{\triv}{triv}
@@ -256,6 +260,7 @@ linktoc=all
 \newcommand{\HvbCat}{\overline{\mathcal{V}\mathrm{ect}}}
 \newcommand{\BanModCat}{\mathcal{B}\mathrm{an}\mathcal{M}\mathrm{od}}
 \newcommand{\DesCat}{\mathcal{D}\mathrm{es}}
+\newcommand{\SchCat}{\mathcal{S}\mathrm{ch}}
 \newcommand{\AbCat}{\mathcal{A}\mathrm{b}}
 \newcommand{\RSCat}{\mathcal{R}\mathrm{S}}
 \newcommand{\LRSCat}{\mathcal{L}\mathrm{RS}}
@@ -292,13 +297,13 @@ linktoc=all
   \addtocounter{footnote}{-1}%
   \endgroup
 }
-\externaldocument[Introduction-]{Introduction}
 
+\externaldocument[Introduction-]{Introduction}
 %One variable complex analysis
 %Several variables complex analysis
-\externaldocument[Commutative-Algebra-]{Commutative-Algebra}
+\externaldocument[Commutative-]{Commutative-Algebra}
 \externaldocument[Weierstrass-]{Weierstrass}
-\externaldocument[Complex-Analytic-Spaces-]{Complex-Analytic-Spaces}
+\externaldocument[Complex-]{Complex-Analytic-Spaces}
 %Properties of space
 \externaldocument[Morphisms-]{Morphisms}
 %Differential calculus

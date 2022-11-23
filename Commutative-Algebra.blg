@@ -1,15 +1,15 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'Commutative-Algebra.blg'
-[64] biber-darwin:340> INFO - === Tue Nov 22, 2022, 20:31:40
-[77] Biber.pm:415> INFO - Reading 'Commutative-Algebra.bcf'
-[158] Biber.pm:952> INFO - Found 1 citekeys in bib section 0
-[171] Biber.pm:4340> INFO - Processing section 0
-[179] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
-[190] bibtex.pm:1689> INFO - LaTeX decoding ...
-[569] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
-[621] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[621] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[621] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[621] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[623] bbl.pm:654> INFO - Writing 'Commutative-Algebra.bbl' with encoding 'UTF-8'
-[623] bbl.pm:757> INFO - Output to Commutative-Algebra.bbl
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'Commutative-Algebra.blg'
+[92] biber-darwin:340> INFO - === Wed Nov 23, 2022, 15:22:13
+[109] Biber.pm:418> INFO - Reading 'Commutative-Algebra.bcf'
+[225] Biber.pm:972> INFO - Found 3 citekeys in bib section 0
+[240] Biber.pm:4383> INFO - Processing section 0
+[252] Biber.pm:4574> INFO - Looking for bibtex file 'Ymir.bib' for section 0
+[267] bibtex.pm:1713> INFO - LaTeX decoding ...
+[868] bibtex.pm:1518> INFO - Found BibTeX data source 'Ymir.bib'
+[967] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[967] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[967] Biber.pm:4203> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[967] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[971] bbl.pm:654> INFO - Writing 'Commutative-Algebra.bbl' with encoding 'UTF-8'
+[972] bbl.pm:757> INFO - Output to Commutative-Algebra.bbl

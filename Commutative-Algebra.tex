@@ -14,6 +14,7 @@
 
 \begin{document}
 
+%\input{Externaldoc}
 
 \maketitle
 
@@ -21,17 +22,20 @@
 \tableofcontents
 
 
+\section{Introduction}
 
-\section{Power ring series}
+In this chapter, we study the notion of complex analytic local algberas (\emph{Analytische Stellenalgebren} in German) in the sense of \cite{GR71}. Most of the materials in this chapter are standard, but the proofs are scattered in tons of papers and books.
 
-\begin{definition}
+Results regarding the completion of the analytic tensor products are certainly known, though the author does not know any written references.
+\section{Ring of convergent power series}
+
+\begin{definition}\label{def-ringconvpowerseries}
     For any $n\in \mathbb{N}$, let $\mathbb{C}\langle z_1,\ldots,z_n\rangle$ denote the subring of $\mathbb{C}[[z_1,\ldots,z_n]]$ consisting of
     \[
         f=\sum_{\alpha\in \mathbb{N}^n} a_{\alpha}z^{\alpha},\quad a_{\alpha}\in \mathbb{C},
     \]
     which is  convergent in a neighbourhood of $0$: there is $\epsilon>0$ such that for any $x_1,\ldots,x_n\in \mathbb{C}$ with $|x_i|<\epsilon$, $\sum_{\alpha}a_{\alpha} x^{\alpha}$ is a convergent power series. We will write $f(0)$ for $a_{0,\ldots,0}$.
 \end{definition}
-
 
 \begin{definition}
     Fix $n\in \mathbb{N}$ and $t=(t_1,\ldots,t_n)\in \mathbb{R}_{> 0}^n$. For any $f\in \mathbb{C}[[z_1,\ldots,z_n]]$ with an expansion
@@ -49,7 +53,7 @@
 \end{definition}
 Observe that $(\mathbb{C}\langle z_1,\ldots,z_n\rangle_t,\|\bullet\|_t)$ is a normed $\mathbb{C}$-vector space.
 
-\begin{theorem}[Cauchy coefficients estimate]
+\begin{proposition}[Cauchy coefficients estimate]
     Let 
     \[
         f=\sum_{\alpha\in \mathbb{N}^n} a_{\alpha}z^{\alpha}\in  \mathbb{C}\langle z_1,\ldots,z_n\rangle_t. 
@@ -58,7 +62,10 @@ Observe that $(\mathbb{C}\langle z_1,\ldots,z_n\rangle_t,\|\bullet\|_t)$ is a no
     \[
       |a_{\alpha}|\leq  \frac{\|f\|_t}{t^{\alpha}}.
     \]
-\end{theorem}
+\end{proposition}
+\begin{proof}
+    This follows from the definition.
+\end{proof}
 
 \begin{proposition}\label{prop-CzztBanachalg}
     $(\mathbb{C}\langle z_1,\ldots,z_n\rangle_t,\|\bullet\|_t)$ is a $\mathbb{C}$-Banach algebra.
@@ -84,7 +91,7 @@ Observe that $(\mathbb{C}\langle z_1,\ldots,z_n\rangle_t,\|\bullet\|_t)$ is a no
 
 
 
-\begin{theorem}\label{thm-converinglocal}
+\begin{thm}\label{thm-converinglocal}
     Let $m, n\in \mathbb{N}$.
 \begin{enumerate}
     \item The ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is local, and the maximal ideal is given by convergent power series without constant terms.
@@ -92,7 +99,7 @@ Observe that $(\mathbb{C}\langle z_1,\ldots,z_n\rangle_t,\|\bullet\|_t)$ is a no
 \end{enumerate}
 
 
-\end{theorem}
+\end{thm}
 \begin{proof}
 (1) This follows from \cref{lma-unitsinconvpowerseries} and \cite[\href{https://stacks.math.columbia.edu/tag/00E9}{Tag 00E9}]{stacks-project}.
 
@@ -154,9 +161,18 @@ Conversely, we have
     As $\mathbb{C}[[w_1,\ldots,w_n]] $ is Noetherian, it follows from Krull's intersection theorem \cite[\href{https://stacks.math.columbia.edu/tag/00IP}{Tag 00IP}]{stacks-project} that $\bigcap_{a=1}^{\infty}\mathfrak{m}_2^a=0$, so $F=G$.
 \end{proof}
 
-\begin{theorem}
-    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is noetherian and factorial.
-\end{theorem}
+
+\begin{thm}\label{thm-localringnoetherian}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is noetherian.
+\end{thm}
+\begin{proof}
+    We make an induction on $n$. The case $n=0$ is trivial. So assume $n>0$ and that the theorem has been proved for all smaller values of $n$. Let $f\in\mathbb{C}\langle z_1,\ldots,z_n \rangle$ be a non-zero element. It suffices to show that $\mathbb{C}\langle z_1,\ldots,z_n \rangle/f\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is noetherian. By Weierstrass theory, we know that 
+    \[
+        \mathbb{C}\langle z_1,\ldots,z_n \rangle/f\mathbb{C}\langle z_1,\ldots,z_n \rangle\cong \mathbb{C}\langle z_1,\ldots,z_n \rangle^c
+    \]
+    for some $c\in \mathbb{N}$. By inductive hypothesis, the latter ring is noetherian.
+\end{proof}
+
 
 \begin{proposition}\label{prop-completionconvergenseries}
     Let $n\in \mathbb{N}$. Then the $\mathfrak{m}$-adic completion of the ring  $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is canonically isomorphic to $\mathbb{C}[[ z_1,\ldots,z_n ]]$, where $\mathfrak{m}$ is the maximal ideal of $\mathbb{C}\langle z_1,\ldots,z_n \rangle$. 
@@ -169,14 +185,61 @@ Conversely, we have
     for any $n\in \mathbb{N}$. So in particular, the $\mathfrak{m}$-adic completion of $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is isomorphic to the $\mathfrak{m}_1$-adic completion of $\mathbb{C}[z_1,\ldots,z_n]$, which is $\mathbb{C}\langle z_1,\ldots,z_n \rangle$.
 \end{proof}
 
-\begin{theorem}
+\begin{corollary}
+    Let $n\in \mathbb{N}$. Then the Krull dimension of $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is $n$.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{prop-completionconvergenseries} and \cite[\href{https://stacks.math.columbia.edu/tag/07NV}{Tag 07NV}]{stacks-project}.
+\end{proof}
+
+\begin{thm}\label{thm-convpowerregular}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is regular. In particular, it is a UFD.
+\end{thm}
+\begin{proof}
+    We have computed that the completion of $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is $\mathbb{C}[[ z_1,\ldots,z_n ]]$ in \cref{prop-completionconvergenseries}. The regularity of $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ follows from the regularity of the completion by descent \cite[\href{https://stacks.math.columbia.edu/tag/07NY}{Tag 07NY}]{stacks-project}. It is a UFD by Auslander--Buchsbaum theorem.
+\end{proof}
+
+
+\begin{thm}\label{thm-convpowerstrictHen}
     For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is strictly Henselian.
-\end{theorem}
+\end{thm}
+\begin{proof}
+    As the residue field of $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is $\mathbb{C}$ by \cref{thm-converinglocal}, it suffices to show that $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is Henselian. Take a monic polynomial $f\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$, say
+    \[
+        f=w^b+f_1 w^{b-1}+\cdots+ f_b,\quad f_i\in \mathbb{C}\langle z_1,\ldots,z_n \rangle.
+    \]
+    Suppose that $\bar{a}\in \mathbb{C}$ is a simple root of $\bar{f}=w^b+f_1(0)w^{b-1}+\cdots+ f_b(0)$. We want to lift find $a\in \mathbb{C}\langle z_1,\ldots,z_n \rangle$ such that $f(a)=0$ and $a(0)=\bar{a}$. As $\mathbb{C}$ is algebraically closed, we can prove a stronger result: suppose that 
+    \[
+        \bar{f}=(w-c_1)^{b_1}\cdots (w-c_t)^{b_t}  
+    \]
+    for some $c_i\in \mathbb{C}$ and $b_i\in \mathbb{Z}_{>0}$. Then we claim that there are monic polynomials $g_i\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$ such that $\bar{g_i}=(w-c_i)^{b_i}$ for all $i=1,\ldots,t$ and $f=g_1\cdots g_t$.
+
+    We make an induction on $t$. When $t=1$, there is nothing to prove, so assume that $t>1$ and the theorem has been proved for $t-1$. We may assume that $c_1=0$. By Weierstrass preparation theorem, we can find a Weierstrass polynomial $h\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$ of degree $b_1$ and a monic polynomial $k\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$ such that $f=hk$. By the inductive hypothesis, we can find monic polynomials $g_2,\ldots,g_t\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$ such that  $\bar{g_i}=(w-c_i)^{b_i}$ for all $i=2,\ldots,t$ and $k=g_2\cdots g_t$. It suffices to take $g_1=h$.
+\end{proof}
+
+We recall the following criterion.
+\begin{thm}\label{thm-excefromderiv}
+    Let $k$ be a field of characteristic $0$ and $R$ be a regular ring containing $k$. Suppose that there is $n\in \mathbb{N}$ such that
+    \begin{enumerate}
+        \item for any maixmal ideal $\mathfrak{m}$ of $R$, the residue $R/\mathfrak{m}$ is algebraic over $k$ and the height of $\mathfrak{m}$ is $n$;
+        \item there exists $D_1,\ldots, D_n\in \Der_k(R)$ and $x_1,\ldots,x_n\in R$ such that $D_ix_j=\delta_{ij}$ for all $i,j=1,\ldots,n$. 
+    \end{enumerate}
+    Then $R$ is excellent.
+\end{thm}
+\begin{proof}
+    We refer to \cite[Theorem~102]{Mat80}.
+\end{proof}
+
+\begin{thm}\label{thm-convpowerexcell}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is excellent.
+\end{thm}
+\begin{proof}
+    This is an immediate consequence of \cref{thm-excefromderiv}.
+\end{proof}
 
 \section{Complex analytic local algebras}
-\textcolor{red}{I do not know the "official" translation of Analytische Stellenalgebren, so I choose the term complex analytic local algebra. Please contact me if you have a better name.}
 
-\begin{definition}
+\begin{definition}\label{def-complexanalylocaalg}
     A \emph{complex analytic local algebra} is a $\mathbb{C}$-algebra $A$ such that $A\neq 0$ and there exists some $n\in \mathbb{N}$ and an ideal $I$ in $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ such that 
     \[
         A\cong \mathbb{C}\langle z_1,\ldots,z_n \rangle/I
@@ -187,6 +250,28 @@ Conversely, we have
 
     The category of complex analytic local algebras is denoted by $\CLA$.
 \end{definition}
+
+\begin{proposition}\label{prop-converinglocalgeneral}
+    Let $A$ be an object in $\CLA$ and $f:B\rightarrow C$ be a morphism in  $\CLA$. Then
+    \begin{enumerate}
+        \item $A$ is local with residue field $\mathbb{C}$.
+        \item $f$ is a local homomorphism.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (1) This follows immediately from \cref{thm-converinglocal}.
+    
+    (2) This follows from the same arguments as \cref{thm-converinglocal} (2).
+\end{proof}
+
+\begin{proposition}\label{prop-analocalgwellbehaved}
+    Let $A$ be a complex analytic local algebra. Then $A$ is a regular, excellent, strictly Henselian. 
+\end{proposition}
+\begin{proof}
+    This follows from the corresponding results in \cref{thm-convpowerregular}, \cref{thm-convpowerexcell} and \cref{thm-convpowerstrictHen}.
+\end{proof}
+
+
 Observe that a complex analytic local algebra is always local with residue field $\mathbb{C}$ and a morphism in $\CLA$ is always a local homomorphism. We will write $\mathfrak{m}_A$ for the maximal ideal in $A$.
 
 \begin{lemma}\label{lma-powerseriesfunctorpoint}
@@ -203,8 +288,7 @@ Observe that a complex analytic local algebra is always local with residue field
     Let $\mathbb{C}\langle z_1,\ldots,z_m \rangle \rightarrow A$ be a surjective morphism. Lift $w_i$ to $w_i'\in \mathbb{C}\langle z_1,\ldots,z_m \rangle$, it suffices to construct a morphism $\mathbb{C}\langle z_1,\ldots,z_n \rangle\rightarrow \mathbb{C}\langle z_1,\ldots,z_m \rangle$ sending $z_i$ to $w_i'$. So we may assume that $A=\mathbb{C}\langle z_1,\ldots,z_m \rangle$. In this case, the result follows from \cref{lma-univerpropconvspecialcase}.
 \end{proof}
 
-\textcolor{red}{Needs to be extended to relative situation}
-\begin{definition}
+\begin{definition}\label{def-analytictensor}
     Let $A_1,A_2$ be complex analytic local algebras, \emph{an analytic tensor product} of $A_1$ and $A_2$ is a complex analytic local algebra $A$ together with morphisms $A_1\rightarrow A$ and $A_2\rightarrow A$ such that for any complex analytic local algebra $C$, the induced map
     \[
       \Hom_{\CLA}(A,C)\rightarrow  \Hom_{\CLA}(A_1,C)\times  \Hom_{\CLA}(A_2,C)
@@ -212,6 +296,15 @@ Observe that a complex analytic local algebra is always local with residue field
     is bijective.
 
     As analytic tensor product is unique up to unique isomorphism, so we can choose a specific analytic tensor product $A_1\overline{\otimes} A_2$ and call it \emph{the analytic tensor product} of $A_1$ and $A_2$.
+
+    More generally, let $B$ be a complex analytic local algebra and $A_1,A_2\in \CLA_{\backslash B}$ (the under-slice of $B$).
+    \emph{An analytic tensor product} of $A_1$ and $A_2$ over $B$ is a complex analytic local algebra $A$ over $B$ together with morphisms $A_1\rightarrow A$ and $A_2\rightarrow A$ in $\CLA_{\backslash B}$ such that the induced map
+    \[
+      \Hom_{\CLA}(A,C)\rightarrow  \Hom_{\CLA_{\backslash B}}(A_1,C)\times \Hom_{\CLA_{\backslash B}}(A_2,C)
+    \]
+    is bijective.
+    
+    As analytic tensor product is unique up to unique isomorphism, so we can choose a specific analytic tensor product $A_1\overline{\otimes}_B A_2$ and call it \emph{the analytic tensor product} of $A_1$ and $A_2$ over $B$.
 \end{definition}
 By definition, there are natural morphisms 
 \[
@@ -248,13 +341,13 @@ The simplest example is
     This is a consequence of \cref{lma-quotientimplyexistencetensor} and \cref{lma-Cmexistencetensor}.
 \end{proof}
 
-\begin{theorem}
+\begin{thm}
     Let $A_1,A_2$ be complex analytic local algebras, then there are natural isomorphisms
     \[
-      A_1\hat{\otimes} A_2 \cn  (A_1\overline{\otimes} A_2)^{\hat{}}.
+      A_1\hat{\otimes}_{\mathbb{C}} A_2 \cn  (A_1\overline{\otimes} A_2)^{\hat{}}.
     \]
-    Here the completed tensor product is taken over $\mathbb{C}$.
-\end{theorem}
+\end{thm}
+Here on the right-hand side, we take the adic completion with respect to the maximal ideal in $A_1\overline{\otimes} A_2$.
 \begin{proof}
     Observe that the existence of a morphism $A_1\hat{\otimes} A_2 \rightarrow  (A_1\overline{\otimes} A_2)^{\hat{}}$ follows from the universal property.
 
@@ -267,13 +360,38 @@ The simplest example is
     Then we have a commutative diagram
     \[ 
     \begin{tikzcd}
-        & \mathbb{C}\langle z_1,\ldots,z_m\rangle \hat{\otimes}  \mathbb{C}\langle w_1,\ldots,w_n\rangle \arrow[r]\arrow[d] & (\mathbb{C}\langle z_1,\ldots,z_m\rangle\overline{\otimes} \mathbb{C}\langle w_1,\ldots,w_n\rangle)^{\hat{}} \arrow[d]\\
-        & A_1\hat{\otimes} A_2 \arrow[r] & (A_1\overline{\otimes} A_2)^{\hat{}}
+        & \mathbb{C}\langle z_1,\ldots,z_m\rangle \hat{\otimes}_{\mathbb{C}}  \mathbb{C}\langle w_1,\ldots,w_n\rangle \arrow[r]\arrow[d] & (\mathbb{C}\langle z_1,\ldots,z_m\rangle\overline{\otimes} \mathbb{C}\langle w_1,\ldots,w_n\rangle)^{\hat{}} \arrow[d]\\
+        & A_1\hat{\otimes}_{\mathbb{C}} A_2 \arrow[r] & (A_1\overline{\otimes} A_2)^{\hat{}}
     \end{tikzcd}.
     \]
-    We already know tha the upper arrow is an isomorphism, it suffices to identify the kernels of the two vertical maps. The kernel of the right vertical map before completion is given by \cref{lma-quotientimplyexistencetensor}, namely, the ideal generated by $I_1\otimes 1+1\otimes I_2$. Accordingly, the kernel of the right vertical map is the ideal generated by $I_1\otimes 1+1\otimes I_2$. On the other hand, it follows from classical commutative algebra that the kenrel of the left vertical map is also generated by $I_1\otimes 1+1\otimes I_2$. We conclude.
+    We already know tha the upper arrow is an isomorphism, it suffices to identify the kernels of the two vertical maps. The kernel of the right vertical map before completion is given by \cref{lma-quotientimplyexistencetensor}, namely, the ideal generated by $I_1\otimes 1+1\otimes I_2$. Accordingly, the kernel of the right vertical map is the closure of the ideal generated by $I_1\otimes 1+1\otimes I_2$ by \cite[\href{https://stacks.math.columbia.edu/tag/0ARZ}{Tag 0ARZ}]{stacks-project}. On the other hand, it follows from \cite[\href{https://stacks.math.columbia.edu/tag/0ARZ}{Tag 0ARZ}]{stacks-project} that the kenrel of the left vertical map is the closure of the ideal generated by $I_1\otimes 1+1\otimes I_2$. We conclude.
 \end{proof}
 
+\begin{thm}\label{thm-relanalytictensorexist}
+    Let $B$ be a complex analytic local algebra and $A_1,A_2\in \CLA_{\backslash B}$. Then $A_1\overline{\otimes}_B A_2$ exists. Moreover, there is a natural identification of adic rings
+    \[
+        A_1\hat{\otimes}_B A_2 \cn (A_1\overline{\otimes}_B A_2)^{\hat{}}.
+    \]
+\end{thm}
+Here on the right-hand side, we take the adic completion with respect to the maximal ideal in $A_1\overline{\otimes}_B A_2$.
+\begin{proof}
+    Observe that we have a natural map $B\overline{\otimes} B\rightarrow B$: at the level of functor of points, we simply define
+    \[
+        h^B\rightarrow h^{B\overline{\otimes} B}
+    \]
+    by sending an arrow $f:B\rightarrow C$ in $\CLA$ to $(f,f)\in h^{B\overline{\otimes} B}(C)$. We claim that $B\overline{\otimes} B\rightarrow B$ is surjective. In fact, it is easy to construct a section $B\rightarrow B\overline{\otimes} B$, which at the level of functor of points, sends a pair of morphisms  $(f_1:B\rightarrow C,f_2:B\rightarrow C)$ in $\CLA$ to $f_1$.
+
+    It follows from general abstract nonsense that the tensor product
+    \[
+        (A_1\overline{\otimes} A_2)\overline{\otimes}_{B\overline{\otimes} B} B  
+    \]
+    represents $A_1\overline{\otimes}_B A_2$. So we are reduced to the case where $B\rightarrow A_2$ is surjective. Let $I$ denote the kernel of the map $B\rightarrow A_2$. We denote by $J$ the image of $I$ in $A_1$. It is obvious that $A_1/JA_1$ is the desired tensor product.
+
+    In order to compute the completed local ring, we similarly reduce to the case where $B\rightarrow A_2$ is surjective with kernel $I$. In this case, $A_1\overline{\otimes}_B A_2$ is the quotient of $A_1$ by the ideal generated by $I$. So after taking completion, $(A_1\overline{\otimes}_B A_2)^{\hat{}}$ is the quotient of $\hat{A_1}$ by the closed ideal generated by $I$ by \cite[\href{https://stacks.math.columbia.edu/tag/0ARZ}{Tag 0ARZ}]{stacks-project}. On the other hand, $A_1\hat{\otimes}_B A_2$ is also the quotient of $\hat{A_1}$ by the closed ideal generated by $I$ by \cite[\href{https://stacks.math.columbia.edu/tag/0AMZ}{Tag 0AMZ}]{stacks-project}. We conclude.
+\end{proof}
+\begin{remark}
+    One should remark that in general, the completed tensor products of local rings are not local.
+\end{remark}
 
 \printbibliography
 \end{document}
