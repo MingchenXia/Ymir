@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.9)  23 NOV 2022 15:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.9)  23 NOV 2022 16:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -906,21 +906,21 @@ Package bigints Info: This is Bigints by Merciadri Luca. on input line 5.
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 47.
 \c@theorem=\count469
-Package xr Info: IMPORTING LABELS FROM Introduction.aux on input line 303.
-Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 304.
+Package xr Info: IMPORTING LABELS FROM Introduction.aux on input line 304.
+Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 305.
 
 
 Package xr Warning: 
 No file Weierstrass.aux
 LABELS NOT IMPORTED.
- on input line 305.
+ on input line 306.
 
-Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 307.
+Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 308.
 
 Package xr Warning: 
 No file Morphisms.aux
 LABELS NOT IMPORTED.
- on input line 311.
+ on input line 312.
 
 )
 Package csquotes Info: Checking for multilingual support...
@@ -1079,14 +1079,14 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
  [4]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 156.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 155.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 ) [5] [6] [7] [8] [9] [10]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 397.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 396.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1102,18 +1102,18 @@ Package logreq Info: Writing requests to 'Commutative-Algebra.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38730 strings out of 478268
- 743862 string characters out of 5846348
- 1547798 words of memory out of 5000000
- 55990 multiletter control sequences out of 15000+600000
+ 38731 strings out of 478268
+ 743868 string characters out of 5846348
+ 1547809 words of memory out of 5000000
+ 55991 multiletter control sequences out of 15000+600000
  526315 words of font info for 143 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  119i,16n,121p,1043b,1797s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Commutative-Algebra.pdf (11 pages, 291739 bytes).
+Output written on Commutative-Algebra.pdf (11 pages, 291577 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
+ 279 PDF objects out of 1000 (max. 8388607)
+ 223 compressed objects within 3 object streams
  52 named destinations out of 1000 (max. 500000)
  23085 words of extra memory for PDF output out of 24883 (max. 10000000)
 
