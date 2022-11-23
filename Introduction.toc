@@ -1,3 +1,0 @@
-\babel@toc {english}{}\relax 
-\contentsline {section}{\tocsection {}{1}{Introduction}}{4}{section.0.1}%
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{5}{chapter*.1}%

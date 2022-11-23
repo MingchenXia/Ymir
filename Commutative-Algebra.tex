@@ -51,7 +51,10 @@ Results regarding the completion of the analytic tensor products are certainly k
         \mathbb{C}\langle z_1,\ldots,z_n\rangle_t:=\left\{f\in \mathbb{C}[[z_1,\ldots,z_n]]: \|f\|_t<\infty \right\}.
     \]
 \end{definition}
-Observe that $(\mathbb{C}\langle z_1,\ldots,z_n\rangle_t,\|\bullet\|_t)$ is a normed $\mathbb{C}$-vector space.
+Observe that $(\mathbb{C}\langle z_1,\ldots,z_n\rangle_t,\|\bullet\|_t)$ is a normed $\mathbb{C}$-vector space and
+\begin{equation}\label{eq-convpowerseriesasunion}
+    \mathbb{C}\langle z_1,\ldots,z_n\rangle=\bigcup_{t\in \mathbb{R}_{>0}^n}\mathbb{C}\langle z_1,\ldots,z_n\rangle_t.
+\end{equation}
 
 \begin{proposition}[Cauchy coefficients estimate]
     Let 
@@ -161,16 +164,151 @@ Conversely, we have
     As $\mathbb{C}[[w_1,\ldots,w_n]] $ is Noetherian, it follows from Krull's intersection theorem \cite[\href{https://stacks.math.columbia.edu/tag/00IP}{Tag 00IP}]{stacks-project} that $\bigcap_{a=1}^{\infty}\mathfrak{m}_2^a=0$, so $F=G$.
 \end{proof}
 
+We prove a few elementary results about the structure of the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$. In the following sections, we will develop deeper structures after developing the Weierstrass theory.
 
-\begin{thm}\label{thm-localringnoetherian}
-    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is noetherian.
+\begin{proposition}\label{prop-convpowerinteg}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is an integral domain.
+\end{proposition}
+\begin{proof}
+    It suffices to observe that $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is a subring of $\mathbb{C}[[z_1,\ldots,z_n]]$.
+\end{proof}
+
+
+
+
+\begin{thm}\label{thm-convpowerstrictHen}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is strictly Henselian.
 \end{thm}
 \begin{proof}
-    We make an induction on $n$. The case $n=0$ is trivial. So assume $n>0$ and that the theorem has been proved for all smaller values of $n$. Let $f\in\mathbb{C}\langle z_1,\ldots,z_n \rangle$ be a non-zero element. It suffices to show that $\mathbb{C}\langle z_1,\ldots,z_n \rangle/f\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is noetherian. By Weierstrass theory, we know that 
+    As the residue field of $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is $\mathbb{C}$ by \cref{thm-converinglocal}, it suffices to show that $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is Henselian. Take a monic polynomial $f\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$, say
+    \[
+        f=w^b+f_1 w^{b-1}+\cdots+ f_b,\quad f_i\in \mathbb{C}\langle z_1,\ldots,z_n \rangle.
+    \]
+    Suppose that $\bar{a}\in \mathbb{C}$ is a simple root of $\bar{f}=w^b+f_1(0)w^{b-1}+\cdots+ f_b(0)$. We want to lift find $a\in \mathbb{C}\langle z_1,\ldots,z_n \rangle$ such that $f(a)=0$ and $a(0)=\bar{a}$. As $\mathbb{C}$ is algebraically closed, we can prove a stronger result: suppose that 
+    \[
+        \bar{f}=(w-c_1)^{b_1}\cdots (w-c_t)^{b_t}  
+    \]
+    for some $c_i\in \mathbb{C}$ and $b_i\in \mathbb{Z}_{>0}$. Then we claim that there are monic polynomials $g_i\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$ such that $\bar{g_i}=(w-c_i)^{b_i}$ for all $i=1,\ldots,t$ and $f=g_1\cdots g_t$.
+
+    We make an induction on $t$. When $t=1$, there is nothing to prove, so assume that $t>1$ and the theorem has been proved for $t-1$. We may assume that $c_1=0$. By Weierstrass preparation theorem, we can find a Weierstrass polynomial $h\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$ of degree $b_1$ and a monic polynomial $k\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$ such that $f=hk$. By the inductive hypothesis, we can find monic polynomials $g_2,\ldots,g_t\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$ such that  $\bar{g_i}=(w-c_i)^{b_i}$ for all $i=2,\ldots,t$ and $k=g_2\cdots g_t$. It suffices to take $g_1=h$.
+\end{proof}
+
+
+\section{Weierstrass division and excellence of the ring of formal power series}
+\begin{definition}
+    Let $n\in \mathbb{N}$ and $f\in \mathbb{C}\langle z_1,\ldots,z_n\rangle$, we say $f$ \emph{has order $e$ in $z_n$} for some $e\in \mathbb{N}$ if we expand $f$ as
+    \[
+      f=\sum_{i=0}^{\infty}f_iz_n^i  
+    \]
+    with $f_i\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle$, then $f_0(0)=\cdots=f_{e-1}(0)=0$ while $f_e(0)\neq 0$.
+
+    If $f_i(0)=0$ for all $i$, we say $f$ \emph{has order $\infty$ in $z_n$}. We will write $\ord_{z_n}f$ for the order of $f$ in $z_n$.
+\end{definition}
+\begin{thm}[Weierstrass division theorem]\label{thm-Weierstrassdiv}
+    Let $n\in \mathbb{N}$ and $g\in \mathbb{C}\langle z_1,\ldots,z_n\rangle$. Assume that $\ord_{z_n}g<\infty$. Then for any $f\in \mathbb{C}\langle z_1,\ldots,z_n\rangle$ there is $q\in \mathbb{C}\langle z_1,\ldots,z_n\rangle$ and $r\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[w]$ with $\deg_{z_n}r<\ord_{z_n}g$ such that
+    \[
+      f=qg+r.  
+    \]
+    Moreoer, $q$ and $r$ are uniquely determined.
+\end{thm}
+
+\begin{remark}\label{rmk-perturbaxes}
+    The restriction $\ord_{z_n}g<\infty$ is not too severe. In fact, given any non-zero $g$, we can always find an invertible $n\times n$ matrix $A$, so that if we consider $gA^{-1}$ defined in the obvious way, we have $\ord_{z_n}gA^{-1}<\infty$. 
+\end{remark}
+
+\begin{proof}
+    Fix $\epsilon\in (0,1)$.
+
+    Choose a small enough $t=(t_1,\ldots,t_n)\in \mathbb{R}^n_{>0}$ so that $f,g\in \mathbb{C}\langle z_1,\ldots,z_n\rangle_{t}$. This is possible by \eqref{eq-convpowerseriesasunion}. 
+    We expand $g$ as
+    \begin{equation}\label{eq-gexpandzn}
+      g=\sum_{i=0}^{\infty}a_iz_n^i  
+    \end{equation}
+    with $a_i\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle$.
+    We decompose $g$ into 
+    \[
+      g=g_1+z_n^{\ord_{z_n}g} g_2,\quad g_1=\sum_{i=0}^{\ord_{z_n}g-1}a_iz_n^i,\quad  g_2=\sum_{i=\ord_{z_n}g}^{\infty}a_i z_n^{i-\ord_{z_n}g}.
+    \]
+    Then our assumption implies that $g_2$ is a unit in  $\mathbb{C}\langle z_1,\ldots,z_n\rangle$ and by \eqref{eq-convpowerseriesasunion} again, choosing $t$ small enough, we may assume that $g_2^{-1}\in \mathbb{C}\langle z_1,\ldots,z_n\rangle_{t}$. Then
+    \[
+      \|gg_{2}^{-1}-z_n^{\ord_{z_n}g}\|_{t}=\|g_1g_{2}^{-1} \|_t \leq  \|g_1\|_t\cdot\|g_{2}^{-1} \|_t.
+    \]
+    As $\lim_{t\to 0+}\|g_1\|_t=0$ by our assumption, taking $t$ small enough, we can also guarantee that 
+    \[
+        \|gg_{2}^{-1}-z_n^{\ord_{z_n}g}\|_{t}\leq t_n^{\ord_{z_n}g}\epsilon.  
+    \]
+    We define $v_{j}\in \mathbb{C}\langle z_1,\ldots,z_n\rangle_{t}$ for $j\in \mathbb{N}$ as follows: $v_0=f$ and
+    \[
+         v_{j+1} = (z_n^{\ord_{z_n}g}- gg_{2}^{-1})v_{j,1},
+    \]
+    where $v_{j,1}$ is defined from $v_j$ in the same way $g_1$ is defined from $g$.
+
+    Observe that
+    \[
+        \|v_{j,1}\|_t\leq t_n^{-\ord_{z_n}g}\|v_j\|_t.
+    \]
+    It follows that
+    \[
+        \|v_{j+1}\|_t\leq \epsilon\|v_j\|_t.  
+    \]
+    In particular, 
+    \[
+        w=\sum_{j=0}^{\infty}v_j  
+    \]
+    converges in $\mathbb{C}\langle z_1,\ldots,z_n\rangle_{t}$ by \cref{prop-CzztBanachalg}. Now we can define $q=g_{2}^{-1}w_2$ and $r=w_1$. Again $w_1,w_2$ are defined from $w$ using the same way $g_1,g_2$ are defined from $g$.
+    It follows that
+    \[
+        f=\sum_{j=0}^{\infty}(v_j-v_{j+1})=\sum_{j=0}^{\infty} (gg_2^{-1}w_2+w_1)=qg+r.
+    \]
+    We conclude the existence part.
+
+    As for the uniqueness, suppose that $qg+r=0$ for some $q\in \mathbb{C}\langle z_1,\ldots,z_n\rangle$ and $r\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[z_n]$ with $\deg r<\ord_{z_n}g$. We want to deduce $q=r=0$. Take $t\in \mathbb{R}_{>0}^n$ small enough, we may assume that $q,g,r\in \mathbb{C}\langle z_1,\ldots,z_n\rangle_t$. Expand $g$ as in \eqref{eq-gexpandzn}, we may assume that $a_{\ord_{z_n}g}^{-1}\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle_t$. We can then write
+    \[
+        a_{\ord_{z_n}g}^{-1}g=z_n^{\ord_{z_n}g}+h  
+    \]
+    for some $h\in \mathbb{C}\langle z_1,\ldots,z_n\rangle_t$, $h(0)=0$. Fix $\epsilon\in (0,1)$.
+    Choose $t$ small enough, we can then guarantee that
+    \[
+      \|h\|_t\leq t_n^b\epsilon. 
+    \]
+    Now
+    \[
+      q   a_{\ord_{z_n}g} z_n^{\ord_{z_n}g}+r=-q h a_{\ord_{z_n}g}.
+    \]
+    If we set $M=\|q   a_{\ord_{z_n}g}\|_tt_n^{\ord_{z_n}g}$, then we see immediately
+    \[
+        M =\|q   a_{\ord_{z_n}g} z_n^{\ord_{z_n}g}\|_t \leq \|q   a_{\ord_{z_n}g} z_n^{\ord_{z_n}g}+r\|_t=\|q h a_{\ord_{z_n}g}\|_t\leq M\epsilon.
+    \]
+    It follows that $M=0$ and hence $q a_{\ord_{z_n}g}=0$. It follows that $q=0$ by \cref{prop-convpowerinteg}. Therefore, $r=0$ as well.
+\end{proof}
+
+\begin{proposition}\label{prop-convpowerquotientbyone}
+    Let $n\in \mathbb{N}$ and $g\in \mathbb{C}\langle z_1,\ldots,z_n\rangle$. Assume that $\ord_{z_n}g<\infty$. Then there is a canonical isomorphism
+    \[
+        \mathbb{C}\langle z_1,\ldots,z_n\rangle/g\mathbb{C}\langle z_1,\ldots,z_n\rangle\cn \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle^{\ord_{z_n}g}.
+    \]
+\end{proposition}
+\begin{proof}
+    Given any $f\in \mathbb{C}\langle z_1,\ldots,z_n\rangle$, we consider the Weierstrass division $f=qg+r$ as in \cref{thm-Weierstrassdiv}. Write
+    \[
+        r=r_0+r_1z_n+\cdots+r_{\ord_{z_n}g-1}z_n^{\ord_{z_n}g-1}.
+    \]  
+    Then we map $f$ to $(r_0,\ldots,r_{\ord_{z_n}g-1})$. Clearly, this defines the isomorphism as in the proposition.
+\end{proof}
+
+
+As an application of Weierstrass theory, we prove a few results about the structure of the ring $\mathbb{C}\langle z_1,\ldots,z_n\rangle$.
+
+\begin{thm}\label{thm-localringnoetherian}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is a noetherian integral domain.
+\end{thm}
+\begin{proof}
+    We make an induction on $n$ to prove that $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is noetherian. The case $n=0$ is trivial. So assume $n>0$ and that the theorem has been proved for all smaller values of $n$. Let $f\in\mathbb{C}\langle z_1,\ldots,z_n \rangle$ be a non-zero element. It suffices to show that $\mathbb{C}\langle z_1,\ldots,z_n \rangle/f\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is noetherian. By \cref{rmk-perturbaxes}, we may assume that $\ord_{z_n}f<\infty$.
+    By \cref{prop-convpowerquotientbyone}, we know that 
     \[
         \mathbb{C}\langle z_1,\ldots,z_n \rangle/f\mathbb{C}\langle z_1,\ldots,z_n \rangle\cong \mathbb{C}\langle z_1,\ldots,z_n \rangle^c
     \]
-    for some $c\in \mathbb{N}$. By inductive hypothesis, the latter ring is noetherian.
+    for some $c\in \mathbb{N}$. By the inductive hypothesis, the latter ring is noetherian.
 \end{proof}
 
 
@@ -198,24 +336,13 @@ Conversely, we have
 \begin{proof}
     We have computed that the completion of $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is $\mathbb{C}[[ z_1,\ldots,z_n ]]$ in \cref{prop-completionconvergenseries}. The regularity of $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ follows from the regularity of the completion by descent \cite[\href{https://stacks.math.columbia.edu/tag/07NY}{Tag 07NY}]{stacks-project}. It is a UFD by Auslander--Buchsbaum theorem.
 \end{proof}
-
-
-\begin{thm}\label{thm-convpowerstrictHen}
-    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is strictly Henselian.
-\end{thm}
+\begin{proposition}\label{prop-analocalgwellbehaved}
+    Let $A$ be a complex analytic local algebra. Then $A$ is a excellent, strictly Henselian. 
+\end{proposition}
 \begin{proof}
-    As the residue field of $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is $\mathbb{C}$ by \cref{thm-converinglocal}, it suffices to show that $\mathbb{C}\langle z_1,\ldots,z_n \rangle$ is Henselian. Take a monic polynomial $f\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$, say
-    \[
-        f=w^b+f_1 w^{b-1}+\cdots+ f_b,\quad f_i\in \mathbb{C}\langle z_1,\ldots,z_n \rangle.
-    \]
-    Suppose that $\bar{a}\in \mathbb{C}$ is a simple root of $\bar{f}=w^b+f_1(0)w^{b-1}+\cdots+ f_b(0)$. We want to lift find $a\in \mathbb{C}\langle z_1,\ldots,z_n \rangle$ such that $f(a)=0$ and $a(0)=\bar{a}$. As $\mathbb{C}$ is algebraically closed, we can prove a stronger result: suppose that 
-    \[
-        \bar{f}=(w-c_1)^{b_1}\cdots (w-c_t)^{b_t}  
-    \]
-    for some $c_i\in \mathbb{C}$ and $b_i\in \mathbb{Z}_{>0}$. Then we claim that there are monic polynomials $g_i\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$ such that $\bar{g_i}=(w-c_i)^{b_i}$ for all $i=1,\ldots,t$ and $f=g_1\cdots g_t$.
-
-    We make an induction on $t$. When $t=1$, there is nothing to prove, so assume that $t>1$ and the theorem has been proved for $t-1$. We may assume that $c_1=0$. By Weierstrass preparation theorem, we can find a Weierstrass polynomial $h\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$ of degree $b_1$ and a monic polynomial $k\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$ such that $f=hk$. By the inductive hypothesis, we can find monic polynomials $g_2,\ldots,g_t\in \mathbb{C}\langle z_1,\ldots,z_n \rangle[w]$ such that  $\bar{g_i}=(w-c_i)^{b_i}$ for all $i=2,\ldots,t$ and $k=g_2\cdots g_t$. It suffices to take $g_1=h$.
+    This follows from the corresponding results in \cref{thm-convpowerexcell} and \cref{thm-convpowerstrictHen}.
 \end{proof}
+
 
 We recall the following criterion.
 \begin{thm}\label{thm-excefromderiv}
@@ -235,6 +362,74 @@ We recall the following criterion.
 \end{thm}
 \begin{proof}
     This is an immediate consequence of \cref{thm-excefromderiv}.
+\end{proof}
+
+\section{Weierstrass preparation theorem}
+
+\begin{definition}
+    Let $n\in \mathbb{Z}_{>0}$.
+    A \emph{Weierstrass polynomial} in $n$ variables is a monic polynomial
+    \[
+        \omega=z_n^b+a_1z_{n}^{b-1}+\cdots+ a_b\in  \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[z_n] 
+    \]
+    such that $a_i(0)=0$ for all $i=0,\ldots,b$.
+\end{definition}
+Observe that by definition, $\ord_{z_n}\omega=b$.
+
+\begin{lemma}\label{lma-Weierstrasspolycancel}
+    Let $\omega\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[z_n] $ be a Weierstrass polynomial and $g\in \mathbb{C}\langle z_1,\ldots,z_{n}\rangle$. Assume that $\omega g\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[z_n]$, then $g\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[z_n]$.
+\end{lemma}
+\begin{proof}
+    By the division theorem of polynomial rings, we can write
+    \[
+        \omega g = q\omega+r  
+    \]
+    for some $q,r\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[z_n]$, $\deg_{z_n}r<\deg_{z_n}\omega g$. But we can write $\omega g= \omega \cdot g$. From the uniqueness part of \cref{thm-Weierstrassdiv}, we know that $q=g$, so $g$ is a polynomial in $z_n$.
+\end{proof}
+
+\begin{theorem}[Weierstrass preparation theorem]\label{thm-Weierstrassprep}
+    Let $g\in \mathbb{C}\langle z_1,\ldots,z_{n}\rangle$. Assume that $\ord_{z_n}g<\infty$, then there is a unique Weierstrass polynomial $\omega\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[z_n]$ of degree $\ord_{z_n}g$ and a unit $e\in \mathbb{C}\langle z_1,\ldots,z_{n}\rangle$ such that $g=e\omega$.
+    
+    Moreover, if $g\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[z_n]$, then so is $e$.
+\end{theorem}
+\begin{proof}
+    By \cref{thm-Weierstrassdiv}, we can write
+    \[
+      z_n^{\ord_{z_n}g}=qg+r  
+    \]
+    for $q\in \mathbb{C}\langle z_1,\ldots,z_{n}\rangle$ and $r\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[z_n]$ with $\deg_{z_n}r<\ord_{z_n}g$. Write $g=\sum_{i=0}^{\infty}a_i z_n^i$ for some $a_i\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle$. Define $\bar{g}=\sum_{i=0}^{\infty}a_i(0)z_n^i$, set $e':=z_n^{-\ord_{z_n}g}\bar{g}\in \mathbb{C}[z_n]$. Then $e'(0)\neq 0$. Similarly define $\bar{q}$ and $\bar{r}$, then we have
+    \[
+        z_n^{\ord_{z_n}g}=\bar{q} \bar{g}+\bar{r}.  
+    \]
+    Or
+    \[
+      1=\bar{q}e'+\bar{r}.  
+    \]
+    From the uniqueness part of \cref{thm-Weierstrassdiv}, we conclude that $\bar{q}=e'^{-1}$, namely $q$ is a unit. Now
+    \[
+        g=q^{-1} (z_n^{\ord_{z_n}g}-r)  
+    \]
+    is the desired decomposition. When $g\in \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[z_n]$, so is $e$, as can be seen from \cref{lma-Weierstrasspolycancel}.
+
+    It remains to prove the uniqueness: if $e$ is a unit in $\mathbb{C}\langle z_1,\ldots,z_{n}\rangle$, $\omega$, $\omega'$ are two Weierstrass polynomials and $e\omega=\omega'$, then we need to show that $e=1$. It follows from \cref{lma-Weierstrasspolycancel} that $e$ is a polynomial in $z_n$. Setting $z_1=\cdots=z_{n-1}=0$, we find that $\bar{e}$ is a power of $z_n$. As $e$ is a unit, it follows that $\bar{e}=1$. On the other hand, clearly $e$ is a monic polynomial, it follows that $e=1$.
+\end{proof}
+
+\begin{definition}
+    Let $g\in \mathbb{C}\langle z_1,\ldots,z_{n}\rangle$. Assume that $\ord_{z_n}g<\infty$. The Weierstrass polynomial constructed in \cref{thm-Weierstrassprep} is called the \emph{Weierstrass polynomial} of $g$.
+\end{definition}
+
+\begin{corollary}
+    Let $g\in \mathbb{C}\langle z_1,\ldots,z_{n}\rangle$. Assume that $\ord_{z_n}g<\infty$. Let $\omega$ be the Weierstrass polynomial of $g$. Then the injection
+    \[
+        \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[z_n]\rightarrow \mathbb{C}\langle z_1,\ldots,z_{n}\rangle
+    \]
+    induces an isomorphism of $\mathbb{C}$-algebras
+    \[
+        \mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[z_n]/\omega\mathbb{C}\langle z_1,\ldots,z_{n-1}\rangle[z_n]\rightarrow \mathbb{C}\langle z_1,\ldots,z_{n}\rangle/g\mathbb{C}\langle z_1,\ldots,z_{n}\rangle.
+    \]
+\end{corollary}
+\begin{proof}
+    The morphism is surjective by \cref{thm-Weierstrassdiv} and injective by \cref{lma-Weierstrasspolycancel}.
 \end{proof}
 
 \section{Complex analytic local algebras}
@@ -264,12 +459,7 @@ We recall the following criterion.
     (2) This follows from the same arguments as \cref{thm-converinglocal} (2).
 \end{proof}
 
-\begin{proposition}\label{prop-analocalgwellbehaved}
-    Let $A$ be a complex analytic local algebra. Then $A$ is a excellent, strictly Henselian. 
-\end{proposition}
-\begin{proof}
-    This follows from the corresponding results in \cref{thm-convpowerexcell} and \cref{thm-convpowerstrictHen}.
-\end{proof}
+
 
 
 Observe that a complex analytic local algebra is always local with residue field $\mathbb{C}$ and a morphism in $\CLA$ is always a local homomorphism. We will write $\mathfrak{m}_A$ for the maximal ideal in $A$.
