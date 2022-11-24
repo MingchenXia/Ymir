@@ -1,5 +1,5 @@
 \input{preamble}
-\title{Banach algebras}
+\title{Banach rings}
 \begin{document}
 \maketitle
 \tableofcontents
@@ -24,6 +24,10 @@ In this chapter, all rings are assumed to be commutative.
     \begin{enumerate}
         \item[(0)] if $\|f\|=0$ for some $f\in A$, then $f=0$.
     \end{enumerate}
+    We write
+    \[
+        \ker \|\bullet\|=\{a\in A:\|a\|=0\}.
+    \]
 
     A semi-norm $\|\bullet\|$ on $A$ is \emph{non-Archimedean} or \emph{ultra-metric} if Condition~(2) can be replaced by
     \begin{enumerate}[resume]
@@ -57,8 +61,7 @@ In this chapter, all rings are assumed to be commutative.
     for all $f\in A$.
 \end{definition}
 
-\begin{definition}
-
+\begin{definition}\label{def-admissiblemorphism}
     Let $(A,\|\bullet\|_A)$, $(B,\|\bullet\|_B)$ be semi-normed Abelian groups. A homomorphism $\varphi:A\rightarrow B$ is said to be 
     \begin{enumerate}
         \item \emph{bounded} if there is a constant $C>0$ such that $\|\varphi(f)\|_B\leq C \|f\|_{A}$ for any $f\in A$;
@@ -87,7 +90,7 @@ We always endow $A$ with the topology induced by the psuedo-metric $d$.
     Let $A$ be a ring. A \emph{semi-norm} $\|\bullet\|$ on $A$ is a semi-norm $\|\bullet\|$ on the underlying additive group satisfying the following extra properties: 
     \begin{enumerate}
         \item[(3)]  $\|1\|=1$;
-        \item[(4)] for any $f,g\in A$, $\|fg\|\leq \|f\|\|g\|$.
+        \item[(4)] for any $f,g\in A$, $\|fg\|\leq \|f\|\cdot \|g\|$.
     \end{enumerate}
     
     A semi-norm $\|\bullet\|$ on $A$ is called \emph{power-multiplicative} if $\|f\|^n=\|f^n\|$ for all $f\in A$ and $n\in \mathbb{N}$.
@@ -100,6 +103,20 @@ We always endow $A$ with the topology induced by the psuedo-metric $d$.
     A \emph{semi-normed ring} (resp. \emph{normed ring}) is a pair $(A,\|\bullet\|)$ consisting of a ring $A$ and a semi-norm (resp. norm) $\|\bullet\|$ on $A$. When $\|\bullet\|$ is clear from the context, we also say $A$ is a semi-normed  ring (resp. normed ring).
 \end{definition}
 
+\begin{definition}
+    Let $(A,\|\bullet\|)$ be a semi-normed ring. An element $a\in A$ is \emph{multiplicative} if $a\not\in \ker\|\bullet\|$ and for any $x\in A$,
+    \[
+      \|ax\|=\|a\|\cdot\|x\|.  
+    \]
+\end{definition}
+
+\begin{definition}
+    Let $(A,\|\bullet\|)$ be a normed ring. An element $a\in A$ is \emph{power-bounded} if $\{|a^n|:n\in \mathbb{N}\}$ is bounded in $\mathbb{R}$. The set of power-bounded elements in $A$ is denoted by $\mathring{A}$.
+
+    An element $a\in A$ is called \emph{topologically nilpotent} if $a^n\to 0$ as $n\to\infty$. The set of topologically nilpotent elements in $A$ is denoted by $\check{A}$.
+
+    Observe that $\check{A}$ is an ideal in $\mathring{A}$. We write $\tilde{A}=\mathring{A}/\check{A}$.
+\end{definition}
 
 
 
@@ -113,7 +130,31 @@ We always endow $A$ with the topology induced by the psuedo-metric $d$.
     A semi-valued ring (resp. valued ring) $(A,\|\bullet\|)$ is called a \emph{semi-valued field} (resp. \emph{valued field}) if $A$ is a field.
 \end{definition}
 
-
+\iffalse
+\begin{lemma}\label{lma-gausslemmav1}
+    Let $(A,\|\bullet\|)$ be a normed ring. Assume that 
+    \begin{enumerate}
+        \item For any $a\in A$, $a\neq 0$, there is a multiplicative element $m\in A$ and $s\in \mathbb{Z}_{>0}$ such that $\|ma^s\|=\|m\|\cdot \|a\|^s=1$;
+        \item $\tilde{A}$ is an integral domain.
+    \end{enumerate}
+    Then $\|\bullet\|$ is a valuation.
+\end{lemma}
+\begin{proof}
+    Take $a_1,a_2\in A$ such that $|a_1a_2|<|a_1|\cdot |a_2|$. By (1), we can
+    choose multiplicative elements $m_1,m_2\in A$ and $s_1,s_2\in \mathbb{Z}_{>0}$ so that
+    \[
+        \|m_1a_1^{s_1}\|=\|m_1\|\cdot\|a_1\|^{s_1}=1,\quad \|m_2a_2^{s_2}\|=\|m_2\|\cdot\|a_2\|^{s_2}=1.  
+    \]
+    In particular, $m_ia_i^{s_i}\in \mathring{A}\setminus \check{A}$ for $i=1,2$. We may assume that $s_2\geq s_1$. As $m_1,m_2$ are multiplicative, we find
+    \[
+        \begin{split}
+            \|(m_1a_1^{s_1})(m_2a_2^{s_2})\|=\|m_1\|\cdot\|m_2\|\cdot \|a_1^{s_1}a_2^{s_2}\|\leq \|m_1\|\cdot\|m_2\|\cdot \|a_1a_2\|^{s_1}\|a_2\|^{s_2-s_1} \\
+            < \|m_1\|\cdot\|m_2\|\cdot (\|a_1\| \cdot\|a_2\|)^{s_1}\|a_2\|^{s_2-s_1}=1.
+        \end{split}
+    \]
+    This contradicts (2).
+\end{proof}
+\fi
 
 \section{Banach rings}
 
@@ -132,12 +173,29 @@ We always endow $A$ with the topology induced by the psuedo-metric $d$.
     From our assumption, the series converges and $g\in A$. It is elementary to check that $g$ is the inverse of $1-f$.
 \end{proof}
 
+\begin{definition}
+    Let $(A,\|\bullet\|)$ be a Banach ring. We define the \emph{spectral radius} $\rho=\rho_A:A\rightarrow [0,\infty)$ as follows:
+    \[
+        \rho(f)=\inf_{n\geq 1} \|f^n\|^{1/n},\quad f\in A.
+    \]
+\end{definition}
+
+\begin{lemma}
+    Let $(A,\|\bullet\|)$ be a Banach ring. Then for any $f\in A$, we have 
+    \[
+        \rho(f)=  \lim_{n\to \infty} \|f^n\|^{1/n}.
+    \]
+\end{lemma}
+\begin{proof}
+    This follows from the multiplicative version of Fekete's lemma.
+\end{proof}
+
 \begin{example}
     The ring $\mathbb{C}$ with its usual norm $|\bullet|$ is a Banach ring. In fact, $(\mathbb{C},|\bullet|)$ is a complete valued field.
 \end{example}
 
 \begin{example}\label{ex-convseriesradius}
-    For any Banach ring $(A,\|\bullet\|)$, any $n\in \mathbb{N}$ and any $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$, we define $A\langle r^{-1}z \rangle =A\langle r_1^{-1}z_1,\ldots, r_n^{-1}z_n\rangle_{r_1,\ldots,r_n}$ as the subring of $A[[z_1,\ldots,z_n]]$ consisting of formal power series
+    For any Banach ring $(A,\|\bullet\|)$, any $n\in \mathbb{N}$ and any $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$, we define $A\langle r^{-1}z \rangle =A\langle r_1^{-1}z_1,\ldots, r_n^{-1}z_n\rangle$ as the subring of $A[[z_1,\ldots,z_n]]$ consisting of formal power series
     \[
       f=\sum_{\alpha\in \mathbb{N}^{n}} a_{\alpha}z^{\alpha},\quad a_{\alpha}\in A  
     \]
@@ -206,6 +264,92 @@ We always endow $A$ with the topology induced by the psuedo-metric $d$.
     In particular, $\|f\|_r<\infty$ and $f^j\to f$ as $j\to\infty$.
 \end{proof}
 
+
+\begin{example}\label{ex-strictconvseriesradius}
+    For any non-Archimedean Banach ring $(A,\|\bullet\|)$, any $n\in \mathbb{N}$ and any $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$, we define $A\{ r^{-1}T \} =A\{ r_1^{-1}T_1,\ldots, r_n^{-1}T_n \}$ as the subring of $A[[T_1,\ldots,T_n]]$ consisting of formal power series
+    \[
+      f=\sum_{\alpha\in \mathbb{N}^{n}} a_{\alpha}T^{\alpha},\quad a_{\alpha}\in A  
+    \]
+    such that $\|a_{\alpha}\|r^{\alpha}\to 0$ as $|\alpha|\to\infty$. We set
+    \[
+        \|f\|_r:=   \max_{\alpha\in \mathbb{N}^{n}} \|a_{\alpha}\|r^{\alpha}.
+    \]
+    We will verify in \cref{prop-strictconvseriesradiusBanach} that $(A\langle r^{-1}T \rangle ,\|\bullet\|_r)$ is a Banach ring.
+
+    The semi-norm $\|\bullet\|_r$ is called the \emph{Gauss norm}. 
+\end{example}
+
+\begin{proposition}\label{prop-strictconvseriesradiusBanach}
+    In the setting of \cref{ex-strictconvseriesradius}, $(A\{ r^{-1}T \}  ,\|\bullet\|_r)$ is a Banach ring.
+
+    Moreover, if the norm $\|\bullet\|$ on $A$ is a valuation, so is $\|\bullet\|_r$.
+\end{proposition}
+The second part is usually known as the \emph{Gauss lemma}.
+\begin{proof}
+    By induction on $n$, we may assume that $n=1$.
+
+    The proof of the fact that $\|\bullet\|_r$ is a norm is similar to that of \cref{prop-convseriesradiusBanach}. We leave the details to the readers.
+
+    Next we argue that $(A\{ r^{-1}T \}  ,\|\bullet\|_r)$  is complete. 
+    Take a Cauchy sequence 
+    \[
+        f^b=\sum_{i=0}^{\infty}a^b_i T^i\in A\{ r^{-1}T \}
+    \]
+    for $b\in \mathbb{N}$. As 
+    \[
+        \|a^b_i-a^{b'}_i\|r^i\leq \|f^b-f^{b'}\|_r
+    \]
+    for any $i,b,b'\geq 0$, it follows that for any $i\geq 0$, $\{a^b_i\}_b$ is a Cauchy sequence. Let $a_i\in A$ be its limit and set 
+    \[
+        f=\sum_{i=0}^{\infty}a_i T^i\in A[[T]].
+    \]
+    We need to show that $f\in A\{ r^{-1}T \}$ and $f^b\to f$.
+    
+    Fix $\epsilon>0$. We can find $m=m(\epsilon)>0$ such that for all $j\geq m$ and all $k\geq 0$, 
+    \[
+      \|f^j-f^{j+k}\|_r\leq \epsilon.  
+    \]
+    It follows that $\|a^j_i-a^{j+k}_i\|r^i\leq \epsilon$ for all $i\geq 0$. Let $k\to\infty$, we find
+    \[
+        \|a^j_i-a_i\|r^i\leq \epsilon
+    \]
+    for all $i\geq 0$. Fix $j\geq 0$, take $i$ large enough so that $|a^j_i|r^i<\epsilon$. Then $\|a_i\|r^i\leq \epsilon$. So we find $f\in A\{r^{-1}T\}$. On the other hand,
+    \[
+         \|f-f^j\|_r=\max_{i} \|a^j_i-a_i\|r^i\leq \epsilon.  
+    \]
+    This proves that $f^j\to f$.
+
+    Now assume that $\|\bullet\|$ is a valuation, we verify that $\|\bullet\|_r$ is also a valuation. Again, we may assume that $n=1$. Take two elements $f,g\in A\{r^{-1}T\}$:
+    \[
+        f=\sum_{i=0}^{\infty}a_i T^i,\quad g=\sum_{j=0}^{\infty}b_j T^j.
+    \]
+    As we have already shown $|fg|_r\leq |f|_r|g|_r$, it suffices to check the reverse inequality. For this purpose, choose the minimal indices $i$, $j$ so that
+    \[
+        \|f\|_r=\|a_i\|r^i,\quad \|g\|_r=\|b_j\|r^j.  
+    \]
+    Write
+    \[
+        fg=\sum_{k=0}^{\infty} \left(\sum_{p+q=k}a_pb_q  \right)T^k.
+    \]
+    Then we claim that
+    \[
+        \|\sum_{p+q=k}a_pb_q\| r^k =  \|f\|_r \|g\|_r.
+    \] 
+    This implies the desired inequality. To verify our claim, it suffices to observe that for $(p,q)\neq (i,j)$, $r+s=k$, say $p<i$ and $q>j$, we have
+    \[
+        \|a_p b_q\|r^k=\|a_p\|r^p\cdot \|b_q\|r^q<\|a_i\|r^i\cdot \|b_j\|r^j.
+    \]
+    So 
+    \[
+        \|a_p b_q\|< \|a_i b_j\|.
+    \]
+    Since the valuation on $A$ is non-Archimedean, it follows that 
+    \[
+        \|\sum_{p+q=k}a_pb_q\|=\|a_ib_j\|.  
+    \]
+    Our claim follows.
+\end{proof}
+
 \section{Semi-normed modules}
 
 \begin{definition}
@@ -216,6 +360,10 @@ We always endow $A$ with the topology induced by the psuedo-metric $d$.
     for all $f\in A$ and $m\in M$. When $\|\bullet\|_M$ is clear from the context, we say $M$ is a semi-normed $A$-module (resp. normed $A$-module).
 
     A \emph{Banach $\mathcal{A}$-module} is a normed $A$-module which is complete with respect to the metric \cref{lma-pmetricinducedbyseminorm}.
+\end{definition}
+
+\begin{definition}
+    Let $(A,\|\bullet\|_A)$ be a normed ring. A \emph{Banach $A$-algebra} is a pair $(B,\|\bullet\|_B)$ such that $(B,\|\bullet\|_B)$ is a Banach $A$-module and $(B,\|\bullet\|_B)$ is a Banach ring.
 \end{definition}
 
 

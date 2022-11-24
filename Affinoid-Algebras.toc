@@ -1,0 +1,6 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\tocsection {}{1}{Introduction}}{4}{section.0.1}%
+\contentsline {section}{\tocsection {}{2}{Tate algebras}}{4}{section.0.2}%
+\contentsline {section}{\tocsection {}{3}{Affinoid algebras}}{4}{section.0.3}%
+\contentsline {section}{\tocsection {}{4}{Properties of affinoid algebras}}{4}{section.0.4}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{5}{chapter*.1}%

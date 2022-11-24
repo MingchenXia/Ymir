@@ -1,0 +1,15 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'Affinoid-Algebras.blg'
+[101] biber-darwin:340> INFO - === Thu Nov 24, 2022, 18:33:40
+[123] Biber.pm:418> INFO - Reading 'Affinoid-Algebras.bcf'
+[232] Biber.pm:972> INFO - Found 1 citekeys in bib section 0
+[246] Biber.pm:4383> INFO - Processing section 0
+[262] Biber.pm:4574> INFO - Looking for bibtex file 'Ymir.bib' for section 0
+[276] bibtex.pm:1713> INFO - LaTeX decoding ...
+[893] bibtex.pm:1518> INFO - Found BibTeX data source 'Ymir.bib'
+[980] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[981] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[981] Biber.pm:4203> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[981] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[983] bbl.pm:654> INFO - Writing 'Affinoid-Algebras.bbl' with encoding 'UTF-8'
+[983] bbl.pm:757> INFO - Output to Affinoid-Algebras.bbl

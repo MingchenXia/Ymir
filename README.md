@@ -10,12 +10,16 @@ We will freely make use of all results from Stacks Project.
 
 ## Current structure
 
-### Part 1 Complex analytic spaces
+### Part 1 Preliminaries
+
+- [Banach rings](Banach-Rings.pdf)
+
+### Part 2 Complex analytic spaces
 
 - [Commutative algebra](Commutative-Algebra.pdf)
 
 - [The notion of complex analytic spaces](Complex-Analytic-Spaces.pdf)
 
-### Part 2 Non-Archimedean analytic spaces
+### Part 3 Non-Archimedean analytic spaces
 
-- Nothing yet.
+- [Affinoid algebras](Affinoid-Algebras.pdf)

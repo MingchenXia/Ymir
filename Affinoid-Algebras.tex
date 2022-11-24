@@ -1,0 +1,64 @@
+\input{preamble}
+\title{Affinoid algebras}
+\begin{document}
+\maketitle
+\tableofcontents
+
+
+
+
+\section{Introduction}\label{sec-introduction}
+\section{Tate algebras}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued-field. 
+
+\begin{definition}
+    Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$. We set 
+    \[
+        k\{r^{-1}T\}=k\{r_1^{-1}T_1,\ldots,r_n T_n^{-1}\} :=\left\{f=\sum_{\alpha\in \mathbb{N}^n} a_{\alpha}T^{\alpha}\in k[[T_1,\ldots,T_n]]:a_{\alpha}\in k, |a_{\alpha}|r^{\alpha}\to 0\text{ as }|\alpha|\to\infty \right\}.
+    \]
+    For any $f=\sum_{\alpha\in \mathbb{N}^n} a_{\alpha}T^{\alpha}\in k\{r^{-1}T\}$, we set
+    \[
+        \|f\|_r=\max_{\alpha}|a_{\alpha}|r^{\alpha}.  
+    \]
+    We call $(k\{r^{-1}T\},\|\bullet\|_r)$ the \emph{Tate algebra} in $n$-variables with radii $r$. The norm $\|\bullet\|_r$ is called the \emph{Gauss norm}.
+
+    We omit $r$ from the notation if $r=(1,\ldots,1)$.
+\end{definition}
+This is a special case of \cref{Banach-ex-strictconvseriesradius}  in the chapter Banach Rings.
+\begin{proposition}
+    Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$.  Then the Tate algebra $(k\{r^{-1}T\},\|\bullet\|_r)$ is a Banach $k$-algebra and $\|\bullet\|_r$ is a valuation.
+\end{proposition}
+\begin{proof}
+    This is a special case of \cref{Banach-prop-strictconvseriesradiusBanach} in the chapter Banach Rings.
+\end{proof}
+
+\begin{remark}
+One should think of $k\{r^{-1}T\}$ as analogues of $\mathbb{C}\langle r^{-1}T\rangle$ in the theory of complex analytic spaces.  We could have studied complex analytic spaces directly from the Banach rings $\mathbb{C}\langle r^{-1}T\rangle$, as we will do in the rigid world. But in the complex world, the miracle is that we have \emph{a priori} a good theory of functions on all open subsets of the unit polydisk, so things are greatly simplified. The unit polydisk is a ringed space for free.
+
+As we will see, constructing a good function theory, or more precisely, enhancing the unit disk to a ringed site is the main difficulty in the theory of rigid spaces. And Tate's innovation comes in at this point.
+\end{remark}
+
+\begin{example}
+    Assume that the valuation on $k$ is trivial. 
+
+    Let $n\in \mathbb{N}$ and $r\in \mathbb{R}^n_{>0}$. 
+    Then $k\{r^{-1}T\}\cong k[T_1,\ldots,T_n]$ if $r_i\geq 1$ for all $i$ and $k\{r^{-1}T\}\cong k[[T_1,\ldots,T_n]]$ otherwise.
+\end{example}
+
+\section{Affinoid algebras}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued-field. 
+
+\begin{definition}
+    A Banach $k$-algebra $A$ is \emph{$k$-affinoid} (resp. \emph{strictly $k$-affinoid}) if there are $n\in \mathbb{N}$, $r\in \mathbb{R}^n_{>0}$ and an admissible epimorphism $k\{r^{-1}T\}\rightarrow A$ (resp. an admissible epimorphism $k\{T\}\rightarrow A$).
+
+    An affinoid $k$-algebra is a $K$-affinoid algebra for some complete non-Archimedean field extension $K/k$.
+\end{definition}
+For the notion of admissible morphisms, we refer to \cref{Banach-def-admissiblemorphism} in the chapter Banach rings.
+
+
+\section{Properties of affinoid algebras}
+
+\cite{stacks-project}
+
+\printbibliography
+\end{document}

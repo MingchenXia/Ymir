@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.9)  24 NOV 2022 16:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.9)  24 NOV 2022 18:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/xiam/Documents/Ymir/Commutative-Algebra.tex
-(/Users/xiam/Documents/Ymir/Commutative-Algebra.tex
+**/Users/xiam/Documents/Ymir/Affinoid-Algebras.tex
+(/Users/xiam/Documents/Ymir/Affinoid-Algebras.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (./preamble.tex (/usr/local/texlive/2022/texmf-dist/tex/latex/amscls/amsbook.cls
 Document Class: amsbook 2020/05/29 v2.20.6
@@ -914,7 +914,12 @@ LABELS NOT IMPORTED.
  on input line 304.
 
 Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 305.
-Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 306.
+
+Package xr Warning: 
+No file Commutative-Algebra.aux
+LABELS NOT IMPORTED.
+ on input line 306.
+
 
 Package xr Warning: 
 No file Weierstrass.aux
@@ -933,70 +938,76 @@ No file Morphisms.aux
 LABELS NOT IMPORTED.
  on input line 313.
 
+
+Package xr Warning: 
+No file Affinoid-Algebras.pdf.aux
+LABELS NOT IMPORTED.
+ on input line 317.
+
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 15.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./Commutative-Algebra.aux)
-\openout1 = `Commutative-Algebra.aux'.
+) (./Affinoid-Algebras.aux)
+\openout1 = `Affinoid-Algebras.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 15.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 15.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 15.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 15.
+(Font)              <8> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 15.
+(Font)              <6> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 15.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
+(Font)              <5> on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 15.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package hyperref Info: Link coloring ON on input line 15.
+Package hyperref Info: Link coloring ON on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1006,9 +1017,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count470
 )
-LaTeX Info: Redefining \ref on input line 15.
-LaTeX Info: Redefining \pageref on input line 15.
-LaTeX Info: Redefining \nameref on input line 15.
+LaTeX Info: Redefining \ref on input line 3.
+LaTeX Info: Redefining \pageref on input line 3.
+LaTeX Info: Redefining \nameref on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count471
@@ -1036,20 +1047,20 @@ File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `Commutative-Algebra.bcf'.
+\openout4 = `Affinoid-Algebras.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Commutative-Algebra.bbl' found.
- (./Commutative-Algebra.bbl)
-Package biblatex Info: Reference section=0 on input line 15.
-Package biblatex Info: Reference segment=0 on input line 15.
-LaTeX Info: Redefining \microtypecontext on input line 15.
-Package microtype Info: Applying patch `item' on input line 15.
-Package microtype Info: Applying patch `toc' on input line 15.
-Package microtype Info: Applying patch `eqnum' on input line 15.
+Package biblatex Info: ... file 'Affinoid-Algebras.bbl' found.
+ (./Affinoid-Algebras.bbl)
+Package biblatex Info: Reference section=0 on input line 3.
+Package biblatex Info: Reference segment=0 on input line 3.
+LaTeX Info: Redefining \microtypecontext on input line 3.
+Package microtype Info: Applying patch `item' on input line 3.
+Package microtype Info: Applying patch `toc' on input line 3.
+Package microtype Info: Applying patch `eqnum' on input line 3.
 
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 15.
+Package microtype Warning: Unable to apply patch `footnote' on input line 3.
 
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -1057,7 +1068,7 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 15.
+LaTeX Info: Redefining \showhyphens on input line 3.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1070,50 +1081,32 @@ Package caption Info: End \AtBeginDocument code.
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 Contents
-(./Commutative-Algebra.toc)
+(./Affinoid-Algebras.toc)
 \tf@toc=\write5
-\openout5 = `Commutative-Algebra.toc'.
+\openout5 = `Affinoid-Algebras.toc'.
 
  [3
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 33.
+(Font)              <10> on input line 12.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 33.
+(Font)              <7> on input line 12.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Overfull \hbox (1.6319pt too wide) in paragraph at lines 33--34
-[]\T1/lmr/bx/n/10 (-20) Definition 2.1. []\T1/lmr/m/n/10 (-20) For any $\OML/lmm/m/it/10 n \OMS/lmsy/m/n/10 2 \U/msb/m/n/10 N$\T1/lmr/m/n/10 (-20) , let $\U/msb/m/n/10 C\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 z[]; [] ; z[]\OMS/lmsy/m/n/10 g$ \T1/lmr/m/n/10 (-20) de-note the sub-ring of $\U/msb/m/n/10 C\OT1/lmr/m/n/10 (-20) [[\OML/lmm/m/it/10 z[]; [] ; z[]\OT1/lmr/m/n/10 (-20) ]]$
+Overfull \hbox (100.27419pt too wide) detected at line 18
+\OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 r[]T\OMS/lmsy/m/n/10 g \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 r[]T[]; [] ; r[]T[]\OMS/lmsy/m/n/10 g \OT1/lmr/m/n/10 := [] \OML/lmm/m/it/10 :
  []
 
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
 [4]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 159.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-euf.cfg
-File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
-) [5] [6]
-Overfull \hbox (6.09961pt too wide) has occurred while \output is active
- \T1/lmr/m/n/7 3. WEIERSTRASS DIVISION AND EXCELLENCE OF THE RING OF FORMAL POWER SERIES []
- []
-
-[7] [8]
-Overfull \hbox (3.0213pt too wide) in paragraph at lines 338--339
-[]\T1/lmr/m/n/10 (-20) We have com-puted that the com-ple-tion of $\U/msb/m/n/10 C\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 z[]; [] ; z[]\OMS/lmsy/m/n/10 g$ \T1/lmr/m/n/10 (-20) is $\U/msb/m/n/10 C\OT1/lmr/m/n/10 (-20) [[\OML/lmm/m/it/10 z[]; [] ; z[]\OT1/lmr/m/n/10 (-20) ]]$
- []
-
-[9] [10] [11] [12] [13] [14
-
-]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 587.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 63.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1121,24 +1114,26 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [15] (./Commutative-Algebra.aux)
-Package logreq Info: Writing requests to 'Commutative-Algebra.run.xml'.
-\openout1 = `Commutative-Algebra.run.xml'.
+ [5
+
+] (./Affinoid-Algebras.aux)
+Package logreq Info: Writing requests to 'Affinoid-Algebras.run.xml'.
+\openout1 = `Affinoid-Algebras.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38782 strings out of 478268
- 744426 string characters out of 5846348
- 1547039 words of memory out of 5000000
- 55994 multiletter control sequences out of 15000+600000
- 527752 words of font info for 158 fonts, out of 8000000 for 9000
+ 38350 strings out of 478268
+ 735285 string characters out of 5846348
+ 1536572 words of memory out of 5000000
+ 55735 multiletter control sequences out of 15000+600000
+ 521939 words of font info for 98 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 119i,16n,121p,1043b,1797s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Commutative-Algebra.pdf (15 pages, 313034 bytes).
+ 119i,8n,121p,1041b,1797s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Affinoid-Algebras.pdf (5 pages, 224071 bytes).
 PDF statistics:
- 341 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
- 23101 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 170 PDF objects out of 1000 (max. 8388607)
+ 127 compressed objects within 2 object streams
+ 17 named destinations out of 1000 (max. 500000)
+ 23093 words of extra memory for PDF output out of 24883 (max. 10000000)
 
