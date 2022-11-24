@@ -1,12 +1,12 @@
 # Fdb version 3
-["biber Commutative-Algebra"] 1669222096 "Commutative-Algebra.bcf" "Commutative-Algebra.bbl" "Commutative-Algebra" 1669224130
-  "Commutative-Algebra.bcf" 1669224130 107767 10e77b5f1d8a20b2290b91ffcc5501bb "pdflatex"
-  "Ymir.bib" 1669208051 144022 9fae7f1ebd92fbbd73105c82185be55d ""
+["biber Commutative-Algebra"] 1669302523 "Commutative-Algebra.bcf" "Commutative-Algebra.bbl" "Commutative-Algebra" 1669302532
+  "Commutative-Algebra.bcf" 1669302532 107767 10e77b5f1d8a20b2290b91ffcc5501bb "pdflatex"
+  "Ymir.bib" 1669301825 144659 521faa0e3fc6848e94aebfe04c873095 ""
   (generated)
   "Commutative-Algebra.bbl"
   "Commutative-Algebra.blg"
-["pdflatex"] 1669224127 "/Users/xiam/Documents/Ymir/Commutative-Algebra.tex" "Commutative-Algebra.pdf" "Commutative-Algebra" 1669224130
-  "/Users/xiam/Documents/Ymir/Commutative-Algebra.tex" 1669224126 34141 b55651fa852d05c54a1d4aa4acbcaef0 ""
+["pdflatex"] 1669302529 "/Users/xiam/Documents/Ymir/Commutative-Algebra.tex" "Commutative-Algebra.pdf" "Commutative-Algebra" 1669302532
+  "/Users/xiam/Documents/Ymir/Commutative-Algebra.tex" 1669302521 32992 0c32105a2d4185752b5b1be4ee288374 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -259,12 +259,13 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1654765380 2826424 a39ee3d385ff099fd742a49fa2ed0d14 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Commutative-Algebra.aux" 1669224130 9632 fcbc48e41d7fcd51f87289977c32fd6e "pdflatex"
-  "Commutative-Algebra.bbl" 1669222099 4092 9bbefb1da62a0d573eeb2205bea10d07 "biber Commutative-Algebra"
-  "Commutative-Algebra.run.xml" 1669224130 2410 b45a9f5c5beb3256433c863848da5c13 "pdflatex"
-  "Commutative-Algebra.tex" 1669224126 34141 b55651fa852d05c54a1d4aa4acbcaef0 ""
-  "Commutative-Algebra.toc" 1669224130 596 68e24bd3456d7a08daa3b430104d808a "pdflatex"
-  "preamble.tex" 1669218529 10653 816efff0a262086a7d0109a6ebb8b914 ""
+  "Banach-Rings.aux" 1669302443 4592 ad4034d2c750800876f09945376977a9 ""
+  "Commutative-Algebra.aux" 1669302532 9481 fdcded4a0c9c314a2a842298ce063110 "pdflatex"
+  "Commutative-Algebra.bbl" 1669302526 4092 9bbefb1da62a0d573eeb2205bea10d07 "biber Commutative-Algebra"
+  "Commutative-Algebra.run.xml" 1669302532 2410 b45a9f5c5beb3256433c863848da5c13 "pdflatex"
+  "Commutative-Algebra.tex" 1669302521 32992 0c32105a2d4185752b5b1be4ee288374 ""
+  "Commutative-Algebra.toc" 1669302532 596 68e24bd3456d7a08daa3b430104d808a "pdflatex"
+  "preamble.tex" 1669295852 10694 14215d0c6c50f90e20c3ba617ffca92f ""
   (generated)
   "Commutative-Algebra.aux"
   "Commutative-Algebra.bcf"

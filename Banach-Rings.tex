@@ -1,0 +1,224 @@
+\input{preamble}
+\title{Banach algebras}
+\begin{document}
+\maketitle
+\tableofcontents
+
+
+
+\section{Introduction}\label{sec-introduction}
+
+This section conerns the theory of Banach algebras. Our references are \cite{Berk12} and \cite{BGR}.
+
+In this chapter, all rings are assumed to be commutative.
+
+\section{Semi-normed Abelian groups}
+
+\begin{definition}
+    Let $A$ be an Abelian group. A \emph{semi-norm} on $A$ is a function $\|\bullet\|:A\rightarrow [0,\infty]$ satisfying
+    \begin{enumerate}
+        \item $\|0\|=0$;
+        \item $\|f-g\|\leq \|f\|+\|g\|$ for all $f,g\in A$.
+    \end{enumerate}
+    A semi-norm $\|\bullet\|$ on $A$ is a \emph{norm} if moreover the following conditions is satisfied:
+    \begin{enumerate}
+        \item[(0)] if $\|f\|=0$ for some $f\in A$, then $f=0$.
+    \end{enumerate}
+
+    A semi-norm $\|\bullet\|$ on $A$ is \emph{non-Archimedean} or \emph{ultra-metric} if Condition~(2) can be replaced by
+    \begin{enumerate}[resume]
+        \item[(2')] $\|f-g\|\leq \max\{\|f\|,\|g\|\}$ for all $f,g\in A$.
+    \end{enumerate}
+\end{definition}
+\begin{definition}
+    A \emph{semi-normed Abelian group} (resp. \emph{normed Abelian group}) is a pair $(A,\|\bullet\|)$ consisting of an Abelian group $A$ and a semi-norm (resp. norm) $\|\bullet\|$ on $A$. When $\|\bullet\|$ is clear from the context, we also say $A$ is a semi-normed Abelian group (resp. normed Abelian group).
+\end{definition}
+
+
+\begin{definition}
+    Let $(A,\|\bullet\|_A)$ be a semi-normed Abelian group and $B\subseteq A$ be a subgroup. Then we define the \emph{quotient semi-norm} $\|\bullet\|_{A/B}$ on $A/B$ as follows:
+    \[
+      \|a+B\|_{A/B}:=\inf\{\|a+b\|_A:b\in B\}  
+    \]
+    for all $a+B\in A/B$.
+
+    We define the \emph{subgroup semi-norm} on $B$ as follows:
+    \[
+        \|b\|_B=\|b\|_A
+    \]
+    for all $b\in B$.
+\end{definition}
+
+\begin{definition}
+    Let $A$ be an Abelian group and $\|\bullet\|$, $\|\bullet\|'$ be two seminorms on $A$. We say $\|\bullet\|$ and $\|\bullet\|'$ are \emph{equivalent} if there is a constant $C>0$ such that
+    \[
+      C^{-1}\|f\|\leq \|f\|'\leq C\|f\|   
+    \]
+    for all $f\in A$.
+\end{definition}
+
+\begin{definition}
+
+    Let $(A,\|\bullet\|_A)$, $(B,\|\bullet\|_B)$ be semi-normed Abelian groups. A homomorphism $\varphi:A\rightarrow B$ is said to be 
+    \begin{enumerate}
+        \item \emph{bounded} if there is a constant $C>0$ such that $\|\varphi(f)\|_B\leq C \|f\|_{A}$ for any $f\in A$;
+        \item \emph{admissible} if the quotient semi-norm on $A/\ker \varphi$ is equivalent to the subspace semi-norm on $\Img \varphi$.
+    \end{enumerate}
+\end{definition}
+Observe that an admissible homomorphism is always bounded.
+
+Next we study the topology defined by a semi-norm.
+\begin{lemma}\label{lma-pmetricinducedbyseminorm}
+    Let $(A,\|\bullet\|)$ be a semi-normed Abelian group. Define
+    \[
+      d(a,b)=\|a-b\|  
+    \]
+    for $a,b\in A$. Then $\|\bullet\|$ is a pseudo-metric on $A$. This psuedo-metric is a metric if and only if $\|\bullet\|$ is a norm.
+\end{lemma}
+\begin{proof}
+    This is clear from the definitions.
+\end{proof}
+We always endow $A$ with the topology induced by the psuedo-metric $d$.
+
+
+\section{Semi-normed rings}
+
+\begin{definition}\label{def-seminormring}
+    Let $A$ be a ring. A \emph{semi-norm} $\|\bullet\|$ on $A$ is a semi-norm $\|\bullet\|$ on the underlying additive group satisfying the following extra properties: 
+    \begin{enumerate}
+        \item[(3)]  $\|1\|=1$;
+        \item[(4)] for any $f,g\in A$, $\|fg\|\leq \|f\|\|g\|$.
+    \end{enumerate}
+    
+    A semi-norm $\|\bullet\|$ on $A$ is called \emph{power-multiplicative} if $\|f\|^n=\|f^n\|$ for all $f\in A$ and $n\in \mathbb{N}$.
+
+    A semi-norm $\|\bullet\|$ on $A$ is called \emph{multiplicative} if $\|fg\|=\|f\|\|g\|$ for all $f,g\in A$.
+
+\end{definition}
+
+\begin{definition}
+    A \emph{semi-normed ring} (resp. \emph{normed ring}) is a pair $(A,\|\bullet\|)$ consisting of a ring $A$ and a semi-norm (resp. norm) $\|\bullet\|$ on $A$. When $\|\bullet\|$ is clear from the context, we also say $A$ is a semi-normed  ring (resp. normed ring).
+\end{definition}
+
+
+
+
+\begin{definition}
+    Let $A$ be a ring. A \emph{semi-valuation} on $A$ is a multiplicative semi-norm on $A$. A semi-valuation on $A$ is a \emph{valuation} on $A$ if its underlying semi-norm of Abelian groups is a norm. 
+\end{definition}
+
+\begin{definition}
+    A \emph{semi-valued ring} (resp. \emph{valued ring}) is a pair $(A,\|\bullet\|)$ consisting of a ring $A$ and a semi-valuation (resp. valuation) $\|\bullet\|$ on $A$. When $\|\bullet\|$ is clear from the context, we also say $A$ is a semi-valued  ring (resp. valued ring).
+
+    A semi-valued ring (resp. valued ring) $(A,\|\bullet\|)$ is called a \emph{semi-valued field} (resp. \emph{valued field}) if $A$ is a field.
+\end{definition}
+
+
+
+\section{Banach rings}
+
+\begin{definition}
+    A \emph{Banach ring} is a normed ring that is complete with respect to the metric defined in \cref{lma-pmetricinducedbyseminorm}.
+\end{definition}
+
+\begin{proposition}\label{prop-inversesmallelementBanachring}
+    Let $(A,\|\bullet\|)$ be a Banach ring and $f\in A$. Assume that $\|f\|<1$, then $1-f$ is invertible.
+\end{proposition}
+\begin{proof}
+    Define 
+    \[
+        g=\sum_{i=0}^{\infty}f^i.
+    \]
+    From our assumption, the series converges and $g\in A$. It is elementary to check that $g$ is the inverse of $1-f$.
+\end{proof}
+
+\begin{example}
+    The ring $\mathbb{C}$ with its usual norm $|\bullet|$ is a Banach ring. In fact, $(\mathbb{C},|\bullet|)$ is a complete valued field.
+\end{example}
+
+\begin{example}\label{ex-convseriesradius}
+    For any Banach ring $(A,\|\bullet\|)$, any $n\in \mathbb{N}$ and any $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$, we define $A\langle r^{-1}z \rangle =A\langle r_1^{-1}z_1,\ldots, r_n^{-1}z_n\rangle_{r_1,\ldots,r_n}$ as the subring of $A[[z_1,\ldots,z_n]]$ consisting of formal power series
+    \[
+      f=\sum_{\alpha\in \mathbb{N}^{n}} a_{\alpha}z^{\alpha},\quad a_{\alpha}\in A  
+    \]
+    such that
+    \[
+        \|f\|_r:=   \sum_{\alpha\in \mathbb{N}^{n}} \|a_{\alpha}\|r^{\alpha}<\infty.
+    \]
+    We will verify in \cref{prop-convseriesradiusBanach} that $(A\langle r^{-1}z \rangle ,\|\bullet\|_r)$ is a Banach ring.
+
+    When $r=(1,\ldots,1)$, we omit $r^{-1}$ from our notations.
+\end{example}
+
+\begin{proposition}\label{prop-convseriesradiusBanach}
+    In the setting of \cref{ex-convseriesradius}, $(A\langle r^{-1}z \rangle  ,\|\bullet\|_r)$ is a Banach ring.
+\end{proposition}
+\begin{proof}
+    By induction, we may assume that $n=1$.
+
+    It is obvious that $\|\bullet\|_r$ is a norm on the undelrying Abelian group. To see that $\|\bullet\|_r$ is a norm on the ring $A\langle r^{-1}z \rangle $, we need to verify the condition in \cref{def-seminormring}. Condition~(3) in \cref{def-seminormring} is obvious. 
+    Let us consider Condition~(4). 
+    Let 
+    \[
+        f=\sum_{i=0}^{\infty} a_i z^i,\quad g=\sum_{j=0}^{\infty} b_j z^j
+    \]
+    be two elements in $A\langle r^{-1}z \rangle $. Then
+    \[
+        fg=\sum_{k=0}^{\infty} \left(\sum_{i+j=k}a_i b_j\right) z^k. 
+    \]
+    We compute
+    \[
+        \|fg\|_r=  \sum_{k=0}^{\infty} \left\|\sum_{i+j=k}a_i b_j\right\| r^k\leq \sum_{k=0}^{\infty} \left(\sum_{i+j=k}\|a_i\|\cdot \|b_j\|\right) r^k=\|f\|_r\cdot \|g\|_r. 
+    \]
+    It remains to verify that $A\langle r^{-1}z \rangle$ is complete. 
+
+
+    For this purpose, take a Cauchy sequence 
+    \[
+        f^b=\sum_{i=0}^{\infty}a^b_i z^i\in A\langle r^{-1}z \rangle
+    \]
+    for $b\in \mathbb{N}$. Then for each $i$, the coefficients $(a^b_i)_b$ is a Cauchy sequence in $A$. Let $a_i$ be the limit of $a^b_i$ as $b\to\infty$ and set 
+    \[
+        f=\sum_{i=0}^{\infty}a_i z^i\in A[[z]].
+    \]
+    We need to show that $f\in A\langle r^{-1}z \rangle$ and $f^b\to f$. 
+    
+    Fix a constant $\epsilon>0$. There is $m=m(\epsilon)>0$ such that for all $j\geq m$ and all $k\geq 0$, we have
+    \[
+        \sum_{i=0}^{\infty}\|a^{j+k}_i-a^{j}_i\|r^{i}<\epsilon/2.
+    \]
+    In particular, for any $s>0$, we have
+    \[
+        \sum_{i=0}^{s}\|a_i-a^{j}_i\|r^{i}\leq \sum_{i=0}^{s}\|a_i-a^{j+k}_i\|r^{i}+\sum_{i=0}^{s}\|a^j_i-a^{j+k}_i\|r^{i}\leq \sum_{i=0}^{s}\|a_i-a^{j+k}_i\|r^{i}+\epsilon/2.
+    \]
+    When $k$ is large enough, we can guarantee that
+    \[
+        \sum_{i=0}^{s}\|a_i-a^{j+k}_i\|r^{i}<\epsilon/2.  
+    \]
+    So
+    \[
+        \sum_{i=0}^{s}\|a_i-a^{j}_i\|r^{i}\leq \epsilon.  
+    \]
+    Let $s\to\infty$, we find
+    \[
+        \|f-f^j\|_r\leq \sum_{i=0}^{\infty}\|a_i-a^{j}_i\|r^{i}\leq \epsilon.  
+    \]
+    In particular, $\|f\|_r<\infty$ and $f^j\to f$ as $j\to\infty$.
+\end{proof}
+
+\section{Semi-normed modules}
+
+\begin{definition}
+    Let $(A,\|\bullet\|_A)$ be a normed ring. A \emph{semi-normed $A$-module} (resp. \emph{normed $A$-module}) is a pair $(M,\|\bullet\|_M)$ consisting of a $A$-module $M$ and a semi-norm (resp. norm) on the underlying Abelian group of $M$ such that there is a constant $C>0$ such that
+    \[
+      \|fm\|_M \leq C \|f\|_A \|m\|_M
+    \]
+    for all $f\in A$ and $m\in M$. When $\|\bullet\|_M$ is clear from the context, we say $M$ is a semi-normed $A$-module (resp. normed $A$-module).
+
+    A \emph{Banach $\mathcal{A}$-module} is a normed $A$-module which is complete with respect to the metric \cref{lma-pmetricinducedbyseminorm}.
+\end{definition}
+
+
+
+\printbibliography
+\end{document}

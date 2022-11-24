@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.9)  23 NOV 2022 18:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.9)  24 NOV 2022 16:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -913,24 +913,25 @@ No file Introduction.aux
 LABELS NOT IMPORTED.
  on input line 304.
 
-Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 305.
+Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 305.
+Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 306.
 
 Package xr Warning: 
 No file Weierstrass.aux
 LABELS NOT IMPORTED.
- on input line 306.
+ on input line 307.
 
 
 Package xr Warning: 
 No file Complex-Analytic-Spaces.aux
 LABELS NOT IMPORTED.
- on input line 308.
+ on input line 309.
 
 
 Package xr Warning: 
 No file Morphisms.aux
 LABELS NOT IMPORTED.
- on input line 312.
+ on input line 313.
 
 )
 Package csquotes Info: Checking for multilingual support...
@@ -1085,11 +1086,15 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+Overfull \hbox (1.6319pt too wide) in paragraph at lines 33--34
+[]\T1/lmr/bx/n/10 (-20) Definition 2.1. []\T1/lmr/m/n/10 (-20) For any $\OML/lmm/m/it/10 n \OMS/lmsy/m/n/10 2 \U/msb/m/n/10 N$\T1/lmr/m/n/10 (-20) , let $\U/msb/m/n/10 C\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 z[]; [] ; z[]\OMS/lmsy/m/n/10 g$ \T1/lmr/m/n/10 (-20) de-note the sub-ring of $\U/msb/m/n/10 C\OT1/lmr/m/n/10 (-20) [[\OML/lmm/m/it/10 z[]; [] ; z[]\OT1/lmr/m/n/10 (-20) ]]$
+ []
+
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [4]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 158.
+[4]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 159.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-euf.cfg
@@ -1099,11 +1104,16 @@ Overfull \hbox (6.09961pt too wide) has occurred while \output is active
  \T1/lmr/m/n/7 3. WEIERSTRASS DIVISION AND EXCELLENCE OF THE RING OF FORMAL POWER SERIES []
  []
 
-[7] [8] [9] [10] [11] [12] [13] [14
+[7] [8]
+Overfull \hbox (3.0213pt too wide) in paragraph at lines 338--339
+[]\T1/lmr/m/n/10 (-20) We have com-puted that the com-ple-tion of $\U/msb/m/n/10 C\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 z[]; [] ; z[]\OMS/lmsy/m/n/10 g$ \T1/lmr/m/n/10 (-20) is $\U/msb/m/n/10 C\OT1/lmr/m/n/10 (-20) [[\OML/lmm/m/it/10 z[]; [] ; z[]\OT1/lmr/m/n/10 (-20) ]]$
+ []
+
+[9] [10] [11] [12] [13] [14
 
 ]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 586.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 587.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1117,18 +1127,18 @@ Package logreq Info: Writing requests to 'Commutative-Algebra.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38777 strings out of 478268
- 744152 string characters out of 5846348
- 1546613 words of memory out of 5000000
- 55981 multiletter control sequences out of 15000+600000
- 528019 words of font info for 162 fonts, out of 8000000 for 9000
+ 38782 strings out of 478268
+ 744426 string characters out of 5846348
+ 1547039 words of memory out of 5000000
+ 55994 multiletter control sequences out of 15000+600000
+ 527752 words of font info for 158 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  119i,16n,121p,1043b,1797s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Commutative-Algebra.pdf (15 pages, 312543 bytes).
+Output written on Commutative-Algebra.pdf (15 pages, 313034 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 280 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
+ 341 PDF objects out of 1000 (max. 8388607)
+ 281 compressed objects within 3 object streams
+ 69 named destinations out of 1000 (max. 500000)
  23101 words of extra memory for PDF output out of 24883 (max. 10000000)
 
