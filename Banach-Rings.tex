@@ -39,7 +39,7 @@ In this chapter, all rings are assumed to be commutative.
 \end{definition}
 
 
-\begin{definition}
+\begin{definition}\label{def-quotsubsemnorm}
     Let $(A,\|\bullet\|_A)$ be a semi-normed Abelian group and $B\subseteq A$ be a subgroup. Then we define the \emph{quotient semi-norm} $\|\bullet\|_{A/B}$ on $A/B$ as follows:
     \[
       \|a+B\|_{A/B}:=\inf\{\|a+b\|_A:b\in B\}  
@@ -77,12 +77,16 @@ Next we study the topology defined by a semi-norm.
       d(a,b)=\|a-b\|  
     \]
     for $a,b\in A$. Then $\|\bullet\|$ is a pseudo-metric on $A$. This psuedo-metric is a metric if and only if $\|\bullet\|$ is a norm.
+
+    Let $\hat{A}$ be the metric completion of $A$, then there is a norm $\|\bullet\|$ on $\hat{A}$ inducing its metric. Moreover, the natural homomorphism $A\rightarrow \hat{A}$ is an isometric homomorphism with dense image.
 \end{lemma}
 \begin{proof}
     This is clear from the definitions.
 \end{proof}
 We always endow $A$ with the topology induced by the psuedo-metric $d$.
-
+\begin{definition}\label{def-completionAbgroups}
+    Let $(A,\|\bullet\|)$ be a semi-normed Abelian group. The normed Abelian group $(\hat{A},\|\bullet\|)$ constructed in \cref{lma-pmetricinducedbyseminorm} is called the \emph{completion} of $(A,\|\bullet\|)$.
+\end{definition}
 
 \section{Semi-normed rings}
 
@@ -162,6 +166,10 @@ We always endow $A$ with the topology induced by the psuedo-metric $d$.
     A \emph{Banach ring} is a normed ring that is complete with respect to the metric defined in \cref{lma-pmetricinducedbyseminorm}.
 \end{definition}
 
+\begin{definition}\label{def-completionring}
+    Let $A$ be a semi-normed ring. There is an obvious ring structure on the completion $\hat{A}$ of $A$ defined in \cref{def-completionAbgroups}. We call the resulting Banach ring the \emph{completion} of $A$.
+\end{definition}
+
 \begin{proposition}\label{prop-inversesmallelementBanachring}
     Let $(A,\|\bullet\|)$ be a Banach ring and $f\in A$. Assume that $\|f\|<1$, then $1-f$ is invertible.
 \end{proposition}
@@ -171,6 +179,19 @@ We always endow $A$ with the topology induced by the psuedo-metric $d$.
         g=\sum_{i=0}^{\infty}f^i.
     \]
     From our assumption, the series converges and $g\in A$. It is elementary to check that $g$ is the inverse of $1-f$.
+\end{proof}
+\begin{corollary}\label{cor-Banachringinvopen}
+    Let $(A,\|\bullet\|)$ be a Banach ring. Then the set of invertible elements in $A$ is open.
+\end{corollary}
+\begin{proof}
+    Let $x\in A$ be an invertible element. It suffices to show that for any $y\in A$, $|y|<1/(\|x^{-1}\|)$, $y+x$ is invertible. For this purpose, it suffices to show that $1+x^{-1}y$ is invertible. But this follows from \cref{prop-inversesmallelementBanachring}.
+\end{proof}
+
+\begin{corollary}\label{cor:maximalidealclosedinBanachring}
+    Let $A$ be a Banach ring and $\mathfrak{m}$ be a maximal ideal in $A$. Then $\mathfrak{m}$ is closed.
+\end{corollary}
+\begin{proof}
+    The closure $\bar{\mathfrak{m}}$ is obviously an ideal in $A$. We need to show that $\mathfrak{m}\neq A$. Namely, $1$ is not in the closure of $\mathfrak{m}$. But clearly, $\mathfrak{m}$ is contained in the set of non-invertible elements, the latter being closed by \cref{cor-Banachringinvopen}. So we conclude.
 \end{proof}
 
 \begin{definition}
@@ -189,6 +210,10 @@ We always endow $A$ with the topology induced by the psuedo-metric $d$.
 \begin{proof}
     This follows from the multiplicative version of Fekete's lemma.
 \end{proof}
+
+
+
+
 
 \begin{example}
     The ring $\mathbb{C}$ with its usual norm $|\bullet|$ is a Banach ring. In fact, $(\mathbb{C},|\bullet|)$ is a complete valued field.
@@ -333,9 +358,11 @@ The second part is usually known as the \emph{Gauss lemma}.
     \]
     Then we claim that
     \[
-        \|\sum_{p+q=k}a_pb_q\| r^k =  \|f\|_r \|g\|_r.
+        \left\|\sum_{p+q=k}a_pb_q\right\| r^k =  \|f\|_r \|g\|_r
     \] 
-    This implies the desired inequality. To verify our claim, it suffices to observe that for $(p,q)\neq (i,j)$, $r+s=k$, say $p<i$ and $q>j$, we have
+    when $k=i+j$.
+    This implies the desired inequality.  Of course, we may assume that $a_i\neq 0$ and $b_j\neq 0$ as otherwise there is nothing to prove.
+    To verify our claim, it suffices to observe that for $(p,q)\neq (i,j)$, $r+s=i+j$, say $p<i$ and $q>j$, we have
     \[
         \|a_p b_q\|r^k=\|a_p\|r^p\cdot \|b_q\|r^q<\|a_i\|r^i\cdot \|b_j\|r^j.
     \]
@@ -359,14 +386,188 @@ The second part is usually known as the \emph{Gauss lemma}.
     \]
     for all $f\in A$ and $m\in M$. When $\|\bullet\|_M$ is clear from the context, we say $M$ is a semi-normed $A$-module (resp. normed $A$-module).
 
+    An $A$-module homomorphism $\varphi:M\rightarrow N$ between two semi-normed $A$-modules $M$ and $N$ is \emph{bounded} if the homomorphism of the underlying semi-normed Abelian groups is bounded in the sense of \cref{def-admissiblemorphism}.
+
     A \emph{Banach $\mathcal{A}$-module} is a normed $A$-module which is complete with respect to the metric \cref{lma-pmetricinducedbyseminorm}.
+
+    We denote by $\BanCat_A$ the category of Banach $A$-modules with bounded $A$-module homomorphisms as morphisms.
 \end{definition}
+
+\begin{definition}
+    Let $A$ be a semi-normed ring and $M$ be a semi-normed $A$-module. 
+    There is an obvious $\hat{A}$-module structure on the completion $\hat{M}$ of $A$ defined in \cref{def-completionAbgroups}. We call the resulting Banach module the \emph{completion} of $M$.
+\end{definition}
+
+\begin{definition}\label{def-tensorproduct}
+    Let $A$ be a non-Archimedean semi-normed ring. Consider semi-normed $A$-modules $(M,\|\bullet\|_M)$ and $(N,\|\bullet\|_N)$. We define the \emph{tensor product} of  $(M,\|\bullet\|_M)$ and $(N,\|\bullet\|_N)$ as the semi-normed $A$-module $(M\otimes N,\|\bullet\|_{M\otimes N})$, where
+    \[
+        \|x\|_{M\otimes N}=\inf \max_i (\|m_i\|_M\cdot \|n_i\|_N),
+    \]
+    where the infimum is taken over all decompositions $x=\sum_i m_i\otimes n_i$.
+\end{definition}
+
+\begin{definition}
+    Let $A$ be a Banach ring. Consider semi-normed $A$-modules $M$ and $M$, we define the \emph{complete tensor product} of $M$ and $N$ as the metric completion $M\hat{\otimes}_A N$ of the tensor product of $M$ and $N$ defined in \cref{def-tensorproduct}.
+\end{definition}
+
+\begin{thm}
+    Let $(A,\|\bullet\|_A)$ be a normed ring. Then $\BanCat_A$ is a quasi-Abelian category.
+\end{thm}
+\begin{proof}
+    We first observe that $\BanCat_A$ is preadditive, as for any $M,N\in \BanCat_A$, $\Hom_{\BanCat_A}(M,N)$ can be given the group structure inherited from the Abelian group $\Hom_A(M,N)$. It is obvious that $\BanCat_A$ is preadditive.
+
+    Next we show that finite biproducts exist in $\BanCat_A$. Given $(M,\|\bullet\|_{M}),(N,\|\bullet\|_{N})\in \BanCat_A$, we set 
+    \begin{equation}\label{eq-normedmodulesum}
+        (M,\|\bullet\|_{M})\oplus  (N,\|\bullet\|_{N}):=(M\oplus N,\|\bullet\|_{M\oplus N}),
+    \end{equation}
+    where $\|(m,n)\|_{M\oplus N}:=\|m\|_M+\|n\|_N$ for $m\in M$ and $n\in N$. It is easy to verify that this gives the biproduct in $\BanCat_A$. 
+
+    We have shown that $\BanCat_A$ is an additive category.
+
+    Next given a morphism $\varphi:(M,\|\bullet\|_M)\rightarrow (N,\|\bullet\|_N)$ in $\BanCat_A$, we construct its kernel $(\ker \varphi, \|\bullet\|_{\ker\varphi})$ as the kernel of the underlying homomorphism of $A$-modules of $\varphi$ endowed with the subgroup semi-norm induced from $\|\bullet\|_M$ as in \cref{def-quotsubsemnorm}. It is easy to verify that $(\ker \varphi, \|\bullet\|_{\ker\varphi})$ is the kernel of $\varphi$ in  $\BanCat_A$. 
+
+    We can similarly construct the cokernels. To be more precise, let $\varphi:(M,\|\bullet\|_M)\rightarrow (N,\|\bullet\|_N)$ be a morphism in $\BanCat_A$, then the $\coker \varphi=\{N/\overline{\varphi(M)}\}$ with quotient norm.
+
+    We have shown that $\BanCat_A$ is a pre-Abelian category. 
+    
+    Observe that given a morphism  $\varphi:(M,\|\bullet\|_M)\rightarrow (N,\|\bullet\|_N)$ in $\BanCat_A$, its image is given by $\Img \varphi=\overline{\varphi(M)}$ with the subspace norm induced from $N$; its coimage is $M/\ker f$ with the residue norm. The morphism $\varphi$ is admissible if the natural map
+    \[
+        M/\ker f\rightarrow \overline{\varphi(M)}
+    \]
+    is an isomorphism in $\BanCat_A$.
+
+    It remains to show that pull-backs preserve admissible epimorphisms and pushouts preserve admissible monomorphisms. We first handle the case of admissible epimorphisms. Consider a Cartesian square in $\BanCat_A$:
+    \[
+        \begin{tikzcd}
+            M \arrow[r, "p"] \arrow[d, "q"] \arrow[rd, "\square", phantom] & U \arrow[d, "f"] \\
+            V \arrow[r, "g"]                                               & W               
+        \end{tikzcd}  
+    \]
+    with $g$ being an admissible epimorphism. We need to show that $p$ is also an admissible epimorphism, namely $U\cong M/\ker p$.
+
+    We define $\alpha:U\oplus V\rightarrow W$, $\alpha=(f,-g)$, then there is a natural isomorphism $j:M\rightarrow \ker \alpha$. Let us write $i:\ker \alpha\rightarrow U\oplus V$ the natural morphism. Then
+    \[
+        q=\pi_V\circ i \circ j,\quad p=\pi_U\circ i \circ j,  
+    \]
+    where $\pi_U:U\oplus V\rightarrow U,\pi_V:U\oplus V\rightarrow V$ are the natural morphisms. We may assume that $M=\ker \alpha$ and $j$ is the identity. Then it is obvious that $p$ is surjective on the underlying sets. In order to compute the quotient norm on  $M/\ker p$, we need a more explicit description of $\ker p\subseteq \ker \alpha$. We know that 
+    \[
+        \ker \alpha=\{(u,v)\in U\oplus V: f(u)=g(v)\}  
+    \]
+    with the subspace norm induced from the product norm on $U\oplus V$ defined in \eqref{eq-normedmodulesum}. Then
+    \[
+        \ker p=\{(u,v)\in U\oplus V:u=0, g(v)=0\}.    
+    \]
+    It follows that for $(u,v)\in \ker \alpha$,
+    \[
+        \inf_{(u',v')\in \ker p} \|(u,v)+(u',v')\|_{U\oplus V}=\inf_{v'\in \ker g} (\|v+v'\|_V)+ \|x\|_U,
+    \]
+    where $\|\bullet\|_U$ and $\|\bullet\|_V$ denote the norms on $U$ and $V$ respectively. By our assumption that $g$ is an admissible epimorphism, there is a constant $C>0$ so that 
+    \[
+        \inf_{v'\in \ker g} (\|v+v'\|_V)\leq C\|g(v)\|_W
+    \]
+    for any $v\in V$.
+    As $f$ is bounded, we can also find a constant $C'>0$ so that for any $(u,v)\in \ker \alpha$, 
+    \[
+        \|g(v)\|_W=\|f(u)\|_W\leq C'\|u\|_U.
+    \]
+    It follows that $p$ is admissible epimorphism.
+
+    It remains to check that the pushforwards preserve admissible monomorphisms. Consider a co-Cartesian diagram
+    \[
+        \begin{tikzcd}
+            W \arrow[r, "g"] \arrow[d, "f"]  & U \arrow[d, "q"] \\
+            V \arrow[r, "p"]                                               & M               
+        \end{tikzcd}  
+    \]
+    with $g$ being an admissible monomorphism. We need to show that $p$ is an adimissible monomorphism. This boils down to the following: $p$ is injective with closed image and the norms on $p(V)$ obtained in the obvious ways are equivalent.
+    As in the case of pull-backs, we may let $\alpha:W\rightarrow U\oplus V$ be the  morphism $(g,-f)$ and assume that $M=\coker \alpha$. It is then easy to see that $p$ is injective. The proof that the two norms on $p(V)$ are equivalent is parallel to the argument in the pull-back case and we omit it.
+
+    It remains to verify that $p(V)$ is closed in $W$. Consider the admissibly coexact sequence in $\BanCat_A$:
+    \[
+      W \xrightarrow{\alpha}U\oplus V\xrightarrow{\pi} M\rightarrow 0. 
+    \]
+    It is also admissibly coexact in the category of semi-normed $A$-modules. \textcolor{red}{Include details later.}
+    Let $x_n\in V$ be a sequence so that $p(x_n)\to y\in M$. We may write $y=\pi(u,v)$ for some $(u,v)\in U\oplus V$. Then
+    \[
+        \pi(-u,x_n-v)\to 0  
+    \]
+    as $n\to \infty$. From the strict coexact sequence, we can find a sequence $w_n\in W$ so that
+    \[
+        (-u-g(w_n),x_n-v+f(w_n))\to 0  
+    \]
+    as $n\to \infty$. Then $g(w_n)\to -u$ in $U$ and hence there is $w\in W$ so that $w_n\to w\in W$ and $g(w)=-u$. But then $x_n\to x$ and $p(x)=y$.
+\end{proof}
+
 
 \begin{definition}
     Let $(A,\|\bullet\|_A)$ be a normed ring. A \emph{Banach $A$-algebra} is a pair $(B,\|\bullet\|_B)$ such that $(B,\|\bullet\|_B)$ is a Banach $A$-module and $(B,\|\bullet\|_B)$ is a Banach ring.
 \end{definition}
 
+\section{Berkovich spectra}
 
+
+\begin{definition}
+    Let $(A,\|\bullet\|_A)$ be a Banach ring. A semi-norm $|\bullet|$ on $A$ is \emph{bounded} if there is a constant $C>0$ such that for any $f\in A$, $|f|\leq C\|f\|_A$.
+
+    We write $\Sp A$ for the set of bounded semi-valuations on $A$. We call $\Sp A$ the \emph{Berkovich spectrum} of $A$.
+\end{definition}
+Later on, we will endow $\Sp A$ with more structures. In the literature, it is more common to denote $\Sp A$ by $\mathcal{M}(A)$.
+\begin{proposition}\label{prop-Berkospecnonempty}
+    Let $(A,\|\bullet\|)$ be a Banach ring. Then $\Sp A$ is empty if and only if $A=0$.
+\end{proposition}
+
+\begin{proof}
+    If $A=0$, $\Sp A$ is clearly empty. Conversely, suppose that $\Sp A$ is empty. Assume that $A\neq 0$. For any maximal ideal $\mathfrak{m}$, by \cref{cor:maximalidealclosedinBanachring}, $A/\mathfrak{m}$ is a Banach ring and $\Sp A/\mathfrak{m}$ is a subset of $\Sp A$. So we may assume that $A$ is a field. Let $S$ be the set of bounded semi-norms on $A$. Then $S$ is non-empty as $\|\bullet\|\in S$. By Zorn's lemma, we can take a minimal element $|\bullet|\in S$. Up to replacing $A$ by the completion with respect to $|\bullet|$, we may assume that $|\bullet |$ is a norm on $A$. As $A$ is a field, we may further assume that $|\bullet|=\|\bullet\|$.
+    
+    We claim that $\|\bullet\|$ is multiplicative. As $A$ is a field, it suffices to show that $\|f^{-1}\|=\|f\|^{-1}$ for any non-zero $f\in A$. We may assume that $\|f\|^{-1}<\|f^{-1}\|$.
+    
+    Let $r$ be a positive real number. Let $\varphi:A\rightarrow A\{r^{-1}T\}/(T-f)$ be the natural map. The map is injective as $A$ is a field. We endow $A\{r^{-1}T\}/(T-f)$ with the quotient semi-norm induced by $\|\bullet\|_r$. We still denote this semi-norm by $\|\bullet\|_r$.
+
+    We claim that $f-T$ is not invertible in $A\{r^{-1}T\}$ for the choice $r=\|f^{-1}\|^{-1}$. From this, it follows that 
+    \[
+        \|\varphi(f)\|_r  =\|T\|_r\leq r <\|f\|.
+    \]
+    The last step is our assumption. This contradicts our choice of $\|\bullet\|$.
+    
+    In order to prove the claim, we need to show that $\|\bullet\|$ is power multiplicative first. Assuming this, it is obvious that 
+    \[
+        \sum_{i=0}^{\infty}|f^{-i}|r^i=\sum_{i=0}^{\infty}|f^{-1}|^{i}|f^{-1}|^{-i}
+    \]
+    diverges.
+    
+    It remains to show that $\|\bullet\|$ is power multiplicative.
+    Suppose that is $f\in A$ so that $\|f^n\|<\|f\|^n$ for some $n>1$. We claim that $f-T$ is not invertible in $A\{r^{-1}T\}$  for the choice $r=\|f^{n}\|^{1/n}$. From this,
+    \[
+      \|\varphi(f)\|_r=\|T\|_r\leq r<\|f\|.  
+    \]
+    This contradicts our choice of $\|\bullet\|$. The claim amounts to the divergence of
+    \[
+        \sum_{i=0}^{\infty}\|f^{-i}\|r^i.
+    \]
+    For a general $i\geq 0$, we write $i=pn+q$ for $p,q\in \mathbb{N}$ and $q\leq n-1$. Then $\|f^i\|\leq \|f^n\|^p \|f^q\|$. So 
+    \[
+        \|f^{-i}\|r^i\geq \|f^i\|^{-1} \|f^n\|^{p+n^{-1}q}\geq \|f^n\|^{n^{-1}q}\|f^q\|^{-1}.  
+    \]
+    It therefore follows that $|f^{-i}|r^i$ admits a positive lower bound and we conclude.
+\end{proof}
+
+\section{Bornology}
+\textcolor{red}{This section may be placed elsewhere.}
+\begin{definition}
+    Let $X$ be a set. A \emph{bornology} on $X$ is a collection $\mathcal{B}$ of subsets of $X$ such that
+    \begin{enumerate}
+        \item For any $x\in X$, there is $B\in \mathcal{B}$ such that $x\in \mathcal{B}$;
+        \item For any $B\in \mathcal{B}$ and any subset $A\subseteq B$, $A\in \mathcal{B}$;
+        \item $\mathcal{B}$ is stable under finite union.
+    \end{enumerate}
+
+    The pair $(X,\mathcal{B})$ is called a \emph{bornological set}. The elements of $\mathcal{B}$ are called the \emph{bounded subsets} of $(X,\mathcal{B})$. When $\mathcal{B}$ is obvious from the context, we omit it from the notations.
+    
+    A morphism between bornological sets $(X,\mathcal{B}_X)$ and $(Y,\mathcal{B}_Y)$ is a map of sets $f:X\rightarrow Y$ such that for any $A\in \mathcal{B}_X$, $f(A)\in \mathcal{B}_Y$. Such a map is called a \emph{bounded map}.
+\end{definition}
+\begin{definition}
+    Let $(X,\mathcal{B})$ be a bornological set. A \emph{basis} for $\mathcal{B}$ is a subset $\mathcal{A}\subseteq \mathcal{B}$ such that for any $B\in \mathcal{B}$, there are $A_1,\ldots,A_n\in \mathcal{A}$ such that $B\subseteq A_1\cup\cdots\cup A_n$.
+\end{definition}
 
 \printbibliography
 \end{document}

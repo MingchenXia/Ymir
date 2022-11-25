@@ -1,15 +1,15 @@
-[0] Config.pm:307> INFO - This is Biber 2.17
-[0] Config.pm:310> INFO - Logfile is 'Banach-Rings.blg'
-[95] biber-darwin:340> INFO - === Thu Nov 24, 2022, 18:34:10
-[112] Biber.pm:418> INFO - Reading 'Banach-Rings.bcf'
-[242] Biber.pm:972> INFO - Found 2 citekeys in bib section 0
-[264] Biber.pm:4383> INFO - Processing section 0
-[284] Biber.pm:4574> INFO - Looking for bibtex file 'Ymir.bib' for section 0
-[309] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1209] bibtex.pm:1518> INFO - Found BibTeX data source 'Ymir.bib'
-[1354] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1354] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1355] Biber.pm:4203> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[1355] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[1374] bbl.pm:654> INFO - Writing 'Banach-Rings.bbl' with encoding 'UTF-8'
-[1378] bbl.pm:757> INFO - Output to Banach-Rings.bbl
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'Banach-Rings.blg'
+[64] biber-darwin:340> INFO - === Fri Nov 25, 2022, 14:52:58
+[77] Biber.pm:415> INFO - Reading 'Banach-Rings.bcf'
+[159] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
+[172] Biber.pm:4340> INFO - Processing section 0
+[180] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
+[191] bibtex.pm:1689> INFO - LaTeX decoding ...
+[567] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
+[637] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[637] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[637] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[637] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[644] bbl.pm:654> INFO - Writing 'Banach-Rings.bbl' with encoding 'UTF-8'
+[645] bbl.pm:757> INFO - Output to Banach-Rings.bbl

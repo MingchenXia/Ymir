@@ -1,7 +1,18 @@
-\babel@toc {english}{}\relax 
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{1}{Introduction}}{4}{section.0.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{2}{Semi-normed Abelian groups}}{4}{section.0.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{3}{Semi-normed rings}}{5}{section.0.3}%
-\contentsline {section}{\tocsection {}{4}{Banach rings}}{5}{section.0.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{4}{Banach rings}}{6}{section.0.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{5}{Semi-normed modules}}{9}{section.0.5}%
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{11}{chapter*.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{6}{Berkovich spectra}}{12}{section.0.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{7}{Bornology}}{13}{section.0.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{15}{chapter*.1}%
