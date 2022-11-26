@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  25 NOV 2022 19:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  26 NOV 2022 18:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -903,12 +903,7 @@ LABELS NOT IMPORTED.
  on input line 304.
 
 Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 305.
-
-Package xr Warning: 
-No file Commutative-Algebra.aux
-LABELS NOT IMPORTED.
- on input line 306.
-
+Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 306.
 
 Package xr Warning: 
 No file Weierstrass.aux
@@ -1095,9 +1090,16 @@ Overfull \hbox (22.04904pt too wide) detected at line 152
 \OML/lmm/m/it/10 g \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 h\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 T[]T[] \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 1) = [](\OML/lmm/m/it/10 c[] \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 d[]\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 T[] \OT1/lmr/m/n/10 + [](\OML/lmm/m/it/10 c[] \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 d[]\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 T[] \OT1/lmr/m/n/10 + (\OML/lmm/m/it/10 c[] \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 d[]\OT1/lmr/m/n/10 ) + [](\OML/lmm/m/it/10 d[] \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 d[]\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 T[]T[]:
  []
 
-[6] [7] [8]
+[6] [7] [8] [9] [10]
+Overfull \hbox (2.88043pt too wide) in paragraph at lines 399--400
+\OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 T[]; [] ; T[]\OMS/lmsy/m/n/10 g$\T1/lmr/m/n/10 (-20) . As-sume that $\OML/lmm/m/it/10 !g \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 T[]; [] ; T[]\OMS/lmsy/m/n/10 g\OT1/lmr/m/n/10 (-20) [\OML/lmm/m/it/10 T[]\OT1/lmr/m/n/10 (-20) ]$\T1/lmr/m/n/10 (-20) , then $\OML/lmm/m/it/10 g \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 T[]; [] ; T[]\OMS/lmsy/m/n/10 g\OT1/lmr/m/n/10 (-20) [\OML/lmm/m/it/10 T[]\OT1/lmr/m/n/10 (-20) ]$\T1/lmr/m/n/10 (-20) . 
+ []
+
+[11] [12] [13] [14
+
+]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 234.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 516.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1105,26 +1107,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [9
-
-] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.aux)
+ [15] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.aux)
 Package logreq Info: Writing requests to 'Affinoid-Algebras.run.xml'.
 \openout1 = `Affinoid-Algebras.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36660 strings out of 478994
- 685438 string characters out of 5858185
- 1527107 words of memory out of 5000000
- 53268 multiletter control sequences out of 15000+600000
- 457561 words of font info for 114 fonts, out of 8000000 for 9000
+ 36876 strings out of 478994
+ 690330 string characters out of 5858185
+ 1536928 words of memory out of 5000000
+ 53385 multiletter control sequences out of 15000+600000
+ 460604 words of font info for 149 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,18n,133p,794b,1701s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 132i,18n,133p,1004b,1701s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.pdf (9 pages, 258768 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.pdf (15 pages, 297293 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 175 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 23093 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 23101 words of extra memory for PDF output out of 24883 (max. 10000000)
 

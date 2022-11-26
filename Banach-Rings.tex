@@ -84,9 +84,43 @@ Next we study the topology defined by a semi-norm.
     This is clear from the definitions.
 \end{proof}
 We always endow $A$ with the topology induced by the psuedo-metric $d$.
+
+\begin{proposition}\label{prop-bddimplycont}
+    Let $f:A\rightarrow B$ be a homomorphism between semi-normed Abelian groups. Assume that $f$ is bounded, then it is continuous.
+\end{proposition}
+The converse is not true.
+\begin{proof}
+    Clear from the definition.
+\end{proof}
+
+\begin{proposition}\label{prop-epsilondenseimpliesdense}
+    Let $(A,\|\bullet\|)$ be a normed Abelian group and $B$ be a subgroup of $A$. Assume that there is $\epsilon\in (0,1)$ such that for each $a\in A$, there is $b\in B$ such that
+    \[
+      \|a+b\|\leq \epsilon \|a\|.  
+    \]
+    Then $B$ is dense in $A$.
+\end{proposition}
+\begin{proof}
+    Assume to the contrary that there exists $a\in A$ so that
+    \[
+      c:=\inf_{b\in B}\|a-b\|>0.  
+    \]
+    Choose $b_1\in B$ so that
+    \[
+      \|a+b_1\|<\epsilon^{-1}c.
+    \]
+    By our hypothesis, there is $b_2\in B$ such that
+    \[
+      \|a+b_1+b_2\|\leq \epsilon\|a+b_1\|<c.  
+    \]
+    This is a contradiction.
+\end{proof}
+
 \begin{definition}\label{def-completionAbgroups}
     Let $(A,\|\bullet\|)$ be a semi-normed Abelian group. The normed Abelian group $(\hat{A},\|\bullet\|)$ constructed in \cref{lma-pmetricinducedbyseminorm} is called the \emph{completion} of $(A,\|\bullet\|)$.
 \end{definition}
+
+
 
 \section{Semi-normed rings}
 
@@ -114,15 +148,67 @@ We always endow $A$ with the topology induced by the psuedo-metric $d$.
     \]
 \end{definition}
 
-\begin{definition}
+\begin{definition}\label{def-topnilpowerbdd}
     Let $(A,\|\bullet\|)$ be a normed ring. An element $a\in A$ is \emph{power-bounded} if $\{|a^n|:n\in \mathbb{N}\}$ is bounded in $\mathbb{R}$. The set of power-bounded elements in $A$ is denoted by $\mathring{A}$.
 
     An element $a\in A$ is called \emph{topologically nilpotent} if $a^n\to 0$ as $n\to\infty$. The set of topologically nilpotent elements in $A$ is denoted by $\check{A}$.
 
-    Observe that $\check{A}$ is an ideal in $\mathring{A}$. We write $\tilde{A}=\mathring{A}/\check{A}$.
+
 \end{definition}
 
+\begin{proposition}\label{prop-topnilring}
+    Let $(A,\|\bullet\|)$ be a non-Archimedean normed ring. Then $\mathring{A}$ is a subring of $A$ and $\check{A}$ is an ideal in $\mathring{A}$. Moreover, $\mathring{A}$, $\check{A}$ are open and closed in $A$.
+\end{proposition}
+\begin{proof}
+    Choose $a,b\in \mathring{A}$, by definition, there is a constant $C>0$ so that for any $n\in \mathbb{N}$,
+    \[
+      \|a^n\|\leq C,\quad \|b^n\|\leq C.  
+    \]
+    It follows that
+    \[
+      \|(ab)^n\|\leq \|a^n\|\cdot \|b^n\|\leq C^2  
+    \]
+    and
+    \[
+      \|(a-b)^n\|\leq  \max_{i=0,\ldots,n}\|a^ib^{n-i}\|\leq C^2. 
+    \]
+    So $\mathring{A}$ is a subring.
 
+    Next we show that $\check{A}$ is an ideal in $\mathring{A}$.
+    On the other hand, take $c\in \check{A}$, then
+    \[
+        \|(ac)^n\|\leq \|a^n\|\cdot \|c^n\|\leq C\|c^n\|  
+    \]
+    But $\|c^n\|\to 0$ as $n\to \infty$, hence $ac\in \check{A}$. 
+    
+    On the other hand, consider $c,d\in \check{A}$, we need to show $c-d\in \check{A}$. Choose $C>0$ so that
+    \[
+        \|a^n\|\leq C,\quad \|b^n\|\leq C  
+    \]
+    for all $n\in \mathbb{N}$. Fix $\epsilon>0$, then there is $m\in \mathbb{N}$ so that for any $k\geq m$,
+    \[
+        \|a^k\|\leq \epsilon C^{-1},\quad   \|b^k\|\leq \epsilon C^{-1}.
+    \]
+    In particular, for $k\geq 2m$, we have
+    \[
+        \|(a-b)^k\|\leq \max_{i=0,\ldots,k} \|a^i\|\cdot\|b^{k-i}\|\leq \epsilon.
+    \]
+    It follows that $a-b\in \check{A}$. 
+    This proves that $\check{A}$ is an ideal in $\mathring{A}$.
+
+    In order to see $\check{A}$ is open and closed in $A$, observe that it is a subgroup of $A$, so it suffices to show that $\check{A}$ is open in $A$. It suffices to show that
+    \[
+        \{a\in A:\|a\|<1\}\subseteq  \check{A}. 
+    \]
+    But this is obvious, if $\|a\|<1$, then $\|a^n\|\leq \|a\|^n$ for all $n\in \mathbb{N}$, it follows that $a^n\to 0$ as $n\to\infty$, namely, $a\in \check{A}$.
+
+    As $\check{A}$ is a subgroup of $\mathring{A}$, it follows that $\mathring{A}$ is both open and closed.
+\end{proof}
+
+\begin{definition}\label{def-reduction}
+    Let $(A,\|\bullet\|)$ be a non-Archimedean normed ring. We define the \emph{reduction} of $A$ as $\tilde{A}=\mathring{A}/\check{A}$. The map $\mathring{A}\rightarrow \tilde{A}$ is called the \emph{reduction map}. We usually denote the reduction map by $a\mapsto \tilde{a}$.
+\end{definition}
+This definition makes sense thanks to \cref{prop-topnilring}.
 
 \begin{definition}
     Let $A$ be a ring. A \emph{semi-valuation} on $A$ is a multiplicative semi-norm on $A$. A semi-valuation on $A$ is a \emph{valuation} on $A$ if its underlying semi-norm of Abelian groups is a norm. 
@@ -180,6 +266,19 @@ We always endow $A$ with the topology induced by the psuedo-metric $d$.
     \]
     From our assumption, the series converges and $g\in A$. It is elementary to check that $g$ is the inverse of $1-f$.
 \end{proof}
+In the non-Archimedean case, we have a stronger result:
+
+\begin{proposition}\label{prop-inversesmallelementBanachring2}
+    Let $(A,\|\bullet\|)$ be a non-Archimedean Banach ring and $f\in \check{A}$. Then $1-f$ is invertible. Moreover, $(1-f)^{-1}$ can be written as $1+z$ for some $z\in \check{A}$.
+\end{proposition}
+\begin{proof}
+    Define 
+    \[
+        g=\sum_{i=0}^{\infty}f^i.
+    \]
+    From our assumption, the series converges and $g\in A$. It is elementary to check that $g$ is the inverse of $1-f$. Moreover, in view of \cref{prop-topnilring} as for any $i\geq 1$, $f^i\in \check{A}$, the same holds for their sum, we conclude the final assertion.
+\end{proof}
+
 \begin{corollary}\label{cor-Banachringinvopen}
     Let $(A,\|\bullet\|)$ be a Banach ring. Then the set of invertible elements in $A$ is open.
 \end{corollary}
@@ -192,6 +291,17 @@ We always endow $A$ with the topology induced by the psuedo-metric $d$.
 \end{corollary}
 \begin{proof}
     The closure $\bar{\mathfrak{m}}$ is obviously an ideal in $A$. We need to show that $\mathfrak{m}\neq A$. Namely, $1$ is not in the closure of $\mathfrak{m}$. But clearly, $\mathfrak{m}$ is contained in the set of non-invertible elements, the latter being closed by \cref{cor-Banachringinvopen}. So we conclude.
+\end{proof}
+
+\begin{lemma}\label{lma-unitmoduloreduction}
+    Let $A$ be a non-Archimedean Banach ring. An element $a\in \mathring{A}$ is a unit in $\mathring{A}$ if and only if $\tilde{a}$ is a unit in $\tilde{A}$.
+\end{lemma}
+\begin{proof}
+    The direct implication is trivial. Conversely, assume that $a\in \mathring{A}$ and there is an element $b\in \mathring{A}$ such that
+    \[
+        \tilde{a}\tilde{b}=1.  
+    \]
+    Then $1-ab\in \check{A}$. It follows from \cref{prop-inversesmallelementBanachring2} that $ab$ is a unit in $\mathring{A}$ and hence $a$ is a unit in $\mathring{A}$.
 \end{proof}
 
 \begin{definition}
@@ -377,6 +487,99 @@ The second part is usually known as the \emph{Gauss lemma}.
     Our claim follows.
 \end{proof}
 
+\begin{proposition}\label{prop-Tateunivprop}
+    Let $A$, $B$ be a non-Archimedean Banach ring and $f:A\rightarrow B$ be a continuous homomorphism. Then for any $b\in \mathring{B}$, there is a unique continuous homomorphism $F:A\{T\}\rightarrow B$ extending $f$ and sending $T$ to $b$. 
+\end{proposition}
+\begin{proof}
+    From the continuity and the fact that $A[T]$ is dense in $A\{T\}$, $F$ is clearly unique. To prove the existence, we define $F$ directly: consider $g=\sum_{i=0}^{\infty}a_i T^i\in A\{T\}$, we define
+    \[
+        F(g):=\sum_{i=0}^{\infty} f(a_i)f^i.      
+    \]
+    As $f_i\in \mathring{A}$ and $a_i\to 0$, the right-hand side is well-defined. It is straightforward to check that $F$ is a continuous homomorphism.
+\end{proof}
+
+\begin{proposition}\label{prop-strictlyconvcirccheck}
+    For any non-Archimedean Banach ring $(A,\|\bullet\|)$, we have 
+    \[
+        (A\{T\})^{\circ}=\mathring{A}\{T\},\quad (A\{T\})^{\check{}}=\check{A}\{T\}.  
+    \]
+\end{proposition}
+For the definitions of $\mathring{\bullet}$ and $\check{\bullet}$, we refer to \cref{def-topnilpowerbdd}.
+\begin{proof}
+    We first show that
+    \[
+        \mathring{A}\{T\}\subseteq (A\{T\})^{\circ}.
+    \]
+    Let $f\in \mathring{A}\{T\}$. We expand $f$ as
+    \[
+        f=\sum_{i=0}^{\infty}a_i T^i,\quad a_i\in  \mathring{A}. 
+    \] 
+    Then for each $i,j\in \mathbb{N}$, $\|a_iT^i\|_1^j=\|a_i\|^j$. So for each $i\in \mathbb{N}$, $a_iT^i\in (A\{T\})^{\circ}$. By \cref{prop-topnilring}, it follows that $f\in (A\{T\})^{\circ}$.
+
+    Next we prove the reverse inclusion. Take $f\in (A\{T\})^{\circ}$, suppose by contrary that $f\not\in \mathring{A}\{T\}$. Expand $f$ as
+    \[
+        f=\sum_{i=0}^{\infty}a_i T^i,\quad a_i\in  A. 
+    \] 
+    We can take a minimal $m\in \mathbb{N}$ so that $a_m\not\in \mathring{A}$. Then $\sum_{i=0}^{m-1}a_iT^i\in \mathring{A}\{T\}\subseteq (A\{T\})^{\circ}$ by what we have proved. It follows that 
+    \[
+        g:=f-\sum_{i=0}^{m-1}a_iT^i=\sum_{i=m}^{\infty}a_iT^i\in (A\{T\})^{\circ}.
+    \]
+    Then it follows that
+    \[
+        \|g^j\|\geq \|a_m^j\|  
+    \] 
+    for any $j\in \mathbb{N}$. It follows that $a_m\in \mathring{A}$, which is a contradiction.
+
+    Next we show that 
+    \[
+        \check{A}\{T\}\subseteq (A\{T\})^{\check{}}.
+    \]
+    Let $f\in \check{A}\{T\}$. We expand $f$ as
+    \[
+        f=\sum_{i=0}^{\infty}a_i T^i,\quad a_i\in  \check{A}. 
+    \] 
+    Then for each $i,j\in \mathbb{N}$, $\|a_iT^i\|_1^j=\|a_i\|^j$. So for each $i\in \mathbb{N}$, $a_iT^i\in (A\{T\})^{\check{}}$. By \cref{prop-topnilring}, it follows that $f\in (A\{T\})^{\check{}}$.
+
+    Conversely, take $f\in (A\{T\})^{\check{}}$, suppose by contrary that $f\not\in \check{A}\{T\}$. Expand $f$ as
+    \[
+        f=\sum_{i=0}^{\infty}a_i T^i,\quad a_i\in  A. 
+    \] 
+    We can take a minimal $m\in \mathbb{N}$ so that $a_m\not\in \check{A}$. Then $\sum_{i=0}^{m-1}a_iT^i\in \check{A}\{T\}\subseteq (A\{T\})^{\check{}}$ by what we have proved. It follows that 
+    \[
+        g:=f-\sum_{i=0}^{m-1}a_iT^i=\sum_{i=m}^{\infty}a_iT^i\in (A\{T\})^{\check{}}.
+    \]
+    Then it follows that
+    \[
+        \|g^j\|\geq \|a_m^j\|  
+    \] 
+    for any $j\in \mathbb{N}$. It follows that $a_m\in \check{A}$, which is a contradiction.
+\end{proof}
+
+\begin{corollary}\label{cor-reductionstrictlyconv}
+    For any non-Archimedean Banach ring $(A,\|\bullet\|)$, we have a canonical isomorphism
+    \[
+        \widetilde{A\{T\}}\cong \tilde{A}[T].
+    \]
+    The natural map ${A\{T\}}^{\circ}\rightarrow \widetilde{A\{T\}}$ corresponds to a homomorphism $\mathring{A}\{T\}\rightarrow \tilde{A}[T]$ extending the homomorphism $\mathring{A}\rightarrow \tilde{A}$ and sending $T$ to $T$.
+\end{corollary}
+\begin{proof}
+    Let $f=\sum_{i=0}^{\infty}a_i T^i\in {A\{T\}}^{\circ}$. 
+    Then $a_i\in \mathring{A}$ by \cref{prop-strictlyconvcirccheck}. But $\|a_i\|\to 0$ as $i\to\infty$, so $a_i\in \check{A}$ for almost all $i$. It follows that the image of $f$ in $\widetilde{A\{T\}}$ is the same as the image of an element from $\mathring{A}[T]$. On the other hand, for each $f\in \tilde{A}[T]$, we can expand $f=a_NT^N+\cdots+a_1T^1+a_0$ with $a_N\in \tilde{A}$. Lift each $a_i$ to $b_i\in \mathring{A}$. Then the image of $b_NT^N+\cdots+b_1T^1+b_0$ under the reduction corresponds to $f$. The assertions follow.
+\end{proof}
+
+\begin{corollary}\label{cor-unitsstrictlyconv}
+    Let $(A,\|\bullet\|)$ be a non-Archimedean Banach ring. An element $f=\sum_{i=0}^{\infty}a_i T^i\in \mathring{A}\{T\}$ is a unit in $\mathring{A}\{T\}$ if and only if $a_0$ is a unit in  $\mathring{A}$ and $a_i\in \check{A}$ for all $i>0$.
+\end{corollary}
+\begin{proof}
+By \cref{prop-strictconvseriesradiusBanach}, we know that $A\{T\}$ is complete.
+By \cref{lma-unitmoduloreduction} and \cref{prop-strictlyconvcirccheck}, $f$ is a unit in $\mathring{A}\{T\}$ if and only if $\sum_{i=0}^{\infty} \tilde{a}_i T^i$  is a unit in $\tilde{A}[T]$. By \cref{lma-unitmoduloreduction} again, $a_0$ is a unit in $A$ if and only if $\tilde{a_0}$ is a unit in $\tilde{A}$. So we are reduced to argue that units in $\tilde{A}[T]$ are exactly units in $\tilde{A}$. This follows from the general fact about units in polynomial rings over a reduced ring.
+\end{proof}
+
+\textcolor{red}{The lemma needs to be places elsewhere.}
+\begin{lemma}
+    Let $R$ be a commutative ring. A polynomial $a_0+a_1X+\cdots+a_nX^n\in R[X]$ is a unit if and only if $a_0$ is a unit in $R$ and $a_1,\ldots,a_n$ are nilpotents.
+\end{lemma}
+
 \section{Semi-normed modules}
 
 \begin{definition}
@@ -407,8 +610,11 @@ The second part is usually known as the \emph{Gauss lemma}.
 \end{definition}
 
 \begin{definition}
-    Let $A$ be a Banach ring. Consider semi-normed $A$-modules $M$ and $M$, we define the \emph{complete tensor product} of $M$ and $N$ as the metric completion $M\hat{\otimes}_A N$ of the tensor product of $M$ and $N$ defined in \cref{def-tensorproduct}.
+    Let $A$ be a non-Archimedean Banach ring. Consider semi-normed $A$-modules $M$ and $M$, we define the \emph{complete tensor product} of $M$ and $N$ as the metric completion $M\hat{\otimes}_A N$ of the tensor product of $M$ and $N$ defined in \cref{def-tensorproduct}.
 \end{definition}
+
+
+
 
 \begin{thm}
     Let $(A,\|\bullet\|_A)$ be a normed ring. Then $\BanCat_A$ is a quasi-Abelian category.
@@ -548,7 +754,95 @@ Later on, we will endow $\Sp A$ with more structures. In the literature, it is m
     \[
         \|f^{-i}\|r^i\geq \|f^i\|^{-1} \|f^n\|^{p+n^{-1}q}\geq \|f^n\|^{n^{-1}q}\|f^q\|^{-1}.  
     \]
-    It therefore follows that $|f^{-i}|r^i$ admits a positive lower bound and we conclude.
+    It therefore follows that $|f^{-i}|r^i$ admits a positive lower bound, and we conclude.
+\end{proof}
+
+\section{Open mapping theorem}
+Let $(k,|\bullet|)$ be a complete non-trivially valued field. All results in this section fail when $k$ is trivially valued.
+
+\begin{proposition}\label{prop-bddequivcont}
+    Let $A$ be a normed $k$-algebra and $f:(M,\|\bullet\|_M)\rightarrow (N,\|\bullet\|_N)$ be an $A$-homomorphism of normed $A$-modules. Then $f$ is bounded if and only if $f$ is continuous. 
+\end{proposition}
+\begin{proof}
+    The direct implication follows from \cref{prop-bddimplycont}. Assume that $f$ is continuous. We may assume that $A=k$. 
+
+    Assume that $f$ is not bounded. Fix $a\in k$ with $|a|\in (0,1)$. This is possible as $k$ is non-trivially valued.
+    Then we can find a sequence $m_i\in M$ such that $\|f(m_i)\|_N>|a|^{-i}\|m_i\|_M$. Up to replace $m_i$ by a scalar multiple, we may assume that $\|m_i\|_M\in [1,|a|^{-1})$: if $\|m_i\|_M\geq 1$, choose $n\in \mathbb{N}$ such that $|a|^{-n}\leq \|m_i\|_M<|a|^{-n-1}$, then replace $m_i$ with $a^nm_i$. The case $|x|<1$ is similar. 
+    Then $\|f(a^im_i)\|_N>\|m_i\|_M\geq 1$ while $\|a^im_i\|_M<|a|^n |a|^{-1}\to 0$. This is a contradiction.
+\end{proof}
+
+\begin{thm}[Open mapping theorem]\label{thm-openmapping}
+    Let $(V,\|\bullet\|_V), (W,\|\bullet\|_W)$ be $k$-Banach spaces and $L:V\rightarrow W$ be a bounded and surjective $k$-homomorphism. Then $L$ is open.   
+\end{thm}
+\begin{proof}
+    We write $V_0=\{v\in V:\|v\|_V<1\}$. Similarly define $W_0$.
+
+    \textbf{Step~1}. We claim that there is a constant $C>0$ such that for all $w'\in W$, there is $v'\in V$ such that 
+    \[
+        \|v'\|_V\leq  C \|w'\|_W,\quad \|w'-L(v')\|_W<1/2.
+    \]
+
+    As $k$ is non-trivially valued, we can take $c\in k$ with $|c|\in (0,1)$, so 
+    \[
+        V=\bigcup_{n\in \mathbb{N}} c^n V_0.  
+    \]
+    As $L$ is surjective, we have
+    \[
+        W=\bigcup_{n\in \mathbb{N}} c^n L(V_0).   
+    \]
+    By Baire's category theorem, we may assume that $\overline{L(V_0)}$ has non-empty interior. Take $w\in W$ and $r>0$ so that
+    \[
+        \{w'\in W: \|w-w'\|_W<r\}\subseteq    \overline{L(V_0)}.
+    \]
+    Take $d\in W_0$ and $c'\in k^{\times}$ so that $|c'|<r$, then $w+c'd\in \overline{L(V_0)}$. It follows that
+    \[
+        c'd\in   \overline{L(V_0)}+\overline{L(V_0)}\subseteq \overline{L(V_0)+L(V_0)}=\overline{L(V_0)}.
+    \]
+    So
+    \[
+        W_0\subseteq  \overline{L(c'^{-1}V_0)}. 
+    \]
+    It suffices to take $C=|c'^{-1}|$.
+
+    \textbf{Step~2}.
+    Now given $w\in W_0$, we want to show that $w\in L(\{v\in V:\|v\|_V<C\})$. 
+    This will finish the argument: as $k$ is non-trivially valued, this implies that $L(V_0)$ contains an open neighbourhood of $0$. 
+    
+    From Step~1, we can construct $v_1\in V$ with $\|v_1\|_V< C$ and $\|w-L(v_1)\|_W<1/2$. Repeat this process, we can $v_n\in V$ inductively so that
+    \[
+        \|v_n\|_V<  2^{1-n} C,\quad \|w-L(v_1+\cdots+v_n)\|_W<2^{-n}.
+    \]
+    We set $v=\sum_{i=1}^{\infty} v_i$. Then $v\in V$ and $Av=w$ by continuity. Moreover,
+    \[
+        \|v\|_V\leq \max_n \|v_n\|_V<C.   
+    \]
+\end{proof}
+
+\begin{corollary}\label{cor-completionfinitecomplete}
+    Let $A$ be a $k$-Banach algebra and $M$ be a normed $A$-module. Assume that $\hat{M}$ is a finite $A$-module, then $M$ is complete.
+\end{corollary}
+\begin{proof}
+    Take $x_1,\ldots,x_n\in \hat{M}$ so that $\pi:A^n\rightarrow \hat{M}$ sending $(a_1,\ldots,a_n)$ to $\sum_{i=1}^n a_ix_i$ is surjective. By open mapping theorem \cref{thm-openmapping}, $\sum_{i=1}^n \check{A}x_i$ is a neighbourhood of $0$ in $\hat{M}$. So
+    \[
+        x_j\in M+  \sum_{i=1}^n \check{A} x_i.
+    \]
+    It follows from (a version of) Nakayama's lemma that $M=\hat{M}$.
+\end{proof}
+
+\begin{corollary}\label{cor-idealclosed}
+    Let $A$ be a $k$-Banach algebra and $M$ be a Noetherian Banach $A$-module. Let $N$ be a submodule of $M$. Then $N$ is closed in $M$.
+
+    In particular, if $A$ is Noetherian, then all ideals of $A$ are closed.
+\end{corollary}
+\begin{proof}
+    As $M$ is noetherian, $\bar{N}$ is a finite $A$-module. In particular, $N$ is complete by \cref{cor-completionfinitecomplete}. Hence, $N$ is closed in $M$.
+\end{proof}
+
+\begin{corollary}\label{cor-bddisadmi}
+    A bounded homomorphism of $k$-Banach algebras $f:A\rightarrow B$ is admissible.
+\end{corollary}
+\begin{proof}
+    We may assume that $f$ is surjective by replacing $B$ by the image of $f$. Similarly, by replacing $A$ by $A/\ker f$, we may assume that $f$ is bijective. It follows from \cref{thm-openmapping} that $f$ is a homeomorphism. The inverse of $f$ is therefore continuous, and hence bounded by \cref{prop-bddequivcont}.
 \end{proof}
 
 \section{Bornology}

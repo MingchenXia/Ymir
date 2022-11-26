@@ -7,12 +7,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{3}{Semi-normed rings}}{5}{section.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{4}{Banach rings}}{6}{section.0.4}%
+\contentsline {section}{\tocsection {}{4}{Banach rings}}{7}{section.0.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{5}{Semi-normed modules}}{9}{section.0.5}%
+\contentsline {section}{\tocsection {}{5}{Semi-normed modules}}{13}{section.0.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{6}{Berkovich spectra}}{12}{section.0.6}%
+\contentsline {section}{\tocsection {}{6}{Berkovich spectra}}{15}{section.0.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{7}{Bornology}}{13}{section.0.7}%
+\contentsline {section}{\tocsection {}{7}{Open mapping theorem}}{16}{section.0.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{15}{chapter*.1}%
+\contentsline {section}{\tocsection {}{8}{Bornology}}{18}{section.0.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{19}{chapter*.1}%

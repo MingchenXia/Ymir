@@ -286,8 +286,9 @@ We prove a few elementary results about the structure of the ring $\mathbb{C}\{ 
 \begin{proposition}\label{prop-convpowerquotientbyone}
     Let $n\in \mathbb{N}$ and $g\in \mathbb{C}\{ z_1,\ldots,z_n\}$. Assume that $\ord_{z_n}g<\infty$. Then there is a canonical isomorphism
     \[
-        \mathbb{C}\{ z_1,\ldots,z_n\}/g\mathbb{C}\{ z_1,\ldots,z_n\}\cn \mathbb{C}\{ z_1,\ldots,z_{n-1}\}^{\ord_{z_n}g}.
+        \mathbb{C}\{ z_1,\ldots,z_n\}/g\mathbb{C}\{ z_1,\ldots,z_n\}\cn \mathbb{C}\{ z_1,\ldots,z_{n-1}\}^{\ord_{z_n}g}
     \]
+    of $\mathbb{C}\{ z_1,\ldots,z_{n-1}\}$-modules.
 \end{proposition}
 \begin{proof}
     Given any $f\in \mathbb{C}\{ z_1,\ldots,z_n\}$, we consider the Weierstrass division $f=qg+r$ as in \cref{thm-Weierstrassdiv}. Write
@@ -307,9 +308,9 @@ As an application of Weierstrass theory, we prove a few results about the struct
     We make an induction on $n$ to prove that $\mathbb{C}\{ z_1,\ldots,z_n \}$ is noetherian. The case $n=0$ is trivial. So assume $n>0$ and that the theorem has been proved for all smaller values of $n$. Let $f\in\mathbb{C}\{ z_1,\ldots,z_n \}$ be a non-zero element. It suffices to show that $\mathbb{C}\{ z_1,\ldots,z_n \}/f\mathbb{C}\{ z_1,\ldots,z_n \}$ is noetherian. By \cref{rmk-perturbaxes}, we may assume that $\ord_{z_n}f<\infty$.
     By \cref{prop-convpowerquotientbyone}, we know that 
     \[
-        \mathbb{C}\{ z_1,\ldots,z_n \}/f\mathbb{C}\{ z_1,\ldots,z_n \}\cong \mathbb{C}\{ z_1,\ldots,z_n \}^c
+        \mathbb{C}\{ z_1,\ldots,z_n \}/f\mathbb{C}\{ z_1,\ldots,z_n \}\cong \mathbb{C}\{ z_1,\ldots,z_{n-1} \}^c
     \]
-    for some $c\in \mathbb{N}$. By the inductive hypothesis, the latter ring is noetherian.
+    for some $c\in \mathbb{N}$ as $\mathbb{C}\{ z_1,\ldots,z_{n-1} \}$-modules. By the inductive hypothesis and Hilbert basis theorem, the quotient ring is noetherian.
 \end{proof}
 
 
@@ -389,7 +390,7 @@ Observe that by definition, $\ord_{z_n}\omega=b$.
 \end{proof}
 
 \begin{theorem}[Weierstrass preparation theorem]\label{thm-Weierstrassprep}
-    Let $g\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$. Assume that $\ord_{z_n}g<\infty$, then there is a unique Weierstrass polynomial $\omega\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]$ of degree $\ord_{z_n}g$ and a unit $e\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$ such that $g=e\omega$.
+    Let $n\in \mathbb{Z}_{>0}$ and $g\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$. Assume that $\ord_{z_n}g<\infty$, then there is a unique Weierstrass polynomial $\omega\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]$ of degree $\ord_{z_n}g$ and a unit $e\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$ such that $g=e\omega$.
     
     Moreover, if $g\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]$, then so is $e$.
 \end{theorem}
@@ -416,11 +417,11 @@ Observe that by definition, $\ord_{z_n}\omega=b$.
 \end{proof}
 
 \begin{definition}
-    Let $g\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$. Assume that $\ord_{z_n}g<\infty$. The Weierstrass polynomial constructed in \cref{thm-Weierstrassprep} is called the \emph{Weierstrass polynomial} of $g$.
+    Let $n\in \mathbb{Z}_{>0}$ and $g\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$. Assume that $\ord_{z_n}g<\infty$. The Weierstrass polynomial constructed in \cref{thm-Weierstrassprep} is called the \emph{Weierstrass polynomial} of $g$.
 \end{definition}
 
 \begin{corollary}
-    Let $g\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$. Assume that $\ord_{z_n}g<\infty$. Let $\omega$ be the Weierstrass polynomial of $g$. Then the injection
+    Let $n\in \mathbb{Z}_{>0}$ and $g\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$. Assume that $\ord_{z_n}g<\infty$. Let $\omega$ be the Weierstrass polynomial of $g$. Then the injection
     \[
         \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]\rightarrow \mathbb{C}\{ z_1,\ldots,z_{n}\}
     \]

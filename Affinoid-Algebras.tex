@@ -228,10 +228,290 @@ For the notion of admissible morphisms, we refer to \cref{Banach-def-admissiblem
 \end{definition}
 By an interated application of \cref{prop-Krvaluation}, $K_r$ is a complete valuation field.
 
+As a general explanation of why $K_r$ is useful, we prove the following proposition:
+\begin{proposition}\label{prop-Krfaithflat}
+    Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$. Assume that $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$. 
+    \begin{enumerate}
+        \item For any $k$-Banach space $X$, the natural map
+        \[
+            X\rightarrow X\hat{\otimes}_k K_r    
+        \]
+        is an isometric embedding.
+        \item Consider a sequence of bounded homomorphisms of $k$-Banch spaces $X\rightarrow Y\rightarrow Z$. Then the sequence is admissible and exact (resp. coexact) if and only if $X\hat{\otimes}_k K_r \rightarrow Y\hat{\otimes}_k K_r \rightarrow Z\hat{\otimes}_k K_r $ is admissible and exact (resp. coexact).
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    We may assume that $n=1$. 
+
+    (1) We have a more explicit description of $X\hat{\otimes}_k K_r$: as a vector space, it is the space of $f=\sum_{i=-\infty}^{\infty}a_i T^i$ with $a_i\in X$ and $\|a_i\|r^i\to 0$ when $|i|\to \infty$. The norm is given by $\max_i\|a_i\|r^i$. From this description, the embedding is obvious.
+
+    (2) This follows easily from the explicit description in (1).
+\end{proof}
+When $X$ is a Banach $k$-algebra,  $X\hat{\otimes}_k K_r$ is a Banach $K_r$-algebra. 
+
+
+\begin{proposition}\label{prop-strictlykafffinite}
+    Assume that $k$ is non-trivially valued.
+    Let $B$ be a strict $k$-affinoid algebra and $\varphi:B\rightarrow A$ be a finite bounded homomorphism into a $k$-Banach algebra $A$. Then $A$ is also strictly $k$-affinoid.
+\end{proposition}
+\begin{proof}
+    We may assume that $B=k\{T_1,\ldots,T_n\}$ for some $n\in \mathbb{N}$. By assumption, we can find finitely many $a_1,\ldots,a_m\in A$ such that $A=\sum_{i=1}^m \varphi(B)a_i$.
+
+    We may assume that $a_i\in \mathring{A}$ as $k$ is non-trivially valued. By \cref{Banach-prop-Tateunivprop} in the chapter Banach Rings, $\varphi$ admits a unique extension to a bounded $k$-algebra homomorphism 
+    \[
+        \Phi:  k\{T_1,\ldots,T_n,S_1,\ldots,S_m\}\rightarrow A
+    \]
+    sending $S_i$ to $a_i$. By \cref{Banach-cor-bddisadmi} in the chapter Banach Rings, $\Phi$ is admissible. Moreover, the homomorphism $\Phi$ is surjective by our assumption. It follows that $A$ is strictly $k$-affinoid.
+\end{proof}
+
+\begin{lemma}\label{lma-tatestrictaff}
+    Assume that $k$ is non-trivially valued.
+    Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$. The algebra $k\{r^{-1}T\}$ is strictly $k$-affinoid if $r_i\in \sqrt{|k^{\times}|}$ for all $i=1,\ldots,n$.
+\end{lemma}
+\begin{remark}
+    The converse is also true.     
+\end{remark}
+
+\begin{proof}
+    Assume that $r_i\in \sqrt{|k^{\times}|}$ for all $i=1,\ldots,n$. Take $s_i\in \mathbb{N}$ and $c_i\in k^{\times}$ such that 
+    \[
+        r_i^{s_i}=|c_i^{-1}|  
+    \]
+    for $i=1,\ldots,n$. We deifne a bounded $k$-algebra homomorphism $\varphi:k\{T_1,\ldots,T_n\}\rightarrow k\{r_1^{-1}T_1,\ldots,r_n^{-1}T_n\}$ by sending $T_i$ to $c_iT_i^{s_i}$. This is possible by \cref{Banach-prop-Tateunivprop} in the chapter Banach Rings.
+
+    We claim that $\varphi$ is finite. To see this, it suffices to observe that if we expand $f\in k\{r_1^{-1}T_1,\ldots,r_n^{-1}T_n\}$ as
+    \[
+        f=\sum_{\alpha \in \mathbb{N}^n} a_{\alpha}T^{\alpha},  
+    \]
+    we can regroup
+    \[
+        f=\sum_{\beta \in \mathbb{N}^n, \beta_i<s_i} T^{\beta}\sum_{\gamma\in \mathbb{N}^n} a_{\gamma s+\beta}c^{-\gamma} (cT^s)^{\gamma},
+    \]
+    where the product $\gamma s$ is taken component-wise. For each $\beta \in \mathbb{N}^n, \beta_i<s_i$, we set
+    \[
+        g_{\beta}:=\sum_{\gamma\in \mathbb{N}^n} a_{\gamma s+\beta}c^{-\gamma} (T)^{\gamma}\in k\{T_1,\ldots,T_n\}.
+    \]  
+    While $f=\sum_{\beta \in \mathbb{N}^n, \beta_i<s_i} \varphi(g_{\beta})T^{\beta}$. So We have shown that $\varphi$ is finite. Hence, $k\{r_1^{-1}T_1,\ldots,r_n^{-1}T_n\}$ is $k$-affinoid by \cref{prop-strictlykafffinite}.
+\end{proof}
+
+
+\begin{proposition}\label{prop-redtostrictlykaff}
+    Let $A$ be a $k$-affinoid algebra, then there is $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ such that $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$ and such that $A\hat{\otimes}_k K_r$ is strictly $K_r$-affinoid. Moreover, we can guarantee that $K_r$ is non-trivially valued.
+\end{proposition} 
+\begin{proof}
+    By \cref{prop-Krfaithflat}, we may assume that $A=k\{t^{-1}T\}$ for some $t\in \mathbb{R}^m_{>0}$. By \cref{lma-tatestrictaff}, it suffices to take $r$ so that the linear subspace of $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$ generated by $r_1,\ldots,r_n$ contains all components of $t$. By taking $n\geq 1$, we can guarantee that $K_r$ is non-trivially valued.
+\end{proof}
+
+\section{Weierstrass theory}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued-field.
+
+\begin{proposition}\label{prop-reductionTn}
+    We have canonical identifications
+    \[
+        \begin{aligned}
+        (k\{T_1,\ldots,T_n\} )^{\circ}\cong & \mathring{k}\{T_1,\ldots,T_n\},\\
+        (k\{T_1,\ldots,T_n\} )^{\check{}}\cong & \check{k}\{T_1,\ldots,T_n\},\\
+        \widetilde{k\{T_1,\ldots,T_n\}  }\cong & \tilde{k}[T_1,\ldots,T_n].
+        \end{aligned}
+    \]
+    The last identification extends $\mathring{k}\rightarrow \tilde{k}$ and $T_i$ is mapped to $T_i$.
+\end{proposition}
+\begin{proof}
+    This follows from \cref{Banach-cor-reductionstrictlyconv} from the chapter Banach rings.
+\end{proof}
+We will denote the reduction map $\mathring{k}\{T_1,\ldots,T_n\}\rightarrow \tilde{k}[T_1,\ldots,T_n]$ by $\tilde{\bullet}$.
+
+\begin{lemma}\label{lma-unitsTate}
+    Let $n\in \mathbb{N}$ and $f\in k\{T_1,\ldots,T_n\}$. Assume that $\|f\|_1=1$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $f$ is a unit $k\{T_1,\ldots,T_n\}$.
+        \item $\tilde{f}$ is a unit in $\tilde{k}[T_1,\ldots,T_n]$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    As $\|\bullet\|_1$ is a valuation by \cref{prop-Krisaffinoid}, $f$ is a unit in $k\{T_1,\ldots,T_n\}$ if and only if it is a unit in $(k\{T_1,\ldots,T_n\} )^{\circ}$, which is identified with $\mathring{k}\{T_1,\ldots,T_n\}$ by \cref{prop-reductionTn}. This result then follows from \cref{Banach-cor-unitsstrictlyconv} in the chapter Banach Rings.
+\end{proof}
+
+\begin{definition}
+   Let $n\in \mathbb{N}$. Consider $g\in k\{T_1,\ldots,T_n\}$. We expand $g$ as
+   \[
+        g=\sum_{i=0}^{\infty}g_i T_n^{i},\quad g_i\in k\{T_1,\ldots,T_{n-1}\}.
+   \] 
+   For $s\in \mathbb{N}$, we say $g$ is \emph{$X_n$-distinguished of degree $s$} if $g_s$ is a unit in $k\{T_1,\ldots,T_{n-1}\}$, $\|g_s\|_{1}=\|g\|_1$ and $\|g_s\|_1>\|g_{t}\|_1$ for all $t>s$.
+\end{definition}
+
+\begin{thm}[Weierstrass division theorem]\label{thm-Weierstrassdivision}
+    Let $n,s\in \mathbb{N}$ and $g\in k\{T_1,\ldots,T_n\}$ be $X_n$-distinguished of degree $s$. Then for each $f\in k\{T_1,\ldots,T_n\}$, there exist $q\in k\{T_1,\ldots,T_n\}$ and $r\in k\{T_1,\ldots,T_{n-1}\}[T_n]$ with $\deg_{T_n}r<s$ such that 
+    \[
+        f=qg+r.
+    \]
+    Moreover, $q$ and $r$ are uniquely determined. We have the following estimates
+    \begin{equation}\label{eq-estiWeirediv}
+        \|q\|_1\leq \|g\|_1^{-1}\|f\|_1,\quad \|r\|_1\leq \|f\|_1.   
+    \end{equation}
+    If in addition, $f,g\in k\{T_1,\ldots,T_{n-1}\}[T_n]$, then $q\in k\{T_1,\ldots,T_{n-1}\}[T_n]$ as well. 
+\end{thm}
+\begin{proof}
+    We may assume that $\|g\|_1=1$.
+
+    \textbf{Step~1}. Assuming the existence of the division. Let us prove \eqref{eq-estiWeirediv}. We may assume that $f\neq 0$, so that one of $q,r$ is non-zero. Up to replacing $q,r$ by a scalar multiple, we may assume that $\max\{\|q\|_1,\|r\|_1\}=1$. So $\|f\|_1\leq 1$ as well. We need to show that $\|f\|_1= 1$. Assume the contrary, then 
+    \[
+        0=\tilde{f} =\tilde{q}\tilde{g}+\tilde{r}. 
+    \]
+    Here $\tilde{\bullet}$ denotes the reduction map. By our assumption, $\deg_{T_n}=s>\deg_{T_n}r\geq \deg_{T_n}\tilde{r}$. From  \cref{prop-reductionTn}, the equality is in $\tilde{k}[T_1,\ldots,T_n]$. From the usual Euclidean division, we have $\tilde{q}=\tilde{r}=0$. This is a contradiction to our assumption.
+
+    \textbf{Step~2}. Next we verify the uniqueness of the division. Suppose that 
+    \[
+        0=qg+r  
+    \]
+    with $q$ and $r$ as in the theorem. The estimate in Step~1 shows that $q=r=0$.
+
+    \textbf{Step~3}. We prove the existence of the division.
+
+    We define
+    \[
+        B:=\left\{qg+r:r\in k\{T_1,\ldots,T_{n-1}\}[T_n], \deg_{T_n}r<s,q\in k\{T_1,\ldots,T_{n}\}\right\}.
+    \]
+    From Step~1, $B$ is a closed subgroup of $k\{T_1,\ldots,T_{n}\}$. In fact, suppose $f_i\in B$ is a sequence converging to $f\in k\{T_1,\ldots,T_{n}\}$. From Step~1, we can represent $f_i=q_ig+r_i$, then from Step~1, $q_i$ and $r_i$ are both Cauchy sequences, we may assume that $q_i\to q\in k\{T_1,\ldots,T_{n}\}$ and $r_i\to r$. As $\deg_{T_n}r_i<s$, it follows that $r\in k\{T_1,\ldots,T_{n-1}\}[T_n]$ and $\deg_{T_n}r<s$. So $f=qg+r$ and hence $B$ is closed.
+
+    It suffices to show that $B$ is dense $k\{T_1,\ldots,T_{n}\}$. We write 
+    \[
+      g=\sum_{i=0}^{\infty}g_i T_n^{i},\quad g_i\in k\{T_1,\ldots,T_{n-1}\}.  
+    \]
+    We may assume that $\|g\|_1=1$.
+    Define $\epsilon:=\max_{j\geq s} \|g_j\|$. Then $\epsilon<1$ by our assumption. Let $k_{\epsilon}=\{x\in k:|x|\leq \epsilon\}$ for the moment. There is a natural surjective ring homomorphism 
+    \[
+        \tau_{\epsilon}:(k\{T_1,\ldots,T_n\} )^{\circ}\rightarrow (\mathring{k}/k_{\epsilon})[T_1,\ldots,T_n]
+    \] 
+    with kernel $\{f\in k\{T_1,\ldots,T_n\}  : \|f\|_1\leq \epsilon\}$.  We now apply Euclidean division in the ring $(\mathring{k}/k_{\epsilon})[T_1,\ldots,T_n]$ to write
+    \[
+        \tau_{\epsilon}(f)=\tau_{\epsilon}(q)\tau_{\epsilon}(g)+\tau_{\epsilon}(r)
+    \]
+    for some $q\in (k\{T_1,\ldots,T_n\} )^{\circ}$ and $r\in (k\{T_1,\ldots,T_{n-1}\} )^{\circ}[T_n]$ with $\deg_{T_n}r<s$. So
+    \[
+        \|f-qg-r\|_1\leq \epsilon.  
+    \]
+    This proves that $B$ is dense in $k\{T_1,\ldots,T_{n}\}$ by \cref{Banach-prop-epsilondenseimpliesdense} in the chapter Banach rings.
+
+    \textbf{Step~4}. It remains to prove the last assertion. But this is a consequence of the usual Euclidean division theorem for the ring $k\{T_1,\ldots,T_{n-1}\}[T_n]$ and the uniqueness proved in Step~2.
+\end{proof}
+\begin{lemma}\label{lma-Weierstrasspolycancel2}
+    Let $\omega\in k\{ T_1,\ldots,T_{n-1}\}[T_n] $ be a Weierstrass polynomial and $g\in k\{ T_1,\ldots,T_{n}\}$. Assume that $\omega g\in k\{ T_1,\ldots,T_{n-1}\}[T_n]$, then $g\in k\{ T_1,\ldots,T_{n-1}\}[T_n]$.
+\end{lemma}
+\begin{proof}
+    By the division theorem of polynomial rings, we can write
+    \[
+        \omega g = q\omega+r  
+    \]
+    for some $q,r\in k\{ T_1,\ldots,T_{n-1}\}[T_n]$, $\deg_{T_n}r<\deg_{T_n}\omega g$. But we can write $\omega g= \omega \cdot g$. From the uniqueness part of \cref{thm-Weierstrassdivision}, we know that $q=g$, so $g$ is a polynomial in $T_n$.
+\end{proof}
+
+As a consequence, we deduce Weierstrass preparation theorem.
+\begin{definition}
+    Let $n\in \mathbb{Z}_{>0}$. A \emph{Weierstrass polynomial} in $n$-variables is a monic polynomial $\omega\in k\{T_1,\ldots,T_{n-1}\}[T_n]$ with $\|\omega\|_1=1$.
+\end{definition}
+
+\begin{thm}[Weierstrass preparation theorem]\label{thm-Weierstrasspreparation}
+    Let $n\in \mathbb{Z}_{>0}$ and $g\in k\{T_1,\ldots,T_{n}\}$ be $X_n$-distinguished of degree $s$. Then there are a Weierstrass polynomial $\omega\in k\{T_1,\ldots,T_{n-1}\}[T_n]$ of degree $s$ and a unit $e\in k\{T_1,\ldots,T_{n}\}$ such that 
+    \[
+        g=e\omega.
+    \]
+    Moreover, $e$ and $\omega$ are unique. If $g\in k\{T_1,\ldots,T_{n-1}\}[T_n]$, then so is $e$.
+\end{thm}
+\begin{proof}
+    We first prove the uniqueness. Assume that a decomposition as in the theorem is given. Let $r=T_n^s-\omega$. Then $T_n^s=e^{-1}g+r$. The uniqueness part of \cref{thm-Weierstrassdivision} implies that $e$ and $r$ are uniquely determined, hence so is $\omega$.
+
+    Next we prove the existence.
+    By Weierstrass division theorem \cref{thm-Weierstrassdivision}, we can write
+    \[
+          T_n^s=q g+r
+    \]
+    for some $q\in k\{T_1,\ldots,T_{n}\}$ and $r\in k\{T_1,\ldots,T_{n-1}\}[T_n]$ with $\deg_{T_n} r<s$. Let $\omega=T_n^s-r$. From the estimates in \cref{thm-Weierstrassdivision}, $\|r\|_1\leq 1$. So $\|\omega\|_1=1$.
+    Then $\omega$ is a Weierstrass polynomial of degree $s$ and $\omega=q g$.
+    It suffices to argue that $q$ is a unit. 
+
+    We may assume that $\|g\|_1=1$. By taking reductions, we find
+    \[
+        \tilde{\omega}=\tilde{q}\tilde{g}.  
+    \]
+    As $\deg_{T_n}\tilde{g}=\deg_{T_n}\tilde{\omega}$ and the leading coefficients of both polynomials are units in $\tilde{k}[T_1,\ldots,T_{n-1}]$, it follows that $\tilde{q}$ is a unit in $\tilde{k}[T_1,\ldots,T_{n-1}]$. It follows that $\tilde{q}$ is also a unit in $\tilde{k}[T_1,\ldots,T_{n}]$. By \cref{lma-unitsTate}, $q$ is a unit in $k\{T_1,\ldots,T_{n}\}$.
+
+    The lsat assertion is already proved in \cref{thm-Weierstrassdivision}.
+
+\end{proof}
+
+\begin{definition}
+    Let $n\in \mathbb{Z}_{>0}$ and $g\in k\{T_1,\ldots,T_{n}\}$ be $X_n$-distinguished. Then the Weierstrass polynomial $\omega$ constructed in \cref{thm-Weierstrasspreparation} is called the \emph{Weierstrass polynomial} defined by $g$.
+\end{definition}
+
+\begin{corollary}\label{cor:quotientreplacedbyWeie}
+    Let $n\in \mathbb{Z}_{>0}$ and $g\in k\{T_1,\ldots,T_{n}\}$ be $X_n$-distinguished. Let $\omega$ be the Weierstrass polynomial of $g$. Then the injection
+    \[
+        k\{T_1,\ldots,T_{n-1}\}[T_n]\rightarrow  k\{T_1,\ldots,T_{n}\}
+    \]
+    induces an isomorphism of $k$-algebras
+    \[
+        k\{T_1,\ldots,T_{n-1}\}[T_n]/(\omega)\rightarrow  k\{T_1,\ldots,T_{n}\}/(g).
+    \]
+\end{corollary}
+\begin{proof}
+    The surjectivity follows from \cref{thm-Weierstrassdivision} and the injectivity follows from \cref{lma-Weierstrasspolycancel2}.
+\end{proof}
+
+In the complex setting, we can perturb a convergent power series so that it has finite degree along a fixed axis, the corresponding result in the current setting is:
+\begin{lemma}\label{lma-perturb}
+    Let $n\in \mathbb{Z}_{>0}$ and $g\in k\{T_1,\ldots,T_{n}\}$ is non-zero. Then there is a $k$-algebra automorphism $\sigma$ of $k\{T_1,\ldots,T_{n}\}$ so that $\sigma(g)$ is $T_n$-distinguished.
+\end{lemma}
+
+\begin{proof}
+    We may assume that $\|g\|_1=1$. We expand $g$ as
+    \[
+        g=\sum_{\alpha\in \mathbb{N}^n} a_{\alpha}T^{\alpha}.
+    \]
+    Endow $\mathbb{N}^n$ with the lexicographic order. Take the maximal $\beta\in \mathbb{N}^n$ so that $|a_{\beta}|=1$. Take $t\in \mathbb{Z}_{>0}$ so that $t\geq \max_{i=1,\ldots,n} \alpha_i$ for all $\alpha\in \mathbb{N}^n$ with $\tilde{a}_{\alpha}\neq 0$.
+
+    We will define $\sigma$ by sending $T_i$ to $T_i+T_n^{c_i}$ for all $i=1,\ldots,n-1$. The $c_i$'s are to be defined. We begin with $c_n=1$ and define the other $c_i$'s inductively:
+    \[
+        c_{n-j}=1+t\sum_{d=0}^{j-1}c_{n-d}  
+    \]
+    for $j=1,\ldots,n-1$. We claim that $\sigma(f)$ is $T_n$-distinguished of order $s=\sum_{i=1}^n c_i \beta_i$.
+
+    A straightforward computation shows that 
+    \[
+        \widetilde{\sigma(g)}=\sum_{i=1}^s p_i T_n^i  
+    \]
+    for some $p_i\in \tilde{k}[T_1,\ldots,T_{n-1}]$ and $p_s=\tilde{a_{\beta}}$. Our claim follows.
+\end{proof}
+
+\begin{proposition}\label{prop-strictnoetherian}
+    Let $n\in \mathbb{N}$. Then $k\{T_1,\ldots,T_n\}$ is Noetherian.
+\end{proposition}
+\begin{proof}
+    We make induction on $n$. The case $n=0$ is trivial. Assume that $n>0$. It suffices to show that for any non-zero $g\in k\{T_1,\ldots,T_n\}$, $k\{T_1,\ldots,T_n\}/(g)$ is Noetherian. By \cref{lma-perturb}, we may assume that $g$ is $T_n$-distinguished. By \cref{thm-Weierstrassdivision}, $k\{T_1,\ldots,T_n\}/(g)$ is a finite free $k\{T_1,\ldots,T_{n-1}\}$-module. By the inductive hypothesis and Hilbert basis theorem, $k\{T_1,\ldots,T_n\}/(g)$ is indeed Noetherian.
+\end{proof}
+
 
 
 \section{Properties of affinoid algebras}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued-field.
 
+\begin{thm}
+An affinoid $k$-algebra $A$ is Noetherian and all ideals of $A$ are closed.  
+\end{thm}
+\begin{proof}
+    Let $I$ be an ideal in $A$. 
+    By \cref{prop-redtostrictlykaff}, we can take a suitable $r\in \mathbb{R}^m_{>0}$ so that $A\hat{\otimes} K_r$ is strictly $K_r$-affinoid. Then $I (A\hat{\otimes} K_r)$ is an ideal in $A\hat{\otimes} K_r$. By \cref{prop-strictnoetherian}, the latter ring is Noetherian. So we may take finitely many generators $f_1,\ldots,f_k\in I$. Each $f\in I$ can be written as 
+    \[
+        f=\sum_{i=1}^k f_i g_i  
+    \]
+    with $g_i=\sum_{j=-\infty}^{\infty}g_{i,j}T^j\in A\hat{\otimes} K_r$. But then 
+    \[
+        f=\sum_{i=1}^k f_i g_{i,0}.  
+    \]
+    So $I$ is finitely generated.
+
+    As $I=A\cap (I (A\hat{\otimes} K_r))$, by \cref{Banach-cor-idealclosed} in the chapter Banach Rings, we see that $I$ is closed in $A\hat{\otimes} K_r$ and hence closed in $A$.
+\end{proof}
 
 \printbibliography
 \end{document}
