@@ -252,6 +252,10 @@ This definition makes sense thanks to \cref{prop-topnilring}.
     A \emph{Banach ring} is a normed ring that is complete with respect to the metric defined in \cref{lma-pmetricinducedbyseminorm}.
 \end{definition}
 
+\begin{definition}
+    A Banach ring $(A,\|\bullet\|_A)$ is \emph{uniform} if $\|\bullet\|_A$ is power-multiplicative.
+\end{definition}
+
 \begin{definition}\label{def-completionring}
     Let $A$ be a semi-normed ring. There is an obvious ring structure on the completion $\hat{A}$ of $A$ defined in \cref{def-completionAbgroups}. We call the resulting Banach ring the \emph{completion} of $A$.
 \end{definition}
@@ -304,7 +308,7 @@ In the non-Archimedean case, we have a stronger result:
     Then $1-ab\in \check{A}$. It follows from \cref{prop-inversesmallelementBanachring2} that $ab$ is a unit in $\mathring{A}$ and hence $a$ is a unit in $\mathring{A}$.
 \end{proof}
 
-\begin{definition}
+\begin{definition}\label{def-spectralradius}
     Let $(A,\|\bullet\|)$ be a Banach ring. We define the \emph{spectral radius} $\rho=\rho_A:A\rightarrow [0,\infty)$ as follows:
     \[
         \rho(f)=\inf_{n\geq 1} \|f^n\|^{1/n},\quad f\in A.
@@ -327,6 +331,14 @@ In the non-Archimedean case, we have a stronger result:
 
 \begin{example}
     The ring $\mathbb{C}$ with its usual norm $|\bullet|$ is a Banach ring. In fact, $(\mathbb{C},|\bullet|)$ is a complete valued field.
+\end{example}
+
+\begin{example}\label{ex-Banachringproduct}
+    Let $\{(A_i,\|\bullet\|_i\}_{i\in I}$ be a family of Banach rings. We define their \emph{product} $\prod_{i\in I}A_i$ as the following Banach ring: as a set it consists of all elements $f=(f_i)_{i\in I}$ with 
+    \[ 
+        \|f\|:=\sup_{i\in I}\|f_i\|_i<\infty.
+    \]
+    The norm is given by $\|\bullet\|$. It is easy to verify that $\prod_{i\in I}A_i$ is indeed a Banach ring.
 \end{example}
 
 \begin{example}\label{ex-convseriesradius}
@@ -716,8 +728,129 @@ By \cref{lma-unitmoduloreduction} and \cref{prop-strictlyconvcirccheck}, $f$ is 
     Let $(A,\|\bullet\|_A)$ be a Banach ring. A semi-norm $|\bullet|$ on $A$ is \emph{bounded} if there is a constant $C>0$ such that for any $f\in A$, $|f|\leq C\|f\|_A$.
 
     We write $\Sp A$ for the set of bounded semi-valuations on $A$. We call $\Sp A$ the \emph{Berkovich spectrum} of $A$.
+
+    We endow $\Sp A$ with the weakest topology such that for each $f\in A$, the map $\Sp A\rightarrow \mathbb{R}_{\geq 0}$ sending $\|\bullet\|$ to $\|f\|$ is continuous.
+
+    It is sometimes preferable to denote an element $\|\bullet\|$ in $\Sp A$ by a single letter $x$. In this case, we write $|f(x)|=\|f\|$ for any $f\in A$.
+
+    Given a bounded homomorphism $\varphi:A\rightarrow B$ of Banach rings, we define $\Sp \varphi:\Sp B\rightarrow \Sp A$ as follows: given a bounded semi-valuation $\|\bullet\|$ on $B$, we define $\Sp \varphi(\|\bullet\|)$ as the bounded semi-valuation on $A$ sending $f\in A$ to $\|\varphi(f)\|$.
 \end{definition}
-Later on, we will endow $\Sp A$ with more structures. In the literature, it is more common to denote $\Sp A$ by $\mathcal{M}(A)$.
+
+Observe that there is a natural map of sets:
+\begin{equation}\label{eq-SptoSpec}
+    \Sp A\rightarrow \left\{\mathfrak{p}\in \Spec A:\mathfrak{p}\text{ is closed.}\right\}
+\end{equation}
+sending each bounded semi-valuation to its kernel. The fiber over a closed ideal $\mathfrak{p}\in \Spec A$ is identified with the set of bounded valuations on $A/\mathfrak{p}$. Here boundedness is with respect to the residue norm.
+
+\begin{remark}
+In the literature, it is more common to denote $\Sp A$ by $\mathcal{M}(A)$. 
+\end{remark}
+
+\begin{lemma}\label{lma-supnormbddbyrho}
+    Let $(A,\|\bullet\|_A)$ be a Banach ring. Then for any $x\in \Sp A$, we have
+    \[
+        |f(x)|\leq \rho(f)\leq \|f\|_A.
+    \]
+\end{lemma}
+\begin{proof}
+    Let $\|\bullet\|_x$ be the bounded semi-valuation corresponding to $x$. Then there is a constant $C>0$ such that
+    \[
+        \|\bullet\|_x\leq C\|\bullet\|_A.  
+    \]
+    It follows that for any $n\in \mathbb{N}$,
+    \[
+        \|f\|_x^n=\|f^n\|_x\leq C\|f^n\|_A.  
+    \]
+    Taking $n$-th root and letting $n\to\infty$, we find
+    \[
+        \|f\|_x\leq \rho(f).    
+    \]
+    The inequality $\rho(f)\leq \|f\|_A$ follows from the definition of $\rho$.
+\end{proof}
+
+\begin{example}\label{ex-valuationfieldspectrum}
+    If $(k,|\bullet|)$ is a complete valuation field, then $\Sp k$ is a single point $|\bullet|$.
+
+    To see this, let $\|\bullet\|\in \Sp k$, then by \cref{lma-supnormbddbyrho},
+    \[
+        \|f\|\leq |f|
+    \]
+    for any $f\in k$.
+    If $f\neq 0$, the same inequality applied to $f^{-1}$ implies that $\|f\|=|f|$. When $f=0$, the equality is trivial. 
+\end{example}
+
+\begin{example}\label{ex-prodvalufield}
+    Let $\{K_i\}_{i\in I}$ be a family of complete valuation fields. Recall that $\prod_{i\in I} K_i$ is defined in \cref{ex-Banachringproduct}. Then $\Sp \prod_{i\in I} K_i$ is homeomorphic to the Stone--\v{C}ech compactification of the discrete set $I$.
+
+    To see this, we first identify the set of proper closed ideals in $\prod_{i\in I} K_i$ with the set of filters on $I$. 
+    
+    We first introduce a notation: for each $J\subseteq I$, we write $a_J\in \prod_{i\in I} K_i$ for the element 
+    \[
+        a_{J,i}=\left\{
+            \begin{aligned}
+                0,&\quad \text{if }i\in J;\\
+                1,&\quad \text{if }i\not\in J.
+            \end{aligned}
+        \right.  
+    \]
+    Givena proper closed ideal $\mathfrak{a}\subseteq \prod_{i\in I} K_i$, we define a filter $\Phi_{\mathfrak{a}}=\{J\subseteq I:a_J\in \mathfrak{a}\}$. Conversely, given a filter $\Phi$ on $I$, we denote by $\mathfrak{a}_{\Phi}$ the closed ideal of $\prod_{i\in I} K_i$ generated by $a_J$ for all $J\in \Phi$. These maps are inverse to each other and order preserving. In particular, the maximal ideals of $\prod_{i\in I} K_i$ are identified with ultrafilters of $I$ by \cref{cor:maximalidealclosedinBanachring}.
+
+    Next we show that all prime ideals of $\prod_{i\in I} K_i$ are maximal. In fact, take $\mathfrak{p}\in \Spec \prod_{i\in I} K_i$ and suppose that there is a maximal ideal $\mathfrak{m}$ properly containing $\mathfrak{p}$. Let $J\in \Phi_{\mathfrak{m}}\setminus \Phi_{\mathfrak{p}}$ so that $a_J\in \mathfrak{m} \setminus \mathfrak{p}$. As $I\setminus J\not\in \Phi_{\mathfrak{m}}$, we have $a_{I\setminus J}\not\in \mathfrak{m}$. But $a_J\cdot a_{I\setminus J}=0$. This contradicts the fact that $a_J\not\in \mathfrak{p}$ and $a_{I\setminus J}\not\in \mathfrak{p}$.
+
+    So we have shown that as a set $\Spec \prod_{i\in I} K_i$ is identified with the Stone--\v{C}ech compactification of $I$. 
+
+    Next we show taht if $\mathfrak{m}\in \Spec \prod_{i\in I} K_i$, then the residue norm on $\prod_{i\in I} K_i/\mathfrak{m}$ is multiplicative. In fact, for each $f\in \prod_{i\in I} K_i$, we have
+    \[
+        \|\pi(f)\|_{\prod_{i\in I} K_i/\mathfrak{m}}=\inf_{J\in \Phi_{\mathfrak{m}}}\sup_{i\in J}\|f\|.
+    \]
+    Here $\pi:\prod_{i\in I} K_i\rightarrow \prod_{i\in I} K_i/\mathfrak{m}$ is the natural map and 
+     $\|\bullet\|$ denotes the norm on $\prod_{i\in I} K_i$ defined in \cref{ex-Banachringproduct}. It follows immediately that the residue norm on $\prod_{i\in I} K_i/\mathfrak{m}$ is multiplicative. In particular, by \cref{ex-valuationfieldspectrum}, $\Sp \prod_{i\in I} K_i$ and $\Spec \prod_{i\in I} K_i$ are identified as sets under the natural map \eqref{eq-SptoSpec}.
+
+    It remains to identify the topologies. But this is easy: for any ultrafilter $\Phi$ on $I$, let $\mathfrak{m}=\mathfrak{m}_{\Phi}$, then $\|\pi(a_J)\|=0$ for $J\in \Phi$ and $\|\pi(a_J)\|=1$ otherwise. 
+\end{example}
+
+\begin{proposition}\label{prop-Spcontinuous}
+    Let $\varphi:A\rightarrow B$ be a bounded homomorphism of Banach rings, then $\Sp \varphi:\Sp B\rightarrow \Sp A$ is continuous.
+\end{proposition}
+\begin{proof}
+    For each $f\in A$, we define $\mathrm{ev}_f:\Sp A\rightarrow \mathbb{R}$ by sending $\|\bullet\|$ to $\|f\|$.
+    It suffices to show that for any $f\in A$, the map $\Sp \varphi\circ\mathrm{ev}_f$ is continuous. But the composition is just the map sending $\|\bullet\|\in \Sp B$ to $\|\varphi(f)\|$. It is continuous by definition of the topology on $\Sp B$ as $\varphi$ is bounded.
+\end{proof}
+
+\begin{definition}
+    Let $(A,\|\bullet\|_A)$ be a Banach ring. For each $x\in \Sp A$ corresponding to a bounded semi-valuation $\|\bullet\|_x$ on $A$, there is a natural induced valuation on $\Frac \ker \|\bullet\|_x$. We write $\mathscr{H}(x)$ for the completion of $\Frac \ker \|\bullet\|_x$ with the induced valuation. The complete valuation field $\mathscr{H}(x)$ is called the \emph{complete residue field} of $A$ at $x$. 
+
+    We will write $f(x)$ for the residue class of $f$ in $\mathscr{H}(x)$.
+\end{definition}
+Observe that for any $f\in A$, $|f(x)|$ is exactly the valuation of $f(x)$ with respect to the valuation on $\mathscr{H}(x)$.
+
+
+
+\begin{definition}
+    Let $A$ be a Banach ring. 
+    The \emph{Gelfand transform} of $A$ is the homomorphism
+    \[
+        A\rightarrow \prod_{x\in \Sp A} \mathscr{H}(x).  
+    \]
+    Here the product is defined in \cref{ex-Banachringproduct}.
+
+    We will denote the Gelfand transform as $f\mapsto \hat{f}=(f(x))_{x\in \Sp A}$.
+\end{definition}
+By \cref{lma-supnormbddbyrho}, the Gelfand transform is well-defined.
+
+\begin{proposition}\label{prop-Gelfbdd}
+    Let $(A,\|\bullet\|_A)$ be a Banach ring. Then the Gelfand transform
+    \[
+        A\rightarrow \prod_{x\in \Sp A} \mathscr{H}(x).    
+    \]
+    is bounded. In fact, the Gelfand transform is contractive.
+\end{proposition}
+\begin{proof}
+    This follows simply from \cref{lma-supnormbddbyrho}.
+\end{proof}
+
+
+
 \begin{proposition}\label{prop-Berkospecnonempty}
     Let $(A,\|\bullet\|)$ be a Banach ring. Then $\Sp A$ is empty if and only if $A=0$.
 \end{proposition}
@@ -756,6 +889,55 @@ Later on, we will endow $\Sp A$ with more structures. In the literature, it is m
     \]
     It therefore follows that $|f^{-i}|r^i$ admits a positive lower bound, and we conclude.
 \end{proof}
+
+
+\begin{corollary}\label{cor-invertibleintermsofsp}
+    Let $A$ be a Banach ring. Then an element $f\in A$ is invertible if and only if $f(x)\neq 0$ for all $x\in \Sp A$.
+\end{corollary}
+\begin{proof}
+    The direct implication is trivial. Assume that $f(x)\neq 0$ for all $x\in \Sp A$. We claim that $f\not\in \mathfrak{m}$ for any maximal ideal $\mathfrak{m}$ in $A$. From this, it follows that $f$ is invertible in $A$.
+    
+    By \cref{cor:maximalidealclosedinBanachring}, $A/\mathfrak{m}$ is a Banach ring. It follows from \cref{prop-Berkospecnonempty} that there is a non-trival bounded semi-valuation on $A/\mathfrak{m}$, which lifts to a bounded semi-valuation on $A$.
+\end{proof}
+
+\begin{corollary}
+    Let $(A,\|\bullet\|_A)$ be a Banach ring. Then for any $f\in A$, we have
+    \[
+        \rho(f)=\sup_{x\in \Sp A} |f(x)|.  
+    \]
+\end{corollary}
+\begin{proof}
+    We have already shown $\rho(f)\geq \sup_{x\in \Sp A} |f(x)|$ in \cref{lma-supnormbddbyrho}. To verify the reverse inequality, take $f\in A$ and $r\in \mathbb{R}_{>0}$,
+    it suffices to show that if $|f(x)|<r$ for all $x\in \Sp A$, then $\rho(f)\leq r$.
+
+    Consider the Banach ring $B=A\{rT\}$. By \cref{lma-supnormbddbyrho} again, $|T(x)|\leq \|T\|_{r^{-1}}=r^{-1}$ for all $x\in \Sp B$. Therefore, for any $x\in \Sp B$, $|(fT)(x)|< 1$. Hence, $(1-fT)(x)\neq 0$ for all $x\in \Sp B$. By \cref{cor-invertibleintermsofsp}, $1-fT$ is invertible in $B$. But this happens exactly when
+    \[
+        \sum_{i=0}^{\infty} \|f^i\|_A r^{-i} 
+    \]
+    is convergent. It follows that $\rho(f)\leq r$.
+\end{proof}
+
+
+\begin{thm}
+    Let $(A,\|\bullet\|)$ be a Banach ring. Then $\Sp A$ is a compact Hausdorff space.
+\end{thm}
+\begin{proof}
+    We first show that $\Sp A$ is Hausdorff. Take $x_1, x_2\in A$, $x_1\neq x_2$. In other words, we can find $f\in A$ so that $|f(x_1)|\neq |f(x_2)|$. We may assume that     $|f(x_1)|< |f(x_2)|$. Take a real number $r>0$ so that
+    \[
+        |f(x_1)|< r <|f(x_2)|.
+    \]
+    Then $\{x\in \Sp A: |f(x)|<r\}$ and $\{x\in \Sp A: |f(x)|>r\}$ are disjoint neighbourhoods of $x_1$ and $x_2$.
+
+    Next we show that $\Sp A$ is compact. By \cref{prop-Gelfbdd} and \cref{prop-Spcontinuous}, we can define a continuous map
+    \[
+        \Sp \prod_{x\in \Sp A}\mathscr{H}(x)\rightarrow \Sp A.  
+    \]
+    The map is clearly surjective: for any $x\in \Sp A$, the valuation on $\mathscr{H}(x)$ induces a semi-valuation on  $\prod_{x\in \Sp A}\mathscr{H}(x)$, which is clearly bounded. The image of this semi-valuation in $\Sp A$ is just $x$.
+
+    So it suffices to show that $\Sp \prod_{x\in \Sp A}\mathscr{H}(x)$ is compact. This follows from \cref{ex-prodvalufield}.
+\end{proof}
+
+
 
 \section{Open mapping theorem}
 Let $(k,|\bullet|)$ be a complete non-trivially valued field. All results in this section fail when $k$ is trivially valued.
@@ -844,6 +1026,175 @@ Let $(k,|\bullet|)$ be a complete non-trivially valued field. All results in thi
 \begin{proof}
     We may assume that $f$ is surjective by replacing $B$ by the image of $f$. Similarly, by replacing $A$ by $A/\ker f$, we may assume that $f$ is bijective. It follows from \cref{thm-openmapping} that $f$ is a homeomorphism. The inverse of $f$ is therefore continuous, and hence bounded by \cref{prop-bddequivcont}.
 \end{proof}
+
+\section{Maximum spectra}
+Let $(k,|\bullet|)$ a complete non-Archimedean valued field.
+
+\begin{definition}
+    For any $k$-algebra $A$, we write
+    \[
+      \Spm_k A:=\left\{\mathfrak{m}\in \Spm A:A/\mathfrak{m}\text{ is algebraic over }k\right\}.  
+    \]
+    For any $x\in \Spm_k A$ and any $f\in A$, we write $f(x)$ for the residue of $f$ in $A/\mathfrak{m}_x$, where $\mathfrak{m}_x$ is the maximal ideal corresponding to $x$. We write $|f(x)|$ for the valuation of $f(x)$ with respect to the extended valuation induced from the given valuation on $k$.
+\end{definition}
+
+\begin{definition}
+    Let $A$ be a $k$-algebra.
+    For each $f\in A$, we write $|f|_{\sup}$ for the supremum of $|f(x)|$ for all $x\in \Spm_k A$ if $\Spm_k A$ is non-empty and $0$ otherwise.
+\end{definition}
+
+\begin{definition}
+    Let $f$ be a monic polynomial in $k[X]$, we expand $f=X^n+a_{1}X^{n-1}+\cdots +a_n\in k[X]$, then we define $\sigma(f):=\max_{i=1,\ldots,n}|a_i|^{1/i}$.
+\end{definition}
+
+\begin{definition}
+    Let $L$ be a reduced integral $k$-algebra. We define the \emph{spectral norm} $|\bullet|_{\mathrm{sp}}$ on $L$ as follows: given a non-zero $x\in L$, take a minimal polynomial $X^n+a_1X^{n-1}+\cdots+a_n\in k[X]$ of $x$ over $k$. Then we set
+    \[
+      |x|_{\mathrm{sp}}:=\max_{i=1,\ldots,n} |a_i|^{1/i}.  
+    \]
+\end{definition}
+
+
+
+\begin{proposition}\label{prop-sigmaproduct}
+    Let $f,g$ be monic polynomials in $k[X]$, then
+    \[
+        \sigma(fg)=\max\{\sigma(f),\sigma(g)\}.    
+    \]
+\end{proposition}
+\begin{proof}
+     Replacing $k$ by a finite extension, we may assume that $f$ and $g$ split into linear factors $a_i$ and $b_j$. Then it is straightforward to show that
+     \[
+       \sigma(f)=\prod_i a_i,\quad \sigma(g)=\prod_j b_j, \sigma(fg)= \prod_i a_i \cdot \prod_j b_j.
+     \]
+     The assertion follows.
+\end{proof}
+
+
+\begin{proposition}
+    Let $L$ be a reduced integral $k$-algebra. Then $|\bullet|_{\mathrm{sp}}$ is a power-multiplicative norm on $L$, and it extends the norm on $k$.
+\end{proposition}
+\begin{proof}
+    It is clear that $|\bullet|_{\mathrm{sp}}$ extends the valuation on $k$. In order to show that $|\bullet|_{\mathrm{sp}}$ is a power-multiplicative norm on $L$, we may assume that $L$ is finite dimensional over $k$. Then we can find finite field extensions $L_1,\ldots,L_t$ of $k$ such that $L=\bigoplus_{i=1}^t L_i$. By \cref{prop-sigmaproduct}, we can immediately reduce to the case where $L/k$ is a finite field extension. In this case, the result is well-known. \textcolor{red}{Expand.}
+\end{proof} 
+
+\begin{proposition}\label{prop-spnormprimesred}
+    Let $L$ be a reduced integral $k$-algebra. For any $\mathfrak{p}\in \Spec L$, write $\pi_{\mathfrak{p}}:L\rightarrow L/\mathfrak{p}$ the residue map. Then for any $y\in L$,
+    \[
+        |y|_{\mathrm{sp}}=\max_{\mathfrak{p}\in \Spec L}  |\pi_{\mathfrak{p}}(y)|_{\mathrm{sp}}.
+    \]
+\end{proposition}
+\begin{proof}
+    Fix $y\in L$.
+    For any $\mathfrak{p}\in \Spec L$, let $q_{\mathfrak{p}}\in k[X]$ be the minimal polynomial of $\pi_{\mathfrak{p}}(y)$ over $k$. Let $q\in k[X]$ be the minimal polynomial of $y$ over $k$. Then clearly $q_{\mathfrak{p}}$ divides $q$ for all  $\mathfrak{p}\in \Spec L$. In particular, there are only finitely many different polynomials among $q_{\mathfrak{p}}$ ($\mathfrak{p}\in \Spec L$), say $q_1,\ldots,q_r$. Define $q'=q_1\cdots q_r\in k[X]$. Then for $f\in k[X]$, $f(y)=0$ if and only if $\pi_{\mathfrak{p}}(f(y))=0$ for all $\mathfrak{p}\in \Spec L$ as $L$ is reduced. The latter condition is equivalent to that $q'|f$. It follows that $q'=q$. Now by \cref{prop-sigmaproduct},
+    \[
+        |y|_{\mathrm{sp}}=\sigma(q)=\max_{i=1,\ldots,r}\sigma(q_i) =\max_{\mathfrak{p}\in \Spec L}  |\pi_{\mathfrak{p}}(y)|_{\mathrm{sp}}.
+    \]
+\end{proof}
+
+\begin{proposition}\label{prop-supcontraction}
+    Let $\varphi:B\rightarrow A$ be a homomorphism of commutative $k$-algebras. Then for any $f\in B$,
+    \[
+        |\varphi(f)|_{\sup}\leq |f|_{\sup}.  
+    \]
+\end{proposition}
+\begin{proof}
+    Of course, we can assume that $\Spm_k A\neq \emptyset$. Let $x\in \Spm_k A$, then $\varphi^{-1}x\in \Spm_k B$. But for any $f\in B$, $|\varphi(f)(x)|=|f(\varphi^{-1}x)|$. We conclude.
+\end{proof}
+
+
+
+
+\begin{proposition}\label{prop-supeqsp}
+    Let $A$ be a $k$-algebra. Let $\mathfrak{M}$ be the set of minimal prime ideals in $A$ and let $\pi_{\mathfrak{p}}:A\rightarrow A/\mathfrak{p}$ be the canonical residue map for all $\mathfrak{p}\in \mathfrak{M}$. Then for any $f\in A$,
+    \begin{equation}\label{eq-fsupminimalprimes}
+        |f|_{\sup}=\sup_{\mathfrak{p}\in \mathfrak{M}} |\pi_{\mathfrak{p}}(f)|_{\sup}.
+    \end{equation}
+
+    In particular, if $A$ be a reduced integral $k$-algebra. Then $|\bullet|_{\sup}=|\bullet|_{\mathrm{sp}}$ on $A$.
+\end{proposition}
+\begin{proof}
+    By \cref{prop-supcontraction}, 
+    \[
+        \sup_{\mathfrak{p}\in \mathfrak{M}} |\pi_{\mathfrak{p}}(f)|_{\sup}\leq |f|_{\sup}.  
+    \]
+    In order to show the reverse inequality, let $x\in \Spm_k A$. Take $\mathfrak{p}\in \mathfrak{M}$ such that $x\supseteq \mathfrak{p}$. Clearly, $\pi_{\mathfrak{p}}(x)\in \Spm_k A/\mathfrak{p}$ and
+    \[
+        |f(x)|=\left|\pi_{\mathfrak{p}}(f)(\pi_{\mathfrak{p}}(x))\right|.  
+    \]
+    In particular,
+    \[
+        |f(x)|\leq |\pi_{\mathfrak{p}}(f)|_{\sup}\leq \sup_{\mathfrak{p}\in \mathfrak{M}}   |\pi_{\mathfrak{p}}(f)|_{\sup}.
+    \]
+    Take sup with respect to $x$, we conclude \eqref{eq-fsupminimalprimes}.
+
+    When $A$ is a reduced and integral $k$-algebra, all prime ideals of $A$ are minimal. The final assertion follows from \cref{prop-spnormprimesred}.
+\end{proof}
+
+\begin{proposition}\label{prop-fsupspecexp}
+    Let $\varphi:B\rightarrow A$ be an injective integral homomorphism of $k$-algebras. Assume that $B$ is a normal integral domain. Fix $f\in A$.
+    Let $f^n+\varphi(b_1)f^{n-1}+\cdots+\varphi(b_n)=0$ be the minimal equation of $f$ over $A$. Then
+    \[
+        |f|_{\sup}=\max_{i=1,\ldots,n} |b_i|_{\sup}^{1/i}.  
+    \]
+\end{proposition}
+\begin{proof}
+    We first show the inequality 
+    \[
+        |f|_{\sup}\leq \max_{i=1,\ldots,n} |b_i|_{\sup}^{1/i}.    
+    \]
+    Of course, we can assume that $\Spm_k A\neq \emptyset$.
+    For all $x\in \Spm_k A$, we have
+    \[
+        0=f(x)^n +\varphi(b_1)f(x)^{n-1}+\cdots+\varphi(b_n)=f(x)^n+b_1(\varphi^{-1}x)f(x)^{n-1}+\cdots+b_n(\varphi^{-1}(x)).
+    \]
+    Then we in fact have that
+    \[
+        |f(x)|\leq   \max_{i=1,\ldots,n} |b_i(\varphi^{-1}x)|_{\sup}^{1/i}.  
+    \]
+    Assume that to the contrary that 
+    \[
+      |f(x)|^i> |b_i(\varphi^{-1}x)|  
+    \]
+    for all $i=1,\ldots,n$. Then
+    \[
+        |b_i(\varphi^{-1}x)f(x)^{n-i}|<|f(x)|^n=|f(x)^n|.  
+    \]
+    It follows that 
+    \[
+        |b_1(\varphi^{-1}x)f(x)^{n-1}+\cdots+b_n(\varphi^{-1}(x)) |< |f(x)^n|.
+    \]
+    This is a contradiction.
+
+    It remains to argue that 
+    \begin{equation}\label{eq-fsupnormcompute}
+        |f|_{\sup}\geq\max_{i=1,\ldots,n} |b_i|_{\sup}^{1/i}.    
+    \end{equation}
+    
+    Next let $A'=B[f]$. We argue that $A'\rightarrow A$ is an isometry with respect to $|\bullet|_{\sup}$. If $\Spm_k A'$ is empty, then the assertion follows from \cref{prop-supcontraction}. Assume  that $\Spm_m A'$ is non-empty. Take $y\in \Spm_k A'$. By \cite[\href{https://stacks.math.columbia.edu/tag/00GQ}{Tag 00GQ}]{stacks-project}, there is a maximal ideal $x\in \Spm A$ lying over $y$. As the induced map $A'/y\rightarrow A/x$ is integral, we find $x\in \Spm_k A$. So the map $\Spm_k A\rightarrow \Spm_k A'$ is surjective. If follows that $A'\rightarrow A$ is an isometry with respect to $|\bullet|_{\sup}$.
+
+    In order to argue \eqref{eq-fsupnormcompute}, we may assume that $A=B[f]$. Let $q\in B[X]$ denote the minimal polynomial of $f$ over $A$. Then $A=B[X]/(q)$. Let $y\in \Spm_k B$, we write $f_y$ for the residue class of $f$ in $A/yA$ and write $\bar{f}_y$ for the residue class in $(A/yA)^{\Red}$. Similarly, let $q_y$ denote the residue class of $q$ in $B/y[X]$. As $y$ is contained in some $\Spm_k A$, we see that
+    \[
+        |f|_{\sup}=\sup_{y\in \Spm_k B} |f_y|_{\sup}=\sup_{y\in \Spm_k B} |\bar{f}_y|_{\sup}.  
+    \]
+    For $y\in \Spm_k B$, we decompose $q_y$ into prime factors $q_1^{n_1}\cdots q_r^{n_r}$ in $B/y[X]$. Then
+    \[
+        A/yA\cong B/y[X]/(q_y)  
+    \]
+    and
+    \[
+        (A/yA)^{\Red}\cong \bigoplus_{i=1}^r B/y[X]/(q_i).
+    \]
+    We endow $\bigoplus_{i=1}^r B/y[X]/(q_i)$ with the spectral norm over $B/y$. If $\bar{f}_i$ denotes the residue class of $\bar{f}_y$ in $B/y[X]/(q_i)$, by \cref{prop-supeqsp} and \cref{prop-sigmaproduct},
+    \[
+        |\bar{f}_y|_{\sup}=\max_{i=1,\ldots,r} |\bar{f}_i|_{\mathrm{sp}} = \max_{i=1,\ldots,r} \sigma(q_i)=\sigma(q_y).   
+    \]
+    Therefore, 
+    \[
+      |f|_{\sup}=\sup_{y\in \Spm_k B}\sigma(q_y)=\max_{i=1,\ldots,n} |b_i|_{\sup}^{1/n}.  
+    \]
+\end{proof}
+
 
 \section{Bornology}
 \textcolor{red}{This section may be placed elsewhere.}

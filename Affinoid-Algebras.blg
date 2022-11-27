@@ -1,15 +1,15 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'Affinoid-Algebras.blg'
-[64] biber-darwin:340> INFO - === Sat Nov 26, 2022, 15:42:57
-[77] Biber.pm:415> INFO - Reading 'Affinoid-Algebras.bcf'
-[159] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
-[171] Biber.pm:4340> INFO - Processing section 0
-[179] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
-[189] bibtex.pm:1689> INFO - LaTeX decoding ...
-[566] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
-[638] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[638] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[638] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[638] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[643] bbl.pm:654> INFO - Writing 'Affinoid-Algebras.bbl' with encoding 'UTF-8'
-[644] bbl.pm:757> INFO - Output to Affinoid-Algebras.bbl
+[68] biber-darwin:340> INFO - === Sun Nov 27, 2022, 20:41:46
+[82] Biber.pm:415> INFO - Reading 'Affinoid-Algebras.bcf'
+[164] Biber.pm:952> INFO - Found 3 citekeys in bib section 0
+[178] Biber.pm:4340> INFO - Processing section 0
+[186] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
+[196] bibtex.pm:1689> INFO - LaTeX decoding ...
+[573] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
+[648] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[649] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[649] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[649] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[655] bbl.pm:654> INFO - Writing 'Affinoid-Algebras.bbl' with encoding 'UTF-8'
+[656] bbl.pm:757> INFO - Output to Affinoid-Algebras.bbl

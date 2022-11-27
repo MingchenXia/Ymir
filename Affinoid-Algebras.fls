@@ -1133,7 +1133,6 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/bigints/bigints.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/bigints/bigints.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.aux
-INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.aux
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
@@ -1310,6 +1309,17 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
@@ -1323,6 +1333,7 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb

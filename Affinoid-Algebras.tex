@@ -29,7 +29,7 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued-field.
     We omit $r$ from the notation if $r=(1,\ldots,1)$.
 \end{definition}
 This is a special case of \cref{Banach-ex-strictconvseriesradius}  in the chapter Banach Rings.
-\begin{proposition}
+\begin{proposition}\label{prop-TateGaussvaluation}
     Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$.  Then the Tate algebra $(k\{r^{-1}T\},\|\bullet\|_r)$ is a Banach $k$-algebra and $\|\bullet\|_r$ is a valuation.
 \end{proposition}
 
@@ -50,6 +50,12 @@ As we will see, constructing a good function theory, or more precisely, enhancin
     Then $k\{r^{-1}T\}\cong k[T_1,\ldots,T_n]$ if $r_i\geq 1$ for all $i$ and $k\{r^{-1}T\}\cong k[[T_1,\ldots,T_n]]$ otherwise.
 \end{example}
 
+\begin{lemma}\label{lma-Tatestrictuniv}
+    Let $A$ be a Banach $k$-algebra. For each $n\in \mathbb{N}$ and $a_1,\ldots,a_n\in \mathring{A}$, there is a unique continuous homomorphism $k\{T_1,\ldots,T_n\}\rightarrow A$ sending $T_i$ to $a_i$.
+\end{lemma}
+\begin{proof}
+    This is a special case of \cref{Banach-prop-Tateunivprop} in the chapter Banach Rings.
+\end{proof}
 
 
 
@@ -321,6 +327,12 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued-field.
 \end{proof}
 We will denote the reduction map $\mathring{k}\{T_1,\ldots,T_n\}\rightarrow \tilde{k}[T_1,\ldots,T_n]$ by $\tilde{\bullet}$.
 
+\begin{definition}\label{def-affchart}
+    Let $n\in \mathbb{N}$. A system $f_1,\ldots,f_n\in k\{T_1,\ldots,T_n\}$ is called an \emph{affinoid chart} of $k\{T_1,\ldots,T_n\}$ if $f_i\in \mathring{k}\{T_1,\ldots,T_n\}$ for each $i=1,\ldots,n$ and the continuous $k$-algebra homomorphism $k\{T_1,\ldots,T_n\}\rightarrow k\{T_1,\ldots,T_n\}$ sending $T_i$ to $f_i$ is an isomorphism.
+\end{definition}
+The map $k\{T_1,\ldots,T_n\}\rightarrow k\{T_1,\ldots,T_n\}$ is well-defined by \cref{prop-reductionTn} and \cref{lma-Tatestrictuniv}.
+
+
 \begin{lemma}\label{lma-unitsTate}
     Let $n\in \mathbb{N}$ and $f\in k\{T_1,\ldots,T_n\}$. Assume that $\|f\|_1=1$. Then the following are equivalent:
     \begin{enumerate}
@@ -410,6 +422,12 @@ As a consequence, we deduce Weierstrass preparation theorem.
 \begin{definition}
     Let $n\in \mathbb{Z}_{>0}$. A \emph{Weierstrass polynomial} in $n$-variables is a monic polynomial $\omega\in k\{T_1,\ldots,T_{n-1}\}[T_n]$ with $\|\omega\|_1=1$.
 \end{definition}
+\begin{lemma}\label{lma-Weierstrassfact}
+    Let $n\in \mathbb{Z}_{>0}$ and $\omega_1,\omega\in k\{T_1,\ldots,T_{n-1}\}[T_n]$ be two monic polynomials. If $\omega_1\omega_2$ is a Weierstrass polynomial then so are $\omega_1$ and $\omega_2$.
+\end{lemma}
+\begin{proof}
+    As $\omega_1$ and $\omega_2$ are monic, $\|\omega_i\|_1\geq 1$ for $i=1,2$. On the other hand, $\|\omega_1\|_1\cdot\|\omega_2\|_1=\|\omega_1\omega_2\|_1=1$, so $\|\omega_i\|_1= 1$ for $i=1,2$.
+\end{proof}
 
 \begin{thm}[Weierstrass preparation theorem]\label{thm-Weierstrasspreparation}
     Let $n\in \mathbb{Z}_{>0}$ and $g\in k\{T_1,\ldots,T_{n}\}$ be $X_n$-distinguished of degree $s$. Then there are a Weierstrass polynomial $\omega\in k\{T_1,\ldots,T_{n-1}\}[T_n]$ of degree $s$ and a unit $e\in k\{T_1,\ldots,T_{n}\}$ such that 
@@ -490,13 +508,86 @@ In the complex setting, we can perturb a convergent power series so that it has 
     We make induction on $n$. The case $n=0$ is trivial. Assume that $n>0$. It suffices to show that for any non-zero $g\in k\{T_1,\ldots,T_n\}$, $k\{T_1,\ldots,T_n\}/(g)$ is Noetherian. By \cref{lma-perturb}, we may assume that $g$ is $T_n$-distinguished. By \cref{thm-Weierstrassdivision}, $k\{T_1,\ldots,T_n\}/(g)$ is a finite free $k\{T_1,\ldots,T_{n-1}\}$-module. By the inductive hypothesis and Hilbert basis theorem, $k\{T_1,\ldots,T_n\}/(g)$ is indeed Noetherian.
 \end{proof}
 
+\begin{proposition}\label{prop-TateJacobson}
+    Let $n\in \mathbb{N}$. Then $k\{T_1,\ldots,T_n\}$ is Jacobson.
+\end{proposition}
+\begin{proof}
+    When $n=0$, there is nothing to prove. We make induction on $n$ and assume that $n>0$. Let $\mathfrak{p}$ be a prime ideal in $k\{T_1,\ldots,T_n\}$, we want to show that the Jacobson radical of $\mathfrak{p}$ is equal to $\mathfrak{p}$. 
+    
+    We distinguish two cases. First we assume that $\mathfrak{p}\neq 0$. Let $\mathfrak{p}'=\mathfrak{p}\cap k\{T_1,\ldots,T_{n-1}\}$. By \cref{lma-perturb}, we may assume that $\mathfrak{p}$ contains a Weierstrass polynomial $\omega$. Observe that
+    \[
+        k\{T_1,\ldots,T_{n-1}\}/\mathfrak{p}'\rightarrow k\{T_1,\ldots,T_n\}/\mathfrak{p}
+    \]
+    is finite by \cref{thm-Weierstrassdivision}. For any $b\in J(k\{T_1,\ldots,T_n\}/\mathfrak{p})$ (where $J$ denotes the Jacobson radical), we consider a monic integral equation of minimal degree over $k\{T_1,\ldots,T_{n-1}\}/\mathfrak{p}'$:
+    \[
+        b^n+a_1b^{n-1}+\cdots+a_n=0,\quad a_i\in   k\{T_1,\ldots,T_{n-1}\}/\mathfrak{p}'.
+    \]
+    Then
+    \[
+        a_n\in J(k\{T_1,\ldots,T_{n}\}/\mathfrak{p})\cap k\{T_1,\ldots,T_{n-1}\}/\mathfrak{p}'=J(k\{T_1,\ldots,T_{n-1}\}/\mathfrak{p}')=0
+    \]
+    by our inductive hypothesis. It follows that $n=1$ and so $b=0$. This proves $J(k\{T_1,\ldots,T_{n}\}/\mathfrak{p})=0$.
 
+    On the other hand, let us consider the case $\mathfrak{p}=0$. As $k\{T_1,\ldots,T_n\}$ is a valuation ring, it is an integral domain, so the nilradical is $0$. We need to show that
+    \[
+        J(k\{T_1,\ldots,T_n\})=0.  
+    \]
+    Assume that there is a non-zero element $f$ in $J(k\{T_1,\ldots,T_n\})$. We may assume that $\|f\|_1=1$. 
+    
+    We claim that there is $c\in k$ with $|c|=1$ such that $c+f$ is not a unit in $k\{T_1,\ldots,T_n\}$. Assuming this claim for the moment, we can find a maximal ideal $\mathfrak{m}$ of $k\{T_1,\ldots,T_n\}$ such that $c+f\in \mathfrak{m}$. But $f\in \mathfrak{m}$ by our assumption, so $c\in \mathfrak{m}$ as well. This contradicts the fact that $c\in k^{\times}$.
+    
+    It remains to prove the claim. We treat two cases separately. When $|f(0)|<1$, we simply take $c=1$, which works thanks to \cref{lma-unitsTate}.
+    If $|f(0)|=1$, we just take $c=-f(0)$.
+\end{proof}
+
+\begin{proposition}\label{prop-Tatealgufd}
+    Let $n\in \mathbb{N}$. Then $k\{T_1,\ldots,T_n\}$ is UFD. In particular, $k\{T_1,\ldots,T_n\}$ is normal.
+\end{proposition}
+\begin{proof}
+    As $\|\bullet\|_1$ is a valuation by \cref{prop-TateGaussvaluation}, $k\{T_1,\ldots,T_n\}$ is an integral domain. In order to see that $k\{T_1,\ldots,T_n\}$ has the unique factorization property, we make induction on $n\geq 0$. When $n=0$, there is nothing to prove. Assume that $n>0$. Take a non-unit element $f\in k\{T_1,\ldots,T_n\}$. By \cref{thm-Weierstrasspreparation} and \cref{lma-perturb}, we may assume that $f$ is a Weierstrass polynomial. By inductive hypothesis, $k\{T_1,\ldots,T_{n-1}\}$ is a UFD, hence so is $k\{T_1,\ldots,T_{n-1}\}[T_n]$ by \cite[\href{https://stacks.math.columbia.edu/tag/0BC1}{Tag 0BC1}]{stacks-project}. It follows that $f$ can be decomposed into the products of monic prime elements $f_1,\ldots,f_r\in k\{T_1,\ldots,T_{n-1}\}[T_n]$, which are all Weierstrass polynomials by \cref{lma-Weierstrassfact}. Then by \cref{cor:quotientreplacedbyWeie}, we see that each $f_i$ is prime in $k\{T_1,\ldots,T_{n}\}$.
+
+    Any UFD is normal by \cite[\href{https://stacks.math.columbia.edu/tag/0AFV}{Tag 0AFV}]{stacks-project}.
+\end{proof}
+
+\section{Noetherian normalization}
+Let $(k,|\bullet|)$ be a complete non-trivially valued non-Archimedean valued-field. 
+
+\begin{thm}\label{thm-Noetheriannorm}
+    Let $A$ be a non-zero strictly $k$-affinoid algebra, $n\in \mathbb{N}$ and $\alpha:k\{T_1,\ldots,T_n\}\rightarrow A$ be a finite (resp. integral) $k$-algebra homomorphism. Then up to replacing $T_1,\ldots,T_n$ by an affinoid chart, we can guarantee that there exists $d\in \mathbb{N}$, $d\leq n$ such that $\alpha$ when restricted to $k\{T_1,\ldots,T_d\}$ is finite (resp. integral) and injective.
+\end{thm}
+\begin{proof}
+    We make an induction on $n$. The case $n=0$ is trivial. Assume that $n>0$. If $\ker \alpha=0$, there is nothing to prove, so we may assume that $\ker \alpha\neq 0$. By \cref{lma-perturb} and \cref{thm-Weierstrasspreparation}, we may assume that there is a Weierstrass polynomial $\omega\in k\{T_1,\ldots,T_{n-1}\}[T_n]$ in $\ker \alpha$. Then $\alpha$ induces a finite (resp. integral) homomorphism $\beta:k\{T_1,\ldots,T_n\}/(\omega)\rightarrow A$. By \cref{thm-Weierstrassdivision}, $k\{T_1,\ldots,T_{n-1}\}\rightarrow k\{T_1,\ldots,T_n\}/(\omega)$ is a finite homomorphism. So their composition is a finite (resp. integral) homomorphism $k\{T_1,\ldots,T_{n-1}\}\rightarrow A$. We can apply the inductive hypothesis to conclude.
+\end{proof}
+\begin{corollary}\label{cor-noenormalization}
+    Let $A$ be a non-zero strictly $k$-affinoid algebra, then there is $d\in \mathbb{N}$ and a finite injective $k$-algebra homomorphism: $k\{T_1,\ldots,T_d\}\rightarrow A$.
+\end{corollary}
+\begin{proof}
+    Take some $n\in \mathbb{N}$ and a surjective $k$-algebra homomorphism $k\{T_1,\ldots,T_n\}\rightarrow A$ and apply \cref{thm-Noetheriannorm}, we conclude.
+\end{proof}
 
 \section{Properties of affinoid algebras}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued-field.
 
+\begin{proposition}\label{prop-powerbddinstrictlyaff}
+    Assume that $k$ is non-trivially valued. Let $A$ be a strictly $k$-afifnoid algebra. Then
+    \[
+        \mathring{A}=\{f\in A: \rho(f)\leq 1\}.    
+    \]
+\end{proposition}
+\begin{proof}
+    It is clear that $\mathring{A}\subseteq \{f\in A: \rho(f)\leq 1\}$. Conversely, let $f\in A$, $\rho(f)\leq 1$. Choose $d\in \mathbb{N}$ and a surjective $k$-algebra homomorphism
+    \[
+        \varphi:k\{T_1,\ldots,T_d\}\rightarrow A.  
+    \]
+    Let $f^n+t_1f^{n-1}+\cdots+t_n=0$ be the minimal equation of $f$ over $k\{T_1,\ldots,T_d\}$. Then $t_i\in (k\{T_1,\ldots,T_d\})^{\circ}$ by \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings. An induction on $i\geq 0$ shows that
+    \[
+        f^{n+i}\in \sum_{j=0}^{n-1}\varphi\left((k\{T_1,\ldots,T_d\})^{\circ} \right)f^j.
+    \]
+    The right-hand side is clearly bounded.
+\end{proof}
+
 \begin{thm}
-An affinoid $k$-algebra $A$ is Noetherian and all ideals of $A$ are closed.  
+A $k$-affinoid algebra $A$ is Noetherian and all ideals of $A$ are closed.  
 \end{thm}
 \begin{proof}
     Let $I$ be an ideal in $A$. 
@@ -512,6 +603,45 @@ An affinoid $k$-algebra $A$ is Noetherian and all ideals of $A$ are closed.
 
     As $I=A\cap (I (A\hat{\otimes} K_r))$, by \cref{Banach-cor-idealclosed} in the chapter Banach Rings, we see that $I$ is closed in $A\hat{\otimes} K_r$ and hence closed in $A$.
 \end{proof}
+
+\begin{proposition}\label{prop-fnnormbyrho}
+    Let $(A,\|\bullet\|)$ be a $k$-affinoid algebra and $f\in A$. Then there is $C>0$ and $N\geq 1$ such that for any $n\geq N$, we have
+    \[
+        \|f^n\|\leq C\rho(f)^n.  
+    \]
+\end{proposition}
+Recall that $\rho$ is the spectral radius map defined in \cref{Banach-def-spectralradius} in the chatper Banach Rings.
+\begin{proof}
+    By \cref{prop-Krfaithflat}, we may assume that $k$ is non-trivially valued and $k$ is non-trivially valued.
+    
+    If $\rho(f)=0$, then $f$ lies in each maximal ideal of $A$. To see this, we may assume that $A$ is a field, then by \cref{Banach-prop-Berkospecnonempty} in the chapter Banach Rings, there is a bounded valuation $\|\bullet\|'$ on $A$. But then $\rho(f)=0$ implies that $\|f\|'=0$ and hence $f=0$.
+
+    It follows that if $\rho(f)=0$ then $f$ lies in $J(A)$, the Jacobson radical of $A$. By \cref{prop-TateJacobson}, $A$ is a Jacobson ring. So $f$ is nilpotent. The assertion follows.
+
+    So we can assume that $\rho(f)>0$. In this case, by \cref{cor-noenormalization} and \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings, we have $\rho(f)\in \sqrt{|k^{\times}|}$. Take $a\in k^{\times}$ and $d\in \mathbb{Z}_{>0}$ so that $\rho(f)^d=|a|$. Then $\rho(f^d/a)=1$ and hence it is powerly-bounded by \cref{prop-powerbddinstrictlyaff}. It follows that there is $C>0$ so that for $n\geq 1$, 
+    \[
+        \|f^{nd}\|\leq C |a|^n=C\rho(f)^{nd}. 
+    \]
+    It follows that $\|f^n\|\leq C\rho(f)$ for $n\geq d$ as long as we enlarge $C$.
+\end{proof}
+
+
+\begin{corollary}
+    Let $\varphi:A\rightarrow B$ be a bounded homomorphism of $k$-affinoid algebras. Let $n\in \mathbb{N}$ and  $f_1,\ldots,f_n\in B$ and $r_1,\ldots,r_n\in \mathbb{R}_{>0}$ with $r_i\geq \rho(f_i)$ for $i=1,\ldots,n$. Write $r=(r_1,\ldots,r_n)$, then there is a unique bounded homomorphism $\Phi:A\{r^{-1}T\}\rightarrow B$ extending $\varphi$ and sending $T_i$ to $f_i$.
+\end{corollary}
+\begin{proof}
+    The uniqueness is clear. Let us consider the existence. Given 
+    \[
+        f=\sum_{\alpha\in \mathbb{N}^n} a_{\alpha}T^{\alpha}\in A\{r^{-1}T\}, 
+    \]
+    we define 
+    \[
+        \Phi(h)=\sum_{\alpha\in \mathbb{N}^n} \varphi(a_{\alpha})f^{\alpha}. 
+    \]
+    It follows from \cref{prop-fnnormbyrho} that the right-hand side the series converges. The boundedness of $\Phi$ is obvious.
+\end{proof}
+
+\section{Graded reduction}
 
 \printbibliography
 \end{document}

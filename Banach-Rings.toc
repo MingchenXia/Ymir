@@ -13,8 +13,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{6}{Berkovich spectra}}{15}{section.0.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{7}{Open mapping theorem}}{16}{section.0.7}%
+\contentsline {section}{\tocsection {}{7}{Open mapping theorem}}{19}{section.0.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{8}{Bornology}}{18}{section.0.8}%
+\contentsline {section}{\tocsection {}{8}{Maximum spectra}}{21}{section.0.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{19}{chapter*.1}%
+\contentsline {section}{\tocsection {}{9}{Bornology}}{24}{section.0.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{25}{chapter*.1}%
