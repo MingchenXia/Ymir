@@ -1,20 +1,10 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {english}{}
-\defcounter {refsection}{0}\relax 
+\babel@toc {english}{}\relax 
 \contentsline {section}{\tocsection {}{1}{Introduction}}{4}{section.0.1}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{2}{Tate algebras}}{4}{section.0.2}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{3}{Affinoid algebras}}{4}{section.0.3}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{4}{Weierstrass theory}}{9}{section.0.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{5}{Noetherian normalization}}{14}{section.0.5}%
-\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{5}{Noetherian normalization}}{13}{section.0.5}%
 \contentsline {section}{\tocsection {}{6}{Properties of affinoid algebras}}{14}{section.0.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{7}{Finite modules over affinoid algebras}}{16}{section.0.7}%
-\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{7}{Finite modules over affinoid algebras}}{15}{section.0.7}%
 \contentsline {section}{\tocsection {}{8}{Graded reduction}}{16}{section.0.8}%
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{17}{chapter*.1}%

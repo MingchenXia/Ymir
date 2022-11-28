@@ -43,7 +43,7 @@ One should think of $k\{r^{-1}T\}$ as analogues of $\mathbb{C}\langle r^{-1}T\ra
 As we will see, constructing a good function theory, or more precisely, enhancing the unit disk to a ringed site is the main difficulty in the theory of rigid spaces. And Tate's innovation comes in at this point.
 \end{remark}
 
-\begin{example}
+\begin{example}\label{ex-trivvaluedaff}
     Assume that the valuation on $k$ is trivial. 
 
     Let $n\in \mathbb{N}$ and $r\in \mathbb{R}^n_{>0}$. 
@@ -586,7 +586,7 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued-field.
     The right-hand side is clearly bounded.
 \end{proof}
 
-\begin{thm}
+\begin{thm}\label{thm-affnoetherian}
 A $k$-affinoid algebra $A$ is Noetherian and all ideals of $A$ are closed.  
 \end{thm}
 \begin{proof}
@@ -642,6 +642,90 @@ Recall that $\rho$ is the spectral radius map defined in \cref{Banach-def-spectr
 \end{proof}
 
 \section{Finite modules over affinoid algebras}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field. 
+
+For any $k$-affinoid algebra $A$, we have defined the category $\BanCat_A^f$ of finite Banach $A$-modules in \cref{Banach-def-finiteBanachmodules} in the chapter Banach Rings. We write $\ModCat_A^f$ for the category of finite $A$-modules. 
+
+\begin{lemma}\label{lma-finiteBanachmodulemapbdd}
+    Let $A$ be a $k$-affinoid algebra, $(M,\|\bullet\|_M)$ be a finite Banach $A$-module and $(N,\|\bullet\|_N)$ be a Banach $A$-module $N$.
+    Let $\varphi:M\rightarrow N$ be an $A$-linear homomorphism. Then $\varphi$ is bounded.
+\end{lemma}
+\begin{proof}
+    Take $n\in \mathbb{N}$ such that there is an admissible epimorphism 
+    \[
+        \pi:A^n\rightarrow M.  
+    \]   
+    It suffices to show that $\varphi\circ\pi$ is bounded. So we may assume that $M=A^n$. For $i=1,\ldots,n$, let $e_i$ be the vector with $(0,\ldots,0,1,0,\ldots,0)$ of $A^n$ with $1$ placed at the $i$-th place.
+    Set $C=\max_{i=1,\ldots,n} \|\varphi(e_i)\|_N$. For a general $f=\sum_{i=1}^n a_i e_i$ with $a_i\in A$, we have
+    \[
+        \|\varphi(f)\|_N\leq C\|f\|_M.
+    \]
+    So $\varphi$ is bounded.
+\end{proof}
+
+\begin{proposition}\label{prop-finteBanachAmoduleequivfinitemodule}
+    Let $A$ be a $k$-affinoid algebra. 
+    The forgetful functor $\BanCat_A^f\rightarrow \ModCat_A^f$ is an equivalence of categories.
+\end{proposition}
+
+\begin{proof}
+    It suffices to construct the inverse functor. Let $M$ be a finite $A$-module. Choose $n\in \mathbb{N}$ and an $A$-linear epimorphism $\pi:A^n\rightarrow M$. By \cref{thm-affnoetherian}, $\ker \pi$ is closed in $A^n$. We can endow $M$ with the residue norm. By \cref{lma-finiteBanachmodulemapbdd}, the equivalence class of the norm does not depend on the choice of $\pi$.
+
+    For any $A$-linear homomorphism $f:M\rightarrow N$ of finite $A$-modules, we endow $M$ and $N$ with the Banach structures as above. It follows from \cref{lma-finiteBanachmodulemapbdd} that $f$ is bounded. We have defined the inverse functor of the forgetful functor  $\BanCat_A^f\rightarrow \ModCat_A^f$.
+\end{proof}
+\begin{remark}Let $A$ be a $k$-affinoid algebra. 
+    It is not true that a Banach $A$-module which is finite as $A$-module is finite as Banach $A$-module. 
+
+    As an example, take $0<p<q<1$ and $A=k\{q^{-1}T\}$, $B=k\{p^{-1}T\}$. Then $B$ is a Banach $A$-module.
+    By \cref{ex-trivvaluedaff}, the underlying rings of $A$ and $B$ are both $k[[T]]$. So the canonical map $A\rightarrow B$ is bijective. But $B$ is not a finite $A$-module. As otherwise, the inverse map $B\rightarrow A$ is bounded by \cref{lma-finiteBanachmodulemapbdd}, which is not the case.
+
+    The correct statement is the following: consider a Banach $A$-module $(M,\|\bullet\|_M)$ which is finite as $A$-module, then there is a norm on $M$ such that $M$ becomes a finite Banach $A$-module. The new norm is not necessarily equivalent to the given norm $\|\bullet\|_M$.
+\end{remark}
+
+
+\begin{proposition}\label{prop-finiteBanachtensor}
+    Let $A$ be a $k$-affinoid algebra and $M,N$ be finite Banach $A$-modules. Then the natural map
+    \[
+        M\otimes_A N\rightarrow M\hat{\otimes}_A N
+    \]
+    is an isomorphism of Banach $A$-modules
+    and $M\hat{\otimes}_A N$ is a finite Banach $A$-module.
+\end{proposition}
+Here the Banach $A$-module structure on $M\otimes_A N$ is given by \cref{prop-finteBanachAmoduleequivfinitemodule}.
+\begin{proof}
+    Choose $m,m'\in \mathbb{N}$ an admissibly coexact sequence
+    \[
+        A^{m'}\rightarrow A^m \rightarrow M\rightarrow 0  
+    \]
+    of Banach $A$-modules. Then we have a commutative diagram of $A$-modules:
+    \[
+        \begin{tikzcd}
+            A^{m'}\otimes_A N \arrow[r] \arrow[d] & A^{m}\otimes_A N \arrow[r] \arrow[d] & M\otimes_A N \arrow[r] \arrow[d] & 0 \\
+            A^{m'}\hat{\otimes}_A N \arrow[r]     & A^{m}\hat{\otimes}_A N \arrow[r]     & M\hat{\otimes}_A N \arrow[r]     & 0
+        \end{tikzcd}  
+    \]
+    with exact rows. By $5$-lemma, in order to prove $M\otimes_A N\cn M\hat{\otimes}_A N$ and $M\hat{\otimes}_A N$ is a finite Banach $A$-module, we may assume that $M=A^m$ for some $m\in \mathbb{N}$. Similarly, we can assume $N=A^n$ for some $n\in \mathbb{N}$. In this case, the isomorphism is immediate and $M\hat{\otimes}_A N$ is clearly a finite Banach $A$-module. By \cref{lma-finiteBanachmodulemapbdd}, the Banach $A$-module structure on $M\hat{\otimes}_A N$ coincides with the Banach $A$-module strucutre on $M\otimes_A N$ induced by \cref{prop-finteBanachAmoduleequivfinitemodule}.
+\end{proof}
+
+\begin{proposition}\label{prop-finitemodulebasechange}
+    Let $A$, $B$ be a $k$-affinoid algebra and $A\rightarrow B$ be a bounded $k$-algebra homomorphism. Let $M$ be a finite Banach $A$-module, then the natural map
+    \[
+        M\otimes_A B\rightarrow M\hat{\otimes}_A B  
+    \]
+    is an isomorphism of Banach $B$-modules and $M\hat{\otimes}_A B $ is a finite Banach $B$-module. 
+\end{proposition}
+\begin{proof}
+    By the same argument as \cref{prop-finiteBanachtensor}, we may assume that $M=A^n$ for some $n\in \mathbb{N}$. In this case, the assertions are trivial.
+\end{proof}
+
+\begin{proposition}
+    Let $A$ be a $k$-affinoid algebra and $M,N$ be finite Banach $A$-modules. Let $f:M\rightarrow N$ be a $k$-linear map. Then $f$ is admissible.
+\end{proposition}
+\begin{proof}
+    By \cref{lma-finiteBanachmodulemapbdd}, $f$ is always bounded.
+    By \cref{prop-finitemodulebasechange} and \cref{prop-Krfaithflat}, we may assume that $k$ is non-trivially valued and $A$ is strictly $k$-affinoid. By 
+\end{proof}
+
 \section{Graded reduction}
 
 \printbibliography

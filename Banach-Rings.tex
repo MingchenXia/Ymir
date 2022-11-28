@@ -599,13 +599,31 @@ By \cref{lma-unitmoduloreduction} and \cref{prop-strictlyconvcirccheck}, $f$ is 
     \[
       \|fm\|_M \leq C \|f\|_A \|m\|_M
     \]
-    for all $f\in A$ and $m\in M$. When $\|\bullet\|_M$ is clear from the context, we say $M$ is a semi-normed $A$-module (resp. normed $A$-module).
+    for all $f\in A$ and $m\in M$. In case $\|\bullet\|_A$ is non-Archimedean, we require that $\|\bullet\|_M$ is also non-Archimedean. 
+
+    We say the semi-normed $A$-module (resp. normed $A$-module) $M$ is faithful if we can take $C=1$.
+
+    When $\|\bullet\|_M$ is clear from the context, we say $M$ is a semi-normed $A$-module (resp. normed $A$-module).
 
     An $A$-module homomorphism $\varphi:M\rightarrow N$ between two semi-normed $A$-modules $M$ and $N$ is \emph{bounded} if the homomorphism of the underlying semi-normed Abelian groups is bounded in the sense of \cref{def-admissiblemorphism}.
 
     A \emph{Banach $\mathcal{A}$-module} is a normed $A$-module which is complete with respect to the metric \cref{lma-pmetricinducedbyseminorm}.
 
     We denote by $\BanCat_A$ the category of Banach $A$-modules with bounded $A$-module homomorphisms as morphisms.
+\end{definition}
+
+\begin{definition}
+    Let $A$ be a Banach ring and $(M,\|\bullet\|_M),(N,\|bullet\|_N)$ be two Banach $A$-modules. Define their \emph{direct sum} as the Banach $A$-module $(M\oplus N, \|\bullet\|_{M\oplus N})$, where for $m\in M, n\in N$, we set
+    \[
+        \|(m,n)\|_{M\oplus N}:=\max\{\|m\|_M,\|n\|_N \}.  
+    \]
+    This definition extends immediately to finite direct sums of Banach $A$-modules.
+\end{definition}
+
+\begin{definition}\label{def-finiteBanachmodules}
+    Let $A$ be a Banach ring. A Banach $A$-module $M$ is said to be \emph{finite} if there is $n\in \mathbb{N}$ and an admissible epimorphism $A^n\rightarrow M$. 
+
+    A morphism between finite $A$ modules $M$ and $N$  is a morphism $M\rightarrow N$ in $\BanCat_A$. We write $\BanCat_A^f$ for the category of finite Banach $A$-modules.
 \end{definition}
 
 \begin{definition}
@@ -1021,10 +1039,10 @@ Let $(k,|\bullet|)$ be a complete non-trivially valued field. All results in thi
 \end{proof}
 
 \begin{corollary}\label{cor-bddisadmi}
-    A bounded homomorphism of $k$-Banach algebras $f:A\rightarrow B$ is admissible.
+    A bounded epimorphism of $k$-Banach algebras $f:A\rightarrow B$ is admissible.
 \end{corollary}
 \begin{proof}
-    We may assume that $f$ is surjective by replacing $B$ by the image of $f$. Similarly, by replacing $A$ by $A/\ker f$, we may assume that $f$ is bijective. It follows from \cref{thm-openmapping} that $f$ is a homeomorphism. The inverse of $f$ is therefore continuous, and hence bounded by \cref{prop-bddequivcont}.
+    Replacing $A$ by $A/\ker f$, we may assume that $f$ is bijective. It follows from \cref{thm-openmapping} that $f$ is a homeomorphism. The inverse of $f$ is therefore continuous, and hence bounded by \cref{prop-bddequivcont}.
 \end{proof}
 
 \section{Maximum spectra}
