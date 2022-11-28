@@ -5,4 +5,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{2}{Graded commutative algebra}}{4}{section.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{9}{chapter*.1}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{11}{chapter*.1}%

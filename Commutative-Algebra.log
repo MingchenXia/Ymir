@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  28 NOV 2022 21:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  28 NOV 2022 21:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1096,11 +1096,11 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [5] [6] [7] [8
+ [5] [6] [7] [8] [9] [10
 
 ]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 198.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 304.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1108,24 +1108,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [9] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.aux)
+ [11] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.aux)
 Package logreq Info: Writing requests to 'Commutative-Algebra.run.xml'.
 \openout1 = `Commutative-Algebra.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36613 strings out of 478994
- 684336 string characters out of 5858185
- 1526786 words of memory out of 5000000
- 53228 multiletter control sequences out of 15000+600000
- 454359 words of font info for 110 fonts, out of 8000000 for 9000
+ 36677 strings out of 478994
+ 685426 string characters out of 5858185
+ 1526408 words of memory out of 5000000
+ 53246 multiletter control sequences out of 15000+600000
+ 458298 words of font info for 123 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  132i,7n,133p,796b,1701s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.pdf (9 pages, 248475 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.pdf (11 pages, 262006 bytes).
 PDF statistics:
- 186 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 21029 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 224 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 23077 words of extra memory for PDF output out of 24883 (max. 10000000)
 

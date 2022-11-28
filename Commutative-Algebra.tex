@@ -16,7 +16,9 @@ Let $G$ be an Abelian group. We write the group operation of $G$ multiplicativel
     \[
         A=\bigoplus_{g\in G}A_g  
     \]
-    of Abelian groups such that $A_g\subseteq A$. An Abelian group with a $G$-grading is called a \emph{$G$-graded Abelian group}.
+    of Abelian groups such that $A_g\subseteq A$. An Abelian group with a $G$-grading is called a \emph{$G$-graded Abelian group}. 
+
+    An element $a\in A$ is said to be \emph{homogeneous} if there is $g\in G$ such that $a\in A_g$. If $a$ is furthermore non-zero, we write $g=\rho(a)$. We set $\rho(0)=0$. We will write $\rho(A)$ for the set of $\rho(a)$ when $a$ runs over all homogeneous elements in $A$.
 
     A \emph{$G$-graded homomorphism} between $G$-graded Abelian groups $A$ and $B$ is a homogeneous of the underlying Abelian groups $f:A\rightarrow B$ such that $f(A_g)\subseteq B_g$ for any $g\in G$.
 
@@ -40,7 +42,7 @@ When we regard an Abelian group as a $G$-graded Abelian group and there are no n
         \item $1\in A_1$.
     \end{enumerate}
 
-    An element $a\in A$ is said to be \emph{homogeneous} if there is $g\in G$ such that $a\in A_g$. If $a$ is furthermore non-zero, we write $g=\rho(a)$. We set $\rho(0)=0$.
+    
 
     A \emph{$G$-homomorphism} of $G$-graded rings $A$ and $B$ is a ring homomorphism $f:A\rightarrow B$ such that $f(A_g)\subseteq B_g$ for each $g\in G$.
 
@@ -52,7 +54,7 @@ When we regard an Abelian group as a $G$-graded Abelian group and there are no n
 \end{example}
 
 \begin{example}\label{ex-localizationgradedring}
-    Let $A$ be a $G$-graded ring and $S$ be a multiplicative subset of $A$ consisting of homogeneous elements, then $S^{-1}A$ has a natural $G$-grading. To see this, recall the construction of $S^{-1}A$ in \cite[\href{https://stacks.math.columbia.edu/tag/00CM}{Tag 00CM}]{stacks-project}. One defines an equivalence relation on $A\times S$: $(x,s)\sim (y,t)$ if there is $u\in S$ such that $(xt-ys)u=0$. For each $g\in G$, we define $(S^{-1}A)_g$ as the image of $(x,s)$ for all $s\in S$ and $x\in A_{g\rho(s)}$. It is easy to verify that this is a well-defined $G$-grading on $S^{-1}A$.  \textcolor{red}{Add details.}
+    Let $A$ be a $G$-graded ring and $S$ be a multiplicative subset of $A$ consisting of homogeneous elements, then $S^{-1}A$ has a natural $G$-grading. To see this, recall the construction of $S^{-1}A$ in \cite[\href{https://stacks.math.columbia.edu/tag/00CM}{Tag 00CM}]{stacks-project}. One defines an equivalence relation on $A\times S$: $(x,s)\sim (y,t)$ if there is $u\in S$ such that $(xt-ys)u=0$. For each $g\in G$, we define $(S^{-1}A)_g$ as the set of $(x,s)$ for all $s\in S$ and $x\in A_{g\rho(s)}$. It is easy to verify that this is a well-defined $G$-grading on $S^{-1}A$.  \textcolor{red}{Add details.}
 \end{example}
 
 \begin{definition}
@@ -62,7 +64,16 @@ When we regard an Abelian group as a $G$-graded Abelian group and there are no n
     \]
     with almost all $a_g=0$, then $a_g\in I$.
 \end{definition}
-\begin{lemma}
+\begin{example}\label{ex-homogeneousidealgeneratedbyelements}
+    Let $A$ be a $G$-graded ring and $n\in \mathbb{N}$ and $a_1,\ldots,a_n$ be homogeneous elements in $A$. Then $a_1,\ldots,a_n$ generate a $G$-homogeneous ideal $(a_1,\ldots,a_n)$ as follows:
+    \[
+        (a_1,\ldots,a_n)_g=\sum_{i=1}^n A_{g \rho(a_i)^{-1}}a_i
+    \]
+    for any $g\in G$.
+\end{example}
+
+
+\begin{lemma}\label{lma-kernelghomogeneous}
     Let $f:A\rightarrow B$ be a $G$-homomorphism of $G$-graded rings. Then $\ker f$ is a $G$-homogeneous ideal in $A$.
 \end{lemma}
 \begin{proof}
@@ -113,18 +124,22 @@ When we regard an Abelian group as a $G$-graded Abelian group and there are no n
 \end{proof}
 
 \begin{definition}
-    Let $A$ be a $G$-graded ring and $M$ an $A$-module which is also a $G$-graded Abelian group. We say $M$ is a \emph{$G$-graded module} if for each $g,h\in G$, we have
+    Let $A$ be a $G$-graded ring. 
+    
+    Let $M$ an $A$-module which is also a $G$-graded Abelian group. We say $M$ is a \emph{$G$-graded $A$-module} if for each $g,h\in G$, we have
     \[
         A_gM_h\subseteq M_{gh}.  
     \]
     A \emph{$G$-graded homomorphism} of $G$-graded $A$-modules $M$ and $N$ is an $A$-module homomorphism $f:M\rightarrow N$ which is at the same time a homomorphism of  the underlying $G$-graded Abelian groups.
 
     The category of $G$-graded $A$-modules is denoted by $\ModCat^G_A$.
+
+    A \emph{$G$-graded $A$-algebra} is a $G$-graded ring $B$ together with a $G$-graded ring homomorphism $A\rightarrow B$ such that $B$ is also a $G$-graded $A$-module.
 \end{definition}
 Observe that $G$-homogeneous ideals of $A$ are $G$-graded submodules of $A$. Also observe that $\ModCat^G_{\mathbb{Z}}$ is isomorphic to $\AbCat^G$.
 
 \begin{proposition}
-    Let $A$ be a $G$-graded ring. Then $\ModCat^G_A$ is an Abelian category.
+    Let $A$ be a $G$-graded ring. Then $\ModCat^G_A$ is an Abelian category satisfying AB5.
 \end{proposition}
 \begin{proof}
     We first show that $\ModCat^G_A$ is preadditive. Given $M,N\in \ModCat^G_A$, we can regard $\Hom_{\ModCat^G_A}(M,N)$ as a subgroup of $\Hom_A(M,N)$. It is easy to see that this gives $\ModCat^G_A$ an enrichment over $\AbCat$.
@@ -141,12 +156,14 @@ Observe that $G$-homogeneous ideals of $A$ are $G$-graded submodules of $A$. Als
     \]
     and $(\coker f)_g$ as the image of $N_g$ for any $g\in G$. It is straightforward to verify that these are kernels and cokernels.
 
-    Finally, given a monomorphism $f:M\rightarrow N$, it is obvious that the map $f$ is injective and $f$ can be identified with the kenrel of the natural map $N/\Img f$. A dual argument shows that an epimorphism is the cokernel of some morphism as well.
+    Next, given a monomorphism $f:M\rightarrow N$, it is obvious that the map $f$ is injective and $f$ can be identified with the kenrel of the natural map $N/\Img f$. A dual argument shows that an epimorphism is the cokernel of some morphism as well.
+
+    The AB5 condition is easily verified. \textcolor{red}{Expand the details of this argument!}
 \end{proof}
 
 \begin{example}\label{ex-localizationgradedmodule}
     This is a continuition of \cref{ex-localizationgradedring}.
-    Let $A$ be a $G$-graded ring and $S$ be a multiplicative subset of $A$ consisting of homogeneous elements. Consider a $G$-graded $A$-module $M$. We define a $G$-grading on $S^{-1}M$. Recall that $S^{-1}M$ can be realized as follows: one defines an equivalence relation on $M\times S$: $(x,s)\sim (y,t)$ if there is $u\in S$ such that $(xt-ys)u=0$. For each $g\in G$, we define $(S^{-1}M)_g$ as the image of $(x,s)$ for all $s\in S$ and $x\in M_{g\rho(s)}$. It is easy to verify that this is a well-defined $G$-grading on $S^{-1}M$ and $S^{-1}M$ is a $G$-graded $S^{-1}A$-module.  \textcolor{red}{Add details.}
+    Let $A$ be a $G$-graded ring and $S$ be a multiplicative subset of $A$ consisting of homogeneous elements. Consider a $G$-graded $A$-module $M$. We define a $G$-grading on $S^{-1}M$. Recall that $S^{-1}M$ can be realized as follows: one defines an equivalence relation on $M\times S$: $(x,s)\sim (y,t)$ if there is $u\in S$ such that $(xt-ys)u=0$. For each $g\in G$, we define $(S^{-1}M)_g$ as the set of $(x,s)$ for all $s\in S$ and $x\in M_{g\rho(s)}$. It is easy to verify that this is a well-defined $G$-grading on $S^{-1}M$ and $S^{-1}M$ is a $G$-graded $S^{-1}A$-module.  \textcolor{red}{Add details.}
 \end{example}
 
 \begin{example}\label{ex-twistmodule}
@@ -157,6 +174,12 @@ Observe that $G$-homogeneous ideals of $A$ are $G$-graded submodules of $A$. Als
     for any $h\in G$. Observe that $1\in (g^{-1}A)_g$.
 \end{example}
 
+\begin{definition}
+    Let $A$ be a $G$-graded ring and $M$ be a $G$-graded $A$-module. We say $M$ is \emph{free} if there exists a family $\{g_i\}_{i\in I}$ in $G$ such that
+    \[
+        M=\coprod_{i\in I} g_i^{-1}A.  
+    \]
+\end{definition}
 
 \begin{definition}
     Let $f:A\rightarrow B$ be a $G$-graded homomorphism of $G$-graded rings. We say $f$ is \emph{finite} (resp. \emph{finitely generated}, resp. \emph{integral}) if it is finite (resp. finitely generated, resp. integral) as a usual ring map.
@@ -192,6 +215,89 @@ Observe that $G$-homogeneous ideals of $A$ are $G$-graded submodules of $A$. Als
     Obviously, we can replace $a_i$ by its component in $\rho(b)^i$ for $i=1,\ldots,n$ and the equation remains true.
 
     The reverse direction follows from \cite[\href{https://stacks.math.columbia.edu/tag/00GO}{Tag 00GO}]{stacks-project}.
+\end{proof}
+
+\begin{definition}
+    A $G$-graded ring $A$ is a \emph{$G$-graded field} if
+    \begin{enumerate}
+        \item $A\neq 0$.
+        \item $A$ does not admit any non-zero proper $G$-homogeneous ideals.
+    \end{enumerate} 
+\end{definition}
+\begin{proposition}\label{prop-gradedfieldchar}
+    Let $A$ be a non-zero $G$-graded ring. Then the following conditions are equivalent:
+    \begin{enumerate}
+        \item $A$ is a $G$-graded field.
+        \item Any non-zero homogeneous element in $A$ is invertible.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    Assume that $A$ is a $G$-graded field. Let $a\in A$ be a non-zero homogeneous element. Consider the $G$-homogeneous ideal $(a)$ generated by $a$ as in \cref{ex-homogeneousidealgeneratedbyelements}. As $a\neq 0$, it follows that $(a)=1$. Hence, $a$ is invertible.
+
+    Conversely, suppose that any non-zero homogeneous element in $A$ is invertible. If $I$ is a non-zero $G$-homogeneous ideal in $A$. There is a non-zero homogeneous element $a\in I$. But we know that $a$ is invertible and hence $I=A$.
+\end{proof}
+
+\begin{definition}
+    A $G$-graded ring $A$ is an \emph{integral domain} if for any non-zero homogeneous elements $a,b\in A$, $ab\neq 0$.
+\end{definition}
+\begin{lemma}\label{lma-gradedfractionfield}
+    Let $A$ be a $G$-graded integral domain. Let $S$ denote the set of non-zero homogeneous elemnts in $A$. Then $S^{-1}A$ is a graded field. The natural map $A\rightarrow S^{-1}A$ is injective.
+\end{lemma}
+Recall that $S^{-1}A$ is defined in \cref{ex-localizationgradedring}.
+\begin{proof}
+    By \cref{prop-gradedfieldchar}, it suffices to show that each non-zero homogeneous element in $S^{-1}A$ is invertible. Such an element has the form $a/s$ for some homogeneous element $a\in A$ and $s\in S$. As $A$ is a $G$-graded integral domain, $a$ is invertible and hence $s/a\in S^{-1}A$.
+
+    In general, the kernel of the localzation map is given by $\{a\in A: \text{ there is }s\in S\text{ such that }sa=0\}$. As $A\rightarrow S^{-1}A$ is a $G$-graded homomorphism, the kernel is in addition a $G$-homogeneous ideal in $A$ by \cref{lma-kernelghomogeneous}. So it suffices to show that each homogeneous element in the kenrel vanishes: if $a\in A$ is a homogeneous element and there is $s\in S$ such that $sa=0$, then $a=0$. Otherwise, $a$ is invertible by \cref{prop-gradedfieldchar}, which is a contradiction.
+\end{proof}
+\begin{definition}
+    Let $A$ be a $G$-graded integral domain. We call the graded field defined in \cref{lma-gradedfractionfield} the \emph{fraction $G$-graded field} of $A$ and denote it by $\Frac^G A$.
+\end{definition}
+
+\begin{definition}
+    Let $A$ be a $G$-graded ring. A proper $G$-homogeneous ideal $I$ in $A$ is called \emph{prime} if the $G$-graded ring $A/I$ is a $G$-graded integral domain.
+\end{definition}
+
+\begin{proposition}
+    Let $A$ be a $G$-graded ring and $I$ be a proper homogeneous ideal in $A$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $I$ is a $G$-graded prime ideal in $A$.
+        \item For any homogeneous elements $a,b\in A$ satisfying $ab\in I$, at least one of $a$ and $b$ lies in $I$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    Assume that $I$ is a $G$-graded prime ideal in $A$. Let $a,b\in A$ be homogeneous elements satisfying $ab\in I$. Let $\bar{a},\bar{b}$ be the images of $a,b$ in $A/I$. Then $\bar{a},\bar{b}$ are homogeneous and $\bar{a}\bar{b}=0$. So at least one of $\bar{a}$ and $\bar{b}$ is zero. That is, $a$ or $b$ lies in $I$.
+
+    Conversely, assume that the conditon in (2) is satisfied. Take $x,y\in A/I$ with $xy=0$. We need to show that at least one of $x$ and $y$ is $0$. Lift $x$ and $y$ to $a+i$ and $b+i'$ in $A$ with $a,b$ being homogeneous and $i,i'\in I$. Then $ab\in I$ and hence $a\in I$ or $b\in I$. It follows that $x=0$ or $y=0$. 
+\end{proof}
+
+\begin{lemma}
+    Let $k$ be a $G$-graded field and $A$ be a graded $k$-algebra. Suppose that $\rho(A)=\rho(k)$, then
+    \begin{enumerate}
+        \item For any $g\in G$, there is a natural isomorphism
+            \[
+                A_g\cong A_1 \otimes_{k_1} k_g.
+            \]
+        \item The map $I\mapsto I\cap A_1$ is a bijection between the set of homogeneous ideals (resp. homogeneous prime ideals) in $A$ and ideals (resp. prime ideals) in $A_1$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    (1) Take $g\in \rho(A)$. As $\rho(A)=\rho(k)$, we can take a non-zero homogeneous element $b\in k_g$. Then $b$ and $b^{-1}$ induces inverse bijections between $A_1$ and $A_g$.
+
+    (2) The part about ideals can be proved in the same way as (1). The part about prime ideals follows easily.
+\end{proof}
+
+\begin{proposition}
+    Let $k$ be a $G$-graded field and $M$ be a $G$-graded $A$-module. Then $M$ is free as $G$-graded $A$-module.
+\end{proposition}
+\begin{proof}
+    We may assume that $M\neq 0$.
+    Let $\{m_i\}_{i\in I}$ be a maximal set of non-zero homogeneous elements in $M$ such that the corresponding homomorphism 
+    \[
+        F:=\bigoplus_{i\in I} (\rho(f))^{-1}k\rightarrow M  
+    \] 
+    is injective. The existence of $\{m_i\}_{i\in I}$ follows from Zorn's lemma.
+
+    If $f\in M/F$ is a non-zero homogeneous element, then we get a homomorphism $(\rho(f))^{-1}k\rightarrow M/F$. This map is necessarily injective as $(\rho(f))^{-1}k$ does not have non-zero proper graded submodules. This contradicts the definition of $F$.
 \end{proof}
 
 
