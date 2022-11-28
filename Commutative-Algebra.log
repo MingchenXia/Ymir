@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  28 NOV 2022 17:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  28 NOV 2022 21:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -900,29 +900,44 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 47.
 Package xr Warning: 
 No file Introduction.aux
 LABELS NOT IMPORTED.
- on input line 304.
+ on input line 305.
 
-Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 305.
-Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 306.
-Package xr Info: IMPORTING LABELS FROM Local-Algebras.aux on input line 307.
+
+Package xr Warning: 
+No file Banach-Rings.aux
+LABELS NOT IMPORTED.
+ on input line 306.
+
+Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 307.
+
+Package xr Warning: 
+No file Local-Algebras.aux
+LABELS NOT IMPORTED.
+ on input line 308.
+
 
 Package xr Warning: 
 No file Weierstrass.aux
 LABELS NOT IMPORTED.
- on input line 308.
+ on input line 309.
 
-Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 310.
+
+Package xr Warning: 
+No file Complex-Analytic-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 311.
+
 
 Package xr Warning: 
 No file Morphisms.aux
 LABELS NOT IMPORTED.
- on input line 314.
+ on input line 315.
 
 
 Package xr Warning: 
 No file Affinoid-Algebras.pdf.aux
 LABELS NOT IMPORTED.
- on input line 318.
+ on input line 319.
 
 )
 Package csquotes Info: Checking for multilingual support...
@@ -1068,9 +1083,24 @@ Contents
 
  [3
 
-] [4]
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 12.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 12.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [4]
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10'.
+(microtype)             Ignoring protrusion settings for this character.
+ [5] [6] [7] [8
+
+]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 17.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 198.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1078,34 +1108,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 17.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 17.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [5
-
-] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.aux)
+ [9] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.aux)
 Package logreq Info: Writing requests to 'Commutative-Algebra.run.xml'.
 \openout1 = `Commutative-Algebra.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36715 strings out of 478994
- 689280 string characters out of 5858185
- 1520815 words of memory out of 5000000
- 53407 multiletter control sequences out of 15000+600000
- 444922 words of font info for 82 fonts, out of 8000000 for 9000
+ 36613 strings out of 478994
+ 684336 string characters out of 5858185
+ 1526786 words of memory out of 5000000
+ 53228 multiletter control sequences out of 15000+600000
+ 454359 words of font info for 110 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,6n,133p,1006b,1701s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.pdf (5 pages, 122853 bytes).
+ 132i,7n,133p,796b,1701s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Commutative-Algebra.pdf (9 pages, 248475 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 16933 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 186 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 21029 words of extra memory for PDF output out of 24883 (max. 10000000)
 

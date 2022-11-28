@@ -1,15 +1,15 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'Commutative-Algebra.blg'
-[70] biber-darwin:340> INFO - === Mon Nov 28, 2022, 17:20:40
-[85] Biber.pm:415> INFO - Reading 'Commutative-Algebra.bcf'
-[168] Biber.pm:952> INFO - Found 1 citekeys in bib section 0
-[181] Biber.pm:4340> INFO - Processing section 0
-[190] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
-[200] bibtex.pm:1689> INFO - LaTeX decoding ...
-[581] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
-[634] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[635] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[635] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[635] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[636] bbl.pm:654> INFO - Writing 'Commutative-Algebra.bbl' with encoding 'UTF-8'
-[636] bbl.pm:757> INFO - Output to Commutative-Algebra.bbl
+[63] biber-darwin:340> INFO - === Mon Nov 28, 2022, 21:04:25
+[78] Biber.pm:415> INFO - Reading 'Commutative-Algebra.bcf'
+[159] Biber.pm:952> INFO - Found 1 citekeys in bib section 0
+[171] Biber.pm:4340> INFO - Processing section 0
+[183] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
+[194] bibtex.pm:1689> INFO - LaTeX decoding ...
+[631] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
+[686] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[686] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[686] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[686] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[687] bbl.pm:654> INFO - Writing 'Commutative-Algebra.bbl' with encoding 'UTF-8'
+[688] bbl.pm:757> INFO - Output to Commutative-Algebra.bbl

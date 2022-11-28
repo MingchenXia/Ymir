@@ -9,10 +9,191 @@
 \section{Introduction}\label{sec-introduction}
 
 \section{Graded commutative algebra}
+Let $G$ be an Abelian group. We write the group operation of $G$ multiplicatively and denote the identity of $G$ as $1$.
+
+\begin{definition}
+    Let $A$ be an Abelian group. A \emph{$G$-grading} on $A$ is a coproduct decomposition
+    \[
+        A=\bigoplus_{g\in G}A_g  
+    \]
+    of Abelian groups such that $A_g\subseteq A$. An Abelian group with a $G$-grading is called a \emph{$G$-graded Abelian group}.
+
+    A \emph{$G$-graded homomorphism} between $G$-graded Abelian groups $A$ and $B$ is a homogeneous of the underlying Abelian groups $f:A\rightarrow B$ such that $f(A_g)\subseteq B_g$ for any $g\in G$.
+
+    The category of $G$-graded Abelian groups is denoted by $\AbCat^G$.
+\end{definition}
+A usual Abelian group $A$ can be given the \emph{trivial $G$-grading}: $A_0=A$ and $A_g=0$ for $g\in G$, $g\neq 0$. In this way, we find a fully faithful embedding 
+\[
+    \AbCat\rightarrow \AbCat^G.  
+\]
+When we regard an Abelian group as a $G$-graded Abelian group and there are no natural gradings, we always understand that we are taking the trivial $G$-grading.
 
 
+\begin{definition}
+    A \emph{$G$-graded ring} is a commutative ring $A$ endowed with a $G$-grading:
+    \[
+        A=\bigoplus_{g\in G} A_g  
+    \]
+    as Abelian groups and such that 
+    \begin{enumerate}
+        \item $A_{g}A_{h}\subseteq A_{gh}$ for any $g,h\in G$;
+        \item $1\in A_1$.
+    \end{enumerate}
 
-\cite{stacks-project}
+    An element $a\in A$ is said to be \emph{homogeneous} if there is $g\in G$ such that $a\in A_g$. If $a$ is furthermore non-zero, we write $g=\rho(a)$. We set $\rho(0)=0$.
+
+    A \emph{$G$-homomorphism} of $G$-graded rings $A$ and $B$ is a ring homomorphism $f:A\rightarrow B$ such that $f(A_g)\subseteq B_g$ for each $g\in G$.
+
+    The category of $G$-graded rings is denoted by $\RingCat^G$.
+\end{definition}
+
+\begin{example}
+    Let $A$ be a $G$-graded ring, $n\in \mathbb{N}$ and $g=(g_1,\ldots,g_n)\in G^n$. Then there is a unique $G$-grading on $A[T_1,\ldots,T_n]$ extending the grading on $A$ and such that $\rho(T_i)=g_i$ for $i=1,\ldots,n$. We will denote $A[T_1,\ldots,T_n]$ with this grading as $A[g_{1}^{-1}T_1,\ldots,g_{n}^{-1}T_n]$ or simply $A[g^{-1}T]$.
+\end{example}
+
+\begin{example}\label{ex-localizationgradedring}
+    Let $A$ be a $G$-graded ring and $S$ be a multiplicative subset of $A$ consisting of homogeneous elements, then $S^{-1}A$ has a natural $G$-grading. To see this, recall the construction of $S^{-1}A$ in \cite[\href{https://stacks.math.columbia.edu/tag/00CM}{Tag 00CM}]{stacks-project}. One defines an equivalence relation on $A\times S$: $(x,s)\sim (y,t)$ if there is $u\in S$ such that $(xt-ys)u=0$. For each $g\in G$, we define $(S^{-1}A)_g$ as the image of $(x,s)$ for all $s\in S$ and $x\in A_{g\rho(s)}$. It is easy to verify that this is a well-defined $G$-grading on $S^{-1}A$.  \textcolor{red}{Add details.}
+\end{example}
+
+\begin{definition}
+    Let $A$ be a $G$-graded ring. A \emph{$G$-homogeneous ideal} in $A$ is an ideal $I$ in $G$ such that if $a\in A$ can be written as 
+    \[
+        a=\sum_{g\in G} a_g,\quad a_g\in A_g  
+    \]
+    with almost all $a_g=0$, then $a_g\in I$.
+\end{definition}
+\begin{lemma}
+    Let $f:A\rightarrow B$ be a $G$-homomorphism of $G$-graded rings. Then $\ker f$ is a $G$-homogeneous ideal in $A$.
+\end{lemma}
+\begin{proof}
+    We need to show that
+    \[
+        \ker f=\sum_{g\in G} (\ker f)\cap A_g.  
+    \]
+    Take $x\in \ker f$, we can write $x$ as 
+    \[
+        \sum_{g\in G} a_g,\quad a_g\in A_g
+    \]
+    and almost all $a_g$'s are $0$. Then 
+    \[
+        f(x)=  \sum_{g\in G} f(a_g),\quad f(a_g)\in B_g.
+    \]
+    It follows that $f(a_g)=0$ for each $g\in G$ and hence $a_g\in (\ker f)\cap A_g$.
+\end{proof}
+
+\begin{definition}\label{def-gradquotient}
+    Let $A$ be a $G$-graded ring and $I$ be a $G$-homogeneous ideal in $A$. Then we define a $G$-grading on $A/I$ as follows: for any $g\in G$
+    \[
+        (A/I)_g:= (A_g+I)/I.
+    \]
+\end{definition}
+\begin{proposition}
+    Let $A$ be a $G$-graded ring and $I$ be a $G$-homogeneous ideal in $A$. Then the construction in \cref{def-gradquotient} defines a grading on $A/I$. The natural map $\pi:A\rightarrow A/I$ is a $G$-homomorphism.
+
+    For any $G$-graded ring $B$ and any $G$-homomorphism $f:A\rightarrow B$ such that $I\subseteq \ker A$, there is a unique $G$-homomorphism $f':A/I\rightarrow B$ such that $f'\circ \pi=f$.
+\end{proposition} 
+\begin{proof}
+    We first argue that for different $g,h\in G$, $(A/I)_g\cap (A/I)_h=0$. Suppose $x\in (A/I)_g\cap (A/I)_h$, we can lift $x$ to both $y_g+i_g\in A$ and $y_h+i_h\in A$ with $y_g,y_h\in A$ and $i_g,i_h\in I$. It follows that $y_g-y_h\in I$. But $I$ is a $G$-homogeneous ideal, so it follows that $y_g,y_h\in I$ and hence $x=0$.
+
+    Next we argue that
+    \[
+        A/I=\sum_{g\in G}  (A/I)_g.
+    \]
+    Lift an element $x\in A/I$ by $a\in A$, we represent $a$ as
+    \[
+        a=\sum_{g\in G} a_g,\quad a_g\in A_g 
+    \]
+    with almost all $a_g$'s equal to $0$. Then $x$ can be represented as
+    \[
+        x=\sum_{g\in G}\pi(a_g).  
+    \]
+    We have shown that the construction in \cref{def-gradquotient} gives a $G$-grading on $A$. It is clear from the definition that $\pi$ is a $G$-homomorphism.
+
+    Next assume that $B$ and $f$ are given as in the proposition. Then there is a ring homomorphism $f':A/I\rightarrow B$ such that $f=f'\circ \pi$. We need to argue that $f'$ is a $G$-homomorphism. For this purpose, take $g\in G$, $x\in (A/I)_g$, we need to show that $f'(x)\in B_g$. Lift $x$ to $y+i$ with $y\in A_g$ and $i\in I$, then we know that $f'(x)=\pi(y+i)=\pi(y)\in B_g$.    
+\end{proof}
+
+\begin{definition}
+    Let $A$ be a $G$-graded ring and $M$ an $A$-module which is also a $G$-graded Abelian group. We say $M$ is a \emph{$G$-graded module} if for each $g,h\in G$, we have
+    \[
+        A_gM_h\subseteq M_{gh}.  
+    \]
+    A \emph{$G$-graded homomorphism} of $G$-graded $A$-modules $M$ and $N$ is an $A$-module homomorphism $f:M\rightarrow N$ which is at the same time a homomorphism of  the underlying $G$-graded Abelian groups.
+
+    The category of $G$-graded $A$-modules is denoted by $\ModCat^G_A$.
+\end{definition}
+Observe that $G$-homogeneous ideals of $A$ are $G$-graded submodules of $A$. Also observe that $\ModCat^G_{\mathbb{Z}}$ is isomorphic to $\AbCat^G$.
+
+\begin{proposition}
+    Let $A$ be a $G$-graded ring. Then $\ModCat^G_A$ is an Abelian category.
+\end{proposition}
+\begin{proof}
+    We first show that $\ModCat^G_A$ is preadditive. Given $M,N\in \ModCat^G_A$, we can regard $\Hom_{\ModCat^G_A}(M,N)$ as a subgroup of $\Hom_A(M,N)$. It is easy to see that this gives $\ModCat^G_A$ an enrichment over $\AbCat$.
+
+    Next we show that $\ModCat^G_A$ is additive. The zero object is clearly given by $0$ with the trivial grading. Given $M,N\in \ModCat^G_A$, we define
+    \[
+        (M\oplus N)_g:=M_g\oplus N_g,\quad g\in G.
+    \]
+    This construction makes $M\oplus N$ a $G$-graded $A$-module. It is easy to verify that $M\oplus N$ is the biproduct of $M$ and $N$.
+
+    Next we show that $\ModCat^G_A$ is pre-Abelian. Given an arrow $f:M\rightarrow N$ in  $\ModCat^G_A$, we need to define its kernel and cokernel. We define
+    \[
+        (\ker f)_g:=(\ker f)\cap M_g  
+    \]
+    and $(\coker f)_g$ as the image of $N_g$ for any $g\in G$. It is straightforward to verify that these are kernels and cokernels.
+
+    Finally, given a monomorphism $f:M\rightarrow N$, it is obvious that the map $f$ is injective and $f$ can be identified with the kenrel of the natural map $N/\Img f$. A dual argument shows that an epimorphism is the cokernel of some morphism as well.
+\end{proof}
+
+\begin{example}\label{ex-localizationgradedmodule}
+    This is a continuition of \cref{ex-localizationgradedring}.
+    Let $A$ be a $G$-graded ring and $S$ be a multiplicative subset of $A$ consisting of homogeneous elements. Consider a $G$-graded $A$-module $M$. We define a $G$-grading on $S^{-1}M$. Recall that $S^{-1}M$ can be realized as follows: one defines an equivalence relation on $M\times S$: $(x,s)\sim (y,t)$ if there is $u\in S$ such that $(xt-ys)u=0$. For each $g\in G$, we define $(S^{-1}M)_g$ as the image of $(x,s)$ for all $s\in S$ and $x\in M_{g\rho(s)}$. It is easy to verify that this is a well-defined $G$-grading on $S^{-1}M$ and $S^{-1}M$ is a $G$-graded $S^{-1}A$-module.  \textcolor{red}{Add details.}
+\end{example}
+
+\begin{example}\label{ex-twistmodule}
+    Let $A$ be a $G$-graded ring and $g\in G$. We define $g^{-1}A$ as the $G$-graded $A$-module:
+    \[
+        (g^{-1}A)_h=A_{g^{-1}h}
+    \]
+    for any $h\in G$. Observe that $1\in (g^{-1}A)_g$.
+\end{example}
+
+
+\begin{definition}
+    Let $f:A\rightarrow B$ be a $G$-graded homomorphism of $G$-graded rings. We say $f$ is \emph{finite} (resp. \emph{finitely generated}, resp. \emph{integral}) if it is finite (resp. finitely generated, resp. integral) as a usual ring map.
+\end{definition}
+
+\begin{proposition}
+    Let $f:A\rightarrow B$ be a $G$-graded homomorphism of $G$-graded rings. Then 
+    \begin{enumerate}
+        \item $f$ is finite if and only if there are $n\in \mathbb{N}$, $g_1,\ldots,g_n\in G$ and a surjective $G$-graded homomorphism 
+        \[
+            \bigoplus_{i=1}^n(g_i^{-1}A)^n\rightarrow B
+        \] 
+        of graded $A$-modules.
+        \item $f$ is finitely generated if and only if there are $n\in \mathbb{N}$,  $g_1,\ldots,g_n\in G$ and a surjective $G$-graded $A$-algebra homomorphism
+        \[
+            A[g_1^{-1}T_1,\ldots,g_{n}^{-1}T_n]\rightarrow B.  
+        \] 
+        \item $f$ is integral if and only if for any non-zero homogeneous element $b\in B$, there in $n\in \mathbb{N}$ and homogeneous elements $a_1,\ldots,a_n\in A$ such that
+        \[
+            b^n+f(a_1)b^{n-1}+\cdots+f(a_n)=0.  
+        \]
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (1) The non-trivial direction is the direct implication. Assume that $f$ is finite. Take $b_1,\ldots,b_n\in B$ so that $\sum_{i=1}^nf(A)b_i=B$. Up to replacing the collection $\{b_i\}_i$ by the finite collection of non-zero homogeneous components of the $b_i$'s, we may assume that each $b_i$ is homogeneous. We define $g_i=\rho(b_i)$ and the map $\bigoplus_{i=1}^n(g_i^{-1}A)^n\rightarrow B$ sends $1$ at the $i$-th place to $b_i$. 
+
+    (2) The non-trivial direction is the direct implication. Suppose $f$ is finitely generated, say by $b_1,\ldots,b_n$. Up to replacing the collection $\{b_i\}_i$ by the finite collection of non-zero homogeneous components of the $b_i$'s, we may assume that each $b_i$ is homogeneous. Then we define $g_i=\rho(b_i)$ for $i=1,\ldots,n$ and the $A$-algebra homomorphism $A[g_1^{-1}T_1,\ldots,g_{n}^{-1}T_n]\rightarrow B$ sends $T_i$ to $b_i$ for $i=1,\ldots,n$.
+
+    (3) Assume that $f$ is integral, then for any non-zero homogeneous element $b\in B$, we can find $a_1,\ldots,a_n\in A$ such that 
+    \[
+        b^n+f(a_1)b^{n-1}+\cdots+f(a_n)=0.  
+    \]
+    Obviously, we can replace $a_i$ by its component in $\rho(b)^i$ for $i=1,\ldots,n$ and the equation remains true.
+
+    The reverse direction follows from \cite[\href{https://stacks.math.columbia.edu/tag/00GO}{Tag 00GO}]{stacks-project}.
+\end{proof}
+
 
 \printbibliography
 \end{document}
