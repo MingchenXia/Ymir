@@ -3,8 +3,8 @@
 \contentsline {section}{\tocsection {}{2}{Tate algebras}}{4}{section.0.2}%
 \contentsline {section}{\tocsection {}{3}{Affinoid algebras}}{4}{section.0.3}%
 \contentsline {section}{\tocsection {}{4}{Weierstrass theory}}{9}{section.0.4}%
-\contentsline {section}{\tocsection {}{5}{Noetherian normalization}}{13}{section.0.5}%
+\contentsline {section}{\tocsection {}{5}{Noetherian normalization}}{14}{section.0.5}%
 \contentsline {section}{\tocsection {}{6}{Properties of affinoid algebras}}{14}{section.0.6}%
-\contentsline {section}{\tocsection {}{7}{Finite modules over affinoid algebras}}{15}{section.0.7}%
-\contentsline {section}{\tocsection {}{8}{Graded reduction}}{16}{section.0.8}%
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{17}{chapter*.1}%
+\contentsline {section}{\tocsection {}{7}{Finite modules over affinoid algebras}}{17}{section.0.7}%
+\contentsline {section}{\tocsection {}{8}{Graded reduction}}{19}{section.0.8}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{21}{chapter*.1}%

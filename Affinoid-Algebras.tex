@@ -263,7 +263,7 @@ When $X$ is a Banach $k$-algebra,  $X\hat{\otimes}_k K_r$ is a Banach $K_r$-alge
 \begin{proof}
     We may assume that $B=k\{T_1,\ldots,T_n\}$ for some $n\in \mathbb{N}$. By assumption, we can find finitely many $a_1,\ldots,a_m\in A$ such that $A=\sum_{i=1}^m \varphi(B)a_i$.
 
-    We may assume that $a_i\in \mathring{A}$ as $k$ is non-trivially valued. By \cref{Banach-prop-Tateunivprop} in the chapter Banach Rings, $\varphi$ admits a unique extension to a bounded $k$-algebra homomorphism 
+    We may assume that $a_i\in \mathring{A}$ as $k$ is non-trivially valued. By \cref{Banach-prop-Tateunivprop} in the chapter Banach Rings, $\varphi$ admits a unique extension to a bounded $k$-algebra epimorphism 
     \[
         \Phi:  k\{T_1,\ldots,T_n,S_1,\ldots,S_m\}\rightarrow A
     \]
@@ -626,7 +626,7 @@ Recall that $\rho$ is the spectral radius map defined in \cref{Banach-def-spectr
 \end{proof}
 
 
-\begin{corollary}
+\begin{corollary}\label{cor-univpropTatenonstrict}
     Let $\varphi:A\rightarrow B$ be a bounded homomorphism of $k$-affinoid algebras. Let $n\in \mathbb{N}$ and  $f_1,\ldots,f_n\in B$ and $r_1,\ldots,r_n\in \mathbb{R}_{>0}$ with $r_i\geq \rho(f_i)$ for $i=1,\ldots,n$. Write $r=(r_1,\ldots,r_n)$, then there is a unique bounded homomorphism $\Phi:A\{r^{-1}T\}\rightarrow B$ extending $\varphi$ and sending $T_i$ to $f_i$.
 \end{corollary}
 \begin{proof}
@@ -639,6 +639,46 @@ Recall that $\rho$ is the spectral radius map defined in \cref{Banach-def-spectr
         \Phi(h)=\sum_{\alpha\in \mathbb{N}^n} \varphi(a_{\alpha})f^{\alpha}. 
     \]
     It follows from \cref{prop-fnnormbyrho} that the right-hand side the series converges. The boundedness of $\Phi$ is obvious.
+\end{proof}
+
+\begin{proposition}\label{prop-admissepiperturbation}
+    Let $(A,\|\bullet\|_A),(B,\|\bullet\|_B)$ be $k$-affinoid algebras, $r \in \mathbb{R}_{>0}^n$ and $\varphi:A\{r^{-1}T\}\rightarrow B$ be an admissible epimorphism. Write $f_i=\varphi(T_i)$ for $i=1,\ldots,n$. Then there is $\epsilon>0$ such that for any $g=(g_1,\ldots,g_n)\in B^n$ with $\|f_i-g_i\|_{B}<\epsilon$ for all $i=1,\ldots,n$, there exists a unique bounded $k$-algebra homomorphism $\psi: A\{r^{-1}T\}\rightarrow B$ that coincides with $\varphi$ on $A$ and sends $T_i$ to $g_i$. Moreover, $\psi$ is also an admissible epimorphism.
+\end{proposition}
+\begin{proof}
+    The uniqueness of $\psi$ is obvious. We prove the remaining assertions.
+    Taking $\epsilon>0$ small enough, we could further guarantee that $\rho(g_i)\leq r_i$. It follows from \cref{cor-univpropTatenonstrict} that there exists a bounded homomorphism $\psi$ as in the statement of the proposition.
+
+    As $\varphi$ is an admissible epimorphism, we may assume that $\|\bullet\|_B$ is the residue induced by $\|\bullet\|_{r}$ on $A\{r^{-1}T\}$.
+
+    By definition of the residue norm, for any $\delta>0$ and any $h\in B$, we can find 
+    \[
+        k_0=\sum_{\alpha\in \mathbb{N}^n}a_{\alpha} T^{\alpha}\in A\{r^{-1}T\}  
+    \]
+    with
+    \[
+        \|a_{\alpha}\|_A r^{\alpha}\leq (1+\delta)\|h\|_B 
+    \]
+    for any $\alpha \in \mathbb{N}^n$. Choose $\epsilon\in (0, (1+\delta)^{-1})$. Now for $g_1,\ldots,g_n$ as in the statement of the proposition, we can write
+    \[
+        h=\sum_{\alpha\in \mathbb{N}^n}  a_{\alpha}f^{\alpha}=\sum_{\alpha\in \mathbb{N}^n}  a_{\alpha}g^{\alpha}+h_1=\psi(k_0)+h_1.
+    \]
+    It follows that
+    \[
+      \|h_1\|_B=\left\| \sum_{\alpha\in \mathbb{N}^n}  a_{\alpha}(f^{\alpha}-g^{\alpha})\right\|_B\leq (1+\delta)\epsilon \|h\|_B.
+    \]
+    Repeating this procedure, we can construct $k_i\in A\{r^{-1}T\}$ for $i\in \mathbb{N}$ and $h_j\in B$ for $j\in \mathbb{Z}_{>0}$ such that for any $i\in \mathbb{Z}_{>0}$, we have
+    \[
+        \begin{aligned}
+        h=&\psi(k_0+\cdots+k_{i-1})+h_i,\\
+        \|k_i\|_r\leq & ((1+\delta)\epsilon)^i(1+\delta)\|h\|_B,\\
+         \|h_i\|_B\leq & ((1+\delta)\epsilon)^i\|h\|_B.
+        \end{aligned}
+    \]
+    In particular, $k:=\sum_{i=0}^{\infty} k_i$ converges in $A\{r^{-1}T\}$ and
+    \[
+        \|k\|_r\leq (1+\delta)\|h\|_B.
+    \]  
+    It follows that $\psi$ is an admissible epimorphism.
 \end{proof}
 
 \section{Finite modules over affinoid algebras}
@@ -719,11 +759,30 @@ Here the Banach $A$-module structure on $M\otimes_A N$ is given by \cref{prop-fi
 \end{proof}
 
 \begin{proposition}
-    Let $A$ be a $k$-affinoid algebra and $M,N$ be finite Banach $A$-modules. Let $f:M\rightarrow N$ be a $k$-linear map. Then $f$ is admissible.
+    Let $A$ be a $k$-affinoid algebra and $M,N$ be finite Banach $A$-modules. Let $\varphi:M\rightarrow N$ be an $A$-linear map. Then $\varphi$ is admissible.
 \end{proposition}
 \begin{proof}
-    By \cref{lma-finiteBanachmodulemapbdd}, $f$ is always bounded.
-    By \cref{prop-finitemodulebasechange} and \cref{prop-Krfaithflat}, we may assume that $k$ is non-trivially valued and $A$ is strictly $k$-affinoid. By 
+    By \cref{lma-finiteBanachmodulemapbdd}, $\varphi$ is always bounded.
+    By \cref{prop-finitemodulebasechange} and \cref{prop-Krfaithflat}, we may assume that $k$ is non-trivially valued. By \cref{thm-affnoetherian}, $N$ is a Noetherian $A$-module. It follows from \cref{Banach-cor-idealclosed} in the chapter Banach Rings that $\Img \varphi$ is closed in $N$ and is finite as an $A$ module. In particular, the norm induced from $N$ and from $M$ are equivalent by \cref{lma-finiteBanachmodulemapbdd}. It follows that $\varphi$ is admissible.
+\end{proof}
+
+\begin{proposition}
+    Let $A$ be a $k$-affinoid algebra. Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$. Assume that $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$. Then $M$ is a finite Banach $A$-module if and only if $M\hat{\otimes}_k K_r$ is a finite Banach $A\hat{\otimes}_k K_r$-module.
+\end{proposition}
+\begin{proof}
+    We may assume that $r$ has only one component and write $r_1=r$. The direct implication is trivial. Let us assume that $M\hat{\otimes}_k K_r$ is a finite Banach $A\hat{\otimes}_k K_r$-module. Take $n\in \mathbb{N}$ and an admissible epimorphism of $A\hat{\otimes}_k K_r$-modules
+    \[
+        \varphi:  (A\hat{\otimes}_k K_r)^n\rightarrow M\hat{\otimes}_k K_r.
+    \]
+    Let $e_1,\ldots,e_n$ denotes the standard basis of $(A\hat{\otimes}_k K_r)^n$. We expand
+    \[
+        \varphi(e_i)=\sum_{j=-\infty}^{\infty} m_{i,j}T^j.  
+    \]
+    By \cref{prop-admissepiperturbation}, we can assume that there is $l>0$ such that $m_{i,j}=0$ for all $i=1,\ldots,n$ and $|j|>l$. It follows that 
+    \[
+        A^{n(2l+1)}\rightarrow M  
+    \]
+    sending the standard basis to $m_{i,j}$ with $i=1,\ldots,n$ and $j=-l,-l+1,\ldots,l$ is an admissible epimorphism.
 \end{proof}
 
 \section{Graded reduction}

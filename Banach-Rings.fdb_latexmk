@@ -1,12 +1,12 @@
 # Fdb version 3
-["biber Banach-Rings"] 1669630377 "Banach-Rings.bcf" "Banach-Rings.bbl" "Banach-Rings" 1669630388
-  "Banach-Rings.bcf" 1669630388 107371 678ffeb0a6070f6f84487b323689ab32 "pdflatex"
+["biber Banach-Rings"] 1669630377 "Banach-Rings.bcf" "Banach-Rings.bbl" "Banach-Rings" 1669632821
+  "Banach-Rings.bcf" 1669632820 107371 678ffeb0a6070f6f84487b323689ab32 "pdflatex"
   "Ymir.bib" 1669301825 144659 521faa0e3fc6848e94aebfe04c873095 ""
   (generated)
   "Banach-Rings.bbl"
   "Banach-Rings.blg"
-["pdflatex"] 1669630385 "/Users/xiam/Documents/Ymir/Banach-Rings.tex" "Banach-Rings.pdf" "Banach-Rings" 1669630388
-  "/Users/xiam/Documents/Ymir/Banach-Rings.tex" 1669630356 64555 300a208510354f2f45e87e39703b129b ""
+["pdflatex"] 1669632814 "/Users/xiam/Documents/Ymir/Banach-Rings.tex" "Banach-Rings.pdf" "Banach-Rings" 1669632821
+  "/Users/xiam/Documents/Ymir/Banach-Rings.tex" 1669632813 64545 71ee0cfefe0e783b698a3969a6f41475 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -262,11 +262,11 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1654765380 2826424 a39ee3d385ff099fd742a49fa2ed0d14 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Banach-Rings.aux" 1669630388 12486 7c42b464edd31d14c8e1fa2be7a97f51 "pdflatex"
+  "Banach-Rings.aux" 1669632820 12486 7c42b464edd31d14c8e1fa2be7a97f51 "pdflatex"
   "Banach-Rings.bbl" 1669630380 4500 8edeba30914003c53739443daa802cfc "biber Banach-Rings"
-  "Banach-Rings.run.xml" 1669630388 2361 8519427074e3e41e5c97a1405f95b113 "pdflatex"
-  "Banach-Rings.tex" 1669630356 64555 300a208510354f2f45e87e39703b129b ""
-  "Banach-Rings.toc" 1669630388 820 ea19630f1fc4e18534e8a43be1d5f9f1 "pdflatex"
+  "Banach-Rings.run.xml" 1669632820 2361 8519427074e3e41e5c97a1405f95b113 "pdflatex"
+  "Banach-Rings.tex" 1669632813 64545 71ee0cfefe0e783b698a3969a6f41475 ""
+  "Banach-Rings.toc" 1669632820 820 ea19630f1fc4e18534e8a43be1d5f9f1 "pdflatex"
   "preamble.tex" 1669625562 10747 3c8c18ec267ab52e730f0c38bd89b974 ""
   (generated)
   "Banach-Rings.aux"
