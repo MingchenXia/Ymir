@@ -14,12 +14,20 @@ We will freely make use of all results from Stacks Project.
 
 - [Banach rings](Banach-Rings.pdf)
 
-### Part 2 Complex analytic spaces
-
 - [Commutative algebra](Commutative-Algebra.pdf)
 
+> To do: include graded commutative algebra.
+
+### Part 2 Complex analytic spaces
+
+- [Complex analytic local algebras](Local-Algebras.pdf)
+
 - [The notion of complex analytic spaces](Complex-Analytic-Spaces.pdf)
+
+> To do: include the notion of open/closed immersions.
 
 ### Part 3 Non-Archimedean analytic spaces
 
 - [Affinoid algebras](Affinoid-Algebras.pdf)
+
+> To do: include Temkin's proof of the Gerrizen--Grauert theorem; Ducros' proof of the excellence of affinoid algebras.

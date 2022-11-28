@@ -68,7 +68,7 @@ We refer to \cite[\href{https://stacks.math.columbia.edu/tag/01HA}{Tag 01HA}]{st
     Let $n\in \mathbb{N}$, $w\in \mathbb{C}^n$, then there is a natural isomorphism $\mathcal{O}_{\mathbb{C}^n,w}\cong \mathbb{C}\{ z_1,\ldots,z_n\}$.
 \end{proposition}
 The ring on the right-hand side is defined  in 
-\cref{Commutative-def-ringconvpowerseries} in the chapter Commutative Algebra.
+\cref{Local-def-ringconvpowerseries} in the Complex Analytic Local Algebras.
 \begin{proof}
     This is a well-known result from classical complex analysis. \textcolor{red}{Include details later}.
 \end{proof}
@@ -121,7 +121,7 @@ Observe that $X$ is always a Hausdorff space.
 \begin{proposition}
     Let $X$ be a complex analytic space, $x\in X$. Then $\mathcal{O}_{X,x}$ is a complex analytic local algebra.
 \end{proposition}
-Recall that complex analytic local algebras are defined in \cref{Commutative-def-complexanalylocaalg} in the chapter Commutative Algebra.
+Recall that complex analytic local algebras are defined in \cref{Local-def-complexanalylocaalg} in the Complex Analytic Local Algebras.
 
 \begin{proof}
     The problem is local, so we may assume that $X$ is a complex model space. In this case, the result follows easily from \cref{prop-Cnlocalring}.
@@ -331,12 +331,12 @@ Next we study the local rings of fiber products.
         \mathcal{O}_{X_1\times_Y X_2, (x_1,x_2)}\cong \mathcal{O}_{X_1,x_1}\overline{\otimes}_{\mathcal{O}_{Y,y}}  \mathcal{O}_{X_2,x_2}.     
     \]
 \end{theorem}
-The analytic tensor product here is defined \cref{Commutative-def-analytictensor} in the chapter Commutative Algebra. We have shown its existence in \cref{Commutative-thm-relanalytictensorexist} in the same chapter.
+The analytic tensor product here is defined \cref{Local-def-analytictensor} in the Complex Analytic Local Algebras. We have shown its existence in \cref{Commutative-thm-relanalytictensorexist} in the same chapter.
 
 \begin{proof}
     Comparing the constructions of both sides, we see that it suffices to prove the theorem in two special cases: when $Y=\mathbb{C}^0$ and when $X_2\rightarrow Y$ is a closed immersion. 
 
-    We first consider the case where $Y=\mathbb{C}^0$. As our problem is local, we may assume that $X_1$ and $X_2$ are both complex model spaces. From the constructions, we easily reduce to the case where $X_1$ and $X_2$ are both domains in $\mathbb{C}^m$ and $\mathbb{C}^n$ respectively. In this case, the result is proved in \cref{Commutative-lma-Cmexistencetensor} in the chapter Commutative Algebra and \cref{prop-Cnlocalring}.
+    We first consider the case where $Y=\mathbb{C}^0$. As our problem is local, we may assume that $X_1$ and $X_2$ are both complex model spaces. From the constructions, we easily reduce to the case where $X_1$ and $X_2$ are both domains in $\mathbb{C}^m$ and $\mathbb{C}^n$ respectively. In this case, the result is proved in \cref{Local-lma-Cmexistencetensor} in the Complex Analytic Local Algebras and \cref{prop-Cnlocalring}.
     
     Next we handle the case where $X_2\rightarrow Y$ is a closed immersion. This case is immediately clear from the constructions of both sides.
 \end{proof}

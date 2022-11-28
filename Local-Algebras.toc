@@ -1,0 +1,14 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{1}{Introduction}}{4}{section.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{2}{Ring of convergent power series}}{4}{section.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{3}{Weierstrass division and excellence of the ring of formal power series}}{6}{section.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{4}{Weierstrass preparation theorem}}{9}{section.0.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{5}{Complex analytic local algebras}}{11}{section.0.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{15}{chapter*.1}%

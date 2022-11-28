@@ -1,0 +1,590 @@
+\input{preamble}
+
+
+%\usepackage[color]{showkeys}
+%\definecolor{refkey}{rgb}{0,0,1}
+
+
+
+
+\title{Complex analytic local algebras}
+
+
+
+
+
+\begin{document}
+
+%\input{Externaldoc}
+
+\maketitle
+
+
+\tableofcontents
+
+
+\section{Introduction}
+
+In this chapter, we study the notion of complex analytic local algberas (\emph{Analytische Stellenalgebren} in German) in the sense of \cite{GR71}. Most of the materials in this chapter are standard, but the proofs are scattered in tons of papers and books.
+
+Results regarding the completion of the analytic tensor products are certainly known, though the author does not know any written references.
+\section{Ring of convergent power series}
+
+\begin{definition}\label{def-ringconvpowerseries}
+    For any $n\in \mathbb{N}$, let $\mathbb{C}\{ z_1,\ldots,z_n\}$ denote the subring of $\mathbb{C}[[z_1,\ldots,z_n]]$ consisting of
+    \[
+        f=\sum_{\alpha\in \mathbb{N}^n} a_{\alpha}z^{\alpha},\quad a_{\alpha}\in \mathbb{C},
+    \]
+    which is  convergent in a neighbourhood of $0$: there is $\epsilon>0$ such that for any $x_1,\ldots,x_n\in \mathbb{C}$ with $|x_i|<\epsilon$, $\sum_{\alpha}a_{\alpha} x^{\alpha}$ is a convergent power series. We will write $f(0)$ for $a_{0,\ldots,0}$.
+\end{definition}
+
+\begin{definition}
+    Fix $n\in \mathbb{N}$ and $t=(t_1,\ldots,t_n)\in \mathbb{R}_{> 0}^n$. For any $f\in \mathbb{C}[[z_1,\ldots,z_n]]$ with an expansion
+    \[
+        f=\sum_{\alpha\in \mathbb{N}^n} a_{\alpha}z^{\alpha},\quad a_{\alpha}\in \mathbb{C},  
+    \]
+    we define
+    \[
+        \|f\|_t:=\sum_{\alpha\in \mathbb{N}^n} |a_{\alpha}| t^{\alpha}\in [0,\infty].
+    \]
+    We define
+    \[
+        \mathbb{C}\langle t^{-1}z\rangle =\mathbb{C}\langle t_1^{-1}z_1,\ldots,t_n^{-1}z_n \rangle:=\left\{f\in \mathbb{C}[[z_1,\ldots,z_n]]: \|f\|_t<\infty \right\}.
+    \]
+\end{definition}
+The construction here is a special case of \cref{Banach-ex-convseriesradius} in the chapter Banach Rings.
+
+Observe that $(\mathbb{C}\langle t^{-1}z\rangle ,\|\bullet\|_t)$ is a normed $\mathbb{C}$-vector space and
+\begin{equation}\label{eq-convpowerseriesasunion}
+    \mathbb{C}\{ z_1,\ldots,z_n\}=\bigcup_{t\in \mathbb{R}_{>0}^n}\mathbb{C}\langle t^{-1}z\rangle .
+\end{equation}
+
+\begin{proposition}[Cauchy coefficients estimate]
+    Let 
+    \[
+        f=\sum_{\alpha\in \mathbb{N}^n} a_{\alpha}z^{\alpha}\in  \mathbb{C}\langle t^{-1}z\rangle. 
+    \]
+    Then for any $\alpha \in \mathbb{N}^n$,
+    \[
+      |a_{\alpha}|\leq  \frac{\|f\|_t}{t^{\alpha}}.
+    \]
+\end{proposition}
+\begin{proof}
+    This follows from the definition.
+\end{proof}
+
+\begin{proposition}\label{prop-CzztBanachalg}
+    $(\mathbb{C}\langle t^{-1}z\rangle ,\|\bullet\|_t)$ is a $\mathbb{C}$-Banach algebra.
+\end{proposition}
+\begin{proof}
+    This is a special case of \cref{Banach-ex-convseriesradius} in the chapter Banach Rings.
+\end{proof}
+
+
+\begin{lemma}\label{lma-unitsinconvpowerseries}
+    For any $n\in \mathbb{N}$, an element $f\in \mathbb{C}\{ z_1,\ldots,z_n \}$ is a unit if and only if $f(0)\neq 0$.
+\end{lemma}
+\begin{proof}
+    In fact, as $\mathbb{C}\{ z_1,\ldots,z_n \}$ is a subring of $\mathbb{C}[[z_1,\ldots,z_n]]$, a unit $f$ in $\mathbb{C}\{ z_1,\ldots,z_n \}$ is also a unit in $\mathbb{C}[[z_1,\ldots,z_n]]$, hence $f(0)\neq 0$.
+
+    Conversely, assume that $f\in \mathbb{C}\{ z_1,\ldots,z_n \}$ and $f(0)\neq 0$, then
+    \[
+        \lim_{t\to 0+}\|1-f(0)^{-1}f\|_t=0.
+    \]
+    So by \cref{Banach-prop-inversesmallelementBanachring} in the chapter Banach Rings, $a^{-1}f$ is a unit in $\mathbb{C}\langle t^{-1}z\rangle$ when $t$ is small enough. As $\mathbb{C}\langle t^{-1}z\rangle$ is a subring of $\mathbb{C}\{ z_1,\ldots,z_n \}$, it follows that $f(0)^{-1}f$ is invertible in $\mathbb{C}\{ z_1,\ldots,z_n \}$, hence so is $f$.
+\end{proof}
+
+
+
+\begin{thm}\label{thm-converinglocal}
+    Let $m, n\in \mathbb{N}$.
+\begin{enumerate}
+    \item The ring $\mathbb{C}\{ z_1,\ldots,z_n \}$ is local, and the maximal ideal is given by convergent power series without constant terms.
+    \item Any homomorphism of $\mathbb{C}$-algebras $F:\mathbb{C}\{ z_1,\ldots,z_n \}\rightarrow \mathbb{C}\{ w_1,\ldots,w_m \}$ is local.
+\end{enumerate}
+
+
+\end{thm}
+\begin{proof}
+(1) This follows from \cref{lma-unitsinconvpowerseries} and \cite[\href{https://stacks.math.columbia.edu/tag/00E9}{Tag 00E9}]{stacks-project}.
+
+(2) Suppose it is not the case. As $z_1,\ldots,z_n$ generate the maximal ideal in $\mathbb{C}\{ z_1,\ldots,z_n \}$ by (1), at least one of $F(z_1),\ldots,F(z_n)$ is not in the maximal ideal of  $\mathbb{C}\{ w_1,\ldots,w_m \}$. We may assume that it is $F(z_1)$, namely
+\[
+    F(z_1)=a+\mathcal{O}(w)  
+\]
+with $a\in \mathbb{C}^{\times}$. As $F$ is a $\mathbb{C}$-algebra homomorphism, $F(z_1-a)=F(z_1)-a$ is a unit. This contradicts the fact that $z_1-a$ is a unit.
+\end{proof}
+
+
+
+
+\begin{lemma}\label{lma-univerpropconvspecialcase}
+    Let $m,n\in \mathbb{N}$ and $g_1,\ldots,g_m\in \mathbb{C}\{ w_1,\ldots,w_n\}$. Assume that $g_i(0)=0$ for all $i=1,\ldots,m$. 
+    Then the formal substitution 
+    \[
+        F:\mathbb{C}[[z_1,\ldots,z_m]]\rightarrow \mathbb{C}[[w_1,\ldots,w_n]]
+    \]
+    sending $z_i$ to $g_i$ restricts to a homomorphism of $\mathbb{C}$-algebras
+    \[
+        F:  \mathbb{C}\{ z_1,\ldots,z_m\}\rightarrow  \mathbb{C}\{ w_1,\ldots,w_n\}.
+    \]
+\end{lemma}
+\begin{proof}
+    Fix $t\in \mathbb{R}^m_{>0}$. Take $s\in \mathbb{R}^n_{>0}$ so that $\|g_i\|_s\leq t_i$ for $i=1,\ldots,m$. This is possible as $g_i(0)=0$.
+    Then we claim that $F$ sends $\mathbb{C}\langle t^{-1}z \rangle$ to $\mathbb{C}\langle s^{-1}w\rangle$. This implies our lemma.
+
+    To prove the assertion, let $f\in \mathbb{C}\langle t^{-1}z\rangle$, which we expand as
+    \[
+        f=\sum_{\alpha\in \mathbb{N}^m} a_{\alpha}z^{\alpha}.
+    \]
+    Then
+    \[
+        \|F(f)\|_s=\sum_{j=0}^{\infty}\|\sum_{|\alpha|=j}a_{\alpha}g^{\alpha}\|_s\leq \sum_{\alpha}|a_{\alpha}|\cdot \|g\|_s^{\alpha}\leq \|f\|_t.
+    \]
+    Here the first inequality follows from \cref{prop-CzztBanachalg}.
+\end{proof}
+
+Conversely, we have
+\begin{lemma}\label{lma-homopowerringanalytic}
+    Let $m,n\in \mathbb{N}$. Then any homomorphism of $\mathbb{C}$-algebras 
+    \[
+        F:  \mathbb{C}\{ z_1,\ldots,z_m\}\rightarrow  \mathbb{C}\{ w_1,\ldots,w_n\}
+    \]
+    is the restriction of a substitution homomorphism
+    \[
+        \mathbb{C}[[z_1,\ldots,z_m]]\rightarrow  \mathbb{C} [[ w_1,\ldots,w_n]].
+    \]
+    In particular, $F$ is uniquely determined by $F(z_1),\ldots,F(z_m)$.  
+\end{lemma}
+\begin{proof}
+    Let $g_i=F(z_i)$. It follows from \cref{thm-converinglocal} that $g_i\in \mathfrak{m}$, the maximal ideal in $\mathbb{C} [[ w_1,\ldots,w_n]]$. Let $G:\mathbb{C}\{ z_1,\ldots,z_m\}\rightarrow  \mathbb{C}\{ w_1,\ldots,w_n\}$ be the substitution homomorphism sending $z_i$ to $g_i$. Then $F$ and $G$ agrees on $\mathbb{C}[z_1,\ldots,z_m]$. In particular, for any $f\in \mathbb{C}\{ z_1,\ldots,z_m\}$ and $a\in \mathbb{N}$ if we write $f_1$ the sum of the homogeneous parts of $f$ of degree no more than $a$ and $f_2=f-f_1$, we see that $f_2\in \mathfrak{m}_1^{a+1}$, where $\mathfrak{m}_1$ is the maximal ideal of $\mathbb{C}\{ z_1,\ldots,z_m\}$. It follows that $(F-G)(f_1)=0$ and $(F-G)(f_2)\in \mathfrak{m}^{a+1}$, the latter is a consequence of \cref{thm-converinglocal}.
+    As $a$ is arbitrary, we find that
+    \[
+      (F-G)(f)\in \bigcap_{a=1}^{\infty}\mathfrak{m}^a\subseteq  \bigcap_{a=1}^{\infty}\mathfrak{m}_2^a,
+    \]
+    where $\mathfrak{m}_2$ is the maximal ideal in $\mathbb{C} [[ w_1,\ldots,w_n]]$.
+    As $\mathbb{C}[[w_1,\ldots,w_n]] $ is Noetherian, it follows from Krull's intersection theorem \cite[\href{https://stacks.math.columbia.edu/tag/00IP}{Tag 00IP}]{stacks-project} that $\bigcap_{a=1}^{\infty}\mathfrak{m}_2^a=0$, so $F=G$.
+\end{proof}
+
+We prove a few elementary results about the structure of the ring $\mathbb{C}\{ z_1,\ldots,z_n \}$. In the following sections, we will develop deeper structures after developing the Weierstrass theory.
+
+\begin{proposition}\label{prop-convpowerinteg}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\{ z_1,\ldots,z_n \}$ is an integral domain.
+\end{proposition}
+\begin{proof}
+    It suffices to observe that $\mathbb{C}\{ z_1,\ldots,z_n \}$ is a subring of $\mathbb{C}[[z_1,\ldots,z_n]]$.
+\end{proof}
+
+
+
+
+\begin{thm}\label{thm-convpowerstrictHen}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\{ z_1,\ldots,z_n \}$ is strictly Henselian.
+\end{thm}
+\begin{proof}
+    As the residue field of $\mathbb{C}\{ z_1,\ldots,z_n \}$ is $\mathbb{C}$ by \cref{thm-converinglocal}, it suffices to show that $\mathbb{C}\{ z_1,\ldots,z_n \}$ is Henselian. Take a monic polynomial $f\in \mathbb{C}\{ z_1,\ldots,z_n \}[w]$, say
+    \[
+        f=w^b+f_1 w^{b-1}+\cdots+ f_b,\quad f_i\in \mathbb{C}\{ z_1,\ldots,z_n \}.
+    \]
+    Suppose that $\bar{a}\in \mathbb{C}$ is a simple root of $\bar{f}=w^b+f_1(0)w^{b-1}+\cdots+ f_b(0)$. We want to lift find $a\in \mathbb{C}\{ z_1,\ldots,z_n \}$ such that $f(a)=0$ and $a(0)=\bar{a}$. As $\mathbb{C}$ is algebraically closed, we can prove a stronger result: suppose that 
+    \[
+        \bar{f}=(w-c_1)^{b_1}\cdots (w-c_t)^{b_t}  
+    \]
+    for some $c_i\in \mathbb{C}$ and $b_i\in \mathbb{Z}_{>0}$. Then we claim that there are monic polynomials $g_i\in \mathbb{C}\{ z_1,\ldots,z_n \}[w]$ such that $\bar{g_i}=(w-c_i)^{b_i}$ for all $i=1,\ldots,t$ and $f=g_1\cdots g_t$.
+
+    We make an induction on $t$. When $t=1$, there is nothing to prove, so assume that $t>1$ and the theorem has been proved for $t-1$. We may assume that $c_1=0$. By Weierstrass preparation theorem, we can find a Weierstrass polynomial $h\in \mathbb{C}\{ z_1,\ldots,z_n \}[w]$ of degree $b_1$ and a monic polynomial $k\in \mathbb{C}\{ z_1,\ldots,z_n \}[w]$ such that $f=hk$. By the inductive hypothesis, we can find monic polynomials $g_2,\ldots,g_t\in \mathbb{C}\{ z_1,\ldots,z_n \}[w]$ such that  $\bar{g_i}=(w-c_i)^{b_i}$ for all $i=2,\ldots,t$ and $k=g_2\cdots g_t$. It suffices to take $g_1=h$.
+\end{proof}
+
+
+\section{Weierstrass division and excellence of the ring of formal power series}
+\begin{definition}
+    Let $n\in \mathbb{N}$ and $f\in \mathbb{C}\{ z_1,\ldots,z_n\}$, we say $f$ \emph{has order $e$ in $z_n$} for some $e\in \mathbb{N}$ if we expand $f$ as
+    \[
+      f=\sum_{i=0}^{\infty}f_iz_n^i  
+    \]
+    with $f_i\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}$, then $f_0(0)=\cdots=f_{e-1}(0)=0$ while $f_e(0)\neq 0$.
+
+    If $f_i(0)=0$ for all $i$, we say $f$ \emph{has order $\infty$ in $z_n$}. We will write $\ord_{z_n}f$ for the order of $f$ in $z_n$.
+\end{definition}
+\begin{thm}[Weierstrass division theorem]\label{thm-Weierstrassdiv}
+    Let $n\in \mathbb{N}$ and $g\in \mathbb{C}\{ z_1,\ldots,z_n\}$. Assume that $\ord_{z_n}g<\infty$. Then for any $f\in \mathbb{C}\{ z_1,\ldots,z_n\}$ there is $q\in \mathbb{C}\{ z_1,\ldots,z_n\}$ and $r\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[w]$ with $\deg_{z_n}r<\ord_{z_n}g$ such that
+    \[
+      f=qg+r.  
+    \]
+    Moreoer, $q$ and $r$ are uniquely determined.
+\end{thm}
+
+\begin{remark}\label{rmk-perturbaxes}
+    The restriction $\ord_{z_n}g<\infty$ is not too severe. In fact, given any non-zero $g$, we can always find an invertible $n\times n$ matrix $A$, so that if we consider $gA^{-1}$ defined in the obvious way, we have $\ord_{z_n}gA^{-1}<\infty$. 
+\end{remark}
+
+\begin{proof}
+    Fix $\epsilon\in (0,1)$.
+
+    Choose a small enough $t=(t_1,\ldots,t_n)\in \mathbb{R}^n_{>0}$ so that $f,g\in \mathbb{C}\langle t^{-1}z\rangle$. This is possible by \eqref{eq-convpowerseriesasunion}. 
+    We expand $g$ as
+    \begin{equation}\label{eq-gexpandzn}
+      g=\sum_{i=0}^{\infty}a_iz_n^i  
+    \end{equation}
+    with $a_i\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}$.
+    We decompose $g$ into 
+    \[
+      g=g_1+z_n^{\ord_{z_n}g} g_2,\quad g_1=\sum_{i=0}^{\ord_{z_n}g-1}a_iz_n^i,\quad  g_2=\sum_{i=\ord_{z_n}g}^{\infty}a_i z_n^{i-\ord_{z_n}g}.
+    \]
+    Then our assumption implies that $g_2$ is a unit in  $\mathbb{C}\{ z_1,\ldots,z_n\}$ and by \eqref{eq-convpowerseriesasunion} again, choosing $t$ small enough, we may assume that $g_2^{-1}\in \mathbb{C}\langle t^{-1}z\rangle$. Then
+    \[
+      \|gg_{2}^{-1}-z_n^{\ord_{z_n}g}\|_{t}=\|g_1g_{2}^{-1} \|_t \leq  \|g_1\|_t\cdot\|g_{2}^{-1} \|_t.
+    \]
+    As $\lim_{t\to 0+}\|g_1\|_t=0$ by our assumption, taking $t$ small enough, we can also guarantee that 
+    \[
+        \|gg_{2}^{-1}-z_n^{\ord_{z_n}g}\|_{t}\leq t_n^{\ord_{z_n}g}\epsilon.  
+    \]
+    We define $v_{j}\in \mathbb{C}\langle t^{-1}z\rangle$ for $j\in \mathbb{N}$ as follows: $v_0=f$ and
+    \[
+         v_{j+1} = (z_n^{\ord_{z_n}g}- gg_{2}^{-1})v_{j,1},
+    \]
+    where $v_{j,1}$ is defined from $v_j$ in the same way $g_1$ is defined from $g$.
+
+    Observe that
+    \[
+        \|v_{j,1}\|_t\leq t_n^{-\ord_{z_n}g}\|v_j\|_t.
+    \]
+    It follows that
+    \[
+        \|v_{j+1}\|_t\leq \epsilon\|v_j\|_t.  
+    \]
+    In particular, 
+    \[
+        w=\sum_{j=0}^{\infty}v_j  
+    \]
+    converges in $\mathbb{C}\langle t^{-1}z\rangle$ by \cref{prop-CzztBanachalg}. Now we can define $q=g_{2}^{-1}w_2$ and $r=w_1$. Again $w_1,w_2$ are defined from $w$ using the same way $g_1,g_2$ are defined from $g$.
+    It follows that
+    \[
+        f=\sum_{j=0}^{\infty}(v_j-v_{j+1})=\sum_{j=0}^{\infty} (gg_2^{-1}w_2+w_1)=qg+r.
+    \]
+    We conclude the existence part.
+
+    As for the uniqueness, suppose that $qg+r=0$ for some $q\in \mathbb{C}\{ z_1,\ldots,z_n\}$ and $r\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]$ with $\deg r<\ord_{z_n}g$. We want to deduce $q=r=0$. Take $t\in \mathbb{R}_{>0}^n$ small enough, we may assume that $q,g,r\in \mathbb{C}\langle t^{-1}z\rangle$. Expand $g$ as in \eqref{eq-gexpandzn}, we may assume that $a_{\ord_{z_n}g}^{-1}\in \mathbb{C}\langle t_1^{-1}z_1,\ldots,t_{n-1}^{-1}z_{n-1}\rangle$. We can then write
+    \[
+        a_{\ord_{z_n}g}^{-1}g=z_n^{\ord_{z_n}g}+h  
+    \]
+    for some $h\in \mathbb{C}\langle t^{-1}z\rangle$, $h(0)=0$. Fix $\epsilon\in (0,1)$.
+    Choose $t$ small enough, we can then guarantee that
+    \[
+      \|h\|_t\leq t_n^b\epsilon. 
+    \]
+    Now
+    \[
+      q   a_{\ord_{z_n}g} z_n^{\ord_{z_n}g}+r=-q h a_{\ord_{z_n}g}.
+    \]
+    If we set $M=\|q   a_{\ord_{z_n}g}\|_tt_n^{\ord_{z_n}g}$, then we see immediately
+    \[
+        M =\|q   a_{\ord_{z_n}g} z_n^{\ord_{z_n}g}\|_t \leq \|q   a_{\ord_{z_n}g} z_n^{\ord_{z_n}g}+r\|_t=\|q h a_{\ord_{z_n}g}\|_t\leq M\epsilon.
+    \]
+    It follows that $M=0$ and hence $q a_{\ord_{z_n}g}=0$. It follows that $q=0$ by \cref{prop-convpowerinteg}. Therefore, $r=0$ as well.
+\end{proof}
+
+\begin{proposition}\label{prop-convpowerquotientbyone}
+    Let $n\in \mathbb{N}$ and $g\in \mathbb{C}\{ z_1,\ldots,z_n\}$. Assume that $\ord_{z_n}g<\infty$. Then there is a canonical isomorphism
+    \[
+        \mathbb{C}\{ z_1,\ldots,z_n\}/g\mathbb{C}\{ z_1,\ldots,z_n\}\cn \mathbb{C}\{ z_1,\ldots,z_{n-1}\}^{\ord_{z_n}g}
+    \]
+    of $\mathbb{C}\{ z_1,\ldots,z_{n-1}\}$-modules.
+\end{proposition}
+\begin{proof}
+    Given any $f\in \mathbb{C}\{ z_1,\ldots,z_n\}$, we consider the Weierstrass division $f=qg+r$ as in \cref{thm-Weierstrassdiv}. Write
+    \[
+        r=r_0+r_1z_n+\cdots+r_{\ord_{z_n}g-1}z_n^{\ord_{z_n}g-1}.
+    \]  
+    Then we map $f$ to $(r_0,\ldots,r_{\ord_{z_n}g-1})$. Clearly, this defines the isomorphism as in the proposition.
+\end{proof}
+
+
+As an application of Weierstrass theory, we prove a few results about the structure of the ring $\mathbb{C}\{ z_1,\ldots,z_n\}$.
+
+\begin{thm}\label{thm-localringnoetherian}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\{ z_1,\ldots,z_n \}$ is a noetherian integral domain.
+\end{thm}
+\begin{proof}
+    We make an induction on $n$ to prove that $\mathbb{C}\{ z_1,\ldots,z_n \}$ is noetherian. The case $n=0$ is trivial. So assume $n>0$ and that the theorem has been proved for all smaller values of $n$. Let $f\in\mathbb{C}\{ z_1,\ldots,z_n \}$ be a non-zero element. It suffices to show that $\mathbb{C}\{ z_1,\ldots,z_n \}/f\mathbb{C}\{ z_1,\ldots,z_n \}$ is noetherian. By \cref{rmk-perturbaxes}, we may assume that $\ord_{z_n}f<\infty$.
+    By \cref{prop-convpowerquotientbyone}, we know that 
+    \[
+        \mathbb{C}\{ z_1,\ldots,z_n \}/f\mathbb{C}\{ z_1,\ldots,z_n \}\cong \mathbb{C}\{ z_1,\ldots,z_{n-1} \}^c
+    \]
+    for some $c\in \mathbb{N}$ as $\mathbb{C}\{ z_1,\ldots,z_{n-1} \}$-modules. By the inductive hypothesis and Hilbert basis theorem, the quotient ring is noetherian.
+\end{proof}
+
+
+\begin{proposition}\label{prop-completionconvergenseries}
+    Let $n\in \mathbb{N}$. Then the $\mathfrak{m}$-adic completion of the ring  $\mathbb{C}\{ z_1,\ldots,z_n \}$ is canonically isomorphic to $\mathbb{C}[[ z_1,\ldots,z_n ]]$, where $\mathfrak{m}$ is the maximal ideal of $\mathbb{C}\{ z_1,\ldots,z_n \}$. 
+\end{proposition}
+\begin{proof}
+    Let $\mathfrak{m}_1$ be the maximal ideal in $\mathbb{C}[z_1,\ldots,z_n]$. It suffices to observe that we have canonical identifications
+    \[
+        \mathbb{C}[z_1,\ldots,z_n]/\mathfrak{m}_1^n\cn \mathbb{C}\{ z_1,\ldots,z_n\}/\mathfrak{m}^n
+    \]
+    for any $n\in \mathbb{N}$. So in particular, the $\mathfrak{m}$-adic completion of $\mathbb{C}\{ z_1,\ldots,z_n \}$ is isomorphic to the $\mathfrak{m}_1$-adic completion of $\mathbb{C}[z_1,\ldots,z_n]$, which is $\mathbb{C}\{ z_1,\ldots,z_n \}$.
+\end{proof}
+
+\begin{corollary}
+    Let $n\in \mathbb{N}$. Then the Krull dimension of $\mathbb{C}\{ z_1,\ldots,z_n \}$ is $n$.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{prop-completionconvergenseries} and \cite[\href{https://stacks.math.columbia.edu/tag/07NV}{Tag 07NV}]{stacks-project}.
+\end{proof}
+
+\begin{thm}\label{thm-convpowerregular}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\{ z_1,\ldots,z_n \}$ is regular. In particular, it is a UFD.
+\end{thm}
+\begin{proof}
+    We have computed that the completion of $\mathbb{C}\{ z_1,\ldots,z_n \}$ is $\mathbb{C}[[ z_1,\ldots,z_n ]]$ in \cref{prop-completionconvergenseries}. The regularity of $\mathbb{C}\{ z_1,\ldots,z_n \}$ follows from the regularity of the completion by descent \cite[\href{https://stacks.math.columbia.edu/tag/07NY}{Tag 07NY}]{stacks-project}. It is a UFD by Auslander--Buchsbaum theorem.
+\end{proof}
+\begin{proposition}\label{prop-analocalgwellbehaved}
+    Let $A$ be a complex analytic local algebra. Then $A$ is a excellent, strictly Henselian. 
+\end{proposition}
+\begin{proof}
+    This follows from the corresponding results in \cref{thm-convpowerexcell} and \cref{thm-convpowerstrictHen}.
+\end{proof}
+
+
+We recall the following criterion.
+\begin{thm}\label{thm-excefromderiv}
+    Let $k$ be a field of characteristic $0$ and $R$ be a regular ring containing $k$. Suppose that there is $n\in \mathbb{N}$ such that
+    \begin{enumerate}
+        \item for any maixmal ideal $\mathfrak{m}$ of $R$, the residue $R/\mathfrak{m}$ is algebraic over $k$ and the height of $\mathfrak{m}$ is $n$;
+        \item there exists $D_1,\ldots, D_n\in \Der_k(R)$ and $x_1,\ldots,x_n\in R$ such that $D_ix_j=\delta_{ij}$ for all $i,j=1,\ldots,n$. 
+    \end{enumerate}
+    Then $R$ is excellent.
+\end{thm}
+\begin{proof}
+    We refer to \cite[Theorem~102]{Mat80}.
+\end{proof}
+
+\begin{thm}\label{thm-convpowerexcell}
+    For any $n\in \mathbb{N}$, the ring $\mathbb{C}\{ z_1,\ldots,z_n \}$ is excellent.
+\end{thm}
+\begin{proof}
+    This is an immediate consequence of \cref{thm-excefromderiv}.
+\end{proof}
+
+\section{Weierstrass preparation theorem}
+
+\begin{definition}
+    Let $n\in \mathbb{Z}_{>0}$.
+    A \emph{Weierstrass polynomial} in $n$ variables is a monic polynomial
+    \[
+        \omega=z_n^b+a_1z_{n}^{b-1}+\cdots+ a_b\in  \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n] 
+    \]
+    such that $a_i(0)=0$ for all $i=0,\ldots,b$.
+\end{definition}
+Observe that by definition, $\ord_{z_n}\omega=b$.
+
+\begin{lemma}\label{lma-Weierstrasspolycancel}
+    Let $\omega\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n] $ be a Weierstrass polynomial and $g\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$. Assume that $\omega g\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]$, then $g\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]$.
+\end{lemma}
+\begin{proof}
+    By the division theorem of polynomial rings, we can write
+    \[
+        \omega g = q\omega+r  
+    \]
+    for some $q,r\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]$, $\deg_{z_n}r<\deg_{z_n}\omega g$. But we can write $\omega g= \omega \cdot g$. From the uniqueness part of \cref{thm-Weierstrassdiv}, we know that $q=g$, so $g$ is a polynomial in $z_n$.
+\end{proof}
+
+\begin{theorem}[Weierstrass preparation theorem]\label{thm-Weierstrassprep}
+    Let $n\in \mathbb{Z}_{>0}$ and $g\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$. Assume that $\ord_{z_n}g<\infty$, then there is a unique Weierstrass polynomial $\omega\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]$ of degree $\ord_{z_n}g$ and a unit $e\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$ such that $g=e\omega$.
+    
+    Moreover, if $g\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]$, then so is $e$.
+\end{theorem}
+\begin{proof}
+    By \cref{thm-Weierstrassdiv}, we can write
+    \[
+      z_n^{\ord_{z_n}g}=qg+r  
+    \]
+    for $q\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$ and $r\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]$ with $\deg_{z_n}r<\ord_{z_n}g$. Write $g=\sum_{i=0}^{\infty}a_i z_n^i$ for some $a_i\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}$. Define $\bar{g}=\sum_{i=0}^{\infty}a_i(0)z_n^i$, set $e':=z_n^{-\ord_{z_n}g}\bar{g}\in \mathbb{C}[z_n]$. Then $e'(0)\neq 0$. Similarly define $\bar{q}$ and $\bar{r}$, then we have
+    \[
+        z_n^{\ord_{z_n}g}=\bar{q} \bar{g}+\bar{r}.  
+    \]
+    Or
+    \[
+      1=\bar{q}e'+\bar{r}.  
+    \]
+    From the uniqueness part of \cref{thm-Weierstrassdiv}, we conclude that $\bar{q}=e'^{-1}$, namely $q$ is a unit. Now
+    \[
+        g=q^{-1} (z_n^{\ord_{z_n}g}-r)  
+    \]
+    is the desired decomposition. When $g\in \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]$, so is $e$, as can be seen from \cref{lma-Weierstrasspolycancel}.
+
+    It remains to prove the uniqueness: if $e$ is a unit in $\mathbb{C}\{ z_1,\ldots,z_{n}\}$, $\omega$, $\omega'$ are two Weierstrass polynomials and $e\omega=\omega'$, then we need to show that $e=1$. It follows from \cref{lma-Weierstrasspolycancel} that $e$ is a polynomial in $z_n$. Setting $z_1=\cdots=z_{n-1}=0$, we find that $\bar{e}$ is a power of $z_n$. As $e$ is a unit, it follows that $\bar{e}=1$. On the other hand, clearly $e$ is a monic polynomial, it follows that $e=1$.
+\end{proof}
+
+\begin{definition}
+    Let $n\in \mathbb{Z}_{>0}$ and $g\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$. Assume that $\ord_{z_n}g<\infty$. The Weierstrass polynomial constructed in \cref{thm-Weierstrassprep} is called the \emph{Weierstrass polynomial} of $g$.
+\end{definition}
+
+\begin{corollary}
+    Let $n\in \mathbb{Z}_{>0}$ and $g\in \mathbb{C}\{ z_1,\ldots,z_{n}\}$. Assume that $\ord_{z_n}g<\infty$. Let $\omega$ be the Weierstrass polynomial of $g$. Then the injection
+    \[
+        \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]\rightarrow \mathbb{C}\{ z_1,\ldots,z_{n}\}
+    \]
+    induces an isomorphism of $\mathbb{C}$-algebras
+    \[
+        \mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]/\omega\mathbb{C}\{ z_1,\ldots,z_{n-1}\}[z_n]\rightarrow \mathbb{C}\{ z_1,\ldots,z_{n}\}/g\mathbb{C}\{ z_1,\ldots,z_{n}\}.
+    \]
+\end{corollary}
+\begin{proof}
+    The morphism is surjective by \cref{thm-Weierstrassdiv} and injective by \cref{lma-Weierstrasspolycancel}.
+\end{proof}
+
+\section{Complex analytic local algebras}
+
+\begin{definition}\label{def-complexanalylocaalg}
+    A \emph{complex analytic local algebra} is a $\mathbb{C}$-algebra $A$ such that $A\neq 0$ and there exists some $n\in \mathbb{N}$ and an ideal $I$ in $\mathbb{C}\{ z_1,\ldots,z_n \}$ such that 
+    \[
+        A\cong \mathbb{C}\{ z_1,\ldots,z_n \}/I
+    \]
+    as $\mathbb{C}$-algebras.
+
+    A morphism between complex analytic local algebras $A$ and $B$ is a $\mathbb{C}$-algebra homomorphism $A\rightarrow B$.
+
+    The category of complex analytic local algebras is denoted by $\CLA$.
+\end{definition}
+
+\begin{proposition}\label{prop-converinglocalgeneral}
+    Let $A$ be an object in $\CLA$ and $f:B\rightarrow C$ be a morphism in  $\CLA$. Then
+    \begin{enumerate}
+        \item $A$ is local with residue field $\mathbb{C}$.
+        \item $f$ is a local homomorphism.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (1) This follows immediately from \cref{thm-converinglocal}.
+    
+    (2) This follows from the same arguments as \cref{thm-converinglocal} (2).
+\end{proof}
+
+
+
+
+Observe that a complex analytic local algebra is always local with residue field $\mathbb{C}$ and a morphism in $\CLA$ is always a local homomorphism. We will write $\mathfrak{m}_A$ for the maximal ideal in $A$.
+
+\begin{lemma}\label{lma-powerseriesfunctorpoint}
+    Let $A$ be a complex analytic local algebra and $n\in \mathbb{N}$, then there is a natural bijection
+    \[
+        \Hom_{\CLA}(\mathbb{C}\{ z_1,\ldots,z_n \},A)\cong \mathfrak{m}_{A}^n
+    \]
+    sending a morphism $f$ to $(f(z_1),\ldots,f(z_n))$.
+\end{lemma}
+\begin{proof}
+    As a morphism $f:\mathbb{C}\{ z_1,\ldots,z_n \} \rightarrow A$ is necessarily local, we see that $f(z_i)\in A$ for all $i=1,\ldots,n$. So the map $\Hom_{\CLA}(\mathbb{C}\{ z_1,\ldots,z_n \},A)\rightarrow \mathfrak{m}_{A}^n$ is well-defined. Conversely, given $w_1,\ldots,w_n\in \mathfrak{m}_A$, we claim that there is a unique morphism $f:\mathbb{C}\{ z_1,\ldots,z_n \} \rightarrow A$ in $\CLA$ sending $z_i$ to $w_i$.
+
+    The uniqueness follows from \cref{lma-homopowerringanalytic}, so let us consider only the existence.
+    Let $\mathbb{C}\{ z_1,\ldots,z_m \} \rightarrow A$ be a surjective morphism. Lift $w_i$ to $w_i'\in \mathbb{C}\{ z_1,\ldots,z_m \}$, it suffices to construct a morphism $\mathbb{C}\{ z_1,\ldots,z_n \}\rightarrow \mathbb{C}\{ z_1,\ldots,z_m \}$ sending $z_i$ to $w_i'$. So we may assume that $A=\mathbb{C}\{ z_1,\ldots,z_m \}$. In this case, the result follows from \cref{lma-univerpropconvspecialcase}.
+\end{proof}
+
+\begin{definition}\label{def-analytictensor}
+    Let $A_1,A_2$ be complex analytic local algebras, \emph{an analytic tensor product} of $A_1$ and $A_2$ is a complex analytic local algebra $A$ together with morphisms $A_1\rightarrow A$ and $A_2\rightarrow A$ such that for any complex analytic local algebra $C$, the induced map
+    \[
+      \Hom_{\CLA}(A,C)\rightarrow  \Hom_{\CLA}(A_1,C)\times  \Hom_{\CLA}(A_2,C)
+    \]
+    is bijective.
+
+    As analytic tensor product is unique up to unique isomorphism, so we can choose a specific analytic tensor product $A_1\overline{\otimes} A_2$ and call it \emph{the analytic tensor product} of $A_1$ and $A_2$.
+
+    More generally, let $B$ be a complex analytic local algebra and $A_1,A_2\in \CLA_{\backslash B}$ (the under-slice of $B$).
+    \emph{An analytic tensor product} of $A_1$ and $A_2$ over $B$ is a complex analytic local algebra $A$ over $B$ together with morphisms $A_1\rightarrow A$ and $A_2\rightarrow A$ in $\CLA_{\backslash B}$ such that the induced map
+    \[
+      \Hom_{\CLA}(A,C)\rightarrow  \Hom_{\CLA_{\backslash B}}(A_1,C)\times \Hom_{\CLA_{\backslash B}}(A_2,C)
+    \]
+    is bijective.
+    
+    As analytic tensor product is unique up to unique isomorphism, so we can choose a specific analytic tensor product $A_1\overline{\otimes}_B A_2$ and call it \emph{the analytic tensor product} of $A_1$ and $A_2$ over $B$.
+\end{definition}
+By definition, there are natural morphisms 
+\[
+    A_1\otimes A_2\rightarrow A_1\overline{\otimes} A_2.
+\]
+
+The simplest example is 
+\begin{lemma}\label{lma-Cmexistencetensor}
+    For any $m,n\in \mathbb{N}$, we have
+    \[
+        \mathbb{C}\{ z_1,\ldots,z_m \}\overline{\otimes} \mathbb{C}\{ z_1,\ldots,z_n \}\cong  \mathbb{C}\{ z_1,\ldots,z_{m+n} \}
+    \]
+    as complex analytic local algebras.
+\end{lemma}
+\begin{proof}
+    This is a simple consequence of \cref{lma-powerseriesfunctorpoint} and Yoneda's lemma.    
+\end{proof}
+
+\begin{lemma}\label{lma-quotientimplyexistencetensor}
+    Assume that $f_i:A_i\rightarrow B_i$ are  surjective (i.e. the underlying homomorphisms of algebras are surjective) morphisms in $\CLA$ for $i=1,2$. Let $I_i$ be the kernel of $f_i$ as homomorphisms of algebras.
+    If $A_1\overline{\otimes} A_2$ exists, then so is $B_1 \overline{\otimes} B_2$ and
+    \[
+        B_1 \overline{\otimes} B_2\cong A_1\overline{\otimes} A_2/ (I_1\otimes 1+1\otimes I_2)(A_1\overline{\otimes} A_2).
+    \]
+\end{lemma}
+\begin{proof}
+    That $A_1\overline{\otimes} A_2/ (I_1\otimes 1+1\otimes I_2)(A_1\overline{\otimes} A_2)$ is a complex analytic local algebra follows from our assumption. That it represents  $B_1 \overline{\otimes} B_2$ follows from general abstract nonsense. \textcolor{red}{Include details}
+\end{proof}
+
+\begin{corollary}
+    Let $A_1$, $A_2$ be complex analytic local algebras, then $A_1\overline{\otimes} A_2$ exists. 
+\end{corollary}
+\begin{proof}
+    This is a consequence of \cref{lma-quotientimplyexistencetensor} and \cref{lma-Cmexistencetensor}.
+\end{proof}
+
+\begin{thm}
+    Let $A_1,A_2$ be complex analytic local algebras, then there are natural isomorphisms
+    \[
+      A_1\hat{\otimes}_{\mathbb{C}} A_2 \cn  (A_1\overline{\otimes} A_2)^{\hat{}}.
+    \]
+\end{thm}
+Here on the right-hand side, we take the adic completion with respect to the maximal ideal in $A_1\overline{\otimes} A_2$.
+\begin{proof}
+    Observe that the existence of a morphism $A_1\hat{\otimes} A_2 \rightarrow  (A_1\overline{\otimes} A_2)^{\hat{}}$ follows from the universal property.
+
+    When $A_1$ and $A_2$ are both rings of convergent power series, this result follows from \cref{lma-Cmexistencetensor} and \cref{prop-completionconvergenseries}. 
+
+    In general, represent 
+    \[
+        A_1=\mathbb{C}\{ z_1,\ldots,z_m\}/I_1,\quad   A_2=\mathbb{C}\{ w_1,\ldots,w_n\}/I_2.
+    \]
+    Then we have a commutative diagram
+    \[ 
+    \begin{tikzcd}
+        & \mathbb{C}\{ z_1,\ldots,z_m\} \hat{\otimes}_{\mathbb{C}}  \mathbb{C}\{ w_1,\ldots,w_n\} \arrow[r]\arrow[d] & (\mathbb{C}\{ z_1,\ldots,z_m\}\overline{\otimes} \mathbb{C}\{ w_1,\ldots,w_n\})^{\hat{}} \arrow[d]\\
+        & A_1\hat{\otimes}_{\mathbb{C}} A_2 \arrow[r] & (A_1\overline{\otimes} A_2)^{\hat{}}
+    \end{tikzcd}.
+    \]
+    We already know tha the upper arrow is an isomorphism, it suffices to identify the kernels of the two vertical maps. The kernel of the right vertical map before completion is given by \cref{lma-quotientimplyexistencetensor}, namely, the ideal generated by $I_1\otimes 1+1\otimes I_2$. Accordingly, the kernel of the right vertical map is the closure of the ideal generated by $I_1\otimes 1+1\otimes I_2$ by \cite[\href{https://stacks.math.columbia.edu/tag/0ARZ}{Tag 0ARZ}]{stacks-project}. On the other hand, it follows from \cite[\href{https://stacks.math.columbia.edu/tag/0ARZ}{Tag 0ARZ}]{stacks-project} that the kenrel of the left vertical map is the closure of the ideal generated by $I_1\otimes 1+1\otimes I_2$. We conclude.
+\end{proof}
+
+\begin{thm}\label{thm-relanalytictensorexist}
+    Let $B$ be a complex analytic local algebra and $A_1,A_2\in \CLA_{\backslash B}$. Then $A_1\overline{\otimes}_B A_2$ exists. Moreover, there is a natural identification of adic rings
+    \[
+        A_1\hat{\otimes}_B A_2 \cn (A_1\overline{\otimes}_B A_2)^{\hat{}}.
+    \]
+\end{thm}
+Here on the right-hand side, we take the adic completion with respect to the maximal ideal in $A_1\overline{\otimes}_B A_2$.
+\begin{proof}
+    Observe that we have a natural map $B\overline{\otimes} B\rightarrow B$: at the level of functor of points, we simply define
+    \[
+        h^B\rightarrow h^{B\overline{\otimes} B}
+    \]
+    by sending an arrow $f:B\rightarrow C$ in $\CLA$ to $(f,f)\in h^{B\overline{\otimes} B}(C)$. We claim that $B\overline{\otimes} B\rightarrow B$ is surjective. In fact, it is easy to construct a section $B\rightarrow B\overline{\otimes} B$, which at the level of functor of points, sends a pair of morphisms  $(f_1:B\rightarrow C,f_2:B\rightarrow C)$ in $\CLA$ to $f_1$.
+
+    It follows from general abstract nonsense that the tensor product
+    \[
+        (A_1\overline{\otimes} A_2)\overline{\otimes}_{B\overline{\otimes} B} B  
+    \]
+    represents $A_1\overline{\otimes}_B A_2$. So we are reduced to the case where $B\rightarrow A_2$ is surjective. Let $I$ denote the kernel of the map $B\rightarrow A_2$. We denote by $J$ the image of $I$ in $A_1$. It is obvious that $A_1/JA_1$ is the desired tensor product.
+
+    In order to compute the completed local ring, we similarly reduce to the case where $B\rightarrow A_2$ is surjective with kernel $I$. In this case, $A_1\overline{\otimes}_B A_2$ is the quotient of $A_1$ by the ideal generated by $I$. So after taking completion, $(A_1\overline{\otimes}_B A_2)^{\hat{}}$ is the quotient of $\hat{A_1}$ by the closed ideal generated by $I$ by \cite[\href{https://stacks.math.columbia.edu/tag/0ARZ}{Tag 0ARZ}]{stacks-project}. On the other hand, $A_1\hat{\otimes}_B A_2$ is also the quotient of $\hat{A_1}$ by the closed ideal generated by $I$ by \cite[\href{https://stacks.math.columbia.edu/tag/0AMZ}{Tag 0AMZ}]{stacks-project}. We conclude.
+\end{proof}
+\begin{remark}
+    One should remark that in general, the completed tensor products of local rings are not local.
+\end{remark}
+
+\printbibliography
+\end{document}
