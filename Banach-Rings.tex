@@ -737,12 +737,18 @@ By \cref{lma-unitmoduloreduction} and \cref{prop-strictlyconvcirccheck}, $f$ is 
 
 \begin{definition}
     Let $(A,\|\bullet\|_A)$ be a normed ring. A \emph{Banach $A$-algebra} is a pair $(B,\|\bullet\|_B)$ such that $(B,\|\bullet\|_B)$ is a Banach $A$-module and $(B,\|\bullet\|_B)$ is a Banach ring.
+
+    A morphism of Banach $A$-algebras is a bounded $A$-algebra homomorphism. The category of Banach $A$-algebras is denoted by $\BanAlgCat_A$.
+\end{definition}
+
+\begin{definition}\label{def-finiteBanachalgebra}
+    Let $A$ be a normed ring. A Banach $A$-algebra $B$ is said to be \emph{finite} if $B$ is finite as a Banach $A$-module. A morphism of finite Banach $A$-algebras is a morphism in $\BanAlgCat_A$. The category of finite Banach $A$-algebras is denoted by $\BanAlgCat_A^f$.
 \end{definition}
 
 \section{Berkovich spectra}
 
 
-\begin{definition}
+\begin{definition}\label{def-Berkspectrum}
     Let $(A,\|\bullet\|_A)$ be a Banach ring. A semi-norm $|\bullet|$ on $A$ is \emph{bounded} if there is a constant $C>0$ such that for any $f\in A$, $|f|\leq C\|f\|_A$.
 
     We write $\Sp A$ for the set of bounded semi-valuations on $A$. We call $\Sp A$ the \emph{Berkovich spectrum} of $A$.
