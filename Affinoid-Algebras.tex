@@ -62,8 +62,8 @@ As we will see, constructing a good function theory, or more precisely, enhancin
 
 
 \section{Affinoid algebras}
-Let $(k,|\bullet|)$ be a complete non-Archimedean valued-field and $H\supseteq |k^{\times}|$ be a subgroup of $R_{>0}$.
-
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $R_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
+ 
 \begin{definition}
     A Banach $k$-algebra $A$ is \emph{$k$-affinoid} (resp. \emph{strictly $k$-affinoid}) if there are $n\in \mathbb{N}$, $r\in \mathbb{R}^n_{>0}$ and an admissible epimorphism $k\{r^{-1}T\}\rightarrow A$ (resp. an admissible epimorphism $k\{T\}\rightarrow A$).
 
@@ -74,26 +74,29 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued-field and $H\supseteq |
 
     The category of $k$-affinoid (resp. strictly $k$-affinoid, resp. $k_H$-affinoid) algebras is denoted by $k\text{-}\AffAlgCat$ (resp. $\text{st-}k\text{-}\AffAlgCat$, resp. $k_H\text{-}\AffAlgCat$). The opposite categories of these categories are denoted by $k\text{-}\AffCat$, $\text{st-}k\text{-}\AffCat$ and $k_H\text{-}\AffCat$. For any $A$ in $k\text{-}\AffAlgCat$ (resp. $\text{st-}k\text{-}\AffAlgCat$, resp. $k_H\text{-}\AffAlgCat$), the corresponding image in the opposite category is denoted by $\Sp A$. We can also identify $\Sp A$ with the topological space defined in \cref{Banach-def-Berkspectrum} in the chapter Banach Rings.
 
-    An affinoid $k$-algebra is a $K$-affinoid algebra for some complete non-Archimedean field extension $K/k$.
+    %An affinoid $k$-algebra is a $K$-affinoid algebra for some complete non-Archimedean field extension $K/k$.
 \end{definition}
 For the notion of admissible morphisms, we refer to \cref{Banach-def-admissiblemorphism} in the chapter Banach rings.
+\begin{remark}
+    Berkovich also introduced the notion of \emph{affinoid $k$-algebras}: it is a $K$-affinoid algebra for some complete non-Archimedean field extension $K/k$. We will not use this notion.
+\end{remark}
 
 
 
 \begin{example}\label{ex-Kraffinoid}
-    Let $r\in \mathbb{R}_{>0}$. We let $K_r$ denote the subring of $k[[T]]$ consisting of $f=\sum_{i=-\infty}^{\infty} a_i T^i$ satisfying $|a_i| r^i\to 0$ for $i\to \infty$ and $i\to -\infty$. We define a norm $\|\bullet\|_r$ on $K_r$ as follows:
+    Let $r\in \mathbb{R}_{>0}$. We let $k_r$ denote the subring of $k[[T]]$ consisting of $f=\sum_{i=-\infty}^{\infty} a_i T^i$ satisfying $|a_i| r^i\to 0$ for $i\to \infty$ and $i\to -\infty$. We define a norm $\|\bullet\|_r$ on $k_r$ as follows:
     \[
           \|f\|_{r}:=\max_{i\in \mathbb{Z}}|a_i| r^i.
     \]
-    We will show in \cref{prop-Krisaffinoid} that $K_r$ is $k$-affinoid.
+    We will show in \cref{prop-Krisaffinoid} that $k_r$ is $k$-affinoid.
 \end{example}
 \begin{proposition}\label{prop-Krisaffinoid}
-    Let $r\in \mathbb{R}_{>0}$, then $(K_r,\|\bullet\|_r)$ defined in \cref{ex-Kraffinoid} is a $k$-affinoid algebra. Moreover, $\|\bullet\|_r$ is a valuation.
+    Let $r\in \mathbb{R}_{>0}$, then $(k_r,\|\bullet\|_r)$ defined in \cref{ex-Kraffinoid} is a $k$-affinoid algebra. Moreover, $\|\bullet\|_r$ is a valuation.
 \end{proposition}
 \begin{proof}
     Observe that we have an admissible epimorphism
     \[
-        \iota:k\{r^{-1}T_1,rT_2\}\rightarrow K_r,\quad T_1\mapsto T, T_2\mapsto T^{-1}.  
+        \iota:k\{r^{-1}T_1,rT_2\}\rightarrow k_r,\quad T_1\mapsto T, T_2\mapsto T^{-1}.  
     \]
     As we do not have the universal property at our disposal yet, let us verify by hand that this defines a ring homomorphism: consider a series
     \[
@@ -113,13 +116,13 @@ For the notion of admissible morphisms, we refer to \cref{Banach-def-admissiblem
     \[
         \sum_{k=-\infty}^{\infty} c_k T^{k}.
     \]
-    We need to verify that $\iota(f)\in K_r$. That is 
+    We need to verify that $\iota(f)\in k_r$. That is 
     \[
         |c_k|r^k\to 0  
     \]
     as $k\to \pm\infty$. When $k\geq 0$, we have $|c_k|\leq |a_{k0}|$ by definition of $c_k$. So $|c_k|r^k\to 0$ as $k\to\infty$ by \eqref{eq-aijrijto0}. The case $k\to -\infty$ is similar.
 
-    We conclude that we have a well-defined map of sets $\iota$. It is straightforward to verify that $\iota$ is a ring homomorphism. Next we show that $\iota$ is surjective. Take $g=\sum_{i=-\infty}^{\infty} c_i T^i\in K_r$. We want to show that $g$ lies in the image of $\iota$. As $\iota$ is a ring homomorphism, it suffices to treat two cases separately: $g=\sum_{i=0}^{\infty} c_i T^i$ and $g=\sum_{i=-\infty}^0 c_iT^i$. We handle the first case only, as the second case is similar. In this case, it suffices to consider $f=\sum_{i=0}^{\infty} c_i T_1^i\in k\{r^{-1}T_1,rT_2\}$. It is immediate that $\iota(f)=g$.
+    We conclude that we have a well-defined map of sets $\iota$. It is straightforward to verify that $\iota$ is a ring homomorphism. Next we show that $\iota$ is surjective. Take $g=\sum_{i=-\infty}^{\infty} c_i T^i\in k_r$. We want to show that $g$ lies in the image of $\iota$. As $\iota$ is a ring homomorphism, it suffices to treat two cases separately: $g=\sum_{i=0}^{\infty} c_i T^i$ and $g=\sum_{i=-\infty}^0 c_iT^i$. We handle the first case only, as the second case is similar. In this case, it suffices to consider $f=\sum_{i=0}^{\infty} c_i T_1^i\in k\{r^{-1}T_1,rT_2\}$. It is immediate that $\iota(f)=g$.
 
 
     Next we show that $\iota$ is admissible. We first identify the kernel of $\iota$. We claim that the kenrel is the ideal $I$ generated by $T_1T_2-1$. It is obvious that $I\subseteq \ker \iota$. Conversely, consider an element
@@ -149,9 +152,9 @@ For the notion of admissible morphisms, we refer to \cref{Banach-def-admissiblem
 
     It remains to show that $\iota$ is admissible. In fact, we will prove a stronger result: $\iota$ induces an isometric isomorphism
     \[
-        k\{r^{-1}T_1,rT_2\}/I\rightarrow K_r. 
+        k\{r^{-1}T_1,rT_2\}/I\rightarrow k_r. 
     \]
-    To see this, take $f=\sum_{k=-\infty}^{\infty}c_k T^k\in K_r$ and we need to show that 
+    To see this, take $f=\sum_{k=-\infty}^{\infty}c_k T^k\in k_r$ and we need to show that 
     \[
         \|f\|_r=\inf\{\|g\|_{(r,r^{-1})}:\iota(g)=f\}.
     \]
@@ -181,10 +184,10 @@ For the notion of admissible morphisms, we refer to \cref{Banach-def-admissiblem
 \end{proof}
 
 \begin{proposition}
-    Let $r\in \mathbb{R}_{>0}\setminus \sqrt{|k^{\times}|}$, then $\|\bullet\|_r$ defined in \cref{ex-Kraffinoid} is a valuation on $K_r$.
+    Let $r\in \mathbb{R}_{>0}\setminus \sqrt{|k^{\times}|}$, then $\|\bullet\|_r$ defined in \cref{ex-Kraffinoid} is a valuation on $k_r$.
 \end{proposition}
 \begin{proof}
-    Take $f,g\in K_r$, we need to show that
+    Take $f,g\in k_r$, we need to show that
     \[
       \|fg\|_r\geq \|f\|_r\|g\|_r.  
     \]
@@ -217,50 +220,52 @@ For the notion of admissible morphisms, we refer to \cref{Banach-def-admissiblem
 \end{remark}
 
 \begin{proposition}\label{prop-Krvaluation}
-    Assume that $r\in \mathbb{R}_{>0}\setminus \sqrt{|k^{\times}|}$. Then $K_r$ is a valuation field and $\|\bullet\|_r$ is non-trivial.
+    Assume that $r\in \mathbb{R}_{>0}\setminus \sqrt{|k^{\times}|}$. Then $k_r$ is a valuation field and $\|\bullet\|_r$ is non-trivial.
 \end{proposition}
 \begin{proof}
-    We first show that $\Sp K_r$ consists of a single point: $\|\bullet\|_r$. Assume that $|\bullet|\in \Sp K_r$. As $\|\bullet\|_r$ is a valuation, we find 
+    We first show that $\Sp k_r$ consists of a single point: $\|\bullet\|_r$. Assume that $|\bullet|\in \Sp k_r$. As $\|\bullet\|_r$ is a valuation, we find 
     \begin{equation}\label{eq-compseminormnormr}
       |\bullet|\leq \|\bullet\|_r.  
     \end{equation}
     In particular, $|\bullet|$ restricted to $k$ is the given valuation on $k$. It suffices to show that $|T|=r$. This follows from \eqref{eq-compseminormnormr} applied to $T$ and $T^{-1}$.
 
-    It follows that $K_r$ does not have any non-zero proper closed ideals: if $I$ is such an ideal, $K_r/I$ is a Banach $k$-algebra. By \cref{Banach-prop-Berkospecnonempty} in the chapter Banach rings, $\Sp K_r$ is non-empty. So $K_r$ has to admit bounded semi-valuation with non-trivial kernel.
+    It follows that $k_r$ does not have any non-zero proper closed ideals: if $I$ is such an ideal, $k_r/I$ is a Banach $k$-algebra. By \cref{Banach-prop-Berkospecnonempty} in the chapter Banach rings, $\Sp k_r$ is non-empty. So $k_r$ has to admit bounded semi-valuation with non-trivial kernel.
 
-    In particular, by \cref{Banach-cor:maximalidealclosedinBanachring} in the chapter Banach rings, the only maximal ideal of $K_r$ is $0$. It follows that $K_r$ is a field.
+    In particular, by \cref{Banach-cor:maximalidealclosedinBanachring} in the chapter Banach rings, the only maximal ideal of $k_r$ is $0$. It follows that $k_r$ is a field.
 
     The valuation $\|\bullet\|_r$ is non-trivial as $\|T\|_r=r$.
 \end{proof}
 
 \begin{definition}
-    Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$. Assume that $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$. We define 
+    An element $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ for some $n\in \mathbb{N}$ is called a \emph{$k$-free polyradius} if $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$.
+
+    Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$. Assume that $r$ is a $k$-free polyradius. We define 
     \[
-        K_r=K_{r_1}\hat{\otimes}_k \cdots \hat{\otimes}_k K_{r_n}.  
+        k_r=k_{r_1}\hat{\otimes}_k \cdots \hat{\otimes}_k k_{r_n}.  
     \]
 \end{definition}
-By an interated application of \cref{prop-Krvaluation}, $K_r$ is a complete valuation field.
+By an interated application of \cref{prop-Krvaluation}, $k_r$ is a complete valuation field.
 
-As a general explanation of why $K_r$ is useful, we prove the following proposition:
+As a general explanation of why $k_r$ is useful, we prove the following proposition:
 \begin{proposition}\label{prop-Krfaithflat}
-    Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$. Assume that $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$. 
+    Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)$ be a $k$-free polyradius.
     \begin{enumerate}
         \item For any $k$-Banach space $X$, the natural map
         \[
-            X\rightarrow X\hat{\otimes}_k K_r    
+            X\rightarrow X\hat{\otimes}_k k_r    
         \]
         is an isometric embedding.
-        \item Consider a sequence of bounded homomorphisms of $k$-Banch spaces $X\rightarrow Y\rightarrow Z$. Then the sequence is admissible and exact (resp. coexact) if and only if $X\hat{\otimes}_k K_r \rightarrow Y\hat{\otimes}_k K_r \rightarrow Z\hat{\otimes}_k K_r $ is admissible and exact (resp. coexact).
+        \item Consider a sequence of bounded homomorphisms of $k$-Banch spaces $X\rightarrow Y\rightarrow Z$. Then the sequence is admissible and exact (resp. coexact) if and only if $X\hat{\otimes}_k k_r \rightarrow Y\hat{\otimes}_k k_r \rightarrow Z\hat{\otimes}_k k_r $ is admissible and exact (resp. coexact).
     \end{enumerate}
 \end{proposition}
 \begin{proof}
     We may assume that $n=1$. 
 
-    (1) We have a more explicit description of $X\hat{\otimes}_k K_r$: as a vector space, it is the space of $f=\sum_{i=-\infty}^{\infty}a_i T^i$ with $a_i\in X$ and $\|a_i\|r^i\to 0$ when $|i|\to \infty$. The norm is given by $\max_i\|a_i\|r^i$. From this description, the embedding is obvious.
+    (1) We have a more explicit description of $X\hat{\otimes}_k k_r$: as a vector space, it is the space of $f=\sum_{i=-\infty}^{\infty}a_i T^i$ with $a_i\in X$ and $\|a_i\|r^i\to 0$ when $|i|\to \infty$. The norm is given by $\max_i\|a_i\|r^i$. From this description, the embedding is obvious.
 
     (2) This follows easily from the explicit description in (1).
 \end{proof}
-When $X$ is a Banach $k$-algebra,  $X\hat{\otimes}_k K_r$ is a Banach $K_r$-algebra. 
+When $X$ is a Banach $k$-algebra,  $X\hat{\otimes}_k k_r$ is a Banach $k_r$-algebra. 
 
 
 \begin{proposition}\label{prop-strictlykafffinite}
@@ -309,10 +314,10 @@ When $X$ is a Banach $k$-algebra,  $X\hat{\otimes}_k K_r$ is a Banach $K_r$-alge
 
 
 \begin{proposition}\label{prop-redtostrictlykaff}
-    Let $A$ be a $k$-affinoid algebra, then there is $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ such that $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$ and such that $A\hat{\otimes}_k K_r$ is strictly $K_r$-affinoid. Moreover, we can guarantee that $K_r$ is non-trivially valued.
+    Let $A$ be a $k$-affinoid algebra, then there is $n\in \mathbb{N}$ and a $k$-free polyradius $r=(r_1,\ldots,r_n)$ such that $A\hat{\otimes}_k k_r$ is strictly $k_r$-affinoid. Moreover, we can guarantee that $k_r$ is non-trivially valued.
 \end{proposition} 
 \begin{proof}
-    By \cref{prop-Krfaithflat}, we may assume that $A=k\{t^{-1}T\}$ for some $t\in \mathbb{R}^m_{>0}$. By \cref{lma-tatestrictaff}, it suffices to take $r$ so that the linear subspace of $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$ generated by $r_1,\ldots,r_n$ contains all components of $t$. By taking $n\geq 1$, we can guarantee that $K_r$ is non-trivially valued.
+    By \cref{prop-Krfaithflat}, we may assume that $A=k\{t^{-1}T\}$ for some $t\in \mathbb{R}^m_{>0}$. By \cref{lma-tatestrictaff}, it suffices to take $r$ so that the linear subspace of $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$ generated by $r_1,\ldots,r_n$ contains all components of $t$. By taking $n\geq 1$, we can guarantee that $k_r$ is non-trivially valued.
 \end{proof}
 
 \begin{proposition}
@@ -520,6 +525,8 @@ In the complex setting, we can perturb a convergent power series so that it has 
     for some $p_i\in \tilde{k}[T_1,\ldots,T_{n-1}]$ and $p_s=\tilde{a_{\beta}}$. Our claim follows.
 \end{proof}
 
+
+
 \begin{proposition}\label{prop-strictnoetherian}
     Let $n\in \mathbb{N}$. Then $k\{T_1,\ldots,T_n\}$ is Noetherian.
 \end{proposition}
@@ -568,7 +575,9 @@ In the complex setting, we can perturb a convergent power series so that it has 
     Any UFD is normal by \cite[\href{https://stacks.math.columbia.edu/tag/0AFV}{Tag 0AFV}]{stacks-project}.
 \end{proof}
 
-\section{Noetherian normalization}
+
+
+\section{Noetherian normalization and maximal modulus principle}
 Let $(k,|\bullet|)$ be a complete non-trivially valued non-Archimedean valued-field. 
 
 \begin{thm}\label{thm-Noetheriannorm}
@@ -584,17 +593,109 @@ Let $(k,|\bullet|)$ be a complete non-trivially valued non-Archimedean valued-fi
     Take some $n\in \mathbb{N}$ and a surjective $k$-algebra homomorphism $k\{T_1,\ldots,T_n\}\rightarrow A$ and apply \cref{thm-Noetheriannorm}, we conclude.
 \end{proof}
 
+\begin{corollary}\label{cor-affinoidquotientfinite}
+    Let $A$ be a strictly $k$-affinoid algebra and $I$ be an ideal in $A$ such that $\sqrt{I}$ is a maximal ideal in $A$, then $A/I$ is finite-dimensional over $k$.
+
+    In particular, $\Spm A=\Spm_k A$.
+\end{corollary}
+\begin{proof}
+    By \cref{cor-noenormalization}, there is $d\in \mathbb{N}$ and a finite monomorphism $f:k\{T_1,\ldots,T_d\}\rightarrow A/I$. It suffices to show that $d=0$. Observe that the composition 
+    \[
+        k\{T_1,\ldots,T_d\}\xrightarrow{f} A/I\rightarrow A/\sqrt{I}
+    \]
+    is finite and injective as $k\{T_1,\ldots,T_d\}$ is an integral domain, so $k\{T_1,\ldots,T_d\}$ is a field. This is possible only when $d=0$. 
+\end{proof}
+
+\begin{definition}
+    For any non-Archimedean valuation field $(K,|\bullet|)$ and $n\in \mathbb{N}$, we define the \emph{$n$-dimensional polydisk} with value in $K$:
+    \[
+        B^n(K):=\left\{(x_1,\ldots,x_n)\in K^n: \max_{i=1,\ldots,n}|x_i|\leq 1\right\}.
+    \]
+\end{definition}
+
+\begin{definition}
+    Let $n\in \mathbb{N}$ and $f\in k\{T_1,\ldots,T_n\}$, say with an expansion
+    \[
+        f=\sum_{\alpha \in \mathbb{N}^n} a_{\alpha}T^{\alpha},\quad a_{\alpha}\in k.  
+    \]
+    We define the associated function $f:B^n(k^{\alg})\rightarrow k^{\alg}$ as sending $x=(x_1,\ldots,x_n)\in B^n(k^{\alg})$ to 
+    \[
+        \sum_{\alpha \in \mathbb{N}^n} a_{\alpha}x^{\alpha}.
+    \]
+\end{definition}
+
+
+\begin{lemma}\label{lma-finducecontfunction}
+    Let $n\in \mathbb{N}$ and $f\in k\{T_1,\ldots,T_n\}$, then $f:B^n(k^{\alg})\rightarrow k^{\alg}$ is continuous and for any $x\in B^n(k^{\alg})$,
+    \[
+        |f(x)|\leq \|f\|_1.
+    \]
+    There is $x=(x_1,\ldots,x_n)\in B^n(k^{\alg})$ such that $|f(x)|=\|f\|_1$.
+\end{lemma}
+\begin{proof}
+    To see that $f$ is continuous, it suffices to observe that $f$ is a uniform limit of polynomials. For any $x=(x_1,\ldots,x_n)\in B^n(k^{\alg})$, we have
+    \[
+        |f(x)|  =\left|\sum_{\alpha \in \mathbb{N}^n} a_{\alpha}x^{\alpha}\right|\leq \max_{\alpha \in \mathbb{N}^n} |a_{\alpha}x^{\alpha}|\leq \|f\|_1.
+    \]
+    To prove the last assertion, we may assume that $\|f\|_1=1$. As the residue field of $k^{\alg}$ is equal to $\tilde{k}^{\alg}$, it has infinitely many elements, so there is a point $x\in B^n(k^{\alg})$ such that $\widetilde{f(x)}=\tilde{f}(\tilde{x})\neq 0$. In other words, $\|f(x)\|_1=1$.
+\end{proof}
+
+\begin{proposition}\label{prop-maxmod}
+    Let $n\in \mathbb{N}$, then the maximal modulus principle holds for $k\{T_1,\ldots,T_n\}$. Moreover, for any $f\in k\{T_1,\ldots,T_n\}$, $\|f\|_1=|f|_{\sup}$.
+\end{proposition}
+\begin{proof}
+    By \cref{Banach-lma-supnormbddbyrho} in the chapter Banach Rings, we have
+    \[
+        \|f\|_1\geq |f|_{\sup}
+    \]
+    for any $f\in A$. We only have to show that for any $f\in k\{T_1,\ldots,T_n\}$ there is a maximal ideal $\mathfrak{m}\subseteq k\{T_1,\ldots,T_n\}$ such that $|f(\mathfrak{m})|=\|f\|_1$.
+
+    By \cref{lma-finducecontfunction} we can take $x=(x_1,\ldots,x_n)\in B^n(k^{\alg})$ such that $|f(x)|=\|f\|_1$. Let $L$ be the field extension of $k$ generated by $x_1,\ldots,x_n$, then $L/k$ is finite. Then we can define a homomorphism
+    \[
+        \mathrm{ev}_x:  k\{T_1,\ldots,T_n\} \rightarrow L
+    \]
+    sending $g\in k\{T_1,\ldots,T_n\}$ to $g(x)$. Observe that the image is indeed in $L$. Clearly $\mathrm{ev}_x$ is surjective. So $\mathfrak{m}_x:=\ker \mathrm{ev}_x$ is a $k$-algebraic maximal ideal in $k\{T_1,\ldots,T_n\}$. Then
+    \[
+        |f(\mathfrak{m}_x)|=|f(x)|=\|f\|_1.  
+    \]
+\end{proof}
+
+
+\begin{corollary}\label{cor-strictlyaffsupnorm}
+    Let $A$ be a strictly $k$-affinoid algebra. Then for any $f\in A$,
+    \[
+        |f|_{\sup}\subseteq \sqrt{|k^{\times}|}\cup \{0\}.  
+    \]
+\end{corollary}
+\begin{proof}
+    We may assume that $A\neq 0$.
+    By \cref{cor-noenormalization} and \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings, we may assume that $A=k\{T_1,\ldots,T_n\}$ for some $n\in \mathbb{N}$. The result then follows from \cref{prop-maxmod}.
+\end{proof}
+
+
+\begin{corollary}\label{cor:maxmodprin}
+    Maximal modulus principle holds for any strictly $k$-affinoid algebras.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{cor-noenormalization}, \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings and \cref{prop-maxmod}.
+\end{proof}
+
+
 \section{Properties of affinoid algebras}
-Let $(k,|\bullet|)$ be a complete non-Archimedean valued-field.
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $R_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
 
 \begin{proposition}\label{prop-powerbddinstrictlyaff}
     Assume that $k$ is non-trivially valued. Let $A$ be a strictly $k$-afifnoid algebra. Then
     \[
-        \mathring{A}=\{f\in A: \rho(f)\leq 1\}.    
+        \mathring{A}=\{f\in A: \rho(f)\leq 1\}=\{f\in A: |f|_{\sup}\leq 1\}.    
     \]
 \end{proposition}
 \begin{proof}
-    It is clear that $\mathring{A}\subseteq \{f\in A: \rho(f)\leq 1\}$. Conversely, let $f\in A$, $\rho(f)\leq 1$. Choose $d\in \mathbb{N}$ and a surjective $k$-algebra homomorphism
+    By \cref{Banach-lma-supnormbddbyrho}, we have 
+    \[
+        \mathring{A}\subseteq \{f\in A: \rho(f)\leq 1\}\subseteq \{f\in A: |f|_{\sup}\leq 1\}. 
+    \]
+    Conversely, let $f\in A$, $|f|_{\sup}\leq 1$. Choose $d\in \mathbb{N}$ and a surjective $k$-algebra homomorphism
     \[
         \varphi:k\{T_1,\ldots,T_d\}\rightarrow A.  
     \]
@@ -605,22 +706,39 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued-field.
     The right-hand side is clearly bounded.
 \end{proof}
 
+\begin{corollary}\label{cor-rhoequsup}
+    Assume that $k$ is non-trivially valued.
+    Let $(A,\|\bullet\|)$ be a strictly $k$-affinoid algebra. For any $f\in A$,
+    \[
+        \rho(f)=|f|_{\sup}.  
+    \]
+\end{corollary}
+\begin{proof}
+    We have shown that $\rho(f)\geq |f|_{\sup}$ in \cref{Banach-lma-supnormbddbyrho} from the chapter Banach Rings. 
+    Assume tha tthe inverse inequality fails: for some $f\in A$,
+    \[
+        \rho(f)> |f|_{\sup}.
+    \]
+    If $|f|_{\sup}=0$, then $f$ lies in the Jacobson radical of $A$, which is equal to the nilradial of $A$ by \cref{prop-TateJacobson}. But then $\rho(f)=0$ as well. We may therefore assume that $|f|_{\sup}\neq 0$.
+    By \cref{cor-strictlyaffsupnorm}, we may assume that $|f|_{\sup}=1$ as $\rho$ is power-multiplicative. Then $\rho(f)>1$. This contradicts \cref{prop-powerbddinstrictlyaff}.
+\end{proof}
+
 \begin{thm}\label{thm-affnoetherian}
 A $k$-affinoid algebra $A$ is Noetherian and all ideals of $A$ are closed.  
 \end{thm}
 \begin{proof}
     Let $I$ be an ideal in $A$. 
-    By \cref{prop-redtostrictlykaff}, we can take a suitable $r\in \mathbb{R}^m_{>0}$ so that $A\hat{\otimes} K_r$ is strictly $K_r$-affinoid. Then $I (A\hat{\otimes} K_r)$ is an ideal in $A\hat{\otimes} K_r$. By \cref{prop-strictnoetherian}, the latter ring is Noetherian. So we may take finitely many generators $f_1,\ldots,f_k\in I$. Each $f\in I$ can be written as 
+    By \cref{prop-redtostrictlykaff}, we can take a suitable $r\in \mathbb{R}^m_{>0}$ so that $A\hat{\otimes} k_r$ is strictly $k_r$-affinoid. Then $I (A\hat{\otimes} k_r)$ is an ideal in $A\hat{\otimes} k_r$. By \cref{prop-strictnoetherian}, the latter ring is Noetherian. So we may take finitely many generators $f_1,\ldots,f_k\in I$. Each $f\in I$ can be written as 
     \[
         f=\sum_{i=1}^k f_i g_i  
     \]
-    with $g_i=\sum_{j=-\infty}^{\infty}g_{i,j}T^j\in A\hat{\otimes} K_r$. But then 
+    with $g_i=\sum_{j=-\infty}^{\infty}g_{i,j}T^j\in A\hat{\otimes} k_r$. But then 
     \[
         f=\sum_{i=1}^k f_i g_{i,0}.  
     \]
     So $I$ is finitely generated.
 
-    As $I=A\cap (I (A\hat{\otimes} K_r))$, by \cref{Banach-cor-idealclosed} in the chapter Banach Rings, we see that $I$ is closed in $A\hat{\otimes} K_r$ and hence closed in $A$.
+    As $I=A\cap (I (A\hat{\otimes} k_r))$, by \cref{Banach-cor-idealclosed} in the chapter Banach Rings, we see that $I$ is closed in $A\hat{\otimes} k_r$ and hence closed in $A$.
 \end{proof}
 
 \begin{proposition}\label{prop-fnnormbyrho}
@@ -699,6 +817,125 @@ Recall that $\rho$ is the spectral radius map defined in \cref{Banach-def-spectr
     \]  
     It follows that $\psi$ is an admissible epimorphism.
 \end{proof}
+
+\begin{corollary}\label{cor-affkhann}
+    Let $A$ be a Banach $k$-algebra, $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)$ be a $k$-free polyradius. Assume that $A\hat{\otimes}_k k_r$ is $k_r$-affinoid, then $A$ is $k$-affinoid.
+
+    If $A\hat{\otimes}_k k_r$ is $k_H$-affinoid and $r\in H$, then $A$ is also $k_H$-affinoid. 
+\end{corollary}
+\begin{proof}
+    We may assume that $r$ has only one component.
+
+    Take $m\in \mathbb{N}$, $p_1,\ldots,p_m\in \mathbb{R}_{>0}$ and an admissible epimorphism
+    \[
+        \pi:k_r\{p_1^{-1}S_1,\ldots,p_{m}^{-1}S_m\}\rightarrow  A\hat{\otimes}_k k_r. 
+    \]
+    Let 
+    \[
+        \pi(S_i)=\sum_{j=-\infty}^{\infty} a_{i,j}T^j,\quad a_{i,j}\in A  
+    \]
+    for $i=1,\ldots,m$. By \cref{prop-admissepiperturbation}, we may assume that there is a large integer $l$ such that $a_{i,j}=0$ for $|j|>l$ and for any $i=1,\ldots,m$. We define $B=k\{p_i^{-1}r^jT_{i,j}\}$, $i=1,\ldots,n$ and $j=-l,-l+1,\ldots,l$. Let $\varphi:B\rightarrow A$ be the bounded $k$-algebra homomorphism sending $T_{i,j}$ to $a_{i,j}$. The existence of $\varphi$ is guaranteed by \cref{cor-univpropTatenonstrict}.
+
+    We claim that $\varphi$ is an admissible epimorphism. It is clearly an epimorphism. Let us show that $\varphi$ is admissible. Let $\eta:k_r\{p_1^{-1}S_1,\ldots,p_{m}^{-1}S_m\}\rightarrow B\hat{\otimes}_k k_r$ be the bounded homomorphism sending $S_i$ to $\sum_{j=-l}^l T_{i,j}T^j$, then we have the following commutative diagram
+    \[
+        \begin{tikzcd}
+            k_r\{p^{-1}S\} \arrow[rd, "\pi"] \arrow[d, "\eta"]           &                      \\
+            B\hat{\otimes}_k k_r \arrow[r, "\varphi\hat{\otimes}_k k_r"] & A\hat{\otimes}_k k_r
+        \end{tikzcd}  
+    \]
+    It follows that $\varphi\hat{\otimes}_k k_r$ is also an admissible epimorphism. By  \cref{prop-Krfaithflat}, $\varphi$ is also admissible.
+\end{proof}
+
+
+\section{\texorpdfstring{$H$}{H}-strict affinoid algebras}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $R_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
+
+
+We next give a non-strict extension of \cref{prop-strictlykafffinite}.
+\begin{proposition}\label{prop-strictlykafffinite2}
+    Let $B$ be a $k_H$-affinoid algebra and $\varphi:B\rightarrow A$ be a finite bounded homomorphism into a $k$-Banach algebra $A$. Then $A$ is also $k_H$-affinoid.
+\end{proposition}
+\begin{proof}
+    We first assume that $k$ is non-trivially valued.
+
+    We may assume that $B=k\{r_1^{-1}T_1,\ldots,r_n^{-1}T_n\}$ for some $n\in \mathbb{N}$ and $r_1,\ldots,r_n\in H$.
+    By assumption, we can find finitely many $a_1,\ldots,a_m\in A$ such that $A=\sum_{i=1}^m \varphi(B)a_i$.
+
+    We may assume that $a_i\in \mathring{A}$ as $k$ is non-trivially valued. By \cref{Banach-prop-Tateunivprop} in the chapter Banach Rings, $\varphi$ admits a unique extension to a bounded $k$-algebra epimorphism 
+    \[
+        \Phi:  k\{r_1^{-1}T_1,\ldots,r_n^{-1}T_n,S_1,\ldots,S_m\}\rightarrow A
+    \]
+    sending $S_i$ to $a_i$. By \cref{Banach-cor-bddisadmi} in the chapter Banach Rings, $\Phi$ is admissible. Moreover, the homomorphism $\Phi$ is surjective by our assumption. It follows that $A$ is $k_H$-affinoid.
+
+    If $k$ is trivially valued, then $H$ is non-trivial.
+    Take $s\in H \setminus \{1\}$. It follows from the previous case applied to  $\varphi\hat{\otimes}k_s:B \hat{\otimes}k_s\rightarrow A \hat{\otimes}k_s$ that $A \hat{\otimes}k_s$ is $k_H$-affinoid. By \cref{cor-affkhann}, $A$ is also $k_H$-affinoid. 
+\end{proof}
+
+
+\begin{proposition}\label{prop-affkhchar1}
+    Let $A$ be a Banach $k$-algebra. Then the following are equivalent:
+    \begin{enumerate}
+        \item $A$ is $k_H$-affinoid;
+        \item there are $n\in \mathbb{N}$, $r\in \sqrt{|k^{\times}|\cdot H}$ and an admissible epimorphism $k\{r^{-1}T\}\rightarrow A$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    The non-trivial direction is (2). Assume (2).
+    Take $s_1,\ldots,s_n\in \mathbb{Z}_{>0}$, $c_1,\ldots,c_n\in k^{\times}$ and $h_1,\ldots,h_n\in H$ such that
+    \[
+        r_i^{s_i}=|c_i^{-1}|h_i  
+    \]
+    for $i=1,\ldots,n$. We define a bounded $k$-algebra homomorphism
+    \[
+        \varphi:k\{h_1^{-1}T_1,\ldots,h_n^{-1}T_n\}\rightarrow k\{r_1^{-1}T_1,\ldots,r_n^{-1}T_n\}  
+    \]
+    by sending $T_i$ to $c_i T_i^{s_i}$. The existence of such a homomorphism is guaranteed by \cref{cor-univpropTatenonstrict}. The same proof of \cref{lma-tatestrictaff} shows that $\varphi$ is finite. By \cref{prop-strictlykafffinite2}, $k\{r_1^{-1}T_1,\ldots,r_n^{-1}T_n\}  $ is $k_H$-affinoid.
+\end{proof}
+
+
+\begin{lemma}\label{lma-strictlykaffintermsofrho}
+    Assume that $k$ is non-trivially valued.
+    Let $A$ be a $k$-affinoid algebra. Then the following are equivalent:
+    \begin{enumerate}
+        \item $A$ is strictly $k$-affinoid;
+        \item for any $a\in A$, $\rho(a)\in \sqrt{|k^{\times}|}\cup\{0\}$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    (1) $\implies$ (2) by \cref{cor-strictlyaffsupnorm} and \cref{cor-rhoequsup}.
+
+    (2) $\implies$ (1): Take $n\in \mathbb{N}$, $r\in \mathbb{R}^n_{>0}$ and  an admissible epimorphism 
+    \[
+        \varphi:k\{r^{-1}T\}\rightarrow A.  
+    \]
+    Let $f_i=\varphi(T_i)$ for $i=1,\ldots,n$. Suppose $r_1,\ldots,r_m\not\in \sqrt{|k^{\times}|}$ and $r_{m+1},\ldots,r_n\in \sqrt{|k^{\times}|}$. Then $\rho(f_i)<r_i$ for $i=1,\ldots,m$ and we can choose $r_1',\ldots,r_m'\in \sqrt{|k^{\times}|}$ such that 
+    \[
+        \rho(f_i)\leq r'_i<r_i
+    \]
+    for $i=1,\ldots,m$. Set $r'_i=r_i$ when $i=m+1,\ldots,n$. We can then define a bounded $k$-algebra homomorphism $\psi:k\{r'^{-1}T\}\rightarrow A$ sending $T_i$ to $f_i$ for $i=1,\ldots,n$. The existence of $\psi$ is guaranteed by \cref{cor-univpropTatenonstrict}. Observe that $\psi$ is surjective and admissible. It follows that $A$ is strictly $k$-affinoid.
+\end{proof}
+
+\begin{thm}
+    Let $A$ be a $k$-affinoid algebra. Then the following are equivalent:
+    \begin{enumerate}
+        \item $A$ is $k_H$-affinoid;
+        \item $A$ is $k_{\sqrt{|k^{\times}|\cdot H}}$-affinoid;
+        \item For any non-zero $a\in A$, $\rho(a)\in \sqrt{|k^{\times}|\cdot H}\cup\{0\}$.
+    \end{enumerate}
+\end{thm}
+\begin{proof}
+    The equivalence between (1) and (2) follows from \cref{prop-affkhchar1}.
+
+    (1) $\implies$ (3): we may assume that $H\supseteq |k^{\times}|$. Take $n\in \mathbb{N}$, $r=(r_1,\ldots,r_n)\in H^n$ and an admissible epimorphism 
+    \[
+        \varphi:k\{r^{-1}T\} \rightarrow A. 
+    \]
+    Take a $k$-free polyradius $s$ with at least one component so that $|k_s|\supseteq \{r_1,\ldots,r_n\}$. We can apply \cref{lma-strictlykaffintermsofrho} to $\varphi\hat{\otimes}_k k_s$, it follows that $\rho(A)\subseteq \sqrt{|k_s^{\times}|}\cup \{0\}$.
+
+    (3) $\implies$ (2): we may assume that $H\supseteq |k^{\times}|$. It suffices to apply the same argument as (2) $\implies$ (1) in the proof of \cref{lma-strictlykaffintermsofrho}.
+
+\end{proof}
+
 
 \section{Finite modules over affinoid algebras}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field. 
@@ -786,14 +1023,14 @@ Here the Banach $A$-module structure on $M\otimes_A N$ is given by \cref{prop-fi
 \end{proof}
 
 \begin{proposition}
-    Let $A$ be a $k$-affinoid algebra. Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$. Assume that $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$. Then $M$ is a finite Banach $A$-module if and only if $M\hat{\otimes}_k K_r$ is a finite Banach $A\hat{\otimes}_k K_r$-module.
+    Let $A$ be a $k$-affinoid algebra. Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)$ be a $k$-free polyradius. Then $M$ is a finite Banach $A$-module if and only if $M\hat{\otimes}_k k_r$ is a finite Banach $A\hat{\otimes}_k k_r$-module.
 \end{proposition}
 \begin{proof}
-    We may assume that $r$ has only one component and write $r_1=r$. The direct implication is trivial. Let us assume that $M\hat{\otimes}_k K_r$ is a finite Banach $A\hat{\otimes}_k K_r$-module. Take $n\in \mathbb{N}$ and an admissible epimorphism of $A\hat{\otimes}_k K_r$-modules
+    We may assume that $r$ has only one component and write $r_1=r$. The direct implication is trivial. Let us assume that $M\hat{\otimes}_k k_r$ is a finite Banach $A\hat{\otimes}_k k_r$-module. Take $n\in \mathbb{N}$ and an admissible epimorphism of $A\hat{\otimes}_k k_r$-modules
     \[
-        \varphi:  (A\hat{\otimes}_k K_r)^n\rightarrow M\hat{\otimes}_k K_r.
+        \varphi:  (A\hat{\otimes}_k k_r)^n\rightarrow M\hat{\otimes}_k k_r.
     \]
-    Let $e_1,\ldots,e_n$ denotes the standard basis of $(A\hat{\otimes}_k K_r)^n$. We expand
+    Let $e_1,\ldots,e_n$ denotes the standard basis of $(A\hat{\otimes}_k k_r)^n$. We expand
     \[
         \varphi(e_i)=\sum_{j=-\infty}^{\infty} m_{i,j}T^j.  
     \]
@@ -828,9 +1065,19 @@ Recall that $\BanAlgCat_A^f$ is defined in \cref{Banach-def-finiteBanachalgebra}
     It follows that the multiplication in $B$ is bounded and hence $B$ is a finite Banach algebra. Given any morphism $B\rightarrow B'$ in $\AlgCat_A^f$, we endow $B$ and $B'$ with the norms given by \cref{prop-finteBanachAmoduleequivfinitemodule}. It follows from \cref{lma-finiteBanachmodulemapbdd} that $B\rightarrow B'$ is a bounded homomorphism of finite Banach $A$-algebras. So we have defined an inverse functor to the forgetful functor $\BanAlgCat_A^f\rightarrow \AlgCat_A^f$.
 \end{proof}
 \begin{remark}
-    It is not true that any homomorphism of affinoid $k$-algebras is bounded. For example, if the valuation on $k$ is trivial. Take $0<p<q<1$ and consider the natural homomorphism $K_p\rightarrow K_q$. This homomorphism is bijective but not bounded.
+    It is not true that any homomorphism of $k$-affinoid algebras is bounded. For example, if the valuation on $k$ is trivial. Take $0<p<q<1$ and consider the natural homomorphism $k_p\rightarrow k_q$. This homomorphism is bijective but not bounded.
 \end{remark}
 
+
+\section{Graded reduction}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $R_{>0}$ such that $|k^{\times}|\cdot\Gamma\neq \{1\}$.
+
+\begin{definition}
+    Let $A$ be a $k_H$-affinoid algebra. We define the \emph{$k_H$-graded reduction} of $A$ as the $H$-graded ring
+    \[
+      \tilde{A}^H:=\bigoplus_{h\in H}\left\{x\in A:\rho(x)\leq  h\right\}/\left\{x\in A:\rho(x)<  h\right\}.  
+    \]
+\end{definition}
 
 \section{Affinoid domains}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H\supseteq |k^{\times}|$ be a subgroup of $R_{>0}$.
@@ -872,9 +1119,9 @@ It is not immediately clear that $A_V$ is canonically assocaited with $V$. We wi
 \begin{proof}
     Let us reduce the problem to the case where $k$ is non-trivially valued and $A$ and $A_V$ are both strictly $k$-affinoid. 
     
-    By \cref{prop-redtostrictlykaff}, taking a suitable $r=r(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ such that $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$, we may guarantee that $A\hat{\otimes}_k K_r$ and $A_V\hat{\otimes}_k K_r$ are both strictly $K_r$-affinoid.
+    By \cref{prop-redtostrictlykaff}, taking a suitable $r=r(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ such that $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$, we may guarantee that $A\hat{\otimes}_k k_r$ and $A_V\hat{\otimes}_k k_r$ are both strictly $k_r$-affinoid.
 
-    Let $V'$ be the inverse image of $V$ in $\Sp A\hat{\otimes}_k K_r$. We claim that $V'$ is a strict $K_r$-affinoid domain in $\Sp A\hat{\otimes}_k K_r$ represented by $A\hat{\otimes}_k K_r\rightarrow A_V\hat{\otimes}_k K_r$.
+    Let $V'$ be the inverse image of $V$ in $\Sp A\hat{\otimes}_k k_r$. We claim that $V'$ is a strict $k_r$-affinoid domain in $\Sp A\hat{\otimes}_k k_r$ represented by $A\hat{\otimes}_k k_r\rightarrow A_V\hat{\otimes}_k k_r$.
 \end{proof}
 
 \section{Graded reduction}

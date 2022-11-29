@@ -716,7 +716,7 @@ By \cref{lma-unitmoduloreduction} and \cref{prop-strictlyconvcirccheck}, $f$ is 
         \end{tikzcd}  
     \]
     with $g$ being an admissible monomorphism. We need to show that $p$ is an adimissible monomorphism. This boils down to the following: $p$ is injective with closed image and the norms on $p(V)$ obtained in the obvious ways are equivalent.
-    As in the case of pull-backs, we may let $\alpha:W\rightarrow U\oplus V$ be the  morphism $(g,-f)$ and assume that $M=\coker \alpha$. It is then easy to see that $p$ is injective. The proof that the two norms on $p(V)$ are equivalent is parallel to the argument in the pull-back case and we omit it.
+    As in the case of pull-backs, we may let $\alpha:W\rightarrow U\oplus V$ be the  morphism $(g,-f)$ and assume that $M=\coker \alpha$. It is then easy to see that $p$ is injective. The proof that the two norms on $p(V)$ are equivalent is parallel to the argument in the pull-back case, and we omit it.
 
     It remains to verify that $p(V)$ is closed in $W$. Consider the admissibly coexact sequence in $\BanCat_A$:
     \[
@@ -1155,15 +1155,24 @@ Let $(k,|\bullet|)$ a complete non-Archimedean valued field.
     When $A$ is a reduced and integral $k$-algebra, all prime ideals of $A$ are minimal. The final assertion follows from \cref{prop-spnormprimesred}.
 \end{proof}
 
+
+\begin{definition}
+    Let $A$ be a $k$-Banach algebra. We say that \emph{maximal modulus principle} holds for $A$ if for any $f\in A$, there is $x\in \Spm_k A$ such that $|f(x)|=|f|_{\sup}$.
+\end{definition}
+
 \begin{proposition}\label{prop-fsupspecexp}
-    Let $\varphi:B\rightarrow A$ be an injective integral homomorphism of $k$-algebras. Assume that $B$ is a normal integral domain. Fix $f\in A$.
-    Let $f^n+\varphi(b_1)f^{n-1}+\cdots+\varphi(b_n)=0$ be the minimal equation of $f$ over $A$. Then
-    \[
-        |f|_{\sup}=\max_{i=1,\ldots,n} |b_i|_{\sup}^{1/i}.  
-    \]
+    Let $\varphi:B\rightarrow A$ be an injective integral homomorphism of Banach $k$-algebras. Assume that $B$ is a normal integral domain. 
+    \begin{enumerate}
+        \item Fix $f\in A$.
+        Let $f^n+\varphi(b_1)f^{n-1}+\cdots+\varphi(b_n)=0$ be the minimal equation of $f$ over $A$. Then
+        \[
+            |f|_{\sup}=\max_{i=1,\ldots,n} |b_i|_{\sup}^{1/i}.  
+        \]
+        \item Assume that maximal modulus principle holds for $B$, then it holds for $A$ as well.
+    \end{enumerate}
 \end{proposition}
 \begin{proof}
-    We first show the inequality 
+    (1) We first show the inequality 
     \[
         |f|_{\sup}\leq \max_{i=1,\ldots,n} |b_i|_{\sup}^{1/i}.    
     \]
@@ -1216,6 +1225,17 @@ Let $(k,|\bullet|)$ a complete non-Archimedean valued field.
     Therefore, 
     \[
       |f|_{\sup}=\sup_{y\in \Spm_k B}\sigma(q_y)=\max_{i=1,\ldots,n} |b_i|_{\sup}^{1/n}.  
+    \]
+
+    (2) Take a non-zero $f\in A$.
+    Using the notations in (1),
+    we can find $y\in \Spm_k B$ such that 
+    \[
+        |\bar{f}_y|_{\sup}=\sigma(q_y)=|f|_{\sup}.  
+    \]
+    As $A/yA$ contains only finitely many maximal ideals, there is $x\in \Spm_k A$ such that $|\bar{f}_y|_{\sup}=|f(x)|$. So 
+    \[
+        |f|_{\sup}=|f(x)|.
     \]
 \end{proof}
 
