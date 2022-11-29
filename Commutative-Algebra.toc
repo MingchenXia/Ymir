@@ -1,8 +1,4 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {english}{}
-\defcounter {refsection}{0}\relax 
+\babel@toc {english}{}\relax 
 \contentsline {section}{\tocsection {}{1}{Introduction}}{4}{section.0.1}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{2}{Graded commutative algebra}}{4}{section.0.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{11}{chapter*.1}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{13}{chapter*.1}%

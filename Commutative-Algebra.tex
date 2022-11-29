@@ -44,7 +44,7 @@ When we regard an Abelian group as a $G$-graded Abelian group and there are no n
 
     
 
-    A \emph{$G$-homomorphism} of $G$-graded rings $A$ and $B$ is a ring homomorphism $f:A\rightarrow B$ such that $f(A_g)\subseteq B_g$ for each $g\in G$.
+    A \emph{$G$-graded homomorphism} of $G$-graded rings $A$ and $B$ is a ring homomorphism $f:A\rightarrow B$ such that $f(A_g)\subseteq B_g$ for each $g\in G$. A \emph{$G$-graded subring}  of a $G$-graded ring $B$ is a subring $A$ of $B$ such that the grading on $B$ restricts to a grading on $A$.
 
     The category of $G$-graded rings is denoted by $\RingCat^G$.
 \end{definition}
@@ -135,6 +135,8 @@ When we regard an Abelian group as a $G$-graded Abelian group and there are no n
     The category of $G$-graded $A$-modules is denoted by $\ModCat^G_A$.
 
     A \emph{$G$-graded $A$-algebra} is a $G$-graded ring $B$ together with a $G$-graded ring homomorphism $A\rightarrow B$ such that $B$ is also a $G$-graded $A$-module.
+
+    A \emph{$G$-graded homomorphism} between $G$-graded $A$-algebras $B$ and $C$ is a $G$-graded homomorphism between the underlying $G$-graded rings that is at the same time a $G$-graded homomorphism of $G$-graded $A$-modules.
 \end{definition}
 Observe that $G$-homogeneous ideals of $A$ are $G$-graded submodules of $A$. Also observe that $\ModCat^G_{\mathbb{Z}}$ is isomorphic to $\AbCat^G$.
 
@@ -185,7 +187,7 @@ Observe that $G$-homogeneous ideals of $A$ are $G$-graded submodules of $A$. Als
     Let $f:A\rightarrow B$ be a $G$-graded homomorphism of $G$-graded rings. We say $f$ is \emph{finite} (resp. \emph{finitely generated}, resp. \emph{integral}) if it is finite (resp. finitely generated, resp. integral) as a usual ring map.
 \end{definition}
 
-\begin{proposition}
+\begin{proposition}\label{prop-gradedfiniteintegral}
     Let $f:A\rightarrow B$ be a $G$-graded homomorphism of $G$-graded rings. Then 
     \begin{enumerate}
         \item $f$ is finite if and only if there are $n\in \mathbb{N}$, $g_1,\ldots,g_n\in G$ and a surjective $G$-graded homomorphism 
@@ -197,7 +199,11 @@ Observe that $G$-homogeneous ideals of $A$ are $G$-graded submodules of $A$. Als
         \[
             A[g_1^{-1}T_1,\ldots,g_{n}^{-1}T_n]\rightarrow B.  
         \] 
-        \item $f$ is integral if and only if for any non-zero homogeneous element $b\in B$, there in $n\in \mathbb{N}$ and homogeneous elements $a_1,\ldots,a_n\in A$ such that
+        \item $f$ is integral if and only if for any non-zero homogeneous element $b\in B$, there is $n\in \mathbb{N}$ and homogeneous elements $a_1,\ldots,a_n\in A$ such that
+        \[
+            b^n+f(a_1)b^{n-1}+\cdots+f(a_n)=0.  
+        \]
+        \item A non-zero homogeneous element $b\in B$ is integral over $A$ if there is $n\in \mathbb{N}$ and homogeneous elements $a_1,\ldots,a_n\in A$ such that
         \[
             b^n+f(a_1)b^{n-1}+\cdots+f(a_n)=0.  
         \]
@@ -215,6 +221,8 @@ Observe that $G$-homogeneous ideals of $A$ are $G$-graded submodules of $A$. Als
     Obviously, we can replace $a_i$ by its component in $\rho(b)^i$ for $i=1,\ldots,n$ and the equation remains true.
 
     The reverse direction follows from \cite[\href{https://stacks.math.columbia.edu/tag/00GO}{Tag 00GO}]{stacks-project}.
+
+    (4) This is argued in the same way as (3).
 \end{proof}
 
 \begin{definition}
@@ -270,6 +278,92 @@ Recall that $S^{-1}A$ is defined in \cref{ex-localizationgradedring}.
     Conversely, assume that the conditon in (2) is satisfied. Take $x,y\in A/I$ with $xy=0$. We need to show that at least one of $x$ and $y$ is $0$. Lift $x$ and $y$ to $a+i$ and $b+i'$ in $A$ with $a,b$ being homogeneous and $i,i'\in I$. Then $ab\in I$ and hence $a\in I$ or $b\in I$. It follows that $x=0$ or $y=0$. 
 \end{proof}
 
+
+
+\begin{definition}
+    Let $A$ be a $G$-graded ring and $\mathfrak{p}$ be a $G$-homogeneous prime ideal in $A$. Then we define the \emph{$G$-graded localization} $A^G_{\mathfrak{p}}$ of $A$ at $\mathfrak{p}$  as $S^{-1}A$, where $S$ is the set of homogeneous elements in $A\setminus \mathfrak{p}$.
+
+    Similarly, let $M$ be a $G$-graded $A$-module. We define the \emph{$G$-graded localization} $M^G_{\mathfrak{p}}$ as $S^{-1}M$.
+\end{definition}
+Recall that $S^{-1}A$ and $S^{-1}M$ are defined in \cref{ex-localizationgradedring} and \cref{ex-localizationgradedmodule}. 
+
+\begin{definition}
+    Let $A$ be a $G$-graded ring.
+
+    A $G$-homogeneous ideal $I$ in $A$ is said to be \emph{maximal} if it is proper, and it is not contained in any other proper $G$-homogeneous ideals.
+
+    We call $A$ a \emph{$G$-graded local ring} if it has a unique maximal homogeneous ideal. This ideal is called the \emph{maximal $G$-homogeneous ideal} of $A$.
+\end{definition}
+
+
+
+\begin{proposition}\label{prop-maximalidealandfield}
+    Let $A$ be a $G$-graded ring and $I$ be a $G$-homogeneous ideal in $A$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $I$ is a maximal $G$-homogeneous ideal in $A$;
+        \item $A/I$ is a $G$-graded field.
+    \end{enumerate}
+
+    In particular, a maximal $G$-homogeneous ideal is a $G$-homogeneous prime ideal.
+\end{proposition}
+\begin{proof}
+    Assume (1). Then $I$ is a proper ideal, so $A/I$ is non-zero. Suppose that $A/I$ has a proper $G$-homogeneous ideal $J$, it lifts to an ideal $J'$ of $A$. We claim that $J'$ is $G$-homogeneous. In fact, we set $J'_g:=\{x\in A_g: x+I\in J\}$ for $g\in G$, we need to show that
+    \[
+        J'=\sum_{g\in G}  J'_g.
+    \]
+    For any $j\in J'$, we can expand $j+I$ as $\sum_{g\in G} a_g+I$ with $a_g\in A_g$ and almost all $a_g$'s are $0$. We take $i\in I$ so that 
+    \[
+        j=i+\sum_{g\in G} a_g.  
+    \]
+    The desired equation follows.
+    But then it follows that $J'=I$ and hence $J=0$.
+
+    Assume (2). Then $I$ is a proper ideal in $A$. If $J$ is a $G$-homogeneous proper ideal of $A$ containing $I$, then $J/I$ is a $G$-homogeneous proper ideal of $A/I$. It follows that $J/I=0$ and hence $J=I$.
+\end{proof}
+\begin{corollary}\label{cor-specgradednonempty}
+    Let $A$ be a non-zero $G$-graded ring, then $A$ admits a $G$-homogeneous prime ideal.
+\end{corollary}
+\begin{proof}
+    By our assumption, $0$ is a proper ideal in $A$.
+    By Zorn's lemma, $A$ admits a maximal $G$-homogeneous ideal, which is prime by \cref{prop-maximalidealandfield}.
+\end{proof}
+
+\begin{lemma}\label{lma-integralelementscontinfinitemodule}
+    Let $f:A\rightarrow B$ be a $G$-graded homomorphism of $G$-graded rings. Let $b_1,\ldots,b_n\in B$ be a finite set of homogeneous elements integral over $A$, then there is a $G$-graded $A$-subalgebra $B'\subseteq B$ containing $b_1,\ldots,b_n$ such that $A\rightarrow B'$ is finite.
+\end{lemma}
+\begin{proof}
+    We may assume that none of the $b_i$'s is zero.
+    By \cref{prop-gradedfiniteintegral}, we can find $m_1,\ldots,m_n\in \mathbb{N}$ and homogeneous elements $a_{i,j}\in A$ for $i=1,\ldots,n$ and $j=1,\ldots,m_i$ such that
+    \[
+        b_i^{m_i}+f(a_{i,1})  b_i^{m_i-1}+\cdots+f(a_{i,m_i})=0
+    \]
+    for $i=1,\ldots,n$. It suffices to take $B'$ as the $A$-submodule generated by $a_{i,j}$ for $i=1,\ldots,n$ and $j=1,\ldots,m_i$.
+\end{proof}
+
+\begin{proposition}\label{prop-integralextprimelift}
+    Let $f:A\rightarrow B$ be an injective integral $G$-graded homomorphism of $G$-graded rings. Then for any $G$-homogeneous prime ideal $\mathfrak{p}$ in $A$, there is a $G$-homogeneous prime ideal $\mathfrak{p}'$ in $B$ such that $\mathfrak{p}=f^{-1}\mathfrak{p}'$.
+\end{proposition}
+\begin{proof}
+    We may assume that $A\neq 0 $, as otherwise there is nothing to prove.
+
+    It suffices to show that $\mathfrak{p}B_{\mathfrak{p}}\neq B_{\mathfrak{p}}$. \textcolor{red}{Include a proof}
+    We could localize that $\mathfrak{p}$ and assume that $\mathfrak{p}$ is a maximal $G$-homogeneous ideal. \textcolor{red}{Include details about localization} It suffices then to show that $\mathfrak{p}B\neq B$. Assume by contrary that we can write $1=\sum_{i=1}^n f_i b_i$ for some homogeneous elements $f_i\in \mathfrak{p}$ and some homogeneous elements $b_i\in B$. Let $B'$ be a $G$-graded subring of $B$ containg $A$ and $b_1,\ldots,b_n$ and such that $A\rightarrow B'$ is finite. The existence of $B'$ is guaranteed by \cref{lma-integralelementscontinfinitemodule}. Then we find immediately $B'=\mathfrak{m}_AB'$. Then $B'=0$ by the graded Nakayama's lemma. \textcolor{red}{Include details} So $A=0$, which is a contradiction.
+\end{proof}
+
+\begin{lemma}
+    Let $A$ be a $G$-graded ring. Then the following are equivalent:
+    \begin{enumerate}
+        \item $A$ is a $G$-graded local ring;
+        \item There is a proper homogeneous ideal $I$ in $A$ such that any non-invertible homogeneous element in $A$ is contained in $I$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    Assume that (1) holds, let $I$ be the maximal $G$-homogeneous ideal of $A$. Let $a$ be a non-invertible homogeneous element in $A$. Then the image of $a$ in $A/I$ is invertible by \cref{prop-maximalidealandfield} and \cref{prop-gradedfieldchar}.
+
+    Assume (2). We show that $I$ is the maximal $G$-homogeneous ideal in $A$. By \cref{prop-maximalidealandfield}, it suffices to show that $A/I$ is a graded field. By \cref{prop-gradedfieldchar}, we need to show that any non-zero homogeneous element $b\in A/I$ is invertible. Lift $b$ to $a+i\in A$ with $a\in A$ homogeneous and $i\in I$. If $a$ is not invertible, then $a\in I$ by the assumption hence $b=0$. This is a contradiction.
+\end{proof}
+
+
 \begin{lemma}
     Let $k$ be a $G$-graded field and $A$ be a graded $k$-algebra. Suppose that $\rho(A)=\rho(k)$, then
     \begin{enumerate}
@@ -277,7 +371,7 @@ Recall that $S^{-1}A$ is defined in \cref{ex-localizationgradedring}.
             \[
                 A_g\cong A_1 \otimes_{k_1} k_g.
             \]
-        \item The map $I\mapsto I\cap A_1$ is a bijection between the set of homogeneous ideals (resp. homogeneous prime ideals) in $A$ and ideals (resp. prime ideals) in $A_1$.
+        \item The map $I\mapsto I\cap A_1$ is a bijection between the set of $G$-homogeneous ideals (resp. $G$-homogeneous prime ideals) in $A$ and ideals (resp. prime ideals) in $A_1$.
     \end{enumerate}
 \end{lemma}
 \begin{proof}
@@ -286,7 +380,7 @@ Recall that $S^{-1}A$ is defined in \cref{ex-localizationgradedring}.
     (2) The part about ideals can be proved in the same way as (1). The part about prime ideals follows easily.
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{prop-gradedmoduleofgradedringfree}
     Let $k$ be a $G$-graded field and $M$ be a $G$-graded $A$-module. Then $M$ is free as $G$-graded $A$-module.
 \end{proposition}
 \begin{proof}
@@ -300,6 +394,94 @@ Recall that $S^{-1}A$ is defined in \cref{ex-localizationgradedring}.
     If $f\in M/F$ is a non-zero homogeneous element, then we get a homomorphism $(\rho(f))^{-1}k\rightarrow M/F$. This map is necessarily injective as $(\rho(f))^{-1}k$ does not have non-zero proper graded submodules. This contradicts the definition of $F$.
 \end{proof}
 
+\begin{corollary}
+    Let $k$ be a $G$-graded field, $C$ be a $G$-graded $k$-algebra. Consider a $G$-graded homomorphism of $G$-graded $k$-algebras $f:A\rightarrow B$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $f$ is finite (resp. finitely generated);
+        \item $f\otimes_k C$ is finite (resp. finitely generated).
+    \end{enumerate}
+\end{corollary}
+We do not put $G$-graded structurs on $A\times_k C$, Condition~(2) is in the usual sense of commutative algebra.
+
+\begin{proof}
+    (1) $\implies$ (2): This implication is trivial.
+    
+    (2) $\implies$ (1): By \cref{prop-gradedmoduleofgradedringfree}, this implication follows from fpqc descent \cite[\href{https://stacks.math.columbia.edu/tag/02YJ}{Tag 02YJ}]{stacks-project}.
+\end{proof}
+
+\begin{definition}
+    Let $K$ be a $G$-graded field. A $G$-graded subring $A\subseteq K$ is a \emph{$G$-graded valuation ring} in $K$ if
+    \begin{enumerate}
+        \item $A$ is a local $G$-graded ring;
+        \item the natural map $\Frac^G A\rightarrow K$ is an isomorphism;
+        \item For any non-zero homogeneous element $f\in K$, either $f\in A$ or $f^{-1}\in A$.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    Let $K$ be a $G$-graded field and $A,B$ be $G$-graded local subrings of $K$. We say $B$ \emph{dominates} $A$ if $A\subseteq B$ and $\mathfrak{m}_B\cap A=\mathfrak{m}_A$, where $\mathfrak{m}_A$ and $\mathfrak{m}_B$ are the maximal $G$-homogeneous ideals in $A$ and $B$. 
+\end{definition}
+
+\begin{proposition}\label{prop-valuationringchar}
+    Let $K$ be a $G$-graded field and $A\subseteq K$ be a $G$-graded local subring. Then the following are equivalent:
+    \begin{enumerate}
+        \item $A$ is a $G$-graded valuation ring in $K$.
+        \item $A$ is maximal among the $G$-graded local subrings of $K$ with respect to the order of domination.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    Assume (1). We may assume that $A\neq K$. Then $A$ is not a $G$-graded field as $\Frac^G=K$. Let $\mathfrak{m}$ be a maximal $G$-homogeneous ideal in $A$. Then $\mathfrak{m}\neq 0$. 
+    
+    We argue first that $A$ is a $G$-graded local ring. Assume the contrary.
+    Let $\mathfrak{m}'\neq \mathfrak{m}$ be maximal $G$-homogeneous ideal in $A$. Choose non-zero homogeneous elements $x,y\in A$ with $x\in \mathfrak{m}'\setminus \mathfrak{m}$, $y\in \mathfrak{m}\setminus \mathfrak{m}'$. Then $x/y\not\in A$ as otherwise $x=(x/y)y\in \mathfrak{m}$. Similarly, $y/x\not\in A$. This is a contradiction.
+
+    Next suppose that $A'$ is a $G$-graded local subring of $K$ dominating $A$. Let $x\in A'$ be a non-zero homogeneous element, we need to show that $x\in A$. If not, we have $x^{-1}\in A$ and as $x^{-1}$ is not a unit, $x^{-1}\in \mathfrak{m}_A$. But then $x^{-1}\in \mathfrak{m}_{A'}$, the maximal $G$-homogeneous ideal in $A'$. This contradicts the fact that $x\in A'$.
+
+    Assume (2).  Take a homogeneous element $x\in K\setminus A$, we need to argue that $x^{-1}\in A$. Let $A'$ denote the minimal $G$-homogeneous subring of $K$ containing $A$ and $x$. It is easy to see that $A'$ is the usual subring generated by $A$ and $x$.
+    
+    By our assumption, there is no $G$-graded prime ideal of $A'$ lying over $\mathfrak{m}_A$, as otherwise, if $\mathfrak{p}$ is such an ideal, the $G$-graded local subring $A'^G_{\mathfrak{p}}$ of $K$ dominates $A$.
+
+    In other words, the $G$-graded ring $A'/\mathfrak{m}_AA'$ does not  have any homogeneous prime ideals and hence $A'=\mathfrak{m}_AA'$ by \cref{cor-specgradednonempty}.
+
+    We can therefore write
+    \[
+      1=\sum_{i=0}^d t_ix^i  
+    \]
+    with some homogeneous elements $t_i\in \mathfrak{m}_A$. In particular,
+    \[
+        (1-t_0)(x^{-1})^d-\sum_{i=1}^d t_i (x^{-1})^{d-i}=0.  
+    \]\
+    So $x^{-1}$ is integral over $A$. Let $A''$ be the subring of $K$ generated by $A$ and $x^{-1}$. Then $A\rightarrow A''$ is finite and there is a $G$-homgeneous prime ideal $\mathfrak{m}''$ of $A''$ lying over $\mathfrak{m}_A$ by \cref{prop-integralextprimelift}. By our assumption, $A=A''^G_{\mathfrak{m}''}$ and hence $x^{-1}\in A$.
+
+    It remains to verify that $\Frac^G A=K$. Suppose that it is not the case, let $B\subseteq K$ be a $G$-graded local subring dominating $A$. Take a homogeneous element $t\in K$ that is not in $\Frac^G A$. Observe that $t$ can not be transcendental over $A$, as otherwise $A[t]\in K$ is a $G$-graded subring, and we can localize it at the $G$-homogeneous prime generated by $t$ and $\mathfrak{m}_A$. We get a $G$-graded local ring dominating $A$ that is different from $A$.
+
+    So $t$ is algebraic over $A$. We can then take a non-zero homogeneous $a\in A$ such that $at$ is integral over $A$. The ring $A'\subseteq K$ generated by $A$ and $ta$ is a $G$-graded subring and $A\rightarrow A'$ is finite. By \cref{prop-integralextprimelift}, tehre is a $G$-homogeneous prime ideal $\mathfrak{m}'$ of $A'$ lifting $\mathfrak{m}_A$. But then $A'^G_{\mathfrak{m}'}$ dominates $A$ and so $A=A'^G_{\mathfrak{m}'}$. It follows that $t\in \Frac^G A$, which is a contradiction.
+\end{proof}
+
+\begin{corollary}
+    Let $K$ be a $G$-graded field. Any $G$-graded local subring $B\subseteq K$ is dominated by a $G$-graded valuation subring of $K$.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{prop-valuationringchar} and Zorn's lemma.
+\end{proof}
+
+\subsection{Graded algebraic geometry}
+Let $G$ be an Abelian group. We write the group operation of $G$ multiplicatively and denote the identity of $G$ as $1$.
+
+\begin{definition}
+    Let $A$ be a $G$-graded ring. We define the \emph{$G$-graded affine spectrum} $\Spec^G(A)$ as follows: as a set $\Spec^G (A)$ consists of all $G$-homogeneous prime ideals of $A$; we endow $\Spec^G(A)$ with the \emph{Zariski topology}, whose base consists of sets of the form 
+    \[
+        D(f):=\left\{\mathfrak{p}\in \Spec^G(A): f\not\in \mathfrak{p}\right\}
+    \]
+    for all homogeneous elements $f\in A$.
+\end{definition}
+
+\begin{lemma}
+    Let $k$ be a $G$-graded field and $A$ be a finitely generated $G$-graded $k$-algebra. Then $\Spec^G(A)$ has only finitely many maximal points.
+\end{lemma}
+\begin{proof}
+    
+\end{proof}
 
 \printbibliography
 \end{document}
