@@ -915,7 +915,7 @@ We next give a non-strict extension of \cref{prop-strictlykafffinite}.
     for $i=1,\ldots,m$. Set $r'_i=r_i$ when $i=m+1,\ldots,n$. We can then define a bounded $k$-algebra homomorphism $\psi:k\{r'^{-1}T\}\rightarrow A$ sending $T_i$ to $f_i$ for $i=1,\ldots,n$. The existence of $\psi$ is guaranteed by \cref{cor-univpropTatenonstrict}. Observe that $\psi$ is surjective and admissible. It follows that $A$ is strictly $k$-affinoid.
 \end{proof}
 
-\begin{thm}
+\begin{thm}\label{thm-strictaffdfnequal}
     Let $A$ be a $k$-affinoid algebra. Then the following are equivalent:
     \begin{enumerate}
         \item $A$ is $k_H$-affinoid;
@@ -1070,14 +1070,21 @@ Recall that $\BanAlgCat_A^f$ is defined in \cref{Banach-def-finiteBanachalgebra}
 
 
 \section{Graded reduction}
-Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $R_{>0}$ such that $|k^{\times}|\cdot\Gamma\neq \{1\}$.
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
 
 \begin{definition}
-    Let $A$ be a $k_H$-affinoid algebra. We define the \emph{$k_H$-graded reduction} of $A$ as the $H$-graded ring
+    Let $A$ be a $k_H$-affinoid algebra. We define the \emph{$k_H$-graded reduction} of $A$ as the $\sqrt{|k^{\times}|\cdot H}$-graded ring
     \[
-      \tilde{A}^H:=\bigoplus_{h\in H}\left\{x\in A:\rho(x)\leq  h\right\}/\left\{x\in A:\rho(x)<  h\right\}.  
+      \tilde{A}^H:=\bigoplus_{h\in \sqrt{|k^{\times}|\cdot H}}\left\{x\in A:\rho(x)\leq  h\right\}/\left\{x\in A:\rho(x)<  h\right\}.  
     \]
+
+    For any morphism $f:A\rightarrow B$ of $k_H$-affinoid algebras, we define 
+    \[
+        \tilde{f}^H:  \tilde{A}^H\rightarrow \tilde{B}^H
+    \]
+    as the map induced by sending the class of $x\in A$ with $\rho(x)\leq h$ for any $h\in \sqrt{|k^{\times}|\cdot H}$ to the class of $f(x)\in B$.
 \end{definition}
+Recall that $\rho(A)=\sqrt{|k^{\times}|\cdot H}\cup\{0\}$ by \cref{thm-strictaffdfnequal}.
 
 \section{Affinoid domains}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H\supseteq |k^{\times}|$ be a subgroup of $R_{>0}$.
