@@ -1,0 +1,34 @@
+\input{preamble}
+\title{Topology and bornology}
+\begin{document}
+\maketitle
+\tableofcontents
+
+
+
+\section{Introduction}\label{sec-introduction}
+
+
+\section{Nets}
+
+\section{Bornology}
+\begin{definition}
+    Let $X$ be a set. A \emph{bornology} on $X$ is a collection $\mathcal{B}$ of subsets of $X$ such that
+    \begin{enumerate}
+        \item For any $x\in X$, there is $B\in \mathcal{B}$ such that $x\in \mathcal{B}$;
+        \item For any $B\in \mathcal{B}$ and any subset $A\subseteq B$, $A\in \mathcal{B}$;
+        \item $\mathcal{B}$ is stable under finite union.
+    \end{enumerate}
+
+    The pair $(X,\mathcal{B})$ is called a \emph{bornological set}. The elements of $\mathcal{B}$ are called the \emph{bounded subsets} of $(X,\mathcal{B})$. When $\mathcal{B}$ is obvious from the context, we omit it from the notations.
+    
+    A morphism between bornological sets $(X,\mathcal{B}_X)$ and $(Y,\mathcal{B}_Y)$ is a map of sets $f:X\rightarrow Y$ such that for any $A\in \mathcal{B}_X$, $f(A)\in \mathcal{B}_Y$. Such a map is called a \emph{bounded map}.
+\end{definition}
+\begin{definition}
+    Let $(X,\mathcal{B})$ be a bornological set. A \emph{basis} for $\mathcal{B}$ is a subset $\mathcal{A}\subseteq \mathcal{B}$ such that for any $B\in \mathcal{B}$, there are $A_1,\ldots,A_n\in \mathcal{A}$ such that $B\subseteq A_1\cup\cdots\cup A_n$.
+\end{definition}
+
+\cite{stacks-project}
+
+\printbibliography
+\end{document}

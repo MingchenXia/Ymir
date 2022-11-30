@@ -591,10 +591,8 @@ By \cref{prop-strictconvseriesradiusBanach}, we know that $A\{T\}$ is complete.
 By \cref{lma-unitmoduloreduction} and \cref{prop-strictlyconvcirccheck}, $f$ is a unit in $\mathring{A}\{T\}$ if and only if $\sum_{i=0}^{\infty} \tilde{a}_i T^i$  is a unit in $\tilde{A}[T]$. By \cref{lma-unitmoduloreduction} again, $a_0$ is a unit in $A$ if and only if $\tilde{a_0}$ is a unit in $\tilde{A}$. So we are reduced to argue that units in $\tilde{A}[T]$ are exactly units in $\tilde{A}$. This follows from the general fact about units in polynomial rings over a reduced ring.
 \end{proof}
 
-\textcolor{red}{The lemma needs to be places elsewhere.}
-\begin{lemma}
-    Let $R$ be a commutative ring. A polynomial $a_0+a_1X+\cdots+a_nX^n\in R[X]$ is a unit if and only if $a_0$ is a unit in $R$ and $a_1,\ldots,a_n$ are nilpotents.
-\end{lemma}
+
+
 
 \section{Semi-normed modules}
 
@@ -982,7 +980,7 @@ Let $(k,|\bullet|)$ be a complete non-trivially valued field. All results in thi
 \end{proof}
 
 \begin{thm}[Open mapping theorem]\label{thm-openmapping}
-    Let $(V,\|\bullet\|_V), (W,\|\bullet\|_W)$ be $k$-Banach spaces and $L:V\rightarrow W$ be a bounded and surjective $k$-homomorphism. Then $L$ is open.   
+    Let $(V,\|\bullet\|_V), (W,\|\bullet\|_W)$ be Banach $k$-spaces and $L:V\rightarrow W$ be a bounded and surjective $k$-homomorphism. Then $L$ is open.   
 \end{thm}
 \begin{proof}
     We write $V_0=\{v\in V:\|v\|_V<1\}$. Similarly define $W_0$.
@@ -1028,8 +1026,9 @@ Let $(k,|\bullet|)$ be a complete non-trivially valued field. All results in thi
     \]
 \end{proof}
 
+
 \begin{corollary}\label{cor-completionfinitecomplete}
-    Let $A$ be a $k$-Banach algebra and $M$ be a normed $A$-module. Assume that $\hat{M}$ is a finite $A$-module, then $M$ is complete.
+    Let $A$ be a Banach $k$-algebra and $M$ be a normed $A$-module. Assume that $\hat{M}$ is a finite $A$-module, then $M$ is complete.
 \end{corollary}
 \begin{proof}
     Take $x_1,\ldots,x_n\in \hat{M}$ so that $\pi:A^n\rightarrow \hat{M}$ sending $(a_1,\ldots,a_n)$ to $\sum_{i=1}^n a_ix_i$ is surjective. By open mapping theorem \cref{thm-openmapping}, $\sum_{i=1}^n \check{A}x_i$ is a neighbourhood of $0$ in $\hat{M}$. So
@@ -1040,7 +1039,7 @@ Let $(k,|\bullet|)$ be a complete non-trivially valued field. All results in thi
 \end{proof}
 
 \begin{corollary}\label{cor-idealclosed}
-    Let $A$ be a $k$-Banach algebra and $M$ be a Noetherian Banach $A$-module. Let $N$ be a submodule of $M$. Then $N$ is closed in $M$.
+    Let $A$ be a Banach $k$-algebra and $M$ be a Noetherian Banach $A$-module. Let $N$ be a submodule of $M$. Then $N$ is closed in $M$.
 
     In particular, if $A$ is Noetherian, then all ideals of $A$ are closed.
 \end{corollary}
@@ -1049,11 +1048,93 @@ Let $(k,|\bullet|)$ be a complete non-trivially valued field. All results in thi
 \end{proof}
 
 \begin{corollary}\label{cor-bddisadmi}
-    A bounded epimorphism of $k$-Banach algebras $f:A\rightarrow B$ is admissible.
+    A bounded epimorphism of Banach $k$-algebras $f:A\rightarrow B$ is admissible.
 \end{corollary}
 \begin{proof}
     Replacing $A$ by $A/\ker f$, we may assume that $f$ is bijective. It follows from \cref{thm-openmapping} that $f$ is a homeomorphism. The inverse of $f$ is therefore continuous, and hence bounded by \cref{prop-bddequivcont}.
 \end{proof}
+
+\begin{corollary}[Closed graph theorem]\label{cor-closedgraph}
+    Let $L:V\rightarrow W$ be a $k$-linear map between $k$-Banach spaces. The following are equivalent:
+    \begin{enumerate}
+        \item $L$ is bounded.
+        \item The graph of $L$ is closed.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    (1) $\implies$ (2) is trivial.
+
+    Assume (2). Let $p_1:V\times W\rightarrow V$, $p_2:V\times W\rightarrow W$ be the natural projections and $q:G\rightarrow V$ the restriction of $p_1$ to the graph $G$ of $L$. Observe that $L$ is a closed subspace of $V\times W$, hence a Banach space. By open mapping theorem \cref{thm-openmapping}, $q$ is an open mapping. In particular, the map $r:V\rightarrow G$ sending $v\in V$ to $(v,Lv)$ is bounded. It follows that $L=p_2\circ r$ is also bounded.
+\end{proof}
+
+\section{Properties of Banach algebras over a field}
+Let $(k,|\bullet|)$ be a complete non-trivially valued non-Archimedean valued field.
+\begin{proposition}\label{prop-morphismBanachcont}
+    Let $A,B$ be Banach $k$-algebras and $\varphi:A\rightarrow B$ be a $k$-algebra homomorphism. Assume that there is a family $\{I_i\}$ of ideals in $B$ satisfying
+    \begin{enumerate}
+        \item Each $I_i$ is closed in $B$ and each inverse image $\varphi^{-1}(I_i)$ is closed in $A$.
+        \item For each $I_i$, $\dim_k B/I_i$ is finite.
+        \item $\bigcap_{i\in I} I_i=0$.
+    \end{enumerate}
+    Then $\varphi$ is continuous. 
+\end{proposition}
+Observe that when $A$ and $B$ are both noetherian, Condition~(1) is automatically satisfied.
+\begin{proof}
+    For each $i\in I$, we write $\pi_i:B\rightarrow B/I_i$ the projection.  Let $\psi_i:A\rightarrow B/I_i$ denote $\pi_i\circ \varphi$. Let $\bar{\psi}_i:A/\ker \psi_i\rightarrow B/I_{i}$ the injective map induced by $\psi_i$. We know that $A/\ker \psi_i$ and $B/I_i$ are both finite dimensional. We endow them with the residue norm. Then $\bar{\psi}_i$ is continuous. It follows that $\psi_i$ is also continuous. 
+
+    By the closed graph theorem \cref{cor-closedgraph}, it suffices to verify the following claim: let $a_i\in A$ be a sequence with limit $0$ and $\varphi(a_i)\to b\in B$, then $b=0$. From the continuity of  $\bar{\psi}_i$, we know that $b\in I_i$ for all $i\in I$, it follows that $b=0$ by our assumption.
+\end{proof}
+
+\begin{lemma}\label{lma-finitemodulehomobdd}
+    Let $A$ be a Noetherian $k$-Banach algebra and $M,N$ be Banach $A$-modules, which are finite as $A$-modules. Let $f:M\rightarrow N$ be an $A$-linear map. Then $f$ is bounded.
+\end{lemma}
+\begin{proof}
+    Choose $n\in \mathbb{N}$ and an $A$-linear epimorphism $\pi:A^n\rightarrow M$. It is clear that $\pi$ is bounded. Similarly, $\pi\circ f$ is also bounded. By open mapping theorem \cref{thm-openmapping}, $\pi$ is open, so $\varphi$ is continuous and hence bounded by \cref{prop-bddequivcont}.
+\end{proof}
+
+\begin{proposition}\label{prop-finitemodulenormexist}
+    Let $A$ be a Noetherian $k$-Banach algebra. Then any finite $A$-module $M$ admits a complete $A$-module norm. Such norms are unique up to equivalence.
+\end{proposition}
+\begin{proof}
+    The uniqueness follows from \cref{lma-finitemodulehomobdd}. As for the existence, take $n\in \mathbb{N}$ and an $A$-linear epimorphism $\pi:A^n\rightarrow M$. By \cref{cor-idealclosed}, $\ker A^n$ is closed in $A^n$, it suffices to take the residue norm on $M$.
+\end{proof}
+
+\begin{proposition}\label{prop-algebrafinitenormadmi}
+    Let $(A,\|\bullet\|_A)$ be a Noetherian $k$-Banach algebra and $\varphi:A\rightarrow B$ be a finite $k$-algebra homomorphism from $A$ to a $k$-algebra $B$. Then $B$ is Noetherian and admits a complete $A$-algebra norm such that $\varphi$ is admissible.
+    All complete $k$-algebra norms on $B$ such that $\varphi$ is bounded are equivalent.
+\end{proposition}
+\begin{proof}
+    The uniqueness follows from \cref{prop-finitemodulenormexist}.
+
+    As $\varphi$ is finite, $B$ is a finite $A$-module. So by \cref{prop-finitemodulenormexist}, we can endow $B$ with a complete $A$-module norm $|\bullet|$ such that $\varphi$ is contractive. 
+
+    We claim that there is a constant $C>0$ such that 
+    \[
+        |xy|\leq C |x|\cdot |y|  
+    \]
+    for all $x,y\in B$.
+    
+    Assuming this claim, it suffices to define
+    \[
+        \|x\|:=\sup_{y\in B,y\neq 0}\frac{|xy|}{|y|}
+    \]
+    for $x\in B$.
+
+    It remains to establish the claim. Let $b_1,\ldots,b_n$ be generators of $B$ as an $A$-module. Let $C'=\max_{i,j=1,\ldots,n} |b_ib_j|$. Choose $\eta>1$ such that for each $x\in B$, there is an equation
+    \[
+        x=\sum_{j=1}^n \varphi(a_j)b_j,\quad \max_{j=1,\ldots,n} \|a_j\|_A \leq \eta |x|. 
+    \]
+    The existence of $\eta$ follows from the construction of $|\bullet|$ in \cref{prop-finitemodulenormexist}. Let $C=C'\eta^2$. Then for any $x_1,x_2\in B$, we write
+    \[
+        x_i=\sum_{j=1}^n \varphi(a_{ij})b_j,\quad i=1,2. 
+    \]
+    We compute
+    \[
+        |x_1x_2|\leq \max_{i,j=1,\ldots,n} |\varphi(a_{1i})\varphi(a_{2j})b_ib_j|\leq C'\max_{i=1,\ldots,n}|a_{1i}|\max_{j=1,\ldots,n}|a_{2j}|\leq C|x_1|\cdot|x_2|.  
+    \]
+\end{proof}
+
+
 
 \section{Maximum spectra}
 Let $(k,|\bullet|)$ a complete non-Archimedean valued field.
@@ -1161,11 +1242,11 @@ Let $(k,|\bullet|)$ a complete non-Archimedean valued field.
 
 
 \begin{definition}
-    Let $A$ be a $k$-Banach algebra. We say that \emph{maximal modulus principle} holds for $A$ if for any $f\in A$, there is $x\in \Spm_k A$ such that $|f(x)|=|f|_{\sup}$.
+    Let $A$ be a Banach $k$-algebra. We say that \emph{maximal modulus principle} holds for $A$ if for any $f\in A$, there is $x\in \Spm_k A$ such that $|f(x)|=|f|_{\sup}$.
 \end{definition}
 
 \begin{proposition}\label{prop-fsupspecexp}
-    Let $\varphi:B\rightarrow A$ be an injective integral homomorphism of Banach $k$-algebras. Assume that $B$ is a normal integral domain. 
+    Let $\varphi:B\rightarrow A$ be an injective integral torsion-free homomorphism of Banach $k$-algebras. Assume that $B$ is a normal integral domain. 
     \begin{enumerate}
         \item Fix $f\in A$.
         Let $f^n+\varphi(b_1)f^{n-1}+\cdots+\varphi(b_n)=0$ be the minimal equation of $f$ over $A$. Then
@@ -1173,6 +1254,7 @@ Let $(k,|\bullet|)$ a complete non-Archimedean valued field.
             |f|_{\sup}=\max_{i=1,\ldots,n} |b_i|_{\sup}^{1/i}.  
         \]
         \item Assume that maximal modulus principle holds for $B$, then it holds for $A$ as well.
+        \item Suppose that $|bb'|_{\sup}=|b|_{\sup}|b'|_{\sup}$ for all $b,b'\in B$. Then $|\varphi(b)f|_{\sup}=|b|_{\sup}|f|_{\sup}$ for all $b\in B$ and $f\in A$.
     \end{enumerate}
 \end{proposition}
 \begin{proof}
@@ -1241,26 +1323,33 @@ Let $(k,|\bullet|)$ a complete non-Archimedean valued field.
     \[
         |f|_{\sup}=|f(x)|.
     \]
+
+    (3) Consider $f\in A$ and let $f^n+b_1f^{n-1}+\cdots+b_n=0$ be its minimal integral equation over $B$. Then $f$ is of degree $n$ over $\Frac B$ as well, hence so is $bf$ for any non-zero $b\in B$. So the minimal integral equation of $bf$ is 
+    \[
+        (bf)^n+bb_1(bf)^{n-1}+\cdots+b^nb_n=0.
+    \]
+    By (1), we compute
+    \[
+        |bf|_{\sup}=\max_{i=1,\ldots,n} |b^ib_i|_{\sup}^{1/i}=|b|_{\sup}\max_{i=1,\ldots,n}|b_i|_{\sup}^{1/i}=|b|_{\sup}|f|_{\sup}.
+    \]
+    Also, $|bf|_{\sup}=|b|_{\sup}|f|_{\sup}$ is trivial for $b=0$. We conclude.
+\end{proof}
+\section{Miscellany}
+
+\begin{lemma}\label{lma-finitemodulejapanese}
+    Let $(A,|\bullet|)$ be a valued integral domain such that $\tilde{A}$ is Noetherian and N-2. Assume that $|A^{\times}|$ is a group. Let $(B,\|\bullet\|)$ be a faithfully normed $A$-algebra such that
+    \begin{enumerate}
+        \item $\|\bullet\|$ is power-multiplicative.
+        \item The $A$-rank of $B$ is finite.
+        \item $\mathring{B}$ is integral over $\mathring{A}$.
+    \end{enumerate}
+    Then $\tilde{B}$ is finite as $\tilde{A}$-module.
+\end{lemma}
+\begin{proof}
+    We want to apply \cref{Commutative-prop-noethjapfinite} in the chapter Commutative Algebra to the canonical injection map $\psi:\tilde{A}\rightarrow \tilde{B}$. The map $\psi$ is integral as $\mathring{B}$ is integral over $\mathring{A}$. The conditions are easily verified. \textcolor{red}{Add details.}
+     %Observe that $\tilde{B}$ is torsion-free as $M$ is faithfully normed.
 \end{proof}
 
-
-\section{Bornology}
-\textcolor{red}{This section may be placed elsewhere.}
-\begin{definition}
-    Let $X$ be a set. A \emph{bornology} on $X$ is a collection $\mathcal{B}$ of subsets of $X$ such that
-    \begin{enumerate}
-        \item For any $x\in X$, there is $B\in \mathcal{B}$ such that $x\in \mathcal{B}$;
-        \item For any $B\in \mathcal{B}$ and any subset $A\subseteq B$, $A\in \mathcal{B}$;
-        \item $\mathcal{B}$ is stable under finite union.
-    \end{enumerate}
-
-    The pair $(X,\mathcal{B})$ is called a \emph{bornological set}. The elements of $\mathcal{B}$ are called the \emph{bounded subsets} of $(X,\mathcal{B})$. When $\mathcal{B}$ is obvious from the context, we omit it from the notations.
-    
-    A morphism between bornological sets $(X,\mathcal{B}_X)$ and $(Y,\mathcal{B}_Y)$ is a map of sets $f:X\rightarrow Y$ such that for any $A\in \mathcal{B}_X$, $f(A)\in \mathcal{B}_Y$. Such a map is called a \emph{bounded map}.
-\end{definition}
-\begin{definition}
-    Let $(X,\mathcal{B})$ be a bornological set. A \emph{basis} for $\mathcal{B}$ is a subset $\mathcal{A}\subseteq \mathcal{B}$ such that for any $B\in \mathcal{B}$, there are $A_1,\ldots,A_n\in \mathcal{A}$ such that $B\subseteq A_1\cup\cdots\cup A_n$.
-\end{definition}
 
 \printbibliography
 \end{document}

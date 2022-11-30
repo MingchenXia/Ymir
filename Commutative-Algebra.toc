@@ -1,0 +1,6 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\tocsection {}{1}{Introduction}}{4}{section.0.1}%
+\contentsline {section}{\tocsection {}{2}{Graded commutative algebra}}{4}{section.0.2}%
+\contentsline {subsection}{\tocsubsection {}{2.1}{Graded algebraic geometry}}{13}{subsection.0.2.1}%
+\contentsline {section}{\tocsection {}{3}{Miscellany}}{13}{section.0.3}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{15}{chapter*.1}%

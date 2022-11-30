@@ -1135,7 +1135,9 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/bigints/bigints.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/bigints/bigints.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/bigints/bigints.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT Topology-Bornology.aux
 INPUT Banach-Rings.aux
+INPUT Commutative-Algebra.aux
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd

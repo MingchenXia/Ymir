@@ -366,7 +366,7 @@ Recall that $S^{-1}A$ and $S^{-1}M$ are defined in \cref{ex-localizationgradedri
     We could localize that $\mathfrak{p}$ and assume that $\mathfrak{p}$ is a maximal $G$-homogeneous ideal. \textcolor{red}{Include details about localization} It suffices then to show that $\mathfrak{p}B\neq B$. Assume by contrary that we can write $1=\sum_{i=1}^n f_i b_i$ for some homogeneous elements $f_i\in \mathfrak{p}$ and some homogeneous elements $b_i\in B$. Let $B'$ be a $G$-graded subring of $B$ containg $A$ and $b_1,\ldots,b_n$ and such that $A\rightarrow B'$ is finite. The existence of $B'$ is guaranteed by \cref{lma-integralelementscontinfinitemodule}. Then we find immediately $B'=\mathfrak{m}_AB'$. Then $B'=0$ by the graded Nakayama's lemma. \textcolor{red}{Include details} So $A=0$, which is a contradiction.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{lma-rhoconditionimplygraded}
     Let $A$ be a $G$-graded ring. Then the following are equivalent:
     \begin{enumerate}
         \item $A$ is a $G$-graded local ring;
@@ -410,14 +410,13 @@ Recall that $S^{-1}A$ and $S^{-1}M$ are defined in \cref{ex-localizationgradedri
     If $f\in M/F$ is a non-zero homogeneous element, then we get a homomorphism $(\rho(f))^{-1}k\rightarrow M/F$. This map is necessarily injective as $(\rho(f))^{-1}k$ does not have non-zero proper graded submodules. This contradicts the definition of $F$.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}\label{cor-finitegradeddescent}
     Let $k$ be a $G$-graded field, $C$ be a $G$-graded $k$-algebra. Consider a $G$-graded homomorphism of $G$-graded $k$-algebras $f:A\rightarrow B$. Then the following are equivalent:
     \begin{enumerate}
         \item $f$ is finite (resp. finitely generated);
         \item $f\otimes_k C$ is finite (resp. finitely generated).
     \end{enumerate}
 \end{corollary}
-We do not put $G$-graded structurs on $A\times_k C$, Condition~(2) is in the usual sense of commutative algebra.
 
 \begin{proof}
     (1) $\implies$ (2): This implication is trivial.
@@ -498,6 +497,24 @@ Let $G$ be an Abelian group. We write the group operation of $G$ multiplicativel
 \begin{proof}
     
 \end{proof}
+
+\section{Miscellany}
+
+\begin{proposition}\label{prop-noethjapfinite}
+    Let $R$ be a noetherian N-2 integral domain. Let $\psi:R\rightarrow S$ be a ring homomorphism such that $S$ is reduced, torsion-free as $R$-module and has finite rank as $R$-module. Then $\psi$ is finite.
+\end{proposition}
+\cite[Page~122]{BGR}. Reproduce the argument later.
+\begin{proof}
+    As $\psi$ is injective by assumption, we may assume that $R$ is a subring of $S$ and $\psi$ is identity. The ring $S_{R\setminus\{0\}}=\Frac S$ is a finite-dimensional reduced $\Frac R$-algebra, hence as a ring, $\Frac S$ is the product of finitely many finite field extensions of $\Frac R$, say $K_1,\ldots,K_t$.  As $R$ is N-2, the integral closure $R_i$ of $R$ in $K_i$ is finite as $R$-module for $i=1,\ldots,t$. As $S$ is integral over $R$, we have
+    \[
+        S\subseteq R_1\times \cdots \times R_t.  
+    \]
+    As $R$ is noetherian, we conclude that $S$ is finite as $R$-module.
+\end{proof}
+
+\begin{lemma}
+    Let $R$ be a commutative ring. A polynomial $a_0+a_1X+\cdots+a_nX^n\in R[X]$ is a unit if and only if $a_0$ is a unit in $R$ and $a_1,\ldots,a_n$ are nilpotents.
+\end{lemma}
 
 \printbibliography
 \end{document}

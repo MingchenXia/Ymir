@@ -284,7 +284,7 @@ When $X$ is a Banach $k$-algebra,  $X\hat{\otimes}_k k_r$ is a Banach $k_r$-alge
 
 \begin{proposition}\label{prop-strictlykafffinite}
     Assume that $k$ is non-trivially valued.
-    Let $B$ be a strict $k$-affinoid algebra and $\varphi:B\rightarrow A$ be a finite bounded homomorphism into a $k$-Banach algebra $A$. Then $A$ is also strictly $k$-affinoid.
+    Let $B$ be a strict $k$-affinoid algebra and $\varphi:B\rightarrow A$ be a finite bounded $k$-algebra homomorphism into a $k$-Banach algebra $A$. Then $A$ is also strictly $k$-affinoid.
 \end{proposition}
 \begin{proof}
     We may assume that $B=k\{T_1,\ldots,T_n\}$ for some $n\in \mathbb{N}$. By assumption, we can find finitely many $a_1,\ldots,a_m\in A$ such that $A=\sum_{i=1}^m \varphi(B)a_i$.
@@ -294,6 +294,14 @@ When $X$ is a Banach $k$-algebra,  $X\hat{\otimes}_k k_r$ is a Banach $k_r$-alge
         \Phi:  k\{T_1,\ldots,T_n,S_1,\ldots,S_m\}\rightarrow A
     \]
     sending $S_i$ to $a_i$. By \cref{Banach-cor-bddisadmi} in the chapter Banach Rings, $\Phi$ is admissible. Moreover, the homomorphism $\Phi$ is surjective by our assumption. It follows that $A$ is strictly $k$-affinoid.
+\end{proof}
+
+\begin{proposition}\label{prop-finiteinduceaffnorm}
+    Assume that $k$ is non-trivially valued.
+    Let $B$ be a strict $k$-affinoid algebra and $\varphi:B\rightarrow A$ be a finite $k$-algebra homomorphism into a $k$-algebra $A$. Then there is a norm on $A$ such that the morphism is bounded and $A$ is strictly $k$-affinoid.
+\end{proposition}
+\begin{proof}
+    By \cref{Banach-prop-algebrafinitenormadmi} in the chapter Banach Rings, we can endow $A$ with a Banach norm such that $\varphi$ is admissible. Then we can apply \cref{prop-strictlykafffinite}.
 \end{proof}
 
 \begin{lemma}\label{lma-tatestrictaff}
@@ -590,6 +598,16 @@ In the complex setting, we can perturb a convergent power series so that it has 
 \end{proof}
 
 
+\begin{corollary}\label{cor-rhofaithful}
+    Let $A$ be a strictly $k$-affinoid algebra, $d\in \mathbb{N}$ and $\varphi:k\{T_1,\ldots,T_d\}\rightarrow A$ be an integral torsion-free injective homomorphism of $k$-algebras. Then $\rho$ is a faithful $k\{T_1,\ldots,T_d\}$-algebra norm on $A$. If $f^n+\varphi(t_1)f^{n-1}+\cdots+\varphi(t_n)=0$ is the minimal integral equation of $f$ over $k\{T_1,\ldots,T_d\}$, then 
+    \[
+        |f|_{\sup}=\max_{i=1,\ldots,n} |t_i|^{1/i}.  
+    \]
+\end{corollary}
+\begin{proof}
+    This follows from \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings and \cref{prop-Tatealgufd}.
+\end{proof}
+
 
 \section{Noetherian normalization and maximal modulus principle}
 Let $(k,|\bullet|)$ be a complete non-trivially valued non-Archimedean valued-field. 
@@ -607,6 +625,7 @@ Let $(k,|\bullet|)$ be a complete non-trivially valued non-Archimedean valued-fi
     Take some $n\in \mathbb{N}$ and a surjective $k$-algebra homomorphism $k\{T_1,\ldots,T_n\}\rightarrow A$ and apply \cref{thm-Noetheriannorm}, we conclude.
 \end{proof}
 
+
 \begin{corollary}\label{cor-affinoidquotientfinite}
     Let $A$ be a strictly $k$-affinoid algebra and $I$ be an ideal in $A$ such that $\sqrt{I}$ is a maximal ideal in $A$, then $A/I$ is finite-dimensional over $k$.
 
@@ -620,6 +639,20 @@ Let $(k,|\bullet|)$ be a complete non-trivially valued non-Archimedean valued-fi
     is finite and injective as $k\{T_1,\ldots,T_d\}$ is an integral domain, so $k\{T_1,\ldots,T_d\}$ is a field. This is possible only when $d=0$. 
 \end{proof}
 
+\begin{corollary}\label{cor-morphismstrictaffbdd}
+    Let $B$ be a strictly $k$-affinoid algebra and $A$ be a Noetherian Banach $k$-algebra. Let $f:A\rightarrow B$ a $k$-algebra homomorphism. Then $f$ is bounded.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{Banach-prop-morphismBanachcont} in the chapter Banach Rings and \cref{prop-strictnoetherian}.
+\end{proof}
+In particular, we see that the topology of a $k$-affinoid algebra is uniquely determined by the algebraic structure.
+
+\begin{corollary}\label{cor-finitehomoadmi}
+    Let $A$, $B$ be strictly $k$-affinoid algebras. Let $f$ be a finite $k$-algebra homomorphism, then $f$ is admissible.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{prop-finiteinduceaffnorm} and \cref{cor-morphismstrictaffbdd},
+\end{proof}
 \begin{definition}
     For any non-Archimedean valuation field $(K,|\bullet|)$ and $n\in \mathbb{N}$, we define the \emph{$n$-dimensional polydisk} with value in $K$:
     \[
@@ -694,6 +727,78 @@ Let $(k,|\bullet|)$ be a complete non-trivially valued non-Archimedean valued-fi
     This follows from \cref{cor-noenormalization}, \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings and \cref{prop-maxmod}.
 \end{proof}
 
+\begin{proposition}\label{prop-integralstrictafffsup}
+    Let $\varphi:B\rightarrow A$ be an integral $k$-algebra homomorphism of strictly $k$-affinoid algebras. Then for each non-zero $f\in A$, there is a moinc polynomial $q(f)=f^n+\varphi(b_1)f^{n-1}+\cdots+\varphi(b_n)$ of $f$ over $B$. Then 
+    \[
+        |f|_{\sup}=\max_{i=1,\ldots,n}|b_i|_{\sup}^{1/i}.  
+    \]
+\end{proposition}
+\begin{proof}
+    One side is simple: choose $j=1,\ldots,n$ that maximizes $|\varphi(b_j)f^{n-j}|_{\sup}$, then
+    \[
+        |f|_{\sup}^n=|f^n|_{\sup}\leq  |\varphi(b_j)f^{n-j}|_{\sup}\leq |b_j|_{\sup}\cdot |f|_{\sup}^{n-j}.
+    \]
+    So
+    \[
+        |f|_{\sup}\leq |b_j|_{\sup}^{1/j}.  
+    \]
+
+    To prove the reverse inequality, let us begin with the case where $A$ is an integral domain. 
+    
+    We claim that there is $d\in \mathbb{N}$ and a $k$-algebra homomorphism $\psi:k\{T_1,\ldots,T_d\}\rightarrow B$ such that $\varphi\circ \psi$ is integral and injective.  In fact, choosing an epimorphism $\alpha:k\{T_1,\ldots,T_d\}\rightarrow A$, we can apply \cref{thm-Noetheriannorm} to find $\phi\circ \alpha$ to conclude.
+
+    By \cref{cor-rhofaithful}, if $p$ denotes the minimal polynomial of $f$ over $k\{T_1,\ldots,T_d\}$, we have $|f|_{\sup}=\sigma(p)$. In particular, $p(f)=0$. Let $q\in B[X]$ be the polynomial obtained from $p$ by replacing all coefficients by their $\psi$-images in $B$. Then clearly, $|f|_{\sup}=\sigma(q)$.
+
+    In general, let $\mathfrak{p}_1,\ldots,\mathfrak{p}_r$ be the minimal primes in $A$. The number is finite by \cref{prop-strictnoetherian}. For each $i=1,\ldots,r$, let $\pi_i:A\rightarrow A/\mathfrak{p}_i$ denote the natural homomorphism. We know that there are monic polynomials $q_i\in B[X]$ such that $q_i(\pi(f))=0$ and $|\pi_i(f)|_{\sup}=\sigma(q_i)$ for $i=1,\ldots,r$. We let $q'=q_1\cdots q_r$. Then 
+    \[
+        q'(f)\in \bigcap_{i=1}^r\mathfrak{p}_i.
+    \]
+    So there is $e\in \mathbb{Z}_{>0}$ such that $q'(f)^e=0$. Let $q=q'^e$. By \cref{Banach-prop-sigmaproduct} in the chapter Banach Rings,
+    \[
+        \sigma(q)\leq  \max_{i=1,\ldots,r}\sigma(q_i) =\max_{i=1,\ldots,r} |\pi_i(f)|_{\sup}=|f|_{\sup}.
+    \]
+    The last equality follows from \cref{Banach-prop-supeqsp} in the chapter Banach Rings.
+\end{proof}
+
+\begin{lemma}\label{lma-tauinvkertildevarphi}
+    Let $\varphi:B\rightarrow A$ be an admissible $k$-algebra homomorphism between strictly $k$-affinoid algebras. Let $\tau:\mathring{B}\rightarrow \tilde{B}$ be the reduction map, then
+    \[
+        \tau^{-1} (\ker\tilde{\varphi} )=\sqrt{\check{B}+\ker \mathring{\varphi}},\quad \ker\tilde{\varphi}=\sqrt{\tau(\ker \mathring{\varphi})}. 
+    \]
+\end{lemma}
+\begin{proof}
+    The second equation follows from the first one by applying $\tau$. Let us prove the first equation. By assumption, $\varphi(\check{B})$ is open in $\varphi(B)$. Consider $g\in \tau^{-1}(\ker\tilde{\varphi} )$, we know that
+    \[
+        \lim_{n\to\infty} \varphi(g)^n=0.  
+    \]
+    So $\varphi(g)^n\in \varphi(\check{B})$ for $n$ large enough, and hence $g^n\in \check{B}+\ker \mathring{\varphi}$.
+\end{proof}
+
+\begin{lemma}\label{lma-varphirestfinite}
+    Let $m\in \mathbb{N}$ and $T=k\{T_1,\ldots,T_m\}$. Let $A$ be a $k$-affinoid algebra and $\varphi:T\{S_1,\ldots,S_n\}\rightarrow A$ be a finite morphism such that $\tilde{\varphi}(S_i)$ is integral over $\tilde{T}$. Then $\varphi|_T:T\rightarrow A$ is finite.
+\end{lemma}
+\begin{proof}
+    We make an induction on $n$. When $n=0$, there is nothing to prove. So assume $n>0$ and the lemma has been proved for smaller values of $n$.
+
+    Let $T'=T\{S_1,\ldots,S_n\}$. By assumption, there is a Weierstrass polynomial
+    \[
+        \omega=S_n^k+a_1S_n^{k-1}+\cdots+a_k\in \mathring{T}[S_n]  
+    \]
+    such that $\tilde{\omega}\in \ker\tilde{\varphi}$. As $\varphi$ is admissible by \cref{cor-finitehomoadmi}, we have $\omega^q\in \check{T'}+\ker \mathring{\varphi}$ for some $q\in \mathbb{Z}$ by \cref{lma-tauinvkertildevarphi}.
+
+    In particular, we can find $r\in (T')^{\check{}}$ such that $g:=\omega^q-r\in \ker\mathring{\varphi}$. Observe that $g$ is $S_n$ distinguished of order $mq$ as $\tilde{g}=\tilde{\omega}^q$. By \cref{cor:quotientreplacedbyWeie}, the restriction of $\varphi$ to $T\{S_1,\ldots,S_{n-1}\}$ is finite. We can apply the inductive hypothesis to conclude.
+\end{proof}
+
+\begin{lemma}\label{lma-reductionfiniteimplyfinite}
+    Let $\varphi:B\rightarrow A$ be a $k$-algebra homomorphism of strictly $k$-affinoid algebras. Assume that there exist affinoid generators $f_1,\ldots,f_n\in \mathring{A}$ of $A$ such that $\tilde{f}_1,\ldots,\tilde{f}_n$ are all integral over $\tilde{B}$, then $\varphi$ is finite.
+\end{lemma}
+\begin{proof}
+    By assumption, we can find $s_i\in \mathbb{Z}_{>0}$, $b_{ij}\in \mathring{B}$ for $i=1,\ldots,n$, $j=1,\ldots,s_i$ such that
+    \[
+        \tilde{f}_i^{s_i}+\tilde{\varphi}(\tilde{b}_{i1}) \tilde{f}_i^{s_i-1}+\cdots+\tilde{\varphi}(\tilde{b}_{is_i})=0 
+    \]
+    for $i=1,\ldots,n$. Let $s=s_1+\cdots+s_n$ and define a bounded $k$-algebra homomorphism $\psi:D:=k\{T_{ij}\}\rightarrow B$ sending $T_{ij}$ to $b_{ij}$, for $i=1,\ldots,n$ and $j=1,\ldots,s_i$. Observe that $\tilde{f}_1,\ldots,\tilde{f}_n$ are all integral over $\tilde{D}$. So it suffices to prove the theorem when $B=k\{T_1,\ldots,T_m\}$. We extend $\varphi$ to a bounded $k$-algebra epimorphism $\varphi':T\{S_1,\ldots,S_n\}\rightarrow A$ sending $S_i$ to $f_i$ for $i=1,\ldots,n$.  Then $\tilde{\varphi'(S_i)}$ is integral over $\tilde{B}$. It suffices to apply \cref{lma-varphirestfinite}.
+\end{proof}
 
 \section{Properties of affinoid algebras}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $R_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
@@ -1081,7 +1186,7 @@ Here the Banach $A$-module structure on $M\otimes_A N$ is given by \cref{prop-fi
     By \cref{prop-finitemodulebasechange} and \cref{prop-Krfaithflat}, we may assume that $k$ is non-trivially valued. By \cref{thm-affnoetherian}, $N$ is a Noetherian $A$-module. It follows from \cref{Banach-cor-idealclosed} in the chapter Banach Rings that $\Img \varphi$ is closed in $N$ and is finite as an $A$ module. In particular, the norm induced from $N$ and from $M$ are equivalent by \cref{lma-finiteBanachmodulemapbdd}. It follows that $\varphi$ is admissible.
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{prop-finitenessdescent1}
     Let $A$ be a $k$-affinoid algebra. Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)$ be a $k$-free polyray. Then $M$ is a finite Banach $A$-module if and only if $M\hat{\otimes}_k k_r$ is a finite Banach $A\hat{\otimes}_k k_r$-module.
 \end{proposition}
 \begin{proof}
@@ -1100,6 +1205,43 @@ Here the Banach $A$-module structure on $M\otimes_A N$ is given by \cref{prop-fi
     sending the standard basis to $m_{i,j}$ with $i=1,\ldots,n$ and $j=-l,-l+1,\ldots,l$ is an admissible epimorphism.
 \end{proof}
 
+
+\begin{proposition}\label{prop-finiteadmissibledesc}
+    Let $\phi:A\rightarrow B$ be a morphism of $k$-affinoid algebras, $n\in \mathbb{N}$ and $r\in \mathbb{R}^n_{>0}$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $\phi$ is finite and admissible.
+        \item $\phi\hat{\otimes}_k k_r$ is finite and admissible.
+    \end{enumerate}
+\end{proposition}
+This is \cite[Lemma~3.2]{Tem04}. I do not understand Temkin's argument. The following proof is a modification of the argument of Temkin's.
+\begin{proof}
+    (1) $\implies$ (2): This is straightforward.
+
+    (2) $\implies$ (1): The admissible part is straightforward. Let us prove that $\phi$ is finite. We may assume that $n=1$. When $r$ is not in $\sqrt{|k^{\times}|}$, we just apply \cref{prop-finitenessdescent1}. Now suppose $r\in\sqrt{|k^{\times}|}$. 
+    Let us take $m\in \mathbb{Z}_{>0}$ such that $r^m=|c^{-1}|$ for some $c\in k^{\times}$. Define a bounded $k$-algebra homomorphism
+    \[
+        \varphi:k\{T\}\rightarrow k\{r^{-1} T\}
+    \]
+    sending $T$ to $cT^m$. Observe that $\varphi$ is injective.
+    We have argued in the proof of \cref{lma-tatestrictaff} that this homomorphism is finite. 
+
+    Then $\varphi$ induces a finite extension of ring $\Frac  k\{r^{-1} T\}/\Frac k\{T\}$. In particular, the closure of $\Frac k\{T\}$ in $k_r$ is a subfield over which $k_r$ is finite. 
+    But this valuation field is isomorphic to $k\{T\}$. By \cref{prop-finitemodulebasechange} and fpqc descent \cite[\href{https://stacks.math.columbia.edu/tag/02LA}{Tag 02LA}]{stacks-project}, we may assume that $r=1$.
+
+    Recall that $k_1$ is the completion of $\Frac k\{T\}$.
+    Let $\{\tilde{f}_i\}_{i\in I}$ be the set of irreducible monic polynomials in $\tilde{k}[T]$. Lift each $\tilde{f}_i$ to $f_i\in \mathring{k}[T]$. Let $a\in A\hat{\otimes}_k k_1$, we represent $a$ as
+    \[
+        a=\sum_{l=0}^{\infty} a_l T^l+\sum_{i\in I, j\geq 1,0\leq k<\deg f_i}a_{ijk}T^k/f_i^j.
+    \]
+    A similar expression exists for elements in $B\hat{\otimes}_k k_1$ as well. Moreover, the representation is unique.
+
+    As $B\hat{\otimes}_k k_1$ is finite over $A\hat{\otimes}_k k_1$, we can find $b_1,\ldots,b_m$ such that any $b\in B$ can be written as
+    \[
+        b=\sum_{j=1}^m \phi\hat{\otimes}_k k_1(a_j) b_j,
+    \]
+    where $a_j\in A\hat{\otimes}_k k'$. We can replace $b_j$ by $b_{j,0}$ and $a_j$ by $a_{j,0}$. It follows that $B$ is generated $b_{1,0},\ldots,b_{m,0}$ over $A$.
+\end{proof}
+
 For any ring $A$, $\AlgCat_A^f$ denotes the category of finitely generated $A$-algebras.
 
 \begin{proposition}
@@ -1111,7 +1253,7 @@ Recall that $\BanAlgCat_A^f$ is defined in \cref{Banach-def-finiteBanachalgebra}
     We endow $B$ with the norm $\|\bullet\|_B$ as in \cref{prop-finteBanachAmoduleequivfinitemodule}. We claim that $B$ is a Banach $A$-algebra.
 
     Let us recall the definition of the norm.
-    Take $n\in \mathbb{N}$ an epimorphism $\varphi:A^n\rightarrow B$ of $A$-modules. Then $\|\bullet\|_B$ is the residue norm induced by $\varphi$.
+    Take $n\in \mathbb{N}$, an epimorphism $\varphi:A^n\rightarrow B$ of $A$-modules. Then $\|\bullet\|_B$ is the residue norm induced by $\varphi$.
 
     Consider the $A$-linear epimorphism $\psi:A^n\otimes_A A^n\rightarrow B\otimes_A B$. By \cref{prop-finitemodulemapadmi}, when both sides are endowed with the norms $\|\bullet\|_{A^n\otimes_A A^n}$ and $\|\bullet\|_{B\otimes_A B}$ as in \cref{prop-finteBanachAmoduleequivfinitemodule}, $\psi$ is admissible. It follows that there is $C>0$ such that for any $f,g\in B$,
     \[
@@ -1131,6 +1273,16 @@ Recall that $\BanAlgCat_A^f$ is defined in \cref{Banach-def-finiteBanachalgebra}
 \section{Graded reduction}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
 
+\begin{definition}\label{def-gradedredu}
+    Let $A$ be a Banach $k$-algebra, we define the \emph{graded reduction} of $A$ as
+    \[
+        \tilde{A}:=\bigoplus_{h\in \mathbb{R}_{>0}}  \left\{x\in A:\rho(x)\leq  h\right\}/\left\{x\in A:\rho(x)<  h\right\}.  
+    \]
+    For any $f\in A$ with $\rho(f)\neq 0$, we define $\tilde{f}$ as the image of $f$ in the $\rho(f)$-graded piece of $\tilde{A}$.
+\end{definition}
+
+
+
 \begin{definition}
     Let $A$ be a $k_H$-affinoid algebra. We define the \emph{$k_H$-graded reduction} of $A$ as the $\sqrt{|k^{\times}|\cdot H}$-graded ring
     \[
@@ -1144,10 +1296,8 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
         \tilde{f}^H:  \tilde{A}^H\rightarrow \tilde{B}^H
     \]
     as the map induced by sending the class of $x\in A$ with $\rho(x)\leq h$ for any $h\in \sqrt{|k^{\times}|\cdot H}$ to the class of $f(x)\in B$.
-
-
 \end{definition}
-Recall that $\rho(A)=\sqrt{|k^{\times}|\cdot H}\cup\{0\}$ by \cref{thm-strictaffdfnequal}, so $\tilde{f}$ is well-defined.
+Recall that $\rho(A)=\sqrt{|k^{\times}|\cdot H}\cup\{0\}$ by \cref{thm-strictaffdfnequal}, so $\tilde{f}$ is well-defined. This definition is compatible with \cref{def-gradedredu} in the sense that if we regard a  $\sqrt{|k^{\times}|\cdot H}$-graded ring as a $\mathbb{R}_{>0}$-graded ring, the two definitions give the same object.
 
 \begin{example}
     If $K$ is a $k_H$-affinoid algebra which is a field as well, then $\tilde{K}^H$ is a $\sqrt{|k^{\times}|\cdot H}$-graded field. This is immediate from the definition.
@@ -1208,7 +1358,7 @@ Recall that $\rho(A)=\sqrt{|k^{\times}|\cdot H}\cup\{0\}$ by \cref{thm-strictaff
 
     By \cref{Banach-cor-rhoequsup} in the chapter Banach Rings, it suffices to consider each of $\Sp A/\mathfrak{p}_i$ separately, so we may assume that $A$ is an integral domain. 
     
-    By \cref{thm-Noetheriannorm}, we can take $d\in \mathbb{N}$ and a finite injective homomorphism of $k$-algebras $\iota:k\{T_1,\ldots,T_d\}\rightarrow A$. According to \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings, $\rho_A$ is the restriction of the norm $\|\bullet\|_{\Frac A}$ on $\Frac A$ induced by the finite extension $\Frac A/\Frac k\{T_1,\ldots,T_d\}$ from the Gauss valuation. But it is well-known that $\|\bullet\|_{\Frac A}$ is the maximum of finitely many valuations on $\Frac A$. \textcolor{red}{Reproduce BGR3.3.3.1 somewhere.} The assertion is by now obvious.
+    By \cref{cor-noenormalization}, we can take $d\in \mathbb{N}$ and a finite injective homomorphism of $k$-algebras $\iota:k\{T_1,\ldots,T_d\}\rightarrow A$. According to \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings, $\rho_A$ is the restriction of the norm $\|\bullet\|_{\Frac A}$ on $\Frac A$ induced by the finite extension $\Frac A/\Frac k\{T_1,\ldots,T_d\}$ from the Gauss valuation. But it is well-known that $\|\bullet\|_{\Frac A}$ is the maximum of finitely many valuations on $\Frac A$. \textcolor{red}{Reproduce BGR3.3.3.1 somewhere.} The assertion is by now obvious.
 \end{proof}
 
 \begin{lemma}\label{lma-rhoBandrhoA}
@@ -1269,7 +1419,7 @@ Recall that $\rho(A)=\sqrt{|k^{\times}|\cdot H}\cup\{0\}$ by \cref{thm-strictaff
     This contradicts the fact that $\alpha>0$.
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{prop-gradedredtate}
     Let $A$ be a $k_H$-affinoid algebra and $r\in \mathbb{R}^n_{>0}$, then there is a functorial isomorphism
     \[
         \widetilde{A\{r^{-1}T\}}^H \cn \tilde{A}^H[r^{-1}T]
@@ -1285,7 +1435,7 @@ Recall that $k_r$ is defined in \cref{ex-generalkr}.
     for any $s\in \sqrt{|k^{\times}|\cdot H}$. This establishes the desired isomorphism.
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{prop:localatoneelementreduction}
     Let $A$ be a $k_H$-affinoid algebra and $f\in A$ with $r=\rho(f)>0$. Then there is a natural isomorphism
     \[
         \tilde{A}^H_{\tilde{f}}\cn \widetilde{A\{rf^{-1}\}}^H
@@ -1294,15 +1444,88 @@ Recall that $k_r$ is defined in \cref{ex-generalkr}.
 \end{proposition}
 Recall that $A\{rf^{-1}\}$ is defined in \cref{def-localizationaff}, by \cref{thm-strictaffdfnequal}, it is $k_H$-affinoid.
 \begin{proof}
-    
+
+    Let $B=A\{rf^{-1}\}$ and denote by $\phi:\tilde{A}^H\rightarrow \tilde{A}_{\tilde{f}}^H$ the natural  $\sqrt{|k^{\times}|\cdot H}$-graded homomorphism. From the universal property \textcolor{red}{add details}, we can factor the natural map $\tilde{A}^H\rightarrow \tilde{B}^H$ as $\psi:\tilde{A}_{\tilde{f}}^H\rightarrow \tilde{B}^H$. We have a commutative diagram:
+    \[
+        \begin{tikzcd}
+            \tilde{A}^H \arrow[r] \arrow[d, "\phi"']   & \tilde{B}^H \\
+            \tilde{A}^H_{\tilde{f}} \arrow[ru, "\psi"] &          
+        \end{tikzcd}
+    \]
+    We claim that $\psi$ is bijective.
+    Let $\tilde{a}/\tilde{f}^m$ be an element in $\ker \psi$, where $\tilde{a}\in \tilde{A}^H$ is homogeneous. Lift $\tilde{a}$ to $a\in A$. Then $\rho_B(a)<\rho_A(a)$. By \cref{lma-rhoBandrhoA}, $\rho_A(f^na)<r^n\rho_A(a)$ when $n$ is large enough, so 
+    \[
+        \tilde{f}^n\tilde{a}=0  
+    \]
+    in $\tilde{A}$. Therefore, $\tilde{a}/f^m=0$ in $\tilde{A}^H_{\tilde{f}}$. We have shown that $\psi$ is injective.
+
+    It remains to show that $\psi$ is surjective. Let $\tilde{b}\in \tilde{B}^H$ be a non-zero homogeneous element. Lift $\tilde{b}$ to $b\in B$ of the form $f^{-n}a$ for some $a\in A$. By \cref{lma-rhoBandrhoA} again, up to enlarging $n$, we can assume that $\rho_B(a)=\rho_A(a)$. Then $\tilde{a}=\tilde{f}^n\tilde{b}$ has a preimage in $\tilde{A}$. 
+
 \end{proof}
 
 \begin{corollary}
     Let $A$ be a $k_H$-affinoid algebra and $r\in \mathbb{R}^n_{>0}$, then there is a functorial isomorphism
     \[
-        \tilde{A}^H\otimes_{\tilde{k}^H} \tilde{k_r}^H\cong \widetilde{A\hat{\otimes}_k k_r}^H.  
+        \tilde{A}^H\otimes_{\tilde{k}^H} \tilde{k_r}^H\cong \widetilde{A\hat{\otimes}_k k_r}^H
     \]
+    of $\sqrt{|k^{\times}|\cdot H}$-graded rings.
 \end{corollary}
+\begin{proof}
+    We can write
+    \[
+        A\hat{\otimes}_k k_r=\varinjlim_{g\in k\{r^{-1}T\},g\neq 0} A\{r^{-1}T\}\{\rho(g)g^{-1}\}.
+    \]
+    Taking graded reduction, we find
+    \[
+        \begin{aligned}
+        \widetilde{A\hat{\otimes}_k k_r}^H=&\varinjlim_{g\in k\{r^{-1}T\},g\neq 0} \widetilde{A\{r^{-1}T\}\{\rho(g)g^{-1}\}}^H\\
+        =&\varinjlim_{g\in k\{r^{-1}T\},g\neq 0} \widetilde{A\{r^{-1}T\}}^H_{\tilde{g}}\\
+        =&\varinjlim_{g\in k\{r^{-1}T\},g\neq 0} \tilde{A}^H[r^{-1}T]_{\tilde{g}}\\
+        =&\tilde{A}^H\otimes_{\tilde{k}^H} \tilde{k_r}^H.
+        \end{aligned}
+    \]
+    Here we have applied \cref{prop:localatoneelementreduction} in the second equality and \cref{prop-gradedredtate} in the third equality. The first equality follows from the simple observation that graded reduction commutes with filtered colimits.
+\end{proof}
+
+
+
+\begin{proposition}
+    Let $\phi:A\rightarrow B$ be a morphism of $k_H$-affinoid algebras. Then the following are equivalent:
+    \begin{enumerate}
+        \item $\phi$ is finite and admissible.
+        \item $\tilde{\phi}:\tilde{A}^H\rightarrow \tilde{B}^H$ is finite.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    Take $n\in \mathbb{N}$ and $r\in \mathbb{R}^n_{>0}$ so that 
+    \[
+        \rho(A\hat{\otimes}_k k_r)=\rho(B\hat{\otimes}_k k_r)=|k_r|
+    \]
+    and $k_r$ is non-trivially valued. \textcolor{red}{Proof that this is possible.}
+
+    By \cref{Commutative-cor-finitegradeddescent} in the chapter Commutative Algebra and \cref{prop-finiteadmissibledesc},  we may assume that $k$ is non-trivially valued and $\rho(A)=\rho(B)=|k|$. By \cref{Commutative-lma-rhoconditionimplygraded} in  the chapter Commutative Algebra, we have $\tilde{A}=\tilde{A}_1\otimes_{\tilde{k}_1} \tilde{k}$. 
+    By \cref{cor-finitehomoadmi}, $\phi$ is automatically admissible if it is finite. 
+    
+    So it suffices to argue that $\phi$ is finite if and only if $\tilde{\phi}:\tilde{A}\rightarrow \tilde{B}$ is finite. 
+    
+    Assume that $\varphi$ is finite. We show that $\tilde{\varphi}$ is finite. 
+
+    First consider the case where $A$ is an integral domain. 
+    
+    We claim that there is $d\in \mathbb{N}$ and a $k$-algebra homomorphism $\psi:k\{T_1,\ldots,T_d\}\rightarrow A$ such that $\phi\circ \psi$ is finite and injective.  In fact, choosing an epimorphism $\alpha:k\{T_1,\ldots,T_d\}\rightarrow A$, we can apply \cref{thm-Noetheriannorm} to find $\phi\circ \alpha$ to conclude.
+
+    It suffices to show that $\widetilde{\phi\circ\psi}$ is finite in order to conclude that $\tilde{\phi}$ is finite. So we are reduced to the case $A=k\{T_1,\ldots,T_d\}$ and $\ker \phi=0$.
+
+    We will show that the conditions of \cref{Banach-lma-finitemodulejapanese} in the chapter Banach Rings is satisfied with $\rho_B$ as the norm $B$. We have shown that $\rho_B$ is a faithful $k\{T_1,\ldots,T_d\}$-algebra nrom in \cref{cor-rhofaithful}. As $B$ is of finite over $k\{T_1,\ldots,T_d\}$, the rank condition is clearly satisfied. It remains to establish that $\mathring{\phi}$ is integral.
+
+    By \cref{prop-integralstrictafffsup}, for $f\in B$, there is an integral equation 
+    \[
+        f^n+\phi(a_1)f^{n-1}+\cdots+\phi(a_n)=0
+    \]
+    over $A$ such that $\rho_B(f)=\max_{i=1,\ldots,n}|b_i|_{\sup}^{1/i}$. If $f\in \mathring{B}$, then $|b_i|_{\sup}\leq 1$, hence $b_i\in \mathring{B}$. \textcolor{red}{Add a ref}
+
+    Conversely, assume that $\tilde{\phi}$ is finite. It suffices to apply \cref{lma-reductionfiniteimplyfinite} to conclude that $\phi$ is finite.
+\end{proof}
 
 
 \section{Affinoid domains}

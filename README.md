@@ -12,11 +12,17 @@ We will freely make use of all results from Stacks Project.
 
 ### Part 1 Preliminaries
 
+- [Topology and Bornology](Topology-Bornology.pdf)
+
+> To do: Include the theory of nets and quasi-nets.
+
 - [Banach rings](Banach-Rings.pdf)
+
+> To do: include the Archimedean theory
 
 - [Commutative algebra](Commutative-Algebra.pdf)
 
-> To do: include graded commutative algebra.
+> To do: include further details.
 
 ### Part 2 Complex analytic spaces
 

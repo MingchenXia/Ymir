@@ -6,6 +6,7 @@
 \contentsline {section}{\tocsection {}{5}{Semi-normed modules}}{13}{section.0.5}%
 \contentsline {section}{\tocsection {}{6}{Berkovich spectra}}{16}{section.0.6}%
 \contentsline {section}{\tocsection {}{7}{Open mapping theorem}}{20}{section.0.7}%
-\contentsline {section}{\tocsection {}{8}{Maximum spectra}}{21}{section.0.8}%
-\contentsline {section}{\tocsection {}{9}{Bornology}}{24}{section.0.9}%
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{25}{chapter*.1}%
+\contentsline {section}{\tocsection {}{8}{Properties of Banach algebras over a field}}{21}{section.0.8}%
+\contentsline {section}{\tocsection {}{9}{Maximum spectra}}{23}{section.0.9}%
+\contentsline {section}{\tocsection {}{10}{Miscellany}}{26}{section.0.10}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{27}{chapter*.1}%

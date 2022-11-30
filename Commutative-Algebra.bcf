@@ -2347,7 +2347,9 @@
     <bcf:citekey order="1">stacks-project</bcf:citekey>
     <bcf:citekey order="2">stacks-project</bcf:citekey>
     <bcf:citekey order="3">stacks-project</bcf:citekey>
-    <bcf:citekey order="4">stacks-project</bcf:citekey>
+    <bcf:citekey order="4">BGR</bcf:citekey>
+    <bcf:citekey order="5">stacks-project</bcf:citekey>
+    <bcf:citekey order="6">BGR</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
