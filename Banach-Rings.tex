@@ -432,6 +432,7 @@ In the non-Archimedean case, we have a stronger result:
     Moreover, if the norm $\|\bullet\|$ on $A$ is a valuation, so is $\|\bullet\|_r$.
 \end{proposition}
 The second part is usually known as the \emph{Gauss lemma}.
+
 \begin{proof}
     By induction on $n$, we may assume that $n=1$.
 
@@ -498,6 +499,9 @@ The second part is usually known as the \emph{Gauss lemma}.
     \]
     Our claim follows.
 \end{proof}
+\begin{remark}\label{rmk-semivaluationinducetate}
+    More generally, it $A$ is endowed with a semi-valuation $\|\bullet\|'$, then the same procedure and the same proof produces a semi-valuation on $A\{ r^{-1}T \}$.
+\end{remark}
 
 \begin{proposition}\label{prop-Tateunivprop}
     Let $A$, $B$ be a non-Archimedean Banach ring and $f:A\rightarrow B$ be a continuous homomorphism. Then for any $b\in \mathring{B}$, there is a unique continuous homomorphism $F:A\{T\}\rightarrow B$ extending $f$ and sending $T$ to $b$. 
@@ -924,7 +928,7 @@ By \cref{lma-supnormbddbyrho}, the Gelfand transform is well-defined.
     By \cref{cor:maximalidealclosedinBanachring}, $A/\mathfrak{m}$ is a Banach ring. It follows from \cref{prop-Berkospecnonempty} that there is a non-trival bounded semi-valuation on $A/\mathfrak{m}$, which lifts to a bounded semi-valuation on $A$.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}\label{cor-rhoequsup}
     Let $(A,\|\bullet\|_A)$ be a Banach ring. Then for any $f\in A$, we have
     \[
         \rho(f)=\sup_{x\in \Sp A} |f(x)|.  

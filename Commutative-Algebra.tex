@@ -63,6 +63,8 @@ Let $G$ be an Abelian group. We write the group operation of $G$ multiplicativel
 
 \begin{example}\label{ex-localizationgradedring}
     Let $A$ be a $G$-graded ring and $S$ be a multiplicative subset of $A$ consisting of homogeneous elements, then $S^{-1}A$ has a natural $G$-grading. To see this, recall the construction of $S^{-1}A$ in \cite[\href{https://stacks.math.columbia.edu/tag/00CM}{Tag 00CM}]{stacks-project}. One defines an equivalence relation on $A\times S$: $(x,s)\sim (y,t)$ if there is $u\in S$ such that $(xt-ys)u=0$. For each $g\in G$, we define $(S^{-1}A)_g$ as the set of $(x,s)$ for all $s\in S$ and $x\in A_{g\rho(s)}$. It is easy to verify that this is a well-defined $G$-grading on $S^{-1}A$.  \textcolor{red}{Add details.}
+
+    In particular, if $f\in A$ is a non-zero homogeneous element, then we define $A_f$ as $S^{-1}f$ with $S=\{f^n:n\in \mathbb{N}\}$.
 \end{example}
 
 \begin{definition}
@@ -170,6 +172,12 @@ Observe that $G$-homogeneous ideals of $A$ are $G$-graded submodules of $A$. Als
 
     The AB5 condition is easily verified. \textcolor{red}{Expand the details of this argument!}
 \end{proof}
+
+Next we define the tensor product of $G$-graded modules.
+\begin{definition}
+    Let $A$ be a $G$-graded ring and $M,N$ be $G$-graded $A$-modules. We define a $G$-grading on $M\otimes_A N$ as follows: for any $g\in G$, $(M\otimes_A N)_g$ is defined as the image of $\sum_{h\in G}M_h\times N_{gh^{-1}}$ in $M\otimes_A N$. We always endow $M\otimes_A N$ with this $G$-grading.
+\end{definition}
+\textcolor{red}{verify the universal prperty; show that this is indeed a grading}
 
 \begin{example}\label{ex-localizationgradedmodule}
     This is a continuition of \cref{ex-localizationgradedring}.

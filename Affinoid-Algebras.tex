@@ -62,7 +62,7 @@ As we will see, constructing a good function theory, or more precisely, enhancin
 
 
 \section{Affinoid algebras}
-Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $R_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
  
 \begin{definition}
     A Banach $k$-algebra $A$ is \emph{$k$-affinoid} (resp. \emph{strictly $k$-affinoid}) if there are $n\in \mathbb{N}$, $r\in \mathbb{R}^n_{>0}$ and an admissible epimorphism $k\{r^{-1}T\}\rightarrow A$ (resp. an admissible epimorphism $k\{T\}\rightarrow A$).
@@ -219,6 +219,8 @@ For the notion of admissible morphisms, we refer to \cref{Banach-def-admissiblem
     The argument of \cref{Banach-prop-strictconvseriesradiusBanach} in the chapter Banch Rings does not work here if $r\in \sqrt{|k^{\times}|}$, as in general one can not take minimal $i,j$ so that \eqref{eq-aibjnorm} is satisfied.
 \end{remark}
 
+
+
 \begin{proposition}\label{prop-Krvaluation}
     Assume that $r\in \mathbb{R}_{>0}\setminus \sqrt{|k^{\times}|}$. Then $k_r$ is a valuation field and $\|\bullet\|_r$ is non-trivial.
 \end{proposition}
@@ -236,10 +238,10 @@ For the notion of admissible morphisms, we refer to \cref{Banach-def-admissiblem
     The valuation $\|\bullet\|_r$ is non-trivial as $\|T\|_r=r$.
 \end{proof}
 
-\begin{definition}
-    An element $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ for some $n\in \mathbb{N}$ is called a \emph{$k$-free polyradius} if $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$.
+\begin{definition}\label{def-kfreekr}
+    An element $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ for some $n\in \mathbb{N}$ is called a \emph{$k$-free polyray} if $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{Q}\otimes_{\mathbb{Z}}\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$.
 
-    Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$. Assume that $r$ is a $k$-free polyradius. We define 
+    Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$. Assume that $r$ is a $k$-free polyray. We define 
     \[
         k_r=k_{r_1}\hat{\otimes}_k \cdots \hat{\otimes}_k k_{r_n}.  
     \]
@@ -248,7 +250,7 @@ By an interated application of \cref{prop-Krvaluation}, $k_r$ is a complete valu
 
 As a general explanation of why $k_r$ is useful, we prove the following proposition:
 \begin{proposition}\label{prop-Krfaithflat}
-    Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)$ be a $k$-free polyradius.
+    Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)$ be a $k$-free polyray.
     \begin{enumerate}
         \item For any $k$-Banach space $X$, the natural map
         \[
@@ -266,6 +268,18 @@ As a general explanation of why $k_r$ is useful, we prove the following proposit
     (2) This follows easily from the explicit description in (1).
 \end{proof}
 When $X$ is a Banach $k$-algebra,  $X\hat{\otimes}_k k_r$ is a Banach $k_r$-algebra. 
+
+\begin{example}\label{ex-generalkr}
+    For any $n\in \mathbb{N}$, $r\in \mathbb{R}^n_{>0}$, not necessarily $k$-free. We define $k_r$ as the completed fraction field of $k\{r^{-1}T\}$ provided with the extended valuation $|\bullet|_r$. Then $k_r$ is still a valuation field extending $k$.
+    
+    When $r$ is a $k$-free polyray, we claim that $k_r$ coincides with $k_r$ defined in \cref{def-kfreekr}.
+    To see this, let us temporarily denote the $k_r$ defined in this example as $k_r'$
+    consider the extension of field:
+    \[
+        \Frac k\{r^{-1}T\}\rightarrow k_r=k\{r^{-1}T,rS\}/(T_1S_1-1,\ldots,T_nS_n-1) 
+    \]
+    sending $T_i$ to $T_i$ for $i=1,\ldots,n$. Observe that this is an extension of valuation field as well by the same arguments as in \cref{prop-Krisaffinoid}. In particular, it induces an extension of complete valuation fields $k_r'\rightarrow k_r$. But the image clearly contains the classes of all polynomials in $k[T,S]$, so $k_r'\rightarrow k_r$ is an isometric isomorphism.
+\end{example}
 
 
 \begin{proposition}\label{prop-strictlykafffinite}
@@ -314,7 +328,7 @@ When $X$ is a Banach $k$-algebra,  $X\hat{\otimes}_k k_r$ is a Banach $k_r$-alge
 
 
 \begin{proposition}\label{prop-redtostrictlykaff}
-    Let $A$ be a $k$-affinoid algebra, then there is $n\in \mathbb{N}$ and a $k$-free polyradius $r=(r_1,\ldots,r_n)$ such that $A\hat{\otimes}_k k_r$ is strictly $k_r$-affinoid. Moreover, we can guarantee that $k_r$ is non-trivially valued.
+    Let $A$ be a $k$-affinoid algebra, then there is $n\in \mathbb{N}$ and a $k$-free polyray $r=(r_1,\ldots,r_n)$ such that $A\hat{\otimes}_k k_r$ is strictly $k_r$-affinoid. Moreover, we can guarantee that $k_r$ is non-trivially valued.
 \end{proposition} 
 \begin{proof}
     By \cref{prop-Krfaithflat}, we may assume that $A=k\{t^{-1}T\}$ for some $t\in \mathbb{R}^m_{>0}$. By \cref{lma-tatestrictaff}, it suffices to take $r$ so that the linear subspace of $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$ generated by $r_1,\ldots,r_n$ contains all components of $t$. By taking $n\geq 1$, we can guarantee that $k_r$ is non-trivially valued.
@@ -778,6 +792,51 @@ Recall that $\rho$ is the spectral radius map defined in \cref{Banach-def-spectr
     It follows from \cref{prop-fnnormbyrho} that the right-hand side the series converges. The boundedness of $\Phi$ is obvious.
 \end{proof}
 
+
+\begin{definition}\label{def-localizationaff}
+    Let $A$ be an affinoid algebra, $f\in A$ is a non-zero element and $r\in \mathbb{R}_{>0}$, we define the \emph{localization} $A\{rf^{-1}\}$ of $A$ at $r^{-1}f$ as follows:
+    \[
+        A\{rf^{-1}\}:=A\{rT\}/(Tf-1).
+    \]
+\end{definition}
+Observe that $A\{rf^{-1}\}$ is $k$-affinoid by \cref{thm-affnoetherian}. 
+
+\begin{proposition}\label{prop-afflocalizationprop}
+    Let $A$ be an affinoid algebra, $f\in A$ is a non-zero element and $r\in \mathbb{R}_{>0}$.
+    Consider the natural map $\iota:A\rightarrow A\{rf^{-1}\}$, then $\Sp \iota:\Sp A\{rf^{-1}\}\rightarrow \Sp A$ is injective. We will identify $\Sp A\{rf^{-1}\}$ with a subset of $\Sp A$. Then
+    \[
+        \Sp A\{rf^{-1}\}= \{x\in \Sp A: |f(x)|\geq r\}.
+    \]
+
+    For any $x\in \Sp A\{rf^{-1}\}$, we have
+    \[
+        |f(x)|\geq r.  
+    \]
+\end{proposition}
+\begin{proof}
+    The first assertion means that each bounded semi-valuation on $A$ admits at most one bounded extension to $A\{r^{-1}T\}$. This is obvious as the image of $A$ in $A\{r^{-1}T\}$ is dense.
+
+    For the second statement, let $\|\bullet\|_x$ be the bounded semi-norm on $A\{r^{-1}T\}$ corresponding to $x$. We need to show that
+    \[
+        \|f\|_x \geq r.  
+    \]
+    We know that 
+    \[
+        \|T\|_{r^{-1}}=r^{-1}  
+    \]
+    so 
+    \[
+        \|T\|_x\leq r^{-1}.  
+    \]
+    From $Tf=1$, we find
+    \[
+        1\leq \|f\|_x\cdot \|T\|_x\leq r^{-1}  \|f\|_x.
+    \]
+
+    Conversely, let $x\in \Sp A$ with $|f(x)|\geq r$. Let $\|\bullet\|_x$ be the bounded semi-valuation on $A$ corresponding to $x$. We can extend $\|\bullet\|_x$ to a semi-valuation $\|\bullet\|_x'$ on by \cref{Banach-rmk-semivaluationinducetate} in the chapter Banach Rings. The assumption $|f(x)|\geq r$ guarantees exactly that $\|\bullet\|_x'$ is bounded.
+\end{proof}
+
+
 \begin{proposition}\label{prop-admissepiperturbation}
     Let $(A,\|\bullet\|_A),(B,\|\bullet\|_B)$ be $k$-affinoid algebras, $r \in \mathbb{R}_{>0}^n$ and $\varphi:A\{r^{-1}T\}\rightarrow B$ be an admissible epimorphism. Write $f_i=\varphi(T_i)$ for $i=1,\ldots,n$. Then there is $\epsilon>0$ such that for any $g=(g_1,\ldots,g_n)\in B^n$ with $\|f_i-g_i\|_{B}<\epsilon$ for all $i=1,\ldots,n$, there exists a unique bounded $k$-algebra homomorphism $\psi: A\{r^{-1}T\}\rightarrow B$ that coincides with $\varphi$ on $A$ and sends $T_i$ to $g_i$. Moreover, $\psi$ is also an admissible epimorphism.
 \end{proposition}
@@ -819,7 +878,7 @@ Recall that $\rho$ is the spectral radius map defined in \cref{Banach-def-spectr
 \end{proof}
 
 \begin{corollary}\label{cor-affkhann}
-    Let $A$ be a Banach $k$-algebra, $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)$ be a $k$-free polyradius. Assume that $A\hat{\otimes}_k k_r$ is $k_r$-affinoid, then $A$ is $k$-affinoid.
+    Let $A$ be a Banach $k$-algebra, $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)$ be a $k$-free polyray. Assume that $A\hat{\otimes}_k k_r$ is $k_r$-affinoid, then $A$ is $k$-affinoid.
 
     If $A\hat{\otimes}_k k_r$ is $k_H$-affinoid and $r\in H$, then $A$ is also $k_H$-affinoid. 
 \end{corollary}
@@ -930,7 +989,7 @@ We next give a non-strict extension of \cref{prop-strictlykafffinite}.
     \[
         \varphi:k\{r^{-1}T\} \rightarrow A. 
     \]
-    Take a $k$-free polyradius $s$ with at least one component so that $|k_s|\supseteq \{r_1,\ldots,r_n\}$. We can apply \cref{lma-strictlykaffintermsofrho} to $\varphi\hat{\otimes}_k k_s$, it follows that $\rho(A)\subseteq \sqrt{|k_s^{\times}|}\cup \{0\}$.
+    Take a $k$-free polyray $s$ with at least one component so that $|k_s|\supseteq \{r_1,\ldots,r_n\}$. We can apply \cref{lma-strictlykaffintermsofrho} to $\varphi\hat{\otimes}_k k_s$, it follows that $\rho(A)\subseteq \sqrt{|k_s^{\times}|}\cup \{0\}$.
 
     (3) $\implies$ (2): we may assume that $H\supseteq |k^{\times}|$. It suffices to apply the same argument as (2) $\implies$ (1) in the proof of \cref{lma-strictlykaffintermsofrho}.
 
@@ -1023,7 +1082,7 @@ Here the Banach $A$-module structure on $M\otimes_A N$ is given by \cref{prop-fi
 \end{proof}
 
 \begin{proposition}
-    Let $A$ be a $k$-affinoid algebra. Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)$ be a $k$-free polyradius. Then $M$ is a finite Banach $A$-module if and only if $M\hat{\otimes}_k k_r$ is a finite Banach $A\hat{\otimes}_k k_r$-module.
+    Let $A$ be a $k$-affinoid algebra. Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)$ be a $k$-free polyray. Then $M$ is a finite Banach $A$-module if and only if $M\hat{\otimes}_k k_r$ is a finite Banach $A\hat{\otimes}_k k_r$-module.
 \end{proposition}
 \begin{proof}
     We may assume that $r$ has only one component and write $r_1=r$. The direct implication is trivial. Let us assume that $M\hat{\otimes}_k k_r$ is a finite Banach $A\hat{\otimes}_k k_r$-module. Take $n\in \mathbb{N}$ and an admissible epimorphism of $A\hat{\otimes}_k k_r$-modules
@@ -1078,13 +1137,173 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
       \tilde{A}^H:=\bigoplus_{h\in \sqrt{|k^{\times}|\cdot H}}\left\{x\in A:\rho(x)\leq  h\right\}/\left\{x\in A:\rho(x)<  h\right\}.  
     \]
 
+    For any $f\in A$ with $\rho(f)\neq 0$, we define $\tilde{f}$ as the image of $f$ in the $\rho(f)$-graded piece of $\tilde{A}^H$.
+
     For any morphism $f:A\rightarrow B$ of $k_H$-affinoid algebras, we define 
     \[
         \tilde{f}^H:  \tilde{A}^H\rightarrow \tilde{B}^H
     \]
     as the map induced by sending the class of $x\in A$ with $\rho(x)\leq h$ for any $h\in \sqrt{|k^{\times}|\cdot H}$ to the class of $f(x)\in B$.
+
+
 \end{definition}
-Recall that $\rho(A)=\sqrt{|k^{\times}|\cdot H}\cup\{0\}$ by \cref{thm-strictaffdfnequal}.
+Recall that $\rho(A)=\sqrt{|k^{\times}|\cdot H}\cup\{0\}$ by \cref{thm-strictaffdfnequal}, so $\tilde{f}$ is well-defined.
+
+\begin{example}
+    If $K$ is a $k_H$-affinoid algebra which is a field as well, then $\tilde{K}^H$ is a $\sqrt{|k^{\times}|\cdot H}$-graded field. This is immediate from the definition.
+\end{example}
+
+
+
+\begin{lemma}\label{lma-rhointatering}
+    Let $(A,\|\bullet\|)$ be a $k$-affinoid algebra, $n\in \mathbb{N}$ and $r\in \mathbb{R}^n_{>0}$. Let $f\in k\{r^{-1}T\}$. Expand $f$ as
+    \[
+        f=\sum_{\alpha\in \mathbb{N}^n}a_{\alpha}T^{\alpha}.  
+    \]
+    Then 
+    \[
+        \rho(f)=\max_{\alpha\in \mathbb{N}^n} \rho(a_{\alpha})r^{\alpha}.
+    \]
+\end{lemma}
+\begin{proof}
+    By induction, we may assume that $n=1$ and write $r=r_1$. As $\rho$ is a bounded powerly bounded semi-norm, we have
+    \[
+        \rho(f)\leq \max_{j\in \mathbb{N}}\rho(a_{j}T^j) \leq \max_{j\in \mathbb{N}}\rho(a_{j})\rho(T^j)= \max_{j\in \mathbb{N}} \rho(a_j)r^j.  
+    \]
+    Observe that $\rho(a_j)$ is not ambiguous: when intepreted as in $A$ and in $A\{r^{-1}T\}$, it has the same value.
+
+    Conversely, we need to show that for any $j\in \mathbb{N}$, 
+    \[
+        \rho(f)\geq \rho(a_j)r^j.  
+    \]
+    Equivalently, this means for any $k\in \mathbb{Z}_{>0}$ and any $j\in \mathbb{N}$, we need to show that
+    \[
+        \|f^k\|_r\geq \rho(a_j)^k r^{jk}.  
+    \]
+    Fix $j$ and $k$ as above.
+    We compute the left-hand side:
+    \[
+        f^k=\sum_{\beta=(\beta_1,\ldots,\beta_k)\in \mathbb{N}^k} b_{\beta} T^{|\beta|},\quad b_{\beta}=\prod_{l=1}^k a_{\beta_l}.  
+    \]
+    It follows that
+    \[
+        \|f^k\|_r=\max_{\beta \in \mathbb{N}^k} \|b_{\beta}\|T^{|\beta|}.
+    \]
+    Take $\beta=(j,j,\ldots,j)$, we find
+    \[
+        \|f^k\|_r\geq \|a_j^k\| r^{jk}\geq \rho(a_j)^k r^{jk}.
+    \]
+\end{proof}
+
+\begin{lemma}\label{prop-rhodiscrete}
+    Assume that $k$ is non-trivially valued.
+    Let $A$ be a strictly $k$-affinoid algebra. Then for any $a,f\in A$, the set of non-zero values $\rho(f^n a)$ for $n\in \mathbb{N}$ is a discrete subset of $\mathbb{R}_{>0}$.
+\end{lemma}
+\begin{proof}
+    As $A$ is noetherian \cref{thm-affnoetherian}, it has only finitely many minimal prime ideals, say $\mathfrak{p}_1,\ldots,\mathfrak{p}_m$. It follows that 
+    \[
+        \Sp A=\bigcup_{i=1}^m \Sp A/\mathfrak{p}_i.
+    \]
+    Here we make the obvious identification by identifying $\Sp A/\mathfrak{p}_i$ with a subset of $\Sp A$.
+
+    By \cref{Banach-cor-rhoequsup} in the chapter Banach Rings, it suffices to consider each of $\Sp A/\mathfrak{p}_i$ separately, so we may assume that $A$ is an integral domain. 
+    
+    By \cref{thm-Noetheriannorm}, we can take $d\in \mathbb{N}$ and a finite injective homomorphism of $k$-algebras $\iota:k\{T_1,\ldots,T_d\}\rightarrow A$. According to \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings, $\rho_A$ is the restriction of the norm $\|\bullet\|_{\Frac A}$ on $\Frac A$ induced by the finite extension $\Frac A/\Frac k\{T_1,\ldots,T_d\}$ from the Gauss valuation. But it is well-known that $\|\bullet\|_{\Frac A}$ is the maximum of finitely many valuations on $\Frac A$. \textcolor{red}{Reproduce BGR3.3.3.1 somewhere.} The assertion is by now obvious.
+\end{proof}
+
+\begin{lemma}\label{lma-rhoBandrhoA}
+    Let $(A,\|\bullet\|)$ be a $k$-affinoid algebra, $f\in A$ with $r=\rho(f)>0$. Let $B=A\{r^{-1}f\}$. Then for any $a\in A$, we have
+    \[
+        \rho_B(a)=\lim_{n\to\infty}r^{-n}\rho_A(f^na).
+    \]  
+    If moreover, $\rho_B(a)>0$, then there is $n_0>0$ such that for $n\geq n_0$,
+    \[
+        \rho_B(a)=r^{-n}\rho_A(f^na),\quad   \rho_B(f^na)=r^{-n}\rho_A(a).
+    \]
+\end{lemma}
+\begin{proof}
+    We observe that for any $a\in A$, $n\in \mathbb{Z}_{>0}$, we have
+    \[
+        \rho_B(f^na)=r^n\rho_B(a).
+    \]
+    So the last two assertions are equivalent.
+
+    Take a $k$-free polyradius $s$ such that $A\hat{\otimes}_k k_s$ and $B\hat{\otimes}_k k_s$ are both strictly $k_s$-affinoid. By \cref{prop-Krfaithflat}, $A\hat{\otimes}_k k_s\{r^{-1}f\}\cn B\hat{\otimes}_k k_s$. Moreover, $\rho_A$ and $\rho_B$ are both preserved after base change to $k_s$. So we may assume that $k$ is non-trivially valued and $A$ and $B$ are strictly $k$-affinoid.
+
+    Observe that  for $n\in \mathbb{Z}_{>0}$, 
+    \[
+        \rho_A(f^{n+1}a)\leq \rho_A(f)\rho_A(f^na)=r   \rho_A(f^na). 
+    \]
+    So $r^{-n}\rho_A(f^{n}a)$ is decreasing in $n$. Moreover, for any $x\in \Sp A\{r^{-1}f\}$, by \cref{prop-afflocalizationprop}, we have
+    \[
+        |f(x)|\geq r. 
+    \]
+    By \cref{Banach-cor-rhoequsup} in the chapter Banach Rings, we have
+    \[
+        |f(x)|=r  
+    \]
+    for any $x\in \Sp A\{r^{-1}f\}$. It follows from \cref{Banach-cor-rhoequsup} in the chapter Banach Rings that for any $n\in \mathbb{Z}_{>0}$,
+    \[
+        \rho_A(f^na)=\sup_{x\in \Sp A}|f^na(x)|\geq  r^n\sup_{x\in \Sp A\{rf^{-1}\}}|a(x)|=r^n\rho_B(a). 
+    \]
+    By \cref{prop-rhodiscrete}, the decreasing sequence $\{r^{-n}\rho_A(f^na)\}_n$ either tends to $0$ or is eventually constant. It converges to $0$, there is nothing else to prove. So let us assume that there is $\alpha\in \mathbb{R}_{>0}$ and $n_0>0$ such that for $n\geq n_0$, we have
+    \[
+        r^{-n}\rho_A(f^na)=\alpha.  
+    \]
+    We have to show that $\alpha\leq \rho_B(a)$. Assume the contrary $\alpha>\rho_B(a)$. Then for all $x\in \Sp A$, we have
+    \[
+        |f^na(x)|\leq r^n|a(x)|.  
+    \] 
+    So $f^na$ must obtain its maximum on $U:=\{x\in \Sp A: |a(x)|\geq \alpha\}$. But $U$ is disjoint from $\Sp A\{r^{-1}f\}$ as
+    \[
+        \alpha>\rho_B(a).
+    \]
+    It follows from \cref{prop-afflocalizationprop} that 
+    \[
+        \beta:=\sup_{x\in U}|f(x)|=\max_{x\in U}|f(x)|<r.  
+    \]
+    So
+    \[
+        \rho(f^na)=\sup_{x\in \Sp A}|f^na(x)|=\sup_{x\in U}|f^na(x)|\leq \beta^n \sup_{x\in U}|a(x)|.   
+    \]
+    This contradicts the fact that $\alpha>0$.
+\end{proof}
+
+\begin{proposition}
+    Let $A$ be a $k_H$-affinoid algebra and $r\in \mathbb{R}^n_{>0}$, then there is a functorial isomorphism
+    \[
+        \widetilde{A\{r^{-1}T\}}^H \cn \tilde{A}^H[r^{-1}T]
+    \]
+    of $\sqrt{|k^{\times}|\cdot H}$-graded rings.
+\end{proposition}
+Recall that $k_r$ is defined in \cref{ex-generalkr}.
+\begin{proof}
+    By \cref{lma-rhointatering}, we have a natural isomorphism
+    \[
+        \widetilde{A\{r^{-1}T\}}^H_s \cn \bigoplus_{\alpha\in \mathbb{N}^n} \tilde{A}^H_{s r^{-\alpha}}  
+    \]
+    for any $s\in \sqrt{|k^{\times}|\cdot H}$. This establishes the desired isomorphism.
+\end{proof}
+
+\begin{proposition}
+    Let $A$ be a $k_H$-affinoid algebra and $f\in A$ with $r=\rho(f)>0$. Then there is a natural isomorphism
+    \[
+        \tilde{A}^H_{\tilde{f}}\cn \widetilde{A\{rf^{-1}\}}^H
+    \]
+    of $\sqrt{|k^{\times}|\cdot H}$-graded rings.
+\end{proposition}
+Recall that $A\{rf^{-1}\}$ is defined in \cref{def-localizationaff}, by \cref{thm-strictaffdfnequal}, it is $k_H$-affinoid.
+\begin{proof}
+    
+\end{proof}
+
+\begin{corollary}
+    Let $A$ be a $k_H$-affinoid algebra and $r\in \mathbb{R}^n_{>0}$, then there is a functorial isomorphism
+    \[
+        \tilde{A}^H\otimes_{\tilde{k}^H} \tilde{k_r}^H\cong \widetilde{A\hat{\otimes}_k k_r}^H.  
+    \]
+\end{corollary}
+
 
 \section{Affinoid domains}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H\supseteq |k^{\times}|$ be a subgroup of $R_{>0}$.
@@ -1130,8 +1349,6 @@ It is not immediately clear that $A_V$ is canonically assocaited with $V$. We wi
 
     Let $V'$ be the inverse image of $V$ in $\Sp A\hat{\otimes}_k k_r$. We claim that $V'$ is a strict $k_r$-affinoid domain in $\Sp A\hat{\otimes}_k k_r$ represented by $A\hat{\otimes}_k k_r\rightarrow A_V\hat{\otimes}_k k_r$.
 \end{proof}
-
-\section{Graded reduction}
 
 \printbibliography
 \end{document}
