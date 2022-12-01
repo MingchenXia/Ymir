@@ -913,49 +913,6 @@ Recall that $\rho$ is the spectral radius map defined in \cref{Banach-def-spectr
 \end{proof}
 
 
-\begin{definition}\label{def-localizationaff}
-    Let $A$ be an affinoid algebra, $f\in A$ is a non-zero element and $r\in \mathbb{R}_{>0}$, we define the \emph{localization} $A\{rf^{-1}\}$ of $A$ at $r^{-1}f$ as follows:
-    \[
-        A\{rf^{-1}\}:=A\{rT\}/(Tf-1).
-    \]
-\end{definition}
-Observe that $A\{rf^{-1}\}$ is $k$-affinoid by \cref{thm-affnoetherian}. 
-
-\begin{proposition}\label{prop-afflocalizationprop}
-    Let $A$ be an affinoid algebra, $f\in A$ is a non-zero element and $r\in \mathbb{R}_{>0}$.
-    Consider the natural map $\iota:A\rightarrow A\{rf^{-1}\}$, then $\Sp \iota:\Sp A\{rf^{-1}\}\rightarrow \Sp A$ is injective. We will identify $\Sp A\{rf^{-1}\}$ with a subset of $\Sp A$. Then
-    \[
-        \Sp A\{rf^{-1}\}= \{x\in \Sp A: |f(x)|\geq r\}.
-    \]
-
-    For any $x\in \Sp A\{rf^{-1}\}$, we have
-    \[
-        |f(x)|\geq r.  
-    \]
-\end{proposition}
-\begin{proof}
-    The first assertion means that each bounded semi-valuation on $A$ admits at most one bounded extension to $A\{r^{-1}T\}$. This is obvious as the image of $A[f^{-1}]$ in $A\{rf^{-1}\}$ is dense.
-
-    For the second statement, let $\|\bullet\|_x$ be the bounded semi-norm on $A\{r^{-1}T\}$ corresponding to $x$. We need to show that
-    \[
-        \|f\|_x \geq r.  
-    \]
-    We know that 
-    \[
-        \|T\|_{r^{-1}}=r^{-1}  
-    \]
-    so 
-    \[
-        \|T\|_x\leq r^{-1}.  
-    \]
-    From $Tf=1$, we find
-    \[
-        1\leq \|f\|_x\cdot \|T\|_x\leq r^{-1}  \|f\|_x.
-    \]
-
-    Conversely, let $x\in \Sp A$ with $|f(x)|\geq r$. Let $\|\bullet\|_x$ be the bounded semi-valuation on $A$ corresponding to $x$. We can extend $\|\bullet\|_x$ to a semi-valuation $\|\bullet\|_x'$ on by \cref{Banach-rmk-semivaluationinducetate} in the chapter Banach Rings. The assumption $|f(x)|\geq r$ guarantees exactly that $\|\bullet\|_x'$ is bounded.
-\end{proof}
-
 
 \begin{proposition}\label{prop-admissepiperturbation}
     Let $(A,\|\bullet\|_A),(B,\|\bullet\|_B)$ be $k$-affinoid algebras, $r \in \mathbb{R}_{>0}^n$ and $\varphi:A\{r^{-1}T\}\rightarrow B$ be an admissible epimorphism. Write $f_i=\varphi(T_i)$ for $i=1,\ldots,n$. Then there is $\epsilon>0$ such that for any $g=(g_1,\ldots,g_n)\in B^n$ with $\|f_i-g_i\|_{B}<\epsilon$ for all $i=1,\ldots,n$, there exists a unique bounded $k$-algebra homomorphism $\psi: A\{r^{-1}T\}\rightarrow B$ that coincides with $\varphi$ on $A$ and sends $T_i$ to $g_i$. Moreover, $\psi$ is also an admissible epimorphism.
@@ -1285,6 +1242,156 @@ Recall that $\BanAlgCat_A^f$ is defined in \cref{Banach-def-finiteBanachalgebra}
 \end{remark}
 
 
+\section{Affinoid domains}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
+
+\begin{definition}\label{def-affinoiddomain}
+    Let $A$ be a $k_H$-affinoid algebra. A closed subset $V\subseteq \Sp A$ is said to be a \emph{$k_H$-affinoid domain} in $X$ if there is an object $\Sp A_V\in k_H\text{-}\AffCat$ and a morphism $\phi:\Sp A_V\rightarrow \Sp A$ in $k_H\text{-}\AffCat$ such that
+    \begin{enumerate}
+        \item the image of $\phi$ in $\Sp A$ is $V$;
+        \item given any object $\Sp B\in k_H\text{-}\AffCat$ and a morphism $\Sp B\rightarrow \Sp A$ whose image lies in $V$, there is a unique morphism $\Sp B\rightarrow \Sp A$ in $k_H\text{-}\AffCat$ such that the following diagram commutes
+        \[
+            \begin{tikzcd}
+                \Sp B \arrow[d, "!", dotted] \arrow[rd] &       \\
+                \Sp A_V \arrow[r, "\phi"]               & \Sp A
+            \end{tikzcd}    
+        \]
+    \end{enumerate}
+
+    We say $V$ is \emph{represented by} the morphism $\phi$ or by the corresponding morphism $A\rightarrow A_V$.
+
+    When $H=\mathbb{R}_{>0}$, we say $V$ is a \emph{$k$-affinoid domain} in $X$. When $H=|k^{\times}|$, we say $V$ is a \emph{strict $k$-affinoid domain} in $X$.
+\end{definition}
+\begin{remark}
+    This definition differs from the original definition of \cite{Berk12}, we follow the approach of Temkin instead. It can be shown that this definition is equivalent to the orignal definition of Berkovich when $H=\mathbb{R}_{>0}$.
+\end{remark}
+
+We begin with a few examples.
+\begin{example}\label{ex-Laurentdomain}
+    Let $A$ be a $k_H$-affinoid domain.
+    Let $n,m\in \mathbb{N}$ and $f=(f_1,\ldots,f_n)\in A^n$, $g=(g_1,\ldots,g_m)\in A^m$. Let $r=(r_1,\ldots,r_n)\in\sqrt{|k^{\times}|\cdot H}^n$ and $s=(s_1,\ldots,s_m)\in \sqrt{|k^{\times}|\cdot H}^m$. We define
+    \[
+        (\Sp A)\left\{r^{-1}f,sg^{-1}\right\}:=\left\{x\in \Sp A: |f_i(x)|\leq r_i, |g_j(x)|\geq s_j, 1\leq i\leq n, 1\leq j\leq m\right\}.  
+    \]
+    We claim that $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$ is a $k_H$-affinoid domain in $\Sp A$. These domains are called \emph{$k_H$-Laurent domains} in $\Sp A$. When $m=0$, the domains $\Sp A\{r^{-1}f\}$ are called \emph{$k_H$-Weierstrass domains} in $\Sp A$.
+
+    To see this, we define
+    \[
+        A\left\{r^{-1}f,sg^{-1}\right\}:=A\{r^{-1}T,sS\}/(T_1-f_1,\ldots,T_n-f_n,g_1S_1-1,\ldots,g_mS_m-1).
+    \]
+    By \cref{thm-affnoetherian}, this defines a Banach $k$-algebra structure.
+    We write $\|\bullet\|'$ for the quotient norm.
+    By definition, $A\left\{r^{-1}f,sg^{-1}\right\}$ is a $k_H$-affinoid algebra and there is a natural morphism $A\rightarrow A\left\{r^{-1}f,sg^{-1}\right\}$. We claim that this morphism represents $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$.
+
+    For this purpose, we first compute $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$. We observe that $\Sp A\left\{r^{-1}f,sg^{-1}\right\}\rightarrow \Sp A$ is injective since
+    $A[f,g^{-1}]$ is dense in $A\left\{r^{-1}f,sg^{-1}\right\}$. We will therefore identify $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$ with a subset of $\Sp A$. 
+    
+    Next we show that the image of $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$ in $\Sp A$ is contained in $(\Sp A)\left\{r^{-1}f,sg^{-1}\right\}$. Take $\|\bullet\|\in \Sp A\left\{r^{-1}f,sg^{-1}\right\}$. Then there is a constant $C>0$ such that
+    \[
+        \|\bullet\|\leq C\|\bullet\|'.  
+    \]
+    Applying this to $f^k_i$ for some $k\in \mathbb{Z}_{>0}$ and $i=1,\ldots,n$, we find that
+    \[
+        \|f_i\|^k=\|f_i^k\|\leq C\|f_i^k\|'\leq C\|T_i^i\|_{r,s^{-1}}= Cr_i^{k}.  
+    \]
+    It follows that 
+    \[
+        \|f_i\|\leq r_i.
+    \]
+    Similarly, we deduce $|g_j|\geq s_j$ for $j=1,\ldots,m$. Namely, $\|\bullet\|\in (\Sp A)\left\{r^{-1}f,sg^{-1}\right\}$.
+
+
+    Next we verify the universal property: let $\Sp B\rightarrow \Sp A$ be a morphism of $k_H$-affinoid domains that factorizes through $(\Sp A)\left\{r^{-1}f,sg^{-1}\right\}$. We write $\psi:A\rightarrow B$ for the corresponding morphism of $k_H$-affinoid algebras. 
+    Write $\|\bullet\|_B$ and $\|\bullet\|_A$ for the norms on $B$ and $A$ respectively. Take a constant $C>0$, so that 
+    \[
+        \|\psi(k)\|_B\leq C\|k\|_A  
+    \]
+    for all $k\in A$. For any $x\in \Sp B$ corresponding to a bounded semi-valuation $|\bullet|_x$ on $B$, we can find a constant $C'>0$ so that
+    \[
+        |\bullet|_x\leq C'\|\bullet\|_B.  
+    \]
+    In particular, for any $k\in A$, we have
+    \[
+        |\psi(k)|_x\leq CC'\|k\|_A.  
+    \]
+    Taking powers of $k$, we find
+    \[
+        |\psi(k)|_x\leq\rho_A(k).
+    \]
+    By \cref{Banach-cor-rhoequsup} in the chapter Banach Rings, we have
+    \[
+        \rho_B(f_i)=\sup_{x\in \Sp B}|f_i(x)|\leq \sup_{y\in (\Sp A)\left\{r^{-1}f,sg^{-1}\right\}} |f_i(y)|\leq r_i
+    \]   
+    for $i=1,\ldots,n$. Similarly, one deduces that $\rho(g_j)\leq s_j^{-1}$ for $j=1,\ldots,m$.
+    
+    We will construct the dotted arrows: 
+    \[
+        \begin{tikzcd}
+            A \arrow[r, "\psi"] \arrow[d]                  & B \\
+            {A\{r^{-1}T,sS\}} \arrow[d] \arrow[ru, dotted,"\eta"] &   \\
+            {A\{r^{-1}f,sg\}} \arrow[ruu, dotted, "\tau"]          &  
+        \end{tikzcd}
+    \]
+    so that this diagram commutes. We define $\eta$ as the unique morphism sending $T_i$ to $f_i$ and $S_j$ to $g_j$ for  $i=1,\ldots,n$, $j=1,\ldots,m$. The existence of such a morphism is guaranteed by \cref{prop-admissepiperturbation}. In order to descend this morphism to $\eta'$, it suffices to show that $T_i-f_i$ and $g_jS_j-1$ for $i=1,\ldots,n$ and $j=1,\ldots,m$ lie in the kernel of $\eta$. But this is immediate from our definition. Moreover, it is clear that $\eta'$ is necessarily unique.
+
+    It remains to show that each point in $(\Sp A)\left\{r^{-1}f,sg^{-1}\right\}$ lies in $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$. 
+    
+    It suffices to treat the cases $(n,m)=(1,0)$ and $(n,m)=(0,1)$. We will only handle the former case, as the latter is similar. In concrete terms, we need to show that for any $x\in \Sp A$ corresponding to a bounded semi-valuation $|\bullet|_x$ on $A$ satisfying $|f(x)|\leq r$, we can always extend $|\bullet|_x$ to a bounded semi-valuation $\|\bullet\|$ on $A\{r^{-1}f\}$.
+    Replacing $A$ by $A/\ker |\bullet|_x$, we may assume that $|\bullet|_x$ is a valuation on $A$. We endow $A\{r^{-1}T\}$ with the Gauss norm $\|\bullet\|_{x,r}$ induced by $|\bullet|_x$ and $A\{r^{-1}T\}$ with the quotient norm $\|\bullet\|$. This norm is bounded by construction. It suffices to show that it is a valuation and it extends the given valuation on $A$. The former is a consequence of the latter, as $A$ is dense in $A\{r^{-1}f\}$. Now suppose $a\in A$. A general preimage of $a$ in $A\{r^{-1}T\}$ is 
+    \[
+        a+(T-f)\sum_{j=0}^{\infty}b_j T^j=  a-fb_0+\sum_{j=1}^{\infty} (b_{j-1}-fb_j)T^j
+    \] 
+    with $\|b_j\|_A r^j\to 0$ as $j\to\infty$. Now we compute
+    \[
+        \begin{aligned}
+          \|a-fb_j+\sum_{j=1}^{\infty} (b_{j-1}-fb_j)\|_{x,r}=&\max \left\{|a-fb_0|_x, \max_{j\geq 1}|b_{j-1}-fb_j|_x r^j \right\}\\
+          \geq & \max \left\{|a-fb_0|_x, \max_{j\geq 1}|b_{j-1}-fb_j|_x |f|_x^j \right\}\\
+          =& \max \left\{|a-fb_0|_x, \max_{j\geq 1}|f^jb_{j-1}-f^{j+1}b_j|_x\right\}
+          \geq & |a|_x.
+        \end{aligned}
+    \]
+    So $\|a\|\geq |a|_x$. The reverse inequality is trivial. We conclude.
+\end{example}
+
+\begin{example}\label{ex-rationaldomains}
+    Let $A$ be a $k_H$-affinoid domain. Let $n\in \mathbb{N}$, $g\in A$, $f=(f_1,\ldots,f_n)\in A^n$, $r=(r_1,\ldots,r_n)\in \sqrt{|k^{\times}|\cdot H}^n$. Assume that $g,f_1,\ldots,f_n$ generates the unit ideal. Define
+    \[
+        (\Sp A)\left\{r^{-1}\frac{f}{g}\right\}=\left\{ x\in \Sp A: |f_i(x)|\leq r_i|g(x)|\text{ for }i=1,\ldots,n \right\}.  
+    \]
+    Then we claim that $(\Sp A)\left\{r^{-1}\frac{f}{g}\right\}$ is a $k_H$-affinoid domain in $\Sp A$. Domains of this form are called \emph{$k_H$-rational domains}.
+
+    To see this, we define
+    \[
+        A\left\{r^{-1}\frac{f}{g}\right\}:=A\{r^{-1}T\}/(gT_1-f_1,\ldots,gT_n-f_n).
+    \]
+    By \cref{thm-Noetheriannorm}, this is indeed a $k_H$-affinoid domain. We will denote by $\|\bullet\|'$ the residue norm.
+\end{example}
+
+
+\begin{proposition}
+    Let $A$ be a $k_H$-affinoid algebra and $V\subseteq \Sp A$ be a $k_H$-affinoid domain represented by $\varphi:A\rightarrow A_V$. Then $\Sp \varphi$ induces a bijection $\Sp A_V\rightarrow \Sp A$. 
+\end{proposition}
+\begin{proof}
+    We observe that $\Sp A_V\rightarrow \Sp A$ is a monomorphism in the category $k_H\text{-}\AffCat$. In other words, $A\rightarrow A_V$ is an epimorhism in the category $k_H\text{-}\AffAlgCat$. To see this, let $\eta_1,\eta_2:A_V\rightarrow B$ be two arrows in $k_H\text{-}\AffAlgCat$ such that $\eta_1\circ \varphi=\eta_2\circ \varphi$. It follows from the universal property in \cref{def-affinoiddomain} that $\eta_1=\eta_2$. We claim that $\Sp A_V\rightarrow V$ is a bijection.
+\end{proof}
+
+\iffalse
+It is not immediately clear that $A_V$ is canonically assocaited with $V$. We will prove this now.
+
+\begin{proposition}
+    Let $A$ be a $k_H$-affinoid algebra and $V$ be an affinoid domain in $X$ represented by $\varphi:A\rightarrow A_V$. Then $\Sp \varphi:\Sp A_V\rightarrow \Sp A$ induces a homeomorphism $\Sp A_V\rightarrow V$.
+
+    In particular, $A_V$ is uniquely determined by $V$ up to isomorphisms of Banach $k$-algebras.
+\end{proposition}
+\begin{proof}
+    Let us reduce the problem to the case where $k$ is non-trivially valued and $A$ and $A_V$ are both strictly $k$-affinoid. 
+    
+    By \cref{prop-redtostrictlykaff}, taking a suitable $r=r(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ such that $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$, we may guarantee that $A\hat{\otimes}_k k_r$ and $A_V\hat{\otimes}_k k_r$ are both strictly $k_r$-affinoid.
+
+    Let $V'$ be the inverse image of $V$ in $\Sp A\hat{\otimes}_k k_r$. We claim that $V'$ is a strict $k_r$-affinoid domain in $\Sp A\hat{\otimes}_k k_r$ represented by $A\hat{\otimes}_k k_r\rightarrow A_V\hat{\otimes}_k k_r$.
+\end{proof}
+\fi
+
 \section{Graded reduction}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
 
@@ -1399,7 +1506,7 @@ Recall that $\rho(A)=\sqrt{|k^{\times}|\cdot H}\cup\{0\}$ by \cref{thm-strictaff
     \[
         \rho_A(f^{n+1}a)\leq \rho_A(f)\rho_A(f^na)=r   \rho_A(f^na). 
     \]
-    So $r^{-n}\rho_A(f^{n}a)$ is decreasing in $n$. Moreover, for any $x\in \Sp A\{r^{-1}f\}$, by \cref{prop-afflocalizationprop}, we have
+    So $r^{-n}\rho_A(f^{n}a)$ is decreasing in $n$. Moreover, for any $x\in \Sp A\{r^{-1}f\}$, by \cref{ex-Laurentdomain}, we have
     \[
         |f(x)|\geq r. 
     \]
@@ -1423,7 +1530,7 @@ Recall that $\rho(A)=\sqrt{|k^{\times}|\cdot H}\cup\{0\}$ by \cref{thm-strictaff
     \[
         \alpha>\rho_B(a).
     \]
-    It follows from \cref{prop-afflocalizationprop} that 
+    It follows from \cref{ex-Laurentdomain} that 
     \[
         \beta:=\sup_{x\in U}|f(x)|=\max_{x\in U}|f(x)|<r.  
     \]
@@ -1457,7 +1564,7 @@ Recall that $k_r$ is defined in \cref{ex-generalkr}.
     \]
     of $\sqrt{|k^{\times}|\cdot H}$-graded rings.
 \end{proposition}
-Recall that $A\{rf^{-1}\}$ is defined in \cref{def-localizationaff}, by \cref{thm-strictaffdfnequal}, it is $k_H$-affinoid.
+Recall that $A\{rf^{-1}\}$ is defined in \cref{ex-Laurentdomain}, by \cref{thm-strictaffdfnequal}, it is $k_H$-affinoid.
 \begin{proof}
 
     Let $B=A\{rf^{-1}\}$ and denote by $\phi:\tilde{A}^H\rightarrow \tilde{A}_{\tilde{f}}^H$ the natural  $\sqrt{|k^{\times}|\cdot H}$-graded homomorphism. From the universal property \textcolor{red}{add details}, we can factor the natural map $\tilde{A}^H\rightarrow \tilde{B}^H$ as $\psi:\tilde{A}_{\tilde{f}}^H\rightarrow \tilde{B}^H$. We have a commutative diagram:
@@ -1542,130 +1649,6 @@ Recall that $A\{rf^{-1}\}$ is defined in \cref{def-localizationaff}, by \cref{th
     Conversely, assume that $\tilde{\phi}$ is finite. It suffices to apply \cref{lma-reductionfiniteimplyfinite} to conclude that $\phi$ is finite.
 \end{proof}
 
-
-\section{Affinoid domains}
-Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
-
-\begin{definition}\label{def-affinoiddomain}
-    Let $A$ be a $k_H$-affinoid algebra. A closed subset $V\subseteq \Sp A$ is said to be a \emph{$k_H$-affinoid domain} in $X$ if there is an object $\Sp A_V\in k_H\text{-}\AffCat$ and a morphism $\phi:\Sp A_V\rightarrow \Sp A$ in $k_H\text{-}\AffCat$ such that
-    \begin{enumerate}
-        \item the image of $\phi$ in $\Sp A$ is $V$;
-        \item given any object $\Sp B\in k_H\text{-}\AffCat$ and a morphism $\Sp B\rightarrow \Sp A$ whose image lies in $V$, there is a unique morphism $\Sp B\rightarrow \Sp A$ in $k_H\text{-}\AffCat$ such that the following diagram commutes
-        \[
-            \begin{tikzcd}
-                \Sp B \arrow[d, "!", dotted] \arrow[rd] &       \\
-                \Sp A_V \arrow[r, "\phi"]               & \Sp A
-            \end{tikzcd}    
-        \]
-    \end{enumerate}
-
-    We say $V$ is \emph{represented by} the morphism $\phi$ or by the corresponding morphism $A\rightarrow A_V$.
-
-    When $H=\mathbb{R}_{>0}$, we say $V$ is a \emph{$k$-affinoid domain} in $X$. When $H=|k^{\times}|$, we say $V$ is a \emph{strict $k$-affinoid domain} in $X$.
-\end{definition}
-\begin{remark}
-    This definition differs from the original definition of \cite{Berk12}, we follow the approach of Temkin instead. It can be shown that this definition is equivalent to the orignal definition of Berkovich when $H=\mathbb{R}_{>0}$.
-\end{remark}
-
-We begin with a few examples.
-\begin{example}
-    Let $A$ be a $k_H$-affinoid domain.
-    Let $n,m\in \mathbb{N}$ and $f=(f_1,\ldots,f_n)\in A^n$, $g=(g_1,\ldots,g_m)\in A^m$. Let $r=(r_1,\ldots,r_n)\in\sqrt{|k^{\times}|\cdot H}^n$ and $s=(s_1,\ldots,s_m)\in \sqrt{|k^{\times}|\cdot H}^m$. We define
-    \[
-        (\Sp A)\left\{r^{-1}f,sg^{-1}\right\}:=\left\{x\in \Sp A: |f_i(x)|\leq r_i, |g_j(x)|\geq s_j, 1\leq i\leq n, 1\leq j\leq m\right\}.  
-    \]
-    We claim that $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$ is a $k_H$-affinoid domain in $\Sp A$.
-
-    To see this, we define
-    \[
-        A\left\{r^{-1}f,sg^{-1}\right\}:=A\{r^{-1}T,sS\}/(T_1-f_1,\ldots,T_n-f_n,g_1S_1-1,\ldots,g_mS_m-1).
-    \]
-    We write $\|\bullet\|'$ for the quotient norm.
-    By definition, $A\left\{r^{-1}f,sg^{-1}\right\}$ is a $k_H$-affinoid algebra and there is a natural morphism $A\rightarrow A\left\{r^{-1}f,sg^{-1}\right\}$. We claim that this morphism represents $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$.
-
-    For this purpose, we first compute $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$. We observe that $\Sp A\left\{r^{-1}f,sg^{-1}\right\}\rightarrow \Sp A$ is injective since
-    $A[f,g^{-1}]$ is dense in $A\left\{r^{-1}f,sg^{-1}\right\}$. We will therefore identify $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$ with a subset of $\Sp A$. 
-    
-    Next we show that the image of $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$ in $\Sp A$ is contained in $(\Sp A)\left\{r^{-1}f,sg^{-1}\right\}$. Take $\|\bullet\|\in \Sp A\left\{r^{-1}f,sg^{-1}\right\}$. Then there is a constant $C>0$ such that
-    \[
-        \|\bullet\|\leq C\|\bullet\|'.  
-    \]
-    Applying this to $f^k_i$ for some $k\in \mathbb{Z}_{>0}$ and $i=1,\ldots,n$, we find that
-    \[
-        \|f_i\|^k=\|f_i^k\|\leq C\|f_i^k\|'\leq C\|T_i^i\|_{r,s^{-1}}= Cr_i^{k}.  
-    \]
-    It follows that 
-    \[
-        \|f_i\|\leq r_i.
-    \]
-    Similarly, we deduce $|g_j|\geq s_j$ for $j=1,\ldots,m$. Namely, $\|\bullet\|\in (\Sp A)\left\{r^{-1}f,sg^{-1}\right\}$.
-
-
-    Next we verify the universal property: let $\Sp B\rightarrow \Sp A$ be a morphism of $k_H$-affinoid domains that factorizes through $(\Sp A)\left\{r^{-1}f,sg^{-1}\right\}$. We write $\psi:A\rightarrow B$ for the corresponding morphism of $k_H$-affinoid algebras. 
-    Write $\|\bullet\|_B$ and $\|\bullet\|_A$ for the norms on $B$ and $A$ respectively. Take a constant $C>0$, so that 
-    \[
-        \|\psi(k)\|_B\leq C\|k\|_A  
-    \]
-    for all $k\in A$. For any $x\in \Sp B$ corresponding to a bounded semi-valuation $|\bullet|_x$ on $B$, we can find a constant $C'>0$ so that
-    \[
-        |\bullet|_x\leq C'\|\bullet\|_B.  
-    \]
-    In particular, for any $k\in A$, we have
-    \[
-        |\psi(k)|_x\leq CC'\|k\|_A.  
-    \]
-    Taking powers of $k$, we find
-    \[
-        |\psi(k)|_x\leq\rho_A(k).
-    \]
-    By \cref{Banach-cor-rhoequsup} in the chapter Banach Rings, we have
-    \[
-        \rho_B(f_i)=\sup_{x\in \Sp B}|f_i(x)|\leq \sup_{y\in (\Sp A)\left\{r^{-1}f,sg^{-1}\right\}} |f_i(y)|\leq r_i
-    \]   
-    for $i=1,\ldots,n$.
-    
-    We will construct the dotted arrows: 
-    \[
-        \begin{tikzcd}
-            A \arrow[r, "\psi"] \arrow[d]                  & B \\
-            {A\{r^{-1}T,sS\}} \arrow[d] \arrow[ru, dotted,"\eta"] &   \\
-            {A\{r^{-1}f,sg\}} \arrow[ruu, dotted]          &  
-        \end{tikzcd}
-    \]
-    so that this diagram commutes. We define $\eta$ as the unique morphism sending $T_i$ to $f_i$ and $S_j$ to $g_j$ for  $i=1,\ldots,n$, $j=1,\ldots,m$. By \cref{prop-admissepiperturbation}, in order to 
-    
-    
-    
-    Let $x\in \Sp A$ corresponding to a bounded semi-valuation $|\bullet|_x$ on $A$. We need to find the condition such that $|\bullet|_x$ extends to a bounded semi-valuation on $A\left\{r^{-1}f,sg^{-1}\right\}$. Let $h\in A\left\{r^{-1}f,sg^{-1}\right\}$, we represent $h$ as
-    \[
-        h=\sum_{\alpha\in \mathbb{N}^n,\beta\in \mathbb{N}^{\beta}} a_{\alpha,\beta}f^{\alpha} g^{\beta}
-    \]
-    such that $a_{\alpha,\beta}r^{\alpha}s^{-\beta}\to 0$ as $|\alpha|+|\beta|\to \infty$.
-    From the uniquenss, the only possible extension of $|\bullet|_x$ is $\|\bullet\|_x$ 
-\end{example}
-
-
-\begin{proposition}
-    Let $A$ be a $k_H$-affinoid algebra and $V\subseteq \Sp A$ be a $k_H$-affinoid domain represented by $\varphi:A\rightarrow A_V$. Then $\Sp \varphi$ induces a bijection $\Sp A_V\rightarrow \Sp A$. 
-\end{proposition}
-\begin{proof}
-    We observe that $\Sp A_V\rightarrow \Sp A$ is a monomorphism in the category $k_H\text{-}\AffCat$. In other words, $A\rightarrow A_V$ is an epimorhism in the category $k_H\text{-}\AffAlgCat$. To see this, let $\eta_1,\eta_2:A_V\rightarrow B$ be two arrows in $k_H\text{-}\AffAlgCat$ such that $\eta_1\circ \varphi=\eta_2\circ \varphi$. It follows from the universal property in \cref{def-affinoiddomain} that $\eta_1=\eta_2$. We claim that $\Sp A_V\rightarrow V$ is a bijection.
-\end{proof}
-
-It is not immediately clear that $A_V$ is canonically assocaited with $V$. We will prove this now.
-
-\begin{proposition}
-    Let $A$ be a $k_H$-affinoid algebra and $V$ be an affinoid domain in $X$ represented by $\varphi:A\rightarrow A_V$. Then $\Sp \varphi:\Sp A_V\rightarrow \Sp A$ induces a homeomorphism $\Sp A_V\rightarrow V$.
-
-    In particular, $A_V$ is uniquely determined by $V$ up to isomorphisms of Banach $k$-algebras.
-\end{proposition}
-\begin{proof}
-    Let us reduce the problem to the case where $k$ is non-trivially valued and $A$ and $A_V$ are both strictly $k$-affinoid. 
-    
-    By \cref{prop-redtostrictlykaff}, taking a suitable $r=r(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ such that $r_1,\ldots,r_n$ are linearly independent in the $\mathbb{Q}$-linear space $\mathbb{R}_{>0}/\sqrt{|k^{\times}|}$, we may guarantee that $A\hat{\otimes}_k k_r$ and $A_V\hat{\otimes}_k k_r$ are both strictly $k_r$-affinoid.
-
-    Let $V'$ be the inverse image of $V$ in $\Sp A\hat{\otimes}_k k_r$. We claim that $V'$ is a strict $k_r$-affinoid domain in $\Sp A\hat{\otimes}_k k_r$ represented by $A\hat{\otimes}_k k_r\rightarrow A_V\hat{\otimes}_k k_r$.
-\end{proof}
 
 
 \printbibliography

@@ -15,10 +15,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{7}{$H$-strict affinoid algebras}}{22}{section.0.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{8}{Finite modules over affinoid algebras}}{24}{section.0.8}%
+\contentsline {section}{\tocsection {}{8}{Finite modules over affinoid algebras}}{23}{section.0.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{9}{Graded reduction}}{27}{section.0.9}%
+\contentsline {section}{\tocsection {}{9}{Affinoid domains}}{27}{section.0.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{10}{Affinoid domains}}{32}{section.0.10}%
+\contentsline {section}{\tocsection {}{10}{Graded reduction}}{29}{section.0.10}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{35}{chapter*.1}%
