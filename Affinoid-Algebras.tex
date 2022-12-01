@@ -72,14 +72,28 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
 
     A morphism between $k$-affinoid (resp. strictly $k$-affinoid, resp. $k_H$-affinoid) algebras is a bounded $k$-algebra homomorphism.
 
-    The category of $k$-affinoid (resp. strictly $k$-affinoid, resp. $k_H$-affinoid) algebras is denoted by $k\text{-}\AffAlgCat$ (resp. $\text{st-}k\text{-}\AffAlgCat$, resp. $k_H\text{-}\AffAlgCat$). The opposite categories of these categories are denoted by $k\text{-}\AffCat$, $\text{st-}k\text{-}\AffCat$ and $k_H\text{-}\AffCat$. For any $A$ in $k\text{-}\AffAlgCat$ (resp. $\text{st-}k\text{-}\AffAlgCat$, resp. $k_H\text{-}\AffAlgCat$), the corresponding image in the opposite category is denoted by $\Sp A$. We can also identify $\Sp A$ with the topological space defined in \cref{Banach-def-Berkspectrum} in the chapter Banach Rings.
+    The category of $k$-affinoid (resp. strictly $k$-affinoid, resp. $k_H$-affinoid) algebras is denoted by $k\text{-}\AffAlgCat$ (resp. $\text{st-}k\text{-}\AffAlgCat$, resp. $k_H\text{-}\AffAlgCat$). 
+    
+    
+    %The opposite categories of these categories are denoted by $k\text{-}\AffCat$, $\text{st-}k\text{-}\AffCat$ and $k_H\text{-}\AffCat$. For any $A$ in $k\text{-}\AffAlgCat$ (resp. $\text{st-}k\text{-}\AffAlgCat$, resp. $k_H\text{-}\AffAlgCat$), the corresponding image in the opposite category is denoted by $\Sp A$. We can also identify $\Sp A$ with the topological space defined in \cref{Banach-def-Berkspectrum} in the chapter Banach Rings.
 
     %An affinoid $k$-algebra is a $K$-affinoid algebra for some complete non-Archimedean field extension $K/k$.
 \end{definition}
 For the notion of admissible morphisms, we refer to \cref{Banach-def-admissiblemorphism} in the chapter Banach rings.
+
+Although we have defined strictly $k$-affinoid algebra when $k$ is trivially valued, we will deliberately avoid talking about it in order to avoid pathologies.
 \begin{remark}
     Berkovich also introduced the notion of \emph{affinoid $k$-algebras}: it is a $K$-affinoid algebra for some complete non-Archimedean field extension $K/k$. We will not use this notion.
 \end{remark}
+
+
+\begin{definition}
+    The category of \emph{$k$-affinoid spectra} $k\text{-}\AffCat$ (resp. \emph{strictly $k$-affinoid spectra} $\text{st-}k\text{-}\AffCat$, resp. \emph{$k_H$-affinoid spectra} $k_H\text{-}\AffCat$) is the opposite category of $k\text{-}\AffAlgCat$ (resp. $\text{st-}k\text{-}\AffAlgCat$, resp. $k_H\text{-}\AffAlgCat$). An object in these categories are called a \emph{$k$-affinoid spectrum}, \emph{strictly $k$-affinoid spectrum} and \emph{$k_H$-affinoid spectrum} respectively.
+
+    Given an object $A$ of $k\text{-}\AffAlgCat$ (resp. $\text{st-}k\text{-}\AffAlgCat$, resp. $k_H\text{-}\AffAlgCat$), we denote the corresponding object in $k\text{-}\AffCat$ (resp. $\text{st-}k\text{-}\AffCat$, resp. $k_H\text{-}\AffCat$) by $\Sp A$. We call $\Sp A$ the \emph{affinoid spectrum} of $A$.
+\end{definition}
+In \cref{Banach-def-Berkspectrum} in the chapter Banach Rings, we defined functors $\Sp:k\text{-}\AffCat\rightarrow \TopCat$, $\Sp:\text{st-}k\text{-}\AffCat\rightarrow \TopCat$ and $\Sp:k_H\text{-}\AffCat\rightarrow \TopCat$. This motivates our notation. We will freely view $\Sp A$ as an object in these categories or as a topological space.
+
 
 
 
@@ -825,6 +839,7 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     The right-hand side is clearly bounded.
 \end{proof}
 
+
 \begin{corollary}\label{cor-rhoequsup}
     Assume that $k$ is non-trivially valued.
     Let $(A,\|\bullet\|)$ be a strictly $k$-affinoid algebra. For any $f\in A$,
@@ -919,7 +934,7 @@ Observe that $A\{rf^{-1}\}$ is $k$-affinoid by \cref{thm-affnoetherian}.
     \]
 \end{proposition}
 \begin{proof}
-    The first assertion means that each bounded semi-valuation on $A$ admits at most one bounded extension to $A\{r^{-1}T\}$. This is obvious as the image of $A$ in $A\{r^{-1}T\}$ is dense.
+    The first assertion means that each bounded semi-valuation on $A$ admits at most one bounded extension to $A\{r^{-1}T\}$. This is obvious as the image of $A[f^{-1}]$ in $A\{rf^{-1}\}$ is dense.
 
     For the second statement, let $\|\bullet\|_x$ be the bounded semi-norm on $A\{r^{-1}T\}$ corresponding to $x$. We need to show that
     \[
@@ -1529,27 +1544,48 @@ Recall that $A\{rf^{-1}\}$ is defined in \cref{def-localizationaff}, by \cref{th
 
 
 \section{Affinoid domains}
-Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H\supseteq |k^{\times}|$ be a subgroup of $R_{>0}$.
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
 
 \begin{definition}\label{def-affinoiddomain}
-    Let $A$ be a $k_H$-affinoid algebra. A subset $V\subseteq \Sp A$ is said to be a \emph{$k_H$-affinoid domain} in $X$ if there is a bounded homomorphism of $k_H$-affinoid algebras $\varphi:A\rightarrow A_V$ satisfying 
+    Let $A$ be a $k_H$-affinoid algebra. A closed subset $V\subseteq \Sp A$ is said to be a \emph{$k_H$-affinoid domain} in $X$ if there is an object $\Sp A_V\in k_H\text{-}\AffCat$ and a morphism $\phi:\Sp A_V\rightarrow \Sp A$ in $k_H\text{-}\AffCat$ such that
     \begin{enumerate}
-        \item $\Img \Sp\varphi=V$;
-        \item given a bounded homomorphism of $k_H$-affinoid algebras $\psi:A\rightarrow B$ such that $\Sp \psi:\Sp B\rightarrow \Sp A$ factorizes through $V$, there is a unique bounded homomorphism $A_V\rightarrow B$ such that the following diagram is commutative:
+        \item the image of $\phi$ in $\Sp A$ is $V$;
+        \item given any object $\Sp B\in k_H\text{-}\AffCat$ and a morphism $\Sp B\rightarrow \Sp A$ whose image lies in $V$, there is a unique morphism $\Sp B\rightarrow \Sp A$ in $k_H\text{-}\AffCat$ such that the following diagram commutes
         \[
             \begin{tikzcd}
-                A \arrow[r, "\varphi"] \arrow[d, "\psi"] & A_V \arrow[ld] \\
-                B                                        &               
-            \end{tikzcd}.
+                \Sp B \arrow[d, "!", dotted] \arrow[rd] &       \\
+                \Sp A_V \arrow[r, "\phi"]               & \Sp A
+            \end{tikzcd}    
         \]
     \end{enumerate}
-    We say $V$ is \emph{represented by} the morphism $\varphi$.
 
-    When $k_H=\mathbb{R}_{>0}$, we say $V$ is a \emph{$k$-affinoid domain} in $X$. When $k_H=|k^{\times}|$, we say $V$ is a \emph{strict $k$-affinoid domain} in $X$.
+    We say $V$ is \emph{represented by} the morphism $\phi$ or by the corresponding morphism $A\rightarrow A_V$.
+
+    When $H=\mathbb{R}_{>0}$, we say $V$ is a \emph{$k$-affinoid domain} in $X$. When $H=|k^{\times}|$, we say $V$ is a \emph{strict $k$-affinoid domain} in $X$.
 \end{definition}
 \begin{remark}
     This definition differs from the original definition of \cite{Berk12}, we follow the approach of Temkin instead. It can be shown that this definition is equivalent to the orignal definition of Berkovich when $H=\mathbb{R}_{>0}$.
 \end{remark}
+
+We begin with a few examples.
+\begin{example}
+    Let $A$ be a $k_H$-affinoid domain.
+    Let $n,m\in \mathbb{N}$ and $f=(f_1,\ldots,f_n)\in A^n$, $g=(g_1,\ldots,g_m)\in A^m$. Let $r=(r_1,\ldots,r_n)\in\sqrt{|k^{\times}|\cdot H}^n$ and $s=(s_1,\ldots,s_m)\in \sqrt{|k^{\times}|\cdot H}^m$. We define
+    \[
+        (\Sp A)\left\{r^{-1}f,sg^{-1}\right\}:=\left\{x\in \Sp A: |f_i(x)|\leq r_i, |g_j(x)|\geq q_j, 1\leq i\leq n, 1\leq j\leq m\right\}.  
+    \]
+    We claim that $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$ is a $k_H$-affinoid domain in $\Sp A$.
+
+    To see this, we define
+    \[
+        A\left\{r^{-1}f,sg^{-1}\right\}:=A\{r^{-1}T,sS\}/(T_1-f_1,\ldots,T_n-f_n,g_1S_1-1,\ldots,g_mS_m-1).
+    \]
+    By definition, $A\left\{r^{-1}f,sg^{-1}\right\}$ is a $k_H$-affinoid algebra and there is a natural morphism $A\rightarrow A\left\{r^{-1}f,sg^{-1}\right\}$. We claim that this morphism represents $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$.
+
+    For this purpose, we first compute $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$. We observe that $\Sp A\left\{r^{-1}f,sg^{-1}\right\}\rightarrow \Sp A$ is injective since
+    $A[f,g^{-1}]$ is dense in $\left\{r^{-1}f,sg^{-1}\right\}$. We will therefore identify $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$ with a subset of $\Sp A$. Let $x\in \Sp A$ corresponding to a bounded semi-valuation $|\bullet|_x$ on $A$. We need to find the condition such that $|\bullet|_x$ extends to a bounded semi-valuation on $A\left\{r^{-1}f,sg^{-1}\right\}$.
+\end{example}
+
 
 \begin{proposition}
     Let $A$ be a $k_H$-affinoid algebra and $V\subseteq \Sp A$ be a $k_H$-affinoid domain represented by $\varphi:A\rightarrow A_V$. Then $\Sp \varphi$ induces a bijection $\Sp A_V\rightarrow \Sp A$. 
@@ -1572,6 +1608,7 @@ It is not immediately clear that $A_V$ is canonically assocaited with $V$. We wi
 
     Let $V'$ be the inverse image of $V$ in $\Sp A\hat{\otimes}_k k_r$. We claim that $V'$ is a strict $k_r$-affinoid domain in $\Sp A\hat{\otimes}_k k_r$ represented by $A\hat{\otimes}_k k_r\rightarrow A_V\hat{\otimes}_k k_r$.
 \end{proof}
+
 
 \printbibliography
 \end{document}
