@@ -20,3 +20,5 @@
 \contentsline {section}{\tocsection {}{9}{Graded reduction}}{27}{section.0.9}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{10}{Affinoid domains}}{32}{section.0.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{35}{chapter*.1}%

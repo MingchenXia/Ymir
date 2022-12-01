@@ -1,0 +1,20 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{1}{Introduction}}{4}{section.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{2}{$\mathbb {C}$-ringed space}}{4}{section.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{3}{Complex model spaces and complex analytic spaces}}{5}{section.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{4}{Weierstrass map}}{6}{section.0.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{5}{Oka's coherence theorem}}{6}{section.0.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{6}{Rückert Nullstellensatz}}{6}{section.0.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{7}{Finite limits in the category of complex analytic spaces}}{8}{section.0.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{8}{Complex analytic topos}}{10}{section.0.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{11}{chapter*.1}%

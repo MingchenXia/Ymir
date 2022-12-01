@@ -815,7 +815,7 @@ In particular, we see that the topology of a $k$-affinoid algebra is uniquely de
 \end{proof}
 
 \section{Properties of affinoid algebras}
-Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $R_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
 
 \begin{proposition}\label{prop-powerbddinstrictlyaff}
     Assume that $k$ is non-trivially valued. Let $A$ be a strictly $k$-afifnoid algebra. Then
@@ -1572,7 +1572,7 @@ We begin with a few examples.
     Let $A$ be a $k_H$-affinoid domain.
     Let $n,m\in \mathbb{N}$ and $f=(f_1,\ldots,f_n)\in A^n$, $g=(g_1,\ldots,g_m)\in A^m$. Let $r=(r_1,\ldots,r_n)\in\sqrt{|k^{\times}|\cdot H}^n$ and $s=(s_1,\ldots,s_m)\in \sqrt{|k^{\times}|\cdot H}^m$. We define
     \[
-        (\Sp A)\left\{r^{-1}f,sg^{-1}\right\}:=\left\{x\in \Sp A: |f_i(x)|\leq r_i, |g_j(x)|\geq q_j, 1\leq i\leq n, 1\leq j\leq m\right\}.  
+        (\Sp A)\left\{r^{-1}f,sg^{-1}\right\}:=\left\{x\in \Sp A: |f_i(x)|\leq r_i, |g_j(x)|\geq s_j, 1\leq i\leq n, 1\leq j\leq m\right\}.  
     \]
     We claim that $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$ is a $k_H$-affinoid domain in $\Sp A$.
 
@@ -1580,10 +1580,68 @@ We begin with a few examples.
     \[
         A\left\{r^{-1}f,sg^{-1}\right\}:=A\{r^{-1}T,sS\}/(T_1-f_1,\ldots,T_n-f_n,g_1S_1-1,\ldots,g_mS_m-1).
     \]
+    We write $\|\bullet\|'$ for the quotient norm.
     By definition, $A\left\{r^{-1}f,sg^{-1}\right\}$ is a $k_H$-affinoid algebra and there is a natural morphism $A\rightarrow A\left\{r^{-1}f,sg^{-1}\right\}$. We claim that this morphism represents $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$.
 
     For this purpose, we first compute $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$. We observe that $\Sp A\left\{r^{-1}f,sg^{-1}\right\}\rightarrow \Sp A$ is injective since
-    $A[f,g^{-1}]$ is dense in $\left\{r^{-1}f,sg^{-1}\right\}$. We will therefore identify $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$ with a subset of $\Sp A$. Let $x\in \Sp A$ corresponding to a bounded semi-valuation $|\bullet|_x$ on $A$. We need to find the condition such that $|\bullet|_x$ extends to a bounded semi-valuation on $A\left\{r^{-1}f,sg^{-1}\right\}$.
+    $A[f,g^{-1}]$ is dense in $A\left\{r^{-1}f,sg^{-1}\right\}$. We will therefore identify $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$ with a subset of $\Sp A$. 
+    
+    Next we show that the image of $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$ in $\Sp A$ is contained in $(\Sp A)\left\{r^{-1}f,sg^{-1}\right\}$. Take $\|\bullet\|\in \Sp A\left\{r^{-1}f,sg^{-1}\right\}$. Then there is a constant $C>0$ such that
+    \[
+        \|\bullet\|\leq C\|\bullet\|'.  
+    \]
+    Applying this to $f^k_i$ for some $k\in \mathbb{Z}_{>0}$ and $i=1,\ldots,n$, we find that
+    \[
+        \|f_i\|^k=\|f_i^k\|\leq C\|f_i^k\|'\leq C\|T_i^i\|_{r,s^{-1}}= Cr_i^{k}.  
+    \]
+    It follows that 
+    \[
+        \|f_i\|\leq r_i.
+    \]
+    Similarly, we deduce $|g_j|\geq s_j$ for $j=1,\ldots,m$. Namely, $\|\bullet\|\in (\Sp A)\left\{r^{-1}f,sg^{-1}\right\}$.
+
+
+    Next we verify the universal property: let $\Sp B\rightarrow \Sp A$ be a morphism of $k_H$-affinoid domains that factorizes through $(\Sp A)\left\{r^{-1}f,sg^{-1}\right\}$. We write $\psi:A\rightarrow B$ for the corresponding morphism of $k_H$-affinoid algebras. 
+    Write $\|\bullet\|_B$ and $\|\bullet\|_A$ for the norms on $B$ and $A$ respectively. Take a constant $C>0$, so that 
+    \[
+        \|\psi(k)\|_B\leq C\|k\|_A  
+    \]
+    for all $k\in A$. For any $x\in \Sp B$ corresponding to a bounded semi-valuation $|\bullet|_x$ on $B$, we can find a constant $C'>0$ so that
+    \[
+        |\bullet|_x\leq C'\|\bullet\|_B.  
+    \]
+    In particular, for any $k\in A$, we have
+    \[
+        |\psi(k)|_x\leq CC'\|k\|_A.  
+    \]
+    Taking powers of $k$, we find
+    \[
+        |\psi(k)|_x\leq\rho_A(k).
+    \]
+    By \cref{Banach-cor-rhoequsup} in the chapter Banach Rings, we have
+    \[
+        \rho_B(f_i)=\sup_{x\in \Sp B}|f_i(x)|\leq \sup_{y\in (\Sp A)\left\{r^{-1}f,sg^{-1}\right\}} |f_i(y)|\leq r_i
+    \]   
+    for $i=1,\ldots,n$.
+    
+    We will construct the dotted arrows: 
+    \[
+        \begin{tikzcd}
+            A \arrow[r, "\psi"] \arrow[d]                  & B \\
+            {A\{r^{-1}T,sS\}} \arrow[d] \arrow[ru, dotted,"\eta"] &   \\
+            {A\{r^{-1}f,sg\}} \arrow[ruu, dotted]          &  
+        \end{tikzcd}
+    \]
+    so that this diagram commutes. We define $\eta$ as the unique morphism sending $T_i$ to $f_i$ and $S_j$ to $g_j$ for  $i=1,\ldots,n$, $j=1,\ldots,m$. By \cref{prop-admissepiperturbation}, in order to 
+    
+    
+    
+    Let $x\in \Sp A$ corresponding to a bounded semi-valuation $|\bullet|_x$ on $A$. We need to find the condition such that $|\bullet|_x$ extends to a bounded semi-valuation on $A\left\{r^{-1}f,sg^{-1}\right\}$. Let $h\in A\left\{r^{-1}f,sg^{-1}\right\}$, we represent $h$ as
+    \[
+        h=\sum_{\alpha\in \mathbb{N}^n,\beta\in \mathbb{N}^{\beta}} a_{\alpha,\beta}f^{\alpha} g^{\beta}
+    \]
+    such that $a_{\alpha,\beta}r^{\alpha}s^{-\beta}\to 0$ as $|\alpha|+|\beta|\to \infty$.
+    From the uniquenss, the only possible extension of $|\bullet|_x$ is $\|\bullet\|_x$ 
 \end{example}
 
 
