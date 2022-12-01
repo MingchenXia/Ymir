@@ -845,10 +845,10 @@ In the literature, it is more common to denote $\Sp A$ by $\mathcal{M}(A)$.
     It suffices to show that for any $f\in A$, the map $\Sp \varphi\circ\mathrm{ev}_f$ is continuous. But the composition is just the map sending $\|\bullet\|\in \Sp B$ to $\|\varphi(f)\|$. It is continuous by definition of the topology on $\Sp B$ as $\varphi$ is bounded.
 \end{proof}
 
-\begin{definition}
-    Let $(A,\|\bullet\|_A)$ be a Banach ring. For each $x\in \Sp A$ corresponding to a bounded semi-valuation $\|\bullet\|_x$ on $A$, there is a natural induced valuation on $\Frac \ker \|\bullet\|_x$. We write $\mathscr{H}(x)$ for the completion of $\Frac \ker \|\bullet\|_x$ with the induced valuation. The complete valuation field $\mathscr{H}(x)$ is called the \emph{complete residue field} of $A$ at $x$. 
+\begin{definition}\label{def-residuefield}
+    Let $(A,\|\bullet\|_A)$ be a Banach ring. For each $x\in \Sp A$ corresponding to a bounded semi-valuation $\|\bullet\|_x$ on $A$, there is a natural induced valuation on $\Frac \ker \|\bullet\|_x$. We write $\mathscr{H}(x)$ for the completion of $\Frac \ker \|\bullet\|_x$ with the induced valuation. The complete valuation field $\mathscr{H}(x)$ is called the \emph{complete residue field} of $A$ at $x$. We write $\chi_x:A\rightarrow \mathscr{H}(x)$ the canonical map.
 
-    We will write $f(x)$ for the residue class of $f$ in $\mathscr{H}(x)$.
+    We will write $f(x)$ for the residue class of $f$ in $\mathscr{H}(x)$. 
 \end{definition}
 Observe that for any $f\in A$, $|f(x)|$ is exactly the valuation of $f(x)$ with respect to the valuation on $\mathscr{H}(x)$.
 
@@ -946,8 +946,7 @@ By \cref{lma-supnormbddbyrho}, the Gelfand transform is well-defined.
     is convergent. It follows that $\rho(f)\leq r$.
 \end{proof}
 
-
-\begin{thm}
+\begin{thm}\label{thm-spectrumcptHaus}
     Let $(A,\|\bullet\|)$ be a Banach ring. Then $\Sp A$ is a compact Hausdorff space.
 \end{thm}
 \begin{proof}
