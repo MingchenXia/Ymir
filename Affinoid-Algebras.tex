@@ -95,7 +95,7 @@ Although we have defined strictly $k$-affinoid algebra when $k$ is trivially val
 In \cref{Banach-def-Berkspectrum} in the chapter Banach Rings, we defined functors $\Sp:k\text{-}\AffCat\rightarrow \TopCat$, $\Sp:\text{st-}k\text{-}\AffCat\rightarrow \TopCat$ and $\Sp:k_H\text{-}\AffCat\rightarrow \TopCat$. This motivates our notation. We will freely view $\Sp A$ as an object in these categories or as a topological space.
 
 \begin{proposition}\label{prop-existfiberprod}
-    Finite limits exist in $k_H\text{-}\AffCat$. %Moreover, finite limits commute with the functor $k_H\text{-}\AffCat\rightarrow \TopCat$.
+    Finite limits exist in $k_H\text{-}\AffCat$. Moreover, fiber products in $k_H\text{-}\AffCat$ corresponds to completed tensor product in $k_H\text{-}\AffAlgCat$.
 \end{proposition}
 \begin{proof}
     It suffices to prove that finite fibered products exsit.
@@ -1480,7 +1480,7 @@ In particular, we will identify $V$ with $\Sp A_V$ and say $\Sp A_V$ is a $k_H$-
     \]
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{prop-rationaldomaintransitive}
     Let $A$ be a $k_H$-affinoid algebra, $\Sp B$ be a $k_H$-Weierstrass domain (resp. $k_H$-rational domain) in $\Sp A$ and $\Sp C$ be a $k_H$-Weierstrass domain (resp. $k_H$-rational domain) in $\Sp B$. Then $\Sp C$ is a $k_H$-Weierstrass domain (resp. $k_H$-rational domain) in $\Sp A$.
 \end{proposition}
 \begin{proof}
@@ -1497,7 +1497,7 @@ In particular, we will identify $V$ with $\Sp A_V$ and say $\Sp A_V$ is a $k_H$-
 
     Next we handle the rational case. Write
     \[
-        B=A\left\{s\frac{f}{g}\right\}
+        B=A\left\{s^{-1}\frac{f}{g}\right\}
     \]
     for some $m\in \mathbb{N}$, $f=(f_1,\ldots,f_m)\in A^m$, $r=(r_1,\ldots,r_m)\in \sqrt{|k^{\times}|\cdot H}^m$ and $g\in A$ such that $f_1,\ldots,f_m,g$ generate the unit ideal.
 
@@ -1516,10 +1516,44 @@ In particular, we will identify $V$ with $\Sp A_V$ and say $\Sp A_V$ is a $k_H$-
     \[
         \Sp C=\Sp B\cap \Sp A\left\{(r,c)^{-1}\frac{(g^n,1)}{h'} \right\}.  
     \]
-
-
 \end{proof}
 
+\begin{lemma}\label{lma-affinoiddomainrestrtorationaldomain}
+    Let $A$ be a $k_H$-affinoid algebra and $\Sp B$ be a $k_H$-affinoid domain in $\Sp A$. Let $\Sp C$ be a rational domain in $\Sp A$, then $(\Sp C)\cap (\Sp B)$ is a $k_H$-affinoid domain in $\Sp A$ represented by $A\rightarrow B\hat{\otimes}_A C$.
+\end{lemma}
+\begin{proof}
+    We first recall that $B\hat{\otimes}_A C$ is $k_H$-affinoid by \cref{prop-existfiberprod}.
+
+    We may assume that 
+    \[
+        C=A\left\{s\frac{f}{g}\right\}
+    \]
+    for some $m\in \mathbb{N}$, $f=(f_1,\ldots,f_m)\in A^m$, $r=(r_1,\ldots,r_m)\in \sqrt{|k^{\times}|\cdot H}^m$ and $g\in A$ such that $f_1,\ldots,f_m,g$ generate the unit ideal.
+
+    We observe that there is a natural isomorphism
+    \[
+        B\hat{\otimes}_A C  \cong B\left\{s^{-1}\frac{f}{g}\right\}.
+    \]
+    Hence,
+    \[
+        \Sp  B\hat{\otimes}_A C=\left\{x\in \Sp B: |f_i(x)|\leq s|g(x)|\text{ for }i=1,\ldots,m\right\}.
+    \]
+    On the other hand,
+    \[
+        \Sp C=  \left\{x\in \Sp A: |f_i(x)|\leq s|g(x)|\text{ for }i=1,\ldots,m\right\}.
+    \]
+    So $\Sp B\hat{\otimes}_A C=B\hat{\otimes}_A C$. 
+    By \cref{prop-existfiberprod}, we have the Cartesian square in the diagram below:
+    \[
+        \begin{tikzcd}
+            \Sp D \arrow[rrd] \arrow[rdd, dotted] \arrow[rd, dotted] &                                                                           &                 \\
+                                                                     & \Sp B\hat{\otimes}_A C \arrow[r] \arrow[d] \arrow[rd, "\square", phantom] & \Sp C \arrow[d] \\
+                                                                     & \Sp B \arrow[r]                                                           & \Sp A          
+            \end{tikzcd}
+    \]
+    
+    It remains to verify the universal property.  Let $\Sp D\rightarrow \Sp C$ be a morphism of $k_H$-affinoid spectra that factorizes through $(\Sp C)\cap (\Sp B)$. Then by the universal property of $\Sp B$ in $\Sp A$, we find the dotted morphism $\Sp D\rightarrow \Sp B$ making the diagram commutes. Then as the square is Cartesian, we get the desired morphism $\Sp D\rightarrow \Sp B\hat{\otimes}_A C$. This morphism is clearly unique.
+\end{proof}
 
 \iffalse
 It is not immediately clear that $A_V$ is canonically assocaited with $V$. We will prove this now.
@@ -1854,9 +1888,9 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     (2) This is a special case of (1).
 \end{proof}
 
-\begin{theorem}[Gerritzen--Grauert, Temkin]
+\begin{thm}[Gerritzen--Grauert, Temkin]\label{thm-GG}
     Let $\varphi:\Sp A\rightarrow \Sp B$ be a monomorphism in $k_H\text{-}\AffCat$. Then there is a finite cover of $X$ by $k_H$-rational domains $W_1,\ldots,W_k$ such that the restrictions $\varphi_i:\varphi^{-1}(W_i)\rightarrow W_i$ are $k_H$-Runge immersions for $i=1,\ldots,k$.
-\end{theorem}
+\end{thm}
 \begin{proof}
     \textbf{Step~1}. We reduce to the following claim: for each $x\in \Sp A$, there is a $k_H$-rational domain $U$ in $\Sp B$ containing $y=\varphi(x)$ such that $V=\varphi^{-1}U$ is a neighbourhood of $x$ in $\Sp A$ and the induced map $V\rightarrow U$ is a closed immersion.
 
@@ -1902,8 +1936,8 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     is injective. Since $\tilde{B}^H$ is graded noetherian \textcolor{red}{Introduce this notion}, we find that $\tilde{A}^H$ is finite over $\tilde{B}^H$. So $B\rightarrow A$ is finite by \cref{thm-reductionfinite}. It follows that the natural map $A\otimes_B A\rightarrow A\hat{\otimes}_B A$ is an isomorphism by \cref{prop-finiteBanachtensor}. As $\varphi$ is a monomorphism, from general abstract nonsense, the codiagonal $A\hat{\otimes}_B A\cn A$ is an isomorphism. In particular, the codiagonal $A\otimes_B A\rightarrow A$ is an isomorphism. This implies that $A\rightarrow B$ is surjective.
 \end{proof}
 
-\begin{lemma}
-    Let $A$ be a $k_H$-affinoid domain and $V$ be a $k_H$-affinoid domain in $A$ represented by $A\rightarrow A_V$. Assume that $\Sp A_V\rightarrow \Sp A$ is a closed immersion, then $V$ is a $k_H$-affinoid domain. 
+\begin{lemma}\label{lma-closedimmaffisWeier}
+    Let $A$ be a $k_H$-affinoid domain and $V$ be a $k_H$-affinoid domain in $A$ represented by $A\rightarrow A_V$. Assume that $\Sp A_V\rightarrow \Sp A$ is a closed immersion, then $V$ is a $k_H$-Weierstrass domain. 
 \end{lemma}
 \begin{proof}
     As $\Sp A_V\rightarrow \Sp A$ is a closed immersion, we can find an ideal $I\subseteq  A$ and assume that $A_V=A/I$. Consider the morphism of $k_H$-affinoid spectra $\psi:\Sp A/I^2\rightarrow \Sp A$ induced by the natural map $A/I^2$. By the universal property of $V$, we have a commutative diagram:
@@ -1917,9 +1951,20 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
 \end{proof}
 
 
-\begin{corollary}
-    
+\begin{corollary}\label{cor-GG}
+    Let $A$ be a $k_H$-affinoid algebra and $V$ be a $k_H$-affinoid domain in $\Sp A$. Then there are finitely many $k_H$-affinoid domains $W_1,\ldots,W_n$ in $\Sp A$ such that
+    \[
+        V=\bigcup_{i=1}^n W_i.  
+    \]
 \end{corollary}
+\begin{proof}
+    By \cref{thm-GG}, we can find finitely many $k_H$-rational domains $U_1,\ldots,U_m$ in $\Sp A$ such that $V\cap U_i\rightarrow U_i$ is a $k_H$-Runge immersion for each $i=1,\ldots,m$. By \cref{prop-rationaldomaintransitive},
+    it suffices to prove that $V\cap U_i$ is a $k_H$-rational domain in $U_i$. Observe that $V\cap U_i$ is a $k_H$-affinoid domain in $U_i$ by \cref{lma-affinoiddomainrestrtorationaldomain}. So we are reduced to the case where $V\rightarrow \Sp A$ is also a Runge immersion.
+
+    By \cref{lma-affinoiddomainrestrtorationaldomain} and \cref{prop-rationaldomaintransitive} again, we may assume that $V\rightarrow \Sp A$ is a Runge immersion. 
+    
+    In this case, the result follows from \cref{lma-closedimmaffisWeier}. 
+\end{proof}
 
 
 \begin{corollary}[?]
