@@ -1502,17 +1502,20 @@ In particular, we will identify $V$ with $\Sp A_V$ and say $\Sp A_V$ is a $k_H$-
     for some $m\in \mathbb{N}$, $f=(f_1,\ldots,f_m)\in A^m$, $r=(r_1,\ldots,r_m)\in \sqrt{|k^{\times}|\cdot H}^m$ and $g\in A$ such that $f_1,\ldots,f_m,g$ generate the unit ideal.
 
     By \cref{prop-rationaldomaindecomp} and \cref{prop-intersecrationaldomain}, it suffices to handle the special cases $C=B\{r^{-1}h\}$ and $C=B\{rh^{-1}\}$ for some $r\in \sqrt{|k^{\times}|\cdot H}$ and $h\in B$. Observe that making a small perturbation on $h$ does not change the domain.
-    As $A[g^{-1}]$ is dense in $B$, we may assume that there is $n\in \mathbb{Z}_{>0}$ such that $g^nh\in A$. As $g$ is invertible on $\Sp B$, we can find $c\in \sqrt{|k^{\times}|\cdot H}$ so that
+    As $A[g^{-1}]$ is dense in $B$, we may assume that there is $n\in \mathbb{Z}_{>0}$ such that $h'=g^nh\in A$. As $g$ is invertible on $\Sp B$, we can find $c\in \sqrt{|k^{\times}|\cdot H}$ so that
     \[
-        |g(x)|^n>c  
+        |g(x)|^n>c^{-1}  
     \]
     for $x\in \Sp B$. 
     
     We need to treat the cases $C=B\{r^{-1}h\}$ and $C=B\{rh^{-1}\}$ separately. In the first case, we write
     \[
-        \Sp C=\Sp B\cap \Sp A\left\{ (r,c)^{-1}\frac{(g^nh,c)}{g^n}\right\}.  
+        \Sp C=\Sp B\cap \Sp A\left\{ (r,c)^{-1}\frac{(h',1)}{g^n}\right\}.  
     \]
-    In the second case,..... \textcolor{red}{To be added}
+    In the second case,
+    \[
+        \Sp C=\Sp B\cap \Sp A\left\{(r,c)^{-1}\frac{(g^n,1)}{h'} \right\}.  
+    \]
 
 
 \end{proof}
@@ -1862,7 +1865,7 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
         \item $g$ is invertible on $W$;
         \item $\varphi^{-1}W \subseteq \varphi^{-1}U$.
     \end{enumerate}
-    Then $U\cap W$ is a $k_H$-Weierstrass domain in $W$ and $\varphi^{-1}W\rightarrow W$ is therefore a $k_H$-Runge immersion. From the compactness of $\Sp A$, this implies that we can find $k_H$-rational domains $W_1,\ldots,W_m$ of $\Sp B$ such that $\varphi^{-1}(W_i)\rightarrow W_i$ is a $k_H$-Runge immersion for $i=1,\ldots,m$ and $X_1\cup\cdots\cup X_m$ contains an open neighbourhood $U$ of $\varphi(\Sp A)$. As $\Sp B$ is compact, we can find finitely many $k_H$-rational domains $W_{m+1},\ldots,W_{k}$ which do not intersection $\varphi(\Sp A)$ that covers $\Sp B\setminus U$. Then the covering $W_1,\ldots,W_k$ satisfies all of the requirements.
+    Then $U\cap W$ is a $k_H$-Weierstrass domain in $W$ and $\varphi^{-1}W\rightarrow W$ is therefore a $k_H$-Runge immersion. From the compactness of $\Sp A$, this implies that we can find $k_H$-rational domains $W_1,\ldots,W_m$ of $\Sp B$ such that $\varphi^{-1}(W_i)\rightarrow W_i$ is a $k_H$-Runge immersion for $i=1,\ldots,m$ and $X_1\cup\cdots\cup X_m$ contains an open neighbourhood $U$ of $\varphi(\Sp A)$. As $\Sp B$ is compact, we can find finitely many $k_H$-rational domains $W_{m+1},\ldots,W_{k}$ which do not intersection $\varphi(\Sp A)$ that covers $\Sp B\setminus U$. Then the covering $W_1,\ldots,W_k$ satisfies all the requirements.
     
     We have reduced the problem to a local one on $\Sp B$.
 
