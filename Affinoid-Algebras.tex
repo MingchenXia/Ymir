@@ -1380,7 +1380,7 @@ We begin with a few examples.
     \]
     Hence, $x\in (\Sp A)\left\{r^{-1}\frac{f}{g}\right\}$.
 
-    Next we verify the universal property. Let $\Sp B\rightarrow \Sp A$ be a morphism of $k_H$-affinoid spaces factorizing through $(\Sp A)\left\{r^{-1}\frac{f}{g}\right\}$. 
+    Next we verify the universal property. Let $\Sp B\rightarrow \Sp A$ be a morphism of $k_H$-affinoid spectra factorizing through $(\Sp A)\left\{r^{-1}\frac{f}{g}\right\}$. 
     Observe that $g(x)\neq 0$ for all $x\in (\Sp A)\left\{r^{-1}\frac{f}{g}\right\}$. As otherwise, $f_i(x)=0$ for all $i=1,\ldots,n$. This contradicts our assumption on $g,f_1,\ldots,f_n$.
     It follows that $\psi(g)$ is invertible by \cref{Banach-cor-invertibleintermsofsp} int the chapter Banach Rings. From the definition of $(\Sp A)\left\{r^{-1}\frac{f}{g}\right\}$, it is clear that $\rho(\psi(f_i))\leq r\rho(\psi(g))$ for $i=1,\ldots,n$.
     
@@ -1412,12 +1412,110 @@ We begin with a few examples.
 
 
 \begin{proposition}\label{prop-affdomainhoemo}
-    Let $A$ be a $k_H$-affinoid algebra and $V\subseteq \Sp A$ be a $k_H$-affinoid domain represented by $\varphi:A\rightarrow A_V$. Then $\Sp \varphi$ induces a homeomorphism $\Sp A_V\rightarrow \Sp A$. 
+    Let $A$ be a $k_H$-affinoid algebra and $V\subseteq \Sp A$ be a $k_H$-affinoid domain represented by $\varphi:A\rightarrow A_V$. Then $\Sp \varphi$ induces a homeomorphism $\Sp A_V\rightarrow V$. 
 \end{proposition}
+In particular, we will identify $V$ with $\Sp A_V$ and say $\Sp A_V$ is a $k_H$-affinoid domain in $\Sp A$.
 \begin{proof}
-    We observe that $\Sp A_V\rightarrow \Sp A$ is a monomorphism in the category $k_H\text{-}\AffCat$. In other words, $A\rightarrow A_V$ is an epimorphism in the category $k_H\text{-}\AffAlgCat$. To see this, let $\eta_1,\eta_2:A_V\rightarrow B$ be two arrows in $k_H\text{-}\AffAlgCat$ such that $\eta_1\circ \varphi=\eta_2\circ \varphi$. It follows from the universal property in \cref{def-affinoiddomain} that $\eta_1=\eta_2$. By \cref{prop-monoaffinj}, $\Sp A_V\rightarrow \Sp A$ is a bijection. But $\Sp A_V$ and $\Sp_A$ are both compact and Hausdorff by \cref{Banach-thm-spectrumcptHaus} in the chapter Banach rings, so $\Sp A_V\rightarrow \Sp A$ is a homeomorphism.
+    We observe that $\Sp A_V\rightarrow \Sp A$ is a monomorphism in the category $k_H\text{-}\AffCat$. In other words, $A\rightarrow A_V$ is an epimorphism in the category $k_H\text{-}\AffAlgCat$. To see this, let $\eta_1,\eta_2:A_V\rightarrow B$ be two arrows in $k_H\text{-}\AffAlgCat$ such that $\eta_1\circ \varphi=\eta_2\circ \varphi$. It follows from the universal property in \cref{def-affinoiddomain} that $\eta_1=\eta_2$. By \cref{prop-monoaffinj}, $\Sp A_V\rightarrow \Sp A$ is a bijection. But $\Sp A_V$ and $\Sp_A$ are both compact and Hausdorff by \cref{Banach-thm-spectrumcptHaus} in the chapter Banach rings, so $\Sp A_V\rightarrow V$ is a homeomorphism.
 \end{proof}
 
+\begin{proposition}\label{prop-intersecrationaldomain}
+    Let $A$ be a $k_H$-affinoid algebra and $V,W$ be $k_H$-Weierstrass domains (resp. $k_H$-Laurent domains, resp. $k_H$-rational domains) in $\Sp A$. Then $V\cap W$ is also a $k_H$-Weierstrass domain (resp. $k_H$-Laurent domain, resp. $k_H$-rational domain).
+\end{proposition}
+\begin{proof}
+    This is clear in the Weierstrass and Laurent cases. We will prove therefore assume that $V$ and $W$ are $k_H$-rational.
+
+    We take $f_1,\ldots,f_n\in A$, $g_1,\ldots,g_m\in A$ both generating the unit ideal and $r=(r_1,\ldots,r_n)\in \sqrt{|k^{\times}|\cdot H}^n$, $s=(s_1,\ldots,s_m)\in \sqrt{|k^{\times}|\cdot H}^m$ such that
+    \[
+        V=\Sp A\left\{r^{-1}\frac{f}{f_m}\right\},\quad  W=\Sp A\left\{s^{-1}\frac{g}{g_n}\right\}.
+    \]
+    We may assume that $r_n=s_m=1$.
+    Now let $R=(R_{i,j})\in \sqrt{|k^{\times}|\cdot H}^{mn}$ where $R_{i,j}=r_is_j$ and $F=(F_{i,j})$ with $F_{i,j}=f_ig_j$ for $i=1,\ldots,n$, $j=1,\ldots,m$. Observe that the $F_{i,j}$'s generate the unit ideal.
+    We consider the $k_H$-rational domain
+    \[
+        Z= \Sp A\left\{R^{-1}\frac{F}{f_ng_m} \right\}.
+    \]
+    We clearly have $V\cap W\subseteq Z$. We need to prove the reverse inequality. Let $x\in Z$, so we have
+    \[
+        |f_ig_j(x)|\leq r_{i}s_j |f_n g_m(x)|
+    \]
+    for any $i=1,\ldots,n$, $j=1,\ldots,m$. In particular, when $j=m$, we have
+    \[
+        |f_ig_m(x)|\leq r_{i} |f_n g_m(x)|
+    \]
+    for any $i=1,\ldots,n$. But $f_ng_m$ is invertible, so we can cancel $g_m(x)$ to find
+    \[
+        |f_i(x)|\leq  r_i |f_n(x)|.
+    \]
+    So $x\in V$. Similarly, we have $x\in W$.
+\end{proof}
+
+
+\begin{corollary}\label{cor-Laurentdomainrational}
+    Let $A$ be a $k_H$-affinoid algebra and $V$ be a $k_H$-Laurent domain in $\Sp A$. Then $V$ is also a $k_H$-rational domain.
+\end{corollary}
+\begin{proof}
+    By \cref{prop-intersecrationaldomain}, it suffices to show consider $k_H$-Laurent domains of the following form:
+    \[
+        \Sp A\{r^{-1}f\},\quad \Sp A\{sg^{-1}\}  
+    \]   
+    where $r,s\in \sqrt{|k^{\times}|\cdot H}$ and $f,g\in A$. Both domains are $k_H$-rational by definition.
+\end{proof}
+
+\begin{proposition}\label{prop-rationaldomaindecomp}
+    Let $A$ be a $k_H$-affinoid algebra and $\Sp B$ be a $k_H$-rational domain in $\Sp A$. Then there is a $k_H$-Laurent domain $\Sp C$ in $\Sp A$ such that $\Sp B\subseteq \Sp C$ and $\Sp B$ is a $k_H$-Weierstrass domain in $\Sp C$.
+\end{proposition}
+\begin{proof}
+    We write 
+    \[
+        B=A\left\{r^{-1}\frac{f}{g}\right\}  
+    \]
+    for some $n\in \mathbb{N}$, $r=(r_1,\ldots,r_n)\in \sqrt{|k^{\times}|\cdot H}^n$, $f=(f_1,\ldots,f_n)\in A^n$ and $g\in A$ such that $f_1,\ldots,f_n,g$ generate the unit ideal. Let $g''$ be the image of $g$ in $B$, which is a unit. Choose $c\in \sqrt{|k^{\times}|\cdot H}$ such that $\rho_B(g^{-1})<c^{-1}$. Set $C=A\{c g^{-1}\}$, then $\Sp B\subseteq \Sp C$. Moreover,
+    \[
+        \Sp B\cap \Sp C=\emptyset.  
+    \]
+    Let $f'_1,\ldots,f'_n,g'$ be the images of $f_1,\ldots,f_n,g$ in $C$. Write $f'=(f'_1,\ldots,f'_n)$. Then by \cref{Banach-cor-invertibleintermsofsp} in the chapter Banach Rings, $g'$ is a unit and 
+    \[
+        \Sp B=\Sp C\{r^{-1} g'^{-1}f'\}.  
+    \]
+\end{proof}
+
+\begin{proposition}
+    Let $A$ be a $k_H$-affinoid algebra, $\Sp B$ be a $k_H$-Weierstrass domain (resp. $k_H$-rational domain) in $\Sp A$ and $\Sp C$ be a $k_H$-Weierstrass domain (resp. $k_H$-rational domain) in $\Sp B$. Then $\Sp C$ is a $k_H$-Weierstrass domain (resp. $k_H$-rational domain) in $\Sp A$.
+\end{proposition}
+\begin{proof}
+    We first handle the Weierstrass case.
+    Write 
+    \[
+        B=\Sp A\{r^{-1}f\},   C=\Sp B\{s^{-1}g\}
+    \]
+    for some $n,m\in \mathbb{N}$, $r\in \sqrt{|k^{\times}|\cdot H}^n$, $s\in \sqrt{|k^{\times}|\cdot H}^m$ and $f=(f_1,\ldots,f_n)\in A^n$, $g=(g_1,\ldots,g_m)\in B^m$. Observe that if we replace $g$ with a small perturbation, the domain $\Sp C$ in $\Sp B$ remains the same, so we may assume that $g_1,\ldots,g_m\in A$. Then
+    \[
+        \Sp C=\Sp A\{r^{-1}f\}\cap \Sp A\{s^{-1}g\}
+    \]
+    is a $k_H$-Weierstrass domain by \cref{prop-intersecrationaldomain}.
+
+    Next we handle the rational case. Write
+    \[
+        B=A\left\{s\frac{f}{g}\right\}
+    \]
+    for some $m\in \mathbb{N}$, $f=(f_1,\ldots,f_m)\in A^m$, $r=(r_1,\ldots,r_m)\in \sqrt{|k^{\times}|\cdot H}^m$ and $g\in A$ such that $f_1,\ldots,f_m,g$ generate the unit ideal.
+
+    By \cref{prop-rationaldomaindecomp} and \cref{prop-intersecrationaldomain}, it suffices to handle the special cases $C=B\{r^{-1}h\}$ and $C=B\{rh^{-1}\}$ for some $r\in \sqrt{|k^{\times}|\cdot H}$ and $h\in B$. Observe that making a small perturbation on $h$ does not change the domain.
+    As $A[g^{-1}]$ is dense in $B$, we may assume that there is $n\in \mathbb{Z}_{>0}$ such that $g^nh\in A$. As $g$ is invertible on $\Sp B$, we can find $c\in \sqrt{|k^{\times}|\cdot H}$ so that
+    \[
+        |g(x)|^n>c  
+    \]
+    for $x\in \Sp B$. 
+    
+    We need to treat the cases $C=B\{r^{-1}h\}$ and $C=B\{rh^{-1}\}$ separately. In the first case, we write
+    \[
+        \Sp C=\Sp B\cap \Sp A\left\{ (r,c)^{-1}\frac{(g^nh,c)}{g^n}\right\}.  
+    \]
+    In the second case,..... \textcolor{red}{To be added}
+
+
+\end{proof}
 
 
 \iffalse
@@ -1800,7 +1898,22 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     \]
     is injective. Since $\tilde{B}^H$ is graded noetherian \textcolor{red}{Introduce this notion}, we find that $\tilde{A}^H$ is finite over $\tilde{B}^H$. So $B\rightarrow A$ is finite by \cref{thm-reductionfinite}. It follows that the natural map $A\otimes_B A\rightarrow A\hat{\otimes}_B A$ is an isomorphism by \cref{prop-finiteBanachtensor}. As $\varphi$ is a monomorphism, from general abstract nonsense, the codiagonal $A\hat{\otimes}_B A\cn A$ is an isomorphism. In particular, the codiagonal $A\otimes_B A\rightarrow A$ is an isomorphism. This implies that $A\rightarrow B$ is surjective.
 \end{proof}
-\textcolor{red}{All the references I have said that this implies immediately that any affinoid domain is a finite union of rational domains. The breaks down to the following claim: an affinoid domain which is also a closed immersion is necessarily a Weierstrass domain. This is clear in the strictly affinoid case, but I do not see why this holds in the non-strict setting. The issue is that, only in the strict case, we know that the algebraic local ring and the analytic local ring have the same completion! Without this, we cannot even say that Temkin's notion of affinoid domains is invariant under base change}
+
+\begin{lemma}
+    Let $A$ be a $k_H$-affinoid domain and $V$ be a $k_H$-affinoid domain in $A$ represented by $A\rightarrow A_V$. Assume that $\Sp A_V\rightarrow \Sp A$ is a closed immersion, then $V$ is a $k_H$-affinoid domain. 
+\end{lemma}
+\begin{proof}
+    As $\Sp A_V\rightarrow \Sp A$ is a closed immersion, we can find an ideal $I\subseteq  A$ and assume that $A_V=A/I$. Consider the morphism of $k_H$-affinoid spectra $\psi:\Sp A/I^2\rightarrow \Sp A$ induced by the natural map $A/I^2$. By the universal property of $V$, we have a commutative diagram:
+    \[
+        \begin{tikzcd}
+            \Sp A/I^2 \arrow[rd] \arrow[d] &       \\
+            \Sp A/I \arrow[r]              & \Sp A
+        \end{tikzcd}  
+    \]
+    On the other hand, the natural map $A/I^2\rightarrow A/I$ induces a morphism of $k_H$-affinoid spectra $\varphi:\Sp A/I\rightarrow \Sp A/I^2$. From the universal property again, the composition $\psi\circ \varphi$ is the identity. In particular, $A/I^2\rightarrow A/I$ is injective and hence $I=I^2$. It follows that $I$ is the principal ideal generated by an idempotent element $e$. We may assume that $e\neq 0$, $e\neq 1$. Take $c\in \sqrt{|k^{\times}|\cdot H}$ such that $0<c<1$, then $V=(\Sp A)\{c^{-1}e\}$.
+\end{proof}
+
+
 \begin{corollary}
     
 \end{corollary}

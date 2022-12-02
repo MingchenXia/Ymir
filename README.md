@@ -36,6 +36,4 @@ We will freely make use of all results from Stacks Project.
 
 - [Affinoid algebras](Affinoid-Algebras.pdf)
 
-> To do: include Temkin's proof of the Gerritzen--Grauert theorem; Ducros' proof of the excellence of affinoid algebras.
-
-> Unfortunately, I cannot figure out why Temkin's version of Gerritzen--Grauert theorem implies the usual statement: each affinoid domain is a finite union of affinoid domains. See the remark in this chapter for details!
+> To do: include Ducros' proof of the excellence of affinoid algebras.
