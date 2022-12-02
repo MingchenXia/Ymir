@@ -23,4 +23,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{11}{Gerritzen--Grauert theorem}}{38}{section.0.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{43}{chapter*.1}%
+\contentsline {section}{\tocsection {}{12}{Tate acyclicity theorem}}{41}{section.0.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{49}{chapter*.1}%

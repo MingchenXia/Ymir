@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  2 DEC 2022 14:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  2 DEC 2022 19:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1122,39 +1122,41 @@ Overfull \hbox (21.65422pt too wide) in paragraph at lines 651--652
 []\T1/lmr/m/n/10 (-20) Take some $\OML/lmm/m/it/10 n \OMS/lmsy/m/n/10 2 \U/msb/m/n/10 N$ \T1/lmr/m/n/10 (-20) and a sur-jec-tive $\OML/lmm/m/it/10 k$\T1/lmr/m/n/10 (-20) -algebra ho-mo-mor-phism $\OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 T[]; [] ; T[]\OMS/lmsy/m/n/10 g !
  []
 
-[16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26]
-Overfull \hbox (2.72995pt too wide) detected at line 1288
+[16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27]
+Overfull \hbox (2.72995pt too wide) detected at line 1289
 \OT1/lmr/m/n/10 ([] \OML/lmm/m/it/10 A\OT1/lmr/m/n/10 ) [] := [] \OML/lmm/m/it/10 :
  []
 
-[27] [28]
-Overfull \hbox (9.37698pt too wide) in paragraph at lines 1334--1335
+[28]
+Overfull \hbox (9.37698pt too wide) in paragraph at lines 1335--1336
 []\T1/lmr/m/n/10 (-20) It re-mains to show that each point in $\OT1/lmr/m/n/10 (-20) ([] \OML/lmm/m/it/10 A\OT1/lmr/m/n/10 (-20) ) []$ \T1/lmr/m/n/10 (-20) lies in $[] \OML/lmm/m/it/10 A []$\T1/lmr/m/n/10 (-20) . 
  []
 
 
-Overfull \hbox (8.36438pt too wide) detected at line 1349
+Overfull \hbox (8.36438pt too wide) detected at line 1350
 [][]
  []
 
 [29] [30] [31] [32] [33] [34] [35] [36] [37]
 
-LaTeX Warning: Reference `Commutative-cor-finitegradeddescent' on page 1 undefined on input line 1808.
+LaTeX Warning: Reference `Commutative-cor-finitegradeddescent' on page 1 undefined on input line 1809.
 
 
-LaTeX Warning: Reference `Commutative-lma-rhoconditionimplygraded' on page 1 undefined on input line 1808.
+LaTeX Warning: Reference `Commutative-lma-rhoconditionimplygraded' on page 1 undefined on input line 1809.
 
 [38]
-Overfull \hbox (8.46265pt too wide) in paragraph at lines 1873--1874
+Overfull \hbox (8.46265pt too wide) in paragraph at lines 1874--1875
 []$[]$ \T1/lmr/m/n/10 (-20) is fi-nite over the sub-al-ge-bra gen-er-ated by $[]$ and $[]\OML/lmm/m/it/10 ; [] ; []; []; [] ; []$\T1/lmr/m/n/10 (-20) ; 
  []
 
+[39] [40] [41] [42] [43]
+Overfull \hbox (62.99428pt too wide) detected at line 2144
+[]\OML/lmm/m/it/10 ;
+ []
 
-LaTeX Warning: Reference `Banach-def-residuefield' on page 1 undefined on input line 1907.
-
-[39] [40] [41] [42]
+[44] [45] [46] [47] [48]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2018.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2357.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1162,7 +1164,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [43
+ [49
 
 ] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.aux)
 
@@ -1173,18 +1175,18 @@ Package logreq Info: Writing requests to 'Affinoid-Algebras.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37765 strings out of 478994
- 708704 string characters out of 5858185
- 1543619 words of memory out of 5000000
- 54041 multiletter control sequences out of 15000+600000
- 465606 words of font info for 198 fonts, out of 8000000 for 9000
+ 38186 strings out of 478994
+ 719015 string characters out of 5858185
+ 1552750 words of memory out of 5000000
+ 54428 multiletter control sequences out of 15000+600000
+ 466220 words of font info for 204 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  132i,20n,133p,1076b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.pdf (43 pages, 484649 bytes).
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb>
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.pdf (49 pages, 525864 bytes).
 PDF statistics:
- 766 PDF objects out of 1000 (max. 8388607)
- 693 compressed objects within 7 object streams
- 193 named destinations out of 1000 (max. 500000)
- 23149 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 853 PDF objects out of 1000 (max. 8388607)
+ 772 compressed objects within 8 object streams
+ 215 named destinations out of 1000 (max. 500000)
+ 23157 words of extra memory for PDF output out of 24883 (max. 10000000)
 

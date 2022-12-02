@@ -1278,6 +1278,7 @@ We observe that $A_V$ is canonically determined by the universal property.
 \begin{remark}
     This definition differs from the original definition of \cite{Berk12}, we follow the approach of Temkin instead. It can be shown that this definition is equivalent to the orignal definition of Berkovich when $H=\mathbb{R}_{>0}$.
 \end{remark}
+A priori, this does not seem to be a good definition, as it is not easy to see that it is preserved by base field extension. But we will prove that it is the case after establishing the Gerritzen--Grauert theorem.
 
 We begin with a few examples.
 \begin{example}\label{ex-Laurentdomain}
@@ -1329,7 +1330,7 @@ We begin with a few examples.
             {A\{r^{-1}f,sg\}} \arrow[ruu, dotted, "\tau"]          &  
         \end{tikzcd}
     \]
-    so that this diagram commutes. We define $\eta$ as the unique morphism sending $T_i$ to $f_i$ and $S_j$ to $g_j$ for  $i=1,\ldots,n$, $j=1,\ldots,m$. The existence of such a morphism is guaranteed by \cref{prop-admissepiperturbation}. In order to descend this morphism to $\eta'$, it suffices to show that $T_i-f_i$ and $g_jS_j-1$ for $i=1,\ldots,n$ and $j=1,\ldots,m$ lie in the kernel of $\eta$. But this is immediate from our definition. Moreover, it is clear that $\eta'$ is necessarily unique.
+    so that this diagram commutes. We define $\eta$ as the unique morphism sending $T_i$ to $f_i$ and $S_j$ to $g_j$ for  $i=1,\ldots,n$, $j=1,\ldots,m$. The existence of such a morphism is guaranteed by \cref{cor-univpropTatenonstrict}. In order to descend this morphism to $\eta'$, it suffices to show that $T_i-f_i$ and $g_jS_j-1$ for $i=1,\ldots,n$ and $j=1,\ldots,m$ lie in the kernel of $\eta$. But this is immediate from our definition. Moreover, it is clear that $\eta'$ is necessarily unique.
 
     It remains to show that each point in $(\Sp A)\left\{r^{-1}f,sg^{-1}\right\}$ lies in $\Sp A\left\{r^{-1}f,sg^{-1}\right\}$. 
     
@@ -1392,7 +1393,7 @@ We begin with a few examples.
             {A\left\{r^{-1}\frac{f}{g}\right\}} \arrow[ruu, dotted, "\tau"]          &  
         \end{tikzcd}
     \]
-    successively. The morphism $\eta$ sends $T_i$ to $\psi(f_i)/\psi(g)$ for $i=1,\ldots,n$.  The existence of such a morphism is guaranteed by \cref{prop-admissepiperturbation}.  Clearly $gT_i-f_i$ is contained in $\ker \eta$, so $\eta$ descends to $\tau$. The morphism $\tau$ is clearly unique.
+    successively. The morphism $\eta$ sends $T_i$ to $\psi(f_i)/\psi(g)$ for $i=1,\ldots,n$.  The existence of such a morphism is guaranteed by \cref{cor-univpropTatenonstrict}.  Clearly $gT_i-f_i$ is contained in $\ker \eta$, so $\eta$ descends to $\tau$. The morphism $\tau$ is clearly unique.
 
     It remains to verify that the image of $\Sp A\left\{r^{-1}\frac{f}{g}\right\}$ in $\Sp A$ is exactly $(\Sp A)\left\{r^{-1}\frac{f}{g}\right\}$. In other words, we need to verify that if $|\bullet|_x$ is a bounded semi-valuation on $A$ satisfying $|f_i|_x\leq r_i |g|_x$, then $|\bullet|_x$ extends to a bounded semi-valuation on   $A\left\{r^{-1}\frac{f}{g}\right\}$. 
     Replacing $A$ by $A/\ker |\bullet|_x$, we may assume that $|\bullet|_x$ is a valuation on $A$. Consider the Gauss valuation $|\bullet|_{x,r}$ on $A\{r^{-1}T\}$ and the residue norm $\|\bullet\|$ on $A\left\{r^{-1}\frac{f}{g}\right\}$. It suffices to show that $\|\bullet\|$ is a valuation extending the valuation $|\bullet|_x$ on $A$. The former is a consequence of the latter. Take $a\in A$, we need to show that $|a|_x=\|a\|$.
@@ -1680,7 +1681,7 @@ Recall that $\rho(A)=\sqrt{|k^{\times}|\cdot H}\cup\{0\}$ by \cref{thm-strictaff
     \]
     So the last two assertions are equivalent.
 
-    Take a $k$-free polyradius $s$ such that $A\hat{\otimes}_k k_s$ and $B\hat{\otimes}_k k_s$ are both strictly $k_s$-affinoid. By \cref{prop-Krfaithflat}, $A\hat{\otimes}_k k_s\{r^{-1}f\}\cn B\hat{\otimes}_k k_s$. Moreover, $\rho_A$ and $\rho_B$ are both preserved after base change to $k_s$. So we may assume that $k$ is non-trivially valued and $A$ and $B$ are strictly $k$-affinoid.
+    Take a $k$-free polyray $s$ such that $A\hat{\otimes}_k k_s$ and $B\hat{\otimes}_k k_s$ are both strictly $k_s$-affinoid. By \cref{prop-Krfaithflat}, $A\hat{\otimes}_k k_s\{r^{-1}f\}\cn B\hat{\otimes}_k k_s$. Moreover, $\rho_A$ and $\rho_B$ are both preserved after base change to $k_s$. So we may assume that $k$ is non-trivially valued and $A$ and $B$ are strictly $k$-affinoid.
 
     Observe that  for $n\in \mathbb{Z}_{>0}$, 
     \[
@@ -1967,8 +1968,190 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
 \end{proof}
 
 
-\begin{corollary}[?]
-    Let $\Sp A$ be a $k$-affinoid spectrum and $\Sp B$ be an affinoid domain. Then for any complete non-Archimedean field extension $K/k$, any $K$-affinoid algebra $C$ and any bounded algebra homomorphism $A\rightarrow C$ such that $\Sp C\rightarrow \Sp A$ factorizes through $\Sp B$, there is a unique bounded homomorphism $B\rightarrow C$ making the following diagram commutes:
+\section{Tate acyclicity theorem}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
+
+
+\begin{definition}
+    Let $A$ be a $k_H$-affinoid algebra. Let $\mathcal{V}=\{V_i\}_{i\in 1,\ldots,n}$ be a finite covering of $\Sp A$ by $k_H$-affinoid domains. Let $M$ be an $A$-module. We define the \emph{augmented \v{C}ech complex} $\check{C}(\mathcal{V},M)$ as the following cochain complex with $M$ placed at the place $0$:
+    \[
+        \check{C}(\mathcal{V},M)=0\rightarrow M\rightarrow  \prod_{i=1}^n M\otimes_{A} A_{V_i}\rightarrow \prod_{1\leq i<j\leq n} M\otimes_{A} A_{V_i}\hat{\otimes}_A A_{V_j}\rightarrow \cdots.
+    \]
+\end{definition}
+
+\begin{definition}
+    Let $A$ be a $k_H$-affinoid algebra. A \emph{finite $k_H$-affinoid covering} of $\Sp A$ is a finite covering of $A$ by $k_H$-affinoid domains.
+
+    A finite $k_H$-affinoid covering $\mathcal{U}$ is a 
+    \begin{enumerate}
+        \item \emph{$k_H$-Laurent covering} if there are $n\in \mathbb{N}$, $f_1,\ldots,f_n\in A$ and $r_1,\ldots,r_n\in \sqrt{|k^{\times}|\cdot H}$ such that $\mathcal{U}$ consists of 
+        \[  
+            \Sp A\left\{ r_1^{-\epsilon_1}f_1^{\epsilon_1},\ldots,r_1^{-\epsilon_n}f_1^{\epsilon_n}\right\}
+        \]
+        for all $\epsilon_i=\pm 1$, $i=1,\ldots,n$. In this case, we say that $\mathcal{U}$ is the $k_H$-Laurent covering \emph{generated by} $r_1^{-1}f_1,\ldots,r_{n}^{-1}f_n$. 
+        \item \emph{$k_H$-rational covering} if there are $n\in \mathbb{N}$, $f_1,\ldots,f_n\in A$ generating the unit ideal, $r=(r_1,\ldots,r_n)\in \sqrt{|k^{\times}|\cdot H}^n$ such that $\mathcal{U}$ consists of
+        \[
+            \Sp A\left\{ (r/r_j)^{-1} \frac{f}{f_j} \right\}    
+        \]
+        for $j=1,\ldots,n$. In this case, we say that $\mathcal{U}$ is the $k_H$-rational covering \emph{generated by} $r_1^{-1}f_1,\ldots,r_{n}^{-1}f_n$. 
+    \end{enumerate}
+    In both cases, if $f_1,\ldots,f_n$ are all units in $A$, we say the covering is \emph{generated by units in $A$}. 
+\end{definition}
+
+\begin{lemma}\label{lma-prooftatelma1}
+    Let $A$ be a $k_H$-affinoid algebra and $\mathcal{V}=\{V_i\}_{i\in 1,\ldots,m}$ be a finite $k_H$-affinoid covering of $\Sp A$. Then there is a $k_H$-rational covering refining $\mathcal{V}$.
+\end{lemma}
+\begin{proof}
+    By \cref{cor-GG}, we may assume that all $V_i$'s are $k_H$-rational domains in $\Sp A$. Take $n_i\in \mathbb{N}$, $g^{(i)}_1,\ldots,g^{(i)}_{n_i}\in A$ generating the unit ideal, $r^{(i)}=(r^{(i)}_1,\ldots,r^{(i)}_{n_i-1},r^{(i)}_{n_i})\in \sqrt{|k^{\times}|\cdot H}^{n_i}$ for each $i=1,\ldots,m$
+    such that if we write $g^{(i)}=(g^{(i)}_1,\ldots,g^{(i)}_{n_i})$, then
+    \[
+        V_i=\Sp A\left\{ \left(r^{(i)}/r^{(i)}_{n_i}\right)^{-1} \frac{g^{(i)}}{g^{(i)}_{n_i}} \right\}  
+    \]
+    for $i=1,\ldots,m$. Let $\mathcal{B}^i$ be the $k_H$-rational covering generated by 
+    \[
+        (r^{(i)})^{-1}f^{(i)}_1,\ldots,(r^{(i)})^{-1}f^{(i)}_{n_i}
+    \]    
+    for $i=1,\ldots,m$. 
+    We denote the elements in $\mathcal{B}^i$ by $V^i_j$, $j=1,\ldots,n_i$:
+    \[
+        V^i_j:=\Sp A\left\{ \left(r^{(i)}/r^{(i)}_{j}\right)^{-1} \frac{g^{(i)}}{g^{(i)}_{j}}\right\}.  
+    \]
+
+    Let 
+    \[
+        I:=\left\{\alpha=(\alpha_1,\ldots,\alpha_m)\in \mathbb{N}^m: 1\leq \alpha_i\leq n_i\text{ for }i=1,\ldots,m \right\}  
+    \]
+    and 
+    \[
+        I':=\left\{\alpha=(\alpha_1,\ldots,\alpha_m)\in I: \alpha_i=n_i\text{ for some }i=1,\ldots,n\right\}.  
+    \]
+    Next for $\beta=(\beta_1,\ldots,\beta_m)\in I$, we let 
+    \[
+        g_{\beta}=g^{(1)}_{\beta_1}\cdots g^{(m)}_{\beta_m},\quad r_{\beta}=r^{(1)}_{\beta_1}\cdots r^{(m)}_{\beta_m}
+    \]
+    and we have
+    \[
+        V_{\beta}:=V^1_{\beta_1}\cap\cdots\cap V^m_{\beta_m}=\Sp A\left\{ \left((r_{\alpha})_{\alpha\in I}/r_{\beta} \right)^{-1} \frac{(g_{\alpha})_{\alpha\in I}}{g_{\beta}}\right\}  
+    \]
+    as in the proof of \cref{prop-intersecrationaldomain}.
+
+    When $\beta\in I'$, we claim that
+    \[
+        V_{\beta}=\Sp A\left\{ \left((r_{\alpha})_{\alpha\in I'}/r_{\beta} \right)^{-1} \frac{(g_{\alpha})_{\alpha\in I'}}{g_{\beta}}\right\}.
+    \]
+    It is clear that the left-hand side is contained in the right-hand side. Conversely, $x$ in the right-hand side. By rearranging $U_1,\ldots,U_m$, we may assume that $x\in U_1$. Let $\gamma=(\gamma_1,\ldots,\gamma_m)\in I\setminus I'$. Then
+    \[
+        r_{\gamma}^{-1}\left|g_{\gamma}(x)\right|\leq (r^{(1)}_{n_1})^{-1}(r^{(2)}_{\gamma_2})^{-1}\cdots (r^{(m)}_{\gamma_m})^{-1}\left|g^{(1)}_{n_1}g^{(2)}_{\gamma_2}\cdots g^{(m)}_{\gamma_m}\right|\leq r_{\beta}^{-1}|g_{\beta}(x)|.  
+    \]
+    The claim follows. Now $\{V_{\beta}\}_{\beta\in I'}$ is the $k_H$-rational covering generated by $r_{\beta}^{-1}g_{\beta}$ for $\beta\in I'$. It is clear that this covering refines $\mathcal{V}$.
+\end{proof}
+
+\begin{lemma}\label{lma-prooftatelma2}
+    Let $A$ be a $k_H$-affinoid algebra and $\mathcal{U}$ be a $k_H$-rational covering of $\Sp A$. Then there is a $k_H$-Laurent covering $\mathcal{V}$ of $\Sp A$ such that for each $\Sp C\in \mathcal{V}$, the restriction $\mathcal{U}|_{\Sp C}$ is a $k_H$-rational covering of $\Sp C$ generated by units in $C$.
+\end{lemma}
+\begin{proof}
+    We take $n\in \mathbb{N}$, $f_1,\ldots,f_n\in A$ generating the unit ideal and $r_1,\ldots,r_n\in \sqrt{|k^{\times}|\cdot H}$ such that $\mathcal{U}$ is generated by $r_1^{-1}f_1,\ldots,r_n^{-1}f_n$. Choose $c\in \sqrt{|k^{\times}|\cdot H}$ such that
+    \[
+        c<\inf_{x\in \Sp A} \max_{i=1,\ldots,n}r_i^{-1}|f_i(x)|.  
+    \]
+    Let $\mathcal{V}$ be the $k_H$-Laurent covering of $\Sp A$ generated by $(cr_1)^{-1}f_1,\ldots,(cr_n)^{-1}f_n$. We claim that $\mathcal{V}$ satisfies our requirements.
+
+    Take 
+    \[
+        V=\Sp A\left\{(cr_1)^{-\epsilon_1}f_1^{\epsilon_1},\ldots,(cr_n)^{-\epsilon_n}f_n^{\epsilon_n}\right\}  
+    \]
+    be an element in $\mathcal{V}$, $\epsilon_i=\pm 1$ for $i=1,\ldots,n$. We may assume that there is $s\in [0,n]$ such that $\epsilon_1=\cdots=\epsilon_s=1$ and $\epsilon_{s+1}=\cdots=\epsilon_n=-1$.  We claim that $\mathcal{U}|_V$ is teh $k_H$-rational covering generated by the images of $r_{s+1}^{-1}f_{s+1},\ldots,r_n^{-1}f_n$ in
+    \[
+        A\left\{ (cr_1)^{-1}f_1,\ldots,(cr_s)^{-1}f_s,(cr_{s+1})f_{s+1}^{-1},\ldots,(cr_n)f_n^{-1}\right\}
+    \]
+    and these elements are units.
+
+    In fact, by our assumption, for $x\in V$,
+    \[
+         \begin{aligned}
+                |f_i(x)|\leq & cr_i,\quad \text{for }i=1,\ldots,s;\\
+                |f_i(x)|\geq & cr_i,\quad \text{for }i=s+1,\ldots,n.
+         \end{aligned} 
+    \]
+    In particular,
+    \[
+         \max_{i=1,\ldots,s}r_i^{-1}|f_i(x)|\leq c< \max_{i=1,\ldots,n} r_i^{-1}|f_i(x)|.
+    \]
+    Hence, 
+    \[
+        \max_{i=1,\ldots,s}r_i^{-1}|f_i(x)|=\max_{i=s+1,\ldots,n}r_i^{-1}|f_i(x)|.
+    \]
+    Our claim follows.
+\end{proof}
+
+\begin{lemma}\label{lma-prooftatelma3}
+    Let $A$ be a $k_H$-affinoid algebra and $\mathcal{U}$ be a $k_H$-rational covering of $\Sp A$ generated by units in $A$. Then there is a $k_H$-Laurent convering $\mathcal{V}$ of $\Sp A$ refining $\mathcal{U}$.
+\end{lemma}
+\begin{proof}
+    We take $n\in \mathbb{N}$, units $f_1,\ldots,f_n\in A$ and $r_1,\ldots,r_n\in \sqrt{|k^{\times}|\cdot H}$ such that $\mathcal{U}$ is generated by $r_1^{-1}f_1,\ldots,r_n^{-1}f_n$.
+
+    We take $\mathcal{V}$ as the Laurent covering generated by $(r_i r_j^{-1})^{-1} f_if_j^{-1}$ for $1\leq i<j\leq n$. We claim that $\mathcal{V}$ refines $\mathcal{U}$. 
+    Write $I=\{(i,j)\in \mathbb{N}^2:1\leq i<j\leq n\}$.
+    To see this, consider $V\in \mathcal{V}$, say
+    \[
+        V=\bigcap_{(i,j)\in I_1} \Sp A\{ (r_i r_j^{-1})^{-1} f_if_j^{-1}\}\cap \bigcap_{(i,j)\in I_2} \Sp A\{ (r_i r_j^{-1})^{+1} f_i^{-1}f_j\},   
+    \]
+    where $I_1$, $I_2$ is a partition of $I$. For $i,j\in \{1,\ldots,n\}$, we write $i\preceq j$ if $(i,j)\in I_1$ and $j\preceq i$ if $(i,j)\in I_2$. Consider a maximal chain
+    \[
+        i_1\preceq i_2\preceq\cdots\preceq i_s
+    \]
+    on the set $\{1,\ldots,n\}$. Then $i\preceq i_s$ for each $i=1,\ldots,n$. 
+    In other words, for $x\in X$, we have
+    \[
+        |f_if_{i_s}^{-1}(x)|\leq r_i r_{i_s}^{-1}.
+    \]
+    The right-hand side defines an element in $\mathcal{U}$.
+\end{proof}
+
+
+
+We first prove Tate acyclicity theorem in a special case.
+\begin{lemma}\label{lma-tateacyc1}
+    Let $A$ be a $k_H$-affinoid algebra. Let $\mathcal{V}=\{V_i\}_{i\in 1,\ldots,n}$ be a finite $k_H$-affinoid covering of $\Sp A$. Assume that each $V_i$ is a $k_H$-rational domain. Then $\check{C}(\mathcal{V},A)$ is exact and admissible.
+\end{lemma}
+\begin{proof}
+    \textbf{Step~1}. We reduce to the case where
+    \[
+        \mathcal{V}=\left\{\{\Sp A\{r^{-1}f\}\},\{\Sp A\{rf^{-1}\}\}\right\}
+    \]
+    for some $r\in \sqrt{|k^{\times}|\cdot H}$ and $f\in A$.
+
+
+    Take a $k$-free polyray $s$ with at least one component. By \cref{prop-Krfaithflat}, we can make the base change to $k_s$ and assume that $k$ is non-trivially valued. In this case, by open mapping theorem \cref{Banach-thm-openmapping} in the chapter Banach Rings, the admissibility is automatic. It suffices to prove the exactness.
+
+    In this case, we can define a presheaf $\mathcal{O}_X$ on $X$ on the family of $k_H$-rational domains in $\Sp A$:  $\mathcal{O}_X(\Sp C)=C$. From the general comparison theorem of \v{C}ech cohomology \textcolor{red}{BGR P327 reproduce in the topology part} and \cref{lma-prooftatelma1}, we may assume that the covering $\mathcal{V}$ is  $k_H$-rational covering. But then we need to show that for each $k_H$-rational domain $W$ in $\Sp A$, $\check{C}(\mathcal{V}|_W,A)$ is exact. Similarly, by \cref{lma-prooftatelma2}, we may assume that the $k_H$-rational covering is generated by units. Again, by \cref{lma-prooftatelma3}, we can reduce to the case where $\mathcal{V}$ is a $k_H$-Laurent covering.
+
+    We need to show that for each $k_H$-affinoid domain $\Sp C$ in $\Sp A$, $\check{C}(\mathcal{V}|_W,A)$ is exact. But $\mathcal{V}|_W$ is also a $k_H$-Laurent covering. In particular, it suffices to show that $\check{C}(\mathcal{V},A)$ is exact. By induction on the number of generators of $\mathcal{V}$, we can reduce the case stated in the beginning.
+    
+    \textbf{Step~2}. After the reduction, we need to show that the following sequence is exact:
+    \[
+        0\rightarrow A\xrightarrow{i} A\{r^{-1}f\}\times A\{rf^{-1}\}\xrightarrow{d^0} A\{r^{-1}f,rf^{-1}\}\rightarrow 0,
+    \]
+    where $i(a)=(a,a)$ and $d^0(f,g)=f-g$. We extend the sequence to the following commutative diagram in $k_H\text{-}\AffAlgCat$:
+    \[
+        \begin{tikzcd}
+            &                                                     & 0 \arrow[d]                                                                          &  & 0 \arrow[d]                                                 &   \\
+            &                                                     & (\zeta-f)A\{r^{-1}\zeta\}\times (1-f\eta)A\{r\eta\} \arrow[rr, "\lambda'"] \arrow[d] &  & {(\zeta-f)A\{r^{-1}\zeta,r\zeta^{-1}\}} \arrow[r] \arrow[d] & 0 \\
+0 \arrow[r] & A \arrow[r, "\iota"] \arrow[d, no head, Rightarrow] & A\{r^{-1}\zeta\}\times A\{r\eta\} \arrow[rr, "\lambda"] \arrow[d]                    &  & {A\{r^{-1}\zeta,r\eta\}/(\zeta\eta-1)} \arrow[r] \arrow[d]  & 0 \\
+0 \arrow[r] & A \arrow[r, "\epsilon"]                             & A\{r^{-1}f\}\times A\{rf^{-1}\} \arrow[rr, "d^0"] \arrow[d]                          &  & {A\{r^{-1}f,rf^{-1}\}} \arrow[r] \arrow[d]                  & 0 \\
+            &                                                     & 0                                                                                    &  & 0                                                           &  
+\end{tikzcd},
+    \]
+where $\iota(a)=(a,a)$ and $\lambda$ sends $\zeta$ to $\zeta$ and $\eta$ to $\eta$. The two colomns are clearly exact. It is straightforward to see that everywhere the first non-zero row is exact. The second non-zero row is also exact. The non-trivial part is to show that if $\sum_{i=0}^{\infty}a_i \zeta^i\in A\{r^{-1}\zeta\}\in A\{r^{-1}\zeta\}$ and $\sum_{i=0}^{\infty}b_i \zeta^i\in A\{r^{-1}\eta\}\in A\{r\eta\}$ are such that their pair lies in the kernel of $\lambda$, then
+\[
+    0=\sum_{i=0}^{\infty}a_i\zeta^i-\sum_{i=0}^{\infty}b_i\zeta^{-i}.
+\]
+It follows that $a_i=0=b_i$ for $i>0$ and $a_i=b_i$. So we find that the second row is also exact. By diagram chasing, the third row is also exact.
+\end{proof}
+
+
+\begin{corollary}\label{cor-univpropertytemkinandberkovichequivalent}
+    Let $A$ be a $k_H$-affinoid algebra and $\Sp B$ be a $k$-affinoid domain in $\Sp A$. Then for any complete non-Archimedean field extension $K/k$, any $K$-affinoid algebra $C$ and any bounded ring homomorphism $A\rightarrow C$ such that $\Sp C\rightarrow \Sp A$ factorizes through $\Sp B$, there is a unique bounded ring homomorphism $B\rightarrow C$ making the following diagram commutes:
     \[
     \begin{tikzcd}
         \Sp C \arrow[rd] \arrow[d, dotted] &       \\
@@ -1977,19 +2160,96 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     \]
 \end{corollary}
 \begin{proof}
-    
+    The proof is the same as in \cref{ex-rationaldomains} when $\Sp B$ is an affinoid domain in $\Sp A$. 
+
+    In general, by \cref{cor-GG}, we can cover $\Sp B$ by finitely many affinoid domains $\Sp B_1,\ldots,\Sp B_n$ in $\Sp A$. Let $\Sp C_i$ be the rational domain in $\Sp C$ defined by the preimage of $\Sp B_i$ for $i=1,\ldots,n$. In other words, we have Cartesian diagrams for $i=1,\ldots,n$:
+    \[
+        \begin{tikzcd}
+            \Sp C_i \arrow[r] \arrow[d] \arrow[rd, "\square", phantom] & \Sp C \arrow[d] \\
+            \Sp B_i \arrow[r]                                          & \Sp A          
+        \end{tikzcd}  
+    \]
+    It follows from \cref{lma-tateacyc1} that we have an admissible exact sequence
+    \[
+        0\rightarrow C\rightarrow \prod_{i=1}^n C_i\rightarrow \prod_{1\leq i<j\leq n}^n C_{i}\hat{\otimes}_C C_j.    
+    \] 
+    From general abstract nonsense, to construct bounded $A$-homomorphisms $\varphi:B\rightarrow C$ is the same as to construct bounded homomorphisms $\varphi_i:B\rightarrow C_i$ over $A$ such that the induced maps $B\rightarrow C_{i}\hat{\otimes}_C C_j$ are compatible. On the other hand, by our definition of $B_i$, in order to construct the morphisms $\varphi_i$, it suffices to construct $\psi_i:B_i\rightarrow C_i$ over $A$. This reduces to the known case. 
 \end{proof}
 
 
+\begin{corollary}
+    Let $A$ be a $k_H$-affinoid algebra and $H'\supseteq H$ is a subgroup of $\mathbb{R}_{>0}$. Let $V=\Sp B$ be a $k_H$-affinoid domain in $\Sp A$, then $\Sp B$ is a $k_{H'}$-affinoid domain in $\Sp A$.
+\end{corollary}
+\begin{proof}
+    This follows immediately from \cref{cor-univpropertytemkinandberkovichequivalent}.
+\end{proof}
 
-\textcolor{red}{The following propositions are a priori not clear with the current definition, we need Gerritzen--Grauert first}
+\textcolor{red}{Introduce the Shilov point}
 
-\begin{proposition}[?]
+\begin{proposition}\label{prop-univpropertytemkinandberkovichequivalent}
+    Let $A$ be a $k$-affinoid algebra and $V\subseteq X$ is a closed subset. Let $f:A\rightarrow B$ be a morphism of $k$-affinoid algebras.
+    Assume that for any complete non-Archimedean field extension $K/k$, any $K$-affinoid algebra $C$ and any bounded ring homomorphism $A\rightarrow C$ such that $\Sp C\rightarrow \Sp A$ factorizes through $V$, there is a unique bounded ring homomorphism $B\rightarrow C$ making the following diagram commutes:
+    \[
+    \begin{tikzcd}
+        \Sp C \arrow[rd] \arrow[d, dotted] &       \\
+        \Sp B \arrow[r]                    & \Sp A
+    \end{tikzcd}.
+    \]
+    Then $V$ is an affinoid domain represented by the given $A\rightarrow B$.
+\end{proposition}
+\begin{proof}
+    The only non-trival thing is to show that the image of $\Sp B\rightarrow \Sp A$ is $V$.
+
+    \textbf{Step~1}. We reduce to the case where $k$ is non-trivially valued and $A$, $B$ are both strictly $k$-affinoid. 
+    
+    Let $r$ be a $k$-free polyray with at least one component such that $A\hat{\otimes}_k k_r$ and $B\hat{\otimes}_k k_r$ are both strictly $k_r$-affinoid. Let $V'$ be the inverse image of $V$ in $\Sp A\hat{\otimes}_k k_r$. Then clearly, $V'$ has the same universal property. Assume that we have already shown that the image of 
+    \[
+        \Sp   B\hat{\otimes}_k k_r\rightarrow A\hat{\otimes}_k k_r
+    \]
+    is exactly $V'$. We have a commutative diagram:
+    \[
+    \begin{tikzcd}
+        \Sp B\hat{\otimes}_k k_r \arrow[r] \arrow[d] & \Sp A\hat{\otimes}_k k_r \arrow[d] \\
+        \Sp B \arrow[r]                              & \Sp A                             
+    \end{tikzcd}
+    \]
+    From the existence of the Shilov points, both vertical sections are surjective. Hence, the image of $\Sp B$ in $\Sp A$ is exactly $V$.
+
+    \textbf{Step~2}. After the reduction, it suffices to argue that each point in $V\cap \Spm A$ lies in the image. Let $y$ be such a point corresponding to a maximal ideal $\mathfrak{m}_y$ of $A$. Consider the commutative diagram
+    \[
+        \begin{tikzcd}
+            A \arrow[r, "f"] \arrow[d, "\pi"]    & B \arrow[d, "\pi'"] \arrow[ld, "\alpha"', dotted] \\
+            A/\mathfrak{m}_y \arrow[r, "\sigma"] & B/\mathfrak{m}_yB                                
+        \end{tikzcd}.  
+    \]
+    The two vertical maps are the natural projections and $\sigma$ is the map induced by $f$.
+    The existence of $\alpha$ and the commutativity of the diagram follow from the universal property. Observe  that $\sigma$ is surjective as $\pi'$ is. Similarly, $\alpha$ is surjective as $\pi$ is. Moreover, $\mathfrak{m}_yB=\ker \pi'\subseteq \ker \alpha$. In particular, $\sigma$ is bijection. So $\mathfrak{m}_yB$ is a maximal ideal in $B$ and the corresponding point $x\in \Spm B$ sends $x$ to $y$.
+\end{proof}
+
+\begin{remark}\label{rmk-affdomainresidue}
+    In fact, the proof proves the following result: assume that the valuation on $k$ is non-trivial and $A$ is a strictly $k$-affinoid algebra. Let $\Sp B$ be a strictly $k$-affinoid domain. Then for each $x\in \Spm B$ corresponding to a maximal ideal $\mathfrak{m}_x$ in $B$ and any $n\in \mathbb{Z}_{>0}$, we have a natural isomorphism
+    \[
+        A/\mathfrak{m}_y^n  \cn B/\mathfrak{m}_x^n,
+    \]
+    where $y$ is the image of $x$ in $\Sp A$ and $\mathfrak{m}_y$ is the corresponding maximal ideal in $A$. Moreover, $\mathfrak{m}_x=\mathfrak{m}_y B$. 
+    
+    In particular, the natural map $\hat{A}_{\mathfrak{m}_y}\rightarrow \hat{B}_{\mathfrak{m}_x}$ is an isomorphism.
+\end{remark}
+
+\begin{corollary}\label{cor-affdomainfieldext}
+    Let $A$ be a $k$-affinoid algebra and $\Sp B$ be a $k$-affinoid domain in $\Sp A$. Assume that $K/k$ is an extension of complete valued field. Then $\Sp B\hat{\otimes}_k K$ is a $K$-affinoid domain in $\Sp A\hat{\otimes}_k K$. Moreover, the image of  $\Sp B\hat{\otimes}_k K$ in $\Sp A\hat{\otimes}_k K$ is the inverse image of the image of $\Sp B$ in $\Sp A$.
+\end{corollary}
+\begin{proof}
+    This is an immediate consequence of \cref{prop-univpropertytemkinandberkovichequivalent} and \cref{cor-univpropertytemkinandberkovichequivalent}.
+\end{proof}
+
+\begin{corollary}\label{cor-fiberproductaffdomain}
     Let $\varphi:\Sp B\rightarrow \Sp A$ be a morphism of $k_H$-affinoid spectra. Let $V\subseteq \Sp A$ be a $k_H$-affinoid domain in $\Sp A$, then $\varphi^{-1}(V)$ is a $k_H$-affinoid domain in $\Sp B$.
 
     In fact, suppose that $V$ is represented by $A\rightarrow A_V$, then $B\rightarrow B\hat{\otimes}_A A_V$ represents $\varphi^{-1}V$.
-\end{proposition}
+\end{corollary}
 \begin{proof}
+    This is an immediate consequence of \cref{prop-univpropertytemkinandberkovichequivalent} and \cref{cor-univpropertytemkinandberkovichequivalent}.
     \iffalse
     Recall that $\Sp B\hat{\otimes}_A A_V$ is the fiber product of $\Sp B$ and $\Sp A_V$ over $\Sp A$:
     \[
@@ -2003,17 +2263,96 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
 \end{proof}
 
 
-\begin{proposition}[?]
+
+\begin{corollary}\label{cor-affdomainquotient}
     Let $A$ be a $k_H$-affinoid algebra. Let $V,W$ be $k_H$-affinoid domains in $\Sp A$ represented by $A\rightarrow A_V$ and $A\rightarrow A_W$ respectively. Then $V\cap W$ is a $k_H$-affinoid domain represented by $A\rightarrow A_V\hat{\otimes}_A A_W$.
-\end{proposition}
+\end{corollary}
 \begin{proof}
+    This is an immediate consequence of \cref{cor-fiberproductaffdomain}.
     \iffalse
     Observe that $A_V\hat{\otimes}_A A_W$ is $k_H$-affinoid by \cref{prop-existfiberprod}.
     We verify the universal property: let $\Sp B\rightarrow \Sp A$ be a morphism that factors through $V\cap W$, then from the universal properties of $V$ and $W$, we find morphisms $A_V\rightarrow B$ and $A_W\rightarrow B$, both being $A$-linear. So we obtain an induced morphism $A_V\hat{\otimes}_A A_W\rightarrow B$. The morphism is clearly unique.
 \fi
-    %It remains to show that the image of $\Sp A_V\hat{\otimes}_A A_W$ in $\Sp A$ is $V\cap W$. Given $x\in V\cap W$, let $|\bullet|_x$ be the corresponding bounded semi-valuation on $A$. Then our assumptions imply that $|\bullet|_x$ can be extended to bounded semi-valuations $|\bullet|_{x,V}$ and $|\bullet|_{x,W}$ on $A_V$ and $A_W$ repsectively. Their tensor product is a bounded semi-valuation on $A_V$
-
 \end{proof}
+
+\begin{definition}\label{def-presheafOX}
+   Let $X=\Sp A$ be a $k$-affinoid spectra, we define a presheaf $\mathcal{O}_X$ of Banach rings on the family of $k$-affinoid domains in $X$ as follows: for any $k$-affinoid domain $\Sp B$, we set
+   \[
+        \mathcal{O}_X(\Sp B)=B.
+   \]
+   Given an inclusion of affinoid domains, $\Sp C\rightarrow \Sp B$, we define the corresponding restriction map as the given morphism $B\rightarrow C$.
+\end{definition}
+
+\begin{thm}\label{thm-affdomainflat}
+    Let $A$ be a $k$-affinoid algebra and $V'=\Sp B$ be a $k$-affinoid domain in $\Sp A$. Then $B$ is a flat $A$-algebra.
+\end{thm}
+\begin{proof}
+    
+
+    \textbf{Step~1}. We reduce to the case where $k$ is non-trivially valued and $A$ is strictly $k$-affinoid.
+
+    Let $r$ be a $k$-free polyray with at least one component. Let $\varphi:M\rightarrow N$ be an injective $A$-module homomorphism.  We endow $M$ and $N$ with the structures of finite Banach $A$-modules by \cref{prop-finteBanachAmoduleequivfinitemodule} and then $\varphi$ is admissible by \cref{prop-finitemodulemapadmi}. By \cref{prop-Krfaithflat}, the induced homomorphism
+    \[
+        M\hat{\otimes}_k k_r\rightarrow  N\hat{\otimes}_k k_r 
+    \]
+    is injective and admissible. Let $V'$ be the inverse image of $V$ in $\Sp A\hat{\otimes}_k k_r$. By \cref{cor-affdomainfieldext}, $V'$ is a $k_r$-affinoid domain represented by $A\hat{\otimes}_k k_r\rightarrow B\hat{\otimes}_k k_r$.
+
+    If we have shown the result in the special case, we know that 
+    \[
+        (M\hat{\otimes}_k k_r)\otimes_{A\hat{\otimes}_k k_r}(B\hat{\otimes}_k k_r)\rightarrow  (N\hat{\otimes}_k k_r) \otimes_{A\hat{\otimes}_k k_r}(B\hat{\otimes}_k k_r)
+    \]
+    is injective. By \cref{prop-finitemodulebasechange}, this map can be identified with 
+    \[
+        (M\hat{\otimes}_k k_r)\hat{\otimes}_{A\hat{\otimes}_k k_r}(B\hat{\otimes}_k k_r)\rightarrow  (N\hat{\otimes}_k k_r) \hat{\otimes}_{A\hat{\otimes}_k k_r}(B\hat{\otimes}_k k_r).
+    \]
+    The latter map is easily identified with
+    \[
+        M\hat{\otimes}_A B\rightarrow    N\hat{\otimes}_A B.
+    \]
+    By \cref{prop-finitemodulebasechange} again, the latter map is identified with 
+    \[
+        M\otimes_A B\rightarrow    N\otimes_A B.
+    \]  
+    We conclude that $A\rightarrow B$ is flat.
+
+    \textbf{Step~2}. After the reduction, we take a maximal ideal $\mathfrak{m}_x$ in $B$ corresponding to a point $x\in \Sp B$. Let $y$ be the image of $y$ in $\Sp A$ and $\mathfrak{m}_y$ denotes the corresponding maximal ideal. Then by \cref{rmk-affdomainresidue}, $\hat{A}_{\mathfrak{m}_y}\rightarrow \hat{B}_{\mathfrak{m}_y}$ is an isomorphism. By  \cite[\href{https://stacks.math.columbia.edu/tag/0C4G}{Tag 0C4G}]{stacks-project} and \cite[\href{https://stacks.math.columbia.edu/tag/0399}{Tag 0399}]{stacks-project}, we conclude that $A\rightarrow B$ is flat.
+\end{proof}
+
+\begin{thm}[Tate acyclicity theorem]\label{thm-Tateacyc}
+    Let $A$ be a $k$-affinoid algebra. Let $\mathcal{V}=\{V_i\}_{i\in 1,\ldots,n}$ be a finite $k$-affinoid covering of $\Sp A$. Then the complex $\check{C}(\mathcal{V},A)$ is exact and admissible.
+\end{thm}
+\begin{proof}
+    \textbf{Step~1}. We first reduce to the case $M=A$. 
+
+    As the covering $\mathcal{V}$ is finite, we can find $N\in \mathbb{N}$ such that $\check{H}^j(\mathcal{V},M'')=0$ for all $j\geq N$ and all $A$-module $M''$. We take the minimum of such $N$. Assume that $N> 0$.
+
+    Assume we have proved the theorem in this case, then the case where $M$ is free is immediate. In general, choose an exact sequence of $A$-modules:
+    \[
+        0\rightarrow M'\rightarrow F\rightarrow M\rightarrow 0  
+    \]
+    with $F$ free. In this case, we have a short exact sequence
+    \[
+        0\rightarrow  \check{C}(\mathcal{V},M')\rightarrow \check{C}(\mathcal{V},F)\rightarrow \check{C}(\mathcal{V},M)\rightarrow 0. 
+    \]
+    The exactness follows from \cref{thm-affdomainflat}. 
+
+    From the long exact sequence, we find that
+    \[
+        H^{q-1}(\mathcal{V},M)\cong   H^{q}(\mathcal{V},M').
+    \]
+    for all $q\in \mathbb{Z}$. It follows that $H^q(\mathcal{V},M)=0$ for all $q\geq N-1$. This argument works for any $A$-module $M$ and we get a contradiction with our choice of $N$.
+
+    \textbf{Step~2}. After the reduction in Step~1 and the successful defition of $\mathcal{O}_X$ in \cref{def-presheafOX}, the remaining of the argument is exactly the same as \cref{lma-tateacyc1}.
+\end{proof}
+
+\iffalse
+
+\textcolor{red}{We need to verify the flatness of $A_V$}
+\fi
+
+
+
+
 
 \printbibliography
 \end{document}

@@ -1,13 +1,13 @@
 # Fdb version 3
-["biber Banach-Rings"] 1669898362 "Banach-Rings.bcf" "Banach-Rings.bbl" "Banach-Rings" 1669901861
-  "Banach-Rings.bcf" 1669901861 107096 4e1660cbdc8c7def7441f8218b398e2e "pdflatex"
+["biber Banach-Rings"] 1670006913 "Banach-Rings.bcf" "Banach-Rings.bbl" "Banach-Rings" 1670006950
+  "Banach-Rings.bcf" 1670006919 107096 4e1660cbdc8c7def7441f8218b398e2e "pdflatex"
   "Ymir.bib" 1669885980 15632 6bb6e5f80e9e59759471641098f7847e ""
   (generated)
-  "Banach-Rings.bbl"
   "Banach-Rings.blg"
-["pdflatex"] 1669901859 "/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.tex" "/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.pdf" "Banach-Rings" 1669901861
-  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.aux" 1669901861 15870 708293d9986e6e01e326a7aa92e202af ""
-  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.tex" 1669901856 71363 76a8ea9236667036fcaa3e02798653ed ""
+  "Banach-Rings.bbl"
+["pdflatex"] 1670006918 "/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.tex" "/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.pdf" "Banach-Rings" 1670006950
+  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.aux" 1670006919 16001 a2fd5e45b719b261e00b0340f4b9a132 ""
+  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.tex" 1670005852 71452 8b8811211d11b0830e9caaff871e879d ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -266,18 +266,18 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1617824274 2724736 0c0239ea1191084b1df8548fe9e48c7a ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "Banach-Rings.aux" 1669901861 15870 708293d9986e6e01e326a7aa92e202af "pdflatex"
-  "Banach-Rings.bbl" 1669898364 4500 19646ff2ca8622f70662ace4a948c5b7 "biber Banach-Rings"
-  "Banach-Rings.run.xml" 1669901861 2361 8519427074e3e41e5c97a1405f95b113 "pdflatex"
-  "Banach-Rings.tex" 1669901856 71363 76a8ea9236667036fcaa3e02798653ed ""
-  "Banach-Rings.toc" 1669901861 1410 9618c19218a3da91345f0ad926563632 "pdflatex"
+  "Banach-Rings.aux" 1670006919 16001 a2fd5e45b719b261e00b0340f4b9a132 "pdflatex"
+  "Banach-Rings.bbl" 1670006914 4500 19646ff2ca8622f70662ace4a948c5b7 "biber Banach-Rings"
+  "Banach-Rings.run.xml" 1670006919 2361 8519427074e3e41e5c97a1405f95b113 "pdflatex"
+  "Banach-Rings.tex" 1670005852 71452 8b8811211d11b0830e9caaff871e879d ""
+  "Banach-Rings.toc" 1670006919 1410 9618c19218a3da91345f0ad926563632 "pdflatex"
   "preamble.tex" 1669889355 10873 0bac18802f59763994710f71348eafbd ""
   (generated)
+  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.log"
   "Banach-Rings.bcf"
+  "Banach-Rings.run.xml"
+  "Banach-Rings.aux"
   "/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.pdf"
   "Banach-Rings.log"
-  "Banach-Rings.aux"
-  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.log"
-  "Banach-Rings.run.xml"
   "Banach-Rings.toc"
   "Banach-Rings.pdf"

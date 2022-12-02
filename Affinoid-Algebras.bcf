@@ -2351,6 +2351,8 @@
     <bcf:citekey order="5">Tem04</bcf:citekey>
     <bcf:citekey order="6">stacks-project</bcf:citekey>
     <bcf:citekey order="7">Berk12</bcf:citekey>
+    <bcf:citekey order="8">stacks-project</bcf:citekey>
+    <bcf:citekey order="9">stacks-project</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
