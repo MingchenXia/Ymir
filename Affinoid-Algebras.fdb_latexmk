@@ -1,13 +1,13 @@
 # Fdb version 3
-["biber Affinoid-Algebras"] 1670006955 "Affinoid-Algebras.bcf" "Affinoid-Algebras.bbl" "Affinoid-Algebras" 1670007033
-  "Affinoid-Algebras.bcf" 1670007033 107415 f6f64c7b985bc7e657e1e5dc72da46fc "pdflatex"
+["biber Affinoid-Algebras"] 1670006955 "Affinoid-Algebras.bcf" "Affinoid-Algebras.bbl" "Affinoid-Algebras" 1670007399
+  "Affinoid-Algebras.bcf" 1670007399 107415 f6f64c7b985bc7e657e1e5dc72da46fc "pdflatex"
   "Ymir.bib" 1669885980 15632 6bb6e5f80e9e59759471641098f7847e ""
   (generated)
   "Affinoid-Algebras.blg"
   "Affinoid-Algebras.bbl"
-["pdflatex"] 1670007031 "/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.tex" "/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.pdf" "Affinoid-Algebras" 1670007033
-  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.aux" 1670007033 23696 5dfb9b90264a873090b03497f58f2d7c ""
-  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.tex" 1670007028 150538 8c72b771ebd1e33fcf55d3ad122553e7 ""
+["pdflatex"] 1670007397 "/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.tex" "/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.pdf" "Affinoid-Algebras" 1670007399
+  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.aux" 1670007399 23696 8a120201a6c3f1fdb6c38076ef24d559 ""
+  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.tex" 1670007394 150761 752ef8620edf01ecfd368d2fd3ebdd17 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -266,19 +266,19 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1617824274 2724736 0c0239ea1191084b1df8548fe9e48c7a ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "Affinoid-Algebras.aux" 1670007033 23696 5dfb9b90264a873090b03497f58f2d7c "pdflatex"
+  "Affinoid-Algebras.aux" 1670007399 23696 8a120201a6c3f1fdb6c38076ef24d559 "pdflatex"
   "Affinoid-Algebras.bbl" 1670006956 5814 565b62fbc4b388c497b51fde4d8d2ece "biber Affinoid-Algebras"
-  "Affinoid-Algebras.run.xml" 1670007033 2396 5e107c3fdbab9b1fc873824ecd54a37c "pdflatex"
-  "Affinoid-Algebras.tex" 1670007028 150538 8c72b771ebd1e33fcf55d3ad122553e7 ""
-  "Affinoid-Algebras.toc" 1670007033 1712 881a42cf3e1fa1fe1d5b042a53b24835 "pdflatex"
+  "Affinoid-Algebras.run.xml" 1670007399 2396 5e107c3fdbab9b1fc873824ecd54a37c "pdflatex"
+  "Affinoid-Algebras.tex" 1670007394 150761 752ef8620edf01ecfd368d2fd3ebdd17 ""
+  "Affinoid-Algebras.toc" 1670007399 1712 881a42cf3e1fa1fe1d5b042a53b24835 "pdflatex"
   "Banach-Rings.aux" 1670006919 16001 a2fd5e45b719b261e00b0340f4b9a132 ""
   "preamble.tex" 1669889355 10873 0bac18802f59763994710f71348eafbd ""
   (generated)
-  "Affinoid-Algebras.toc"
-  "Affinoid-Algebras.bcf"
-  "Affinoid-Algebras.aux"
   "Affinoid-Algebras.pdf"
-  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.pdf"
+  "Affinoid-Algebras.bcf"
+  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.log"
   "Affinoid-Algebras.run.xml"
   "Affinoid-Algebras.log"
-  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.log"
+  "Affinoid-Algebras.toc"
+  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.pdf"
+  "Affinoid-Algebras.aux"

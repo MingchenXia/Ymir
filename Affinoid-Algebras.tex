@@ -2319,10 +2319,14 @@ It follows that $a_i=0=b_i$ for $i>0$ and $a_i=b_i$. So we find that the second 
 \end{proof}
 
 \begin{thm}[Tate acyclicity theorem]\label{thm-Tateacyc}
-    Let $A$ be a $k$-affinoid algebra. Let $\mathcal{V}=\{V_i\}_{i\in 1,\ldots,n}$ be a finite $k$-affinoid covering of $\Sp A$. Then the complex $\check{C}(\mathcal{V},A)$ is exact and admissible.
+    Let $A$ be a $k$-affinoid algebra. Let $\mathcal{V}=\{V_i\}_{i\in 1,\ldots,n}$ be a finite $k$-affinoid covering of $\Sp A$. Let $M$ be an $A$-module.
+    Then the complex $\check{C}(\mathcal{V},A)$ is exact. It is exact and admissible if $M$ is finite as $A$-module.
 \end{thm}
 \begin{proof}
+    We first observe that teh admissibility follows from the same argument as in \cref{lma-tateacyc1}. We will only concentrate on the exactness. 
+
     \textbf{Step~1}. We first reduce to the case $M=A$. 
+
 
     As the covering $\mathcal{V}$ is finite, we can find $N\in \mathbb{N}$ such that $\check{H}^j(\mathcal{V},M'')=0$ for all $j\geq N$ and all $A$-module $M''$. We take the minimum of such $N$. Assume that $N> 0$.
 
