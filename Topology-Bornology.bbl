@@ -1,0 +1,55 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{Berk93}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6b7ab4936ac6207b09a38d15d1c77169}{%
+           family={Berkovich},
+           familyi={B\bibinitperiod},
+           given={V.\bibnamedelimi G.},
+           giveni={V\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{6b7ab4936ac6207b09a38d15d1c77169}
+      \strng{fullhash}{6b7ab4936ac6207b09a38d15d1c77169}
+      \strng{bibnamehash}{6b7ab4936ac6207b09a38d15d1c77169}
+      \strng{authorbibnamehash}{6b7ab4936ac6207b09a38d15d1c77169}
+      \strng{authornamehash}{6b7ab4936ac6207b09a38d15d1c77169}
+      \strng{authorfullhash}{6b7ab4936ac6207b09a38d15d1c77169}
+      \field{labelalpha}{Ber93}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Publications Mathématiques de l'Institut des Hautes Études Scientifiques}
+      \field{number}{1}
+      \field{title}{Étale cohomology for non-{A}rchimedean analytic spaces}
+      \field{volume}{78}
+      \field{year}{1993}
+      \field{pages}{5\bibrangedash 161}
+      \range{pages}{157}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

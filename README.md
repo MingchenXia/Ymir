@@ -14,7 +14,6 @@ We will freely make use of all results from Stacks Project.
 
 - [Topology and Bornology](Topology-Bornology.pdf)
 
-> To do: Include the theory of nets and quasi-nets.
 
 - [Banach rings](Banach-Rings.pdf)
 
@@ -36,6 +35,8 @@ We will freely make use of all results from Stacks Project.
 
 - [Affinoid algebras](Affinoid-Algebras.pdf)
 
-> To do: include Ducros' proof of the excellence of affinoid algebras; Include the proof of Kiehl's theorem
+> To do: include Ducros' proof of the excellence of affinoid algebras
 
 - [Berkovich analytic spaces](Berkovich-Analytic-Spaces.pdf)
+
+> To do: reproduce the first half of Berkovich93 PIHES. Include the theory of rigid analytic spaces.

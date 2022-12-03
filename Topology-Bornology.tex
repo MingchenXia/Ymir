@@ -8,8 +8,89 @@
 
 \section{Introduction}\label{sec-introduction}
 
+In the whole project, a neighbourhood in a topology space is taken in Bourbaki's sense. In particular, a neighbourhood is not necessarily open.
 
-\section{Nets}
+We follow Bourbaki's convention about compact space. A comapct space is always Hausdorff. 
+
+On the other hand, we do not require locally compact spaces and paracompact spaces be Hausdorff.
+
+References to this chapter include \cite{Berk93}.
+
+\section{Nets}\label{sec-nets}
+
+Let $X$ be a set, $Y\subseteq X$ be a subset. Consider a collection $\tau$ of subsets of $X$, we write
+\[
+    \tau|_Y:=\left\{V\in \tau: V\subseteq Y \right\}.    
+\]
+
+\begin{definition}
+    Let $X$ be a topology space and $\tau$ be a collection of subsets of $X$. 
+    \begin{enumerate}
+        \item We say $\tau$ is \emph{dense} if for any $V\in \tau$ and any $x\in V$, there is a fundamental system of neighbourhoods of $x$ in $V$ consisting of sets from $\tau|_V$.
+        \item We say $\tau$ is a \emph{quasi-net} on $X$ if for each $x\in X$, there exist $n\in \mathbb{Z}_{>0}$, $V_1,\ldots,V_n\in \tau$ such that $x\in V_1\cap \cdots\cap V_n$ and that $V_1\cup\cdots\cup V_n$ is a neighbourhood of $x$ in $X$.
+        \item We say $\tau$ is a \emph{net} on $X$ if it is a quasi-net and if for any $U,V\in \tau$, $\tau|_{U\cap V}$ is a quasi-net on $U\cap V$.
+    \end{enumerate}
+\end{definition}
+
+\begin{lemma}
+    Let $X$ be a topological space and $\tau$ be a quasi-net on $X$. 
+    \begin{enumerate}
+        \item A subset $U\subseteq X$ is open if and only if for each $V\in \tau$, $U\cap V$ is open in $V$.
+        \item Suppose that $\tau$ consists of compact sets. Then $X$ is Hausdorff if and only if for any $U,V\in \tau$, $U\cap V$ is compact.
+    \end{enumerate}
+\end{lemma}
+We remind the readers that a compact space is Hausdorff by our convention.
+\begin{proof}
+    (1) The direct implication is trivial. Suppose that $U\cap V$ is open in $V$ for all $V\in \tau$. We want to show that $U$ is open. Take $x\in U$, we can find $n\in \mathbb{Z}_{>0}$, $V_1,\ldots,V_n\in \tau$ all containing $x$ such that $V_1\cup \cdots \cup V_n$ is a neighbourhood of $x$ in $X$. By our hypothesis, we can find open sets $W_1,\ldots,W_n$ in $W$ such that $W\cap V_i=U\cap V_i$ for $i=1,\ldots,n$. Then $W=W_1\cap \cdots\cap W_n$ is an open neighbourhood of $x$ in $X$. But then
+    \[
+        U\cap (V_1\cup\cdots\cup V_n)\supseteq W\cap   (V_1\cup\cdots\cup V_n),
+    \]
+    the latter is a neighbourhood of $x$ hence so is the former. It follows that $U$ is open.
+
+    (2) The direct implication is trivial. Consider the quasi-net $\tau\times\tau:=\{U\times V: U,V\in \tau\}$ on $X\times X$. 
+    By (1), it suffices to verify that the intersection of the diagonal with $U\times V$ is closed in $U\times V$  for any $U,V\in \tau$. But this intersection is homeomorphic to $U\cap V$, which is compact by our assumption and hence closed as $U$, $V$ are both Hausdorff.
+\end{proof}
+
+\begin{lemma}\label{lma-quasinetimplyloccpt}
+    Let $X$ be a Hausdorff space. Assume that $X$ admits a quasi-net $\tau$ consisting of compact sets. Then $X$ is locally compact.
+\end{lemma}
+\begin{proof}
+    Take $x\in X$. By assumption, we can find $n\in \mathbb{N}$ and $V_1,\ldots,V_n\in \tau$ all containing $x$ such that $V_1\cup\cdots\cup V_n$ is a neighbourhood of $x$. This neighbourhood is clearly compact.
+\end{proof}
+
+\begin{lemma}
+    Let $X$ be a Hausdorff space and $\tau$ be a collection of compact subsets of $X$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $\tau$ is a quasi-net;
+        \item For each $x\in X$, there are $n\in \mathbb{N}$ and $V_1,\ldots,V_n\in \tau$ such that $V_1\cup\cdots\cup V_n$ is a neighbourhood of $x$ in $X$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    (1) $\implies$ (2): This is trivial.
+
+    (2) $\implies$ (1): Given $x\in X$, take $V_1,\ldots,V_n$ as in (2). We may assume that $x\in V_1,\ldots,V_m$ and $x\not\in V_{m+1},\ldots,V_n$ for some $1\leq m\leq n$. Then $V_1\cup\cdots\cup V_m$ is a neighbourhood of $x$ in $X$: if $U$ is an open neighbourhood of $x$ in $X$ contained in $V_1\cup \cdots\cup V_n$, then $U\setminus (V_{m+1}\cup\cdots \cup V_n)$ is an open neighbourhood of $x$ in $X$ contained in $V_1\cup\cdots\cup V_m$.
+\end{proof}
+
+\begin{lemma}
+    Let $X$ be a topological space and $\tau$ be a net on $X$ consisting of compact sets. Then
+    \begin{enumerate}
+        \item for any pair $U,V\in \tau$, the intersection $U\cap V$ is lcoally closed in $U$ and in $V$;
+        \item If $n\in \mathbb{Z}_{>0}$, $V,V_1,\ldots,V_n\in \tau$ are such that 
+            \[
+                V\subseteq V_1\cup \cdots\cup V_n,
+            \]
+            then there are $m\in \mathbb{Z}_{>0}$ and $U_1,\ldots,U_m\in \tau$ such that 
+            \[
+                V=U_1\cup\cdots\cup U_m  
+            \]
+            and each $U_j$ is contained in some $V_i$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    (1) It suffices to show that $U\cap V$ is locally compact in the induced topology. This follows from \cref{lma-quasinetimplyloccpt}.
+    
+    (2) For each $x\in V$ and each $i=1,\ldots,n$ such that $x\in V_i$, we take a neighbourhood of $x$ in $V\cap V_i$ of the form $W_iV_{i1}\cup\cdots\cup V_{im_i}$ for some $m_i\in \mathbb{Z}_{>0}$ and $V_{ij}\in \tau$ for $j=1,\ldots,m_i$. Then the union of all $W_i$'s is a neighbourhood of $x$ of the form $U_1\cup \cdots U_m$, where $U_j$ belongs to $\tau$ and is contained in some $V_i$. Using the compactness of $V$, we conclude.
+\end{proof}
 
 \section{Bornology}
 \begin{definition}
@@ -28,7 +109,6 @@
     Let $(X,\mathcal{B})$ be a bornological set. A \emph{basis} for $\mathcal{B}$ is a subset $\mathcal{A}\subseteq \mathcal{B}$ such that for any $B\in \mathcal{B}$, there are $A_1,\ldots,A_n\in \mathcal{A}$ such that $B\subseteq A_1\cup\cdots\cup A_n$.
 \end{definition}
 
-\cite{stacks-project}
 
 \printbibliography
 \end{document}
