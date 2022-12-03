@@ -36,4 +36,6 @@ We will freely make use of all results from Stacks Project.
 
 - [Affinoid algebras](Affinoid-Algebras.pdf)
 
-> To do: include Ducros' proof of the excellence of affinoid algebras.
+> To do: include Ducros' proof of the excellence of affinoid algebras; Include the proof of Kiehl's theorem
+
+- [Berkovich analytic spaces](Berkovich-Analytic-Spaces.pdf)
