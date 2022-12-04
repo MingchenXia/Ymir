@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  3 DEC 2022 08:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  3 DEC 2022 18:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -902,12 +902,7 @@ No file Introduction.aux
 LABELS NOT IMPORTED.
  on input line 306.
 
-
-Package xr Warning: 
-No file Topology-Bornology.aux
-LABELS NOT IMPORTED.
- on input line 307.
-
+Package xr Info: IMPORTING LABELS FROM Topology-Bornology.aux on input line 307.
 Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 308.
 
 Package xr Warning: 
@@ -1079,9 +1074,18 @@ Contents
 
  [3
 
-] [4]
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 14.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 14.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [4]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 17.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 36.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1089,15 +1093,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 17.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 17.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [5
+ [5
 
 ] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.aux)
 Package logreq Info: Writing requests to 'Berkovich-Analytic-Spaces.run.xml'.
@@ -1105,18 +1101,18 @@ Package logreq Info: Writing requests to 'Berkovich-Analytic-Spaces.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36849 strings out of 478994
- 693970 string characters out of 5858185
- 1527163 words of memory out of 5000000
- 53540 multiletter control sequences out of 15000+600000
- 444922 words of font info for 82 fonts, out of 8000000 for 9000
+ 36997 strings out of 478994
+ 697367 string characters out of 5858185
+ 1535608 words of memory out of 5000000
+ 53673 multiletter control sequences out of 15000+600000
+ 449694 words of font info for 88 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,6n,133p,834b,1701s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf (5 pages, 122227 bytes).
+ 132i,15n,133p,834b,1701s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf (5 pages, 165781 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 16933 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 124 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
+ 14 named destinations out of 1000 (max. 500000)
+ 18989 words of extra memory for PDF output out of 20736 (max. 10000000)
 

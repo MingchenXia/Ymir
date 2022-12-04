@@ -9,10 +9,57 @@
 \section{Introduction}\label{sec-introduction}
 
 \section{Affinoid spaces}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
+
+\begin{definition}
+Let $A$ be a $k_H$-affinoid algebra. A \emph{compact $k_H$-analytic domain} $V$ in $\Sp A$ is a finite union of $k_H$-affinoid domains in $\Sp A$.    
+\end{definition}
+
+\begin{lemma}
+    Let $A$ be a $k_H$-affinoid algebra and $V$ be a compact $k_H$-analytic domain. Write $\Sp A$ as a finite union of $k_H$-affinoid domains $\Sp A_i$ with $i=1,\ldots,n$ in $\Sp A$. Define $A_{ij}=A_i\hat{\otimes}_A A_j$ and 
+    \[
+        A_V:=\ker  \left( \prod_{i=1}^n A_i \twoheadrightarrow \prod_{i,j=1}^n A_{ij}\right).
+    \]
+    Then the Banach $k$-algebra does not depend on the choice of the covering $\{\Sp A_i\}_i$ up to a canonical isomorphism.
+\end{lemma}
+\begin{proof}
+    Let $\{\Sp B_j\}_{j=1,\ldots,m}$ be another $k_H$-affinoid covering of $\Sp A$. We need to show that $A_V$ defined using the two coverings are canonically isomorphic. By \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras, we may assume that $\{\Sp B_j\}_{j=1,\ldots,m}$ refines $\{\Sp A_i\}_{i=1,\ldots,n}$.
+\end{proof}
 
 
+\section{Berkovich analytic spaces}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
+ 
+\begin{definition}
+    Let $X$ be a locally Hausdorff space and $\tau$ be a net of compact subsets. A \emph{$k_H$-affinoid atlas} $\mathcal{A}$ on $X$ with the net $\tau$ is a map which assigns 
+    \begin{enumerate}
+        \item to each $V\in \tau$, a $k_H$-affinoid algebra $A_V$ and a homeomorphism $\varphi_V:\Sp A_V\rightarrow V$;
+        \item to each $U,V\in \tau$, $U\subseteq V$, a morphism of $k_H$-affinoid algebras $\alpha_{V/U}:A_V\rightarrow A_U$ representing a $k_H$-affinoid domain $\Sp A_U$ in $\Sp A_V$ such that the following diagram commutes
+        \[
+            \begin{tikzcd}
+                \Sp A_U \arrow[d, "\varphi_U"] \arrow[r, "\Sp \alpha_{V/U}"] & \Sp A_V \arrow[d, "\varphi_V"] \\
+                U \arrow[r]                                                  & V                             
+            \end{tikzcd}.  
+        \]
+    \end{enumerate}
+    The triple $(X,\mathcal{A},\tau)$ as above is called a \emph{$k_H$-analytic space}.
+\end{definition}
+We remind the readers that by our convention a compact space is Hausdorff. 
 
-\cite{stacks-project}
+As a convention, we will denote the atlas by capital  letters in caligraphic font and the affinoid algebras by the same letter in roman font. We will usually omit the maps $\varphi_U$'s by identifying $\Sp A_U$ with $U$. We will say $U$ is a $k_H$-affinoid domain in $V$.
+
+By Condition~(2), it $W\subseteq U\subseteq V$ are three sets in $\tau$, then $\alpha_{V/U}\circ\alpha_{U/W}=\alpha_{V/W}$.
+
+\begin{remark}
+    Our definition is a special case of the original definitions in \cite{Berk93}. This seems to be the most important case though.
+\end{remark}
+
+\begin{proposition}
+    Let $(X,\mathcal{A},\tau)$ be a $k_H$-affinoid space, $U\in \tau$ and $W$ is a $k_H$-affinoid domain in $U$. Then for any $V\in \tau$ containing $W$, $W$ is a $k_H$-affinoid domain in $V$.
+\end{proposition}
+\begin{proof}
+    As $\tau|_{U\cap V}$ is a net and $W$ is compact, we can find $U_1,\ldots,U_n\in \tau_{U\cap V}$ with $W\subseteq U_1\cup \cdots\cup  U_n$. As $W$, $U_i$ are $k_H$-affinoid domains in $U$, $W_i=W\cap U_i$ is a $k_H$-affinoid domain in $U_i$ for all $i=1,\ldots,n$ by \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras. It follows from \cref{Banach-cor-affinoiddomaintransi} and \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras that $W_i$ and $W_i\cap W_j$ are both $k_H$-affinoid domains in $V$ for $i,j=1,\ldots,n$.
+\end{proof}
 
 \printbibliography
 \end{document}

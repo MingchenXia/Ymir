@@ -5,4 +5,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{2}{Affinoid spaces}}{4}{section.0.2}%
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{3}{Berkovich analytic spaces}}{4}{section.0.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{5}{chapter*.1}%

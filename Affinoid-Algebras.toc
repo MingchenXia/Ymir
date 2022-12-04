@@ -21,10 +21,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{10}{Graded reduction}}{34}{section.0.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{11}{Gerritzen--Grauert theorem}}{38}{section.0.11}%
+\contentsline {section}{\tocsection {}{11}{Gerritzen--Grauert theorem}}{39}{section.0.11}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{12}{Tate acyclicity theorem}}{41}{section.0.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{13}{Kiehl's theorem}}{48}{section.0.13}%
+\contentsline {section}{\tocsection {}{13}{Kiehl's theorem}}{49}{section.0.13}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{53}{chapter*.1}%
