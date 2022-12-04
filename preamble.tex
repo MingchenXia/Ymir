@@ -311,10 +311,27 @@ linktoc=all
 \makeatother
 
 
+\newcommand*{\myexternaldocument}[2]{%
+\externaldocument[#1]{#2}%
+\addFileDependency{#2.tex}%
+\addFileDependency{#2.aux}%
+}
 
+%\iffalse
 
+\myexternaldocument{Introduction-}{Introduction}
+\myexternaldocument{Topology-}{Topology-Bornology}
+\myexternaldocument{Banach-}{Banach-Rings}
+\myexternaldocument{Commutative-}{Commutative-Algebra}
+\myexternaldocument{Local-}{Local-Algebras}
+\myexternaldocument{Complex-}{Complex-Analytic-Spaces}
+\myexternaldocument{Morphisms-}{Morphisms}
+\myexternaldocument{Affinoid-}{Affinoid-Algebras}
+\myexternaldocument{Berkovich-}{Berkovich-Analytic-Spaces}
+%\fi
 
-\externaldocument[Introduction-]{Introduction}
+\iffalse
+\externaldocument[Introduction-]{Introduction}[Introduction.pdf]
 %One variable complex analysis
 %Several variables complex analysis
 \externaldocument[Topology-]{Topology-Bornology}[Topology-Bornology.pdf]
@@ -332,7 +349,7 @@ linktoc=all
 
 \externaldocument[Affinoid-]{Affinoid-Algebras}[Affinoid-Algebras.pdf]
 \externaldocument[Berkovich-]{Berkovich-Analytic-Spaces}[Berkovich-Analytic-Spaces.pdf]
-
+\fi
 
 \bibliography{Ymir}
 

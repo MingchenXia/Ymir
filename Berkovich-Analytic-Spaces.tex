@@ -26,7 +26,7 @@ Let $A$ be a $k_H$-affinoid algebra. A \emph{compact $k_H$-analytic domain} $V$ 
     The image of the natural continuous map $\Sp A_V\rightarrow \Sp A$ contains $V$ and the map does not depend on the choice of the covering up to the canonical isomorphism between $\Sp A_V$ for different coverings.
 \end{lemma}
 \begin{proof}
-    We first observe that $A_V$ is a Banach $k$-algebra as it is defined as an equalizer. This follows from \cref{Banach-lma-equalizerbanach}.
+    We first observe that $A_V$ is a Banach $k$-algebra as it is defined as an equalizer. This follows from \cref{Banach-lma-equalizerbanach} in the chapter Banach Rings.
 
     Let $\{\Sp B_j\}_{j=1,\ldots,m}$ be another $k_H$-affinoid covering of $\Sp A$. We need to show that $A_V$ defined using the two coverings are canonically isomorphic. We write $A_V'$ for  
     \[
@@ -96,7 +96,7 @@ Let $A$ be a $k_H$-affinoid algebra. A \emph{compact $k_H$-analytic domain} $V$ 
 
 
 
-\section{Berkovich analytic spaces}
+\section{The category of Berkovich analytic spaces}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
  
 \begin{definition}
@@ -226,6 +226,144 @@ Recall our convention \cref{rmk-affdomainident}, the morphism $\varphi_{V/V'}$ m
     \end{tikzcd}.  
 \]
 We will continue our identifications as in \cref{rmk-affdomainident} to simplify our notations.
+
+\begin{proposition}\label{prop-strongmorphismext}
+    Let $(X,\mathcal{A},\tau)$ and $(X',\mathcal{A}',\tau')$ be $k_H$-analytic spaces. Let $\varphi:(X,\mathcal{A},\tau)\rightarrow (X',\mathcal{A}',\tau')$ be a strong morphism. Then $\varphi$ extends uniquely to a strong morphism $\varphi:(X,\bar{\mathcal{A}},\bar{\tau})\rightarrow (X',\overline{\mathcal{A}'},\overline{\tau'})$.
+\end{proposition}
+\begin{proof}
+    Let $U\in \bar{\tau}$, $U'\in \overline{\tau'}$ with $\varphi(U)\subseteq U'$. Take $V\in \tau$ and $V'\in \tau'$ containing $U$ and $U'$ respectively. By \cref{lma-innetaffinoneaffinall}, $U$ (resp. $V$) is a $k_H$-affinoid domain in $V$ (resp. $V'$). Take $W\in \tau'$ with $\varphi(V)\subseteq W'$. Then in particular, $\varphi(U)\subseteq W'$. As $\tau'|_{V'\cap W'}$ is a quasi-net and $\varphi(U)$ is compact, we can find $n\in \mathbb{Z}_{>0}$ and $W_1,\ldots,W_n\in \tau'|_{V'\cap W}$ such that 
+    \[
+        \varphi(U)\subseteq W_1\cup\cdots\cup W_n.
+    \]
+    Now $W_i$ is a $k_H$-affinoid domain in $W'$ by \cref{lma-innetaffinoneaffinall}, so $V_i:=\varphi^{-1}_{V/W'}(W_i)$ is an affinoid domain in $V$ by \cref{Affinoid-cor-fiberproductaffdomain} in the chatper Affinoid Algebras and we have an induced morphism $V_i\rightarrow W_i$ for $i=1,\ldots,n$. This morphism in turn induces a morphism of $k_H$-affinoid spaces
+    \[
+        U_i:=U\cap V_i\rightarrow U_i':=U'\cap W_i  \rightarrow U'
+    \]
+    for $i=1,\ldots,n$. These morphisms are compatible on their intersections by construction. So by \cref{Affinoid-thm-Tateacyc} in the chapter Affinoid Algebras, they glue together to a morphism of $k_H$-affinoid spectra $\bar{\varphi}_{U/U'}:U\rightarrow U'$. It is easy to see that this construction defines a strong morphism.
+
+    As for the uniqueness, it suffices to show that the morphism $U_i\rightarrow U'_i$ is uniquely determined for $i=1,\ldots,n$. In other words, we need to show that the dotted arrow that makes the following diagram commutes is unique:
+    \[
+        \begin{tikzcd}
+            U_i \arrow[d] \arrow[r, dotted] & U'_i \arrow[d] \\
+            V \arrow[r, "\varphi_{V/W'}"]   & W'            
+        \end{tikzcd}  
+    \]
+    for $i=1,\ldots,n$.
+    It suffices to apply the universal property of the $k_H$-affinoid domain $U_i'\rightarrow W'$.
+\end{proof}
+
+\begin{definition}\label{def-strongmorphismcompo}
+    Let $(X,\mathcal{A},\tau)$, $(X',\mathcal{A}',\tau')$, $(X'',\mathcal{A}'',\tau'')$ be $k_H$-analytic spaces. Let 
+    \[
+        \varphi:  (X,\mathcal{A},\tau)\rightarrow (X',\mathcal{A}',\tau'),\quad \psi: (X',\mathcal{A}',\tau')\rightarrow (X'',\mathcal{A}'',\tau'')
+    \]
+    be strong morphisms. We will define their \emph{composition} $\chi=\psi\circ \varphi$ as follows. The underlying map of topological spaces is just the composition of the unlerlying maps of topological spaces corresponding to $\psi$ and $\varphi$.
+    
+    Let $\bar{\varphi}$ and $\bar{\psi}$ be the extensions of  $\varphi$ and $\psi$ to $\bar{\tau}$ and $\overline{\tau'}$ as in \cref{prop-strongmorphismext}. 
+    
+    Given $V\in \tau$ and $V''\in \tau''$ with $\chi(V)\subseteq V''$, we need to define a morphism of $k_H$-affinoid spectra $\chi_{V/V''}:V\rightarrow V''$. Take $V'\in \tau'$ and $U''\in \tau''$ such that $\varphi(V)\subseteq V'$ and $\psi(V')\subseteq U''$. Since $\chi(V)\subseteq U''\cap V''$ and $V$ is compact, we can take $n\in \mathbb{Z}_{>0}$ and $V_1'',\ldots,V_n''\in \tau''|_{U''\cap V''}$ with $\chi(V)\subseteq V_1''\cup\cdots\cup V_n''$. Then $V_i':=\psi^{-1}_{V'/U''}(V_i'')$ and $V_i:=\varphi_{V/V'}^{-1}(V_i')$ are $k_H$-affinoid domains in $V'$ and $V$ respectively for $i=1,\ldots,n$ and $V=V_1\cup\cdots\cup V_n$. The morphisms $\bar{\varphi}$ and $\bar{\psi}$ then induce a morphism $V_i\rightarrow V_i''\rightarrow V$ of $k_H$-affinoid spectra. These morphisms are clearly compatible on the intersections and hence induce a morphism $V\rightarrow V''$ of $k_H$-affinoid spectra by \cref{Affinoid-thm-Tateacyc} in the chapter Affinoid Algebras.
+
+    It is easy to verify that $\psi\circ \varphi$ is a strong morphism.
+
+    In this way, we get a category $k_H\text{-}\widetilde{\AnaCat}$ of $k_H$-analytic spaces. 
+\end{definition}
+
+\begin{definition}
+    Let $(X,\mathcal{A},\tau)$ and $(X',\mathcal{A}',\tau')$ be $k_H$-analytic spaces. A strong morphism $\varphi:(X,\mathcal{A},\tau)\rightarrow (X',\mathcal{A}',\tau')$ is said to be a \emph{quasi-isomorphism} if 
+    \begin{enumerate}
+        \item $\varphi$ is a homeomorphism between $X$ and $X'$;
+        \item for any pair $V\in \tau$ and $V'\in \tau'$ with $\varphi(V)\subseteq V'$, $\Sp \varphi_{V/V'}$ identifies $V$ with an affinoid domain in $V'$.
+    \end{enumerate}
+\end{definition}
+
+\begin{lemma}\label{lma-strongmorphisminversecptanalyticdomain}
+    Let $(X,\mathcal{A},\tau)$ and $(X',\mathcal{A}',\tau')$ be $k_H$-analytic spaces and $\varphi:(X,\mathcal{A},\tau)\rightarrow (X',\mathcal{A}',\tau')$ be a strong morphism. Then for any $V\in \bar{\tau}$ and $V'\in \overline{\tau'}$, the intersection $V\cap \varphi^{-1}(V')$ is a compact $k_H$-analytic domain in $V$.
+\end{lemma}
+\begin{proof}
+    Take $U'\in \overline{\tau'}$ with $\varphi(V)\subseteq U'$. As $\tau|_{U'\cap V'}$ is a quasi-net, we can find $n\in \mathbb{Z}_{>0}$ and $U_1',\ldots,U_n'\in \tau|_{U'\cap V'}$ with $\varphi(V)\subseteq U_1'\cup \cdots \cup U_n'$ and 
+    \[
+        V\cap \varphi^{-1}(V')=\bigcup_{i=1}^n \varphi^{-1}_{V/U}(U_i').
+    \]
+\end{proof}
+
+\begin{lemma}\label{lma-quasiisomrightmultiplicative}
+    The system of quasi-isomorphisms in $k_H\text{-}\widetilde{\AnaCat}$ is a right multiplicative system.
+\end{lemma}
+For the notion of right multiplicative system, we refer to \cite[\href{https://stacks.math.columbia.edu/tag/04VC}{Tag 04VC}]{stacks-project}.
+
+\begin{proof}
+    We verify the three axioms as in \cite[\href{https://stacks.math.columbia.edu/tag/04VC}{Tag 04VC}]{stacks-project}.
+
+    \textbf{RMS1}. The identity is clear a quasi-isomorphism. It remains to verify that the composition of quasi-isomorphisms is still a quasi-isomorphism.
+
+    We take $\varphi,\psi$ as in \cref{def-strongmorphismcompo}. We will use the same notations as in \cref{def-strongmorphismcompo}. We need to show that $V\rightarrow V''$ identifies $V$ with a $k_H$-affinoid domain in $V''$. From the construction, we know that $\varphi$ identifies $V_i$ with a $k_H$-affinoid domain in $V_i'$ and $\psi$ identifies $V_i'$ with a $k_H$-affinoid domain in $V_i''$ for $i=1,\ldots,n$. In particular, $\chi(V)$ is a compact $k_H$-analytic domain in $V''$. It follows from \cref{prop-compactanalydomainaffinoid} that $\chi(V)$ is a $k_H$-affinoid domain in $V''$.
+
+    \textbf{RMS2}.
+    If $\varphi:(X,\mathcal{A},\tau)\rightarrow (X',\mathcal{A}',\tau')$ and $f:(\widetilde{X'},\widetilde{\mathcal{A}'},\widetilde{\tau'})\rightarrow (X',\mathcal{A}',\tau')$ are given strong morphisms of $k_H$-analytic spaces and $g$ is a quasi-isomorphism, then there are $k_H$-analytic space $(\widetilde{X},\widetilde{\mathcal{A}},\widetilde{\tau})$ and strong morphisms $\tilde{\varphi}:(\widetilde{X},\widetilde{\mathcal{A}},\widetilde{\tau})\rightarrow (\widetilde{X'},\widetilde{\mathcal{A}'},\widetilde{\tau'})$ and $f:(\widetilde{X},\widetilde{\mathcal{A}},\widetilde{\tau})\rightarrow (X,\mathcal{A},\tau)$ such that $f$ is a quasi-isomorphism and the following diagram commutes:  
+    \[
+        \begin{tikzcd}
+            {(\widetilde{X},\widetilde{\mathcal{A}},\widetilde{\tau})} \arrow[r, "\tilde{\varphi}", dotted] \arrow[d, "f", dotted] & {(\widetilde{X'},\widetilde{\mathcal{A}'},\widetilde{\tau'})} \arrow[d, "g"] \\
+            {(X,\mathcal{A},\tau)} \arrow[r, "\varphi"]                                                                            & {(X',\mathcal{A}',\tau')}                                                   
+        \end{tikzcd}.
+    \]  
+    We may assume that $\widetilde{X'}=X'$. Then $\widetilde{\tau'}\subseteq \overline{\tau'}$. We let $\tilde{X}=X$. Let $\tilde{\tau}$ be the family of all $V\in \bar{\tau}$ for which there is $\widetilde{V'}\in\widetilde{\tau'}$ with $\varphi(V)\subseteq \widetilde{V'}$. By \cref{lma-strongmorphisminversecptanalyticdomain}, $\tilde{\tau}$ is a net on $\tilde{X}$. The $k_H$-atlas $\bar{\mathcal{A}}$ defines a $k_H$-affinoid atlas $\tilde{\mathcal{A}}$ with the net $\tilde{\tau}$. The strong morphism $\bar{\varphi}$ induces $\tilde{\varphi}$. The morphism $f$ is the canonical quasi-isomorphism. It is immediate that these constructions satisfy the desired conditions.
+
+    \textbf{RMS3}. If $\varphi,\psi:(X,\mathcal{A},\tau)\rightarrow (X',\mathcal{A}',\tau')$ are strong morphisms of $k_H$-analytic spaces and there is a quasi-isomorphism $g:(X',\mathcal{A}',\tau')\rightarrow (\widetilde{X'},\widetilde{\mathcal{A}'},\widetilde{\tau'})$ of $k_H$-analytic spaces such that $g\circ \varphi=g\circ \psi$, then there is a quasi-isomorphism $f:(\tilde{X},\tilde{\mathcal{A}},\tilde{\tau})\rightarrow (X,\mathcal{A},\tau)$ with $\varphi\circ f=\psi\circ f$.
+
+    We will in fact show that $\varphi=\psi$. It is clear that they coincide as maps of topological spaces. Let $V\in \tau$, $V'\in \tau'$ such that $\varphi(V)\subseteq V'$. Take $\widetilde{V'}\in \widetilde{\tau'}$ with $g(V')\subseteq \widetilde{V'}$. Then we have two morphisms of $k$-affinoid spectra $\varphi_{V/V'},\psi_{V/V'}:V\rightarrow V'$ such that their compositions with $g_{V'/\widetilde{V'}}$ coincide.  As $V'$ is an affinoid domain in $\widetilde{V'}$, it follows that $\varphi_{V/V'}=\psi_{V/V'}$ by the universal property.
+\end{proof}
+
+
+\begin{definition}
+    The category $k_H\text{-}\AnaCat$ is the right category of fractions of $k_H\text{-}\widetilde{\AnaCat}$ with respect to the system of quasi-isomorphisms.  A morphism in $k_H\text{-}\AnaCat$ is called a \emph{morphism} between $k_H$-analytic spaces.
+\end{definition}
+We refer to \cite[\href{https://stacks.math.columbia.edu/tag/04VB}{Tag 04VB}]{stacks-project} for the definition of right category of fractions. 
+
+For later references, we explicitly write down the morphisms in $k_H\text{-}\AnaCat$. 
+\begin{lemma}
+    Let $\varphi:(X,\mathcal{A},\tau)\rightarrow (X',\mathcal{A}',\tau')$ be a morphism of $k_H$-analytic spaces. We define a partial order on the set of nets on $X$: $\tau_1\preceq \tau_0$ if $\tau_1\subseteq \overline{\tau_0}$. Then the set of nets is a directed set and
+    \[
+        \Hom_{k_H\text{-}\AnaCat}\left((X,\mathcal{A},\tau),(X',\mathcal{A}',\tau') \right)=\varinjlim_{\sigma\preceq \tau}\Hom_{k_H\text{-}\widetilde{\AnaCat}}\left((X,\mathcal{A}_{\sigma},\sigma),(X',\mathcal{A}',\tau') \right)
+    \]
+    in the category of sets, where $\mathcal{A}_{\sigma}$ is induced by $\overline{\mathcal{A}}$. The transition maps are all injective.
+\end{lemma}
+\begin{proof}
+    This follows immediately from the definition.
+\end{proof}
+
+\begin{definition}
+    Let  $(X,\mathcal{A},\tau)$ be a $k_H$-analytic space. We say a subset $W\subseteq X$ is \emph{$\tau$-special} if it is compact and there exist $n\in \mathbb{Z}_{>0}$ and a covering $W=W_1\cup \cdots W_n$  with $W_i\in \tau$, $W_i\cap W_j\in \tau$ for all $i,j=1,\ldots,n$ and the natural map
+    \[
+        A_{W_i}\hat{\otimes}_k A_{W_j}\rightarrow A_{W_i\cap W_j}  
+    \]
+    is an admissible epimorphism.
+
+    The covering $W_1,\ldots,W_n$ is called a \emph{$\tau$-special covering} of $W$.
+\end{definition}
+
+
+\begin{lemma}
+    Let  $(X,\mathcal{A},\tau)$ be a $k_H$-analytic space and $W$ be a $\tau$-special subset of $X$. If $U,V\in \tau|_W$, then $U\cap V\in \bar{\tau}$ and the natural map
+    \[
+        A_U\hat{\otimes}_k A_V\rightarrow A_{U\cap V}
+    \]
+    is an admissible epimorphism.
+\end{lemma}
+\begin{proof}
+    Let $n\in \mathbb{Z}_{>0}$ and $W_1,\ldots,W_n$ be a $\tau$-special covering of $W$.
+    As $U\cap W_i$ and $V\cap W_i$ are compact for $i=1,\ldots,n$, we can find $m_i\in \mathbb{Z}_{>0}$ (resp. $s_i\in \mathbb{Z}_{>0}$) and finite coverings $U_{i1},\ldots,U_{im_i}\in \tau$ of $U\cap W_i$ (resp. $V_{i1},\ldots,V_{ik_i}\in \tau$ of $V\cap W_i$). 
+
+    Observe that $U_{ik}\cap V_{jl}$ is a $k_H$-affinoid domain in $U\cap V$, hence $U_{ik}\cap V_{jl}\in \bar{\tau}$ for any $i,j=1,\ldots,n$, $k=1,\ldots,m_i$ and $l=1,\ldots,k_l$. Observe that $U_{ik}\cap V_{jl}\rightarrow U_{ik}\times V_{jl}$ is a closed immersion as $W_i\cap W_j\rightarrow W_i\times W_j$ is by our assumption. Consider the finite convering 
+    \[
+        \left\{U_{ik}\times V_{jl}:i,j=1,\ldots,n; k=1,\ldots,m_i; l=1,\ldots,k_l \right\}
+    \]
+    of $U\times V$. For each tuple $(i,j,k,l)$, $A_{U_{ik}\\cap V_{jl}}$ is a finite $A_{U_{ik}\times V_{jl}}$-algebra. By \cref{Affinoid-thm-Kiehl} in the chapter Affinoid Algebras, we can construct a finite $A_{U\times V}$-algebra $A_{U\cap V}$ inducing all of these $A_{U_{ik}\cap V_{jl}}$'s. 
+    
+    \textcolor{red}{To be continued}
+    %But $A_{U\cap V}$ is the equalizer of morphisms of $k_H$-affinoid algebras, so it is $k_H$-affinoid again. Moreover, we have a natural bijection $\Sp A_{U\cap V}\rightarrow U\cap V$ and $U\cap V\rightarrow U\times V$ is a closed immersion.
+
+    %By \cref{prop-compactanalydomainaffinoid}, $U\cap V$ is a $k_H$-affinoid domain in $U$, it follows that $U\cap V\in \bar{\tau}$.
+\end{proof}
 
 \printbibliography
 \end{document}
