@@ -592,6 +592,16 @@ By \cref{lma-unitmoduloreduction} and \cref{prop-strictlyconvcirccheck}, $f$ is 
 \end{proof}
 
 
+\begin{lemma}\label{lma-equalizerbanach}
+    Let $A$, $B$ be Banach rings and $f,g:A\rightarrow B$ be bounded homomorphisms. Then the equalizer $\Eq(f,g)$ of $f$ and $g$ is a Banach subring of $A$. 
+    
+    If $C$ ia a Banach ring, $A,B$ are moreover Banach $C$-algebras and $f,g$ are moerover bounded homomorphism of Banach $C$-algebras, then $\Eq(f,g)$ is a Banach $C$-subalgebra of $A$.
+\end{lemma}
+\begin{proof}
+    As an equalizer of ring homomorphisms, $\Eq(f,g)$ is a subring of $A$. We can realize $\Eq(f,g)=\ker (f-g)$, so $\Eq(f-g)$ is a closed subring of $A$, hence a Banach subring with respect to the subspace norm.
+
+    The second assertion is proved similarly.
+\end{proof}
 
 
 \section{Semi-normed modules}

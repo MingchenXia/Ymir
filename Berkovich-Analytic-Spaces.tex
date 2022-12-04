@@ -15,16 +15,85 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
 Let $A$ be a $k_H$-affinoid algebra. A \emph{compact $k_H$-analytic domain} $V$ in $\Sp A$ is a finite union of $k_H$-affinoid domains in $\Sp A$.    
 \end{definition}
 
-\begin{lemma}
+
+\begin{lemma}\label{lma-compactanalyticdomainring}
     Let $A$ be a $k_H$-affinoid algebra and $V$ be a compact $k_H$-analytic domain. Write $\Sp A$ as a finite union of $k_H$-affinoid domains $\Sp A_i$ with $i=1,\ldots,n$ in $\Sp A$. Define $A_{ij}=A_i\hat{\otimes}_A A_j$ and 
     \[
-        A_V:=\ker  \left( \prod_{i=1}^n A_i \twoheadrightarrow \prod_{i,j=1}^n A_{ij}\right).
+        A_V:=\ker  \left( \prod_{i=1}^n A_i \rightarrow \prod_{i,j=1}^n A_{ij}\right).
     \]
     Then the Banach $k$-algebra does not depend on the choice of the covering $\{\Sp A_i\}_i$ up to a canonical isomorphism.
+
+    The image of the natural continuous map $\Sp A_V\rightarrow \Sp A$ contains $V$ and the map does not depend on the choice of the covering up to the canonical isomorphism between $\Sp A_V$ for different coverings.
 \end{lemma}
 \begin{proof}
-    Let $\{\Sp B_j\}_{j=1,\ldots,m}$ be another $k_H$-affinoid covering of $\Sp A$. We need to show that $A_V$ defined using the two coverings are canonically isomorphic. By \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras, we may assume that $\{\Sp B_j\}_{j=1,\ldots,m}$ refines $\{\Sp A_i\}_{i=1,\ldots,n}$.
+    We first observe that $A_V$ is a Banach $k$-algebra as it is defined as an equalizer. This follows from \cref{Banach-lma-equalizerbanach}.
+
+    Let $\{\Sp B_j\}_{j=1,\ldots,m}$ be another $k_H$-affinoid covering of $\Sp A$. We need to show that $A_V$ defined using the two coverings are canonically isomorphic. We write $A_V'$ for  
+    \[
+        \ker  \left( \prod_{j=1}^m B_j \rightarrow \prod_{i,j=1}^m B_{ij}\right)
+    \]  
+    to make a distinction.
+    We write $B_{ij}=B_i\hat{\otimes}_A B_j$. 
+    
+    By \cref{Affinoid-thm-Tateacyc} in the chapter Affinoid Algebras, the colomns in the following commutative diagram are exact:
+    \[
+        \begin{tikzcd}
+            &                                 & 0 \arrow[d]                                                                             &  & 0 \arrow[d]                                                       \\
+0 \arrow[r] & A_V \arrow[r] \arrow[d, dotted] & \prod_{i=1}^n A_i \arrow[d,"\eta"] \arrow[rr]                                                  &  & {\prod_{i,i'=1}^n A_{ii'}} \arrow[d]                              \\
+0 \arrow[r] & \ker \iota \arrow[r]            & \prod_{i=1}^n\prod_{j=1}^m A_i\hat{\otimes}_A B_j \arrow[d, "\tau"] \arrow[rr, "\iota"] &  & {\prod_{i,i'=1}^n\prod_{j,j'=1}^m A_{ii'}\hat{\otimes}_A B_{jj'}} \\
+            &                                 & {\prod_{i=1}^n\prod_{j,j'=1}^m A_i\hat{\otimes}_A B_{jj'}}                              &  &                                                                  
+\end{tikzcd}  
+    \]
+    The rows are exact by definition. By diagram chasing, the dotted arrow is injective. To see it is surjective, it suffices to observe that the factors with $i=i'$ in the lower right corner is exactly the same as the factors of the lower corner, so an element in $\ker \iota$ is necessarily in $\ker \tau$. It follows that the dotted arrow is surjective.
+
+    Similarly, we have a natural isomorphism $A_V'\cn \ker \iota$. We conclude the first assertion.
+
+    As for the second, observe that $\Sp A_V$ is defined as a colimit in the category of Banach $k$-algebras, so it follows from general abstract nonsense that there is a natural morphism $\Sp A_V\rightarrow \Sp A$. It clearly contains $V$ in the image. The compatibility with the isomorphism above follows simply from the fact that the map $\eta$ is an $A$-algebra homomorphism.
 \end{proof}
+
+
+
+\begin{definition}
+    Let $A$ be a $k$-affinoid algebra and $V$ be a compact $k$-analytic domain in $\Sp A$. We define \emph{the Banach $k$-algebra $A_V$ associated with $V$} as $A_V$ constructed in \cref{lma-compactanalyticdomainring}.
+
+    The continuous map $\Sp A_V\rightarrow \Sp A$ constructed in  \cref{lma-compactanalyticdomainring} is called the \emph{structure map} ov $V$.
+\end{definition}
+
+\begin{proposition}\label{prop-compactanalydomainaffinoid}
+    Let $A$ be a $k_H$-affinoid algebra and $V$ be a compact $k_H$-analytic domain in $\Sp A$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $V$ is a $k_H$-affinoid domain.
+        \item $A_V$ is a $k_H$-affinoid algebra and the image of the structure map $\Sp A_V\rightarrow \Sp A$ is exactly $V$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (1) $\implies$ (2): By \cref{Affinoid-thm-Tateacyc} in the chapter Affinoid Algebras, when $V$ is a $k_H$-affinoid domain, $A_V$ is a $k_H$-affinoid algebra and the structure map corresponds to the inclusion of the $k_H$-affinoid domain. There is nothing to prove.
+
+    (2) $\implies$ (1): It suffices to show that the structure map represents the $k_H$-affinoid domain $V$. Take a $k_H$-affinoid algebra $D$ and a morphism $\Sp D\rightarrow \Sp A$ of $k_H$-affinoid spaces that factorizes through $V$. We need to construct a morphism $\Sp D\rightarrow \Sp A_V$ making the following diagram commutative
+    \[
+        \begin{tikzcd}
+            \Sp D \arrow[rd] \arrow[d, dotted] &       \\
+            \Sp A_V \arrow[r]                  & \Sp A
+        \end{tikzcd}.    
+    \]
+    
+    Take $k_H$-affinoid domains $\Sp B_1,\ldots,\Sp B_n$ in $\Sp A$ that cover $V$. Let $C_i=B_i\hat{\otimes}_A D$ for $i=1,\ldots,n$, then $\Sp C_i$ is a $k_H$-affinoid domain in $\Sp D$ by \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras. By \cref{Affinoid-thm-Tateacyc} in the chapter Affinoid Algebras and general abstract nonsense, it suffices to construct the dotted arrow after restricting to $\Sp C_i$ for $i=1,\ldots,n$. So we could assume that $\Sp D\rightarrow \Sp A$ factorizes through $\Sp B_1$. From the universal property, we therefore have the dotted morphism making the following diagram commutative:
+    \[
+        \begin{tikzcd}
+            \Sp D \arrow[rd] \arrow[d, dotted] &       \\
+            \Sp B_1 \arrow[r]                  & \Sp A
+        \end{tikzcd}.    
+    \]
+    It suffices to show that the natural homomorphism
+    \[
+        B_1\rightarrow A_V\hat{\otimes}_A B_1  
+    \]
+    is an isomorphism. But this follows from general abstract nonsense as $B_1$ is already a Banach $A_V$-algebra.
+\end{proof}
+\begin{remark}
+    This proposition is not correctly stated in \cite[Corollary~2.2.6]{Berk12}. The corresponding statement in \cite[Remark~1.2.1]{Berk93} is slightly weaker than our statement.
+\end{remark}
+
 
 
 \section{Berkovich analytic spaces}
@@ -43,23 +112,120 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
         \]
     \end{enumerate}
     The triple $(X,\mathcal{A},\tau)$ as above is called a \emph{$k_H$-analytic space}.
+
+    A \emph{morphism} between atlases $\mathcal{A}$ and $\mathcal{A}'$ on $X$ with the net $\tau$ is an assignment that with each $V\in \tau$, one associates a morphism of $k_H$-affinoid algebras $\beta_V:A_V\rightarrow A_V'$ such that
+    \begin{enumerate}
+        \item for each $V\in \tau$, the following diagram is commutative:
+        \[
+            \begin{tikzcd}
+                \Sp A_V' \arrow[d, "\varphi_V'"] \arrow[r, "\Sp \beta_V"] & \Sp A_V \arrow[ld, "\varphi_V"] \\
+                V                                                         &                                
+                \end{tikzcd};
+        \]
+        \item for each $U,V\in \tau$, $U\subseteq V$, the following diagram is commutative:
+        \[
+            \begin{tikzcd}
+                A_V \arrow[r, "\alpha_{V/U}"] \arrow[d, "\beta_V"] & A_U \arrow[d, "\beta_U"] \\
+                A_V' \arrow[r, "\alpha'_{V/U}"]                    & A_U'                    
+            \end{tikzcd}
+        \]
+    \end{enumerate}
+    Here we have denoted the data associated with $\mathcal{A}'$ with a prime. In this way, the atlases on $X$ with the net $\tau$ form a category.
 \end{definition}
 We remind the readers that by our convention a compact space is Hausdorff. 
 
-As a convention, we will denote the atlas by capital  letters in caligraphic font and the affinoid algebras by the same letter in roman font. We will usually omit the maps $\varphi_U$'s by identifying $\Sp A_U$ with $U$. We will say $U$ is a $k_H$-affinoid domain in $V$.
-
 By Condition~(2), it $W\subseteq U\subseteq V$ are three sets in $\tau$, then $\alpha_{V/U}\circ\alpha_{U/W}=\alpha_{V/W}$.
+
+\begin{remark}\label{rmk-affdomainident}
+    As a convention, we will denote the atlas by capital  letters in caligraphic font and the affinoid algebras by the same letter in roman font. We will usually omit the maps $\varphi_U$'s by identifying $\Sp A_U$ with $U$. We will say $U$ is a $k_H$-affinoid domain in $V$.    
+\end{remark}
+
 
 \begin{remark}
     Our definition is a special case of the original definitions in \cite{Berk93}. This seems to be the most important case though.
 \end{remark}
 
-\begin{proposition}
-    Let $(X,\mathcal{A},\tau)$ be a $k_H$-affinoid space, $U\in \tau$ and $W$ is a $k_H$-affinoid domain in $U$. Then for any $V\in \tau$ containing $W$, $W$ is a $k_H$-affinoid domain in $V$.
-\end{proposition}
+\begin{lemma}\label{lma-innetaffinoneaffinall}
+    Let $(X,\mathcal{A},\tau)$ be a $k_H$-analytic space, $U\in \tau$ and $W$ is a $k_H$-affinoid domain in $U$. Then for any $V\in \tau$ containing $W$, $W$ is a $k_H$-affinoid domain in $V$.
+\end{lemma}
 \begin{proof}
-    As $\tau|_{U\cap V}$ is a net and $W$ is compact, we can find $U_1,\ldots,U_n\in \tau_{U\cap V}$ with $W\subseteq U_1\cup \cdots\cup  U_n$. As $W$, $U_i$ are $k_H$-affinoid domains in $U$, $W_i=W\cap U_i$ is a $k_H$-affinoid domain in $U_i$ for all $i=1,\ldots,n$ by \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras. It follows from \cref{Banach-cor-affinoiddomaintransi} and \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras that $W_i$ and $W_i\cap W_j$ are both $k_H$-affinoid domains in $V$ for $i,j=1,\ldots,n$.
+    As $\tau|_{U\cap V}$ is a net and $W$ is compact, we can find $U_1,\ldots,U_n\in \tau_{U\cap V}$ with $W\subseteq U_1\cup \cdots\cup  U_n$. As $W$, $U_i$ are $k_H$-affinoid domains in $U$, $W_i=W\cap U_i$ is a $k_H$-affinoid domain in $U_i$ for all $i=1,\ldots,n$ by \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras. It follows from \cref{Affinoid-cor-affinoiddomaintransi} and \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras that $W_i$ and $W_i\cap W_j$ are both $k_H$-affinoid domains in $V$ for $i,j=1,\ldots,n$. So $W$ is a compact $k_H$-analytic domain in $V$.
+
+    By \cref{prop-compactanalydomainaffinoid},
+    \[
+        A_W:=\ker  \left( \prod_{i=1}^n A_{W_i} \rightarrow \prod_{i,j=1}^n A_{W_i\cap W_j}\right)
+    \]
+    is $k_H$-affinoid and $\Sp A_W\rightarrow \Sp A$ induces a hoemomorphism $\Sp A_W\rightarrow W$ by \cref{Affinoid-prop-affdomainhoemo} in the chatper Affinoid Algebras. By \cref{prop-compactanalydomainaffinoid} again, $W$ is affinoid in $V$. 
 \end{proof}
+
+\begin{definition}
+    Let $(X,\mathcal{A},\tau)$ be a $k_H$-analytic space. We define $\bar{\tau}$ as the set of all $W\subseteq X$ such that there is $U\in \tau$ containing $W$ and $W$ is $k_H$-affinoid in $U$.
+\end{definition}
+
+\begin{lemma}
+    Let $(X,\mathcal{A},\tau)$ be a $k_H$-analytic space. Then $\bar{\tau}$ is a net on $X$ and there is a $k_H$-affinoid atlas $\overline{\mathcal{A}}$ on $X$ with the net $\bar{\tau}$  extending $\mathcal{A}$. Moreover, the $k_H$-affinoid atlas $\overline{\mathcal{A}}$ on $X$ with the net $\bar{\tau}$  extending $\mathcal{A}$ is unique up to a canonical isomorphism.
+\end{lemma}
+\begin{proof}
+    \textbf{Step~1}.
+    We first show that $\bar{\tau}$ is a net. Let $U,V\in \bar{\tau}$ and $x\in U\cap V$. Take $U',V'\in \tau$ containing $U$ and $V$ respectively. Take $n\in \mathbb{Z}_{>0}$ and $W_1,\ldots,W_n\in \tau$ such that 
+    \begin{enumerate}
+        \item $x\in W_1\cap \cdots \cap W_n$;
+        \item $W_1\cup\cdots\cup W_n$ is a neighbourhood of $x$ in $U'\cap V'$.
+    \end{enumerate}
+    This is possible because $\tau|_{U'\cap V'}$ is a quasi-net by assumption.
+
+    By \cref{lma-innetaffinoneaffinall}, $U$ (resp. $V$) and $W_1,\ldots,W_n$ are $k_H$-affinoid domains in $U'$ (resp. $V'$).
+
+    By \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras, $U_i:=U\cap W_i$ (resp. $V_i:=V\cap W_i$) is a $k_H$-affinoid domain in $W_i$  for $i=1,\ldots,n$. By \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras again, $U_i\cap V_i$ is a $k_H$-affinoid domain in $W_i$ for $i=1,\ldots,n$. So $U_i\cap V_i\in \bar{\tau}|_{U\cap V}$ for $i=1,\ldots,n$. But
+    \[
+        \bigcup_{i=1}^n U_i\cap V_i=(U\cap V)\cap \bigcup_{i=1}^n W_i,  
+    \]
+    so $\bigcup_{i=1}^n U_i\cap V_i$ is a neighbourhood of $x$ in $U\cap V$ and $x\in \bigcap_{i=1}^n U_i\cap V_i$. It follows that $\bar{\tau}$ is a net.
+
+    \textbf{Step~2}. We extend the $k_H$-affinoid atlas $\mathcal{A}$.
+
+    For each $V\in \bar{\tau}$, we fix a $V'\in \tau$ containing $V$. 
+    
+    By \cref{lma-innetaffinoneaffinall}, $V$ is a $k_H$-affinoid domain in $V'$. Let $A_{V'}\rightarrow A_V$ be the morphism of $k_H$-affinoid algebras representing the $k_H$-affinoid domain $V$ in $\Sp A_{V'}$. We define the homeomorphism $\varphi_V:\Sp A_V\rightarrow V$ as the morphism induced by $\Sp A_V\rightarrow \Sp A$.
+
+
+    For $U,V\in \bar{\tau}$ with $U\subseteq V$, we want to define $\alpha_{V/U}:A_V\rightarrow A_U$. We handle two cases. When $V\in \tau$, as $\tau|_{U'\cap V}$ is a quasi-net, we can find $n\in \mathbb{Z}_{>0}$ and $U_1,\ldots,U_n\in \tau|_{U'\cap V}$ such that
+    \[
+        U=\bigcup_{i=1}^n U_i.  
+    \]
+    By \cref{lma-innetaffinoneaffinall}, $U_1,\ldots,U_n$ are $k_H$-affinoid domains in $U'$ and in $V$. By \cref{Affinoid-thm-Tateacyc} in the chapter Affinoid Algebras,
+    \[
+        A_U\cn \ker \left( \prod_{i=1}^n A_{U_i}\rightarrow \prod_{i,j=1}^n A_{U_i\cap U_j} \right).  
+    \]
+    So the morphism $\alpha_{V/U_i}:A_V\rightarrow A_{U_i}$ and $A_{V/U_{i}\cap U_j}:\alpha_{V/U_i}:A_V\rightarrow A_{U_i\cap U_j}$ for $i=1,\ldots,n$ and $j=1,\ldots,n$ induces a morphism $\alpha_{V/U}:A_V\rightarrow A_U$. Observe that $\alpha_{V/U}$ represents the $k_H$-affinoid domain $U$ in $V$, so it is independent of the choice of $U_1,\ldots,U_n$.
+
+    More generally, when $V\in \bar{\tau}$, we have constructed a morphism $\alpha_{V'/U}:A_{V'}\rightarrow A_U$ representing the $k_H$-affinoid domain $U$ in $V'$, it follows that $U$ is a $k_H$-affinoid domain in $V$, and we therefore get the desired morphism $\alpha_{V/U}:A_V\rightarrow A_U$.
+
+    It is easy to verify that the constructions gives a $k_H$-affinoid atlas with the net $\bar{\tau}$ extending $\mathcal{A}$. The uniqueness of the extension is immediate.
+\end{proof}
+
+\begin{definition}
+    Let $(X,\mathcal{A},\tau)$ and $(X',\mathcal{A}',\tau')$ be $k_H$-analytic spaces. A \emph{strong morphism} $\varphi:(X,\mathcal{A},\tau)\rightarrow (X',\mathcal{A}',\tau')$ is a pair consisting of 
+    \begin{enumerate}
+        \item a continuous map $\varphi:X\rightarrow X'$ such that for each $V\in \tau$, there is $V'\in \tau'$ with $\varphi(V)\subseteq V'$;
+        \item for each $V\in \tau$, $V'\in \tau'$ with $\varphi(V)\subseteq V'$, a morphism of $k_H$-affinoid spectra $\varphi_{V/V'}:V\rightarrow V'$ 
+    \end{enumerate}
+    such that for each $V,W\in \tau$, $V',W'\in \tau'$ satisfying $V\subseteq W$, $W'\subseteq W'$, $\varphi(V)\subseteq V'$ and $\varphi(W)\subseteq W'$, the following diagram commutes:
+    \[
+        \begin{tikzcd}
+            V \arrow[r, "\varphi_{V/V'}"] \arrow[d] & V' \arrow[d] \\
+            W \arrow[r, "\varphi_{W/W'}"]           & W'          
+        \end{tikzcd}.    
+    \]
+\end{definition}
+Recall our convention \cref{rmk-affdomainident}, the morphism $\varphi_{V/V'}$ means a morphism $A'_{V'}\rightarrow A_V$ of $k_H$-affinoid algebras making the following diagram commutative
+\[
+    \begin{tikzcd}
+        \Sp A_V \arrow[d, "\varphi_V"] \arrow[r] & \Sp A'_{V'} \arrow[d, "\varphi'_{V'}"] \\
+        V \arrow[r, "\varphi"]                   & V'                                    
+    \end{tikzcd}.  
+\]
+We will continue our identifications as in \cref{rmk-affdomainident} to simplify our notations.
 
 \printbibliography
 \end{document}

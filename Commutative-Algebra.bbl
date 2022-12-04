@@ -19,32 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
-    \entry{Berk12}{book}{}
-      \name{author}{1}{}{%
-        {{hash=6b7ab4936ac6207b09a38d15d1c77169}{%
-           family={Berkovich},
-           familyi={B\bibinitperiod},
-           given={V.\bibnamedelimi G.},
-           giveni={V\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Mathematical Soc.}%
-      }
-      \strng{namehash}{6b7ab4936ac6207b09a38d15d1c77169}
-      \strng{fullhash}{6b7ab4936ac6207b09a38d15d1c77169}
-      \strng{bibnamehash}{6b7ab4936ac6207b09a38d15d1c77169}
-      \strng{authorbibnamehash}{6b7ab4936ac6207b09a38d15d1c77169}
-      \strng{authornamehash}{6b7ab4936ac6207b09a38d15d1c77169}
-      \strng{authorfullhash}{6b7ab4936ac6207b09a38d15d1c77169}
-      \field{labelalpha}{Ber12}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{number}{33}
-      \field{title}{Spectral theory and analytic geometry over non-Archimedean fields}
-      \field{year}{2012}
-    \endentry
     \entry{BGR}{book}{}
       \name{author}{3}{}{%
         {{hash=b217837a3e0bec340b58af96181a5671}{%

@@ -1,15 +1,15 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'Affinoid-Algebras.blg'
-[64] biber-darwin:340> INFO - === Sat Dec  3, 2022, 19:57:20
-[80] Biber.pm:415> INFO - Reading 'Affinoid-Algebras.bcf'
-[171] Biber.pm:952> INFO - Found 4 citekeys in bib section 0
-[186] Biber.pm:4340> INFO - Processing section 0
-[195] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
-[198] bibtex.pm:1689> INFO - LaTeX decoding ...
-[242] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
-[306] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[307] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[307] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[307] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[314] bbl.pm:654> INFO - Writing 'Affinoid-Algebras.bbl' with encoding 'UTF-8'
-[316] bbl.pm:757> INFO - Output to Affinoid-Algebras.bbl
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'Affinoid-Algebras.blg'
+[112] biber-darwin:340> INFO - === Sun Dec  4, 2022, 12:31:39
+[134] Biber.pm:418> INFO - Reading 'Affinoid-Algebras.bcf'
+[305] Biber.pm:972> INFO - Found 4 citekeys in bib section 0
+[323] Biber.pm:4383> INFO - Processing section 0
+[342] Biber.pm:4574> INFO - Looking for bibtex file 'Ymir.bib' for section 0
+[345] bibtex.pm:1713> INFO - LaTeX decoding ...
+[410] bibtex.pm:1518> INFO - Found BibTeX data source 'Ymir.bib'
+[485] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[485] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[485] Biber.pm:4203> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[485] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[496] bbl.pm:654> INFO - Writing 'Affinoid-Algebras.bbl' with encoding 'UTF-8'
+[498] bbl.pm:757> INFO - Output to Affinoid-Algebras.bbl

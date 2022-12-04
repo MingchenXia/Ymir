@@ -11,6 +11,7 @@
 \usepackage{amssymb,tikz-cd}
 %\usepackage{natbib}
 \usepackage[english]{babel}
+\usepackage{nameref}
 
 \usepackage[nameinlink,capitalize]{cleveref}
 \usepackage[style=alphabetic,maxnames=99,maxalphanames=5, isbn=false, giveninits=true, doi=false]{biblatex}
@@ -256,6 +257,7 @@ linktoc=all
 \newcommand{\Cond}{\mathrm{Cond}}
 \newcommand{\IC}{\mathrm{IC}}
 \newcommand{\IH}{\mathrm{IH}}
+\newcommand{\Eq}{\mathrm{Eq}}
 \newcommand{\cris}{\mathrm{cris}}
 \newcommand{\Zar}{\mathrm{Zar}}
 \newcommand{\HvbCat}{\overline{\mathcal{V}\mathrm{ect}}}
@@ -300,24 +302,36 @@ linktoc=all
   \endgroup
 }
 
+\makeatletter
+\newcommand*{\addFileDependency}[1]{% argument=file name and extension
+  \typeout{(#1)}
+  \@addtofilelist{#1}
+  \IfFileExists{#1}{}{\typeout{No file #1.}}
+}
+\makeatother
+
+
+
+
+
 \externaldocument[Introduction-]{Introduction}
 %One variable complex analysis
 %Several variables complex analysis
-\externaldocument[Topology-]{Topology-Bornology}
-\externaldocument[Banach-]{Banach-Rings}
-\externaldocument[Commutative-]{Commutative-Algebra}
-\externaldocument[Local-]{Local-Algebras}
-\externaldocument[Complex-]{Complex-Analytic-Spaces}
+\externaldocument[Topology-]{Topology-Bornology}[Topology-Bornology.pdf]
+\externaldocument[Banach-]{Banach-Rings}[Banach-Rings.pdf]
+\externaldocument[Commutative-]{Commutative-Algebra}[Commutative-Algebra.pdf]
+\externaldocument[Local-]{Local-Algebras}[Local-Algebras.pdf]
+\externaldocument[Complex-]{Complex-Analytic-Spaces}[Complex-Analytic-Spaces.pdf]
 %Properties of space
-\externaldocument[Morphisms-]{Morphisms}
+\externaldocument[Morphisms-]{Morphisms}[Morphisms.pdf]
 %Differential calculus
 %GAGA
 %Hilbert scheme complex analytic version
 
 %Complex differential geometry
 
-\externaldocument[Affinoid-]{Affinoid-Algebras}
-\externaldocument[Berkovich-]{Berkovich-Analytic-Spaces}
+\externaldocument[Affinoid-]{Affinoid-Algebras}[Affinoid-Algebras.pdf]
+\externaldocument[Berkovich-]{Berkovich-Analytic-Spaces}[Berkovich-Analytic-Spaces.pdf]
 
 
 \bibliography{Ymir}

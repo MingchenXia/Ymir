@@ -1,10 +1,5 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {english}{}
-\defcounter {refsection}{0}\relax 
+\babel@toc {english}{}\relax 
 \contentsline {section}{\tocsection {}{1}{Introduction}}{4}{section.0.1}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{2}{Affinoid spaces}}{4}{section.0.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{3}{Berkovich analytic spaces}}{4}{section.0.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{5}{chapter*.1}%
+\contentsline {section}{\tocsection {}{3}{Berkovich analytic spaces}}{6}{section.0.3}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{9}{chapter*.1}%
