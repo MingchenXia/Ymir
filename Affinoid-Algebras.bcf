@@ -2344,16 +2344,20 @@
     <bcf:datasource type="file" datatype="bibtex">Ymir.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Berk93</bcf:citekey>
+    <bcf:citekey order="1">BGR</bcf:citekey>
     <bcf:citekey order="2">Berk12</bcf:citekey>
-    <bcf:citekey order="3">Berk93</bcf:citekey>
-    <bcf:citekey order="4">Berk93</bcf:citekey>
-    <bcf:citekey order="5">stacks-project</bcf:citekey>
+    <bcf:citekey order="3">stacks-project</bcf:citekey>
+    <bcf:citekey order="4">stacks-project</bcf:citekey>
+    <bcf:citekey order="5">Tem04</bcf:citekey>
     <bcf:citekey order="6">stacks-project</bcf:citekey>
-    <bcf:citekey order="7">stacks-project</bcf:citekey>
-    <bcf:citekey order="8">Berk93</bcf:citekey>
-    <bcf:citekey order="9">Berk12</bcf:citekey>
+    <bcf:citekey order="7">Berk12</bcf:citekey>
+    <bcf:citekey order="8">stacks-project</bcf:citekey>
+    <bcf:citekey order="9">stacks-project</bcf:citekey>
     <bcf:citekey order="10">stacks-project</bcf:citekey>
+    <bcf:citekey order="11">BGR</bcf:citekey>
+    <bcf:citekey order="12">Berk12</bcf:citekey>
+    <bcf:citekey order="13">stacks-project</bcf:citekey>
+    <bcf:citekey order="14">Tem04</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

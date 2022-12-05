@@ -72,10 +72,10 @@ We remind the readers that a compact space is Hausdorff by our convention.
     (2) $\implies$ (1): Given $x\in X$, take $V_1,\ldots,V_n$ as in (2). We may assume that $x\in V_1,\ldots,V_m$ and $x\not\in V_{m+1},\ldots,V_n$ for some $1\leq m\leq n$. Then $V_1\cup\cdots\cup V_m$ is a neighbourhood of $x$ in $X$: if $U$ is an open neighbourhood of $x$ in $X$ contained in $V_1\cup \cdots\cup V_n$, then $U\setminus (V_{m+1}\cup\cdots \cup V_n)$ is an open neighbourhood of $x$ in $X$ contained in $V_1\cup\cdots\cup V_m$.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{lma-netproperty1}
     Let $X$ be a topological space and $\tau$ be a net on $X$ consisting of compact sets. Then
     \begin{enumerate}
-        \item for any pair $U,V\in \tau$, the intersection $U\cap V$ is lcoally closed in $U$ and in $V$;
+        \item for any pair $U,V\in \tau$, the intersection $U\cap V$ is locally closed in $U$ and in $V$;
         \item If $n\in \mathbb{Z}_{>0}$, $V,V_1,\ldots,V_n\in \tau$ are such that 
             \[
                 V\subseteq V_1\cup \cdots\cup V_n,

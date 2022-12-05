@@ -1228,7 +1228,7 @@ This is \cite[Lemma~3.2]{Tem04}. I do not understand Temkin's argument. The foll
 
 For any ring $A$, $\AlgCat_A^f$ denotes the category of finitely generated $A$-algebras.
 
-\begin{proposition}
+\begin{proposition}\label{prop-Banachalgebrafiniteforget}
     Let $A$ be a $k$-affinoid algebra. Then the forgetful functor $\BanAlgCat_A^f\rightarrow \AlgCat_A^f$ is an equivalence of categories.
 \end{proposition}
 Recall that $\BanAlgCat_A^f$ is defined in \cref{Banach-def-finiteBanachalgebra} in the chapter Banach Rings.
@@ -1849,6 +1849,32 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     Let $A$ be a $k_H$-affinoid algebra. A morphism $\varphi:\Sp B\rightarrow \Sp A$ in $k_H\text{-}\AffCat$ is a \emph{closed immersion} if the corresponding morphism $A\rightarrow B$ in $k_H\text{-}\AffAlgCat$ is an admissible epimorphism.
 \end{definition}
 
+\begin{example}\label{ex-diagonalclosedimm}
+    Let $A$ be a $k_H$-affinoid algbera. Consider the diagonal morphism $\Delta:\Sp A\rightarrow  \Sp A \times \Sp A$, defined by the codiagonal $A\hat{\otimes}_k A\rightarrow A$. We claim that $\Delta$ is a closed immersion.
+
+    We first observe that we have a factorization
+    \[
+        A\otimes_k A\rightarrow A\hat{\otimes}_k  A\rightarrow A
+    \]
+    of the usual codiagonal, but $A\otimes_k A\rightarrow A$ is clearly surjective. Hence, so is $A\hat{\otimes}_k  A\rightarrow A$.
+
+    In order to see that the codiagonal is admissible, we first observe that it is bounded by definition. Take a $k$-free polyray $r$ with at least one component, then by \cref{prop-Krfaithflat}, we may reduce to the case where $k$ is non-trivially valued. Then it suffices to apply the open mapping theorem \cref{Banach-thm-openmapping} in the chapter Banach Rings.
+\end{example}
+
+\begin{proposition}\label{prop-closedimmbasechange}
+    Let $A,C$ be a $k_H$-affinoid algebra. Let $\Sp B\rightarrow \Sp A$ be a closed immersion. Consider the Cartesian diagram:
+    \[
+        \begin{tikzcd}
+            \Sp B\hat{\otimes}_A C \arrow[r] \arrow[d] \arrow[rd, "\square", phantom] & \Sp B \arrow[d] \\
+            \Sp C \arrow[r]                                                           & \Sp A          
+        \end{tikzcd}  
+    \]
+    Then $\Sp B\hat{\otimes}_A C\rightarrow \Sp C$ is also a closed immersion.
+\end{proposition}
+\begin{proof}
+    This follows from the right-exactness of completed tensor products.
+\end{proof}
+
 
 \begin{definition}
     Let $\varphi:\Sp B\rightarrow \Sp A$ be a morphism in $k_H\text{-}\AffCat$. We call $\varphi$ a \emph{$k_H$-Runge immersion} if there is a factorization in $k_H\text{-}\AffCat$ of $\varphi$:
@@ -2252,10 +2278,33 @@ It follows that $a_i=0=b_i$ for $i>0$ and $a_i=b_i$. So we find that the second 
         \end{tikzcd}.
     \]
     \fi
-
 \end{proof}
 
+\begin{corollary}\label{cor-intersecaffdomain}
+    Let $A$ be a $k_H$-affinoid algbera and $\Sp B$, $\Sp C$ be $k_H$-affinoid domains in $\Sp A$. Then $\Sp B\cap \Sp C$ is a $k_H$-affinoid domain represented by the natural morphism $A\rightarrow B\hat{\otimes}_A C$.
+\end{corollary}
+\begin{proof}
+    This is an immediate consequence of \cref{cor-fiberproductaffdomain}.
+\end{proof}
 
+\begin{corollary}\label{cor-spcatclosedimm}
+    Let $A$ be a $k_H$-affinoid algbera and $\Sp B$, $\Sp C$ be $k_H$-affinoid domains in $\Sp A$. Then the natural morphism
+    \[
+        \Sp B\cap \Sp C\rightarrow \Sp B\times \Sp C  
+    \]
+    is a closed immersion.
+\end{corollary}
+\begin{proof}
+    By \cref{cor-intersecaffdomain}, we need to show that the natural map
+    \[
+        B\hat{\otimes}_k C\rightarrow   B\hat{\otimes}_A C
+    \]
+    is an admissible epimorphism. From general abstract nonsense and \cref{prop-closedimmbasechange}, it suffices to show that the codiagonal 
+    \[
+        A\hat{\otimes}_k A\rightarrow A  
+    \]is 
+    an admissible epimorphism. This follows from \cref{ex-diagonalclosedimm}.
+\end{proof}
 
 \begin{corollary}\label{cor-affdomainquotient}
     Let $A$ be a $k_H$-affinoid algebra. Let $V,W$ be $k_H$-affinoid domains in $\Sp A$ represented by $A\rightarrow A_V$ and $A\rightarrow A_W$ respectively. Then $V\cap W$ is a $k_H$-affinoid domain represented by $A\rightarrow A_V\hat{\otimes}_A A_W$.
@@ -2342,6 +2391,36 @@ It follows that $a_i=0=b_i$ for $i>0$ and $a_i=b_i$. So we find that the second 
     \textbf{Step~2}. After the reduction in Step~1 and the successful defition of $\mathcal{O}_X$ in \cref{def-presheafOX}, the remaining of the argument is exactly the same as \cref{lma-tateacyc1}.
 \end{proof}
 
+\begin{corollary}\label{cor-coveringkhimplykh}
+    Let $A$ be a $k$-affinoid algebra and $\{\Sp B_i\}$ be a finite $k_H$-affinoid covering of $\Sp A$. Then $A$ is $k_H$-affinoid.
+\end{corollary}
+\begin{proof}
+    By \cref{thm-Tateacyc}, we have an admissible injective morphism
+    \[
+        A\rightarrow   \prod_{i\in I}B_i
+    \]
+    of Banach $k$-algebras. Then for any $a\in A$, 
+    \[
+        \rho_A(a)=\max_{i\in I}\rho_{B_i}(a).
+    \]
+    We conclude using \cref{thm-strictaffdfnequal}.
+\end{proof}
+
+\iffalse
+\begin{corollary}
+    Let $A,B$ be $k_H$-affinoid algebras and $\varphi:\Sp B\rightarrow \Sp A$ a morphism of $k_H$-affinoid spectra. Let $\{\Sp A_i\}_{i\in I}$ be a finite $k_H$-affinoid covering of $\Sp A$. Consider the Cartesian squares 
+    \[
+        \begin{tikzcd}
+            \Sp A_i\hat{\otimes}_A B \arrow[d] \arrow[r] \arrow[rd, "\square", phantom] & \Sp B \arrow[d, "\varphi"] \\
+            \Sp A_i \arrow[r]                                                           & \Sp A                     
+        \end{tikzcd}  
+    \]
+    for $i\in I$. Suppose that $\Sp A_i\hat{\otimes}_A B\rightarrow \Sp A_i$ is a closed immersion for each $i\in I$, then $\varphi$ is also a closed immersion.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{thm-Tateacyc}.
+\end{proof}
+\fi
 
 \section{Kiehl's theorem}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field.
@@ -2370,6 +2449,8 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field.
             \end{tikzcd}.  
         \]
 \end{enumerate}
+
+    If moreover each $M_i$ is an $A_i$-algebra for $i\in I$ and the maps $\alpha_{ij}$ are $B_{ij}$-algebra homomorphisms for $i,j\in I$, then we can endow $M$ with the structure of an $A$-algebra and $\beta_i$ is a $B_i$-algebra homomorphism for $i\in I$. 
 \end{thm}
 \begin{proof}
     By the same reduction as in our proof of \cref{lma-tateacyc1}, it suffices to handle the case where $\mathcal{U}$ is a Laurent covering generated by a single element:
@@ -2493,6 +2574,8 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field.
         M_2/\mathfrak{m}M_2\rightarrow M_{12}/\mathfrak{m}M_{12}.  
     \]
     In particular, we find that $\ker \iota=M_1/\mathfrak{m}M_1$. This proves our assertion.
+
+    Finally, the last assertion is clear as $M$ is constructed as an equalizer.
 \end{proof}
 
 

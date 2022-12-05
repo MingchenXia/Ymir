@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.9)  5 DEC 2022 13:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.9)  5 DEC 2022 13:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/xiam/Documents/Ymir/Berkovich-Analytic-Spaces.tex
-(/Users/xiam/Documents/Ymir/Berkovich-Analytic-Spaces.tex
+**/Users/xiam/Documents/Ymir/Commutative-Algebra.tex
+(/Users/xiam/Documents/Ymir/Commutative-Algebra.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (./preamble.tex (/usr/local/texlive/2022/texmf-dist/tex/latex/amscls/amsbook.cls
 Document Class: amsbook 2020/05/29 v2.20.6
@@ -942,15 +942,9 @@ LABELS NOT IMPORTED.
 (Banach-Rings.tex)
 (Banach-Rings.aux)
 No file Banach-Rings.aux.
-
-Package xr Warning: 
-No file Commutative-Algebra.aux
-LABELS NOT IMPORTED.
- on input line 325.
-
+Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 325.
 (Commutative-Algebra.tex)
 (Commutative-Algebra.aux)
-No file Commutative-Algebra.aux.
 
 Package xr Warning: 
 No file Local-Algebras.aux
@@ -998,8 +992,8 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./Berkovich-Analytic-Spaces.aux)
-\openout1 = `Berkovich-Analytic-Spaces.aux'.
+) (./Commutative-Algebra.aux)
+\openout1 = `Commutative-Algebra.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
@@ -1084,11 +1078,11 @@ File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `Berkovich-Analytic-Spaces.bcf'.
+\openout4 = `Commutative-Algebra.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Berkovich-Analytic-Spaces.bbl' found.
- (./Berkovich-Analytic-Spaces.bbl)
+Package biblatex Info: ... file 'Commutative-Algebra.bbl' found.
+ (./Commutative-Algebra.bbl)
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 LaTeX Info: Redefining \microtypecontext on input line 3.
@@ -1118,112 +1112,34 @@ Package caption Info: End \AtBeginDocument code.
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 Contents
-(./Berkovich-Analytic-Spaces.toc)
+(./Commutative-Algebra.toc)
 \tf@toc=\write5
-\openout5 = `Berkovich-Analytic-Spaces.toc'.
+\openout5 = `Commutative-Algebra.toc'.
 
  [3
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 12.
+(Font)              <10> on input line 15.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 12.
+(Font)              <7> on input line 15.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
+) [4]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
-
-
-LaTeX Warning: Reference `Banach-lma-equalizerbanach' on page 1 undefined on input line 29.
-
-
-LaTeX Warning: Reference `Affinoid-thm-Tateacyc' on page 1 undefined on input line 38.
-
-
-Overfull \hbox (10.88754pt too wide) detected at line 46
-[]
- []
-
-[4]
-
-LaTeX Warning: Reference `Affinoid-thm-Tateacyc' on page 1 undefined on input line 73.
-
-
-LaTeX Warning: Reference `Affinoid-cor-fiberproductaffdomain' on page 1 undefined on input line 83.
-
-
-LaTeX Warning: Reference `Affinoid-thm-Tateacyc' on page 1 undefined on input line 83.
-
-[5] [6]
-
-LaTeX Warning: Reference `Affinoid-cor-fiberproductaffdomain' on page 1 undefined on input line 155.
-
-
-LaTeX Warning: Reference `Affinoid-cor-affinoiddomaintransi' on page 1 undefined on input line 155.
-
-
-LaTeX Warning: Reference `Affinoid-cor-fiberproductaffdomain' on page 1 undefined on input line 155.
-
-
-LaTeX Warning: Reference `Affinoid-prop-affdomainhoemo' on page 1 undefined on input line 161.
-
-
-LaTeX Warning: Reference `Affinoid-cor-fiberproductaffdomain' on page 1 undefined on input line 182.
-
-
-LaTeX Warning: Reference `Affinoid-cor-fiberproductaffdomain' on page 1 undefined on input line 182.
-
-[7]
-
-LaTeX Warning: Reference `Affinoid-thm-Tateacyc' on page 1 undefined on input line 199.
-
-[8]
-
-LaTeX Warning: Reference `Affinoid-cor-fiberproductaffdomain' on page 1 undefined on input line 241.
-
-
-LaTeX Warning: Reference `Affinoid-thm-Tateacyc' on page 1 undefined on input line 245.
-
-
-LaTeX Warning: Reference `Affinoid-thm-Tateacyc' on page 1 undefined on input line 267.
-
-[9] [10]
-
-LaTeX Warning: Reference `Affinoid-cor-spcatclosedimm' on page 1 undefined on input line 351.
-
-
-LaTeX Warning: Reference `Affinoid-prop-closedimmbasechange' on page 1 undefined on input line 367.
-
-
-LaTeX Warning: Reference `Affinoid-thm-Kiehl' on page 1 undefined on input line 373.
-
-
-LaTeX Warning: Reference `Affinoid-prop-strictlykafffinite2' on page 1 undefined on input line 373.
-
-
-LaTeX Warning: Reference `Affinoid-cor-fiberproductaffdomain' on page 1 undefined on input line 375.
-
-[11]
-
-LaTeX Warning: Reference `Affinoid-prop-Banachalgebrafiniteforget' on page 1 undefined on input line 380.
-
-
-LaTeX Warning: Reference `Affinoid-prop-finitemodulemapadmi' on page 1 undefined on input line 380.
-
-
-LaTeX Warning: Reference `Affinoid-cor-coveringkhimplykh' on page 1 undefined on input line 408.
-
-
-LaTeX Warning: Reference `Topology-lma-netproperty1' on page 1 undefined on input line 422.
-
-[12] [13] [14]
+ [5] [6] [7] [8]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 306.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
+) [9] [10] [11] [12] [13] [14]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 522.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 559.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1233,27 +1149,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [15
 
-] (./Berkovich-Analytic-Spaces.aux)
-
-LaTeX Warning: There were undefined references.
-
-Package logreq Info: Writing requests to 'Berkovich-Analytic-Spaces.run.xml'.
-\openout1 = `Berkovich-Analytic-Spaces.run.xml'.
+] (./Commutative-Algebra.aux)
+Package logreq Info: Writing requests to 'Commutative-Algebra.run.xml'.
+\openout1 = `Commutative-Algebra.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39242 strings out of 478268
- 755235 string characters out of 5846348
- 1552404 words of memory out of 5000000
- 56438 multiletter control sequences out of 15000+600000
- 527543 words of font info for 163 fonts, out of 8000000 for 9000
+ 38737 strings out of 478268
+ 742656 string characters out of 5846348
+ 1546553 words of memory out of 5000000
+ 55905 multiletter control sequences out of 15000+600000
+ 537047 words of font info for 167 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 119i,17n,121p,1056b,1797s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Berkovich-Analytic-Spaces.pdf (15 pages, 310179 bytes).
+ 119i,9n,121p,1043b,1797s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Commutative-Algebra.pdf (15 pages, 324626 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 255 compressed objects within 3 object streams
- 75 named destinations out of 1000 (max. 500000)
- 23085 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 354 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 29245 words of extra memory for PDF output out of 29859 (max. 10000000)
 
