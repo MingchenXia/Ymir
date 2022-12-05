@@ -893,7 +893,7 @@ A $k$-affinoid algebra $A$ is Noetherian and all ideals of $A$ are closed.
         \|f^n\|\leq C\rho(f)^n.  
     \]
 \end{proposition}
-Recall that $\rho$ is the spectral radius map defined in \cref{Banach-def-spectralradius} in the chatper Banach Rings.
+Recall that $\rho$ is the spectral radius map defined in \cref{Banach-def-spectralradius} in the chapter Banach Rings.
 \begin{proof}
     By \cref{prop-Krfaithflat}, we may assume that $k$ is non-trivially valued and $k$ is non-trivially valued.
     
@@ -1759,7 +1759,7 @@ Recall that $A\{rf^{-1}\}$ is defined in \cref{ex-Laurentdomain}, by \cref{thm-s
 
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}\label{cor-baseextgradedextkr}
     Let $A$ be a $k_H$-affinoid algebra and $r\in \mathbb{R}^n_{>0}$, then there is a functorial isomorphism
     \[
         \tilde{A}^H\otimes_{\tilde{k}^H} \tilde{k_r}^H\cong \widetilde{A\hat{\otimes}_k k_r}^H
@@ -1839,8 +1839,63 @@ Recall that $A\{rf^{-1}\}$ is defined in \cref{ex-Laurentdomain}, by \cref{thm-s
     \[
         \tilde{\Sp A}^H:=\Spec^{\sqrt{|k^{\times}|\cdot H}}\tilde{A}^H.  
     \]
-    We have a natural map $\pi^H:\Sp A\rightarrow \tilde{\Sp A}^H$.
+    We have a natural map $\pi^H:\Sp A\rightarrow \tilde{\Sp A}^H$: given $x\in \Sp A$, it defines a character $\chi_x:A\rightarrow \mathscr{H}(x)$, which in turn induces $\widetilde{\chi_x}:\tilde{A}^H\rightarrow \widetilde{\mathscr{H}(x)}$. We define $\pi^H(x)=\ker \widetilde{\chi_x}$.
 \end{definition}
+\begin{proposition}
+    Let $A$ be a $k_H$-affinoid algebra, then $\pi^H:\Sp A\rightarrow \tilde{\Sp A}^H$ is anti-continuous.
+\end{proposition}
+\begin{proof}
+    Let $f\in A$ be an element with $\rho(f)>0$. We need to show that the inverse image of the Zariski closed subset of $\tilde{\Sp A}^H$ defined by $\tilde{f}=0$ is open. Now $x\in \pi^{H,-1}(V(\tilde{f}))$ if and only if $\widetilde{\chi_x}(\tilde{f})=0$. This happens if and only if $\rho(\chi_x(f))<\rho(f)$. Equivalently, the latter condition means $|f(x)|<\rho(f)$, which obviously defines an open subset of $\Sp A$.
+\end{proof}
+
+\begin{lemma}
+    Assume that $k$ is non-trivially valued and $A$ is a strictly $k$-affinoid algebra. Then the reduction map 
+    \[
+        \pi:\Sp A\rightarrow \Spec \tilde{A}  
+    \]
+    is surjective.
+\end{lemma}
+The reduction map is defined as follows: a point $x\in \Sp A$ defines a character $\chi_x:A\rightarrow \mathscr{H}(x)$. By reduction, we get $\tilde{\chi_x}:\tilde{A}\rightarrow \widetilde{\mathscr{H}(x)}$. The kernel is the image of $x$.
+\begin{proof}
+    \textbf{Step~1}. We assume that $A=k\{T_1,\ldots,T_n\}$ for some $n\in \mathbb{N}$. 
+
+    Let $y\in \Spec \tilde{A}$ corresponding to a prime ideal $\mathfrak{p}_y$ in $\tilde{A}$. In this case, $\tilde{A}=\tilde{k}[T_1,\ldots,T_n]$ by \cref{prop-reductionTn}. We can identify $y$ with the character
+    \[
+        \chi_y :\tilde{A}=\tilde{k}[T_1,\ldots,T_n]\rightarrow  \tilde{A}/\mathfrak{p}_y,
+    \]
+    
+    \textcolor{red}{To be finished!!!}
+\end{proof}
+
+\begin{thm}
+    Let $A$ be a $k_H$-affinoid algebra. Then the reduction $\pi^H:\Sp A\rightarrow \tilde{\Sp A}^H$ is surjective.
+\end{thm}
+\begin{proof}
+    \textbf{Step~1}. We reduce to the case where $\rho(A)=|k|$.
+
+    Take $n\in \mathbb{Z}_{>0}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ such that $\rho(A\hat{\otimes}_k k_r)=|k_r|$ such that $r_1$ is $k$-free. Let $B=A\hat{\otimes}_k k_r$. Then we have a commutative diagram
+    \[
+        \begin{tikzcd}
+            \Sp B \arrow[d, "\pi^H"] \arrow[r] & \Sp A \arrow[d, "\pi^H"] \\
+            \widetilde{\Sp B}^H \arrow[r]      & \widetilde{\Sp A}^H     
+        \end{tikzcd}.  
+    \]
+    It suffices to show that the left vertical map is surjective and the bottom map is surjective.
+
+    We begin with the bottom map.
+    By \cref{cor-baseextgradedextkr}, we can identify 
+    \[
+        \widetilde{\Sp B}^H \cn \widetilde{\Sp A}^H \otimes_{\tilde{k}^H}\tilde{k_r}^H.
+    \]
+    It suffices to show that 
+    \[
+        \widetilde{\Sp A}^H \otimes_{\tilde{k}^H}\tilde{k_r}^H\rightarrow  \widetilde{\Sp A}^H  
+    \]
+    is surjective, which is trivial.
+
+    \textbf{Step~2}. We may assume that $k$ is non-trivially valued,  $A$ is strictly $k$-affinoid and  $\rho(A)=|k|$.
+    By \cref{Commutative-lma-rhoAequalrhok} in the chapter Commutative Algebra, it suffices to show that the usual reduction $\pi:A\rightarrow \Spec \tilde{A}$ is surjective.
+\end{proof}
 
 \section{Gerritzen--Grauert theorem}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
