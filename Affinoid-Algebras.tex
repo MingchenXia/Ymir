@@ -1841,12 +1841,15 @@ Recall that $A\{rf^{-1}\}$ is defined in \cref{ex-Laurentdomain}, by \cref{thm-s
     \]
     We have a natural map $\pi^H:\Sp A\rightarrow \tilde{\Sp A}^H$: given $x\in \Sp A$, it defines a character $\chi_x:A\rightarrow \mathscr{H}(x)$, which in turn induces $\widetilde{\chi_x}:\tilde{A}^H\rightarrow \widetilde{\mathscr{H}(x)}$. We define $\pi^H(x)=\ker \widetilde{\chi_x}$.
 \end{definition}
+
+\iffalse
 \begin{proposition}
     Let $A$ be a $k_H$-affinoid algebra, then $\pi^H:\Sp A\rightarrow \tilde{\Sp A}^H$ is anti-continuous.
 \end{proposition}
 \begin{proof}
     Let $f\in A$ be an element with $\rho(f)>0$. We need to show that the inverse image of the Zariski closed subset of $\tilde{\Sp A}^H$ defined by $\tilde{f}=0$ is open. Now $x\in \pi^{H,-1}(V(\tilde{f}))$ if and only if $\widetilde{\chi_x}(\tilde{f})=0$. This happens if and only if $\rho(\chi_x(f))<\rho(f)$. Equivalently, the latter condition means $|f(x)|<\rho(f)$, which obviously defines an open subset of $\Sp A$.
 \end{proof}
+\fi
 
 \begin{lemma}
     Assume that $k$ is non-trivially valued and $A$ is a strictly $k$-affinoid algebra. Then the reduction map 
@@ -1861,11 +1864,17 @@ The reduction map is defined as follows: a point $x\in \Sp A$ defines a characte
 
     Let $y\in \Spec \tilde{A}$ corresponding to a prime ideal $\mathfrak{p}_y$ in $\tilde{A}$. In this case, $\tilde{A}=\tilde{k}[T_1,\ldots,T_n]$ by \cref{prop-reductionTn}. We can identify $y$ with the character
     \[
-        \chi_y :\tilde{A}=\tilde{k}[T_1,\ldots,T_n]\rightarrow  \tilde{A}/\mathfrak{p}_y,
+        \chi_y :\tilde{A}=\tilde{k}[T_1,\ldots,T_n]\rightarrow  \kappa(y).
     \]
+    .....
+
     
     \textcolor{red}{To be finished!!!}
 \end{proof}
+\begin{remark}
+    Berkovich \cite{Berk12} claimed that this follows from the proofs in \cite{BGR}. The author does not understand how this works. The current proof is due to Mattias Jonsson.
+\end{remark}
+
 
 \begin{thm}
     Let $A$ be a $k_H$-affinoid algebra. Then the reduction $\pi^H:\Sp A\rightarrow \tilde{\Sp A}^H$ is surjective.
