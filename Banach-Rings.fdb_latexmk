@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber Banach-Rings"] 1670342701 "Banach-Rings.bcf" "Banach-Rings.bbl" "Banach-Rings" 1670344170
-  "Banach-Rings.bcf" 1670344169 107371 678ffeb0a6070f6f84487b323689ab32 "pdflatex"
+["biber Banach-Rings"] 1670342701 "Banach-Rings.bcf" "Banach-Rings.bbl" "Banach-Rings" 1670344648
+  "Banach-Rings.bcf" 1670344648 107371 678ffeb0a6070f6f84487b323689ab32 "pdflatex"
   "Ymir.bib" 1670143082 15930 73be9134beab96ac9c71ad349cf6136f ""
   (generated)
   "Banach-Rings.bbl"
   "Banach-Rings.blg"
-["pdflatex"] 1670344166 "/Users/xiam/Documents/Ymir/Banach-Rings.tex" "Banach-Rings.pdf" "Banach-Rings" 1670344170
+["pdflatex"] 1670344641 "/Users/xiam/Documents/Ymir/Banach-Rings.tex" "Banach-Rings.pdf" "Banach-Rings" 1670344648
   "/Users/xiam/Documents/Ymir/Banach-Rings.tex" 1670344158 74530 eaf83d70f63675270a528a39409ec318 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -262,13 +262,13 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1654765380 2826424 a39ee3d385ff099fd742a49fa2ed0d14 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Affinoid-Algebras.aux" 1670342742 26827 2fdad4baf429a06e60296bbdf50531c8 ""
-  "Affinoid-Algebras.tex" 1670343963 183143 492aa5cefa2c34dd9befe41176d0f2d7 ""
-  "Banach-Rings.aux" 1670344169 15985 eea2359c95ea6dad7a8d07b6ad09933a "pdflatex"
+  "Affinoid-Algebras.aux" 1670344556 26979 25f7a60d4ce199599a33b1dceedced2f ""
+  "Affinoid-Algebras.tex" 1670344543 184111 b213849494d3e431523d359d4a54ba02 ""
+  "Banach-Rings.aux" 1670344648 15985 eea2359c95ea6dad7a8d07b6ad09933a "pdflatex"
   "Banach-Rings.bbl" 1670342705 4500 8edeba30914003c53739443daa802cfc "biber Banach-Rings"
-  "Banach-Rings.run.xml" 1670344169 2361 8519427074e3e41e5c97a1405f95b113 "pdflatex"
+  "Banach-Rings.run.xml" 1670344648 2361 8519427074e3e41e5c97a1405f95b113 "pdflatex"
   "Banach-Rings.tex" 1670344158 74530 eaf83d70f63675270a528a39409ec318 ""
-  "Banach-Rings.toc" 1670344169 1007 cfc6d7747db571197fb747c090d7a52c "pdflatex"
+  "Banach-Rings.toc" 1670344648 1007 cfc6d7747db571197fb747c090d7a52c "pdflatex"
   "Berkovich-Analytic-Spaces.aux" 0 -1 0 ""
   "Berkovich-Analytic-Spaces.tex" 1670337475 42232 d21c4cd351e5b3e8016880ac222d3cbe ""
   "Commutative-Algebra.aux" 1670343615 8788 86e663eb4e4cca61fccc34932fe7de68 ""
