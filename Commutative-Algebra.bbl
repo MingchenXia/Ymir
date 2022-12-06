@@ -19,32 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
-    \entry{Berk12}{book}{}
-      \name{author}{1}{}{%
-        {{hash=6b7ab4936ac6207b09a38d15d1c77169}{%
-           family={Berkovich},
-           familyi={B\bibinitperiod},
-           given={V.\bibnamedelimi G.},
-           giveni={V\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Mathematical Soc.}%
-      }
-      \strng{namehash}{6b7ab4936ac6207b09a38d15d1c77169}
-      \strng{fullhash}{6b7ab4936ac6207b09a38d15d1c77169}
-      \strng{bibnamehash}{6b7ab4936ac6207b09a38d15d1c77169}
-      \strng{authorbibnamehash}{6b7ab4936ac6207b09a38d15d1c77169}
-      \strng{authornamehash}{6b7ab4936ac6207b09a38d15d1c77169}
-      \strng{authorfullhash}{6b7ab4936ac6207b09a38d15d1c77169}
-      \field{labelalpha}{Ber12}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{number}{33}
-      \field{title}{Spectral theory and analytic geometry over non-Archimedean fields}
-      \field{year}{2012}
-    \endentry
     \entry{BGR}{book}{}
       \name{author}{3}{}{%
         {{hash=b217837a3e0bec340b58af96181a5671}{%
@@ -118,42 +92,6 @@
       \field{shorthand}{Stacks}
       \field{title}{Stacks Project}
       \field{year}{2020}
-    \endentry
-    \entry{Tem04}{article}{}
-      \name{author}{1}{}{%
-        {{hash=b1f4bc2058258fc036e2cd5ad43118b7}{%
-           family={Temkin},
-           familyi={T\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{b1f4bc2058258fc036e2cd5ad43118b7}
-      \strng{fullhash}{b1f4bc2058258fc036e2cd5ad43118b7}
-      \strng{bibnamehash}{b1f4bc2058258fc036e2cd5ad43118b7}
-      \strng{authorbibnamehash}{b1f4bc2058258fc036e2cd5ad43118b7}
-      \strng{authornamehash}{b1f4bc2058258fc036e2cd5ad43118b7}
-      \strng{authorfullhash}{b1f4bc2058258fc036e2cd5ad43118b7}
-      \field{labelalpha}{Tem04}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0021-2172}
-      \field{journaltitle}{Israel J. Math.}
-      \field{title}{On local properties of non-{A}rchimedean analytic spaces. {II}}
-      \field{volume}{140}
-      \field{year}{2004}
-      \field{pages}{1\bibrangedash 27}
-      \range{pages}{27}
-      \verb{doi}
-      \verb 10.1007/BF02786625
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1007/BF02786625
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1007/BF02786625
-      \endverb
     \endentry
   \enddatalist
 \endrefsection

@@ -1,11 +1,11 @@
 \input{preamble}
-\title{Affinoid algebras}
+\title{Ymir}
 \begin{document}
 \maketitle
 \tableofcontents
 
 
-
+\chapter*{Affinoid algebras}\label{chap-affinoid}
 
 \section{Introduction}\label{sec-introduction}
 Our references  for this chapter include \cite{BGR}, \cite{Berk12}.
@@ -28,14 +28,15 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued-field.
 
     We omit $r$ from the notation if $r=(1,\ldots,1)$.
 \end{definition}
-This is a special case of \cref{Banach-ex-strictconvseriesradius}  in the chapter Banach Rings.
+This is a special case of \cref{Banach-ex-strictconvseriesradius}  in \nameref{Banach-chap-Banach}.
 \begin{proposition}\label{prop-TateGaussvaluation}
     Let $n\in \mathbb{N}$ and $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$.  Then the Tate algebra $(k\{r^{-1}T\},\|\bullet\|_r)$ is a Banach $k$-algebra and $\|\bullet\|_r$ is a valuation.
 \end{proposition}
 
 \begin{proof}
-    This is a special case of \cref{Banach-prop-strictconvseriesradiusBanach} in the chapter Banach Rings.
+    This is a special case of \cref{Banach-prop-strictconvseriesradiusBanach} in \nameref{Banach-chap-Banach}.
 \end{proof}
+
 
 \begin{remark}
 One should think of $k\{r^{-1}T\}$ as analogues of $\mathbb{C}\langle r^{-1}T\rangle$ in the theory of complex analytic spaces.  We could have studied complex analytic spaces directly from the Banach rings $\mathbb{C}\langle r^{-1}T\rangle$, as we will do in the rigid world. But in the complex world, the miracle is that we have \emph{a priori} a good theory of functions on all open subsets of the unit polydisk, so things are greatly simplified. The unit polydisk is a ringed space for free.
@@ -54,7 +55,7 @@ As we will see, constructing a good function theory, or more precisely, enhancin
     Let $A$ be a Banach $k$-algebra. For each $n\in \mathbb{N}$ and $a_1,\ldots,a_n\in \mathring{A}$, there is a unique continuous homomorphism $k\{T_1,\ldots,T_n\}\rightarrow A$ sending $T_i$ to $a_i$.
 \end{lemma}
 \begin{proof}
-    This is a special case of \cref{Banach-prop-Tateunivprop} in the chapter Banach Rings.
+    This is a special case of \cref{Banach-prop-Tateunivprop} in \nameref{Banach-chap-Banach}.
 \end{proof}
 
 
@@ -75,11 +76,11 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     The category of $k$-affinoid (resp. strictly $k$-affinoid, resp. $k_H$-affinoid) algebras is denoted by $k\text{-}\AffAlgCat$ (resp. $\text{st-}k\text{-}\AffAlgCat$, resp. $k_H\text{-}\AffAlgCat$). 
     
     
-    %The opposite categories of these categories are denoted by $k\text{-}\AffCat$, $\text{st-}k\text{-}\AffCat$ and $k_H\text{-}\AffCat$. For any $A$ in $k\text{-}\AffAlgCat$ (resp. $\text{st-}k\text{-}\AffAlgCat$, resp. $k_H\text{-}\AffAlgCat$), the corresponding image in the opposite category is denoted by $\Sp A$. We can also identify $\Sp A$ with the topological space defined in \cref{Banach-def-Berkspectrum} in the chapter Banach Rings.
+    %The opposite categories of these categories are denoted by $k\text{-}\AffCat$, $\text{st-}k\text{-}\AffCat$ and $k_H\text{-}\AffCat$. For any $A$ in $k\text{-}\AffAlgCat$ (resp. $\text{st-}k\text{-}\AffAlgCat$, resp. $k_H\text{-}\AffAlgCat$), the corresponding image in the opposite category is denoted by $\Sp A$. We can also identify $\Sp A$ with the topological space defined in \cref{Banach-def-Berkspectrum} in \nameref{Banach-chap-Banach}.
 
     %An affinoid $k$-algebra is a $K$-affinoid algebra for some complete non-Archimedean field extension $K/k$.
 \end{definition}
-For the notion of admissible morphisms, we refer to \cref{Banach-def-admissiblemorphism} in the chapter Banach rings.
+For the notion of admissible morphisms, we refer to \cref{Banach-def-admissiblemorphism} in \nameref{Banach-chap-Banach}.
 
 Although we have defined strictly $k$-affinoid algebra when $k$ is trivially valued, we will deliberately avoid talking about it in order to avoid pathologies.
 \begin{remark}
@@ -92,7 +93,7 @@ Although we have defined strictly $k$-affinoid algebra when $k$ is trivially val
 
     Given an object $A$ of $k\text{-}\AffAlgCat$ (resp. $\text{st-}k\text{-}\AffAlgCat$, resp. $k_H\text{-}\AffAlgCat$), we denote the corresponding object in $k\text{-}\AffCat$ (resp. $\text{st-}k\text{-}\AffCat$, resp. $k_H\text{-}\AffCat$) by $\Sp A$. We call $\Sp A$ the \emph{affinoid spectrum} of $A$.
 \end{definition}
-In \cref{Banach-def-Berkspectrum} in the chapter Banach Rings, we defined functors $\Sp:k\text{-}\AffCat\rightarrow \TopCat$, $\Sp:\text{st-}k\text{-}\AffCat\rightarrow \TopCat$ and $\Sp:k_H\text{-}\AffCat\rightarrow \TopCat$. This motivates our notation. We will freely view $\Sp A$ as an object in these categories or as a topological space.
+In \cref{Banach-def-Berkspectrum} in \nameref{Banach-chap-Banach}., we defined functors $\Sp:k\text{-}\AffCat\rightarrow \TopCat$, $\Sp:\text{st-}k\text{-}\AffCat\rightarrow \TopCat$ and $\Sp:k_H\text{-}\AffCat\rightarrow \TopCat$. This motivates our notation. We will freely view $\Sp A$ as an object in these categories or as a topological space.
 
 \begin{proposition}\label{prop-existfiberprod}
     Finite limits exist in $k_H\text{-}\AffCat$. Moreover, fiber products in $k_H\text{-}\AffCat$ corresponds to completed tensor product in $k_H\text{-}\AffAlgCat$.
@@ -242,7 +243,7 @@ In \cref{Banach-def-Berkspectrum} in the chapter Banach Rings, we defined functo
     For $u,v\in \mathbb{Z}$, $u+v=i+j$ while $(u,v)\neq (i,j)$, we may assume that $u\neq i$. Then $|a_u|r^u < |a_i|r^i$ and $|b_v|r^v\leq |b_j|r^j$. So $|a_ub_v|< |a_ib_j|$ and we conclude \eqref{eq-ckrkequalfrgr}.
 \end{proof}
 \begin{remark}
-    The argument of \cref{Banach-prop-strictconvseriesradiusBanach} in the chapter Banch Rings does not work here if $r\in \sqrt{|k^{\times}|}$, as in general one can not take minimal $i,j$ so that \eqref{eq-aibjnorm} is satisfied.
+    The argument of \cref{Banach-prop-strictconvseriesradiusBanach} in \nameref{Banach-chap-Banach} does not work here if $r\in \sqrt{|k^{\times}|}$, as in general one can not take minimal $i,j$ so that \eqref{eq-aibjnorm} is satisfied.
 \end{remark}
 
 
@@ -257,9 +258,9 @@ In \cref{Banach-def-Berkspectrum} in the chapter Banach Rings, we defined functo
     \end{equation}
     In particular, $|\bullet|$ restricted to $k$ is the given valuation on $k$. It suffices to show that $|T|=r$. This follows from \eqref{eq-compseminormnormr} applied to $T$ and $T^{-1}$.
 
-    It follows that $k_r$ does not have any non-zero proper closed ideals: if $I$ is such an ideal, $k_r/I$ is a Banach $k$-algebra. By \cref{Banach-prop-Berkospecnonempty} in the chapter Banach rings, $\Sp k_r$ is non-empty. So $k_r$ has to admit bounded semi-valuation with non-trivial kernel.
+    It follows that $k_r$ does not have any non-zero proper closed ideals: if $I$ is such an ideal, $k_r/I$ is a Banach $k$-algebra. By \cref{Banach-prop-Berkospecnonempty} in \nameref{Banach-chap-Banach}., $\Sp k_r$ is non-empty. So $k_r$ has to admit bounded semi-valuation with non-trivial kernel.
 
-    In particular, by \cref{Banach-cor:maximalidealclosedinBanachring} in the chapter Banach rings, the only maximal ideal of $k_r$ is $0$. It follows that $k_r$ is a field.
+    In particular, by \cref{Banach-cor:maximalidealclosedinBanachring} in \nameref{Banach-chap-Banach}., the only maximal ideal of $k_r$ is $0$. It follows that $k_r$ is a field.
 
     The valuation $\|\bullet\|_r$ is non-trivial as $\|T\|_r=r$.
 \end{proof}
@@ -315,11 +316,11 @@ When $X$ is a Banach $k$-algebra,  $X\hat{\otimes}_k k_r$ is a Banach $k_r$-alge
 \begin{proof}
     We may assume that $B=k\{T_1,\ldots,T_n\}$ for some $n\in \mathbb{N}$. By assumption, we can find finitely many $a_1,\ldots,a_m\in A$ such that $A=\sum_{i=1}^m \varphi(B)a_i$.
 
-    We may assume that $a_i\in \mathring{A}$ as $k$ is non-trivially valued. By \cref{Banach-prop-Tateunivprop} in the chapter Banach Rings, $\varphi$ admits a unique extension to a bounded $k$-algebra epimorphism 
+    We may assume that $a_i\in \mathring{A}$ as $k$ is non-trivially valued. By \cref{Banach-prop-Tateunivprop} in \nameref{Banach-chap-Banach}., $\varphi$ admits a unique extension to a bounded $k$-algebra epimorphism 
     \[
         \Phi:  k\{T_1,\ldots,T_n,S_1,\ldots,S_m\}\rightarrow A
     \]
-    sending $S_i$ to $a_i$. By \cref{Banach-cor-bddisadmi} in the chapter Banach Rings, $\Phi$ is admissible. Moreover, the homomorphism $\Phi$ is surjective by our assumption. It follows that $A$ is strictly $k$-affinoid.
+    sending $S_i$ to $a_i$. By \cref{Banach-cor-bddisadmi} in \nameref{Banach-chap-Banach}., $\Phi$ is admissible. Moreover, the homomorphism $\Phi$ is surjective by our assumption. It follows that $A$ is strictly $k$-affinoid.
 \end{proof}
 
 \begin{proposition}\label{prop-finiteinduceaffnorm}
@@ -327,7 +328,7 @@ When $X$ is a Banach $k$-algebra,  $X\hat{\otimes}_k k_r$ is a Banach $k_r$-alge
     Let $B$ be a strict $k$-affinoid algebra and $\varphi:B\rightarrow A$ be a finite $k$-algebra homomorphism into a $k$-algebra $A$. Then there is a norm on $A$ such that the morphism is bounded and $A$ is strictly $k$-affinoid.
 \end{proposition}
 \begin{proof}
-    By \cref{Banach-prop-algebrafinitenormadmi} in the chapter Banach Rings, we can endow $A$ with a Banach norm such that $\varphi$ is admissible. Then we can apply \cref{prop-strictlykafffinite}.
+    By \cref{Banach-prop-algebrafinitenormadmi} in \nameref{Banach-chap-Banach}., we can endow $A$ with a Banach norm such that $\varphi$ is admissible. Then we can apply \cref{prop-strictlykafffinite}.
 \end{proof}
 
 \begin{lemma}\label{lma-tatestrictaff}
@@ -343,7 +344,7 @@ When $X$ is a Banach $k$-algebra,  $X\hat{\otimes}_k k_r$ is a Banach $k_r$-alge
     \[
         r_i^{s_i}=|c_i^{-1}|  
     \]
-    for $i=1,\ldots,n$. We deifne a bounded $k$-algebra homomorphism $\varphi:k\{T_1,\ldots,T_n\}\rightarrow k\{r_1^{-1}T_1,\ldots,r_n^{-1}T_n\}$ by sending $T_i$ to $c_iT_i^{s_i}$. This is possible by \cref{Banach-prop-Tateunivprop} in the chapter Banach Rings.
+    for $i=1,\ldots,n$. We deifne a bounded $k$-algebra homomorphism $\varphi:k\{T_1,\ldots,T_n\}\rightarrow k\{r_1^{-1}T_1,\ldots,r_n^{-1}T_n\}$ by sending $T_i$ to $c_iT_i^{s_i}$. This is possible by \cref{Banach-prop-Tateunivprop} in \nameref{Banach-chap-Banach}.
 
     We claim that $\varphi$ is finite. To see this, it suffices to observe that if we expand $f\in k\{r_1^{-1}T_1,\ldots,r_n^{-1}T_n\}$ as
     \[
@@ -413,7 +414,7 @@ The map $k\{T_1,\ldots,T_n\}\rightarrow k\{T_1,\ldots,T_n\}$ is well-defined by 
     \end{enumerate}
 \end{lemma}
 \begin{proof}
-    As $\|\bullet\|_1$ is a valuation by \cref{prop-Krisaffinoid}, $f$ is a unit in $k\{T_1,\ldots,T_n\}$ if and only if it is a unit in $(k\{T_1,\ldots,T_n\} )^{\circ}$, which is identified with $\mathring{k}\{T_1,\ldots,T_n\}$ by \cref{prop-reductionTn}. This result then follows from \cref{Banach-cor-unitsstrictlyconv} in the chapter Banach Rings.
+    As $\|\bullet\|_1$ is a valuation by \cref{prop-Krisaffinoid}, $f$ is a unit in $k\{T_1,\ldots,T_n\}$ if and only if it is a unit in $(k\{T_1,\ldots,T_n\} )^{\circ}$, which is identified with $\mathring{k}\{T_1,\ldots,T_n\}$ by \cref{prop-reductionTn}. This result then follows from \cref{Banach-cor-unitsstrictlyconv} in \nameref{Banach-chap-Banach}.
 \end{proof}
 
 \begin{definition}
@@ -475,7 +476,7 @@ The map $k\{T_1,\ldots,T_n\}\rightarrow k\{T_1,\ldots,T_n\}$ is well-defined by 
     \[
         \|f-qg-r\|_1\leq \epsilon.  
     \]
-    This proves that $B$ is dense in $k\{T_1,\ldots,T_{n}\}$ by \cref{Banach-prop-epsilondenseimpliesdense} in the chapter Banach rings.
+    This proves that $B$ is dense in $k\{T_1,\ldots,T_{n}\}$ by \cref{Banach-prop-epsilondenseimpliesdense} in \nameref{Banach-chap-Banach}.
 
     \textbf{Step~4}. It remains to prove the last assertion. But this is a consequence of the usual Euclidean division theorem for the ring $k\{T_1,\ldots,T_{n-1}\}[T_n]$ and the uniqueness proved in Step~2.
 \end{proof}
@@ -631,7 +632,7 @@ In the complex setting, we can perturb a convergent power series so that it has 
     \]
 \end{corollary}
 \begin{proof}
-    This follows from \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings and \cref{prop-Tatealgufd}.
+    This follows from \cref{Banach-prop-fsupspecexp} in \nameref{Banach-chap-Banach}. and \cref{prop-Tatealgufd}.
 \end{proof}
 
 
@@ -669,7 +670,7 @@ Let $(k,|\bullet|)$ be a complete non-trivially valued non-Archimedean valued-fi
     Let $B$ be a strictly $k$-affinoid algebra and $A$ be a Noetherian Banach $k$-algebra. Let $f:A\rightarrow B$ a $k$-algebra homomorphism. Then $f$ is bounded.
 \end{corollary}
 \begin{proof}
-    This follows from \cref{Banach-prop-morphismBanachcont} in the chapter Banach Rings and \cref{prop-strictnoetherian}.
+    This follows from \cref{Banach-prop-morphismBanachcont} in \nameref{Banach-chap-Banach}. and \cref{prop-strictnoetherian}.
 \end{proof}
 In particular, we see that the topology of a $k$-affinoid algebra is uniquely determined by the algebraic structure.
 
@@ -717,7 +718,7 @@ In particular, we see that the topology of a $k$-affinoid algebra is uniquely de
     Let $n\in \mathbb{N}$, then the maximal modulus principle holds for $k\{T_1,\ldots,T_n\}$. Moreover, for any $f\in k\{T_1,\ldots,T_n\}$, $\|f\|_1=|f|_{\sup}$.
 \end{proposition}
 \begin{proof}
-    By \cref{Banach-lma-supnormbddbyrho} in the chapter Banach Rings, we have
+    By \cref{Banach-lma-supnormbddbyrho} in \nameref{Banach-chap-Banach}., we have
     \[
         \|f\|_1\geq |f|_{\sup}
     \]
@@ -742,7 +743,7 @@ In particular, we see that the topology of a $k$-affinoid algebra is uniquely de
 \end{corollary}
 \begin{proof}
     We may assume that $A\neq 0$.
-    By \cref{cor-noenormalization} and \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings, we may assume that $A=k\{T_1,\ldots,T_n\}$ for some $n\in \mathbb{N}$. The result then follows from \cref{prop-maxmod}.
+    By \cref{cor-noenormalization} and \cref{Banach-prop-fsupspecexp} in \nameref{Banach-chap-Banach}., we may assume that $A=k\{T_1,\ldots,T_n\}$ for some $n\in \mathbb{N}$. The result then follows from \cref{prop-maxmod}.
 \end{proof}
 
 
@@ -750,7 +751,7 @@ In particular, we see that the topology of a $k$-affinoid algebra is uniquely de
     Maximal modulus principle holds for any strictly $k$-affinoid algebras.
 \end{corollary}
 \begin{proof}
-    This follows from \cref{cor-noenormalization}, \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings and \cref{prop-maxmod}.
+    This follows from \cref{cor-noenormalization}, \cref{Banach-prop-fsupspecexp} in \nameref{Banach-chap-Banach}. and \cref{prop-maxmod}.
 \end{proof}
 
 \begin{proposition}\label{prop-integralstrictafffsup}
@@ -779,11 +780,11 @@ In particular, we see that the topology of a $k$-affinoid algebra is uniquely de
     \[
         q'(f)\in \bigcap_{i=1}^r\mathfrak{p}_i.
     \]
-    So there is $e\in \mathbb{Z}_{>0}$ such that $q'(f)^e=0$. Let $q=q'^e$. By \cref{Banach-prop-sigmaproduct} in the chapter Banach Rings,
+    So there is $e\in \mathbb{Z}_{>0}$ such that $q'(f)^e=0$. Let $q=q'^e$. By \cref{Banach-prop-sigmaproduct} in \nameref{Banach-chap-Banach}.,
     \[
         \sigma(q)\leq  \max_{i=1,\ldots,r}\sigma(q_i) =\max_{i=1,\ldots,r} |\pi_i(f)|_{\sup}=|f|_{\sup}.
     \]
-    The last equality follows from \cref{Banach-prop-supeqsp} in the chapter Banach Rings.
+    The last equality follows from \cref{Banach-prop-supeqsp} in \nameref{Banach-chap-Banach}.
 \end{proof}
 
 \begin{lemma}\label{lma-tauinvkertildevarphi}
@@ -844,7 +845,7 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     \[
         \varphi:k\{T_1,\ldots,T_d\}\rightarrow A.  
     \]
-    Let $f^n+t_1f^{n-1}+\cdots+t_n=0$ be the minimal equation of $f$ over $k\{T_1,\ldots,T_d\}$. Then $t_i\in (k\{T_1,\ldots,T_d\})^{\circ}$ by \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings. An induction on $i\geq 0$ shows that
+    Let $f^n+t_1f^{n-1}+\cdots+t_n=0$ be the minimal equation of $f$ over $k\{T_1,\ldots,T_d\}$. Then $t_i\in (k\{T_1,\ldots,T_d\})^{\circ}$ by \cref{Banach-prop-fsupspecexp} in \nameref{Banach-chap-Banach}. An induction on $i\geq 0$ shows that
     \[
         f^{n+i}\in \sum_{j=0}^{n-1}\varphi\left((k\{T_1,\ldots,T_d\})^{\circ} \right)f^j.
     \]
@@ -884,7 +885,7 @@ A $k$-affinoid algebra $A$ is Noetherian and all ideals of $A$ are closed.
     \]
     So $I$ is finitely generated.
 
-    As $I=A\cap (I (A\hat{\otimes} k_r))$, by \cref{Banach-cor-idealclosed} in the chapter Banach Rings, we see that $I$ is closed in $A\hat{\otimes} k_r$ and hence closed in $A$.
+    As $I=A\cap (I (A\hat{\otimes} k_r))$, by \cref{Banach-cor-idealclosed} in \nameref{Banach-chap-Banach}., we see that $I$ is closed in $A\hat{\otimes} k_r$ and hence closed in $A$.
 \end{proof}
 
 \begin{proposition}\label{prop-fnnormbyrho}
@@ -893,15 +894,15 @@ A $k$-affinoid algebra $A$ is Noetherian and all ideals of $A$ are closed.
         \|f^n\|\leq C\rho(f)^n.  
     \]
 \end{proposition}
-Recall that $\rho$ is the spectral radius map defined in \cref{Banach-def-spectralradius} in the chapter Banach Rings.
+Recall that $\rho$ is the spectral radius map defined in \cref{Banach-def-spectralradius} in \nameref{Banach-chap-Banach}.
 \begin{proof}
     By \cref{prop-Krfaithflat}, we may assume that $k$ is non-trivially valued and $k$ is non-trivially valued.
     
-    If $\rho(f)=0$, then $f$ lies in each maximal ideal of $A$. To see this, we may assume that $A$ is a field, then by \cref{Banach-prop-Berkospecnonempty} in the chapter Banach Rings, there is a bounded valuation $\|\bullet\|'$ on $A$. But then $\rho(f)=0$ implies that $\|f\|'=0$ and hence $f=0$.
+    If $\rho(f)=0$, then $f$ lies in each maximal ideal of $A$. To see this, we may assume that $A$ is a field, then by \cref{Banach-prop-Berkospecnonempty} in \nameref{Banach-chap-Banach}., there is a bounded valuation $\|\bullet\|'$ on $A$. But then $\rho(f)=0$ implies that $\|f\|'=0$ and hence $f=0$.
 
     It follows that if $\rho(f)=0$ then $f$ lies in $J(A)$, the Jacobson radical of $A$. By \cref{prop-TateJacobson}, $A$ is a Jacobson ring. So $f$ is nilpotent. The assertion follows.
 
-    So we can assume that $\rho(f)>0$. In this case, by \cref{cor-noenormalization} and \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings, we have $\rho(f)\in \sqrt{|k^{\times}|}$. Take $a\in k^{\times}$ and $d\in \mathbb{Z}_{>0}$ so that $\rho(f)^d=|a|$. Then $\rho(f^d/a)=1$ and hence it is powerly-bounded by \cref{prop-powerbddinstrictlyaff}. It follows that there is $C>0$ so that for $n\geq 1$, 
+    So we can assume that $\rho(f)>0$. In this case, by \cref{cor-noenormalization} and \cref{Banach-prop-fsupspecexp} in \nameref{Banach-chap-Banach}., we have $\rho(f)\in \sqrt{|k^{\times}|}$. Take $a\in k^{\times}$ and $d\in \mathbb{Z}_{>0}$ so that $\rho(f)^d=|a|$. Then $\rho(f^d/a)=1$ and hence it is powerly-bounded by \cref{prop-powerbddinstrictlyaff}. It follows that there is $C>0$ so that for $n\geq 1$, 
     \[
         \|f^{nd}\|\leq C |a|^n=C\rho(f)^{nd}. 
     \]
@@ -994,6 +995,145 @@ Recall that $\rho$ is the spectral radius map defined in \cref{Banach-def-spectr
     It follows that $\varphi\hat{\otimes}_k k_r$ is also an admissible epimorphism. By  \cref{prop-Krfaithflat}, $\varphi$ is also admissible.
 \end{proof}
 
+\section{Examples of the Berkovich spectra of affinoid algebras}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field.
+
+\begin{example}\label{ex-Berkovichdisk}
+    Take $r>0$. We will study the Berkovich spectrum $\Sp k\{r^{-1}T\}$. 
+
+    We first assume that $k$ is non-trivially valued and $k$ is algebraically closed.
+
+    For $a\in k$ with $|a|\leq r$ and $\rho\in (0,r]$, we set
+    \[
+        \begin{aligned}
+        E(a,\rho)=\left\{ x\in \Sp k\{r^{-1}T\}: |(T-a)(x)|\leq \rho \right\} ,\\
+        D(a,\rho)=\left\{ x\in \Sp k\{r^{-1}T\}: |(T-a)(x)|< \rho \right\}.
+        \end{aligned} 
+    \]
+    We give a list of points on $\Sp k\{r^{-1}T\}$. The two classes are called \emph{closed disks}  and \emph{open disks} with center $a$ and with radius $r$.
+
+    \begin{enumerate}
+        \item Any element $a\in k$ with $|a|\leq r$ determines a bounded semi-valuation on $k\{r^{-1}T\}$ sending $f$ to $|f(a)|$. Such points are called \emph{points of type (1)}.
+        \item For any $a\in k$ with $|a|\leq r$ and $\rho\in |k|\cap (0,r]$, we define a bounded semi-valuation  on $k\{r^{-1}T\}$ sending $f=\sum_{n=0}^{\infty}a_n (T-a)^n$ to 
+        \[
+            |f|_{E(a,\rho)}:=\max_{n\in \mathbb{N}} |a_n|\rho^n.
+        \]
+        Such points are called \emph{points of type (2)}.
+        \item For any $a\in k$ with $|a|\leq r$ and $\rho\in (0,r]\setminus |k|$, we define a bounded semi-valuation  on $k\{r^{-1}T\}$ sending $f=\sum_{n=0}^{\infty}a_n (T-a)^n$ to 
+        \[
+            |f|_{E(a,\rho)}:=\max_{n\in \mathbb{N}} |a_n|\rho^n.
+        \]
+        Such points are called \emph{points of type (3)}.
+        \item Let $\mathcal{E}=\{E^{\rho}\}_{\rho\in I}$ be a family of closed disks with radii $\rho$ and such that $E^{\rho}\supseteq E^{\rho'}$ when $\rho>\rho'$, where $I$ is a non-empty subset of $\mathbb{R}_{>0}$. We define a bounded semi-valuation  on $k\{r^{-1}T\}$ sending $f$ to 
+        \[
+            |f|_{\mathcal{E}}:=\inf_{\rho\in I} |f|_{E^{\rho}}.
+        \]
+        If $\bigcap_{\rho\in I}E^{\rho}\cap k=\emptyset$, we call the point $|\bullet|_{\mathcal{E}}$ a \emph{point of type (4)}. 
+    \end{enumerate}
+
+    We verify that points of type (1) are indeed points in $\Sp k\{r^{-1}T\}$: $f\mapsto |f(a)|$ is a bounded semi-valuation. It is clearly a semi-valuation.
+    It is bounded by \cref{Banach-lma-supnormbddbyrho} in \nameref{Banach-chap-Banach}.
+
+
+    We verify that points of type (2) and type (3) are indeed points in $\Sp k\{r^{-1}T\}$. We first need to make sense of the expansion 
+    \begin{equation}\label{eq-fexpandaTma}
+        f=\sum_{n=0}^{\infty}a_n (T-a)^n.
+    \end{equation}
+    In fact, by \cref{cor-univpropTatenonstrict}, there is an isomorphism of $k$-affinoid algebras $\iota:A\{r^{-1}T\}\rightarrow A\{r^{-1}S\}$ sending $T$ to $S+a$, as $\|(S+a)^n\|_r=r^n$ and hence $\rho(S+a)=r$. We expand the image of $\sum_{n=0}^{\infty}a_n S^n$ and then  \eqref{eq-fexpandaTma} is just formally expressing this expansion. 
+    Now in order to show that $|\bullet|_{E(a,\rho)}$ is a bounded semi-valuation, we may assume that $a=0$ after applying $\iota$. 
+    It is a semi-valuation as $|\bullet|_{\rho}$ is a valuation on the larger ring $k\{\rho^{-1}T\}$. Again, the boundedness is a consequence of \cref{Banach-lma-supnormbddbyrho} in \nameref{Banach-chap-Banach}. 
+
+    We verify that points of type (4) are bounded semi-valuations. Take $\mathcal{E}=\{E^{\rho}\}_{\rho\in I}$ as above. It is a semi-valuation as the infimum of bounded semi-valuations. It is bounded as $E^{\rho}$ is for any $\rho\in I$.
+\end{example}
+
+\begin{proposition}
+    Assume that $k$ is non-trivially valued and algebraically closed.
+    For any $r>0$, a point in $\Sp k\{r^{-1}T\}$ belongs to one of the following classes: type (1), type (2), type (3), type (4).
+\end{proposition}
+\begin{proof}
+    Let $\|\bullet\|$ be a bounded semi-valuation on $k\{r^{-1}T\}$.
+    Consider the family
+    \[
+        \mathcal{E}:=\left\{ E(a, \|T-a\|) : a\in k, |a|\leq r \right\}.  
+    \]
+
+    We claim that if $a,b\in k$, $|a|, |b|\leq r$ and $\|T-a\|\leq \|T-b\|$, then 
+    \[
+        E(a, \|T-a\|)\subseteq E(b, \|T-b\|). 
+    \]
+    In fact, if $x\in E(a, \|T-a\|)$, then
+    \[
+        |(T-a)(x)|\leq \|T-a\|.
+    \]
+    Observe that $|a-b|\leq \max \{\|T-a\|,\|T-b\|\}=\|T-b\|$, so
+    \[
+        |(T-b)(x)|\leq \max \{|(T-a)(x)|,|a-b|\} \leq \|T-b\|. 
+    \]
+    So $x\in E(b, \|T-b\|)$ proving our claim.
+
+    Now we claim that for any $a\in k$,
+    \[
+        \|T-a\|=|T-a|_{\mathcal{E}}.
+    \]
+    From this, it follows that the bounded semi-valuation $\|\bullet\|$ is necessarily of the form $|\bullet|_{\mathcal{E}}$, hence of type (1), type (2), type (3) or type (4).
+
+    In order to prove the claim, we observe that
+    \[
+        |T-a|_{\mathcal{E}}=\inf_{b\in k,|b|\leq r} |T-a|_{E(b,\|T-b\|)}. 
+    \]
+    We write $T-a=T-b+b-a$, then
+    \[
+        |T-a|_{E(b,\|T-b\|)}=\max\{\|T-b\|,|b-a|\}\geq \|T-a\|.
+    \]
+    In particular $\|T-a\|\leq |T-a|_{\mathcal{E}}$.
+    On the other hand, the computation shows that
+    \[
+        |T-a|_{\mathcal{E}}=  \inf_{b\in k,|b|\leq r} \max\{\|T-a\|,|b-a|\}.
+    \]
+    In order to show that $\|T-a\|\geq |T-a|_{\mathcal{E}}$,
+    it suffices to show that 
+    \[
+        \inf_{b\in k,|b|\leq r}|b-a|\leq \|T-a\|
+    \]
+    when $|a|>r$. In this case, $1-a^{-1}T$ is invertible by \cref{Banach-prop-inversesmallelementBanachring} in \nameref{Banach-chap-Banach}., so
+    \[
+         \|1-a^{-1}T\|=\|1-a^{-1}T\|_r=1+|a|^{-1}r. 
+    \]
+    We need to show 
+    \[
+        \inf_{b\in k,|b|\leq r}|b-a|\leq |a|+r,
+    \]
+    which is obvious. This proves our claim.
+    
+\end{proof}
+
+\begin{proposition}\label{prop-Berkovdiskprop}
+    Assume that $k$ is non-trivially valued and algebraically closed.
+    Let $r>0$, and $x\in \Sp k\{r^{-1}T\}$.
+    \begin{enumerate}
+        \item If $x$ is of type (1), then $\mathscr{H}(x)=k$.
+        \item If $x$ is of type (2), then $\mathscr{H}(x)=k_{\rho}$, $\widetilde{\mathscr{H}(x)}=\tilde{k}(T)$ and $|\mathscr{H}(x)|=|k|$.
+        \item If $x$ is of type (3), then $\mathscr{H}(x)=k_{\rho}$, $\widetilde{\mathscr{H}(x)}=\tilde{k}$ and $|\mathscr{H}(x)^{\times}|$ is generated by $\rho$ and $|k^{\times}|$.
+        \item If $x$ is of type (4), then $\widetilde{\mathscr{H}(x)}=\tilde{k}$ and $|\mathscr{H}(x)|=|k|$. Moreover, $\mathscr{H}(x)\neq k$.
+        In other words, $\mathscr{H}(x)\supsetneq k$ is a non-trivial immediate extension.
+    \end{enumerate}
+    In particular, the four types do no overlap.
+\end{proposition}
+\begin{proof}
+    (1) Assume that $x$ is defined by $a\in k$ with $|a|\leq r$. Observe that the valuation factorizes through $k\{r^{-1}T\}\rightarrow k$, so $\mathscr{H}(x)$ is a subfield of $k$. But for $b\in k$, $b(x)=b$, so $\mathscr{H}(x)=k$.
+
+    (2) Assume that $x$ is defined by $E(a,\rho)$ with $a\in k$, $|a|\leq r$ and $\rho\in (0,r]\cap |k|$. We may assume that $a=0$. Observe that $|\bullet|_{E(a,\rho)}$ is a valuation. So $\mathscr{H}(x)$ is the completion of the fraction field of $k\{r^{-1}T\}$, namely $\mathscr{H}(x)=k_{\rho}$. 
+    Observe that for any $f\in k\{r^{-1}T\}$, $|f|_{E(a,\rho)}$ is of the form $|a_n|\rho^n$ for some $a_n\in k$, $n\in \mathbb{N}$, so $|f|_{E(a,\rho)}\in |k|$ and hence $|\mathscr{H}(x)|\subseteq|k|$. The reverse inequality is trivial. The residue field is computed as in \cref{Banach-cor-reductionstrictlyconv} from the chapter Banach rings.
+
+    (3) It follows from the same argument in (2) that $\mathscr{H}(x)=k_{\rho}$. On the other hand, an element 
+    \[
+        f=\sum_{i=-\infty}^{\infty}a_iT^i\in k_{\rho}  
+    \]
+    satisfies $|f|\leq 1$ (resp. $|f|<1$) if and only if $a_0\in \mathring{k}$ (resp. $a_0\in \check{k}$) and $|a_i|\rho^i<1$ for $i\neq 0$. It follows that $\widetilde{H(x)}=\tilde{k}$.
+
+    (4) \textcolor{red}{To be finished}
+\end{proof}
+
 
 \section{\texorpdfstring{$H$}{H}-strict affinoid algebras}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $R_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
@@ -1009,11 +1149,11 @@ We next give a non-strict extension of \cref{prop-strictlykafffinite}.
     We may assume that $B=k\{r_1^{-1}T_1,\ldots,r_n^{-1}T_n\}$ for some $n\in \mathbb{N}$ and $r_1,\ldots,r_n\in H$.
     By assumption, we can find finitely many $a_1,\ldots,a_m\in A$ such that $A=\sum_{i=1}^m \varphi(B)a_i$.
 
-    We may assume that $a_i\in \mathring{A}$ as $k$ is non-trivially valued. By \cref{Banach-prop-Tateunivprop} in the chapter Banach Rings, $\varphi$ admits a unique extension to a bounded $k$-algebra epimorphism 
+    We may assume that $a_i\in \mathring{A}$ as $k$ is non-trivially valued. By \cref{Banach-prop-Tateunivprop} in \nameref{Banach-chap-Banach}., $\varphi$ admits a unique extension to a bounded $k$-algebra epimorphism 
     \[
         \Phi:  k\{r_1^{-1}T_1,\ldots,r_n^{-1}T_n,S_1,\ldots,S_m\}\rightarrow A
     \]
-    sending $S_i$ to $a_i$. By \cref{Banach-cor-bddisadmi} in the chapter Banach Rings, $\Phi$ is admissible. Moreover, the homomorphism $\Phi$ is surjective by our assumption. It follows that $A$ is $k_H$-affinoid.
+    sending $S_i$ to $a_i$. By \cref{Banach-cor-bddisadmi} in \nameref{Banach-chap-Banach}., $\Phi$ is admissible. Moreover, the homomorphism $\Phi$ is surjective by our assumption. It follows that $A$ is $k_H$-affinoid.
 
     If $k$ is trivially valued, then $H$ is non-trivial.
     Take $s\in H \setminus \{1\}$. It follows from the previous case applied to  $\varphi\hat{\otimes}k_s:B \hat{\otimes}k_s\rightarrow A \hat{\otimes}k_s$ that $A \hat{\otimes}k_s$ is $k_H$-affinoid. By \cref{cor-affkhann}, $A$ is also $k_H$-affinoid. 
@@ -1088,7 +1228,7 @@ We next give a non-strict extension of \cref{prop-strictlykafffinite}.
 \section{Finite modules over affinoid algebras}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field. 
 
-For any $k$-affinoid algebra $A$, we have defined the category $\BanCat_A^f$ of finite Banach $A$-modules in \cref{Banach-def-finiteBanachmodules} in the chapter Banach Rings. We write $\ModCat_A^f$ for the category of finite $A$-modules. 
+For any $k$-affinoid algebra $A$, we have defined the category $\BanCat_A^f$ of finite Banach $A$-modules in \cref{Banach-def-finiteBanachmodules} in \nameref{Banach-chap-Banach}. We write $\ModCat_A^f$ for the category of finite $A$-modules. 
 
 \begin{lemma}\label{lma-finiteBanachmodulemapbdd}
     Let $A$ be a $k$-affinoid algebra, $(M,\|\bullet\|_M)$ be a finite Banach $A$-module and $(N,\|\bullet\|_N)$ be a Banach $A$-module $N$.
@@ -1167,7 +1307,7 @@ Here the Banach $A$-module structure on $M\otimes_A N$ is given by \cref{prop-fi
 \end{proposition}
 \begin{proof}
     By \cref{lma-finiteBanachmodulemapbdd}, $\varphi$ is always bounded.
-    By \cref{prop-finitemodulebasechange} and \cref{prop-Krfaithflat}, we may assume that $k$ is non-trivially valued. By \cref{thm-affnoetherian}, $N$ is a Noetherian $A$-module. It follows from \cref{Banach-cor-idealclosed} in the chapter Banach Rings that $\Img \varphi$ is closed in $N$ and is finite as an $A$ module. In particular, the norm induced from $N$ and from $M$ are equivalent by \cref{lma-finiteBanachmodulemapbdd}. It follows that $\varphi$ is admissible.
+    By \cref{prop-finitemodulebasechange} and \cref{prop-Krfaithflat}, we may assume that $k$ is non-trivially valued. By \cref{thm-affnoetherian}, $N$ is a Noetherian $A$-module. It follows from \cref{Banach-cor-idealclosed} in \nameref{Banach-chap-Banach}. that $\Img \varphi$ is closed in $N$ and is finite as an $A$ module. In particular, the norm induced from $N$ and from $M$ are equivalent by \cref{lma-finiteBanachmodulemapbdd}. It follows that $\varphi$ is admissible.
 \end{proof}
 
 \begin{proposition}\label{prop-finitenessdescent1}
@@ -1231,7 +1371,7 @@ For any ring $A$, $\AlgCat_A^f$ denotes the category of finitely generated $A$-a
 \begin{proposition}\label{prop-Banachalgebrafiniteforget}
     Let $A$ be a $k$-affinoid algebra. Then the forgetful functor $\BanAlgCat_A^f\rightarrow \AlgCat_A^f$ is an equivalence of categories.
 \end{proposition}
-Recall that $\BanAlgCat_A^f$ is defined in \cref{Banach-def-finiteBanachalgebra} in the chapter Banach Rings.
+Recall that $\BanAlgCat_A^f$ is defined in \cref{Banach-def-finiteBanachalgebra} in \nameref{Banach-chap-Banach}.
 \begin{proof}
     It suffices to construct an inverse functor. Let $B$ be a finite $A$-algebra. 
     We endow $B$ with the norm $\|\bullet\|_B$ as in \cref{prop-finteBanachAmoduleequivfinitemodule}. We claim that $B$ is a Banach $A$-algebra.
@@ -1316,7 +1456,7 @@ We begin with a few examples.
 
 
     Next we verify the universal property: let $\Sp B\rightarrow \Sp A$ be a morphism of $k_H$-affinoid domains that factorizes through $(\Sp A)\left\{r^{-1}f,sg^{-1}\right\}$. We write $\psi:A\rightarrow B$ for the corresponding morphism of $k_H$-affinoid algebras.
-    By \cref{Banach-cor-rhoequsup} in the chapter Banach Rings, we have
+    By \cref{Banach-cor-rhoequsup} in \nameref{Banach-chap-Banach}., we have
     \[
         \rho_B(f_i)=\sup_{x\in \Sp B}|f_i(x)|\leq \sup_{y\in (\Sp A)\left\{r^{-1}f,sg^{-1}\right\}} |f_i(y)|\leq r_i
     \]   
@@ -1417,7 +1557,7 @@ We begin with a few examples.
 \end{proposition}
 In particular, we will identify $V$ with $\Sp A_V$ and say $\Sp A_V$ is a $k_H$-affinoid domain in $\Sp A$.
 \begin{proof}
-    We observe that $\Sp A_V\rightarrow \Sp A$ is a monomorphism in the category $k_H\text{-}\AffCat$. In other words, $A\rightarrow A_V$ is an epimorphism in the category $k_H\text{-}\AffAlgCat$. To see this, let $\eta_1,\eta_2:A_V\rightarrow B$ be two arrows in $k_H\text{-}\AffAlgCat$ such that $\eta_1\circ \varphi=\eta_2\circ \varphi$. It follows from the universal property in \cref{def-affinoiddomain} that $\eta_1=\eta_2$. By \cref{prop-monoaffinj}, $\Sp A_V\rightarrow \Sp A$ is a bijection. But $\Sp A_V$ and $\Sp_A$ are both compact and Hausdorff by \cref{Banach-thm-spectrumcptHaus} in the chapter Banach rings, so $\Sp A_V\rightarrow V$ is a homeomorphism.
+    We observe that $\Sp A_V\rightarrow \Sp A$ is a monomorphism in the category $k_H\text{-}\AffCat$. In other words, $A\rightarrow A_V$ is an epimorphism in the category $k_H\text{-}\AffAlgCat$. To see this, let $\eta_1,\eta_2:A_V\rightarrow B$ be two arrows in $k_H\text{-}\AffAlgCat$ such that $\eta_1\circ \varphi=\eta_2\circ \varphi$. It follows from the universal property in \cref{def-affinoiddomain} that $\eta_1=\eta_2$. By \cref{prop-monoaffinj}, $\Sp A_V\rightarrow \Sp A$ is a bijection. But $\Sp A_V$ and $\Sp_A$ are both compact and Hausdorff by \cref{Banach-thm-spectrumcptHaus} in \nameref{Banach-chap-Banach}., so $\Sp A_V\rightarrow V$ is a homeomorphism.
 \end{proof}
 
 
@@ -1483,7 +1623,7 @@ In particular, we will identify $V$ with $\Sp A_V$ and say $\Sp A_V$ is a $k_H$-
     \[
         \Sp B\cap \Sp C=\emptyset.  
     \]
-    Let $f'_1,\ldots,f'_n,g'$ be the images of $f_1,\ldots,f_n,g$ in $C$. Write $f'=(f'_1,\ldots,f'_n)$. Then by \cref{Banach-cor-invertibleintermsofsp} in the chapter Banach Rings, $g'$ is a unit and 
+    Let $f'_1,\ldots,f'_n,g'$ be the images of $f_1,\ldots,f_n,g$ in $C$. Write $f'=(f'_1,\ldots,f'_n)$. Then by \cref{Banach-cor-invertibleintermsofsp} in \nameref{Banach-chap-Banach}., $g'$ is a unit and 
     \[
         \Sp B=\Sp C\{r^{-1} g'^{-1}f'\}.  
     \]
@@ -1652,9 +1792,9 @@ Recall that $\rho(A)=\sqrt{|k^{\times}|\cdot H}\cup\{0\}$ by \cref{thm-strictaff
     \]
     Here we make the obvious identification by identifying $\Sp A/\mathfrak{p}_i$ with a subset of $\Sp A$.
 
-    By \cref{Banach-cor-rhoequsup} in the chapter Banach Rings, it suffices to consider each of $\Sp A/\mathfrak{p}_i$ separately, so we may assume that $A$ is an integral domain. 
+    By \cref{Banach-cor-rhoequsup} in \nameref{Banach-chap-Banach}., it suffices to consider each of $\Sp A/\mathfrak{p}_i$ separately, so we may assume that $A$ is an integral domain. 
     
-    By \cref{cor-noenormalization}, we can take $d\in \mathbb{N}$ and a finite injective homomorphism of $k$-algebras $\iota:k\{T_1,\ldots,T_d\}\rightarrow A$. According to \cref{Banach-prop-fsupspecexp} in the chapter Banach Rings, $\rho_A$ is the restriction of the norm $\|\bullet\|_{\Frac A}$ on $\Frac A$ induced by the finite extension $\Frac A/\Frac k\{T_1,\ldots,T_d\}$ from the Gauss valuation. But it is well-known that $\|\bullet\|_{\Frac A}$ is the maximum of finitely many valuations on $\Frac A$. \textcolor{red}{Reproduce BGR3.3.3.1 somewhere.} The assertion is by now obvious.
+    By \cref{cor-noenormalization}, we can take $d\in \mathbb{N}$ and a finite injective homomorphism of $k$-algebras $\iota:k\{T_1,\ldots,T_d\}\rightarrow A$. According to \cref{Banach-prop-fsupspecexp} in \nameref{Banach-chap-Banach}., $\rho_A$ is the restriction of the norm $\|\bullet\|_{\Frac A}$ on $\Frac A$ induced by the finite extension $\Frac A/\Frac k\{T_1,\ldots,T_d\}$ from the Gauss valuation. But it is well-known that $\|\bullet\|_{\Frac A}$ is the maximum of finitely many valuations on $\Frac A$. \textcolor{red}{Reproduce BGR3.3.3.1 somewhere.} The assertion is by now obvious.
 \end{proof}
 
 \begin{lemma}\label{lma-rhoBandrhoA}
@@ -1684,11 +1824,11 @@ Recall that $\rho(A)=\sqrt{|k^{\times}|\cdot H}\cup\{0\}$ by \cref{thm-strictaff
     \[
         |f(x)|\geq r. 
     \]
-    By \cref{Banach-cor-rhoequsup} in the chapter Banach Rings, we have
+    By \cref{Banach-cor-rhoequsup} in \nameref{Banach-chap-Banach}., we have
     \[
         |f(x)|=r  
     \]
-    for any $x\in \Sp A\{r^{-1}f\}$. It follows from \cref{Banach-cor-rhoequsup} in the chapter Banach Rings that for any $n\in \mathbb{Z}_{>0}$,
+    for any $x\in \Sp A\{r^{-1}f\}$. It follows from \cref{Banach-cor-rhoequsup} in \nameref{Banach-chap-Banach}. that for any $n\in \mathbb{Z}_{>0}$,
     \[
         \rho_A(f^na)=\sup_{x\in \Sp A}|f^na(x)|\geq  r^n\sup_{x\in \Sp A\{rf^{-1}\}}|a(x)|=r^n\rho_B(a). 
     \]
@@ -1799,7 +1939,7 @@ Recall that $A\{rf^{-1}\}$ is defined in \cref{ex-Laurentdomain}, by \cref{thm-s
     \]
     and $k_r$ is non-trivially valued. \textcolor{red}{Proof that this is possible.}
 
-    By \cref{Commutative-cor-finitegradeddescent} in the chapter Commutative Algebra and \cref{prop-finiteadmissibledesc},  we may assume that $k$ is non-trivially valued and $\rho(A)=\rho(B)=|k|$. By \cref{Commutative-lma-rhoconditionimplygraded} in  the chapter Commutative Algebra, we have $\tilde{A}=\tilde{A}_1\otimes_{\tilde{k}_1} \tilde{k}$. 
+    By \cref{Commutative-cor-finitegradeddescent} in \nameref{Commutative-chap-commutative} and \cref{prop-finiteadmissibledesc},  we may assume that $k$ is non-trivially valued and $\rho(A)=\rho(B)=|k|$. By \cref{Commutative-lma-rhoconditionimplygraded} in  the chapter Commutative Algebra, we have $\tilde{A}=\tilde{A}_1\otimes_{\tilde{k}_1} \tilde{k}$. 
     By \cref{cor-finitehomoadmi}, $\phi$ is automatically admissible if it is finite. 
     
     So it suffices to argue that $\phi$ is finite if and only if $\tilde{\phi}:\tilde{A}\rightarrow \tilde{B}$ is finite. 
@@ -1812,7 +1952,7 @@ Recall that $A\{rf^{-1}\}$ is defined in \cref{ex-Laurentdomain}, by \cref{thm-s
 
     It suffices to show that $\widetilde{\phi\circ\psi}$ is finite in order to conclude that $\tilde{\phi}$ is finite. So we are reduced to the case $A=k\{T_1,\ldots,T_d\}$ and $\ker \phi=0$.
 
-    We will show that the conditions of \cref{Banach-lma-finitemodulejapanese} in the chapter Banach Rings is satisfied with $\rho_B$ as the norm $B$. We have shown that $\rho_B$ is a faithful $k\{T_1,\ldots,T_d\}$-algebra nrom in \cref{cor-rhofaithful}. As $B$ is of finite over $k\{T_1,\ldots,T_d\}$, the rank condition is clearly satisfied. It remains to establish that $\mathring{\phi}$ is integral.
+    We will show that the conditions of \cref{Banach-lma-finitemodulejapanese} in \nameref{Banach-chap-Banach}. is satisfied with $\rho_B$ as the norm $B$. We have shown that $\rho_B$ is a faithful $k\{T_1,\ldots,T_d\}$-algebra nrom in \cref{cor-rhofaithful}. As $B$ is of finite over $k\{T_1,\ldots,T_d\}$, the rank condition is clearly satisfied. It remains to establish that $\mathring{\phi}$ is integral.
 
     By \cref{prop-integralstrictafffsup}, for $f\in B$, there is an integral equation 
     \[
@@ -1851,7 +1991,7 @@ Recall that $A\{rf^{-1}\}$ is defined in \cref{ex-Laurentdomain}, by \cref{thm-s
 \end{proof}
 \fi
 
-\begin{lemma}
+\begin{lemma}\label{lma-nongradedredsurj}
     Assume that $k$ is non-trivially valued and $A$ is a strictly $k$-affinoid algebra. Then the reduction map 
     \[
         \pi:\Sp A\rightarrow \Spec \tilde{A}  
@@ -1862,21 +2002,91 @@ The reduction map is defined as follows: a point $x\in \Sp A$ defines a characte
 \begin{proof}
     \textbf{Step~1}. We assume that $A=k\{T_1,\ldots,T_n\}$ for some $n\in \mathbb{N}$. 
 
-    Let $y\in \Spec \tilde{A}$ corresponding to a prime ideal $\mathfrak{p}_y$ in $\tilde{A}$. In this case, $\tilde{A}=\tilde{k}[T_1,\ldots,T_n]$ by \cref{prop-reductionTn}. We can identify $y$ with the character
-    \[
-        \chi_y :\tilde{A}=\tilde{k}[T_1,\ldots,T_n]\rightarrow  \kappa(y).
-    \]
-    .....
+    We make induction on $n$. The case $n=0$ is trivial. 
+    We first handle the case $n=1$. In this case, we have an explicit description of the Berkovich disk \cref{ex-Berkovichdisk} when $k$ is algebraically closed. 
 
+    By \cref{Banach-cor-Spalgclosure} in \nameref{Banach-chap-Banach}, we have a natural identification 
+    \[
+        \Sp k\{T\}=\Sp \widehat{k^{\alg}\{T\}}/\Gal(k^{\sep}/k).  
+    \]
+    By \cref{prop-reductionTn}, we have an identification $\widetilde{k\{T\}}=\tilde{k}[T]$. The prime ideals are of two types: $(T-a)$ for some $a\in k$ and $0$. In the former case, the type (1) point defined by $a$ lies in the inverse image of $(T-a)$ by definition. In the second case, we take the Gauss point $\|\bullet\|_1$.
     
-    \textcolor{red}{To be finished!!!}
+    Consider the case $n>1$. Assume that the assertion has been proved for lower $n$.
+    Let $p: \Sp k\{T_1,\ldots,T_n\}\rightarrow \Sp k\{T_1\}$ be the projection induced by $k\{T_1\}\rightarrow k\{T_1,\ldots,T_n\}$ sending $T_1$ to $T_1$. We have a comutative diagram
+    \[
+        \begin{tikzcd}
+            \Sp k\{T_1,\ldots,T_n\} \arrow[d, "\pi"] \arrow[r,"p"] & \Sp k\{T_1\} \arrow[d, "\pi"] \\
+            \Spec \tilde{k}[T_1,\ldots,T_n] \arrow[r]      & \Spec \tilde{k}[T_1]
+        \end{tikzcd}.  
+    \]
+    Let $\tilde{x}\in \Spec \tilde{k}[T_1,\ldots,T_n]$ and $\tilde{y}$ be its image in $\Spec \tilde{k}[T_1]$. By the case $n=1$, we can find $y\in \Sp k\{T_1\}$ with $\pi(y)=\tilde{y}$. There is a bijection $p^{-1}(y)$ with $\Sp \mathscr{H}(y)\{T_2,\ldots,T_n\}$. So it suffices to show that 
+    \begin{equation}\label{eq-SpHyfiberreudction}
+        \Sp \mathscr{H}(y)\{T_2,\ldots,T_n\}\rightarrow \Spec \kappa(\tilde{y})[T_2,\ldots,T_n]
+    \end{equation}
+    is surjective. By construction, we have an embedding $\kappa(\tilde{y})\rightarrow \widetilde{\mathscr{H}(y)}$, so we can factorize \eqref{eq-SpHyfiberreudction} as
+    \[
+        \Sp \mathscr{H}(y)\{T_2,\ldots,T_n\}\rightarrow \Spec \widetilde{\mathscr{H}(y)}[T_2,\ldots,T_n]\rightarrow \Spec \kappa(\tilde{y})[T_2,\ldots,T_n].
+    \]
+    By induction, the first map is surjective. The second map is obviously surjective. It follows that the map \eqref{eq-SpHyfiberreudction} is also surjective.
+
+    \textbf{Step~2}. We handle the case where $A$ is an integral domain. By \cref{cor-noenormalization}, we can find $d\in \mathbb{N}$ and  a finite injective morphism
+    \[
+        k\{T_1,\ldots,T_d\}\rightarrow A.  
+    \]
+    Then $\Frac A$ is a finite extension of $\Frac k\{T_1,\ldots,T_d\}$. Fix an algebraic closure of $\Frac k\{T_1,\ldots,T_d\}$.
+    Let $K$ be the smallest extension of $\Frac k\{T_1,\ldots,T_d\}$ inside this algebraic closure which is norm over $\Frac k\{T_1,\ldots,T_d\}$ and which contains $A$. Let $G=\Gal(K/\Frac k\{T_1,\ldots,T_d\})$. Let $B$ be the smallest $k$-subalgebra of $K$ containing all $\gamma(A)$ for $\gamma\in G$. Then $B$ is finite over $k\{T_1,\ldots,T_d\}$ and hence strictly $k$-affinoid by \cref{prop-strictlykafffinite2}.
+    We therefore have a commutative diagram
+    \[
+        \begin{tikzcd}
+            \Sp B \arrow[r] \arrow[d] & \Sp A \arrow[r] \arrow[d] & {\Sp k\{T_1,\ldots,T_d\}} \arrow[d] \\
+            \Spec \tilde{B} \arrow[r] & \Sp \tilde{A} \arrow[r]   & {\Spec k[T_1,\ldots,T_d]}          
+        \end{tikzcd}.  
+    \]
+    By going up theorem, all horizonal maps are surjective. So we only have to show that $\pi_B$ is surjective by diagram chasing.
+
+    The group $G$ acts on $K$ and hence on $B$. For any $\gamma\in G$, we write the corresponding automorphism $B\rightarrow B$ as $\gamma$. The induced map on the reduction $\tilde{B}\rightarrow \tilde{B}$ is denoted by $\tilde{\gamma}$. In this way, we see that the $G$-action is compatible with the big square. All maps but the left vertical map are surjective. So it suffices to show that $G$ acts transitively on each fiber of $\Spec \tilde{B}\rightarrow \Spec \tilde{k}[T_1,\ldots,T_d]$.
+
+    %Observe that the points in this fiber are necessarily maximal ideals in the tensor product as $\tilde{B}$ is finite over $\tilde{k}[T_1,\ldots,T_d]$. 
+    
+    Let $\tilde{x}\in \Spec \tilde{k}[T_1,\ldots,T_d]$ and $\tilde{y},\tilde{y}'\in \Spec \Spec \tilde{B}$ lying over $\tilde{x}$. If no elements in $\gamma\in G$ transforms $\tilde{y}$ to $\tilde{y}'$, we have 
+    \[
+        \mathfrak{p}_{\tilde{y}'}\not\in \mathfrak{p}_{\tilde{\gamma}(\tilde{y})}  
+    \]
+    as $\tilde{B}$ is finite over $\tilde{k}[T_1,\ldots,T_d]$. Here $\mathfrak{p}_{\bullet}$ denotes the prime ideal corresponding to $\bullet$. By prime avoidance \cite[\href{https://stacks.math.columbia.edu/tag/00DS}{Tag 00DS}]{stacks-project}, we can find $f\in \mathring{B}$ such that $\tilde{f}\in \mathfrak{p}_{\tilde{y}'}$ by $\tilde{\gamma}(\tilde{f})\not\in \mathfrak{p}_{\tilde{y}}$ for any $\gamma\in G$.
+
+    Take the minimal equation of $f$ over $\Frac k\{T_1,\ldots,T_d\}$:
+    \[
+        f^r+a_1f^{r-1}+\cdots+a_r=0.  
+    \]
+    Up to sign, $a_r$ is a power of the product of all conjugates of $f$. So
+    \[
+        \widetilde{a_r}\in \mathfrak{p}_{\tilde{y}'}\setminus  \mathfrak{p}_{\tilde{y}}. 
+    \]
+    By $a_r\in T_n$ as it is integral over $T_n$ by \cref{prop-Tatealgufd}. While $f\in \mathring{B}$ implies that $a_r\in (k\{T_1,\ldots,T_d\})^{\circ}$ by \cref{cor-rhofaithful}. Thus, 
+    \[
+        \widetilde{a_r}\in  \mathfrak{p}_{\tilde{y}'}\cap \widetilde{k\{T_1,\ldots,T_d\}}=\mathfrak{p}_{\tilde{x}}, 
+    \]
+    which contradicts the fact that $\tilde{a}_r\not\in \mathfrak{p}_{\tilde{y}}$.
+    
+    \textbf{Step~3}. We handle the general case.  Let $\mathfrak{p}_1,\ldots,\mathfrak{p}_r$ be the minimal primes of $A$. The number is finite by \cref{thm-affnoetherian}. We then have a map
+    \[
+        A\rightarrow \prod_{i=1}^r A/\mathfrak{p}_i.
+    \]
+    We have a commutative diagram
+    \[
+    \begin{tikzcd}
+        \coprod_{i=1}^r \Sp A/\mathfrak{p}_i \arrow[r] \arrow[d]     & \Sp A \arrow[d] \\
+        \coprod_{i=1}^r \Spec \widetilde{A/\mathfrak{p}_i} \arrow[r] & \Spec \tilde{A}
+    \end{tikzcd}.
+    \]
+    All maps but the right vertical one are surjective. Hence the right vertical map is surjective as well.
 \end{proof}
 \begin{remark}
     Berkovich \cite{Berk12} claimed that this follows from the proofs in \cite{BGR}. The author does not understand how this works. The current proof is due to Mattias Jonsson.
 \end{remark}
 
 
-\begin{thm}
+\begin{thm}\label{thm-gradedreductionsurjective}
     Let $A$ be a $k_H$-affinoid algebra. Then the reduction $\pi^H:\Sp A\rightarrow \tilde{\Sp A}^H$ is surjective.
 \end{thm}
 \begin{proof}
@@ -1903,8 +2113,56 @@ The reduction map is defined as follows: a point $x\in \Sp A$ defines a characte
     is surjective, which is trivial.
 
     \textbf{Step~2}. We may assume that $k$ is non-trivially valued,  $A$ is strictly $k$-affinoid and  $\rho(A)=|k|$.
-    By \cref{Commutative-lma-rhoAequalrhok} in the chapter Commutative Algebra, it suffices to show that the usual reduction $\pi:A\rightarrow \Spec \tilde{A}$ is surjective.
+    By \cref{Commutative-lma-rhoAequalrhok} in \nameref{Commutative-chap-commutative}, it suffices to show that the usual reduction $\pi:A\rightarrow \Spec \tilde{A}$ is surjective, which is exactly \cref{lma-nongradedredsurj}.
 \end{proof}
+
+\begin{proposition}\label{prop-genericptuniqlift}
+    Let $A$ be a $k_H$-affinoid algebra. Then for any generic point $\tilde{x}$ of an irreducible component of $\tilde{\Sp A}^H$, $\pi^{H,-1}(\tilde{x})$ is a single point.
+\end{proposition}
+\begin{proof}
+    We first suppose that $\tilde{\Sp A}^H$ is irreducible. Note that the character
+    \[
+        \tilde{A}^H\rightarrow \kappa(\tilde{x})  
+    \]
+    corresponding to $\tilde{x}$ is injective, since $\tilde{A}^H$ does not have non-trival homogeneous nilpotents. By \cref{thm-gradedreductionsurjective}, we can find $x\in \Sp A$ whose reduction is $\tilde{x}$, we have
+    \[
+        \rho_A(f)\leq |f(x)|.  
+    \]
+    So equality holds by \cref{Banach-cor-rhoequsup} in \cref{Banach-chap-Banach}. In other words, $\pi^{H,-1}(\tilde{x})=\{\rho_A\}$.
+
+    In general, by \cref{Commutative-lma-specggenericpointfinite} in \cref{Commutative-chap-commutative}, we can find $\tilde{f}\in \tilde{A}^H$ that is not contained on all generic points of irreducible components by $x$. \textcolor{red}{Include graded version of prime avoidance somewhere.} Lift $\tilde{f}$ to $f\in A$ and $r=\rho_A(f)$. Let $B=A\{r^{-1}f\}$, then
+    \[
+        \pi^{H,-1}\{x\}\subseteq \Sp A\{r^{-1}f\}=\Sp B.  
+    \]
+    By \cref{prop:localatoneelementreduction}, we have an identification
+    \[
+        \tilde{B}^H=\tilde{A}^H_{\tilde{f}}.  
+    \]
+    It suffices to apply the special case to $B$.
+\end{proof}
+
+\begin{proposition}
+    Let $A$ be a $k_H$-affinoid algebra. Let $Z$ be the set of generic points of irreducible components of $\tilde{\Sp A}^H$. Then $\pi^{H,-1}(Z)$ is the Shilov boundary of $A$.
+
+    In particular, $A$ admits a Shilov boundary.
+\end{proposition}
+Recall that the  Shilov boundary is defined in \cref{Banach-def-Shilovboundary} in \cref{Banach-chap-Banach}.
+
+\begin{proof}
+    Let $f\in A$ be an element with $\rho(f)=r>0$. Assume that $\tilde{f}\in \tilde{A}$ is not contained in some $\tilde{x}\in Z$, take the unique lift $x\in A$ of $\tilde{x}$ by \cref{prop-genericptuniqlift}. Then $|f(x)|=r$. In particular, $\pi^{H,-1}(Z)$ is a boundary.
+
+    To show that $\pi^{H,-1}(Z)$ is a minimal boundary, let $x\in \pi^{H,-1}(Z)$ and $U$ be an open neighbourhood of $x$. As
+    \[
+        x=\bigcup_{\tilde{f}(\tilde{x})} \pi_X^{-1}(D(\tilde{f})),  
+    \]
+    we can find $f\in A$ with $\tilde{f}(\tilde{x})\neq 0$ and $\Sp A\{rf^{-1}\}\subseteq U$, where $r=\rho(f)$. As $U$ is open, we can find $\epsilon>0$ such that 
+    \[
+        \Sp A\{(r-\epsilon)f^{-1}\}\subseteq U.
+    \] 
+    So $x$ belongs to any boundary of $A$.
+
+\end{proof}
+
 
 \section{Gerritzen--Grauert theorem}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
@@ -1922,7 +2180,7 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     \]
     of the usual codiagonal, but $A\otimes_k A\rightarrow A$ is clearly surjective. Hence, so is $A\hat{\otimes}_k  A\rightarrow A$.
 
-    In order to see that the codiagonal is admissible, we first observe that it is bounded by definition. Take a $k$-free polyray $r$ with at least one component, then by \cref{prop-Krfaithflat}, we may reduce to the case where $k$ is non-trivially valued. Then it suffices to apply the open mapping theorem \cref{Banach-thm-openmapping} in the chapter Banach Rings.
+    In order to see that the codiagonal is admissible, we first observe that it is bounded by definition. Take a $k$-free polyray $r$ with at least one component, then by \cref{prop-Krfaithflat}, we may reduce to the case where $k$ is non-trivially valued. Then it suffices to apply the open mapping theorem \cref{Banach-thm-openmapping} in \nameref{Banach-chap-Banach}.
 \end{example}
 
 \begin{proposition}\label{prop-closedimmbasechange}
@@ -1988,7 +2246,7 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     We have reduced the problem to a local one on $\Sp B$.
 
 
-    \textbf{Step~2}. We show that we may assume that $\widetilde{\chi_x}(\tilde{A}^H)$ is finite over $\widetilde{\chi_y}(\tilde{B}^H)$. Here the notation $\chi_y$ is defined in \cref{Banach-def-residuefield} in the chapter Banach Rings.
+    \textbf{Step~2}. We show that we may assume that $\widetilde{\chi_x}(\tilde{A}^H)$ is finite over $\widetilde{\chi_y}(\tilde{B}^H)$. Here the notation $\chi_y$ is defined in \cref{Banach-def-residuefield} in \nameref{Banach-chap-Banach}.
 
     By \cref{cor-reductionfinitelygenerated}, $\widetilde{\chi_x}(\tilde{A}^H)$ is finitely generated over $\widetilde{\chi_y}(\tilde{B}^H)$. Take  generators $h_1,\ldots,h_l\in A$. By \cref{prop-monoaffinj}, $\mathscr{H}(x)\cn \mathscr{H}(y)$, so we can find $f_1,\ldots,f_l,g\in B$ with $|g(y)|=1$ such that 
     \[
@@ -2205,7 +2463,7 @@ We first prove Tate acyclicity theorem in a special case.
     for some $r\in \sqrt{|k^{\times}|\cdot H}$ and $f\in A$.
 
 
-    Take a $k$-free polyray $s$ with at least one component. By \cref{prop-Krfaithflat}, we can make the base change to $k_s$ and assume that $k$ is non-trivially valued. In this case, by open mapping theorem \cref{Banach-thm-openmapping} in the chapter Banach Rings, the admissibility is automatic. It suffices to prove the exactness.
+    Take a $k$-free polyray $s$ with at least one component. By \cref{prop-Krfaithflat}, we can make the base change to $k_s$ and assume that $k$ is non-trivially valued. In this case, by open mapping theorem \cref{Banach-thm-openmapping} in \nameref{Banach-chap-Banach}., the admissibility is automatic. It suffices to prove the exactness.
 
     In this case, we can define a presheaf $\mathcal{O}_X$ on $X$ on the family of $k_H$-rational domains in $\Sp A$:  $\mathcal{O}_X(\Sp C)=C$. From the general comparison theorem of \v{C}ech cohomology \textcolor{red}{BGR P327 reproduce in the topology part} and \cref{lma-prooftatelma1}, we may assume that the covering $\mathcal{V}$ is  $k_H$-rational covering. But then we need to show that for each $k_H$-rational domain $W$ in $\Sp A$, $\check{C}(\mathcal{V}|_W,A)$ is exact. Similarly, by \cref{lma-prooftatelma2}, we may assume that the $k_H$-rational covering is generated by units. Again, by \cref{lma-prooftatelma3}, we can reduce to the case where $\mathcal{V}$ is a $k_H$-Laurent covering.
 

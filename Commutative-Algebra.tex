@@ -1,12 +1,12 @@
 \input{preamble}
-\title{Commutative algebra}
+\title{Ymir}
 \begin{document}
 \maketitle
 \tableofcontents
 
 
 
-
+\chapter*{Commutative algebras}\label{chap-commutative}
 
 
 \section{Introduction}\label{sec-introduction}
@@ -505,11 +505,11 @@ Let $G$ be an Abelian group. We write the group operation of $G$ multiplicativel
     for all homogeneous elements $f\in A$.
 \end{definition}
 
-\begin{lemma}
+\begin{lemma}\label{lma-specggenericpointfinite}
     Let $k$ be a $G$-graded field and $A$ be a finitely generated $G$-graded $k$-algebra. Then $\Spec^G(A)$ has only finitely many maximal points.
 \end{lemma}
 \begin{proof}
-    
+    Take a $G$-graded field $K/k$ such that $\rho(A)\subseteq \rho(K)$. By \cref{lma-rhoAequalrhok}, the statement of the lemma holds for $A\otimes_k k'$. But each generic point of an irreducible component of $\Spec^G(A)$ can be lifted to a generic point of an irreducible component in $\Spec^G(A\otimes_k k')$.
 \end{proof}
 
 \section{Graded Riemann--Zariski spaces}

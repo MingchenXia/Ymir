@@ -1,11 +1,11 @@
 \input{preamble}
-\title{Banach rings}
+\title{Ymir}
 \begin{document}
 \maketitle
 \tableofcontents
 
 
-
+\chapter*{Banach rings}\label{chap-Banach}
 \section{Introduction}\label{sec-introduction}
 
 This section conerns the theory of Banach algebras. Our references are \cite{Berk12} and \cite{BGR}.
@@ -976,6 +976,7 @@ By \cref{lma-supnormbddbyrho}, the Gelfand transform is well-defined.
 \end{proof}
 
 
+
 \section{Open mapping theorem}
 Let $(k,|\bullet|)$ be a complete non-trivially valued field. All results in this section fail when $k$ is trivially valued.
 
@@ -1146,6 +1147,49 @@ Observe that when $A$ and $B$ are both noetherian, Condition~(1) is automaticall
     \]
 \end{proof}
 
+\begin{proposition}\label{prop-Spectrrmandgalois}
+    Let $k$ be a complete valuation field and $A$ be a Banach $k$-algebra. Let $K$ be a finite normal extension of $k$. 
+    \begin{enumerate}
+        \item If $K/k$ is separable (or equivalently Galois), we have a natural homeomorphism
+            \[
+                \Sp (A\otimes_k K)/\Gal(K/k)\cn \Sp A.  
+            \]
+        \item If $K/k$ is purely inseparable, we have a natural homeomorphism
+            \[
+                \Sp  (A\otimes_k K) \cn \Sp A. 
+            \]
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    In both cases, the inclusion $A\rightarrow A\otimes_k K$ induces a morphism
+    \[
+        \Sp   (A\otimes_k K)\rightarrow \Sp A.
+    \]
+    In the first case, $\Gal(K/k)$ clearly acts on $\Sp A\otimes_k K$ preserving each fiber: given a bounded semi-valuation $\|\bullet\|_x$ on $A\otimes_k K$  corresponding to a point $x\in \Sp (A\otimes_k K)$ and $\sigma\in \Gal(K/k)$, then $\sigma x$ corresponds to the bounded semi-valuation $\|\bullet\|_{\sigma x}$ on $A\otimes_k K$ so that 
+    \[
+        \|f\|_{\sigma x}=\|\sigma^{-1}(f)\|_x.  
+    \]
+    In particular, the maps in both cases are well-defined. We observe that the fiber of a point $x\in \Sp A$ under $\Sp   (A\otimes_k K)\rightarrow \Sp A$ can be identified with the image of $\Sp \mathscr{H}(x)\otimes_k K$ in $\Sp A\otimes_k K$. Observe that $\Sp \mathscr{H}(x)\otimes_k K$ is just the set of maximal ideals
+     When $K/k$ is Galois, $\Gal(K/k)$ acts transitively. If $K/k$ is purely inseparable, then $\mathscr{H}(x)\otimes_k K$ is a local ring.
+\end{proof}
+
+\begin{corollary}\label{cor-Spalgclosure}
+    Let $k$ be a complete valuation field and $A$ be a Banach $k$-algebra. Then we have a canonical identification
+    \[
+        \Sp A\hat{\otimes}_k \widehat{k^{\alg}}  /\Gal(k^{\sep}/k)\cn \Sp A.
+    \]
+\end{corollary}
+\begin{proof}
+    This follows from \cref{prop-Spectrrmandgalois}. \textcolor{red}{Add details later.}
+\end{proof}
+
+\begin{definition}\label{def-Shilovboundary}
+    Let $A$ be a Banach $k$-algebra. A closed subset $\Gamma\subseteq\Sp A$ is called a \emph{boundary} of $A$ if for any $f\in A$,
+    \[
+        \sup_{x\in \Sp A}|f(x)|=\sup_{x\in \Gamma}|f(x)|.
+    \] 
+    If there is a minimal boundary of $A$, we call it the \emph{Shilov boundary} of $A$.
+\end{definition}
 
 
 \section{Maximum spectra}
@@ -1360,7 +1404,7 @@ Let $(k,|\bullet|)$ a complete non-Archimedean valued field.
     Then $\tilde{B}$ is finite as $\tilde{A}$-module.
 \end{lemma}
 \begin{proof}
-    We want to apply \cref{Commutative-prop-noethjapfinite} in the chapter Commutative Algebra to the canonical injection map $\psi:\tilde{A}\rightarrow \tilde{B}$. The map $\psi$ is integral as $\mathring{B}$ is integral over $\mathring{A}$. The conditions are easily verified. \textcolor{red}{Add details.}
+    We want to apply \cref{Commutative-prop-noethjapfinite} in \nameref{Commutative-chap-commutative} to the canonical injection map $\psi:\tilde{A}\rightarrow \tilde{B}$. The map $\psi$ is integral as $\mathring{B}$ is integral over $\mathring{A}$. The conditions are easily verified. \textcolor{red}{Add details.}
      %Observe that $\tilde{B}$ is torsion-free as $M$ is faithfully normed.
 \end{proof}
 

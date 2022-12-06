@@ -1,10 +1,10 @@
 \input{preamble}
-\title{Berkovich analytic spaces}
+\title{Ymir}
 \begin{document}
 \maketitle
 \tableofcontents
 
-
+\chapter*{Berkovich analytic spaces}\label{chap-Berkovich}
 
 \section{Introduction}\label{sec-introduction}
 
@@ -26,7 +26,7 @@ Let $A$ be a $k_H$-affinoid algebra. A \emph{compact $k_H$-analytic domain} $V$ 
     The image of the natural continuous map $\Sp A_V\rightarrow \Sp A$ contains $V$ and the map does not depend on the choice of the covering up to the canonical isomorphism between $\Sp A_V$ for different coverings.
 \end{lemma}
 \begin{proof}
-    We first observe that $A_V$ is a Banach $k$-algebra as it is defined as an equalizer. This follows from \cref{Banach-lma-equalizerbanach} in the chapter Banach Rings.
+    We first observe that $A_V$ is a Banach $k$-algebra as it is defined as an equalizer. This follows from \cref{Banach-lma-equalizerbanach} in \nameref{Banach-chap-Banach}.
 
     Let $\{\Sp B_j\}_{j=1,\ldots,m}$ be another $k_H$-affinoid covering of $\Sp A$. We need to show that $A_V$ defined using the two coverings are canonically isomorphic. We write $A_V'$ for  
     \[
@@ -35,7 +35,7 @@ Let $A$ be a $k_H$-affinoid algebra. A \emph{compact $k_H$-analytic domain} $V$ 
     to make a distinction.
     We write $B_{ij}=B_i\hat{\otimes}_A B_j$. 
     
-    By \cref{Affinoid-thm-Tateacyc} in the chapter Affinoid Algebras, the colomns in the following commutative diagram are exact:
+    By \cref{Affinoid-thm-Tateacyc} in \nameref{Affinoid-chap-affinoid}, the colomns in the following commutative diagram are exact:
     \[
         \begin{tikzcd}
             &                                 & 0 \arrow[d]                                                                             &  & 0 \arrow[d]                                                       \\
@@ -70,7 +70,7 @@ Let $A$ be a $k_H$-affinoid algebra. A \emph{compact $k_H$-analytic domain} $V$ 
     \end{enumerate}
 \end{proposition}
 \begin{proof}
-    (1) $\implies$ (2): By \cref{Affinoid-thm-Tateacyc} in the chapter Affinoid Algebras, when $V$ is a $k_H$-affinoid domain, $A_V$ is a $k_H$-affinoid algebra and the structure map corresponds to the inclusion of the $k_H$-affinoid domain. There is nothing to prove.
+    (1) $\implies$ (2): By \cref{Affinoid-thm-Tateacyc} in \nameref{Affinoid-chap-affinoid}, when $V$ is a $k_H$-affinoid domain, $A_V$ is a $k_H$-affinoid algebra and the structure map corresponds to the inclusion of the $k_H$-affinoid domain. There is nothing to prove.
 
     (2) $\implies$ (1): It suffices to show that the structure map represents the $k_H$-affinoid domain $V$. Take a $k_H$-affinoid algebra $D$ and a morphism $\Sp D\rightarrow \Sp A$ of $k_H$-affinoid spectra that factorizes through $V$. We need to construct a morphism $\Sp D\rightarrow \Sp A_V$ making the following diagram commutative
     \[
@@ -80,7 +80,7 @@ Let $A$ be a $k_H$-affinoid algebra. A \emph{compact $k_H$-analytic domain} $V$ 
         \end{tikzcd}.    
     \]
     
-    Take $k_H$-affinoid domains $\Sp B_1,\ldots,\Sp B_n$ in $\Sp A$ that cover $V$. Let $C_i=B_i\hat{\otimes}_A D$ for $i=1,\ldots,n$, then $\Sp C_i$ is a $k_H$-affinoid domain in $\Sp D$ by \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras. By \cref{Affinoid-thm-Tateacyc} in the chapter Affinoid Algebras and general abstract nonsense, it suffices to construct the dotted arrow after restricting to $\Sp C_i$ for $i=1,\ldots,n$. So we could assume that $\Sp D\rightarrow \Sp A$ factorizes through $\Sp B_1$. From the universal property, we therefore have the dotted morphism making the following diagram commutative:
+    Take $k_H$-affinoid domains $\Sp B_1,\ldots,\Sp B_n$ in $\Sp A$ that cover $V$. Let $C_i=B_i\hat{\otimes}_A D$ for $i=1,\ldots,n$, then $\Sp C_i$ is a $k_H$-affinoid domain in $\Sp D$ by \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid}. By \cref{Affinoid-thm-Tateacyc} in \nameref{Affinoid-chap-affinoid} and general abstract nonsense, it suffices to construct the dotted arrow after restricting to $\Sp C_i$ for $i=1,\ldots,n$. So we could assume that $\Sp D\rightarrow \Sp A$ factorizes through $\Sp B_1$. From the universal property, we therefore have the dotted morphism making the following diagram commutative:
     \[
         \begin{tikzcd}
             \Sp D \arrow[rd] \arrow[d, dotted] &       \\
@@ -152,13 +152,13 @@ By Condition~(2), it $W\subseteq U\subseteq V$ are three sets in $\tau$, then $\
     Let $(X,\mathcal{A},\tau)$ be a $k_H$-analytic space, $U\in \tau$ and $W$ is a $k_H$-affinoid domain in $U$. Then for any $V\in \tau$ containing $W$, $W$ is a $k_H$-affinoid domain in $V$.
 \end{lemma}
 \begin{proof}
-    As $\tau|_{U\cap V}$ is a net and $W$ is compact, we can find $U_1,\ldots,U_n\in \tau_{U\cap V}$ with $W\subseteq U_1\cup \cdots\cup  U_n$. As $W$, $U_i$ are $k_H$-affinoid domains in $U$, $W_i=W\cap U_i$ is a $k_H$-affinoid domain in $U_i$ for all $i=1,\ldots,n$ by \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras. It follows from \cref{Affinoid-cor-affinoiddomaintransi} and \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras that $W_i$ and $W_i\cap W_j$ are both $k_H$-affinoid domains in $V$ for $i,j=1,\ldots,n$. So $W$ is a compact $k_H$-analytic domain in $V$.
+    As $\tau|_{U\cap V}$ is a net and $W$ is compact, we can find $U_1,\ldots,U_n\in \tau_{U\cap V}$ with $W\subseteq U_1\cup \cdots\cup  U_n$. As $W$, $U_i$ are $k_H$-affinoid domains in $U$, $W_i=W\cap U_i$ is a $k_H$-affinoid domain in $U_i$ for all $i=1,\ldots,n$ by \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid}. It follows from \cref{Affinoid-cor-affinoiddomaintransi} and \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid} that $W_i$ and $W_i\cap W_j$ are both $k_H$-affinoid domains in $V$ for $i,j=1,\ldots,n$. So $W$ is a compact $k_H$-analytic domain in $V$.
 
     By \cref{prop-compactanalydomainaffinoid},
     \[
         A_W:=\ker  \left( \prod_{i=1}^n A_{W_i} \rightarrow \prod_{i,j=1}^n A_{W_i\cap W_j}\right)
     \]
-    is $k_H$-affinoid and $\Sp A_W\rightarrow \Sp A$ induces a hoemomorphism $\Sp A_W\rightarrow W$ by \cref{Affinoid-prop-affdomainhoemo} in the chatper Affinoid Algebras. By \cref{prop-compactanalydomainaffinoid} again, $W$ is affinoid in $V$. 
+    is $k_H$-affinoid and $\Sp A_W\rightarrow \Sp A$ induces a hoemomorphism $\Sp A_W\rightarrow W$ by \cref{Affinoid-prop-affdomainhoemo} in \nameref{Affinoid-chap-affinoid}. By \cref{prop-compactanalydomainaffinoid} again, $W$ is affinoid in $V$. 
 \end{proof}
 
 \begin{definition}
@@ -179,7 +179,7 @@ By Condition~(2), it $W\subseteq U\subseteq V$ are three sets in $\tau$, then $\
 
     By \cref{lma-innetaffinoneaffinall}, $U$ (resp. $V$) and $W_1,\ldots,W_n$ are $k_H$-affinoid domains in $U'$ (resp. $V'$).
 
-    By \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras, $U_i:=U\cap W_i$ (resp. $V_i:=V\cap W_i$) is a $k_H$-affinoid domain in $W_i$  for $i=1,\ldots,n$. By \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras again, $U_i\cap V_i$ is a $k_H$-affinoid domain in $W_i$ for $i=1,\ldots,n$. So $U_i\cap V_i\in \bar{\tau}|_{U\cap V}$ for $i=1,\ldots,n$. But
+    By \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid}, $U_i:=U\cap W_i$ (resp. $V_i:=V\cap W_i$) is a $k_H$-affinoid domain in $W_i$  for $i=1,\ldots,n$. By \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid} again, $U_i\cap V_i$ is a $k_H$-affinoid domain in $W_i$ for $i=1,\ldots,n$. So $U_i\cap V_i\in \bar{\tau}|_{U\cap V}$ for $i=1,\ldots,n$. But
     \[
         \bigcup_{i=1}^n U_i\cap V_i=(U\cap V)\cap \bigcup_{i=1}^n W_i,  
     \]
@@ -196,7 +196,7 @@ By Condition~(2), it $W\subseteq U\subseteq V$ are three sets in $\tau$, then $\
     \[
         U=\bigcup_{i=1}^n U_i.  
     \]
-    By \cref{lma-innetaffinoneaffinall}, $U_1,\ldots,U_n$ are $k_H$-affinoid domains in $U'$ and in $V$. By \cref{Affinoid-thm-Tateacyc} in the chapter Affinoid Algebras,
+    By \cref{lma-innetaffinoneaffinall}, $U_1,\ldots,U_n$ are $k_H$-affinoid domains in $U'$ and in $V$. By \cref{Affinoid-thm-Tateacyc} in \nameref{Affinoid-chap-affinoid},
     \[
         A_U\cn \ker \left( \prod_{i=1}^n A_{U_i}\rightarrow \prod_{i,j=1}^n A_{U_i\cap U_j} \right).  
     \]
@@ -238,11 +238,11 @@ We will continue our identifications as in \cref{rmk-affdomainident} to simplify
     \[
         \varphi(U)\subseteq W_1\cup\cdots\cup W_n.
     \]
-    Now $W_i$ is a $k_H$-affinoid domain in $W'$ by \cref{lma-innetaffinoneaffinall}, so $V_i:=\varphi^{-1}_{V/W'}(W_i)$ is an affinoid domain in $V$ by \cref{Affinoid-cor-fiberproductaffdomain} in the chatper Affinoid Algebras and we have an induced morphism $V_i\rightarrow W_i$ for $i=1,\ldots,n$. This morphism in turn induces a morphism of $k_H$-affinoid spectra
+    Now $W_i$ is a $k_H$-affinoid domain in $W'$ by \cref{lma-innetaffinoneaffinall}, so $V_i:=\varphi^{-1}_{V/W'}(W_i)$ is an affinoid domain in $V$ by \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid}, and we have an induced morphism $V_i\rightarrow W_i$ for $i=1,\ldots,n$. This morphism in turn induces a morphism of $k_H$-affinoid spectra
     \[
         U_i:=U\cap V_i\rightarrow U_i':=U'\cap W_i  \rightarrow U'
     \]
-    for $i=1,\ldots,n$. These morphisms are compatible on their intersections by construction. So by \cref{Affinoid-thm-Tateacyc} in the chapter Affinoid Algebras, they glue together to a morphism of $k_H$-affinoid spectra $\bar{\varphi}_{U/U'}:U\rightarrow U'$. It is easy to see that this construction defines a strong morphism.
+    for $i=1,\ldots,n$. These morphisms are compatible on their intersections by construction. So by \cref{Affinoid-thm-Tateacyc} in \nameref{Affinoid-chap-affinoid}, they glue together to a morphism of $k_H$-affinoid spectra $\bar{\varphi}_{U/U'}:U\rightarrow U'$. It is easy to see that this construction defines a strong morphism.
 
     As for the uniqueness, it suffices to show that the morphism $U_i\rightarrow U'_i$ is uniquely determined for $i=1,\ldots,n$. In other words, we need to show that the dotted arrow that makes the following diagram commutes is unique:
     \[
@@ -264,7 +264,7 @@ We will continue our identifications as in \cref{rmk-affdomainident} to simplify
     
     Let $\bar{\varphi}$ and $\bar{\psi}$ be the extensions of  $\varphi$ and $\psi$ to $\bar{\tau}$ and $\overline{\tau'}$ as in \cref{prop-strongmorphismext}. 
     
-    Given $V\in \tau$ and $V''\in \tau''$ with $\chi(V)\subseteq V''$, we need to define a morphism of $k_H$-affinoid spectra $\chi_{V/V''}:V\rightarrow V''$. Take $V'\in \tau'$ and $U''\in \tau''$ such that $\varphi(V)\subseteq V'$ and $\psi(V')\subseteq U''$. Since $\chi(V)\subseteq U''\cap V''$ and $V$ is compact, we can take $n\in \mathbb{Z}_{>0}$ and $V_1'',\ldots,V_n''\in \tau''|_{U''\cap V''}$ with $\chi(V)\subseteq V_1''\cup\cdots\cup V_n''$. Then $V_i':=\psi^{-1}_{V'/U''}(V_i'')$ and $V_i:=\varphi_{V/V'}^{-1}(V_i')$ are $k_H$-affinoid domains in $V'$ and $V$ respectively for $i=1,\ldots,n$ and $V=V_1\cup\cdots\cup V_n$. The morphisms $\bar{\varphi}$ and $\bar{\psi}$ then induce a morphism $V_i\rightarrow V_i''\rightarrow V$ of $k_H$-affinoid spectra. These morphisms are clearly compatible on the intersections and hence induce a morphism $V\rightarrow V''$ of $k_H$-affinoid spectra by \cref{Affinoid-thm-Tateacyc} in the chapter Affinoid Algebras.
+    Given $V\in \tau$ and $V''\in \tau''$ with $\chi(V)\subseteq V''$, we need to define a morphism of $k_H$-affinoid spectra $\chi_{V/V''}:V\rightarrow V''$. Take $V'\in \tau'$ and $U''\in \tau''$ such that $\varphi(V)\subseteq V'$ and $\psi(V')\subseteq U''$. Since $\chi(V)\subseteq U''\cap V''$ and $V$ is compact, we can take $n\in \mathbb{Z}_{>0}$ and $V_1'',\ldots,V_n''\in \tau''|_{U''\cap V''}$ with $\chi(V)\subseteq V_1''\cup\cdots\cup V_n''$. Then $V_i':=\psi^{-1}_{V'/U''}(V_i'')$ and $V_i:=\varphi_{V/V'}^{-1}(V_i')$ are $k_H$-affinoid domains in $V'$ and $V$ respectively for $i=1,\ldots,n$ and $V=V_1\cup\cdots\cup V_n$. The morphisms $\bar{\varphi}$ and $\bar{\psi}$ then induce a morphism $V_i\rightarrow V_i''\rightarrow V$ of $k_H$-affinoid spectra. These morphisms are clearly compatible on the intersections and hence induce a morphism $V\rightarrow V''$ of $k_H$-affinoid spectra by \cref{Affinoid-thm-Tateacyc} in \nameref{Affinoid-chap-affinoid}.
 
     It is easy to verify that $\psi\circ \varphi$ is a strong morphism.
 
@@ -348,7 +348,7 @@ Under our convention, the assumption means that $W_i\cap W_j\rightarrow W_i\time
 
 \begin{example}
     Let  $(X,\mathcal{A},\tau)$ be a $k_H$-analytic space.
-    Suppose that $V\in \tau$ and $W$ is a compact $k_H$-analytic domain in $V$. Let $n\in \mathbb{Z}_{>0}$ and $W=W_1\cup \cdots \cup W_n$  with $W_i\in \tau$, $W_i\cap W_j\in \tau$ for all $i,j=1,\ldots,n$. Then $\{W_i\}_i$ is a $\tau$-special covering of $W$. This follows from \cref{Affinoid-cor-spcatclosedimm} in the chapter Affinoid Algebras.
+    Suppose that $V\in \tau$ and $W$ is a compact $k_H$-analytic domain in $V$. Let $n\in \mathbb{Z}_{>0}$ and $W=W_1\cup \cdots \cup W_n$  with $W_i\in \tau$, $W_i\cap W_j\in \tau$ for all $i,j=1,\ldots,n$. Then $\{W_i\}_i$ is a $\tau$-special covering of $W$. This follows from \cref{Affinoid-cor-spcatclosedimm} in \nameref{Affinoid-chap-affinoid}.
 \end{example}
 
 
@@ -364,20 +364,20 @@ Under our convention, the assumption means that $W_i\cap W_j\rightarrow W_i\time
     Let $n\in \mathbb{Z}_{>0}$ and $W_1,\ldots,W_n$ be a $\tau$-special covering of $W$.
     As $U\cap W_i$ and $V\cap W_i$ are compact for $i=1,\ldots,n$, we can find $m_i\in \mathbb{Z}_{>0}$ (resp. $k_i\in \mathbb{Z}_{>0}$) and finite coverings $U_{i1},\ldots,U_{im_i}\in \tau$ of $U\cap W_i$ (resp. $V_{i1},\ldots,V_{ik_i}\in \tau$ of $V\cap W_i$). 
 
-    Observe that $U_{ik}\cap V_{jl}$ is a $k_H$-affinoid domain in $U\cap V$, hence $U_{ik}\cap V_{jl}\in \bar{\tau}$ for any $i,j=1,\ldots,n$, $k=1,\ldots,m_i$ and $l=1,\ldots,k_l$. By \cref{Affinoid-prop-closedimmbasechange} in the chapter Affinoid Algebras, $U_{ik}\cap V_{jl}\rightarrow U_{ik}\times V_{jl}$ is a closed immersion since $W_i\cap W_j\rightarrow W_i\times W_j$ is by our assumption. 
+    Observe that $U_{ik}\cap V_{jl}$ is a $k_H$-affinoid domain in $U\cap V$, hence $U_{ik}\cap V_{jl}\in \bar{\tau}$ for any $i,j=1,\ldots,n$, $k=1,\ldots,m_i$ and $l=1,\ldots,k_l$. By \cref{Affinoid-prop-closedimmbasechange} in \nameref{Affinoid-chap-affinoid}, $U_{ik}\cap V_{jl}\rightarrow U_{ik}\times V_{jl}$ is a closed immersion since $W_i\cap W_j\rightarrow W_i\times W_j$ is by our assumption. 
     
     Consider the finite convering 
     \[
         \mathcal{U}:=\left\{U_{ik}\times V_{jl}:i,j=1,\ldots,n; k=1,\ldots,m_i; l=1,\ldots,k_l \right\}
     \]
-    of $U\times V$. For each tuple $(i,j,k,l)$, $A_{U_{ik}\cap V_{jl}}$ is a finite $A_{U_{ik}\times V_{jl}}$-algebra. By \cref{Affinoid-thm-Kiehl} in the chapter Affinoid Algebras, we can construct a finite $A_{U\times V}$-algebra $A_{U\cap V}$ inducing all of these $A_{U_{ik}\cap V_{jl}}$'s. By \cref{Affinoid-prop-strictlykafffinite2} in the chapter Affinoid Algebras, $A_{U\cap V}$ is $k_H$-affinoid.
+    of $U\times V$. For each tuple $(i,j,k,l)$, $A_{U_{ik}\cap V_{jl}}$ is a finite $A_{U_{ik}\times V_{jl}}$-algebra. By \cref{Affinoid-thm-Kiehl} in \nameref{Affinoid-chap-affinoid}, we can construct a finite $A_{U\times V}$-algebra $A_{U\cap V}$ inducing all of these $A_{U_{ik}\cap V_{jl}}$'s. By \cref{Affinoid-prop-strictlykafffinite2} in \nameref{Affinoid-chap-affinoid}, $A_{U\cap V}$ is $k_H$-affinoid.
 
-    As $\mathcal{U}$ is a finite $k_H$-affinoid covering of $U\times V$, $\{A_{U_{ik}\cap V_{jl}}\}_{i,k,j,l}$ is a finite $k_H$-affinoid covering of $U\cap V$ by \cref{Affinoid-cor-fiberproductaffdomain} in the chapter Affinoid Algebras.
+    As $\mathcal{U}$ is a finite $k_H$-affinoid covering of $U\times V$, $\{A_{U_{ik}\cap V_{jl}}\}_{i,k,j,l}$ is a finite $k_H$-affinoid covering of $U\cap V$ by \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid}.
     In particular, we have a natural homeomorphism
     \[
         \Sp A_{U\cap V}\cn U\cap V.  
     \]
-    Observe that $A_U\hat{\otimes}_k A_V \rightarrow A_{U\cap V}$ is surjective. We endow $A_{U\cap V}$ with the structure of finite $A_U\hat{\otimes}_k A_V$-Banach algebras by \cref{Affinoid-prop-Banachalgebrafiniteforget} in the chapter Affinoid Algebras. Then $A_U\hat{\otimes}_k A_V \rightarrow A_{U\cap V}$ is an admissible epimorphism by \cref{Affinoid-prop-finitemodulemapadmi} in the chapter Affinoid Algebras.
+    Observe that $A_U\hat{\otimes}_k A_V \rightarrow A_{U\cap V}$ is surjective. We endow $A_{U\cap V}$ with the structure of finite $A_U\hat{\otimes}_k A_V$-Banach algebras by \cref{Affinoid-prop-Banachalgebrafiniteforget} in \nameref{Affinoid-chap-affinoid}. Then $A_U\hat{\otimes}_k A_V \rightarrow A_{U\cap V}$ is an admissible epimorphism by \cref{Affinoid-prop-finitemodulemapadmi} in \nameref{Affinoid-chap-affinoid}.
 
     On the other hand $U\cap V$ is a compact $k_H$-analytic domain in $U$, so by \cref{prop-compactanalydomainaffinoid}, $U\cap V$ is a $k_H$-affinoid in $U$. In particular, $U\cap V\in \bar{\tau}$.
 \end{proof}
@@ -405,7 +405,7 @@ Under our convention, the assumption means that $W_i\cap W_j\rightarrow W_i\time
 
     The sets from $\hat{\tau}$ are called \emph{$k_H$-affinoid domains in $(X,\mathcal{A},\tau)$}.
 \end{definition}
-Observe that $W$ is $k_H$-affinoid and $W_i$ is a $k_H$-affinoid domain in $W$ by \cref{Affinoid-cor-coveringkhimplykh} in the chapter Affinoid Algebras. Condition~(3) holds for any $\bar{\tau}$-special covering.
+Observe that $W$ is $k_H$-affinoid and $W_i$ is a $k_H$-affinoid domain in $W$ by \cref{Affinoid-cor-coveringkhimplykh} in \nameref{Affinoid-chap-affinoid}. Condition~(3) holds for any $\bar{\tau}$-special covering.
 
 \begin{proposition}\label{prop-tauhatbasic}
     Let  $(X,\mathcal{A},\tau)$ be a $k_H$-analytic space. Then $\hat{\tau}$ is a net. For any net $\sigma$ on $X$ contained in $\bar{\tau}$, we have $\hat{\sigma}=\hat{\tau}$.
@@ -419,7 +419,7 @@ Observe that $W$ is $k_H$-affinoid and $W_i$ is a $k_H$-affinoid domain in $W$ b
     \[
         V\subseteq W_1\cup \cdots\cup W_m.  
     \]
-    As $V,W_j\in \bar{\tau}$ for $j=1,\ldots,m$, by \cref{Topology-lma-netproperty1} in the chapter Topology and Bornology, we can find $U_1,\ldots,U_n\in \bar{\tau}$ such that $V=U_1\cup\cdots\cup U_n$ and each $U_i$ is contained in some $W_j$. As $W_j\in \sigma$ for $j=1,\ldots,m$, it follows that $U_i\in \bar{\sigma}$ for $i=1,\ldots,n$.
+    As $V,W_j\in \bar{\tau}$ for $j=1,\ldots,m$, by \cref{Topology-lma-netproperty1} in \nameref{Topology-chap-topology}, we can find $U_1,\ldots,U_n\in \bar{\tau}$ such that $V=U_1\cup\cdots\cup U_n$ and each $U_i$ is contained in some $W_j$. As $W_j\in \sigma$ for $j=1,\ldots,m$, it follows that $U_i\in \bar{\sigma}$ for $i=1,\ldots,n$.
 
     By \cref{lma-tauspecialanycov}, 
     \[
