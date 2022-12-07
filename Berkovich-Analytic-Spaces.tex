@@ -395,7 +395,7 @@ Under our convention, the assumption means that $W_i\cap W_j\rightarrow W_i\time
     It follows from \cref{lma-tauspecialanycov} that the covering $\{W_i\}_{i\in I}$ is $\tau$-special. It suffices to apply the same argument of \cref{lma-compactanalyticdomainring}.
 \end{proof}
 
-\begin{definition}
+\begin{definition}\label{def-tauhat}
     Let  $(X,\mathcal{A},\tau)$ be a $k_H$-analytic space. Let $\hat{\tau}$ denote the collection of $\bar{\tau}$-special subsets $W\subseteq X$ such that 
     \begin{enumerate}
         \item $A_W$ is $k$-affinoid;
@@ -406,6 +406,9 @@ Under our convention, the assumption means that $W_i\cap W_j\rightarrow W_i\time
     The sets from $\hat{\tau}$ are called \emph{$k_H$-affinoid domains in $(X,\mathcal{A},\tau)$}.
 \end{definition}
 Observe that $W$ is $k_H$-affinoid and $W_i$ is a $k_H$-affinoid domain in $W$ by \cref{Affinoid-cor-coveringkhimplykh} in \nameref{Affinoid-chap-affinoid}. Condition~(3) holds for any $\bar{\tau}$-special covering.
+
+
+
 
 \begin{proposition}\label{prop-tauhatbasic}
     Let  $(X,\mathcal{A},\tau)$ be a $k_H$-analytic space. Then $\hat{\tau}$ is a net. For any net $\sigma$ on $X$ contained in $\bar{\tau}$, we have $\hat{\sigma}=\hat{\tau}$.
@@ -518,6 +521,117 @@ In practice, we do not distinguish a $k_H$-analytic space from the isomorphic $k
     The category of $k_H$-affinoid spaces is denoted by $k_H\text{-}\AffCat$.
 \end{definition}
 The notation for the category of $k_H$-affinoid spaces is the same as the notation for the category of $k_H$-affinoid spectra, as the two categories are canonically equivalent.
+
+\section{Analytic domains}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
+
+\begin{definition}\label{def-khanalyticdomain}
+    Let $X$ be a $k_H$-analytic space. A subset $Y\subseteq X$ is called a \emph{$k_H$-analytic domain} if for any $y\in Y$, there exist $n\in \mathbb{Z}_{>0}$, $k_H$-affinoid domains $V_1,\ldots,V_n$ contained in $Y$ such that
+    \begin{enumerate}
+        \item $y\in V_1\cap \cdots\cap V_n$;
+        \item $V_1\cup\cdots\cup V_n$ is a neighbourhood of $y$ in $Y$.
+    \end{enumerate}
+\end{definition}
+Observe that the net of $k_H$-affinoid domains in $X$ that are contained in $Y$ form a net on $Y$. In particular, $Y$ inherits a $k_H$-analytic space structure from $X$, and we have a canonical morphism $Y\rightarrow X$ in $k_H\text{-}\AnaCat$.
+
+\begin{example}\label{ex-opensubspace}
+    Let $X$ be a $k_H$-analytic space. Then any open subset $U$ of $X$ is a $k_H$-analytic domain. 
+
+    In fact, for $x\in U$, take $V_1,\ldots,V_n$ as in \cref{def-khanalyticdomain}. By \cref{Affinoid-prop-laurentdomainfundamental} in \nameref{Affinoid-chap-affinoid}, up to replacing $V_i$'s by $k_H$-Laurent domains in them, we may guarantee that $V_i\subseteq U$ for all $i=1,\ldots,n$.
+\end{example}
+
+
+\begin{proposition}\label{prop-analyticdomainprop}
+    Let $X$, $X'$ be $k_H$-analytic spaces and $\varphi:X'\rightarrow X$ a morphism of $k_H$-analytic spaces. 
+    \begin{enumerate}
+        \item Let $Y,Z$ be $k_H$-analytic domains in $X$, then so is $Y\cap Z$.
+        \item Let $Y$ be a $k_H$-analytic domain in $X$, then $\varphi^{-1}(Y)$ is a $k_H$-analytic domain in $X'$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (1) Let $x\in Y\cap Z$. Take $k_H$-affinoid domains $V_1,\ldots,V_n$ contained in $Y$ and $k_H$-affinoid domains $W_1,\ldots,W_m$ contained in $Z$ such that
+    \[
+        x\in V_1\cap \cdots\cap V_n,\quad x\in W_1\cap \cdots \cap W_m
+    \]
+    and $V_1\cup\cdots\cup V_n$ is a neighbourhood of $x$ in $Y$, $W_1\cup\cdots\cup W_m$ is a neighbourhood of $x$ in $Z$. For each $i=1,\ldots,n$ and $j=1,\ldots,m$, $\hat{\tau}|_{V_i\cap W_j}$ is a quasi-net, so we can find a neighbourhood of $x$ in $V_{i}\cap W_j$ of the form $U^{ij}_1\cup \cdots\cup U^{ij}_{m_{ij}}$ with $U^{ij}_1,\ldots,U^{ij}_{m_{ij}}$ being $k_H$-affinoid domains in $X$ containing $x$. Then each element in the collection $\{U^{ij}_k\}$ contains $x$ and the union is a neighbourhood of $x$ in $Y\cap Z$.
+
+    (2) Let $x'\in \varphi^{-1}(Y)$ and $x=\varphi(x')$.
+    By \cref{prop-morphismkhanalyt}, we can find $n\in \mathbb{Z}_{>0}$, $k_H$-affinoid domains $V_1',\ldots,V_n'$ on $X'$ and $k_H$-affinoid domains $V_1,\ldots,V_n$ on $X$ such that 
+    \[
+        \begin{aligned}
+        x'\in V_1'\cap \cdots\cap V_n',\quad x\in V_1\cap \cdots\cap V_m,  \\
+        \varphi(V_i')\subseteq V_i\text{ for }i=1,\ldots,n,
+        \end{aligned}
+    \]
+    and $V'_1\cup\cdots\cup V'_n$ (resp. $V_1\cup\cdots\cup V_n$) is a neighbourhood of $x'$ (resp. $x$) in $X'$ (resp. $X$). 
+    Take $k_H$-affinoid domains $W_1,\ldots,W_m$ in $X$ contained in $Y$, each containing $x$ such that $W_1\cup\cdots\cup W_m$ is a neighbourhood of $x$ in $Y$. 
+    
+    Then for each $i=1,\ldots,n$, $j=1,\ldots,m$, we can find $k_H$-affinoid domains $W_{ij}^k$ for $k=1,\ldots,r_{ij}$ contained in $W_j\cap V_i$ and  containing $x$ such that $\cup_k W_{ij}^k$ is a neighbourhood of $x$ in $W_j\cap V_i$. Thus, $\cup_{j,k} W_{ij}^k$ is a neighbourhood of $x$ in $V_i\cap Y$.
+    Then $U_{ij}^k:=\varphi^{-1}(V_{ij}^k)\cap V_{i}'$ is a $k_H$-affinoid domain in $V_i'$ by \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid}. Moreover, $\cup_{j,k} U_{ij}^k$ is a neighbourhood of $x'$ in $V_i'\cap Y'$. So $\cup_{i,j,k} U_{ij}^k$ is a neighbourhood of $x'$ in $Y'$.
+\end{proof}
+
+\begin{proposition}\label{prop-univpropanalyticdomain}
+    Let $X$ be a $k_H$-analytic space and $Y$ be a $k_H$-analytic domain in $X$. Then for any $k_H$-analytic space $Z$ and any morphism $\varphi:Z\rightarrow X$ whose image is contained in $Y$, there is a unique morphism $\psi:Z\rightarrow Y$ such that the following diagram commutes:
+    \[
+        \begin{tikzcd}
+            Z \arrow[d, "\psi", dotted] \arrow[rd, "\varphi"] &   \\
+            Y \arrow[r]                                       & X
+        \end{tikzcd}.  
+    \]
+\end{proposition}
+\begin{proof}
+    The uniqueness of $\psi$ is obvious. We only need to prove the existence. 
+    This is an immediate consequence of \cref{prop-morphismkhanalyt} and \cref{prop-analyticdomainprop}.
+
+    To be more precise, assume that $\varphi$ is given by a data as in \cref{prop-morphismkhanalyt}, we only have to show that each $k_H$-affinoid domain $V$ in $X$, $V\cap Y$ is a $k_H$-affinoid domain in $Y$. This follows from \cref{prop-analyticdomainprop}.
+\end{proof}
+
+
+\begin{definition}
+    Let $X,Y$ be $k_H$-analytic spaces and $\varphi:Y\rightarrow X$ be a morphism. We say $\varphi$ is an \emph{open immersion} if $\varphi(Y)$ is open in $X$ and $\varphi$ induces an isomorphism between $Y$ and $\varphi(Y)$ as $k_H$-analytic spaces. 
+\end{definition}
+By \cref{ex-opensubspace}, $\varphi(Y)$ is a $k_H$-analytic domain in $X$ and by \cref{prop-univpropanalyticdomain}, we have a morphism of $k_H$-analytic spaces $Y\rightarrow \varphi(Y)$.
+
+\begin{proposition}
+    Let $X$ be a $k_H$-analytic space and $Y$ be a $k_H$-analytic domain in $X$.  Assume that $Y$ is a $k_H$-affinoid space, then $Y$ is a $k_H$-affinoid domain in $X$.
+\end{proposition}
+\begin{proof}
+    As $Y$ is a $k_H$-affinoid space, we know that $|Y|$ is compact. Take finitely many $k_H$-affinoid domains $V_1,\ldots,V_n$ in $X$ such that
+    \[
+        Y=V_1\cup\cdots\cup V_n.  
+    \]
+    Then $V_1,\ldots,V_n$ are $k_H$-affinoid domains in $Y$: let $\Sp D\rightarrow Y$ be a morphism of $k_H$-affinoid spectra, whose image lies in  $V_i$ for some $i=1,\ldots,n$. Consider the following commutative diagram
+    \[
+        \begin{tikzcd}
+            & \Sp D \arrow[ld, dotted] \arrow[d] \arrow[rd] &   \\
+        V_i \arrow[r] & Y \arrow[r]                                   & X
+        \end{tikzcd}  
+    \] 
+    By \cref{prop-univpropanalyticdomain}, there is a unique dotted morphism making the outer triangle commutative, hence making the whole diagram commutative. We have therefore shown that $V_i$ is a $k_H$-affinoid domain in $Y$.
+
+    So the covering $\{V_1,\ldots,V_n\}$ of $Y$ satisfies the assumptions in \cref{def-tauhat} and $Y$ is $k_H$-affinoid.
+\end{proof}
+
+
+
+
+\section{Reduction}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
+\begin{definition}
+    A \emph{punctured $k_H$-analytic space} $(X,x)$ is a $k_H$-analytic space $X$ together with a point $x\in X$.
+
+    A morphism between punctured $k_H$-analytic spaces $(X,x)$ and $(Y,y)$ is a morphism $\varphi:X\rightarrow Y$ of $k_H$-analytic spaces sending $x$ to $y$.
+
+    The category of punctured $k_H$-analytic spaces is denoted by $k_H\text{-}\AnaCat_*$.
+\end{definition}
+
+\begin{definition}
+    The category $k_H\text{-}\GerCat$ is the category of right fractions of $k_H\text{-}\AnaCat_*$ with respect to the system of morphisms
+    \[
+        \varphi:(X,x)\rightarrow (Y,y)  
+    \]
+    that induces an isomorphism of $X$ with an open neighbourhood of $y$ in $Y$.
+\end{definition}
 
 \begin{thm}
     Let $H'\supseteq H$ be a subgroup of $\mathbb{R}_{>0}$. The natural functor

@@ -1176,16 +1176,10 @@ INPUT ./Introduction.tex
 INPUT Introduction.tex
 INPUT ./Topology-Bornology.tex
 INPUT Topology-Bornology.tex
-INPUT Banach-Rings.aux
 INPUT ./Banach-Rings.tex
 INPUT Banach-Rings.tex
-INPUT ./Banach-Rings.aux
-INPUT Banach-Rings.aux
-INPUT Commutative-Algebra.aux
 INPUT ./Commutative-Algebra.tex
 INPUT Commutative-Algebra.tex
-INPUT ./Commutative-Algebra.aux
-INPUT Commutative-Algebra.aux
 INPUT ./Local-Algebras.tex
 INPUT Local-Algebras.tex
 INPUT ./Complex-Analytic-Spaces.tex
