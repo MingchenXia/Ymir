@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  8 DEC 2022 20:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  8 DEC 2022 21:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1145,13 +1145,14 @@ LaTeX Warning: Reference `Topology-lma-quasinetopenset' on page 1 undefined on i
 
 LaTeX Warning: Reference `Topology-chap-topology' on page 20 undefined on input line 760.
 
-[20] [21]
+[20]
 
 LaTeX Warning: cref reference format for label type `' undefined on input line 840.
 
 
 LaTeX Warning: cref reference format for label type `' undefined on input line 840.
 
+[21]
 
 LaTeX Warning: cref reference format for label type `' undefined on input line 844.
 
@@ -1165,9 +1166,7 @@ LaTeX Warning: Reference `Topology-lma-netproperty1' on page 1 undefined on inpu
 
 LaTeX Warning: Reference `Topology-chap-topology' on page 23 undefined on input line 913.
 
-[23] [24] [25] [26
-
-]
+[23] [24]
 Bibliography
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 984.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
@@ -1177,7 +1176,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [27] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.aux)
+ [25
+
+] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1186,18 +1187,18 @@ Package logreq Info: Writing requests to 'Berkovich-Analytic-Spaces.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38150 strings out of 478994
- 722261 string characters out of 5858185
+ 38148 strings out of 478994
+ 722247 string characters out of 5858185
  1561189 words of memory out of 5000000
  54498 multiletter control sequences out of 15000+600000
  464408 words of font info for 191 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  132i,17n,133p,1076b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf (27 pages, 375406 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf (25 pages, 374103 bytes).
 PDF statistics:
- 560 PDF objects out of 1000 (max. 8388607)
- 507 compressed objects within 6 object streams
- 138 named destinations out of 1000 (max. 500000)
+ 552 PDF objects out of 1000 (max. 8388607)
+ 501 compressed objects within 6 object streams
+ 136 named destinations out of 1000 (max. 500000)
  23125 words of extra memory for PDF output out of 24883 (max. 10000000)
 
