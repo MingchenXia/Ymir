@@ -24,11 +24,12 @@ Let $X$ be a set, $Y\subseteq X$ be a subset. Consider a collection $\tau$ of su
 \]
 
 \begin{definition}
-    Let $X$ be a topology space and $\tau$ be a collection of subsets of $X$. 
+    Let $X$ be a topology space and $\tau$ be a collection of subsets of $X$. We say $\tau$ is
     \begin{enumerate}
-        \item We say $\tau$ is \emph{dense} if for any $V\in \tau$ and any $x\in V$, there is a fundamental system of neighbourhoods of $x$ in $V$ consisting of sets from $\tau|_V$.
-        \item We say $\tau$ is a \emph{quasi-net} on $X$ if for each $x\in X$, there exist $n\in \mathbb{Z}_{>0}$, $V_1,\ldots,V_n\in \tau$ such that $x\in V_1\cap \cdots\cap V_n$ and that $V_1\cup\cdots\cup V_n$ is a neighbourhood of $x$ in $X$.
-        \item We say $\tau$ is a \emph{net} on $X$ if it is a quasi-net and if for any $U,V\in \tau$, $\tau|_{U\cap V}$ is a quasi-net on $U\cap V$.
+        \item \emph{dense} if for any $V\in \tau$ and any $x\in V$, there is a fundamental system of neighbourhoods of $x$ in $V$ consisting of sets from $\tau|_V$;
+        \item a \emph{quasi-net} on $X$ if for each $x\in X$, there exist $n\in \mathbb{Z}_{>0}$, $V_1,\ldots,V_n\in \tau$ such that $x\in V_1\cap \cdots\cap V_n$ and that $V_1\cup\cdots\cup V_n$ is a neighbourhood of $x$ in $X$;
+        \item a \emph{net} on $X$ if it is a quasi-net and if for any $U,V\in \tau$, $\tau|_{U\cap V}$ is a quasi-net on $U\cap V$;
+        \item \emph{locally finite} if for any $x\in X$, there is a neighbourhood $U$ of $x$ in $X$ such that $\{V\in \tau:V\cap U\neq \emptyset\}$ is finite.
     \end{enumerate}
 \end{definition}
 We observe that if $\tau$ is a net, $\tau|_{U\cap V}$ is in fact a net.
@@ -92,6 +93,7 @@ We remind the readers that a compact space is Hausdorff by our convention.
     
     (2) For each $x\in V$ and each $i=1,\ldots,n$ such that $x\in V_i$, we take a neighbourhood of $x$ in $V\cap V_i$ of the form $W_iV_{i1}\cup\cdots\cup V_{im_i}$ for some $m_i\in \mathbb{Z}_{>0}$ and $V_{ij}\in \tau$ for $j=1,\ldots,m_i$. Then the union of all $W_i$'s is a neighbourhood of $x$ of the form $U_1\cup \cdots U_m$, where $U_j$ belongs to $\tau$ and is contained in some $V_i$. Using the compactness of $V$, we conclude.
 \end{proof}
+
 
 \section{Bornology}
 \begin{definition}

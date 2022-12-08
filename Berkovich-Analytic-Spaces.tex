@@ -545,6 +545,84 @@ The notation for the category of $k_H$-affinoid spaces is the same as the notati
     It is clear that $\mathbb{A}^n_k$ has a structure of good $k_H$-analytic space.
 \end{example}
 
+\iffalse
+\begin{lemma}
+    Let $A$ be a $k$-affinoid algebra. Assume that the 
+\end{lemma}
+
+\begin{thm}
+    Let $A$ be a $k$-affinoid algebra. Assume that $\Sp A$ is connected, then $\Sp A$ is path-connected.
+\end{thm}
+\begin{proof}
+    
+\end{proof}
+\fi
+
+\begin{proposition}\label{prop-kanalyticspacelocal}
+    Let $X$ be a $k_H$-analytic space, $x\in X$ and $U$ be a neighbourhood of $x$ in $X$. Then there is a neighbourhood $V$ of $x$ in $X$ contained in $U$ such that $V$ is open connected locally compact paracompact and Hausdorff. Moreover, we can guarantee that $\bar{V}\subseteq U$ and $V$ is a countable union of $k_H$-affinoid domains.
+\end{proposition}
+\begin{proof}
+    Take $n\in \mathbb{Z}_{>0}$ and $k_H$-affinoid spaces $V_1,\ldots,V_n$ containing $x$ and $V_1\cup\cdots\cup V_n$ is a neighbourhood of $x$ in $X$. If we have proved the proposition for $V_i$ in place of $X$ and $U\cap V_i$ in place of $U$ for $i=1,\ldots,n$, namely, if we have found open connected locally compact paracompact and Hausdorff sets $W_i$ containing $x$ and contained in $U\cap V_i$ whose closure in $V_i$ is contained in $U\cap V_i$,
+    then we can take $V=W_1\cup\cdots\cup W_n$.
+
+    So we may assume that $X$ is a $k_H$-affinoid space, say $X=\Sp A$. Choose a $k_H$-rational neighbourhood 
+    \[
+        W=\Sp A\{r^{-1}\frac{f}{g}\}  
+    \]
+    of $x$ in $U$, where $n\in \mathbb{N}$,  $f=(f_1,\ldots,f_n)\in A^n$, $r\in \sqrt{|k^{\times}|\cdot H}^n$, $g\in A$ and $f_1,\ldots,f_n,g$ generate the unit ideal in $A$. This is possible by \cref{Affinoid-cor-Laurentdomainrational} and \cref{Affinoid-prop-laurentdomainfundamental} in \nameref{Affinoid-chap-affinoid}. 
+    Take $\delta>0$ so that $x\in \Sp A\{((1-\delta)r)^{-1}\frac{f}{g}\}$.
+    Choose a strictly increasing sequence $\epsilon_i\in (0,1)\cap \sqrt{|k^{\times}|\cdot H}$ converging to $1-\delta/2$ for $i\in \mathbb{Z}_{>0}$. Let 
+    \[
+        W_i=\Sp A\left\{ (\epsilon_i r)^{-1}\frac{f}{g} \right\}  
+    \]
+    for $i\in \mathbb{Z}_{>0}$.
+    Then $W_i$ lies in the interior of $W_{i+1}$ for $i\in \mathbb{Z}_{>0}$. Choose a connected component $V_i$ of $W_i$ so that $V_1\subseteq V_2\subseteq \cdots$ and $x\in V:=\bigcup_{i=1}^{\infty} V_i$. If $x\in V_i$ for some $i\in \mathbb{Z}_{>0}$, then $x$ lies in the topological interior of $V_{i+1}$. Hence, $x$ lies in the interior of $V$. By construction, $V$ is open connected paracompact locally compact and Hausdorff. Moreover, $\bar{V}\subseteq U$ by our construction.
+\end{proof}
+
+\begin{proposition}
+    Let $(X,\mathcal{A},\tau)$ be a paracompact Hausdorff $k_H$-analytic space. Then the locally finite nets are cofinal in the directed set of nets $\sigma$ on $X$ contained in $\hat{\tau}$. 
+\end{proposition}
+\textcolor{red}{Berkovich did not give a proof of this result, which seems to be rather difficult!}
+\begin{proof}
+    Let $\sigma$ be a net on $X$ contained in $\bar{\tau}$. We need to find a refinement $\eta$ of $\sigma$ contained in $\bar{\tau}$ that is locally finite.
+    We may assume that $X$ is connected, so that $X$ is $\sigma$-compact and hence Lindel\"of.
+
+    We first choose an open covering $\mathcal{U}$ of $X$ by open $\sigma$-compact Hausdorff and quasi-compact subsets. This is possible by \cref{prop-kanalyticspacelocal}.
+    Recall that open subsets of $\sigma$-compact Hausdorff and quasi-compact sets are $\sigma$-compact Hausdorff and quasi-compact. So up to replacing $\mathcal{U}$ by a refinement, we may assume that $\mathcal{U}$ is countable and locally finite. 
+    
+    Now we can choose a locally finite covering $\mathcal{V}_U$ of each $U\in \mathcal{U}$ by $k_H$-affinoid domains in $X$ which are contained in some element in $\sigma$. Let $\mathcal{V}=\bigcup_{U\in \mathcal{U}}\mathcal{V}_U$. Then $\mathcal{V}$ is a locally finite covering of $X$. 
+    
+    But $\mathcal{V}$ is not a net. We will include more sets to $\mathcal{V}$. Exhausting $X$ by compact subsets, we easily reduce to the case where $\mathcal{U}$ is finite, say there are $N$ sets in $\mathcal{U}$. 
+    Refining $\mathcal{V}$, we may assume that each pair of elements in $\mathcal{V}$ are either disjoint or both contained in a common $k_H$-affinoid domain in $X$. Then the collection of all finite intersections in $\mathcal{V}$ is a net.
+    
+    
+    \iffalse
+    
+    We define a collection $\mathcal{V}_i$ of subsets of $X$ consisting of finitely many $k$-affinoid domains that are contained in some set in $\sigma$ for $i=0,\ldots,N$. 
+    
+    We set $\mathcal{V}_0=\mathcal{V}$, let $\mathcal{U}_1$ be the set of pairwise intersections of sets from $\mathcal{V}_0$ that are not contained in $\mathcal{V}_0$. For each $U\in \mathcal{U}_1$, we cover $U$ by finitely many $k$-affinoid domains that are contained in some set in $\sigma$. We may assume that the covering is stable under finite intersections. Now we let $\mathcal{V}_1$ be the union of all these coverings of $U\in \mathcal{U}_2$.
+    Note that all sets in $\mathcal{V}_1$ are contained in the intersection of two different elements in $\mathcal{V}$. We let $\mathcal{U}_2$ be the set of pairwise intersection of elements in $\mathcal{V}_0\cup \mathcal{V}_1$ that are not in $\mathcal{V}_0\cup \mathcal{V}_1$. Cover each element $U$ in $\mathcal{U}_2$ by finitely many $k$-affinoid domains that are contained in some set in $\sigma$. The union of all these converings for $U\in \mathcal{U}_2$ is defined as $\mathcal{V}_2$. We may assume that the covering is stable under finite intersections.
+    Then each element in $\mathcal{V}_2$ is contained in at least three different elements in $U$. We continue this procedure to produce $\mathcal{V}_0,\ldots,\mathcal{V}_N$. Then any element in $\mathcal{V}_N$ is contained in the intersection $U_1\cap \cdots\cap U_N$.
+    Let $\mathcal{V}_N'$ be the collection of all finite intersections in $\mathcal{V}_N$. Now all finite intersections of elements in $\mathcal{V}_0\cup\cdots\cup \mathcal{V}_N$ with at least one contribution from $\mathcal{V}_N$ is a $k_H$-affinoid domain in $X$.
+    \textcolor{red}{How to continue?}
+
+    \fi
+\end{proof}
+
+\textcolor{red}{The following result requires the previous proposition}
+\begin{proposition}
+    The category $k_H\text{-}\AnaCat$ admits finite limits.
+\end{proposition}
+\begin{proof}
+    By general abstract nonsense, it suffices to show that $k_H\text{-}\AnaCat$ admits finite fiber products.
+
+    Let $\varphi:Y\rightarrow X$ and $f:X'\rightarrow X$ be morphisms of $k_H$-affinoid spaces. 
+
+    \textbf{Step~1}. We show assume that $H=\mathbb{R}_{>0}$. We show that $Y\times_X X'$ exists in $k\text{-}\AnaCat$.
+
+    \textbf{Step~1.1}. Assume that $Y,X,X'$ are all paracompact and Hausdorff.
+\end{proof}
+
 \section{Analytic domains}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
 
