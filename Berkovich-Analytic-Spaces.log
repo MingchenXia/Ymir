@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  8 DEC 2022 21:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  8 DEC 2022 21:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1134,41 +1134,41 @@ LaTeX Warning: Reference `Topology-lma-netproperty1' on page 1 undefined on inpu
 LaTeX Warning: Reference `Topology-chap-topology' on page 14 undefined on input line 425.
 
 [14] [15] [16] [17] [18]
-Overfull \hbox (49.808pt too wide) detected at line 708
+Overfull \hbox (49.808pt too wide) detected at line 696
 [][]\OT1/lmr/m/n/10 ([] \OML/lmm/m/it/10 B; \U/msb/m/n/10 A[]\OT1/lmr/m/n/10 ) [] [] [][]([] \OML/lmm/m/it/10 B; [] k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 r[]T\OMS/lmsy/m/n/10 g\OT1/lmr/m/n/10 ) [] [] [][](\OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 r[]T\OMS/lmsy/m/n/10 g\OML/lmm/m/it/10 ; B\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 :
  []
 
 [19]
 
-LaTeX Warning: Reference `Topology-lma-quasinetopenset' on page 1 undefined on input line 760.
+LaTeX Warning: Reference `Topology-lma-quasinetopenset' on page 1 undefined on input line 748.
 
 
-LaTeX Warning: Reference `Topology-chap-topology' on page 20 undefined on input line 760.
+LaTeX Warning: Reference `Topology-chap-topology' on page 20 undefined on input line 748.
 
 [20]
 
-LaTeX Warning: cref reference format for label type `' undefined on input line 840.
+LaTeX Warning: cref reference format for label type `' undefined on input line 828.
 
 
-LaTeX Warning: cref reference format for label type `' undefined on input line 840.
+LaTeX Warning: cref reference format for label type `' undefined on input line 828.
 
 [21]
 
-LaTeX Warning: cref reference format for label type `' undefined on input line 844.
+LaTeX Warning: cref reference format for label type `' undefined on input line 832.
 
 
-LaTeX Warning: cref reference format for label type `' undefined on input line 844.
+LaTeX Warning: cref reference format for label type `' undefined on input line 832.
 
 [22]
 
-LaTeX Warning: Reference `Topology-lma-netproperty1' on page 1 undefined on input line 913.
+LaTeX Warning: Reference `Topology-lma-netproperty1' on page 1 undefined on input line 901.
 
 
-LaTeX Warning: Reference `Topology-chap-topology' on page 23 undefined on input line 913.
+LaTeX Warning: Reference `Topology-chap-topology' on page 23 undefined on input line 901.
 
 [23] [24]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 984.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 972.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
