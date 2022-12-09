@@ -101,13 +101,15 @@ We remind the readers that a compact space is Hausdorff by our convention.
 \end{definition}
 A paracompact space is not necessarily Hausdorff according to our definition.
 
-\begin{proposition}
+\begin{proposition}\label{prop-paracptrefinement}
     Let $X$ be a locally compact topological space. 
     \begin{enumerate}
         \item Assume that each connected component of $X$ is $\sigma$-compact, then $X$ is paracompact.
         \item If $X$ is paracompact and Hausdorff, then each connected component of $X$ is $\sigma$-compact.
     \end{enumerate}
+    If the conditions in (2) are satisfied, for any basis of neighbourhoods $\mathcal{B}$ of $X$, every open covering $\mathcal{U}$ of $X$ can be refined into a locally finite covering $\mathcal{V}$ consisting of elements in $\mathcal{B}$.
 \end{proposition}
+We do not assume that the elements in $\mathcal{B}$ be open. The covering $\mathcal{V}$ is not necessarily open.
 
 \begin{proposition}
     Let $X$ be a paracompact space and $Y\subseteq X$ be a closed subspace. Then $Y$ is paracompact.
@@ -119,6 +121,7 @@ A paracompact space is not necessarily Hausdorff according to our definition.
         \item $Y$ is locally compact and Hausdorff;
         \item $Y$ is a locally closed subspace of $X$.
     \end{enumerate}
+    
 \end{proposition}
 
 \section{Bornology}
