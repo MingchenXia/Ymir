@@ -1021,7 +1021,7 @@ In other words, being a closed immersion is a G-local property on the target.
 
     Assume (3). Using the fact that (1) implies (2) as we already proved, we may refine the G-covering $\{X_i\}_{i\in I}$ and assume that each $X_i$ is $k_H$-affinoid. It follows from \cref{lma-closedimmglocal} that $\varphi$ is a closed immersion, so (1) holds.
 \end{proof}
-\begin{corollary}
+\begin{corollary}\label{cor-closedimmchangegroup}
     Let $H'\supseteq H$ is a subgroup of $\mathbb{R}_{>0}$. Let $\varphi:Y\rightarrow X$ be a morphism of $k_H$-analytic spaces. Then the following are equivalent:
     \begin{enumerate}
         \item $\varphi$ is a closed immersion;
@@ -1032,7 +1032,7 @@ In other words, being a closed immersion is a G-local property on the target.
     By \cref{prop-closedimmglocal}, we may assume that $X$ is $k_H$-affinoid. In this case, $Y$ is also $k_H$-affinoid and the result is clear.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}\label{cor-closeimmchangefield}
     Let $\varphi:Y\rightarrow X$ be a morphism of $k_H$-analytic spaces and $K/k$ be an analytic field extension. 
     \begin{enumerate}
         \item If $\varphi$ is a closed immersion, so is $\varphi_K$;
@@ -1040,10 +1040,10 @@ In other words, being a closed immersion is a G-local property on the target.
     \end{enumerate}
 \end{corollary}
 \begin{proof}
-    By \cref{prop-closedimmglocal}, we may assume that $X$ is a $k_H$-affinoid space in both cases. Then so is $Y$. Now (1) is obvious and (2) follows from \cref{Affinoid-prop-Krfaithflat} in \nameref{Affinoid-chap-afifnoid}.
+    By \cref{prop-closedimmglocal}, we may assume that $X$ is a $k_H$-affinoid space in both cases. Then so is $Y$. Now (1) is obvious and (2) follows from \cref{Affinoid-prop-Krfaithflat} in \nameref{Affinoid-chap-affinoid}.
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{prop-closedimmcomposition}
     Let $\varphi:X\rightarrow Y$, $\psi:Y\rightarrow Z$ be closed immersions of $k_H$-affinoid spaces. Then $\psi \circ \varphi:X\rightarrow Z$ is also a closed immersion.
 \end{proposition}
 \begin{proof}
@@ -1078,6 +1078,93 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     A morphism between $k_H$-affinoid spaces is always separated. This follows from \cref{Affinoid-ex-diagonalclosedimm} in \nameref{Affinoid-chap-affinoid} by base change.
 \end{example}
 
+\begin{proposition}\label{prop-separatedbasechange}
+    Let $\varphi:Y\rightarrow X$, $\psi:Z\rightarrow X$ be a morphism of $k_H$-analytic spaces. Assume that $\varphi:Y\rightarrow X$ is separated. Consider the Cartesian diagram
+    \[
+        \begin{tikzcd}
+            Z\times_X Y \arrow[r] \arrow[d] \arrow[rd, "\square", phantom] & Y \arrow[d,"\varphi"] \\
+            Z \arrow[r,"\psi"]                                                    & X          
+        \end{tikzcd}.  
+    \]
+    Then $Z\times_X Y\rightarrow Z$ is separated.
+\end{proposition}
+\begin{proof}
+    By general abstract nonsense, we have a Cartesian diagram
+    \[
+        \begin{tikzcd}
+            Z\times_X Y \arrow[r,"\Delta_{Z\times_X Y/Z}"] \arrow[d] \arrow[rd, "\square", phantom] & (Z\times_X Y)\times_Z (Z\times_X Y)=Z\times_X (Y\times_X Y) \arrow[d] \\
+            Y \arrow[r,"\Delta_{Y/X}"]                                                    & Y\times_X Y          
+        \end{tikzcd}.  
+    \]
+    So the assertion follows from \cref{prop-closedimmbaseex}.
+\end{proof}
+
+\begin{proposition}
+    Let $\varphi:Y\rightarrow X$ be a morphism of $k_H$-analytic spaces. Then the following are equivalent:
+    \begin{enumerate}
+        \item $\varphi$ is separated;
+        \item for any G-covering $\{X_i\}_{i\in I}$ of $X$, the restriction of $\varphi$ to $\varphi^{-1}(X_i)\rightarrow X_i$ is separated for all $i\in I$;
+        \item for some G-covering $\{X_i\}_{i\in I}$ of $X$, the restriction of $\varphi$ to $\varphi^{-1}(X_i)\rightarrow X_i$ is separated for all $i\in I$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (1) $\implies$ (2) by \cref{prop-separatedbasechange}.
+
+    (2) $\implies$ (3) is trivial.
+
+    Assume (3). Let $Y_i=\varphi^{-1}(X_i)$. Then $Y_i\times_{X_i} Y_i$ is a G-covering of $Y\times_X Y$, and we have a Cartesian diagram
+    \[
+        \begin{tikzcd}
+            Y_i \arrow[r,"\Delta_{Y_i/X_i}"] \arrow[d] \arrow[rd, "\square", phantom] & Y_i\times_{X_i}Y_i \arrow[d] \\
+            Y \arrow[r,"\Delta_{Y/X}"]                                                    & Y\times_X Y          
+        \end{tikzcd}  
+    \]
+    for $i\in I$. So the assertion follows from \cref{prop-closedimmglocal}.
+\end{proof}
+
+\begin{proposition}
+    Let $\varphi:X\rightarrow Y$, $\psi:Y\rightarrow Z$ be separated morphisms of $k_H$-affinoid spaces. Then $\psi \circ \varphi:X\rightarrow Z$ is also separated.
+\end{proposition}
+\begin{proof}
+    We have a Cartesian diagram
+    \[
+        \begin{tikzcd}
+            X\times_Y X \arrow[r,"\psi"] \arrow[d] \arrow[rd, "\square", phantom] & X\times_Z X\arrow[d] \\
+            Y \arrow[r,"\Delta_{Y/Z}"]                                                    & Y\times_Z Y          
+        \end{tikzcd}.
+    \]
+    By \cref{prop-separatedbasechange}, $\psi: X\times_Y X\rightarrow X\times_Z X$ is a closed immersion. On the other hand, $\Delta_{X/Z}:X\rightarrow X\times_Z X$ factorizes as $\psi\circ \Delta_{X/Y}$. It follows from \cref{prop-closedimmcomposition} that $\Delta_{X/Z}$ is a closed immersion.
+\end{proof}
+
+\iffalse
+\begin{proposition}
+    Let $\varphi:X\rightarrow Y$ and $\psi:Y\rightarrow Z$ be morphisms of $k_H$-analytic spaces. If $\psi\circ \varphi$ is separated, then so is $\varphi$.
+\end{proposition}
+\fi
+
+
+\begin{proposition}
+    Let $H'\supseteq H$ is a subgroup of $\mathbb{R}_{>0}$. Let $\varphi:Y\rightarrow X$ be a morphism of $k_H$-analytic spaces. Then the following are equivalent:
+    \begin{enumerate}
+        \item $\varphi$ is separated;
+        \item $\varphi$ is separated when view as a morphism of $k_{H'}$-affinoid spaces.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    This follows immediately from \cref{cor-closedimmchangegroup}.
+\end{proof}
+
+\begin{proposition}
+    Let $\varphi:Y\rightarrow X$ be a morphism of $k_H$-analytic spaces and $K/k$ be an analytic field extension. 
+    \begin{enumerate}
+        \item If $\varphi$ is separated, so is $\varphi_K$;
+        \item If $K=k_r$ for some $k$-free polyray $r$ and $\varphi_K$ is separated, then so is $\varphi$.
+    \end{enumerate}
+\end{proposition}
+We will prove later on that the assumption in (2) is unnecessary.
+\begin{proof}
+    This follows immediately from \cref{cor-closeimmchangefield}.
+\end{proof}
 
 
 \section{Reduction}
@@ -1088,6 +1175,10 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     A morphism between punctured $k_H$-analytic spaces $(X,x)$ and $(Y,y)$ is a morphism $\varphi:X\rightarrow Y$ of $k_H$-analytic spaces sending $x$ to $y$.
 
     The category of punctured $k_H$-analytic spaces is denoted by $k_H\text{-}\AnaCat_*$.
+\end{definition}
+
+\begin{definition}
+    A morphism of punctured $k_H$-analytic spaces $(X,x)\rightarrow (Y,y)$ is said to be \emph{separated} (resp. \emph{a closed immersion}) is the underlying morphism of  $k_H$-analytic spaces is separated (resp. a closed immersion).
 \end{definition}
 
 \begin{definition}
@@ -1111,8 +1202,36 @@ where $U$ runs over all open neighbourhoods of $x$ in $X$.
 Note that this condition does not depend on the representative $(X,x)$. To see this, let $U\subseteq x$ be an open subset containing $x$. We need to show that if $x$ admits a $k_H$-affinoid neighbourhood in $X$, then it admits one in $U$. This follows from \cref{Affinoid-prop-laurentdomainfundamental} in \nameref{Affinoid-chap-affinoid}.
 
 \begin{definition}
-    A morphism of $k_H$-analytic germs $\varphi:X_x\rightarrow Y_y$ is saied to be \emph{separated} (resp. \emph{closed}) if it is induced
+    A morphism of $k_H$-analytic germs $\varphi:X_x\rightarrow Y_y$ is saied to be \emph{separated} (resp. \emph{boundaryless}) if it is induced by a separated morphism (resp. boundaryless) of punctured $k_H$-analytic spaces $(U,x)\rightarrow (Y,y)$, where $U$ is an open neighbourhood of $x$ in $X$.
 \end{definition}
+
+\begin{definition}
+    Let $X_x$ be a $k_H$-analytic germ. A \emph{$k_H$-analytic domain} in $X_x$ is a $k_H$-analytic germ $V_x$, where $V$ is a $k_H$-analytic domain in $X$ containing $x$. 
+\end{definition}
+
+Next we define the reduction. 
+
+\begin{definition}
+    Let $X=\Sp A$ be a $k_H$-affinoid space and $x\in X$, we define the \emph{reduction} $\widetilde{(X,x)}$ of $X$ at $x$ as follows: let $\chi_x:A\rightarrow \mathscr{H}(x)$ be the character corresponding to $x$, we define
+    \[
+        \widetilde{(X,x)}:=\mathbf{P}_{\widetilde{\mathscr{H}(x)}^H/\tilde{k}^H}\left\{ \widetilde{\chi_x}(\tilde{A}^H)\right\}.
+    \]
+    Observe that this construction defines a functor
+    \[
+        k_H\text{-}\GerCat\rightarrow \bir_{\tilde{k}^H}.  
+    \]
+\end{definition}
+
+\begin{lemma}
+    Let $X=\Sp A$ be a $k_H$-affinoid space and $x\in X$. Let $U=\Sp B$ be an open affinoid neighbourhood of $x$ in $X$. Then the natural morphism
+    \[
+        \widetilde{(U,x)}\rightarrow \widetilde{(X,x)}       
+    \]
+    is an isomorphism in $\bir_{\tilde{k}^H}$.
+\end{lemma}
+\begin{proof}
+    Observe that the morphism $\chi_x:B\rightarrow \mathscr{H}(x)$ is inner with respect to $A$.
+\end{proof}
 
 \begin{thm}
     Let $H'\supseteq H$ be a subgroup of $\mathbb{R}_{>0}$. The natural functor

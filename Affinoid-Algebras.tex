@@ -2955,6 +2955,198 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field.
     Finally, the last assertion is clear as $M$ is constructed as an equalizer.
 \end{proof}
 
+\section{Boundaryless homomorphism}
+Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
+
+\begin{definition}
+    Let $A$ be a $k$-affinoid algebra. A bounded $A$-algebra homomorphism $\varphi:B\rightarrow D$ from an $A$-affinoid algebra to a Banach $A$-algebra $D$ is said to be \emph{boundaryless} with respect to $A$ if there are $n\in \mathbb{N}$, $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ and an admissible epimorphism
+    \[
+        \pi: A\{r^{-1}T\}\rightarrow B    
+    \] 
+    such that $\rho_D(\varphi\circ \pi(T_i))<r_i$ for $i=1,\ldots,n$.
+\end{definition}
+Intuitively, the condition means that we can embed $\Sp B$ into a disk (relative to $A$) by a closed immersion such that the image of $\Sp D$ in $\Sp B$ does not hit the boundary of the disk.
+
+\begin{proposition}\label{prop-innerhomochar}
+    Let $A$ be a $k$-affinoid algebra and $\varphi:B\rightarrow D$ a bounded $A$-algebra homomorphism from an $A$-affinoid algebra to a Banach $A$-algebra $(D,\|\bullet\|)$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $\varphi$ is boundaryless with respect to $A$;
+        \item $\tilde{\varphi}(\tilde{B}^{\mathbb{R}_{>0}})$ is finite over $\tilde{\varphi}(\tilde{A}^{\mathbb{R}_{>0}})$;
+        \item for any $r\in \mathbb{R}_{>0}$ and any bounded $A$-algebra homomorphism $\psi:A\{r^{-1}T\}\rightarrow B$, there is a polynomial $P\in A[T]$: 
+        \[
+            P=T^n+a_1T^{n-1}+\cdots+a_n    
+        \]
+        such that $\rho_A(a_i)\leq r^i$ for $i=1,\ldots,n$ and $\rho_D(\varphi\circ \psi(P))<r^n$;
+        \item for any $\epsilon\in (0,1)$, there are $n\in \mathbb{Z}_{>0}$, $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ and an admissible epimorphism
+        \[
+            \pi: A\{r^{-1}T\}\rightarrow B    
+        \] 
+        such that 
+        \[
+            \|\varphi(\pi(T_i))\|\leq \epsilon r_i  
+        \]
+        for $i=1,\ldots,n$.
+        
+        
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (1) $\implies$ (2): Take $n\in \mathbb{Z}_{>0}$, $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ and an admissible epimorphism
+    \[
+        \pi: A\{r^{-1}T\}\rightarrow B    
+    \] 
+    such that $\rho_D(\varphi\circ \pi(T_i))<r_i$ for $i=1,\ldots,n$.
+
+    By \cref{thm-reductionfinite}, 
+    \[
+        \tilde{\pi}:\tilde{A}^{\mathbb{R}_{>0}}[r^{-1}T]\rightarrow \tilde{B}^{\mathbb{R}_{>0}}
+    \]
+    is finite. But $\tilde{\varphi}(\tilde{\pi}(T_i))=0$ for all $i=1,\ldots,n$, so $\tilde{\phi}(\tilde{B}^{\mathbb{R}_{>0}})$ is finite over $\tilde{\phi}(\tilde{A}^{\mathbb{R}_{>0}})$.
+
+    (2) $\implies$ (3): Take $\psi$ as in (3). We may assume that $\rho_B(\psi(T))=r$, as otherwise, there is nothing to prove.
+    Let $\tilde{b}:=\tilde{\psi}(T)\in \tilde{B}^{\mathbb{R}_{>0}}$. As $\tilde{\varphi}(\tilde{B}^{\mathbb{R}_{>0}})$ is finite over $\tilde{A}^{\mathbb{R}_{>0}}$, it is in particular integral. So we can find $n\in \mathbb{N}$ and  homogeneous elements $\tilde{a}_1,\ldots,\tilde{a}_n\in \tilde{A}^{\mathbb{R}_{>0}}$ such that if we set
+    \[
+        \tilde{b}':=\tilde{b}^n+\tilde{a}_{1}\tilde{b}^{n-1}+\cdots+ \tilde{a}_n,
+    \]
+    then $\tilde{\varphi}(\tilde{b}')=0$. As $\rho(\tilde{b}^n)=r^n$, we may assume that $\rho(\tilde{a}_i)=r^i$ for $i=1,\ldots,n$. Lift $\tilde{a}_i$ to $a_i\in A$, we see that $\rho_A(a_i)\leq r^i$ for $i=1,\ldots,n$. Let
+    \[
+        P=T^n+a_1T^{n-1}+\cdots+a_n.
+    \]
+    We find immediately that $\rho_D(\varphi\circ \psi(P))<r^n$.
+
+    (3) $\implies$ (4): Fix $\epsilon\in (0,1)$, we want to construct $\pi$ as in (4).
+    We first assume that $B=A\{s^{-1}T\}$ for some $s\in \mathbb{R}_{>0}$.
+
+    By (3), we can find $n\in \mathbb{Z}_{>0}$ and a monic polynomial $P=T^n+a_1T^{n-1}+\cdots+a_n\in A[T]$ such that $\rho_A(a_i)\leq s^i$ and $\rho_D(\varphi(P))<s^n$. Up to replacing $P$ by a power, we may assume that 
+    \[
+        \|\varphi(P)\|\leq \epsilon s^n\|\varphi\|^{-1}.  
+    \]
+    Take $q\in \mathbb{R}_{>0}$, $q>s\max\{\|\varphi\|/\epsilon,1\}$. We can define a bounded $A$-algebra homomorphism
+    \[
+        \pi:A\left\{q^{-1}T_0,s^{-n}T_1,s^{-n-1}T_2,\ldots, s^{-2n+1}T_n \right\}\rightarrow A\{s^{-1}T\}  
+    \]
+    sending $T_0$ to $T$ and $T_i$ to $T^{i-1}P$ for $i=1,\ldots,n$. This is well-defined by \cref{cor-univpropTatenonstrict} as
+    \[
+        \rho_{A\{s^{-1}T\}}(T)=s<q, \quad \rho_{A\{s^{-1}T\}}(T^{i-1}P)\leq s^{i-1}\rho_{A\{s^{-1}T\}}(P)\leq s^{i-1+n}  
+    \]
+    for $i=1,\ldots,n$. Moreover,
+    \[
+        \begin{aligned}
+        \|\varphi(\pi(T_0))\| = &\|\varphi(T)\|\leq s\|\varphi\|<\epsilon q,\\
+        \|\varphi(\pi(T_i))\| = & \|\varphi(T^{i-1}P)\|\leq \|\varphi(T^{i-1})\|\cdot \|\varphi(P)\|\leq \epsilon s^{i+n-1}.
+        \end{aligned}
+    \]
+    It remains to show that $\pi$ is an admissible epimorphism. 
+
+    Set $R=\mathbb{Z}[1^{-1}A_1,\ldots,n^{-1}A_n]$ and define a ring homomorphism
+    \[
+        \nu:R[T_0,T_1,T_2,\ldots,T_n]\rightarrow A\left\{q^{-1}T_0,s^{-n}T_1,s^{-n-1}T_2,\ldots, s^{-2n+1}T_n \right\} 
+    \]
+    sending $A_i$ to $a_i$ and $T_i$ to $T_i$ for $i=1,\ldots,n$.  Fix $l\in \mathbb{N}$.
+    By \cref{Commutative-lma-gradedhomokernel} in \nameref{Commutative-chap-commutative}, we can find polynomials $G_l\in R[n^{-1}T_1,\ldots,(2n-1)^{-1}T_n]$ and $H_l\in R[T_0]$ of degree $l$ such that $\deg_{T_0}H_l\leq n-1$ and $T_0^l-G_l-H_l\in \ker \Phi$, where 
+    \[
+        \Phi:R[T_0,n^{-1}T_1,(n+1)^{-1}T_2,\ldots,(2n-1)^{-1}T_n]\rightarrow R[T]  
+    \]
+    is the ring homomorphism sending $T_0$ to $T$ and $T_i$ to $T^{i-1}(T^n+A_1 T^{n-1}+\cdots+A_n)$ for $i=1,\ldots,n$. Let $g_l=\nu(G_l)$ and $h_l=\nu(H_l)$. We expand $h_l$ as
+    \[
+        h_l=a_1^{(l)}T_0^{n-1}+\cdots+a_n^{(l)}.  
+    \]
+    As $\rho(a_i)\leq s^i$ for $i=1,\ldots,n$, by \cref{prop-fnnormbyrho}, there is a constant $C>0$, independent of the choice of $l$ such that
+    \[
+        \|g_l\|\leq Cs^l ,\quad \|a_i^{(l)}\|\leq Cs^l
+    \]
+    for $i=1,\ldots,n$. Choose an arbitrary element $f\in A\{s^{-1}T\}$, we can expand
+    \[
+        f=\sum_{l=0}^{\infty}b_l T^l.  
+    \]
+    We define
+    \[
+        g=  \sum_{l=0}^{\infty}b_lg_l,\quad d_i=\sum_{l=0}^{\infty}b_l a_i^{(l)}
+    \]
+    for $i=1,\ldots,n$ and set
+    \[
+        h=d_1T_0^{n-1}+\cdots+d_n.  
+    \]
+    Then $\pi(g+h)=f$ and 
+    \[
+        \|g\| \leq C\max_{l\in \mathbb{N}}\|b_l\|s^l=C\|f\|,\quad \|h\|\leq \max_{i=1,\ldots,n}\|d_i\|q^i\leq C\left(\max_{i=1,\ldots,n} q^i  \right)\|f\|.
+    \]
+    So $\pi$ is admissible and surjective.
+    
+    (4) $\implies$ (1): This is trivial.
+\end{proof}
+
+
+\begin{corollary}\label{cor-innerlocalontarget}
+    Let $A$ be a $k$-affinoid algebra and $B$ be an $A$-affinoid algebra. Let $U$ be a $k$-affinoid domain in $\Sp B$ and $V$ be a compact $k$-analytic domain in $\Sp B$ contained in $U$, say $V=\bigcup_{i=1}^n V_i$ for some $k$-affinoid domains $V_1,\ldots,V_n$ in $\Sp B$. Assume that the morphisms $B_U\rightarrow B_{V_i}$ are boundaryless with respect to $A$, then so is the morphism $B_U\rightarrow B_V$.
+\end{corollary}
+\begin{proof}
+    We verify Condition~(3) in \cref{prop-innerhomochar}. Let $r\in \mathbb{R}_{>0}$. Consider a bounded $A$-algebra homomorphism $\psi:A\{r^{-1}T\}\rightarrow B_U$. By \cref{prop-innerhomochar}, we can find monic polynomials $P_i\in A[T]$, say
+    \[
+        P_i=X^{m_i}+a^{(i)}_1X^{m_i-1}+\cdots+ a^{(i)}_{m_i}  
+    \]
+    for $i=1,\ldots,n$, such that $\rho_A(a^{(i)}_j)\leq r^j$ for $j=1,\ldots,m_i$ and $\rho_{B_{V_i}}(\psi(P_i))<\rho_{A[T]}(P)$. We set $P=\prod_{i=1}^n P_i$.
+    By \cref{thm-Tateacyc}, 
+    \[
+        B_V\rightarrow \prod_{i=1}^n B_{V_i}
+    \] 
+    is injective and admissible, so 
+    \[
+        \rho_{B_V}(P)=\rho_{\prod_{i=1}^n B_{V_i}}(P)=\prod_{i=1}^n \rho_{B_{V_i}}(P_i)<\rho_{A[T]}(P).
+    \]
+    The polynomial $P$ obviously satisfies the other condition in (3).
+\end{proof}
+
+
+\begin{definition}
+    Let $\varphi:\Sp B\rightarrow \Sp A$ be a morphism of $k_H$-affinoid spectra. The \emph{relative interior} $\Int(\varphi)=\Int(\Sp B/\Sp A)$ of $\varphi$ is the set of points $y\in \Sp B$ such that the corresponding character $\chi_y:B\rightarrow \mathscr{H}(y)$ is inner with respect to $A$. 
+
+    The \emph{relative boundary} $\partial(\Sp B/\Sp A)$ of $\varphi$ is $\Sp B\setminus \Int(\Sp B/\Sp A)$.
+\end{definition}
+In other words, $y\in \Int(\Sp B/\Sp A)$ if there are $n\in \mathbb{N}$, $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ and an admissible epimorphism
+\[
+    \pi: A\{r^{-1}T\}\rightarrow B    
+\] 
+such that $|\pi(T_i)(y)|<r_i$ for $i=1,\ldots,n$.
+
+
+\begin{proposition}\label{prop-closedsetininteriorcri}
+    Let $A$ be a $k$-affinoid algebra and $B$ be an $A$-affinoid algebra. For a closed subset $\Sigma\subseteq \Sp B$, the following conditions are equivalent:
+    \begin{enumerate}
+        \item $\Sigma\subseteq \Int(\Sp B/\Sp A)$;
+        \item For any $\epsilon\in (0,1)$, there are $n\in \mathbb{N}$, $r\in \mathbb{R}^n_{>0}$ and an admissible epimorphism $\pi: A\{r^{-1}T\}\rightarrow B$ such that 
+        \[
+            \Sigma\subseteq \Sp B\left\{(\epsilon r)^{-1}(\pi(T_1),\ldots,\pi(T_n))\right\}.    
+        \]
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (2) $\implies$ (1): This follows immediately from the definition.
+
+    (1) $\implies$ (2): For any $y\in \Sigma$, we can take a $k$-Weierstrass domain $V_i$ of $\Sp B$ containing $x$ in the interior such that $B\rightarrow B_{V_i}$ is boundaryless with respect to $A$. As $\Sigma$ is compact, a finite number of them cover $\Sigma$. We can apply \cref{cor-innerlocalontarget}.
+\end{proof}
+
+
+\begin{proposition}
+    Let $A$ be a $k$-affinoid algebra and $\varphi:B\rightarrow D$ a bounded $A$-algebra homomorphism from an $A$-affinoid algebra to a Banach $A$-algebra $D$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $\varphi$ is boundaryless;
+        \item $\Sp \varphi(\Sp D)\subseteq \Int(\Sp B/\Sp A)$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    Assume (2). Fix $\epsilon\in (0,1)$. By \cref{prop-closedsetininteriorcri}, we can find $n\in \mathbb{N}$, $r\in \mathbb{R}^n_{>0}$ and an admissible epimorphism $\pi: A\{r^{-1}T\}\rightarrow B$ such that 
+    \[
+        \Sp \varphi(\Sp D)\subseteq \Sp B\left\{(\epsilon r)^{-1}(\pi(T_1),\ldots,\pi(T_n))\right\}.    
+    \]
+    So $\rho_D(\varphi\circ \pi(T_i))<r_i$. That is, $\varphi$ is boundaryless.
+
+    Assume (1). We can find $n\in \mathbb{N}$, $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$ and an admissible epimorphism
+    \[
+        \pi: A\{r^{-1}T\}\rightarrow B    
+    \] 
+    such that $\rho_D(\varphi\circ \pi(T_i))<r_i$ for $i=1,\ldots,n$. In particular, $|\varphi\circ\pi(T_i)(x)|<r_i$ for any $x\in D$. So (2) follows. 
+\end{proof}
 
 \printbibliography
 \end{document}

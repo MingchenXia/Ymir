@@ -17,6 +17,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{7}{Separated morphisms}}{26}{section.0.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{8}{Reduction}}{27}{section.0.8}%
+\contentsline {section}{\tocsection {}{8}{Reduction}}{28}{section.0.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{29}{chapter*.2}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{31}{chapter*.2}%

@@ -494,6 +494,25 @@ Recall that $S^{-1}A$ and $S^{-1}M$ are defined in \cref{ex-localizationgradedri
     This follows from \cref{prop-valuationringchar} and Zorn's lemma.
 \end{proof}
 
+In the next lemma, graded rings are written additively.
+\begin{lemma}\label{lma-gradedhomokernel}
+    Let $n\in \mathbb{N}$ and $R=\mathbb{Z}[1^{-1}A_1,\ldots,n^{-1}A_n]$ be the $\mathbb{Z}$-graded polynomial ring in $n$-variables. Consider a ring homomorphism
+    \[
+        \Phi:R[T_0,n^{-1}T_1,(n+1)^{-1}T_2,\ldots,(2n-1)^{-1}T_n]\rightarrow R[T]  
+    \]
+    sending $T_0$ to $T$ and $T_i$ to $T^{i-1}(T^n+A_1 T^{n-1}+\cdots+A_n)$ for $i=1,\ldots,n$. Then for all $l\in \mathbb{N}$, there are homogeneous polynomials $G_l\in R[n^{-1}T_1,\ldots,(2n-1)^{-1}T_n]$ and $H_l\in R[T_0]$ of degree $l$ such that $\deg_{T_0}H_l\leq n-1$ and $T_0^l-G_l-H_l\in \ker \Phi$.
+\end{lemma}
+\begin{proof}
+    Fix $l\geq 0$, consider a polynoimal $G_l\in R[n^{-1}T_1,\ldots,(2n-1)^{-1}T_n]$ homogeneous of degree $l$ such that $\Phi(T_0^l-G_l)$ has the minimal possible degree. We have to show that this degree is less than $n$. If not, say the leading term is $cT^a$ with $a\geq n$ and $c\in R$ is a homogeneous element. Observe the leading term of the image of $T_i$ in $R[T]$ is $T^{n+i-1}$ for $i=1,\ldots,n$. We can always find a monomial $Q$ in $T_1,\ldots,T_n$ such that the leading term of its image in $R[T]$ is $T^a$. Then set $G_l'=G_l-cQ$, we find that $\deg\Phi(G_l')<\deg \Phi(G_l)$. This is a contradiction.
+    
+    Now we can write
+    \[
+        \Phi(T_0^l-G_l)=c_{n-1}T^{n-1}+\cdots+c_0.  
+    \]
+    It suffices to take $H_l=c_{n-1}T_0^{n-1}+\cdots+c_0$.
+\end{proof}
+
+
 \section{Graded algebraic geometry}
 Let $G$ be an Abelian group. We write the group operation of $G$ multiplicatively and denote the identity of $G$ as $1$.
 
