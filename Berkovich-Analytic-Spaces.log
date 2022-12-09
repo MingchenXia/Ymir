@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  9 DEC 2022 08:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  9 DEC 2022 09:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1301,136 +1301,136 @@ LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 16 undefined on input 
 
 [16] [17] [18]
 
-LaTeX Warning: Reference `prop-glueing' on page 1 undefined on input line 699.
+LaTeX Warning: Reference `prop-glueing' on page 1 undefined on input line 700.
+
+
+LaTeX Warning: Reference `Affinoid-prop-laurentdomainfundamental' on page 1 undefined on input line 728.
+
+
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 19 undefined on input line 728.
 
 [19]
 
-LaTeX Warning: Reference `Affinoid-prop-laurentdomainfundamental' on page 1 undefined on input line 727.
+LaTeX Warning: Reference `Affinoid-cor-fiberproductaffdomain' on page 1 undefined on input line 758.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 20 undefined on input line 727.
-
-
-LaTeX Warning: Reference `Affinoid-cor-fiberproductaffdomain' on page 1 undefined on input line 757.
-
-
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 20 undefined on input line 757.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 20 undefined on input line 758.
 
 [20]
-Overfull \hbox (49.808pt too wide) detected at line 794
+Overfull \hbox (49.808pt too wide) detected at line 795
 [][]\OT1/lmr/m/n/10 ([] \OML/lmm/m/it/10 B; \U/msb/m/n/10 A[]\OT1/lmr/m/n/10 ) [] [] [][]([] \OML/lmm/m/it/10 B; [] k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 r[]T\OMS/lmsy/m/n/10 g\OT1/lmr/m/n/10 ) [] [] [][](\OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 r[]T\OMS/lmsy/m/n/10 g\OML/lmm/m/it/10 ; B\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 :
  []
 
 
-LaTeX Warning: Reference `Affinoid-cor-univpropTatenonstrict' on page 1 undefined on input line 795.
+LaTeX Warning: Reference `Affinoid-cor-univpropTatenonstrict' on page 1 undefined on input line 796.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 21 undefined on input line 795.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 21 undefined on input line 796.
 
 [21]
 
-LaTeX Warning: Reference `Topology-lma-quasinetopenset' on page 1 undefined on input line 846.
+LaTeX Warning: Reference `Topology-lma-quasinetopenset' on page 1 undefined on input line 847.
 
 
-LaTeX Warning: Reference `Topology-chap-topology' on page 22 undefined on input line 846.
+LaTeX Warning: Reference `Topology-chap-topology' on page 22 undefined on input line 847.
 
 [22]
 
-LaTeX Warning: Reference `Affinoid-thm-Kiehl' on page 1 undefined on input line 911.
+LaTeX Warning: Reference `Affinoid-thm-Kiehl' on page 1 undefined on input line 912.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 23 undefined on input line 911.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 23 undefined on input line 912.
 
 
-LaTeX Warning: Reference `Affinoid-cor-fiberproductaffdomain' on page 1 undefined on input line 926.
+LaTeX Warning: Reference `Affinoid-cor-fiberproductaffdomain' on page 1 undefined on input line 927.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 1 undefined on input line 926.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 1 undefined on input line 927.
 
 
-LaTeX Warning: Reference `Affinoid-prop-finitemodulebasechange' on page 1 undefined on input line 926.
+LaTeX Warning: Reference `Affinoid-prop-finitemodulebasechange' on page 1 undefined on input line 927.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 1 undefined on input line 926.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 1 undefined on input line 927.
 
 
-LaTeX Warning: Reference `Affinoid-prop-Banachalgebrafiniteforget' on page 1 undefined on input line 930.
+LaTeX Warning: Reference `Affinoid-prop-Banachalgebrafiniteforget' on page 1 undefined on input line 931.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 23 undefined on input line 930.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 23 undefined on input line 931.
 
 
-LaTeX Warning: Reference `Affinoid-prop-admitobanachbdd' on page 1 undefined on input line 930.
+LaTeX Warning: Reference `Affinoid-prop-admitobanachbdd' on page 1 undefined on input line 931.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 1 undefined on input line 930.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 1 undefined on input line 931.
 
 
-LaTeX Warning: Reference `Affinoid-prop-Weirestrassdomainequivdense' on page 1 undefined on input line 930.
+LaTeX Warning: Reference `Affinoid-prop-Weirestrassdomainequivdense' on page 1 undefined on input line 931.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 1 undefined on input line 930.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 1 undefined on input line 931.
 
 [23]
 
-LaTeX Warning: Reference `Affinoid-prop-finitemodulemapadmi' on page 1 undefined on input line 951.
+LaTeX Warning: Reference `Affinoid-prop-finitemodulemapadmi' on page 1 undefined on input line 952.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 24 undefined on input line 951.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 24 undefined on input line 952.
 
 
-LaTeX Warning: Reference `Affinoid-thm-affdomainflat' on page 1 undefined on input line 969.
+LaTeX Warning: Reference `Affinoid-thm-affdomainflat' on page 1 undefined on input line 970.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 24 undefined on input line 969.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 24 undefined on input line 970.
 
 
-LaTeX Warning: Reference `Affinoid-def-closedimmersion' on page 1 undefined on input line 988.
+LaTeX Warning: Reference `Affinoid-def-closedimmersion' on page 1 undefined on input line 989.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 24 undefined on input line 988.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 24 undefined on input line 989.
 
 [24]
 
-LaTeX Warning: Reference `Affinoid-prop-closedimmbasechange' on page 1 undefined on input line 995.
+LaTeX Warning: Reference `Affinoid-prop-closedimmbasechange' on page 1 undefined on input line 996.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 25 undefined on input line 995.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 25 undefined on input line 996.
 
 
-LaTeX Warning: Reference `Topology-lma-netproperty1' on page 1 undefined on input line 999.
+LaTeX Warning: Reference `Topology-lma-netproperty1' on page 1 undefined on input line 1000.
 
 
-LaTeX Warning: Reference `Topology-chap-topology' on page 25 undefined on input line 999.
+LaTeX Warning: Reference `Topology-chap-topology' on page 25 undefined on input line 1000.
 
 
-LaTeX Warning: Reference `Affinoid-prop-closedimmbasechange' on page 1 undefined on input line 1003.
+LaTeX Warning: Reference `Affinoid-prop-closedimmbasechange' on page 1 undefined on input line 1004.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 25 undefined on input line 1003.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 25 undefined on input line 1004.
 
 
-LaTeX Warning: Reference `Affinoid-def-closedimmersion' on page 1 undefined on input line 1009.
+LaTeX Warning: Reference `Affinoid-def-closedimmersion' on page 1 undefined on input line 1010.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 25 undefined on input line 1009.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 25 undefined on input line 1010.
 
 
-LaTeX Warning: Reference `Affinoid-prop-closedimmbasechange' on page 1 undefined on input line 1025.
+LaTeX Warning: Reference `Affinoid-prop-closedimmbasechange' on page 1 undefined on input line 1026.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 25 undefined on input line 1025.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 25 undefined on input line 1026.
 
 [25]
 
-LaTeX Warning: Reference `Affinoid-prop-laurentdomainfundamental' on page 1 undefined on input line 1056.
+LaTeX Warning: Reference `Affinoid-prop-laurentdomainfundamental' on page 1 undefined on input line 1057.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 26 undefined on input line 1056.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 26 undefined on input line 1057.
 
 [26]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1070.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1071.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1457,7 +1457,7 @@ Here is how much of TeX's memory you used:
  1304 hyphenation exceptions out of 8191
  132i,17n,133p,1084b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf (27 pages, 384474 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf (27 pages, 384569 bytes).
 PDF statistics:
  491 PDF objects out of 1000 (max. 8388607)
  439 compressed objects within 5 object streams

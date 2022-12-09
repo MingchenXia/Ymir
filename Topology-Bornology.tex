@@ -94,6 +94,32 @@ We remind the readers that a compact space is Hausdorff by our convention.
     (2) For each $x\in V$ and each $i=1,\ldots,n$ such that $x\in V_i$, we take a neighbourhood of $x$ in $V\cap V_i$ of the form $W_iV_{i1}\cup\cdots\cup V_{im_i}$ for some $m_i\in \mathbb{Z}_{>0}$ and $V_{ij}\in \tau$ for $j=1,\ldots,m_i$. Then the union of all $W_i$'s is a neighbourhood of $x$ of the form $U_1\cup \cdots U_m$, where $U_j$ belongs to $\tau$ and is contained in some $V_i$. Using the compactness of $V$, we conclude.
 \end{proof}
 
+\section{Paracompact spaces}
+
+\begin{definition}
+    A topological space $X$ is \emph{paracompact} if any open covering of $X$ admits a locally finite refinement.
+\end{definition}
+A paracompact space is not necessarily Hausdorff according to our definition.
+
+\begin{proposition}
+    Let $X$ be a locally compact topological space. 
+    \begin{enumerate}
+        \item Assume that each connected component of $X$ is $\sigma$-compact, then $X$ is paracompact.
+        \item If $X$ is paracompact and Hausdorff, then each connected component of $X$ is $\sigma$-compact.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proposition}
+    Let $X$ be a paracompact space and $Y\subseteq X$ be a closed subspace. Then $Y$ is paracompact.
+\end{proposition}
+
+\begin{proposition}
+    Let $X$ be a locally compact Hausdorff space and $Y\subseteq X$ be a subspace, then the following are equivalent:
+    \begin{enumerate}
+        \item $Y$ is locally compact and Hausdorff;
+        \item $Y$ is a locally closed subspace of $X$.
+    \end{enumerate}
+\end{proposition}
 
 \section{Bornology}
 \begin{definition}
