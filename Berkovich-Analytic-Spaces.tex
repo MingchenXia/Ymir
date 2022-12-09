@@ -579,7 +579,51 @@ The notation for the category of $k_H$-affinoid spaces is the same as the notati
     Then $W_i$ lies in the interior of $W_{i+1}$ for $i\in \mathbb{Z}_{>0}$. Choose a connected component $V_i$ of $W_i$ so that $V_1\subseteq V_2\subseteq \cdots$ and $x\in V:=\bigcup_{i=1}^{\infty} V_i$. If $x\in V_i$ for some $i\in \mathbb{Z}_{>0}$, then $x$ lies in the topological interior of $V_{i+1}$. Hence, $x$ lies in the interior of $V$. By construction, $V$ is open connected paracompact locally compact and Hausdorff. Moreover, $\bar{V}\subseteq U$ by our construction.
 \end{proof}
 
-\begin{proposition}
+
+\begin{proposition}\label{prop-gluing}
+    Let $\{X_i\}_{i\in I}$ be a family of $k_H$-analytic spaces. Suppose that for $i,j\in I$, we are given a $k_H$-analytic domain $X_{ij}\subseteq X_i$ and an  isomorphism $\nu_{ij}:X_{ij}\rightarrow X_{ji}$ satisfying the \emph{cocycle condition}: $X_{ii}=X_i$, $\nu_{ij}(X_{ij}\cap X_{il})=X_{ji}\cap X_{jl}$ and $\nu_{il}=\nu_{jl}\circ\nu_{ij}$ on $X_{ij}\cap X_{il}$ for $i,j,l\in I$. 
+
+    Assume that either of the followinig conditions holds:
+    \begin{enumerate}
+        \item $X_{ij}$ is open in $X_i$ for all $i,j\in I$;
+        \item for any $i\in I$, all $X_{ij}$'s are closed in $X_i$ and the number of $j\in I$ with $X_{ij}\neq\emptyset$ is finite.  
+    \end{enumerate}
+    Then there is a $k_H$-analytic space $X$ and morphisms $\mu_i:X_i\rightarrow X$ for $i\in I$ such that 
+    \begin{enumerate}
+        \item $\mu_i$ is an isomorphism of $X_i$ with a $k_H$-analytic domain in $X$;
+        \item $X=\bigcup_{i\in I}\mu_i(X_i)$;
+        \item $\mu_i(X_{ij})=\mu_i(X_i)\cap \mu_j(X_j)$ for $i,j\in I$;
+        \item $\mu_i=\mu_j\circ \nu_{ij}$ on $X_{ij}$ for $i,j\in I$.
+    \end{enumerate}
+    The space $X$ is unique up to a canonical isomorphism. Moreover, under Condition~(1), $\mu_i(X_{i})$ is open in $X$ for $i\in I$; under Condition~(2), $\mu_i(X_i)$ is closed in $X$ for $i\in I$.
+    
+    Under both conditions, if all $X_i$'s are Hausdorff (resp. paracompact), then so is $X$.
+\end{proposition}
+We will call $X$ the \emph{gluing} of the $X_i$'s along the $X_{ij}$'s.
+\begin{proof}
+    By \cref{prop-gtopsubcanonical}, the uniquenss of $X$ is clear.
+
+    Let 
+    \[
+        \tilde{X}=\coprod_{i\in I}X_i  
+    \]
+    in $k_H\text{-}\AnaCat$. Observe that
+    \[
+        |\tilde{X}|=\coprod_{i\in I}|X_i|  
+    \]
+    in the category $\TopCat$. The system $\nu_{ij}$'s defines an equivalence relation $R$ on $|\tilde{X}|$. Let $|X|=|\tilde{X}|/R$ and $\mu_i:|X_i|\rightarrow |X|$ be the induced map for $i\in I$.
+
+    Under Condition~(1), $\mu_i(|X_i|)$ is open in $|X|$ for $i\in I$. Under Condition~(2), $\mu_{i}(|X_i|)$ is closed in $X$ for $i\in I$. 
+
+    Under both conditions, the map $\mu_i$ induces a homeomorphism $|X_i|\rightarrow \mu_i(|X_i|)$ for $i\in I$. If all $|X_i|$'s are Hausdorff (resp. paracompact), so is $|X|$.
+
+    All these claims follow from well-known results in general topology. 
+
+    We will endow $|X|$ with a structure of $k_H$-analytic space. Let $\tau$ be the set of $V\subseteq |X|$ for which there is $i\in I$ such that $V\subseteq \mu_i(X_i)$ and $\mu_i^{-1}(V)$ is a $k_H$-affinoid domain in $X_i$. Then $\tau$ is a net on $X$. There is an obvious $k$-affinoid atlas on $X$ with the net $\tau$. All properties in the proposition are satisfied by $X=(|X|,\mathcal{A},\tau)$.
+\end{proof}
+
+
+\begin{proposition}\label{prop-netparacptrefinement}
     Let $(X,\mathcal{A},\tau)$ be a paracompact Hausdorff $k_H$-analytic space. Then the locally finite nets are cofinal in the directed set of nets $\sigma$ on $X$ contained in $\hat{\tau}$. 
 \end{proposition}
 
@@ -597,10 +641,13 @@ The notation for the category of $k_H$-affinoid spaces is the same as the notati
     
 \end{proof}
 
-\textcolor{red}{The following result requires the previous proposition}
+
+
 \begin{proposition}
     The category $k_H\text{-}\AnaCat$ admits finite limits.
 \end{proposition}
+\textcolor{red}{Many details need to be included in this proof!}
+
 \begin{proof}
     By general abstract nonsense, it suffices to show that $k_H\text{-}\AnaCat$ admits finite fiber products.
 
@@ -609,6 +656,57 @@ The notation for the category of $k_H$-affinoid spaces is the same as the notati
     \textbf{Step~1}. We show assume that $H=\mathbb{R}_{>0}$. We show that $Y\times_X X'$ exists in $k\text{-}\AnaCat$.
 
     \textbf{Step~1.1}. Assume that $Y,X,X'$ are all paracompact and Hausdorff.
+
+    We first claim that we can represent $\varphi$ and $f$ by strong morphisms $(Y,\mathcal{B},\sigma)\rightarrow (X,\mathcal{A},\tau)$ and $(X',\mathcal{A}',\tau')\rightarrow (X,\mathcal{A},\tau)$ with $\sigma$, $\tau'$, $\tau$ locally finite. 
+
+    We first choose a locally finite net $\tau$ consisting of $k$-affinoid domains on $X$ by \cref{prop-netparacptrefinement}. 
+    Consider the net $\sigma'$ consisting of all $k$-affinoid domains on $Y$ that are mapped into some element in $\tau$. Then $\varphi$ can be represented by a strong morphism $(Y,\mathcal{B},\sigma')\rightarrow (X,\mathcal{A},\tau)$. We now refine $\sigma'$ using \cref{prop-netparacptrefinement} again to construct $\sigma$. The locally finite net $\tau'$ is constructed in the same way.
+
+    Let
+    \[
+        \mathcal{S}:=\left\{ (V,U,U')\in \sigma\times\tau\times \tau':\varphi(V)\subseteq U, f(U')\subseteq U \right\}.  
+    \]
+    For any $\alpha=(V,U,U')\in \mathcal{S}$, we write 
+    \[
+        W_{\alpha}:=V\times_U U',\quad \Sigma_{\alpha}=|V|\times_{|U|} |U'|,
+    \]
+    and we have an obvious continuous map of topological spaces $W_{\alpha}\rightarrow \Sigma_{\alpha}$.
+    Let 
+    \[
+        \Sigma=|Y|\times_{|X|}|X'|.
+    \]
+    Then we have a canonical map $\pi_{\alpha}:W_{\alpha}\rightarrow \Sigma$ for any $\alpha\in \mathcal{S}$.
+
+    We claim that for any $\alpha,\beta\in S$, 
+    \[
+        W_{\alpha\beta}:=\pi_{\alpha}^{-1}(\Sigma_{\alpha}\cap \Sigma_{\beta})
+    \]
+    is a $k$-special domain in $W_{\alpha}$ and there is a canonical isomorphism $\nu_{\alpha\beta}:W_{\alpha\beta}\rightarrow W_{\beta\alpha}$ satisfying the cocycle condition.
+
+    In fact, if $\alpha=(V,U,U')$ and $\beta=(\bar{U},\bar{U},\bar{U'})$, we can write 
+    \[
+        U\cap \bar{U}=U_1\cup \cdots  \cup U_n
+    \]
+    for some $n\in \mathbb{N}$ and $U_1,\ldots,U_n\in \tau$. For each $i=1,\ldots,n$, we write
+    \[
+        \varphi_{V/U}^{-1}(U_i)\cap  \varphi_{\bar{V}/\bar{U}}^{-1}(U_i)=\bigcup_{j=1}^{p_i}V_{ij},\quad f_{U'/U}^{-1}(U_i)\cap f^{-1}_{\bar{U'}/\bar{U}}(U_i)=\bigcup_{l=1}^{q_i}U_{il}',  
+    \]
+    where $p_i,q_i\in \mathbb{N}$, $V_{ij}\in \sigma$ and $U_{il}'\in \tau'$ for $j=1,\ldots,p_i$ and $l=1,\ldots,q_i$. Then
+    \[
+        W_{\alpha\beta}=\bigcup_{i,j,l}V_{ij}\times_{U_i} U_{il}'.  
+    \]
+    So $W_{\alpha\beta}$  is a $k$-special domain in $W_{\alpha}$. \textcolor{red}{We need to add a few lemmas}
+    We have an obvious isomorphism $\nu_{\alpha\beta}:W_{\alpha\beta}\rightarrow W_{\beta\alpha}$ satisfying the cocycle condition. We can then glue the $W_{\alpha}$'s along the $W_{\alpha\beta}$'s by \cref{prop-glueing} to obtain a $k$-analytic space $W$. By \cref{prop-gtopsubcanonical}, $W$ represents the fiber product $Y\times_X X'$.
+
+    \textbf{Step~1.2}. Now we only assume $X$ to be paracompact and Hausdorff. 
+    
+    Take open paracompact coverings $\{Y_i\}_{i\in I}$ of $Y$ and $\{X_j'\}_{j\in J}$ of $X'$. The existence of these coverings follows from \cref{prop-kanalyticspacelocal}. Similar to Step~1.1, we glue the $Y_i\times_X X_j'$'s along the open subsets $(Y_i\cap Y_k)\times_X(X_j'\cap X_l')$'s, we get a locally Hausdorff $k_H$-analytic space $Y'$. 
+    Then by \cref{prop-gtopsubcanonical} again, $Y'$ represents the fiber product $Y\times_X X'$.
+    %Let $\sigma'$ be the collection of sets of the form $V\times_U U'$, where $V\subseteq Y_i$ for some $i\in I$, $U\subseteq X$, $U'\subseteq X_j'$ for some $j\in J$ are all $k$-affinoid domains. Then $\sigma'$ is a net of compact subsets on $Y'$. There is an obvious $k$-affinoid atlas $\mathcal{B}'$ with the net $\sigma'$. The triple $()$ 
+
+    \textbf{Step~1.3}. We do not assume that $X$ is paracompact. Take a covering $\{X_i\}_{i\in I}$ by open paracompact subsets. Let $Y'$ be the gluing of $\varphi^{-1}(X_i)\times_{X_i}f^{-1}(X_i)$'s along $\varphi^{-1}(X_i\cap X_j)\times_{X_i\cap X_j}f^{-1}(X_i\cap X_j)$'s. Then by \cref{prop-gtopsubcanonical} again, $Y'$ represents the fiber product $Y\times_X X'$.
+
+    \textbf{Step~2}. We handle the general case. Let $\sigma'$ be the collection of all  $k_H$-affinoid domains of the form $V\times_U U'$, where $V\subseteq Y$, $U\subseteq X$, $U'\subseteq X'$ are $k_H$-affinoid domains with $\varphi(V)\subseteq U, f(U')\subseteq U$. Then $\sigma'$ is a net on $Y'$ and there is an obvious $k_H$-affinoid atlas on $Y'$ with teh net $\sigma'$. This defines a structure  a $k_H$-affinoid spaces on $Y'$. It is clear that $Y'$ represents the fiber product $Y\times_X X'$ in the category of $k_H\text{-}\AnaCat$.
 \end{proof}
 
 \section{Analytic domains}
