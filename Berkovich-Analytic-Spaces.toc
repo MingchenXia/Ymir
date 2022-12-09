@@ -9,12 +9,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{3}{The category of Berkovich analytic spaces}}{7}{section.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{4}{Analytic domains}}{19}{section.0.4}%
+\contentsline {section}{\tocsection {}{4}{Analytic domains}}{18}{section.0.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{5}{Berkovich site}}{21}{section.0.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{6}{Closed immersion}}{24}{section.0.6}%
+\contentsline {section}{\tocsection {}{6}{Closed immersions}}{24}{section.0.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{7}{Reduction}}{25}{section.0.7}%
+\contentsline {section}{\tocsection {}{7}{Separated morphisms}}{26}{section.0.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{27}{chapter*.2}%
+\contentsline {section}{\tocsection {}{8}{Reduction}}{27}{section.0.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{29}{chapter*.2}%

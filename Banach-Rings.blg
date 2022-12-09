@@ -1,0 +1,15 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'Banach-Rings.blg'
+[65] biber-darwin:340> INFO - === Fri Dec  9, 2022, 10:45:42
+[78] Biber.pm:415> INFO - Reading 'Banach-Rings.bcf'
+[165] Biber.pm:952> INFO - Found 3 citekeys in bib section 0
+[176] Biber.pm:4340> INFO - Processing section 0
+[186] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
+[187] bibtex.pm:1689> INFO - LaTeX decoding ...
+[229] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
+[283] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[284] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[284] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[284] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[290] bbl.pm:654> INFO - Writing 'Banach-Rings.bbl' with encoding 'UTF-8'
+[291] bbl.pm:757> INFO - Output to Banach-Rings.bbl
