@@ -29,8 +29,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{13}{Tate acyclicity theorem}}{50}{section.0.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{14}{Kiehl's theorem}}{60}{section.0.14}%
+\contentsline {section}{\tocsection {}{14}{Kiehl's theorem}}{57}{section.0.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{15}{Boundaryless homomorphism}}{63}{section.0.15}%
+\contentsline {section}{\tocsection {}{15}{Boundaryless homomorphism}}{61}{section.0.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{71}{chapter*.2}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{65}{chapter*.2}%

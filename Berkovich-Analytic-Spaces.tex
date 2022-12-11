@@ -8,94 +8,6 @@
 
 \section{Introduction}\label{sec-introduction}
 
-\section{Compact analytic domains}
-Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
-
-\begin{definition}
-Let $A$ be a $k_H$-affinoid algebra. A \emph{compact $k_H$-analytic domain} $V$ in $\Sp A$ is a finite union of $k_H$-affinoid domains in $\Sp A$.    
-\end{definition}
-
-
-\begin{lemma}\label{lma-compactanalyticdomainring}
-    Let $A$ be a $k_H$-affinoid algebra and $V$ be a compact $k_H$-analytic domain. Write $\Sp A$ as a finite union of $k_H$-affinoid domains $\Sp A_i$ with $i=1,\ldots,n$ in $\Sp A$. Define $A_{ij}=A_i\hat{\otimes}_A A_j$ and 
-    \[
-        A_V:=\ker  \left( \prod_{i=1}^n A_i \rightarrow \prod_{i,j=1}^n A_{ij}\right).
-    \]
-    Then the Banach $k$-algebra does not depend on the choice of the covering $\{\Sp A_i\}_i$ up to a canonical isomorphism.
-
-    The image of the natural continuous map $\Sp A_V\rightarrow \Sp A$ contains $V$ and the map does not depend on the choice of the covering up to the canonical isomorphism between $\Sp A_V$ for different coverings.
-\end{lemma}
-\begin{proof}
-    We first observe that $A_V$ is a Banach $k$-algebra as it is defined as an equalizer. This follows from \cref{Banach-lma-equalizerbanach} in \nameref{Banach-chap-Banach}.
-
-    Let $\{\Sp B_j\}_{j=1,\ldots,m}$ be another $k_H$-affinoid covering of $\Sp A$. We need to show that $A_V$ defined using the two coverings are canonically isomorphic. We write $A_V'$ for  
-    \[
-        \ker  \left( \prod_{j=1}^m B_j \rightarrow \prod_{i,j=1}^m B_{ij}\right)
-    \]  
-    to make a distinction.
-    We write $B_{ij}=B_i\hat{\otimes}_A B_j$. 
-    
-    By \cref{Affinoid-thm-Tateacyc} in \nameref{Affinoid-chap-affinoid}, the colomns in the following commutative diagram are exact:
-    \[
-        \begin{tikzcd}
-            &                                 & 0 \arrow[d]                                                                             &  & 0 \arrow[d]                                                       \\
-0 \arrow[r] & A_V \arrow[r] \arrow[d, dotted] & \prod_{i=1}^n A_i \arrow[d,"\eta"] \arrow[rr]                                                  &  & {\prod_{i,i'=1}^n A_{ii'}} \arrow[d]                              \\
-0 \arrow[r] & \ker \iota \arrow[r]            & \prod_{i=1}^n\prod_{j=1}^m A_i\hat{\otimes}_A B_j \arrow[d, "\tau"] \arrow[rr, "\iota"] &  & {\prod_{i,i'=1}^n\prod_{j,j'=1}^m A_{ii'}\hat{\otimes}_A B_{jj'}} \\
-            &                                 & {\prod_{i=1}^n\prod_{j,j'=1}^m A_i\hat{\otimes}_A B_{jj'}}                              &  &                                                                  
-\end{tikzcd}  
-    \]
-    The rows are exact by definition. By diagram chasing, the dotted arrow is injective. To see it is surjective, it suffices to observe that the factors with $i=i'$ in the lower right corner is exactly the same as the factors of the lower corner, so an element in $\ker \iota$ is necessarily in $\ker \tau$. It follows that the dotted arrow is surjective.
-
-    Similarly, we have a natural isomorphism $A_V'\cn \ker \iota$. We conclude the first assertion.
-
-    As for the second, observe that $\Sp A_V$ is defined as a colimit in the category of Banach $k$-algebras, so it follows from general abstract nonsense that there is a natural morphism $\Sp A_V\rightarrow \Sp A$. It clearly contains $V$ in the image. The compatibility with the isomorphism above follows simply from the fact that the map $\eta$ is an $A$-algebra homomorphism.
-\end{proof}
-
-\begin{remark}
-    This is also a natural continuous map $V\rightarrow \Sp A_V$, given by the natural map $A_V\rightarrow A_i$ for $i=1,\ldots,n$. This map is a section of the continuous map $\Sp A_V\rightarrow A$ we just constructed over $V$. In \cite{Berk93}, Berkovich always uses this map instead of  $\Sp A_V\rightarrow A$. 
-\end{remark}
-
-
-\begin{definition}
-    Let $A$ be a $k$-affinoid algebra and $V$ be a compact $k$-analytic domain in $\Sp A$. We define \emph{the Banach $k$-algebra $A_V$ associated with $V$} as $A_V$ constructed in \cref{lma-compactanalyticdomainring}.
-
-    The continuous map $\Sp A_V\rightarrow \Sp A$ constructed in  \cref{lma-compactanalyticdomainring} is called the \emph{structure map} ov $V$.
-\end{definition}
-
-\begin{proposition}\label{prop-compactanalydomainaffinoid}
-    Let $A$ be a $k_H$-affinoid algebra and $V$ be a compact $k_H$-analytic domain in $\Sp A$. Then the following are equivalent:
-    \begin{enumerate}
-        \item $V$ is a $k_H$-affinoid domain.
-        \item $A_V$ is a $k_H$-affinoid algebra and the image of the structure map $\Sp A_V\rightarrow \Sp A$ is exactly $V$.
-    \end{enumerate}
-\end{proposition}
-\begin{proof}
-    (1) $\implies$ (2): By \cref{Affinoid-thm-Tateacyc} in \nameref{Affinoid-chap-affinoid}, when $V$ is a $k_H$-affinoid domain, $A_V$ is a $k_H$-affinoid algebra and the structure map corresponds to the inclusion of the $k_H$-affinoid domain. There is nothing to prove.
-
-    (2) $\implies$ (1): It suffices to show that the structure map represents the $k_H$-affinoid domain $V$. Take a $k_H$-affinoid algebra $D$ and a morphism $\Sp D\rightarrow \Sp A$ of $k_H$-affinoid spectra that factorizes through $V$. We need to construct a morphism $\Sp D\rightarrow \Sp A_V$ making the following diagram commutative
-    \[
-        \begin{tikzcd}
-            \Sp D \arrow[rd] \arrow[d, dotted] &       \\
-            \Sp A_V \arrow[r]                  & \Sp A
-        \end{tikzcd}.    
-    \]
-    
-    Take $k_H$-affinoid domains $\Sp B_1,\ldots,\Sp B_n$ in $\Sp A$ that cover $V$. Let $C_i=B_i\hat{\otimes}_A D$ for $i=1,\ldots,n$, then $\Sp C_i$ is a $k_H$-affinoid domain in $\Sp D$ by \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid}. By \cref{Affinoid-thm-Tateacyc} in \nameref{Affinoid-chap-affinoid} and general abstract nonsense, it suffices to construct the dotted arrow after restricting to $\Sp C_i$ for $i=1,\ldots,n$. So we could assume that $\Sp D\rightarrow \Sp A$ factorizes through $\Sp B_1$. From the universal property, we therefore have the dotted morphism making the following diagram commutative:
-    \[
-        \begin{tikzcd}
-            \Sp D \arrow[rd] \arrow[d, dotted] &       \\
-            \Sp B_1 \arrow[r]                  & \Sp A
-        \end{tikzcd}.    
-    \]
-    It suffices to show that the natural homomorphism
-    \[
-        B_1\rightarrow A_V\hat{\otimes}_A B_1  
-    \]
-    is an isomorphism. But this follows from general abstract nonsense as $B_1$ is already a Banach $A_V$-algebra.
-\end{proof}
-\begin{remark}
-    This proposition is not correctly stated in \cite[Corollary~2.2.6]{Berk12}. The corresponding statement in \cite[Remark~1.2.1]{Berk93} is slightly weaker than our statement.
-\end{remark}
 
 
 
@@ -154,11 +66,11 @@ By Condition~(2), it $W\subseteq U\subseteq V$ are three sets in $\tau$, then $\
 \begin{proof}
     As $\tau|_{U\cap V}$ is a net and $W$ is compact, we can find $U_1,\ldots,U_n\in \tau_{U\cap V}$ with $W\subseteq U_1\cup \cdots\cup  U_n$. As $W$, $U_i$ are $k_H$-affinoid domains in $U$, $W_i=W\cap U_i$ is a $k_H$-affinoid domain in $U_i$ for all $i=1,\ldots,n$ by \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid}. It follows from \cref{Affinoid-cor-affinoiddomaintransi} and \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid} that $W_i$ and $W_i\cap W_j$ are both $k_H$-affinoid domains in $V$ for $i,j=1,\ldots,n$. So $W$ is a compact $k_H$-analytic domain in $V$.
 
-    By \cref{prop-compactanalydomainaffinoid},
+    By \cref{Affinoid-prop-compactanalydomainaffinoid} in \nameref{Affinoid-chap-affinoid},
     \[
         A_W:=\ker  \left( \prod_{i=1}^n A_{W_i} \rightarrow \prod_{i,j=1}^n A_{W_i\cap W_j}\right)
     \]
-    is $k_H$-affinoid and $\Sp A_W\rightarrow \Sp A$ induces a hoemomorphism $\Sp A_W\rightarrow W$ by \cref{Affinoid-prop-affdomainhoemo} in \nameref{Affinoid-chap-affinoid}. By \cref{prop-compactanalydomainaffinoid} again, $W$ is affinoid in $V$. 
+    is $k_H$-affinoid and $\Sp A_W\rightarrow \Sp A$ induces a hoemomorphism $\Sp A_W\rightarrow W$ by \cref{Affinoid-prop-affdomainhoemo} in \nameref{Affinoid-chap-affinoid}. By \cref{Affinoid-prop-compactanalydomainaffinoid} in \nameref{Affinoid-chap-affinoid} again, $W$ is affinoid in $V$. 
 \end{proof}
 
 \begin{definition}
@@ -299,7 +211,7 @@ For the notion of right multiplicative system, we refer to \cite[\href{https://s
 
     \textbf{RMS1}. The identity is clear a quasi-isomorphism. It remains to verify that the composition of quasi-isomorphisms is still a quasi-isomorphism.
 
-    We take $\varphi,\psi$ as in \cref{def-strongmorphismcompo}. We will use the same notations as in \cref{def-strongmorphismcompo}. We need to show that $V\rightarrow V''$ identifies $V$ with a $k_H$-affinoid domain in $V''$. From the construction, we know that $\varphi$ identifies $V_i$ with a $k_H$-affinoid domain in $V_i'$ and $\psi$ identifies $V_i'$ with a $k_H$-affinoid domain in $V_i''$ for $i=1,\ldots,n$. In particular, $\chi(V)$ is a compact $k_H$-analytic domain in $V''$. It follows from \cref{prop-compactanalydomainaffinoid} that $\chi(V)$ is a $k_H$-affinoid domain in $V''$.
+    We take $\varphi,\psi$ as in \cref{def-strongmorphismcompo}. We will use the same notations as in \cref{def-strongmorphismcompo}. We need to show that $V\rightarrow V''$ identifies $V$ with a $k_H$-affinoid domain in $V''$. From the construction, we know that $\varphi$ identifies $V_i$ with a $k_H$-affinoid domain in $V_i'$ and $\psi$ identifies $V_i'$ with a $k_H$-affinoid domain in $V_i''$ for $i=1,\ldots,n$. In particular, $\chi(V)$ is a compact $k_H$-analytic domain in $V''$. It follows from \cref{Affinoid-prop-compactanalydomainaffinoid} in \nameref{Affinoid-chap-affinoid} that $\chi(V)$ is a $k_H$-affinoid domain in $V''$.
 
     \textbf{RMS2}.
     If $\varphi:(X,\mathcal{A},\tau)\rightarrow (X',\mathcal{A}',\tau')$ and $f:(\widetilde{X'},\widetilde{\mathcal{A}'},\widetilde{\tau'})\rightarrow (X',\mathcal{A}',\tau')$ are given strong morphisms of $k_H$-analytic spaces and $g$ is a quasi-isomorphism, then there are $k_H$-analytic space $(\widetilde{X},\widetilde{\mathcal{A}},\widetilde{\tau})$ and strong morphisms $\tilde{\varphi}:(\widetilde{X},\widetilde{\mathcal{A}},\widetilde{\tau})\rightarrow (\widetilde{X'},\widetilde{\mathcal{A}'},\widetilde{\tau'})$ and $f:(\widetilde{X},\widetilde{\mathcal{A}},\widetilde{\tau})\rightarrow (X,\mathcal{A},\tau)$ such that $f$ is a quasi-isomorphism and the following diagram commutes:  
@@ -379,7 +291,7 @@ Under our convention, the assumption means that $W_i\cap W_j\rightarrow W_i\time
     \]
     Observe that $A_U\hat{\otimes}_k A_V \rightarrow A_{U\cap V}$ is surjective. We endow $A_{U\cap V}$ with the structure of finite $A_U\hat{\otimes}_k A_V$-Banach algebras by \cref{Affinoid-prop-Banachalgebrafiniteforget} in \nameref{Affinoid-chap-affinoid}. Then $A_U\hat{\otimes}_k A_V \rightarrow A_{U\cap V}$ is an admissible epimorphism by \cref{Affinoid-prop-finitemodulemapadmi} in \nameref{Affinoid-chap-affinoid}.
 
-    On the other hand $U\cap V$ is a compact $k_H$-analytic domain in $U$, so by \cref{prop-compactanalydomainaffinoid}, $U\cap V$ is a $k_H$-affinoid in $U$. In particular, $U\cap V\in \bar{\tau}$.
+    On the other hand $U\cap V$ is a compact $k_H$-analytic domain in $U$, so by \cref{Affinoid-prop-compactanalydomainaffinoid} in \nameref{Affinoid-chap-affinoid}, $U\cap V$ is a $k_H$-affinoid in $U$. In particular, $U\cap V\in \bar{\tau}$.
 \end{proof}
 
 \begin{lemma}\label{lma-AWspecial}
@@ -392,7 +304,7 @@ Under our convention, the assumption means that $W_i\cap W_j\rightarrow W_i\time
     Moreover, we have a canonical map $W\rightarrow \Sp A_W$, which does not depend on the choice of the covering modulo the canonical isomorphism between $A_W$.
 \end{lemma}
 \begin{proof}
-    It follows from \cref{lma-tauspecialanycov} that the covering $\{W_i\}_{i\in I}$ is $\tau$-special. It suffices to apply the same argument of \cref{lma-compactanalyticdomainring}.
+    It follows from \cref{lma-tauspecialanycov} that the covering $\{W_i\}_{i\in I}$ is $\tau$-special. It suffices to apply the same argument of \cref{Affinoid-lma-compactanalyticdomainring} in \nameref{Affinoid-chap-affinoid}.
 \end{proof}
 
 \begin{definition}\label{def-tauhat}
@@ -440,7 +352,7 @@ Observe that $W$ is $k_H$-affinoid and $W_i$ is a $k_H$-affinoid domain in $W$ b
     
     We define $A_V$ using this covering as in \cref{lma-AWspecial}. By definition, the canonical map $V\rightarrow \Sp A_V$ is a homeomorphism.
 
-    Next take $U,V\in \hat{\tau}$ with $U\subseteq V$. We want to identify $U$ with a $k_H$-affinoid domain in $V$. First assume that $U\in \tau$, then $U\cap V_i$ is a $k_H$-affinoid domain in $V_i$ for $i\in I_V$ by \cref{lma-tauspecialanycov}. Hence, $U$ is a $k_H$-affinoid domain in $V$. If we only know $U\in \hat{\tau}$,  we know that $U_i$ is a $k_H$-affinoid domain in $V$ for any $i\in I_U$. It follows that $U$ is a $k_H$-affinoid domain in $V$ by \cref{prop-compactanalydomainaffinoid}.
+    Next take $U,V\in \hat{\tau}$ with $U\subseteq V$. We want to identify $U$ with a $k_H$-affinoid domain in $V$. First assume that $U\in \tau$, then $U\cap V_i$ is a $k_H$-affinoid domain in $V_i$ for $i\in I_V$ by \cref{lma-tauspecialanycov}. Hence, $U$ is a $k_H$-affinoid domain in $V$. If we only know $U\in \hat{\tau}$,  we know that $U_i$ is a $k_H$-affinoid domain in $V$ for any $i\in I_U$. It follows that $U$ is a $k_H$-affinoid domain in $V$ by \cref{Affinoid-prop-compactanalydomainaffinoid} in \nameref{Affinoid-chap-affinoid}.
     
     The uniqueness is immediate.
 \end{proof}
@@ -1186,10 +1098,12 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     \[
         \varphi:(X,x)\rightarrow (Y,y)  
     \]
-    that induces an isomorphism of $X$ with an open neighbourhood of $y$ in $Y$ in the category of $k_H\text{-}\GerCat$.
+    that induces an isomorphism of $X$ with an open neighbourhood of $y$ in $Y$ in $k\text{-}\GerCat$.
 
     When we view $(X,x)$ as an object in $k_H\text{-}\GerCat$, we write it as $X_x$. An object in $k_H\text{-}\GerCat$ is called a $k_H$-analytic germ.
 \end{definition}
+Be careful, we require $\varphi$ to induce an isomorphism in $k\text{-}\GerCat$ instead of $k_H\text{-}\GerCat$, although eventually, we will show that these notions coincide.
+
 By definition,
 \[
     \Hom_{k_H\text{-}\GerCat}(X_x,Y_y)=\varinjlim_{U}\Hom_{k_H\text{-}\AnaCat_*}((U,x),(Y,y)),  

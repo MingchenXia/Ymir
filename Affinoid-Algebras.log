@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  9 DEC 2022 17:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  11 DEC 2022 11:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -913,15 +913,33 @@ LABELS NOT IMPORTED.
 (Introduction.tex)
 (Introduction.aux)
 No file Introduction.aux.
-Package xr Info: IMPORTING LABELS FROM Topology-Bornology.aux on input line 328.
+
+Package xr Warning: 
+No file Topology-Bornology.aux
+LABELS NOT IMPORTED.
+ on input line 328.
+
 (Topology-Bornology.tex)
 (Topology-Bornology.aux)
-Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 329.
+No file Topology-Bornology.aux.
+
+Package xr Warning: 
+No file Banach-Rings.aux
+LABELS NOT IMPORTED.
+ on input line 329.
+
 (Banach-Rings.tex)
 (Banach-Rings.aux)
-Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 330.
+No file Banach-Rings.aux.
+
+Package xr Warning: 
+No file Commutative-Algebra.aux
+LABELS NOT IMPORTED.
+ on input line 330.
+
 (Commutative-Algebra.tex)
 (Commutative-Algebra.aux)
+No file Commutative-Algebra.aux.
 
 Package xr Warning: 
 No file Local-Algebras.aux
@@ -952,9 +970,15 @@ No file Morphisms.aux.
 Package xr Info: IMPORTING LABELS FROM Affinoid-Algebras.aux on input line 334.
 (Affinoid-Algebras.tex)
 (Affinoid-Algebras.aux)
-Package xr Info: IMPORTING LABELS FROM Berkovich-Analytic-Spaces.aux on input line 335.
+
+Package xr Warning: 
+No file Berkovich-Analytic-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 335.
+
 (Berkovich-Analytic-Spaces.tex)
 (Berkovich-Analytic-Spaces.aux)
+No file Berkovich-Analytic-Spaces.aux.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1103,15 +1127,108 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 ]
 Affinoid algebras
+
+LaTeX Warning: Reference `Banach-ex-strictconvseriesradius' on page 1 undefined on input line 31.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 5 undefined on input line 31.
+
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
-[5] [6] [7]
+
+LaTeX Warning: Reference `Banach-prop-strictconvseriesradiusBanach' on page 1 undefined on input line 37.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 5 undefined on input line 37.
+
+
+LaTeX Warning: Reference `Banach-prop-Tateunivprop' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 5 undefined on input line 58.
+
+[5]
+
+LaTeX Warning: Reference `Banach-def-admissiblemorphism' on page 1 undefined on input line 83.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 6 undefined on input line 83.
+
+
+LaTeX Warning: Reference `Banach-def-Berkspectrum' on page 1 undefined on input line 96.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 6 undefined on input line 96.
+
+[6] [7]
 Overfull \hbox (22.04904pt too wide) detected at line 195
 \OML/lmm/m/it/10 g \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 h\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 T[]T[] \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 1) = [](\OML/lmm/m/it/10 c[] \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 d[]\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 T[] \OT1/lmr/m/n/10 + [](\OML/lmm/m/it/10 c[] \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 d[]\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 T[] \OT1/lmr/m/n/10 + (\OML/lmm/m/it/10 c[] \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 d[]\OT1/lmr/m/n/10 ) + [](\OML/lmm/m/it/10 d[] \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 d[]\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 T[]T[]:
  []
 
-[8] [9] [10] [11] [12] [13]
+[8]
+
+LaTeX Warning: Reference `Banach-prop-strictconvseriesradiusBanach' on page 1 undefined on input line 246.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 9 undefined on input line 246.
+
+
+LaTeX Warning: Reference `Banach-prop-Berkospecnonempty' on page 1 undefined on input line 261.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 9 undefined on input line 261.
+
+
+LaTeX Warning: Reference `Banach-cor:maximalidealclosedinBanachring' on page 1 undefined on input line 263.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 9 undefined on input line 263.
+
+[9]
+
+LaTeX Warning: Reference `Banach-prop-Tateunivprop' on page 1 undefined on input line 320.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 10 undefined on input line 320.
+
+
+LaTeX Warning: Reference `Banach-cor-bddisadmi' on page 1 undefined on input line 324.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 10 undefined on input line 324.
+
+
+LaTeX Warning: Reference `Banach-prop-algebrafinitenormadmi' on page 1 undefined on input line 332.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 10 undefined on input line 332.
+
+[10]
+
+LaTeX Warning: Reference `Banach-prop-Tateunivprop' on page 1 undefined on input line 348.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 11 undefined on input line 348.
+
+[11]
+
+LaTeX Warning: Reference `Banach-cor-reductionstrictlyconv' on page 1 undefined on input line 421.
+
+
+LaTeX Warning: Reference `Banach-cor-unitsstrictlyconv' on page 1 undefined on input line 439.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 12 undefined on input line 439.
+
+[12]
+
+LaTeX Warning: Reference `Banach-prop-epsilondenseimpliesdense' on page 1 undefined on input line 501.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 13 undefined on input line 501.
+
+[13]
 Overfull \hbox (2.88043pt too wide) in paragraph at lines 506--507
 \OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 T[]; [] ; T[]\OMS/lmsy/m/n/10 g$\T1/lmr/m/n/10 (-20) . As-sume that $\OML/lmm/m/it/10 !g \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 T[]; [] ; T[]\OMS/lmsy/m/n/10 g\OT1/lmr/m/n/10 (-20) [\OML/lmm/m/it/10 T[]\OT1/lmr/m/n/10 (-20) ]$\T1/lmr/m/n/10 (-20) , then $\OML/lmm/m/it/10 g \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 T[]; [] ; T[]\OMS/lmsy/m/n/10 g\OT1/lmr/m/n/10 (-20) [\OML/lmm/m/it/10 T[]\OT1/lmr/m/n/10 (-20) ]$\T1/lmr/m/n/10 (-20) . 
  []
@@ -1127,49 +1244,328 @@ Overfull \hbox (4.16241pt too wide) in paragraph at lines 651--652
 []\T1/lmr/bx/n/10 (-20) Corollary 4.16. []\T1/lmr/m/n/10 (-20) Let $\OML/lmm/m/it/10 A$ \T1/lmr/m/n/10 (-20) be a strictly $\OML/lmm/m/it/10 k$\T1/lmr/m/n/10 (-20) -affinoid al-ge-bra, $\OML/lmm/m/it/10 d \OMS/lmsy/m/n/10 2 \U/msb/m/n/10 N$ \T1/lmr/m/n/10 (-20) and $\OML/lmm/m/it/10 ' \OT1/lmr/m/n/10 (-20) : \OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 T[]; [] ; T[]\OMS/lmsy/m/n/10 g !
  []
 
+
+LaTeX Warning: Reference `Banach-prop-fsupspecexp' on page 1 undefined on input line 657.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 16 undefined on input line 657.
+
 [16]
 Overfull \hbox (21.65422pt too wide) in paragraph at lines 674--675
 []\T1/lmr/m/n/10 (-20) Take some $\OML/lmm/m/it/10 n \OMS/lmsy/m/n/10 2 \U/msb/m/n/10 N$ \T1/lmr/m/n/10 (-20) and a sur-jec-tive $\OML/lmm/m/it/10 k$\T1/lmr/m/n/10 (-20) -algebra ho-mo-mor-phism $\OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 T[]; [] ; T[]\OMS/lmsy/m/n/10 g !
  []
 
-[17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30]
+
+LaTeX Warning: Reference `Banach-prop-morphismBanachcont' on page 1 undefined on input line 695.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 17 undefined on input line 695.
+
+[17]
+
+LaTeX Warning: Reference `Banach-lma-supnormbddbyrho' on page 1 undefined on input line 743.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 18 undefined on input line 743.
+
+
+LaTeX Warning: Reference `Banach-prop-fsupspecexp' on page 1 undefined on input line 768.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 18 undefined on input line 768.
+
+
+LaTeX Warning: Reference `Banach-prop-fsupspecexp' on page 1 undefined on input line 776.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 18 undefined on input line 776.
+
+[18]
+
+LaTeX Warning: Reference `Banach-prop-sigmaproduct' on page 1 undefined on input line 805.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 19 undefined on input line 805.
+
+
+LaTeX Warning: Reference `Banach-prop-supeqsp' on page 1 undefined on input line 809.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 19 undefined on input line 809.
+
+[19]
+
+LaTeX Warning: Reference `Banach-lma-supnormbddbyrho' on page 1 undefined on input line 862.
+
+
+LaTeX Warning: Reference `Banach-prop-fsupspecexp' on page 1 undefined on input line 870.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 20 undefined on input line 870.
+
+
+LaTeX Warning: Reference `Banach-lma-supnormbddbyrho' on page 1 undefined on input line 886.
+
+[20]
+
+LaTeX Warning: Reference `Banach-cor-idealclosed' on page 1 undefined on input line 910.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 21 undefined on input line 910.
+
+
+LaTeX Warning: Reference `Banach-def-spectralradius' on page 1 undefined on input line 919.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 21 undefined on input line 919.
+
+
+LaTeX Warning: Reference `Banach-prop-Berkospecnonempty' on page 1 undefined on input line 923.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 21 undefined on input line 923.
+
+
+LaTeX Warning: Reference `Banach-prop-fsupspecexp' on page 1 undefined on input line 927.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 21 undefined on input line 927.
+
+[21] [22] [23]
+
+LaTeX Warning: Reference `Banach-lma-supnormbddbyrho' on page 1 undefined on input line 1057.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 24 undefined on input line 1057.
+
+
+LaTeX Warning: Reference `Banach-lma-supnormbddbyrho' on page 1 undefined on input line 1066.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 24 undefined on input line 1066.
+
+[24]
+
+LaTeX Warning: Reference `Banach-prop-inversesmallelementBanachring' on page 1 undefined on input line 1120.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 25 undefined on input line 1120.
+
+
+LaTeX Warning: Reference `Banach-cor-reductionstrictlyconv' on page 1 undefined on input line 1148.
+
+[25]
+
+LaTeX Warning: Reference `Banach-prop-Tateunivprop' on page 1 undefined on input line 1174.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 26 undefined on input line 1174.
+
+
+LaTeX Warning: Reference `Banach-cor-bddisadmi' on page 1 undefined on input line 1178.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 26 undefined on input line 1178.
+
+[26]
+
+LaTeX Warning: Reference `Banach-def-finiteBanachmodules' on page 1 undefined on input line 1253.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 27 undefined on input line 1253.
+
+[27] [28]
+
+LaTeX Warning: Reference `Banach-cor-idealclosed' on page 1 undefined on input line 1339.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 29 undefined on input line 1339.
+
+[29]
+
+LaTeX Warning: Reference `Banach-def-finiteBanachalgebra' on page 1 undefined on input line 1403.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 30 undefined on input line 1403.
+
+[30]
 Overfull \hbox (2.72995pt too wide) detected at line 1458
 \OT1/lmr/m/n/10 ([] \OML/lmm/m/it/10 A\OT1/lmr/m/n/10 ) [] := [] \OML/lmm/m/it/10 :
  []
 
 [31]
+
+LaTeX Warning: Reference `Banach-cor-rhoequsup' on page 1 undefined on input line 1488.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 32 undefined on input line 1488.
+
+
 Overfull \hbox (9.37698pt too wide) in paragraph at lines 1504--1505
 []\T1/lmr/m/n/10 (-20) It re-mains to show that each point in $\OT1/lmr/m/n/10 (-20) ([] \OML/lmm/m/it/10 A\OT1/lmr/m/n/10 (-20) ) []$ \T1/lmr/m/n/10 (-20) lies in $[] \OML/lmm/m/it/10 A []$\T1/lmr/m/n/10 (-20) . 
  []
 
-[32]
+
 Overfull \hbox (8.36438pt too wide) detected at line 1519
 [][]
  []
 
-[33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45]
+[32]
 
-LaTeX Warning: cref reference format for label type `' undefined on input line 2187.
+LaTeX Warning: Reference `Banach-cor-invertibleintermsofsp' on page 1 undefined on input line 1555.
+
+[33] [34]
+
+LaTeX Warning: Reference `Banach-thm-spectrumcptHaus' on page 1 undefined on input line 1602.
 
 
-LaTeX Warning: cref reference format for label type `' undefined on input line 2189.
+LaTeX Warning: Reference `Banach-chap-Banach' on page 35 undefined on input line 1602.
+
+[35]
+
+LaTeX Warning: Reference `Banach-cor-invertibleintermsofsp' on page 1 undefined on input line 1668.
 
 
-LaTeX Warning: cref reference format for label type `' undefined on input line 2205.
+LaTeX Warning: Reference `Banach-chap-Banach' on page 36 undefined on input line 1668.
+
+[36] [37] [38]
+
+LaTeX Warning: Reference `Banach-cor-rhoequsup' on page 1 undefined on input line 1851.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 39 undefined on input line 1851.
+
+
+LaTeX Warning: Reference `Banach-prop-fsupspecexp' on page 1 undefined on input line 1853.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 39 undefined on input line 1853.
+
+[39]
+
+LaTeX Warning: Reference `Banach-cor-rhoequsup' on page 1 undefined on input line 1883.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 40 undefined on input line 1883.
+
+
+LaTeX Warning: Reference `Banach-cor-rhoequsup' on page 1 undefined on input line 1887.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 40 undefined on input line 1887.
+
+[40] [41]
+
+LaTeX Warning: Reference `Commutative-cor-finitegradeddescent' on page 1 undefined on input line 1998.
+
+
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 42 undefined on input line 1998.
+
+
+LaTeX Warning: Reference `Commutative-lma-rhoconditionimplygraded' on page 1 undefined on input line 1998.
+
+
+LaTeX Warning: Reference `Banach-lma-finitemodulejapanese' on page 1 undefined on input line 2011.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 42 undefined on input line 2011.
+
+[42]
+
+LaTeX Warning: Reference `Banach-cor-Spalgclosure' on page 1 undefined on input line 2064.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 43 undefined on input line 2064.
+
+[43] [44]
+
+LaTeX Warning: Reference `Commutative-lma-rhoAequalrhok' on page 1 undefined on input line 2172.
+
+
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 45 undefined on input line 2172.
+
+
+LaTeX Warning: Reference `Banach-cor-rhoequsup' on page 1 undefined on input line 2187.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 1 undefined on input line 2187.
+
+[45]
+
+LaTeX Warning: Reference `Commutative-lma-specggenericpointfinite' on page 1 undefined on input line 2189.
+
+
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 1 undefined on input line 2189.
+
+
+LaTeX Warning: Reference `Banach-def-Shilovboundary' on page 1 undefined on input line 2205.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 1 undefined on input line 2205.
 
 [46]
+
+LaTeX Warning: Reference `Banach-thm-openmapping' on page 1 undefined on input line 2239.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 47 undefined on input line 2239.
+
+
 Overfull \hbox (8.46265pt too wide) in paragraph at lines 2270--2271
 []$[]$ \T1/lmr/m/n/10 (-20) is fi-nite over the sub-al-ge-bra gen-er-ated by $[]$ and $[]\OML/lmm/m/it/10 ; [] ; []; []; [] ; []$\T1/lmr/m/n/10 (-20) ; 
  []
 
-[47] [48] [49] [50] [51] [52]
-Overfull \hbox (62.99428pt too wide) detected at line 2540
+[47]
+
+LaTeX Warning: Reference `Banach-def-residuefield' on page 1 undefined on input line 2304.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 48 undefined on input line 2304.
+
+[48] [49] [50] [51]
+
+LaTeX Warning: Reference `Banach-thm-openmapping' on page 1 undefined on input line 2525.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 52 undefined on input line 2525.
+
+[52]
+Overfull \hbox (62.99428pt too wide) detected at line 2544
 []\OML/lmm/m/it/10 ;
  []
 
-[53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64]
+[53] [54] [55] [56] [57]
+
+LaTeX Warning: Reference `Banach-lma-equalizerbanach' on page 1 undefined on input line 2805.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 58 undefined on input line 2805.
+
+
+Overfull \hbox (10.88754pt too wide) detected at line 2822
+[]
+ []
+
+[58] [59] [60] [61]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62] [63] [64]
+
+LaTeX Warning: Reference `Commutative-lma-gradedhomokernel' on page 1 undefined on input line 3153.
+
+
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 65 undefined on input line 3153.
+
+[65] [66] [67] [68]
+Overfull \hbox (44.90172pt too wide) detected at line 3406
+[] \OMS/lmsy/m/n/10 \ \OML/lmm/m/it/10 V \OT1/lmr/m/n/10 = []
+ []
+
+[69] [70
+
+]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3151.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3424.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1177,9 +1573,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [65
-
-] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.aux)
+ [71] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1188,18 +1582,18 @@ Package logreq Info: Writing requests to 'Affinoid-Algebras.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39408 strings out of 478994
- 752960 string characters out of 5858185
- 1580401 words of memory out of 5000000
- 55571 multiletter control sequences out of 15000+600000
- 466726 words of font info for 209 fonts, out of 8000000 for 9000
+ 39414 strings out of 478994
+ 750849 string characters out of 5858185
+ 1569004 words of memory out of 5000000
+ 55543 multiletter control sequences out of 15000+600000
+ 467340 words of font info for 215 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  132i,20n,133p,1076b,1804s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.pdf (65 pages, 610196 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.pdf (71 pages, 631979 bytes).
 PDF statistics:
- 1127 PDF objects out of 1200 (max. 8388607)
- 1027 compressed objects within 11 object streams
- 284 named destinations out of 1000 (max. 500000)
+ 1082 PDF objects out of 1200 (max. 8388607)
+ 977 compressed objects within 10 object streams
+ 306 named destinations out of 1000 (max. 500000)
  23189 words of extra memory for PDF output out of 24883 (max. 10000000)
 
