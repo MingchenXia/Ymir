@@ -534,6 +534,11 @@ We will call $X$ the \emph{gluing} of the $X_i$'s along the $X_{ij}$'s.
     We will endow $|X|$ with a structure of $k_H$-analytic space. Let $\tau$ be the set of $V\subseteq |X|$ for which there is $i\in I$ such that $V\subseteq \mu_i(X_i)$ and $\mu_i^{-1}(V)$ is a $k_H$-affinoid domain in $X_i$. Then $\tau$ is a net on $X$. There is an obvious $k$-affinoid atlas on $X$ with the net $\tau$. All properties in the proposition are satisfied by $X=(|X|,\mathcal{A},\tau)$.
 \end{proof}
 
+\begin{definition}
+    Let $X$ be a $k_H$-analytic space and $x\in X$, take a $k_H$-affinoid domain $\Sp A$ in $X$ containing $x$, we define the \emph{completed residue field} $\mathscr{H}(x)$ of $x$ in $X$ as the completed residue field of $x$ in $\Sp A$.
+\end{definition}
+By \cref{Affinoid-cor-affdomainresidueequal} in \nameref{Affinoid-chap-affinoid}, $\mathscr{H}(x)$ does not depend on the choice of $\Sp A$ up to an isomorphism of complete valuation fields over $k$.
+
 
 \section{Analytic domains}
 Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subgroup of $\mathbb{R}_{>0}$ such that $|k^{\times}|\cdot H\neq \{1\}$.
@@ -546,6 +551,14 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
     \end{enumerate}
 \end{definition}
 Observe that the net of $k_H$-affinoid domains in $X$ that are contained in $Y$ form a net on $Y$. In particular, $Y$ inherits a $k_H$-analytic space structure from $X$, and we have a canonical morphism $Y\rightarrow X$ in $k_H\text{-}\AnaCat$.
+
+\begin{lemma}
+    Let $X$ be a $k_H$-analytic space, $Y$ be a $k_H$-analytic domain in $X$ and $x\in Y$. Then the complete residue field of $x$ in $X$ is the same as the complete residue field of $x$ in $Y$ modulo isomorphisms of completed valuation fields over $k$.
+\end{lemma}
+\begin{proof}
+    This follows immediately from \cref{Affinoid-cor-affdomainresidueequal} in \nameref{Affinoid-chap-affinoid}.
+\end{proof}
+
 
 \begin{example}\label{ex-opensubspace}
     Let $X$ be a $k_H$-analytic space. Then any open subset $U$ of $X$ is a $k_H$-analytic domain. 
@@ -1120,40 +1133,341 @@ Note that this condition does not depend on the representative $(X,x)$. To see t
 \end{definition}
 
 \begin{definition}
-    Let $X_x$ be a $k_H$-analytic germ. A \emph{$k_H$-analytic domain} in $X_x$ is a $k_H$-analytic germ $V_x$, where $V$ is a $k_H$-analytic domain in $X$ containing $x$. 
+    Let $X_x$ be a $k_H$-analytic germ. A \emph{$k_H$-analytic domain} in $X_x$ is a $k_H$-analytic germ $V_x$, where $V$ is a $k_H$-analytic domain in $X$ containing $x$.
+    
+    We say a finite family of $k_H$-analytic germs $\{V_{ix}\}_{i\in I}$ \emph{covers} $X_x$ if there is a representative $(X,x)$ of $X_x$ such that $V_{ix}$ can be represented by a $k_H$-analytic domain $V_i\in X$ for $i\in I$ and  
+    \[
+        X=\bigcup_{i\in I}V_{i}.  
+    \]
 \end{definition}
+
+\begin{definition}
+    Let $\phi:Y_y\rightarrow X_x$ be a morphism of $k_H$-analytic germs and $V_x$ be a $k_H$-analytic domain in $X_x$. Represent $\phi$ by a morphism $\phi:(Y,y)\rightarrow (X,x)$ and represent $V_x$ by a $k_H$-analytic domain in $X$. Then the $k_H$-analytic domain $\phi^{-1}(V)$ in $Y$ determines a $k_H$-analytic germ $\phi^{-1}(V)_y$, which does not depend on the choices we made. This $k_H$-analytic germ is denoted by $\phi^{-1}(V_x)$.
+\end{definition}
+Recall that $\phi^{-1}(V)$ is a $k_H$-analytic domain in $Y$ by \cref{prop-analyticdomainprop}.
+
+
+\begin{definition}
+    Let $X$ be a good $k_H$-analytic space and $x\in X$, we define
+    \[
+        \mathcal{O}_{X,x}:=\varinjlim_{V} A_V,  
+    \]
+    where $V$ runs over all $k_H$-affinoid neighbourhoods of $x$ in $X$. \textcolor{red}{Include the definition of affinoid neighbourhoods}
+\end{definition}
+Observe that $k_H$-affinoid neighbourhoods of $x$ in $X$ are cofinal in the directed set of $k$-affinoid neighbourhoods of $x$ in $X$. This follows from \cref{Affinoid-prop-laurentdomainfundamental} in \nameref{Affinoid-chap-affinoid}. So we may let $V$ runs over all $k$-affinoid neighbourhoods of $x$ in $X$ as well.
+
+\begin{example}
+    Let $X_x$ be a $k_H$-analytic germ. Take a $k_H$-affinoid domain $\Sp A$ of $X$ containing $x$.
+    Given $r\in \sqrt{|k^{\times}|\cdot H}^n$ and $f\in A^n$, we write
+    \[
+        X_x\{r^{-1}f\}:=\left(\Sp A\{r^{-1}f\}\right)_x.
+    \]
+    Then $X_x\{r^{-1}f\}$ is a $k_H$-analytic germ. Observe that $X_x\{r^{-1}f\}$ is independent of the choice of $\Sp A$. This construction depends only on the classes of $f$ in $\mathcal{O}_{X,x}^n$. Given $\bar{f}\in \mathcal{O}_{X,x}^n$, we define $X_x\{r^{-1}\bar{f}\}=X_x\{r^{-1}f\}$ for any $f\in A^n$ lifting $\bar{f}$ as above.
+\end{example}
 
 Next we define the reduction. 
 
-\begin{definition}
+\begin{definition}\label{def-reductionstar}
     Let $X=\Sp A$ be a $k_H$-affinoid space and $x\in X$, we define the \emph{reduction} $\widetilde{(X,x)}$ of $X$ at $x$ as follows: let $\chi_x:A\rightarrow \mathscr{H}(x)$ be the character corresponding to $x$, we define
     \[
-        \widetilde{(X,x)}:=\mathbf{P}_{\widetilde{\mathscr{H}(x)}^H/\tilde{k}^H}\left\{ \widetilde{\chi_x}(\tilde{A}^H)\right\}.
+        \widetilde{(X,x)}^H:=\mathbf{P}_{\widetilde{\mathscr{H}(x)}^H/\tilde{k}^H}\left\{ \widetilde{\chi_x}(\tilde{A}^H)\right\}.
     \]
     Observe that this construction defines a functor
     \[
-        k_H\text{-}\GerCat\rightarrow \bir_{\tilde{k}^H}.  
+        k_H\text{-}\AnaCat_*\rightarrow \bir_{\tilde{k}^H}.  
     \]
 \end{definition}
+Observe that $\widetilde{(X,x)}^H$ is an affine open subset of $\mathbf{P}_{\widetilde{\mathscr{H}(x)}^H/\tilde{k}^H}$. This follows from \cref{Affinoid-cor-reductionfinitelygenerated} in \nameref{Affinoid-chap-affinoid}.
 
-\begin{lemma}
-    Let $X=\Sp A$ be a $k_H$-affinoid space and $x\in X$. Let $U=\Sp B$ be an open affinoid neighbourhood of $x$ in $X$. Then the natural morphism
+\begin{lemma}\label{lma-reductionindepgoodgerm}
+    Let $X=\Sp A$ be a $k_H$-affinoid space and $x\in X$. Let $U=\Sp B$ be a $k_H$-affinoid space. Let $\iota:U\rightarrow X$ be an isomorphism of $U$ with an open neighbourhood of $x$ in $k\text{-}\AnaCat$.
+    We still write $\iota^{-1}(x)\in U$ as $x$.
+    Then the natural morphism
     \[
-        \widetilde{(U,x)}\rightarrow \widetilde{(X,x)}       
+        \widetilde{(U,x)}^H\rightarrow \widetilde{(X,x)}^H      
     \]
     is an isomorphism in $\bir_{\tilde{k}^H}$.
 \end{lemma}
 \begin{proof}
-    Observe that the morphism $\chi_x:B\rightarrow \mathscr{H}(x)$ is inner with respect to $A$.
+    We first recall that  $\mathscr{H}(x)$ does not depend on if we view $x$ as in $\Sp A$ or in $\Sp B$  by \cref{Affinoid-cor-affdomainresidueequal} in \nameref{Affinoid-chap-affinoid}. 
+
+    Observe that the morphism $\chi_x:B\rightarrow \mathscr{H}(x)$ is boundaryless with respect to $A$ by \cref{Affinoid-prop-affinoiddomaininterior} in \nameref{Affinoid-chap-affinoid}. By \cref{Affinoid-prop-innerhomochar}  in \nameref{Affinoid-chap-affinoid}, $\widetilde{\chi_x}(\tilde{B}^H)$ is finite over $\widetilde{\chi_x}(\tilde{A}^H)$. By \cref{Commutative-lma-gradedRZaffeq} in \nameref{Commutative-chap-commutative}, we have
+    \[
+        \mathbf{P}_{\widetilde{\mathscr{H}(x)}^H/\tilde{k}^H}\left\{ \widetilde{\chi_x}(\tilde{A}^H)\right\}=\mathbf{P}_{\widetilde{\mathscr{H}(x)}^H/\tilde{k}^H}\left\{ \widetilde{\chi_x}(\tilde{B}^H)\right\}.
+    \]
 \end{proof}
 
-\begin{thm}
+\begin{definition}
+    Let $X_x$ be a good $k_H$-analytic germs. Take an affinoid neighbourhood $U$ of $x$ in $X$, then we define
+    \[
+        \widetilde{X_x}^H:=\widetilde{(U,x)}^H\subseteq \mathbf{P}_{\widetilde{\mathscr{H}(x)}^H/\tilde{k}^H}.  
+    \]
+    By \cref{lma-reductionindepgoodgerm}, $\widetilde{X_x}^H$ depends only on $X_x$.
+    
+    The construction is clearly functorial in $X_x$.
+\end{definition}
+
+
+\begin{lemma}\label{lma-analyticdomainingood1}
+    Let $X_x$ be a good $k_H$-analytic germ and $Y_x$ be a $k_H$-analytic domain in $X_x$. Then $Y_x$ can be covered by finitely many $k_H$-analytic domains in $X_x$ of the form
+    \[
+        X_x\left\{r^{-1}f \right\},  
+    \]
+    where $n\in \mathbb{N}$, $f=(f_1,\ldots,f_n)\in \mathcal{O}_{X,x}^{\times}$ is a tuple of invertible elements and $r_i=|f_i(x)|\in \sqrt{|k^{\times}|\cdot H}$.
+\end{lemma}
+\begin{proof}
+    We may assume that $X$ is $k_H$-affinoid, say $X=\Sp A$. By \cref{Affinoid-cor-GG} in \nameref{Affinoid-chap-affinoid}, $Y$ can be covered by finitely many $k_H$-rational domains in $X$, say of the form $\Sp A\{r^{-1}g/h\}$, where $m\in \mathbb{N}$, $r=(r_1,\ldots,r_m)\in \sqrt{|k^{\times}|\cdot H}^m$, $g=(g_1,\ldots,g_m)\in A^m$, $h\in A$ and $g_1,\ldots,g_m,h$ generates the unit ideal. We may assume that $Y=\Sp A\{r^{-1}g/h\}$.
+    
+    By shrinking $X$, we may assume that $h$ is invertible. Set $f_i=g_i/h$, then 
+    \[
+        Y=\Sp A\{r_1^{-1}f_1,\ldots,r_m^{-1}f_m\}.  
+    \]
+    By further shrinking $X$, it suffices to consider those $i$ with $|f_i(x)|=r_i$.
+\end{proof}
+
+
+
+\begin{lemma}\label{lma-affinoiddomainreductionspecial2}
+    Let $X_x$ be a good $k_H$-analytic germ. Given $n\in \mathbb{N}$ and $f=(f_1,\ldots,f_n)\in \mathcal{O}_{X,x}^{\times}$, then
+    \[
+       \widetilde{X_x\{r^{-1}f\}}^H=\widetilde{X_x}^H\left\{\widetilde{\chi_x}(\tilde{f_1}),\ldots,\widetilde{\chi_x}(\tilde{f_n})\right\},  
+    \]
+    where $r=(r_1,\ldots,r_n)$ and $r_i=|f_i(x)|$ for $i=1,\ldots,n$.
+\end{lemma}
+\begin{proof}
+    We may assume that $X$ is $k_H$-affinoid, say $X=\Sp A$. By induction on $n$, we may assume that $n=1$. Consider the admissible epimorphism
+    \[
+        \phi:A\{r^{-1}T\}\rightarrow A\{r^{-1}f\}  
+    \]
+    sending $T$ to $f$. By \cref{Affinoid-thm-reductionfinite} in \nameref{Affinoid-chap-affinoid}, 
+    \[
+        \tilde{\phi}:\tilde{A}^H[r^{-1}T]\rightarrow \widetilde{A\{r^{-1}f\}}^H  
+    \]
+    is finite. Let $\chi_x:A\{r^{-1}f\}\rightarrow \mathscr{H}(x)$ be the character defined by $x$.
+    
+    Then $\widetilde{\chi_x}(\widetilde{A\{r^{-1}f\}}^H)$ is finite over $\widetilde{\chi_x}(\tilde{A}^H)[\tilde{f}]$. So the assertion follows from \cref{Commutative-lma-gradedRZaffeq} in \nameref{Commutative-chap-commutative}.
+\end{proof}
+
+
+\begin{lemma}\label{lma-goodaffinoiddomainredexp}
+    Let $X_x$ be a good $k_H$-analytic germs and $Y_x$ be a good $k_H$-analytic domain in $X_x$. Then we can find $n\in \mathbb{N}$, $f_1,\ldots,f_n\in \mathcal{O}_{X,x}^{\times}$ such that
+    \[
+        \widetilde{Y_x}^H=  \widetilde{X_x}^H\left\{\widetilde{\chi_x}(\tilde{f_1}),\ldots,\widetilde{\chi_x}(\tilde{f_n})\right\}.
+    \]
+\end{lemma}
+
+In particular, we can identify $\widetilde{Y_x}^H$ with an open susbet of $\widetilde{X_x}^H$. 
+
+\begin{proof}
+    The same argument as in \cref{lma-analyticdomainingood1} that we can assume that $X=\Sp A$ and $Y=\Sp A\{r^{-1}f\}$ for some $n\in \mathbb{N}$, $r=(r_1,\ldots,r_n)\in \sqrt{|k^{\times}|\cdot H}^n$, $f=(f_1,\ldots,f_n)\in A^n$ with $r_i=|f_i(x)|$ for $i=1,\ldots,n$. So the assertion follows from \cref{lma-affinoiddomainreductionspecial2}.
+\end{proof}
+
+\begin{lemma}\label{lma-reductioncov}
+    Let $X_x$ be a good $k_H$-analytic germ, $n\in \mathbb{Z}_{>0}$ and $Y_{1x},\ldots,Y_{nx}$ be a covering of $X_x$ by good $k_H$-analytic domains. Then 
+    \[
+        \widetilde{X_x}^H=\bigcup_{i=1}^n \widetilde{Y_{ix}}^H.  
+    \]
+\end{lemma}
+
+\begin{proof}
+    Observe that we are free to replace $\{Y_{ix}\}_i$ by its refinements by coverings by good $k_H$-analytic domains.  We may assume that $X$ is $k_H$-affinoid, say $X=\Sp A$. Then by \cref{Affinoid-lma-prooftatelma1} in \nameref{Affinoid-chap-affinoid}, we may assume that the covering is $k_H$-rational and is generated by $r_1^{-1}f_1,\ldots,r_n^{-1}f_n$. Up to shrinking $X$, we may guarantee that $|f_i(x)|=r_i$ for $i=1,\ldots,n$.
+    In this case, the assertion follows from \cref{lma-affinoiddomainreductionspecial2}.
+\end{proof}
+
+\begin{lemma}
+    Let $\phi:Y_y\rightarrow X_x$ be a morphism of good $k_H$-analytic germs. Let $X_x'$ be a good $k_H$-analytic domain in $X_x$ and set $Y_y'=\phi^{-1}(X_x')$, then 
+    \[
+        \widetilde{Y_y'}^H=\tilde{\phi}^{-1}(\widetilde{X_x'}^H).    
+    \]
+\end{lemma}
+\begin{proof}
+    By \cref{lma-analyticdomainingood1}, we may find $m\in \mathbb{Z}_{>0}$, $n_1,\ldots,n_m\in \mathbb{N}$, $g_{i1},\ldots,g_{in_i}\in \mathcal{O}_{X,x}^{\times}$ for $i=1,\ldots,m$ such that $X_x'$ is covered by $X\{r^{-1}_{i1}g_{i1},\ldots,r^{-1}_{in_i}g_{in_i} \}$ for $i=1,\ldots,m$, where $r_{ij}=|g_{ij}(x)|$ for $i=1,\ldots,m$, $j=1,\ldots,n_i$.
+
+    Then $Y_x'$ is covered by $Y\{r^{-1}_{i1}g'_{i1},\ldots,r^{-1}_{in_i}g'_{in_i} \}$ for $i=1,\ldots,m$, where $g'_{ij}$ is the image of $g_{ij}$ in $\mathcal{O}_{Y,y}^{\times}$  for $i=1,\ldots,m$, $j=1,\ldots,n_i$.
+
+    By \cref{lma-affinoiddomainreductionspecial2}, we have 
+    \[
+        \widetilde{X_x'}^H=\bigcup_{i=1}^m \widetilde{X_x}\left\{ \widetilde{\chi_{x}}(\widetilde{g_{i1}}),\ldots, \widetilde{\chi_{x}}(\widetilde{g_{in_i}}) \right\}
+    \]
+    and 
+    \[
+        \widetilde{Y_y'}^H=\bigcup_{i=1}^m \widetilde{Y_y}\left\{ \widetilde{\chi_{y}}(\widetilde{g_{i1}'}),\ldots, \widetilde{\chi_{y}}(\widetilde{g_{in_i}'}) \right\}.  
+    \]
+    Our assertion is now clear.
+\end{proof}
+
+\begin{definition}
+    Let $X_x$ be a $k_H$-analytic germ. By \cref{lma-goodaffinoiddomainredexp}, the reduction defines a functor from the category of good $k_H$-analytic germs in $X_x$ (with inclusions as the morphisms) to the category of open affine subsets of $\mathbf{P}_{\widetilde{\mathscr{H}(x)}^H/\widetilde{k}^H}$. We define
+    \[
+        \widetilde{X_x}^H:=\varinjlim_{Y_x} \widetilde{Y_x}^H,  
+    \]
+    where $Y_x$ runs over the filtered category of good $k_H$-analytic germs in $X_x$ and the colimit is taken in the category $\bir_{\tilde{k}^H}$.
+
+    This construction defines a covariant functor
+    \[
+        k_H\text{-}\GerCat\rightarrow \bir_{\tilde{k}^H}. 
+    \]
+    This is called the \emph{reduction functor} and for a $k_H$-analytic germ $X_x$, $\widetilde{X_x}^H$ is called its \emph{reduction}.
+\end{definition}
+In more concrete terms, we define an equivalence relation $\sim$ on $\coprod_{Y_x} \widetilde{Y_x}^H$ by identifying two points in $\widetilde{Y_x}^H$ and $\widetilde{Y'_x}^H$ if there is a good $k_H$-analytic domain $Z_x$ in $Y_x$ and in $Y'_x$ such that there is a point in $\widetilde{Z_x}^H$ whose images in $\widetilde{Y_x}^H$ and $\widetilde{Y'_x}^H$  are these points respectively. The quotient $\coprod_{Y_x} \widetilde{Y_x}^H/\sim$ defines the underlying topological space of $\widetilde{Y_x}^H$. The valuation field is defined as $\widetilde{\mathscr{H}(x)}^H$. The local homeomorphis $\phi:\widetilde{Y_x}^H\rightarrow \mathbf{P}_{\widetilde{\mathscr{H}(x)}^H/\widetilde{k}^H}$ is defined by gluing the inclusions   $\widetilde{Y_x}^H\rightarrow \mathbf{P}_{\widetilde{\mathscr{H}(x)}^H/\widetilde{k}^H}$.
+
+\begin{thm}\label{thm-gradedreddomainbij}
+    Let $X_x$ be a $k_H$-analytic germ. Then the reduction functor  
+    \[
+        k_H\text{-}\GerCat\rightarrow \bir_{\tilde{k}^H} 
+    \]
+    establishes a bijection between the $k_H$-analytic domains and quasi-compact open subsets of $\widetilde{X_x}^H$.
+
+    This bijection commutes with finite unions and finite intersections. 
+\end{thm}
+\begin{proof}
+    The last assertion is obvious by construction.
+
+    \textbf{Step~1}. We prove the theorem under the additional assumption that $X_x$ is good.
+
+    \textbf{Step~1.1}. Let $l,m\in \mathbb{N}$ and $f=(f_1,\ldots,f_l)\in \mathcal{O}_{X,x}^l$, $g=(g_1,\ldots,g_m)\in \mathcal{O}_{X,x}^m$. Assume that 
+    \[
+        \widetilde{X_x}^H\{\tilde{f}\}\subseteq  \widetilde{X_x}^H\{\tilde{g}\}, 
+    \]
+    then we prove that 
+    \[
+        X_x\{r^{-1}f\}\subseteq X_x\{s^{-1}g\},  
+    \]
+    where $r=(r_1,\ldots,r_l)$, $s=(s_1,\ldots,s_m)$,
+    \[
+        r_i=|f_i(x)|,\quad s_j=|g_j(x)|  
+    \]
+    for $i=1,\ldots,l$, $j=1,\ldots,m$.
+
+
+    We may assume that $X$ is $k_H$-affinoid, say $X=\Sp A$ and $f_1,\ldots,f_l,g_1,\ldots,g_m\in A$. Let $\chi_x:A\rightarrow \mathscr{H}(x)$ be the character of $x$. Let
+    \[
+        B=\widetilde{\chi_x}(\tilde{A}^H)\subseteq \widetilde{\mathscr{H}(x)}^H.  
+    \]
+    By definition,
+    \[
+        \widetilde{X_x}^H=\mathbf{P}_{\widetilde{\mathscr{H}(x)}^H}\{B\}.  
+    \]
+    By \cref{lma-affinoiddomainreductionspecial2}, we have
+    \[
+        \begin{aligned}
+        \widetilde{X_x\{r^{-1}f\}}^H=&\widetilde{X_x}^H\{B[\tilde{f}]\},\\
+        \widetilde{X_x\{r^{-1}f,s^{-1}g\}}^H=&\widetilde{X_x}^H\{B[\tilde{f},\tilde{g}]\}.
+        \end{aligned}
+    \]
+    The right-hand sides are equal by our assumption, so by \cref{Commutative-lma-gradedRZaffeq} in \nameref{Commutative-chap-commutative}, $B[\tilde{f},\tilde{g}]$ is finite over $B[\tilde{f}]$. We take monic polynomials of $\tilde{g}_j$ over $B[\tilde{f}]$:
+    \[
+        T^{n_j}+\tilde{a}_{j,1}T^{n-1}+\cdots+\tilde{a}_{j,n_j}\in B[\tilde{f}][T]
+    \]
+    with $\tilde{a}_{j,1},\ldots,\tilde{a}_{j,n_j}$ homogeneous of degree $|g_j(x)|^{1},\ldots,|g_j(x)|^{n_j}$ respectively. This is possible by \cref{Commutative-prop-gradedfiniteintegral} in \nameref{Commutative-chap-commutative}. We lift $\tilde{a}_{j,k}$ to $a_{j,k}\in A\{r^{-1}f\}$ with $\rho(a_{j,k})=\rho(g_j)^k$ for $j=1,\ldots,m$, $k=1,\ldots,n_j$. It follows that 
+    \[
+        \left|\left(g_j^{n_j}+a_{j,1}g_j^{n-1}+\cdots+a_{j,n_j}\right)(x)\right|<|g_j(x)|^n
+    \]
+    for $j=1,\ldots,m$. Up to shrinking $X$, we may assume that this inequality holds everywhere on $X\{r^{-1}f\}$. 
+
+    By then $|g_j(y)|\leq |g_j(x)|$ for any $y\in X\{r^{-1}f\}$. Our assertion follows.
+
+    \textbf{Step~1.2}. Suppose that $Y_x$ is a $k_H$-analytic domain in $X_x$ with $\tilde{Y}_x=\tilde{X}_x$, then $Y_x= X_x$.
+
+    We may assume that $X$ is $k_H$-affioid, say $X=\Sp A$.
+
+    By \cref{lma-analyticdomainingood1}, we can write $Y_x$ as a finite union of $V_{i,x}:=X_x\{r_i^{-1}f_i\}$ for $i=1,\ldots,m$, where $n_i\in \mathbb{N}$, $f_i=(f_{i1},\ldots,f_{in_i})\in \mathcal{O}_{X,x}^{\times,n_i}$ and $r_i=(r_{i1},\ldots,r_{in_i})$ with $r_{ij}=|f_{ij}(x)|\in \sqrt{|k^{\times}|\cdot H}$.
+
+    By \cref{lma-reductioncov}, $\widetilde{V_{i,x}}^H$ for $i=1,\ldots,m$ covers $\widetilde{X_x}^H$.
+
+    By \cref{Commutative-lma-opencovlaurentrefrz} in \nameref{Commutative-chap-commutative}, we can refine this covering to a Laurent covering 
+    \[
+        \mathcal{U}:=\left\{\tilde{U_j}=\widetilde{X_x}^H\{\tilde{g}^{j_1}_1,\ldots,\tilde{g}^{j_l}_l\}\right\}_{j=(j_1,\ldots,j_l)\in \{\pm 1\}^l },
+    \]
+    where $l\in \mathbb{N}$ and $\tilde{g}_1,\ldots,\tilde{g}_l$ are homogeneous elements in $\widetilde{\mathscr{H}(x)}^H$. Lift $\tilde{g}_1,\ldots,\tilde{g}_l$ to $g_1,\ldots,g_l\in A$. We consider the $k_H$-Laurent covering of $X$ generated by 
+    \[
+        \rho(\tilde{g}_1)^{-1}g_1,\ldots,\rho(\tilde{g}_l)^{-1}g_l.  
+    \]
+    The reduction of this covering is clearly $\mathcal{U}$. By Step~1.1, the germs of $\mathcal{U}$ at $x$ is a refinement of $\{V_{1,x},\ldots,V_{m,x}\}$, so the latter is a covering of $X_x$, namely $X_x\cn Y_x$.
+
+    \textbf{Step~1.3}. We prove that each quasi-compact open subset $\widetilde{Y_x}^H$ of $\widetilde{X_x}^H$ is the reduction of some $k_H$-analytic domain $Y_x$ in $X_x$.
+
+    We can write 
+    \[
+        \widetilde{Y_x}^H=\bigcup_{i=1}^m \widetilde{X_x}\{\widetilde{f_{i1}},\ldots,\widetilde{f_{in_i}}\},  
+    \]
+    where $m\in \mathbb{Z}_{>0}$, $n_1,\ldots,n_m\in \mathbb{N}$, $\widetilde{f_{ij}}\in \widetilde{\mathscr{H}(x)}^H$ are homogeneous elements for $i=1,\ldots,m$, $j=1,\ldots,n_i$.
+    We lift $\widetilde{f_{ij}}$ to $f_{ij}\in \mathcal{O}_{X,x}$, it suffices to take 
+    \[
+        \bigcup_{i=1}^m X_x\left\{r_{i1}^{-1}f_{i1},\ldots, r_{in_i}^{-1}f_{in_i} \right\},  
+    \]
+    where $r_{ij}=|f_{ij}(x)|$ for $i=1,\ldots,m$, $j=1,\ldots,n_i$.
+
+    \textbf{Step~1.4}. Suppose that $Y_x$, $Z_x$ are $k_H$-analytic domains in $X_x$ with $\widetilde{Y_x}=\widetilde{Z_x}$. Then we prove that $Y_x=Z_x$.
+
+    Take $p,q\in \mathbb{N}$, good $k_H$-analytic domains $Y_x^1,\ldots,Y_x^p$ in $Y_x$ and good $k_H$-analytic domains $Z_x^1,\ldots,Z_x^p$ in $Z_x$ such that 
+    \[
+        \widetilde{Y_x}^H=\bigcup_{i=1}^p   \widetilde{Y_x^i}^H=\bigcup_{i=1}^q   \widetilde{Z_x^i}^H.
+    \]
+    Therefore, for any $i=1,\ldots,p$, $\{\widetilde{Y_x^i\cap Z^j_x}^H\}_{j=1,\ldots,q}$ is a covering of $\widetilde{Y^i_x}$. By Step~1.2, $\{Y_x^i\cap Z^j_x\}_{j=1,\ldots,q}$ is a covering of $Y_x^i$ for $i=1,\dots,p$.  So $Y_x\subseteq Z_x$. By symmetry $Y_x=Z_x$.
+
+    We have finshed the proof when $X_x$ is good.
+
+
+    \textbf{Step~2}. We handle the general case. 
+
+    \textbf{Step~2.1}. We prove that each quasi-compact open subset $\widetilde{Y_x}^H$ of $\widetilde{X_x}^H$ is the reduction of some $k_H$-analytic domain $Y_x$ in $X_x$. 
+
+    Take $p\in \mathbb{N}$, good $k_H$-analytic domains $X_x^1,\ldots,X_x^p$ in $X_x$ such that 
+    \[
+        \widetilde{X_x}^H=\bigcup_{i=1}^p   \widetilde{X_x^i}^H.
+    \]
+    By Step~1, $\widetilde{Y_x}^H\cap \widetilde{X_x^i}^H$ ca be lifted to a $k_H$-analytic domain $Y^i_x$ in $X_x^i$ for $i=1,\ldots,p$. The union of $Y^i_x$'s for $i=1,\ldots,p$ is a lifting of $\widetilde{Y_x}^H$.
+
+    \textbf{Step~2.2}. Suppose that $Y_x$, $Z_x$ are $k_H$-analytic domains in $X_x$ with $\widetilde{Y_x}=\widetilde{Z_x}$. Then we prove that $Y_x=Z_x$.
+
+    For each $i=1,\ldots,p$, we have
+    \[
+        \widetilde{Y_x\cap X_x^i}^H=\widetilde{Y_x}^H\cap \widetilde{X_x^i}^H=\widetilde{Z_x}^H\cap \widetilde{X_x^i}^H= \widetilde{Z_x\cap X_x^i}^H. 
+    \]
+    By Step~1, $Y_x\cap X_x^i=Z_x\cap X_x^i$ coincides for $i=1,\ldots,p$, so $Y_x=Z_x$.
+
+\end{proof}
+
+\begin{thm}\label{thm-fullyfaithful}
     Let $H'\supseteq H$ be a subgroup of $\mathbb{R}_{>0}$. The natural functor
     \[
         k_H\text{-}\AnaCat \rightarrow k_{H'}\text{-}\AnaCat
     \]
     is fully faithful.
 \end{thm}
+\begin{proof}
+    Let $X,Y$ be $k_H$-analytic spaces and $\varphi:Y\rightarrow X$ a morphism in $k_{H'}\text{-}\AnaCat$. We need to show that $\varphi$ is induced by a morphism in $k_{H}\text{-}\AnaCat$.
+
+    This amounts to showing that if $V$ is a $k_{H}$-analytic domain in $X$, then $W=\varphi^{-1}(V)$ is a $k_H$-analytic domain. Let $y\in W$ and $x=\varphi(y)$. Let 
+    \[
+        \tilde{\varphi}^{H'}:\widetilde{Y_y}^{H'}\rightarrow \widetilde{X_x}^{H'}  
+    \]  
+    be the reduction map. Then 
+    \[
+        \widetilde{W_y}^{H'}=\tilde{\varphi}^{H',-1}\widetilde{V_x}^{H'}.
+    \]
+    As $V$ is a $k_H$-analytic domain, the non-zero degrees of $\widetilde{V_x}^{H'}$ are contained in $\sqrt{|k^{\times}|\cdot H'}$, hence so is $\widetilde{W_y}^{H'}$. We write the corresponding $\sqrt{|k^{\times}|\cdot H'}$-graded object as $\alpha$. By \cref{thm-gradedreddomainbij}, there is a $k_H$-analytic domain $U_y$ of $X_x$ with 
+    \[
+        \widetilde{U_y}^{H}= \alpha.
+    \]
+    By our construction of reduction, we know that $\widetilde{U_y}^{H'}$ is the $\sqrt{|k^{\times}|\cdot H'}$-graded object corresponding to $\widetilde{U_y}^{H}$, namely  $\widetilde{W_y}^{H'}$.
+    By \cref{thm-gradedreddomainbij} again, we conclude that $W_y=U_y$. In particular, $W_y$ is $k_H$-analytic. The theorem follows.
+\end{proof}
+
+\begin{corollary}
+    Let $X$ be a $k$-analytic space. Then there is at most one $k_H$-analytic space $X'$ up to isomorphisms in $k_H\text{-}\AnaCat$ whose image under
+    \[
+        k_H\text{-}\AnaCat \rightarrow k\text{-}\AnaCat
+    \] 
+    is isomorphic to $X$. 
+\end{corollary}
+In particular, we can and will view $k_H$-analytic spaces as $k$-analytic spaces that admit (necessarily unique) structures of $k_H$-analytic spaces.
+\begin{proof}
+    This follows immediately from \cref{thm-fullyfaithful}. 
+\end{proof}
+
+
 
 \printbibliography
 \end{document}

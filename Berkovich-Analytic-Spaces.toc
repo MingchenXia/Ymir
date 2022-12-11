@@ -1,0 +1,20 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Berkovich analytic spaces}}{5}{chapter*.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{1}{Introduction}}{5}{section.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{2}{The category of Berkovich analytic spaces}}{5}{section.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{3}{Analytic domains}}{16}{section.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{4}{Berkovich site}}{18}{section.0.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{5}{Closed immersions}}{22}{section.0.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{6}{Separated morphisms}}{24}{section.0.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{7}{Reduction}}{26}{section.0.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{35}{chapter*.2}%

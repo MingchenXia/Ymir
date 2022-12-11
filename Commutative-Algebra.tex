@@ -549,7 +549,7 @@ Given $X\subseteq \mathbf{P}_{K/k}$ and $A\subseteq K$ consisting of homogeneous
         X\{\{A\}\}:=&\left\{ \mathcal{O}\in X: f\in \mathfrak{m}_{\mathcal{O}} \text{ for all non-zero }f\in A \right\},
     \end{aligned}  
 \]
-where $\mathfrak{m}_{\mathcal{O}}$ is the maximal $G$-homogeneous ideal of $\mathcal{O}$. When $A$ consists of finitely many elements $f_1,\ldots,f_n$, we will write $X\{f_1,\ldots,f_n\}$ and $X\{\{f_1,\ldots,f_n\}\}$ instead.
+where $\mathfrak{m}_{\mathcal{O}}$ is the maximal $G$-homogeneous ideal of $\mathcal{O}$. When $A$ consists of finitely many elements $f_1,\ldots,f_n$, we will write $X\{f_1,\ldots,f_n\}$ and $X\{\{f_1,\ldots,f_n\}\}$ instead. When $A\subseteq K$ consists of non-homogeneous elements as well, $X\{A\}$ means $X\{B\}$, where $B$ is the set of homogeneous elements in $A$.
 
 \begin{definition}
     An \emph{affine subset} of $\mathbf{P}_{K/k}$ is a subset of $\mathbf{P}_{K/k}$ of the form: $\mathbf{P}_{K/k}\{F\}$ for some finite set $F$ of homogeneous elements in $K$.
@@ -587,7 +587,7 @@ where $\mathfrak{m}_{\mathcal{O}}$ is the maximal $G$-homogeneous ideal of $\mat
 \end{proof}
 
 
-\begin{lemma}
+\begin{lemma}\label{lma-gradedRZaffeq}
     Let $A\subseteq B\subseteq K$ be $G$-graded subalgebras of $K$. Assume that both $A$ and $B$ are finitely generated over $k$. Then the following are equivalent:
     \begin{enumerate}
         \item $\mathbf{P}_{K/k}\{A\}=\mathbf{P}_{K/k}\{B\}$;
@@ -637,7 +637,7 @@ where $\mathfrak{m}_{\mathcal{O}}$ is the maximal $G$-homogeneous ideal of $\mat
 \end{definition}
 
 
-\begin{lemma}
+\begin{lemma}\label{lma-opencovlaurentrefrz}
     Let $X$ be an open subset of $\mathbf{P}_{K/k}$.
     Any finite covering $\mathcal{U}$ of $X$ by open subsets of the form $X\{A\}$ for some finite set of homogeneous elements $A\subseteq K$ has a refinement which is a Laurent covering of $X$. 
 \end{lemma}

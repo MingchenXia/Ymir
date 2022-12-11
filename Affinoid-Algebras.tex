@@ -2698,6 +2698,25 @@ It follows that $a_i=0=b_i$ for $i>0$ and $a_i=b_i$. So we find that the second 
 \fi
 \end{proof}
 
+
+\begin{corollary}\label{cor-affdomainresidueequal}
+    Let $A$ be a $k$-affinoid algebra and $\Sp B$ be an affinoid domain in $A$. Then for any $x\in \Sp B$, we temporarily denote the completed residue field of $B$ (resp. $A$) at $x$ as $\mathscr{H}^B(x)$ (resp. $\mathscr{H}^A(x)$), then the natural map
+    \[
+        \mathscr{H}^A(x)\rightarrow \mathscr{H}^B(x)  
+    \] 
+    is an isomorphism of complete valuation fields over $k$.
+\end{corollary}
+\begin{proof}
+    We have an obvious bounded morphism $\iota:\mathscr{H}^A(x)\rightarrow \mathscr{H}^B(x)$ over $k$. By \cref{prop-univpropertytemkinandberkovichequivalent}, there is a unique dotted morphism completion the diagram 
+    \[
+        \begin{tikzcd}
+            \mathscr{H}^A(x) \arrow[rd] &             \\
+            B \arrow[u, dotted]         & A \arrow[l]
+        \end{tikzcd}  
+    \]
+    The induced bounded morphism $\mathscr{H}^B(x)\rightarrow \mathscr{H}^A(x)$ provides the inverse of $\iota$.
+\end{proof}
+
 \begin{definition}\label{def-presheafOX}
    Let $X=\Sp A$ be a $k$-affinoid spectra, we define a presheaf $\mathcal{O}_X$ of Banach rings on the family of $k$-affinoid domains in $X$ as follows: for any $k$-affinoid domain $\Sp B$, we set
    \[
@@ -2705,6 +2724,8 @@ It follows that $a_i=0=b_i$ for $i>0$ and $a_i=b_i$. So we find that the second 
    \]
    Given an inclusion of affinoid domains, $\Sp C\rightarrow \Sp B$, we define the corresponding restriction map as the given morphism $B\rightarrow C$.
 \end{definition}
+
+
 
 \begin{thm}\label{thm-affdomainflat}
     Let $A$ be a $k$-affinoid algebra and $V'=\Sp B$ be a $k$-affinoid domain in $\Sp A$. Then $B$ is a flat $A$-algebra.
@@ -3341,7 +3362,7 @@ such that $|\pi(T_i)(y)|<r_i$ for $i=1,\ldots,n$.
 \end{proof}
 
 
-\begin{proposition}
+\begin{proposition}\label{prop-affinoiddomaininterior}
     Let $A$ be a $k$-affinoid algebra and $\Sp B$ be a $k$-affinoid domain in $\Sp A$. Then
     \[
         \Int(\Sp B/\Sp A)=\Int_{\Sp A}(\Sp B).  
