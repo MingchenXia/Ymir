@@ -2030,6 +2030,48 @@ Recall that $A\{rf^{-1}\}$ is defined in \cref{ex-Laurentdomain}, by \cref{thm-s
     Applying \cref{thm-reductionfinite}, we find that it suffices to prove that $\widetilde{k\{r^{-1}T\}}^H$ is finitely generated over $\tilde{k}^H$. But this follows from \cref{prop-gradedredtate}.
 \end{proof}
 
+\begin{lemma}\label{lma-tildebaseextensionfinite}
+    Let $A$ be a $k_H$-affinoid algebra and $K/k$ be an analytic field extension. Then the natural homomorphism
+    \begin{equation}\label{eq-naturalmapbaseextensionreductiong}
+        \tilde{A}^H\otimes_{\tilde{k}^H}\tilde{K}^H\rightarrow \widetilde{A\hat{\otimes}_k K}^H  
+    \end{equation}
+    is finite.
+\end{lemma}
+\begin{proof}
+    Take $n\in \mathbb{N}$, $r=(r_1,\ldots,r_n)\in \sqrt{|k^{\times}|\cdot H}^n$ and an admissible epimorphism
+    $\pi:k\{r^{-1}T\}\rightarrow A$. Then the induced map
+    \[
+          \pi_K:K\{r^{-1}T\}\rightarrow A\hat{\otimes}_k K
+    \]
+    is an admissible epimorphism. By \cref{thm-reductionfinite}, its reduction
+    \[
+        \widetilde{\pi_K}:\tilde{K}^H[r^{-1}T]\rightarrow \widetilde{A\hat{\otimes}_k K}^H  
+    \]
+    is finite. It remains to show that the image of $\widetilde{\pi_K}$ is contained in the image of \eqref{eq-naturalmapbaseextensionreductiong}. 
+
+    For this, we just observe that for $i=1,\ldots,n$, $\widetilde{\pi_K}(T_i)\neq 0$ if and only if $\rho(\pi_K(T_i))=r_i$. The latter is equivalent to that $\rho(\pi(T_i))=r_i$. In particular, $\widetilde{\pi_K}(T_i)$ is the image of $\pi(T_i)$ under \eqref{eq-naturalmapbaseextensionreductiong}. Our assertion follows.
+\end{proof}
+
+\begin{lemma}\label{lma-tildetensorproductfinite}
+    Let $A$ be a $k_H$-affinoid algebra and $B$, $C$ be $k_H$-affinoid algebras over $A$. Then the natural homomorphism 
+    \begin{equation}\label{eq-tildetensorproductfinite}
+        \tilde{B}^H\otimes_{\tilde{A}^H}\tilde{C}^H\rightarrow   \widetilde{B\hat{\otimes}_A C}^H
+    \end{equation}
+    is finite.
+\end{lemma}
+\begin{proof}
+    Take $n,m\in \mathbb{N}$, $r=(r_1,\ldots,r_n)\in \sqrt{|k^{\times}|\cdot H}^n$, $s=(s_1,\ldots,s_m)\in \sqrt{|k^{\times}|\cdot H}^m$ and admissible epimorphism
+    $\pi:A\{r^{-1}T\}\rightarrow B$, $\pi':A\{s^{-1}S\}\rightarrow C$. Then we have an admissible epimorphism
+    \[
+        \pi\hat{\otimes}_A \pi':A\{r^{-1}T,s^{-1}S\}\rightarrow B\hat{\otimes}_A C.  
+    \]
+    By \cref{thm-reductionfinite}, the reduction
+    \[
+        \widetilde{\pi\hat{\otimes}_A \pi'}:\tilde{A}^H[r^{-1}T,s^{-1}S]\rightarrow \widetilde{B\hat{\otimes}_A C}^H
+    \]
+    is finite. It suffices to show that the image of this map is contained in the image of \eqref{eq-tildetensorproductfinite}. The argument is similar to that in \cref{lma-tildebaseextensionfinite}, and we omit it. \textcolor{red}{Include it}
+\end{proof}
+
 \begin{definition}
     Let $A$ be a $k_H$-affinoid algebra, we define the \emph{reduction map}
     \[

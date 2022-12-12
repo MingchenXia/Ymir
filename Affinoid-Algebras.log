@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  11 DEC 2022 19:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  12 DEC 2022 18:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -931,9 +931,15 @@ LABELS NOT IMPORTED.
 (Banach-Rings.tex)
 (Banach-Rings.aux)
 No file Banach-Rings.aux.
-Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 330.
+
+Package xr Warning: 
+No file Commutative-Algebra.aux
+LABELS NOT IMPORTED.
+ on input line 330.
+
 (Commutative-Algebra.tex)
 (Commutative-Algebra.aux)
+No file Commutative-Algebra.aux.
 
 Package xr Warning: 
 No file Local-Algebras.aux
@@ -1444,88 +1450,109 @@ LaTeX Warning: Reference `Banach-chap-Banach' on page 40 undefined on input line
 
 [40] [41]
 
+LaTeX Warning: Reference `Commutative-cor-finitegradeddescent' on page 1 undefined on input line 1998.
+
+
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 42 undefined on input line 1998.
+
+
+LaTeX Warning: Reference `Commutative-lma-rhoconditionimplygraded' on page 1 undefined on input line 1998.
+
+
 LaTeX Warning: Reference `Banach-lma-finitemodulejapanese' on page 1 undefined on input line 2011.
 
 
 LaTeX Warning: Reference `Banach-chap-Banach' on page 42 undefined on input line 2011.
 
-[42]
+[42] [43]
 
-LaTeX Warning: Reference `Banach-cor-Spalgclosure' on page 1 undefined on input line 2064.
-
-
-LaTeX Warning: Reference `Banach-chap-Banach' on page 43 undefined on input line 2064.
-
-[43] [44]
-
-LaTeX Warning: Reference `Banach-cor-rhoequsup' on page 1 undefined on input line 2187.
+LaTeX Warning: Reference `Banach-cor-Spalgclosure' on page 1 undefined on input line 2106.
 
 
-LaTeX Warning: Reference `Banach-chap-Banach' on page 1 undefined on input line 2187.
+LaTeX Warning: Reference `Banach-chap-Banach' on page 44 undefined on input line 2106.
 
-[45]
+[44] [45]
 
-LaTeX Warning: cref reference format for label type `' undefined on input line 2189.
-
-
-LaTeX Warning: Reference `Banach-def-Shilovboundary' on page 1 undefined on input line 2205.
+LaTeX Warning: Reference `Commutative-lma-rhoAequalrhok' on page 1 undefined on input line 2214.
 
 
-LaTeX Warning: Reference `Banach-chap-Banach' on page 1 undefined on input line 2205.
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 46 undefined on input line 2214.
+
+
+LaTeX Warning: Reference `Banach-cor-rhoequsup' on page 1 undefined on input line 2229.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 1 undefined on input line 2229.
+
+
+LaTeX Warning: Reference `Commutative-lma-specggenericpointfinite' on page 1 undefined on input line 2231.
+
+
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 1 undefined on input line 2231.
+
+
+LaTeX Warning: Reference `Banach-def-Shilovboundary' on page 1 undefined on input line 2247.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 1 undefined on input line 2247.
 
 [46]
 
-LaTeX Warning: Reference `Banach-thm-openmapping' on page 1 undefined on input line 2239.
+LaTeX Warning: Reference `Banach-thm-openmapping' on page 1 undefined on input line 2281.
 
 
-LaTeX Warning: Reference `Banach-chap-Banach' on page 47 undefined on input line 2239.
+LaTeX Warning: Reference `Banach-chap-Banach' on page 47 undefined on input line 2281.
 
-
-Overfull \hbox (8.46265pt too wide) in paragraph at lines 2270--2271
+[47]
+Overfull \hbox (8.46265pt too wide) in paragraph at lines 2312--2313
 []$[]$ \T1/lmr/m/n/10 (-20) is fi-nite over the sub-al-ge-bra gen-er-ated by $[]$ and $[]\OML/lmm/m/it/10 ; [] ; []; []; [] ; []$\T1/lmr/m/n/10 (-20) ; 
  []
 
-[47]
 
-LaTeX Warning: Reference `Banach-def-residuefield' on page 1 undefined on input line 2304.
-
-
-LaTeX Warning: Reference `Banach-chap-Banach' on page 48 undefined on input line 2304.
-
-[48] [49] [50] [51]
-
-LaTeX Warning: Reference `Banach-thm-openmapping' on page 1 undefined on input line 2525.
+LaTeX Warning: Reference `Banach-def-residuefield' on page 1 undefined on input line 2346.
 
 
-LaTeX Warning: Reference `Banach-chap-Banach' on page 52 undefined on input line 2525.
+LaTeX Warning: Reference `Banach-chap-Banach' on page 48 undefined on input line 2346.
 
-[52]
-Overfull \hbox (62.99428pt too wide) detected at line 2544
+[48] [49] [50] [51] [52]
+
+LaTeX Warning: Reference `Banach-thm-openmapping' on page 1 undefined on input line 2567.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 53 undefined on input line 2567.
+
+
+Overfull \hbox (62.99428pt too wide) detected at line 2586
 []\OML/lmm/m/it/10 ;
  []
 
 [53] [54] [55] [56] [57]
 
-LaTeX Warning: Reference `Banach-lma-equalizerbanach' on page 1 undefined on input line 2826.
+LaTeX Warning: Reference `Banach-lma-equalizerbanach' on page 1 undefined on input line 2868.
 
 
-LaTeX Warning: Reference `Banach-chap-Banach' on page 58 undefined on input line 2826.
+LaTeX Warning: Reference `Banach-chap-Banach' on page 58 undefined on input line 2868.
 
-
-Overfull \hbox (10.88754pt too wide) detected at line 2843
+[58]
+Overfull \hbox (10.88754pt too wide) detected at line 2885
 []
  []
 
-[58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68]
-Overfull \hbox (44.90172pt too wide) detected at line 3427
+[59] [60] [61] [62] [63] [64]
+
+LaTeX Warning: Reference `Commutative-lma-gradedhomokernel' on page 1 undefined on input line 3216.
+
+
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 65 undefined on input line 3216.
+
+[65] [66] [67] [68]
+Overfull \hbox (44.90172pt too wide) detected at line 3469
 [] \OMS/lmsy/m/n/10 \ \OML/lmm/m/it/10 V \OT1/lmr/m/n/10 = []
  []
 
-[69] [70
-
-]
+[69] [70]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3445.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3487.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1533,7 +1560,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [71] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.aux)
+ [71
+
+] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1542,18 +1571,18 @@ Package logreq Info: Writing requests to 'Affinoid-Algebras.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39609 strings out of 478994
- 757529 string characters out of 5858185
- 1575554 words of memory out of 5000000
- 55737 multiletter control sequences out of 15000+600000
- 467340 words of font info for 215 fonts, out of 8000000 for 9000
+ 39584 strings out of 478994
+ 756436 string characters out of 5858185
+ 1580911 words of memory out of 5000000
+ 55706 multiletter control sequences out of 15000+600000
+ 467434 words of font info for 216 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  132i,20n,133p,1076b,1804s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.pdf (71 pages, 634155 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Affinoid-Algebras.pdf (71 pages, 636057 bytes).
 PDF statistics:
- 1093 PDF objects out of 1200 (max. 8388607)
- 988 compressed objects within 10 object streams
- 307 named destinations out of 1000 (max. 500000)
+ 1095 PDF objects out of 1200 (max. 8388607)
+ 990 compressed objects within 10 object streams
+ 311 named destinations out of 1000 (max. 500000)
  23189 words of extra memory for PDF output out of 24883 (max. 10000000)
 

@@ -25,12 +25,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{11}{Graded reduction}}{38}{section.0.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{12}{Gerritzen--Grauert theorem}}{46}{section.0.12}%
+\contentsline {section}{\tocsection {}{12}{Gerritzen--Grauert theorem}}{47}{section.0.12}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{13}{Tate acyclicity theorem}}{50}{section.0.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{14}{Kiehl's theorem}}{60}{section.0.14}%
+\contentsline {section}{\tocsection {}{14}{Kiehl's theorem}}{61}{section.0.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{15}{Boundaryless homomorphism}}{63}{section.0.15}%
+\contentsline {section}{\tocsection {}{15}{Boundaryless homomorphism}}{64}{section.0.15}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{71}{chapter*.2}%
