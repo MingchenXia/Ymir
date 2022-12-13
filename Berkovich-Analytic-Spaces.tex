@@ -1562,11 +1562,7 @@ We introduce a lemma allowing one to tell when the gluing of two affinoid spaces
     \[
         \lambda=\widetilde{f(x)}=\widetilde{g(x)}.
     \]
-    Observe that we can further assume that 
-    \[
-        \rho_B(f)\leq t,\quad \rho_C(g^{-1})\leq t^{-1}.
-    \]
-     \textcolor{red}{Why? This is not an open condition on $Y$ or $Z$}   
+     
 
     It therefore follows that 
     \[
@@ -1574,8 +1570,20 @@ We introduce a lemma allowing one to tell when the gluing of two affinoid spaces
     \] 
     After shrinking $X$, we can make sure that 
     \[
-        \rho_A(f-g)<t.
+        \sup_{y\in Y\cap Z}|(f-g)(y)|<t.
     \]
+    After shrinking $X$, we can guarantee that
+    \[
+        \sup_{y\in Y} |f(y)|\leq t,\quad \inf_{z\in Z}|g(z)|\geq t.
+    \]
+     \textcolor{red}{Why? This is not an open condition on $Y$ or $Z$!!!!}  
+    
+    In particular,
+    \[  
+        Y\cap Z\subseteq Y\{tf^{-1}\}\cap Z\{t^{-1}g\}.
+    \]
+    \textcolor{red}{This relies on the unjustified claim}
+
     By \cref{lma-affinoiddomainreductionspecial2}, we have
     \[
         \widetilde{Y\{tf^{-1}\}_x}= \widetilde{Z\{t^{-1}g\}_x}= \widetilde{(Y\cap Z)_x}.
@@ -1614,6 +1622,7 @@ We introduce a lemma allowing one to tell when the gluing of two affinoid spaces
     \[
         k\{r^{-1}T,t^{-1}S_1,tS_2\}\rightarrow B,\quad T_i\mapsto f_i\text{ for } i=1,\ldots,n, S_1\mapsto f, S_2\mapsto f^{-1}.
     \]
+    \textcolor{red}{In order to guarantee that $r$ in both morphisms are the same, we need an argument as in Step~1, which is problematic! This is unfortunately essential to Step~3. I cannot make sense of this proof anymore!}
 
     As $\widetilde{X_x}$ is affine, we can write it as 
     \[

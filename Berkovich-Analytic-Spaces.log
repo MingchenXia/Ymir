@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  13 DEC 2022 16:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  13 DEC 2022 16:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1563,72 +1563,72 @@ LaTeX Warning: Reference `Commutative-chap-commutative' on page 32 undefined on 
 
 [32] [33]
 
-LaTeX Warning: Reference `Affinoid-prop-laurentdomainfundamental' on page 1 undefined on input line 1591.
+LaTeX Warning: Reference `Affinoid-prop-laurentdomainfundamental' on page 1 undefined on input line 1599.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 34 undefined on input line 1591.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 34 undefined on input line 1599.
 
 
-LaTeX Warning: Reference `Affinoid-prop-Weirestrassdomainequivdense' on page 1 undefined on input line 1594.
+LaTeX Warning: Reference `Affinoid-prop-Weirestrassdomainequivdense' on page 1 undefined on input line 1602.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 34 undefined on input line 1594.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 34 undefined on input line 1602.
 
 [34]
 
-LaTeX Warning: Reference `Commutative-lma-gradedRZaffeq' on page 1 undefined on input line 1634.
+LaTeX Warning: Reference `Commutative-lma-gradedRZaffeq' on page 1 undefined on input line 1643.
 
 
-LaTeX Warning: Reference `Commutative-chap-commutative' on page 35 undefined on input line 1634.
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 35 undefined on input line 1643.
 
 
-LaTeX Warning: Reference `Affinoid-prop-innerhomochar' on page 1 undefined on input line 1634.
+LaTeX Warning: Reference `Affinoid-prop-innerhomochar' on page 1 undefined on input line 1643.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 35 undefined on input line 1634.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 35 undefined on input line 1643.
 
 
-LaTeX Warning: Reference `Affinoid-prop-innerhomochar' on page 1 undefined on input line 1634.
+LaTeX Warning: Reference `Affinoid-prop-innerhomochar' on page 1 undefined on input line 1643.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 35 undefined on input line 1634.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 35 undefined on input line 1643.
 
 [35]
 
-LaTeX Warning: Reference `Commutative-lma-opencovlaurentrefrz' on page 1 undefined on input line 1733.
+LaTeX Warning: Reference `Commutative-lma-opencovlaurentrefrz' on page 1 undefined on input line 1742.
 
 
-LaTeX Warning: Reference `Commutative-chap-commutative' on page 36 undefined on input line 1733.
-
-
-LaTeX Warning: Reference `Affinoid-thm-strictaffdfnequal' on page 1 undefined on input line 1751.
-
-
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 36 undefined on input line 1751.
-
-
-LaTeX Warning: Reference `Commutative-cor-affinesetsHstrictcri' on page 1 undefined on input line 1751.
-
-
-LaTeX Warning: Reference `Commutative-chap-commutative' on page 36 undefined on input line 1751.
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 36 undefined on input line 1742.
 
 [36]
 
-LaTeX Warning: Reference `Affinoid-prop-closedsetininteriorcri' on page 1 undefined on input line 1767.
+LaTeX Warning: Reference `Affinoid-thm-strictaffdfnequal' on page 1 undefined on input line 1760.
 
 
-LaTeX Warning: Reference `Affionid-chap-affinoid' on page 37 undefined on input line 1767.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 37 undefined on input line 1760.
+
+
+LaTeX Warning: Reference `Commutative-cor-affinesetsHstrictcri' on page 1 undefined on input line 1760.
+
+
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 37 undefined on input line 1760.
+
+
+LaTeX Warning: Reference `Affinoid-prop-closedsetininteriorcri' on page 1 undefined on input line 1776.
+
+
+LaTeX Warning: Reference `Affionid-chap-affinoid' on page 37 undefined on input line 1776.
 
 [37]
 
-LaTeX Warning: Reference `Commutative-prop-maprzdescentdtostrict' on page 1 undefined on input line 1810.
+LaTeX Warning: Reference `Commutative-prop-maprzdescentdtostrict' on page 1 undefined on input line 1819.
 
 
-LaTeX Warning: Reference `Commutative-chap-commutative' on page 38 undefined on input line 1810.
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 38 undefined on input line 1819.
 
 [38]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1866.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1875.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1655,7 +1655,7 @@ Here is how much of TeX's memory you used:
  1304 hyphenation exceptions out of 8191
  132i,17n,133p,1076b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf (39 pages, 481490 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf (39 pages, 482189 bytes).
 PDF statistics:
  696 PDF objects out of 1000 (max. 8388607)
  625 compressed objects within 7 object streams
