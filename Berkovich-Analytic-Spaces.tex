@@ -553,10 +553,26 @@ Let $(k,|\bullet|)$ be a complete non-Archimedean valued field and $H$ be a subg
 Observe that the net of $k_H$-affinoid domains in $X$ that are contained in $Y$ form a net on $Y$. In particular, $Y$ inherits a $k_H$-analytic space structure from $X$, and we have a canonical morphism $Y\rightarrow X$ in $k_H\text{-}\AnaCat$.
 
 \begin{lemma}
-    Let $X$ be a $k_H$-analytic space, $Y$ be a $k_H$-analytic domain in $X$ and $x\in Y$. Then the complete residue field of $x$ in $X$ is the same as the complete residue field of $x$ in $Y$ modulo isomorphisms of completed valuation fields over $k$.
+    Let $X$ be a $k_H$-analytic space, $Y$ be a $k_H$-analytic domain in $X$ and $x\in Y$. Then the completed residue field of $x$ in $X$ is the same as the completed residue field of $x$ in $Y$ modulo isomorphisms of completed valuation fields over $k$.
 \end{lemma}
 \begin{proof}
     This follows immediately from \cref{Affinoid-cor-affdomainresidueequal} in \nameref{Affinoid-chap-affinoid}.
+\end{proof}
+
+\begin{proposition}\label{prop-liftelementsinHxred}
+    Let $X$ be a $k$-analytic space and $x\in X$. Let $\lambda\in \widetilde{\mathscr{H}(x)}$ be a non-zero homogeneous element. Then we can find a $k$-affinoid domain $\Sp B$ of $x$ in $X$ and an inveritble function $f\in B$ such that 
+    \[
+        \lambda=\widetilde{f(x)}.  
+    \]
+    If $X$ is good, we may assume that $\Sp B$ is a $k$-affinoid neighbourhood of $x$ in $X$.
+\end{proposition}
+\begin{proof}
+    We may assume that $X$ is $k$-affinoid, say $X=\Sp A$. Let $\chi_x:A\rightarrow \mathscr{H}(x)$ be the character corresponding to $x$. Let $|\bullet|_x$ be the bounded semi-valuation on $A$ corresponding to $x$.
+    As $\Frac A/\ker|\bullet|_x$ is dense in $\mathscr{H}(x)$ by definition, we can find $g,h\in A$ such that $g(x)\neq 0$, $h(x)\neq 0$ and
+    \[
+        \lambda=\widetilde{g(x)}/\widetilde{h(x)}.  
+    \]
+    Let $Y$ be the open $k$-analytic domain in $X$ defined by $g(x)\neq 0$ and $h(x)\neq 0$. We take a $k$-affinoid domain $\Sp B$ of $X$ containing $x$ such that $\Sp B\subseteq Y$. If $X$ is good, we may assume that $\Sp B$ is a neighbourhood of $x$ in $X$. Then the images of $g$ and $h$ in $B$ are invertible by \cref{Banach-cor-invertibleintermsofsp} in \nameref{Banach-chap-Banach}. Now $f=g/h\in B$ satisfies our assumptions. 
 \end{proof}
 
 
@@ -1512,51 +1528,42 @@ Here the reductions are with respect to the $\mathbb{R}_{>0}$-gradings.
     Thus, $\widetilde{\Delta_{Y/X}}$ is an isomorphism if and only if $\widetilde{Y_y}\rightarrow X'$ is injective, namely, $\widetilde{Y_y}\rightarrow \widetilde{X_x}$ is separated.
 \end{proof}
 
+\textcolor{red}{Take care of the non-emptyness somewhere!}
 
-\begin{thm}\label{thm-goodgermandreduction}
-    Let $X_x$ be a $k$-analytic germ. Then the following are equivalent:
+We introduce a lemma allowing one to tell when the gluing of two affinoid spaces in a suitable position is good.
+\begin{lemma}\label{lma-glueaffinetogood}
+    Let $X$ be a separated compact $k$-analytic space and $x\in X$. Assume that
     \begin{enumerate}
-        \item $X_x$ is good;
-        \item $\widetilde{X_x}$ is an affine open subset of $\mathbf{P}_{\widetilde{\mathscr{H}(x)}/\tilde{k}}$.
+        \item $\widetilde{X_x}\subseteq \mathbf{P}_{\widetilde{\mathscr{H}(x)}/\tilde{k}}$ is an affine subset;
+        \item $X$ is the union of two $k$-affinoid domains $Y=\Sp B$ and $Z=\Sp C$ both containing $x$;
+        \item there is a non-zero homogeneous element $\lambda\in \widetilde{\mathscr{H}(x)}$ such that
+        \[
+            \widetilde{Y_x}=\widetilde{X_x}\{\lambda\},\quad   \widetilde{Z_x}=\widetilde{X_x}\{\lambda^{-1}\}.
+        \]
     \end{enumerate}
-\end{thm}
-
-\textcolor{red}{This proof does not make much sense to me. I am just reproducing the arguments of Temkin. Need some reflection!}
-
+    Then $X_x$ is good.
+\end{lemma}
 \begin{proof}
-    (1) $\implies$ (2). This follows from the definition.
+    We observe that we are free to shrink $X$ to $k$-analytic domains of the following form: $Y'\cup Z'$, where $Y'$ and $Z'$ are $k$-affinoid neighbourhoods of $x$ in $Y$ and $Z$ respectively. We will express this procedure as \emph{shrinking $X$}.
 
-    (2) $\implies$ (1). 
-
-    \textbf{Step~1}. We reduce the theorem to verifying the following fact: Assume that $X$ is a seaprated compact $k$-analytic space and $x\in X$ with $\widetilde{X_x}$ affine. Assume that $X$ is the union of two $k$-affinoid domains $Y=\Sp B$ and $Z=\Sp C$ both containing $x$ and there is a non-zero homogeneous element $\lambda\in \widetilde{\mathscr{H}(x)}$ such that
-    \[
-        \widetilde{Y_x}=\widetilde{X_x}\{\lambda\},\quad   \widetilde{Z_x}=\widetilde{X_x}\{\lambda^{-1}\}.
-    \]
-    Then $x$ has a $k$-affinoid neighbourhood in $X$.
-
-    By \cref{cor-separatednessreductioncri}, we may assume that $X$ is a compact separated $k$-analytic space. Let $\{Y_i\}_{i\in I}$ be a finite $k$-affinoid covering of $X$. After shrinking $X$, we may assume that $x\in Y_i$ for each $i\in I$. 
-    By \cref{thm-gradedreddomainbij}, $\{\widetilde{Y_{i,x}}\}_{i\in I}$ is a finite affine covering of $\widetilde{X_x}$.
-
-    By \cref{Commutative-lma-opencovlaurentrefrz} in \nameref{Commutative-chap-commutative}, we can find a Laurent covering 
-    \[
-        \mathcal{V}=\left\{\widetilde{X_x}\{f_1^{\pm 1},\ldots,f_n^{\pm 1}\}\right\}
-    \] 
-    of $\widetilde{X_x}$ refining $\{\widetilde{Y_{i,x}}\}_{i\in I}$, where $n\in \mathbb{N}$ and $f_1,\ldots,f_n$ are homogeneous elements in $\widetilde{\mathscr{H}(x)}$. By \cref{thm-gradedreddomainbij}, we can lift each element in $\mathcal{V}$ to a $k$-analytic domain $V_{i,x}$ in $X_x$. By shrinking $X$, we may assume that $X=V_1\cup\cdots\cup V_n$. Now an induction on $n$ reduces the theorem of our assertion.
-
-
-    We observe that we are free to shrink $X$ to $k$-analytic domains of the following form: $Y'\cup Z'$, where $Y'$ and $Z'$ are $k$-affinoid neighbourhoods of $x$ in $Y$ and $Z$ respectively.
-
-    \textbf{Step~2}. We show that after shrinking $X$, we may assume that $Y\cap Z=\Sp A$, where
+    \textbf{Step~1}. We show that after shrinking $X$, we may assume that $Y\cap Z=\Sp A$, where
     \[
         A=B\{tf^{-1}\}=C\{t^{-1}g\}  
     \]
     for some $f\in B$ and $g\in C$ and $\rho_A(f-g)<t:=\rho(\lambda)$ and $\lambda=\widetilde{f(x)}$.
 
-    Up to shrinking $X$, we can find $f\in B$, $g\in C$ both invertible such that $\rho_B(f)=t$, $\rho_C(g^{-1})=t$ such that $\lambda$ is the reduction of both $f(x)$ and $g(x)$. It therefore follows that 
+    By \cref{prop-liftelementsinHxred}, up to shrinking $X$, we can find $f\in B$, $g\in C$ both invertible such that 
+    \[
+        \lambda=\widetilde{f(x)}=\widetilde{g(x)}.  
+    \]
+    It therefore follows that 
     \[
         |(f-g)(x)|<t.  
     \] 
-    After shrinking $X$, we can make sure that $\rho_A(f-g)<t$.
+    After shrinking $X$, we can make sure that 
+    \[
+        \rho_A(f-g)<t.
+    \]
 
     By our assumption and \cref{lma-affinoiddomainreductionspecial2}, we have
     \[
@@ -1684,6 +1691,36 @@ Here the reductions are with respect to the $\mathbb{R}_{>0}$-gradings.
 \end{proof}
 
 
+\begin{thm}\label{thm-goodgermandreduction}
+    Let $X_x$ be a $k$-analytic germ. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X_x$ is good;
+        \item $\widetilde{X_x}$ is an affine open subset of $\mathbf{P}_{\widetilde{\mathscr{H}(x)}/\tilde{k}}$.
+    \end{enumerate}
+\end{thm}
+
+\textcolor{red}{This proof does not make much sense to me. I am just reproducing the arguments of Temkin. Need some reflection!}
+
+\begin{proof}
+    (1) $\implies$ (2). This follows from the definition.
+
+    (2) $\implies$ (1). In proving this direction, we are free to replace $X$ by its $k$-analytic domain that contains $x$ in the interior. We will express this procedure simply as \emph{shrinking $X$}.
+    
+    By \cref{cor-separatednessreductioncri}, we may assume that $X$ is a compact separated $k$-analytic space.  Let $\{Y_i\}_{i\in I}$ be a finite $k$-affinoid covering of $X$. After shrinking $X$, we may assume that $x\in Y_i$ for each $i\in I$. 
+
+    By \cref{thm-gradedreddomainbij}, $\{\widetilde{Y_{i,x}}\}_{i\in I}$ is a finite affine covering of $\widetilde{X_x}$.
+
+
+    By \cref{Commutative-lma-opencovlaurentrefrz} in \nameref{Commutative-chap-commutative}, we can find a Laurent covering 
+    \[
+        \mathcal{V}=\left\{\widetilde{X_x}\{f_1^{\pm 1},\ldots,f_n^{\pm 1}\}\right\}
+    \] 
+    of $\widetilde{X_x}$ refining $\{\widetilde{Y_{i,x}}\}_{i\in I}$, where $n\in \mathbb{N}$ and $f_1,\ldots,f_n$ are homogeneous elements in $\widetilde{\mathscr{H}(x)}$. By \cref{thm-gradedreddomainbij}, we can lift each element in $\mathcal{V}$ to a $k$-analytic domain $V_{i,x}$ in $X_x$. After shrinking $X$, we may assume that $X=V_1\cup\cdots\cup V_n$. 
+    
+    By induction on $n$, we reduce easily to the case $n=1$. Now it  suffices to apply \cref{lma-glueaffinetogood}.
+\end{proof}
+
+
 \begin{lemma}\label{lma-khaffinoidnh}
     Let $X_x$ be a $k$-analytic germ. Then the following are equivalent:
     \begin{enumerate}
@@ -1740,7 +1777,7 @@ We say $X_x$ is $k_H$-analytic in the sense that it lies in the essential image 
 \end{definition}
 
 \begin{proposition}
-    Let $Y_y, X_x$ be $k_H$-analytic germs. Then for any morphism $Y_y\rightarrow X_x$ in $k\text{-}\GerCat$, there is a unique continuous map $\widetilde{Y_y}^H\rightarrwo \widetilde{X_x}^H$ making the diagram commutative:
+    Let $Y_y, X_x$ be $k_H$-analytic germs. Then for any morphism $Y_y\rightarrow X_x$ in $k\text{-}\GerCat$, there is a unique continuous map $\widetilde{Y_y}^H\rightarrow \widetilde{X_x}^H$ making the diagram commutative:
     \[
         \begin{tikzcd}
             & \widetilde{Y_y} \arrow[rr] \arrow[dd] \arrow[ld]                        &                                                       & \widetilde{X_x} \arrow[dd] \arrow[ld]                        \\
