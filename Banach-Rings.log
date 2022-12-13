@@ -3,8 +3,8 @@ entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.tex
-(/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.tex
+**/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.tex
+(/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/Users/mingchen/Documents/LaTeX_Github/Ymir/preamble.tex (/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsbook.cls
 Document Class: amsbook 2020/05/29 v2.20.6
@@ -949,9 +949,15 @@ LABELS NOT IMPORTED.
 (Morphisms.tex)
 (Morphisms.aux)
 No file Morphisms.aux.
-Package xr Info: IMPORTING LABELS FROM Affinoid-Algebras.aux on input line 334.
+
+Package xr Warning: 
+No file Affinoid-Algebras.aux
+LABELS NOT IMPORTED.
+ on input line 334.
+
 (Affinoid-Algebras.tex)
 (Affinoid-Algebras.aux)
+No file Affinoid-Algebras.aux.
 Package xr Info: IMPORTING LABELS FROM Berkovich-Analytic-Spaces.aux on input line 335.
 (Berkovich-Analytic-Spaces.tex)
 (Berkovich-Analytic-Spaces.aux)
@@ -963,8 +969,8 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 3.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.aux)
-\openout1 = `Berkovich-Analytic-Spaces.aux'.
+) (/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.aux)
+\openout1 = `Banach-Rings.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
@@ -1057,11 +1063,11 @@ Package biblatex Info: ... and expl3
  (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 )
-\openout4 = `Berkovich-Analytic-Spaces.bcf'.
+\openout4 = `Banach-Rings.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Berkovich-Analytic-Spaces.bbl' found.
- (/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.bbl)
+Package biblatex Info: ... file 'Banach-Rings.bbl' found.
+ (/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.bbl)
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 LaTeX Info: Redefining \microtypecontext on input line 3.
@@ -1084,20 +1090,20 @@ Package caption Info: End \AtBeginDocument code.
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 Contents
-(/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.toc)
+(/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.toc)
 \tf@toc=\write5
-\openout5 = `Berkovich-Analytic-Spaces.toc'.
+\openout5 = `Banach-Rings.toc'.
 
  [3
 
 ] [4
 
 ]
-Berkovich analytic spaces
+Banach rings
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 16.
+(Font)              <10> on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 16.
+(Font)              <7> on input line 18.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1106,35 +1112,15 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
-Overfull \hbox (49.808pt too wide) detected at line 650
-[][]\OT1/lmr/m/n/10 ([] \OML/lmm/m/it/10 B; \U/msb/m/n/10 A[]\OT1/lmr/m/n/10 ) [] [] [][]([] \OML/lmm/m/it/10 B; [] k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 r[]T\OMS/lmsy/m/n/10 g\OT1/lmr/m/n/10 ) [] [] [][](\OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 r[]T\OMS/lmsy/m/n/10 g\OML/lmm/m/it/10 ; B\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 :
- []
-
-[18] [19]
-
-LaTeX Warning: cref reference format for label type `' undefined on input line 782.
-
-
-LaTeX Warning: cref reference format for label type `' undefined on input line 782.
-
-
-LaTeX Warning: cref reference format for label type `' undefined on input line 786.
-
-
-LaTeX Warning: cref reference format for label type `' undefined on input line 786.
-
-[20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1556.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-
-LaTeX Warning: Reference `Affionid-chap-affinoid' on page 34 undefined on input line 1567.
-
-[34] [35] [36] [37] [38] [39] [40]
+ [6] [7] [8]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 294.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
+) [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1890.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1412.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1142,31 +1128,26 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [41
+ [29
 
-] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.aux)
-
-LaTeX Warning: There were undefined references.
-
-Package logreq Info: Writing requests to 'Berkovich-Analytic-Spaces.run.xml'.
-\openout1 = `Berkovich-Analytic-Spaces.run.xml'.
+] (/Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.aux)
+Package logreq Info: Writing requests to 'Banach-Rings.run.xml'.
+\openout1 = `Banach-Rings.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38767 strings out of 478994
- 737908 string characters out of 5858185
- 1571693 words of memory out of 5000000
- 54953 multiletter control sequences out of 15000+600000
- 481907 words of font info for 225 fonts, out of 8000000 for 9000
+ 37600 strings out of 478994
+ 707720 string characters out of 5858185
+ 1555171 words of memory out of 5000000
+ 53925 multiletter control sequences out of 15000+600000
+ 465223 words of font info for 194 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,17n,133p,1076b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
-
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf (41 pages, 530809 bytes).
+ 132i,15n,133p,789b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Banach-Rings.pdf (29 pages, 387893 bytes).
 PDF statistics:
- 916 PDF objects out of 1000 (max. 8388607)
- 838 compressed objects within 9 object streams
- 235 named destinations out of 1000 (max. 500000)
- 41573 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 529 PDF objects out of 1000 (max. 8388607)
+ 471 compressed objects within 5 object streams
+ 152 named destinations out of 1000 (max. 500000)
+ 23149 words of extra memory for PDF output out of 24883 (max. 10000000)
 

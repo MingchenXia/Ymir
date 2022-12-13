@@ -7,16 +7,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{2}{The category of Berkovich analytic spaces}}{5}{section.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{3}{Analytic domains}}{15}{section.0.3}%
+\contentsline {section}{\tocsection {}{3}{Analytic domains}}{16}{section.0.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{4}{Berkovich site}}{19}{section.0.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{5}{Closed immersions}}{22}{section.0.5}%
+\contentsline {section}{\tocsection {}{5}{Closed immersions}}{23}{section.0.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{6}{Separated morphisms}}{24}{section.0.6}%
+\contentsline {section}{\tocsection {}{6}{Separated morphisms}}{25}{section.0.6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{7}{Analytic germs}}{26}{section.0.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{8}{Reduction}}{27}{section.0.8}%
+\contentsline {section}{\tocsection {}{8}{Reduction}}{28}{section.0.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{39}{chapter*.2}%
+\contentsline {section}{\tocsection {}{9}{Some results whose proofs I do not understand}}{36}{section.0.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{41}{chapter*.2}%

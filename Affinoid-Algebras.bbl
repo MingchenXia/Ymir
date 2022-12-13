@@ -77,33 +77,55 @@
       \field{pages}{5\bibrangedash 161}
       \range{pages}{157}
     \endentry
-    \entry{Duc18}{book}{}
-      \name{author}{1}{}{%
-        {{hash=14236bd71c0c44beb415f9a1bf867e58}{%
-           family={Ducros},
-           familyi={D\bibinitperiod},
-           given={Antoine},
-           giveni={A\bibinitperiod}}}%
+    \entry{BGR}{book}{}
+      \name{author}{3}{}{%
+        {{hash=b217837a3e0bec340b58af96181a5671}{%
+           family={Bosch},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=58a97bfbc23eba3b8b954b2351511950}{%
+           family={Güntzer},
+           familyi={G\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+        {{hash=f6401451da1f6b4e244e08973bd2f9b7}{%
+           family={Remmert},
+           familyi={R\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
       }
-      \strng{namehash}{14236bd71c0c44beb415f9a1bf867e58}
-      \strng{fullhash}{14236bd71c0c44beb415f9a1bf867e58}
-      \strng{bibnamehash}{14236bd71c0c44beb415f9a1bf867e58}
-      \strng{authorbibnamehash}{14236bd71c0c44beb415f9a1bf867e58}
-      \strng{authornamehash}{14236bd71c0c44beb415f9a1bf867e58}
-      \strng{authorfullhash}{14236bd71c0c44beb415f9a1bf867e58}
-      \field{labelalpha}{Duc18}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \list{publisher}{1}{%
+        {Springer-Verlag, Berlin}%
+      }
+      \strng{namehash}{f3859942394dc1773efabad24d309a77}
+      \strng{fullhash}{f3859942394dc1773efabad24d309a77}
+      \strng{bibnamehash}{f3859942394dc1773efabad24d309a77}
+      \strng{authorbibnamehash}{f3859942394dc1773efabad24d309a77}
+      \strng{authornamehash}{f3859942394dc1773efabad24d309a77}
+      \strng{authorfullhash}{f3859942394dc1773efabad24d309a77}
+      \field{labelalpha}{BGR84}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{978-2-85629-885-5}
-      \field{issn}{0303-1179}
-      \field{journaltitle}{Astérisque}
-      \field{number}{400}
-      \field{title}{Families of {B}erkovich spaces}
-      \field{year}{2018}
-      \field{pages}{vii+262}
+      \field{isbn}{3-540-12546-9}
+      \field{note}{A systematic approach to rigid analytic geometry}
+      \field{series}{Grundlehren der mathematischen Wissenschaften [Fundamental Principles of Mathematical Sciences]}
+      \field{title}{Non-{A}rchimedean analysis}
+      \field{volume}{261}
+      \field{year}{1984}
+      \field{pages}{xii+436}
       \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/978-3-642-52229-1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-642-52229-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-642-52229-1
+      \endverb
     \endentry
     \entry{stacks-project}{misc}{}
       \name{author}{1}{}{%
@@ -129,44 +151,6 @@
       \field{title}{Stacks Project}
       \field{year}{2020}
     \endentry
-    \entry{Tem00}{article}{}
-      \name{author}{1}{}{%
-        {{hash=b1f4bc2058258fc036e2cd5ad43118b7}{%
-           family={Temkin},
-           familyi={T\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{b1f4bc2058258fc036e2cd5ad43118b7}
-      \strng{fullhash}{b1f4bc2058258fc036e2cd5ad43118b7}
-      \strng{bibnamehash}{b1f4bc2058258fc036e2cd5ad43118b7}
-      \strng{authorbibnamehash}{b1f4bc2058258fc036e2cd5ad43118b7}
-      \strng{authornamehash}{b1f4bc2058258fc036e2cd5ad43118b7}
-      \strng{authorfullhash}{b1f4bc2058258fc036e2cd5ad43118b7}
-      \field{extraname}{1}
-      \field{labelalpha}{Tem00}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0025-5831}
-      \field{journaltitle}{Math. Ann.}
-      \field{number}{3}
-      \field{title}{On local properties of non-{A}rchimedean analytic spaces}
-      \field{volume}{318}
-      \field{year}{2000}
-      \field{pages}{585\bibrangedash 607}
-      \range{pages}{23}
-      \verb{doi}
-      \verb 10.1007/s002080000123
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1007/s002080000123
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1007/s002080000123
-      \endverb
-    \endentry
     \entry{Tem04}{article}{}
       \name{author}{1}{}{%
         {{hash=b1f4bc2058258fc036e2cd5ad43118b7}{%
@@ -181,7 +165,6 @@
       \strng{authorbibnamehash}{b1f4bc2058258fc036e2cd5ad43118b7}
       \strng{authornamehash}{b1f4bc2058258fc036e2cd5ad43118b7}
       \strng{authorfullhash}{b1f4bc2058258fc036e2cd5ad43118b7}
-      \field{extraname}{2}
       \field{labelalpha}{Tem04}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
