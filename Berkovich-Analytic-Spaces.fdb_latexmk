@@ -1,13 +1,13 @@
 # Fdb version 3
-["biber Berkovich-Analytic-Spaces"] 1670947339 "Berkovich-Analytic-Spaces.bcf" "Berkovich-Analytic-Spaces.bbl" "Berkovich-Analytic-Spaces" 1670947489
-  "Berkovich-Analytic-Spaces.bcf" 1670947488 107660 cffca0b00c265d62ec9c8a438b0125a7 "pdflatex"
+["biber Berkovich-Analytic-Spaces"] 1670947339 "Berkovich-Analytic-Spaces.bcf" "Berkovich-Analytic-Spaces.bbl" "Berkovich-Analytic-Spaces" 1670947577
+  "Berkovich-Analytic-Spaces.bcf" 1670947577 107660 cffca0b00c265d62ec9c8a438b0125a7 "pdflatex"
   "Ymir.bib" 1670947320 16763 218cde311a3bf8a81d3775b01474fc89 ""
   (generated)
   "Berkovich-Analytic-Spaces.blg"
   "Berkovich-Analytic-Spaces.bbl"
-["pdflatex"] 1670947486 "/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.tex" "/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf" "Berkovich-Analytic-Spaces" 1670947489
-  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.aux" 1670947488 17101 d5c5cf6db545e8b1f0ec3b09bf54b496 ""
-  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.tex" 1670947486 129502 db61a84b5be97336c896a5da4677c4d4 ""
+["pdflatex"] 1670947574 "/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.tex" "/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf" "Berkovich-Analytic-Spaces" 1670947577
+  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.aux" 1670947577 17101 b55b4776189c2c7754e7511ee97b9562 ""
+  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.tex" 1670947572 129503 d9466531180fdd08f49531c67d65effc ""
   "/Users/mingchen/Documents/LaTeX_Github/Ymir/Complex-Analytic-Spaces.aux" 0 -1 0 ""
   "/Users/mingchen/Documents/LaTeX_Github/Ymir/Introduction.aux" 0 -1 0 ""
   "/Users/mingchen/Documents/LaTeX_Github/Ymir/Local-Algebras.aux" 0 -1 0 ""
@@ -281,11 +281,11 @@
   "Affinoid-Algebras.tex" 1670864832 217386 0f91e589a34086d7a1a741878bf1dc8f ""
   "Banach-Rings.aux" 1670947387 17206 131b8366d347c983ac9b253e56615dbe ""
   "Banach-Rings.tex" 1670427733 74530 eaf83d70f63675270a528a39409ec318 ""
-  "Berkovich-Analytic-Spaces.aux" 1670947488 17101 d5c5cf6db545e8b1f0ec3b09bf54b496 "pdflatex"
+  "Berkovich-Analytic-Spaces.aux" 1670947577 17101 b55b4776189c2c7754e7511ee97b9562 "pdflatex"
   "Berkovich-Analytic-Spaces.bbl" 1670947340 7726 39188f2b7378ad88ac5556a7e3aadf03 "biber Berkovich-Analytic-Spaces"
-  "Berkovich-Analytic-Spaces.run.xml" 1670947488 2452 c75f2db591fdfe1ad0f435baa007578a "pdflatex"
-  "Berkovich-Analytic-Spaces.tex" 1670947486 129502 db61a84b5be97336c896a5da4677c4d4 ""
-  "Berkovich-Analytic-Spaces.toc" 1670947488 1436 461d747be53c4631899caaa0656aa1cf "pdflatex"
+  "Berkovich-Analytic-Spaces.run.xml" 1670947577 2452 c75f2db591fdfe1ad0f435baa007578a "pdflatex"
+  "Berkovich-Analytic-Spaces.tex" 1670947572 129503 d9466531180fdd08f49531c67d65effc ""
+  "Berkovich-Analytic-Spaces.toc" 1670947577 1436 461d747be53c4631899caaa0656aa1cf "pdflatex"
   "Commutative-Algebra.aux" 1670947374 13250 b71bd47f03eaf73bcda78423e1aa2b8f ""
   "Commutative-Algebra.tex" 1670915262 63901 8e0a57061707f8889ca96f2e11779283 ""
   "Complex-Analytic-Spaces.aux" 0 -1 0 ""
@@ -300,11 +300,11 @@
   "Topology-Bornology.tex" 1670860127 8643 8c9769b5647df385ddbf78ed5759457c ""
   "preamble.tex" 1670492142 12111 6dc8a95b4734ee55c2e573fe06747157 ""
   (generated)
+  "Berkovich-Analytic-Spaces.log"
+  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.log"
+  "Berkovich-Analytic-Spaces.bcf"
+  "Berkovich-Analytic-Spaces.run.xml"
+  "Berkovich-Analytic-Spaces.toc"
   "Berkovich-Analytic-Spaces.pdf"
   "/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf"
-  "Berkovich-Analytic-Spaces.log"
-  "Berkovich-Analytic-Spaces.toc"
   "Berkovich-Analytic-Spaces.aux"
-  "Berkovich-Analytic-Spaces.bcf"
-  "/Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.log"
-  "Berkovich-Analytic-Spaces.run.xml"
