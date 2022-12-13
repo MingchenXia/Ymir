@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  13 DEC 2022 14:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  13 DEC 2022 16:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -922,9 +922,15 @@ LABELS NOT IMPORTED.
 (Topology-Bornology.tex)
 (Topology-Bornology.aux)
 No file Topology-Bornology.aux.
-Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 329.
+
+Package xr Warning: 
+No file Banach-Rings.aux
+LABELS NOT IMPORTED.
+ on input line 329.
+
 (Banach-Rings.tex)
 (Banach-Rings.aux)
+No file Banach-Rings.aux.
 
 Package xr Warning: 
 No file Commutative-Algebra.aux
@@ -1303,6 +1309,12 @@ LaTeX Warning: Reference `Affinoid-cor-affdomainresidueequal' on page 1 undefine
 LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 16 undefined on input line 559.
 
 
+LaTeX Warning: Reference `Banach-cor-invertibleintermsofsp' on page 1 undefined on input line 575.
+
+
+LaTeX Warning: Reference `Banach-chap-Banach' on page 16 undefined on input line 575.
+
+
 LaTeX Warning: Reference `Affinoid-prop-laurentdomainfundamental' on page 1 undefined on input line 582.
 
 
@@ -1551,59 +1563,72 @@ LaTeX Warning: Reference `Commutative-chap-commutative' on page 32 undefined on 
 
 [32] [33]
 
-LaTeX Warning: Reference `Commutative-lma-gradedRZaffeq' on page 1 undefined on input line 1613.
+LaTeX Warning: Reference `Affinoid-prop-laurentdomainfundamental' on page 1 undefined on input line 1591.
 
 
-LaTeX Warning: Reference `Commutative-chap-commutative' on page 34 undefined on input line 1613.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 34 undefined on input line 1591.
 
 
-LaTeX Warning: Reference `Affinoid-prop-innerhomochar' on page 1 undefined on input line 1613.
+LaTeX Warning: Reference `Affinoid-prop-Weirestrassdomainequivdense' on page 1 undefined on input line 1594.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 34 undefined on input line 1613.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 34 undefined on input line 1594.
+
+[34]
+
+LaTeX Warning: Reference `Commutative-lma-gradedRZaffeq' on page 1 undefined on input line 1634.
 
 
-LaTeX Warning: Reference `Affinoid-prop-innerhomochar' on page 1 undefined on input line 1613.
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 35 undefined on input line 1634.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 34 undefined on input line 1613.
-
-[34] [35]
-
-LaTeX Warning: Reference `Commutative-lma-opencovlaurentrefrz' on page 1 undefined on input line 1714.
+LaTeX Warning: Reference `Affinoid-prop-innerhomochar' on page 1 undefined on input line 1634.
 
 
-LaTeX Warning: Reference `Commutative-chap-commutative' on page 36 undefined on input line 1714.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 35 undefined on input line 1634.
 
 
-LaTeX Warning: Reference `Affinoid-thm-strictaffdfnequal' on page 1 undefined on input line 1732.
+LaTeX Warning: Reference `Affinoid-prop-innerhomochar' on page 1 undefined on input line 1634.
 
 
-LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 36 undefined on input line 1732.
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 35 undefined on input line 1634.
+
+[35]
+
+LaTeX Warning: Reference `Commutative-lma-opencovlaurentrefrz' on page 1 undefined on input line 1733.
 
 
-LaTeX Warning: Reference `Commutative-cor-affinesetsHstrictcri' on page 1 undefined on input line 1732.
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 36 undefined on input line 1733.
 
 
-LaTeX Warning: Reference `Commutative-chap-commutative' on page 36 undefined on input line 1732.
+LaTeX Warning: Reference `Affinoid-thm-strictaffdfnequal' on page 1 undefined on input line 1751.
+
+
+LaTeX Warning: Reference `Affinoid-chap-affinoid' on page 36 undefined on input line 1751.
+
+
+LaTeX Warning: Reference `Commutative-cor-affinesetsHstrictcri' on page 1 undefined on input line 1751.
+
+
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 36 undefined on input line 1751.
 
 [36]
 
-LaTeX Warning: Reference `Affinoid-prop-closedsetininteriorcri' on page 1 undefined on input line 1748.
+LaTeX Warning: Reference `Affinoid-prop-closedsetininteriorcri' on page 1 undefined on input line 1767.
 
 
-LaTeX Warning: Reference `Affionid-chap-affinoid' on page 37 undefined on input line 1748.
+LaTeX Warning: Reference `Affionid-chap-affinoid' on page 37 undefined on input line 1767.
 
 [37]
 
-LaTeX Warning: Reference `Commutative-prop-maprzdescentdtostrict' on page 1 undefined on input line 1791.
+LaTeX Warning: Reference `Commutative-prop-maprzdescentdtostrict' on page 1 undefined on input line 1810.
 
 
-LaTeX Warning: Reference `Commutative-chap-commutative' on page 38 undefined on input line 1791.
+LaTeX Warning: Reference `Commutative-chap-commutative' on page 38 undefined on input line 1810.
 
 [38]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1847.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1866.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1622,18 +1647,18 @@ Package logreq Info: Writing requests to 'Berkovich-Analytic-Spaces.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38285 strings out of 478994
- 722886 string characters out of 5858185
- 1557662 words of memory out of 5000000
- 54504 multiletter control sequences out of 15000+600000
+ 38148 strings out of 478994
+ 718584 string characters out of 5858185
+ 1551789 words of memory out of 5000000
+ 54367 multiletter control sequences out of 15000+600000
  475107 words of font info for 214 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  132i,17n,133p,1076b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf (39 pages, 481445 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/Berkovich-Analytic-Spaces.pdf (39 pages, 481490 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 626 compressed objects within 7 object streams
+ 696 PDF objects out of 1000 (max. 8388607)
+ 625 compressed objects within 7 object streams
  224 named destinations out of 1000 (max. 500000)
  29277 words of extra memory for PDF output out of 29859 (max. 10000000)
 
