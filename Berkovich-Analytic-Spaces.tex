@@ -1513,13 +1513,16 @@ Here the reductions are with respect to the $\mathbb{R}_{>0}$-gradings.
 \end{proof}
 
 
-\begin{thm}
+\begin{thm}\label{thm-goodgermandreduction}
     Let $X_x$ be a $k$-analytic germ. Then the following are equivalent:
     \begin{enumerate}
         \item $X_x$ is good;
         \item $\widetilde{X_x}$ is an affine open subset of $\mathbf{P}_{\widetilde{\mathscr{H}(x)}/\tilde{k}}$.
     \end{enumerate}
 \end{thm}
+
+\textcolor{red}{This proof does not make much sense to me. I am just reproducing the arguments of Temkin. Need some reflection!}
+
 \begin{proof}
     (1) $\implies$ (2). This follows from the definition.
 
@@ -1577,13 +1580,13 @@ Here the reductions are with respect to the $\mathbb{R}_{>0}$-gradings.
 
 
     \textbf{Step~3}. We show that after shrinking $X$, we may guarantee that there are admissible epimorphisms 
-    \[
+    \begin{equation}\label{eq-admepiintermstep}
         \begin{aligned}
         k\{r^{-1}T,t^{-1}S_1,pS_2\}\rightarrow B &,\quad T_i\mapsto f_i \text{ for } i=1,\ldots,n,S_1\mapsto f ,S_2\mapsto f^{-1},\\
         k\{r^{-1}T,q^{-1}S_1,tS_2\}\rightarrow C &,\quad T_i\mapsto g_i \text{ for } i=1,\ldots,n,S_1\mapsto g ,S_2\mapsto g^{-1},
         \end{aligned}
-    \]
-    where $n\in \mathbb{N}$, $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$, $f_1,\ldots,f_n\in B$, $g_1,\ldots,g_n\in C$ and $\|f-g\|\leq t$, where the norm on $A$ is the quotient norm $A$ induced by
+    \end{equation}
+    where $n\in \mathbb{N}$, $r=(r_1,\ldots,r_n)\in \mathbb{R}^n_{>0}$, $f_1,\ldots,f_n\in B$, $g_1,\ldots,g_n\in C$, $\|f_i-g_i\|<r_i$ for $i=1,\ldots,n$ and $\|f-g\|\leq t$, where the norm on $A$ is the quotient norm $A$ induced by
     \[
         k\{r^{-1}T,t^{-1}S_1,tS_2\}\rightarrow B,\quad T_i\mapsto f_i\text{ for } i=1,\ldots,n, S_1\mapsto f, S_2\mapsto f^{-1}.
     \]
@@ -1592,7 +1595,7 @@ Here the reductions are with respect to the $\mathbb{R}_{>0}$-gradings.
     \[
         \mathbf{P}_{\widetilde{\mathscr{H}(x)}/\tilde{k}}\left\{\alpha_1,\ldots,\alpha_m\right\}  
     \]
-    for some non-zero homogeneous elements $\alpha_i\in \widetilde{\mathscr{H}(x)}$. After shrinking $X$, we may assume that $\alpha_i=\widetilde{f_i(x)}$ for some $f_i\in B$ for $i=1,\ldots,m$. Let $r_i=\rho(f_i)$ for $i=1,\ldots,m$. Set 
+    for some non-zero homogeneous elements $\alpha_i\in \widetilde{\mathscr{H}(x)}$. After shrinking $X$, we may assume that $\alpha_i=\widetilde{f_i(x)}$ for some $f_i\in B$ for $i=1,\ldots,m$. Let $r_i=|\rho(f_i)|$ for $i=1,\ldots,m$. Set 
     \[
         D=k\{r^{-1}T,t^{-1}S_1,pS_2\}.  
     \]
@@ -1621,11 +1624,67 @@ Here the reductions are with respect to the $\mathbb{R}_{>0}$-gradings.
     
     \textbf{Step~4}. We show that $X$ is $k$-affinoid after the reduction in Step~3.
 
-    ........
+    We first assume that the two maps in \eqref{eq-admepiintermstep} are both isomorphisms.
+    
+    Let $B_+$ denote the subspace of $B$ consisting of elements of the form:
+    \[
+        \sum_{\alpha\in \mathbb{N}^n}\sum_{j=0}^{\infty} \lambda_{\alpha,j}f^{\alpha} f^j.  
+    \]
+    Let $C_-$ denote the subspace of $C$ consisting of elements of the form:
+    \[
+        \sum_{\alpha\in \mathbb{N}^n}\sum_{j=-\infty}^{0} \lambda_{\alpha,j}g^{\alpha} g^j.  
+    \]
+    We observe that each element $A=B_++C_-$. Take $a\in A$ and expand
+    \[
+        a=\sum_{\alpha\in \mathbb{N}^n}\sum_{j=-\infty}^{\infty} \lambda_{\nu,j}f^{\alpha}f^j.  
+    \]
+    Then 
+    \[
+        a=  \sum_{\alpha\in \mathbb{N}^n}\sum_{j=-\infty}^{0} \lambda_{\nu,j}f^{\alpha}f^j+\sum_{\alpha\in \mathbb{N}^n}\sum_{j=1}^{\infty} \lambda_{\nu,j}f^{\alpha}f^j  
+    \]
+    is the desired decomposition.
+
+    In particular, for $i=1,\ldots,n$, we can write
+    \[
+        f_i-g_i=b_i+c_i,\quad f-g=b+c  
+    \]
+    with $b,b_1,\ldots,b_n\in B_+$, $c,c_1,\ldots,c_n\in C_-$. Then $h_i:=f_i-b_i$ and $h:=f-b$ are contained in $D:=B\cap C$. It follows that 
+    \[
+        \begin{aligned}
+        k\{r^{-1}T,t^{-1}S,pS^{-1}\}\rightarrow B &,\quad T_i\mapsto h_i \text{ for } i=1,\ldots,n,S\mapsto h,\\
+        k\{r^{-1}T,q^{-1}S,tS\}\rightarrow C &,\quad T_i\mapsto h_i \text{ for } i=1,\ldots,n,S\mapsto h,
+        \end{aligned}
+    \]
+    are isomorphisms. It follows that $D\cong k\{r^{-1}T,pS^{-1},q^{-1}S\}$ and $X\cong \Sp D$.
+
+    Now we handle the general case. Let
+    \[
+        A'=  k\{r^{-1}T,t^{-1}S,tS^{-1}\}
+    \]
+    and consider the epimorphism
+    \[
+        A'\rightarrow A,\quad T_i\mapsto f_i\text{ for }i=1,\ldots,n; S\mapsto f.  
+    \]
+    We can find preimages $G_1,\ldots,G_n,G\in A'$ of $g_1,\ldots,g_n,g$ such that the norms of $T_i-G_i$ and $S-G$ are small enough. THen the map
+    \[
+        k\{r^{-1}T,t^{-1}S,tS^{-1}\}\rightarrow A',\quad T_i\mapsto G_i,S\mapsto G
+    \]
+    is an isomorphism. Let
+    \[
+        \begin{aligned}
+            B'= & k\{r^{-1}T,t^{-1}S,pS^{-1}\},\\
+            C'= & k\{r^{-1}G,q^{-1}G,tG^{-1}\}.
+        \end{aligned}  
+    \]
+    Set $Y'=\Sp B'$ and $Z'=\Sp C'$. By construction, we have canonical isomorphisms
+    \[
+        Y'\{S^{-1}\}\cong Z'\{G\}\cong \Sp A'.  
+    \]
+    By the previous case, $X'$ obtained by gluing $Y'$ and $Z'$ along $\Sp A'$ is $k$-affinoid. The homomorphisms $B'\rightarrow A$ and $C'\rightarrow A$ factorize through $B$ and $C$ and gives closed immersions $Y\rightarrow Y'$, $Z\rightarrow Z'$. The latter gives rise to a closed immersion $Y\cap Z\rightarrow Y'\cap Z'$. Hence, we get a closed immersion $X\rightarrow X'$. So $X$ is $k$-affinoid.
 \end{proof}
 
 
-\begin{lemma}
+\begin{lemma}\label{lma-khaffinoidnh}
     Let $X_x$ be a $k$-analytic germ. Then the following are equivalent:
     \begin{enumerate}
         \item $x$ admits a $k$-affinoid neighbourhood $V$ in $X$ which admits  a $k_H$-analytic strucutre;
@@ -1639,7 +1698,71 @@ Here the reductions are with respect to the $\mathbb{R}_{>0}$-gradings.
     \[
         \widetilde{X_x}=  \mathbf{P}_{\widetilde{\mathscr{H}(x)}/\tilde{k}}\{f_1,\ldots,f_n\}.
     \]
+    By \cref{thm-goodgermandreduction}, the germ $X_x$ is good. So we can find a $k$-affinoid neighbourhood $V$ of $x$ in $X$. Up to shrinking $V=\Sp B$, we make find inveritble elements $h_1,\ldots,h_n$ in $B$ such that $\widetilde{h_i(x)}=f_i$ for $i=1,\ldots,n$.
 
+    Let $h:V\rightarrow \mathbb{A}_k^{n}$ be the morphism induced by $h_1,\ldots,h_n$. \textcolor{red}{Include the functor of points of An}
+    Let $t=h(x)$ and $W$ be the affinoid domain in $\mathbb{A}_k^{n}$ defined ny $|T_i|\leq r_i$ for $i=1,\ldots,n$. We have a commutative diagram
+    \[
+        \begin{tikzcd}
+            {(V,x)} \arrow[r, "h"] \arrow[rd] & {(\mathbb{A}_k^n,t)} \\
+                                              & {(W,t)} \arrow[u]   
+        \end{tikzcd}.  
+    \]
+    Also observe that the morphism of $k$-analytic germs $X_x\rightarrow (\mathbb{A}_k^n)_t$ factorizes through $W_t$, as can be seen on the level of reduction. So up to shrinking $V$, we can find a $k$-affinoid neighbourhood $W'$ of $t$ in $\mathbb{A}_k^n$ such that $h(V)\subseteq W\cap W'$. We may assume that $W'$ is a $k_H$-analytic domain. As $\widetilde{V_x}=\widetilde{X_x}$ is the preimage of $\widetilde{(W\cap W')_t}=\widetilde{W_t}$, the morphism $V\rightarrow W\cap W'$ is boundaryless at $x$. As $W\cap W'$ is $k_H$-analytic, it follows from \cref{Affinoid-prop-closedsetininteriorcri} in \nameref{Affionid-chap-affinoid} that $x$ admits a $k_H$-affinoid neighbourhood in $X$.
+\end{proof}
+
+\begin{corollary}\label{cor-germstrictiffredstrict}
+    Let $X_x$ be a $k$-analytic germ. The following are equivalent:
+    \begin{enumerate}
+        \item the germ $X_x$ is $k_H$-analytic;
+        \item the reduction $\widetilde{X_x}$ is $H$-strict.
+    \end{enumerate}
+\end{corollary}
+We say $X_x$ is $k_H$-analytic in the sense that it lies in the essential image of $k_H\text{-}\GerCat\rightarrow k\text{-}\GerCat$.
+\begin{proof}
+    (1) $\implies$ (2) follows immediately from \cref{lma-khaffinoidnh}.
+
+    Assume (2). Let $\{U_i\}_{i\in I}$ be an $H$-strict atals of $\widetilde{X_x}$. For each $i\in I$, we can find a $k$-analytic domain $X_{i,x}$ in $X_x$ such that $U_i=\widetilde{X_{i,x}}$ by \cref{thm-gradedreddomainbij}. By \cref{thm-gradedreddomainbij}, 
+    \[
+        \widetilde{X_{i,x}\cap X_{j,x}}=U_i\cap U_u
+    \]
+    for all $i,j\in I$. So we may assume that $\widetilde{X_x}$ is an $H$-strict quasi-compact open subset of $\mathbf{P}_{\widetilde{\mathscr{H}(x)}/\tilde{k}}$.
+
+    Cover $\widetilde{X_x}$ by finitely many $H$-strict affine open subset $V_1,\ldots,V_m$.  By \cref{thm-gradedreddomainbij}, we can lift $V_i$ to a $k_H$-analytic germ $W_{i,x}$ in $X_x$ for $i=1,\ldots,m$. Morevoer $W_{i,x}\cap W_{j,x}$ is $k_H$-analytic for any $j=1,\ldots,m$. It follows that $X_x$ is $k_H$-analytic.
+\end{proof}
+
+\begin{definition}
+    Let $X_x$ be a $k_H$-analytic germ. We define 
+    \[
+        \widetilde{X_x}^H:=  \left(\widetilde{X_x}\right)^H.
+    \]
+    This makes sense by \cref{cor-germstrictiffredstrict}.
+\end{definition}
+
+\begin{proposition}
+    Let $Y_y, X_x$ be $k_H$-analytic germs. Then for any morphism $Y_y\rightarrow X_x$ in $k\text{-}\GerCat$, there is a unique continuous map $\widetilde{Y_y}^H\rightarrwo \widetilde{X_x}^H$ making the diagram commutative:
+    \[
+        \begin{tikzcd}
+            & \widetilde{Y_y} \arrow[rr] \arrow[dd] \arrow[ld]                        &                                                       & \widetilde{X_x} \arrow[dd] \arrow[ld]                        \\
+\widetilde{Y_y}^H \arrow[rr, dotted] \arrow[dd]                  &                                                                         & \widetilde{X_x}^H \arrow[dd]                          &                                                              \\
+            & \mathbf{P}_{\widetilde{\mathscr{H}(y)}/\tilde{k}} \arrow[rr] \arrow[ld] &                                                       & \mathbf{P}_{\widetilde{\mathscr{H}(x)}/\tilde{k}} \arrow[ld] \\
+\mathbf{P}_{\widetilde{\mathscr{H}(y)}^H/\tilde{k}^H} \arrow[rr] &                                                                         & \mathbf{P}_{\widetilde{\mathscr{H}(x)}^H/\tilde{k}^H} &                                                             
+\end{tikzcd}  
+    \]
+\end{proposition}
+\begin{proof}
+    This follows immediately from \cref{Commutative-prop-maprzdescentdtostrict} in \nameref{Commutative-chap-commutative}.
+\end{proof}
+
+\begin{proposition}
+    Let $X_x$ be a $k$-analytic germ. If $X_x$ lies in the essential image of $k_H\text{-}\GerCat\rightarrow k\text{-}\GerCat$, then the $k_H$-analytic germ whose image in $k\text{-}\GerCat$ is isomorphic to $X_x$ is unique up to a canonical isomorphism in $k_H\text{-}\GerCat$.
+\end{proposition}
+\begin{proof}
+    Let $\tau=\{V_{i,x}\}_{i\in I}$ be a $k_H$-affinoid atlas defining the $k_H$-analytic structure on $X_x$. Let $V_x$ be a $k$-analytic domain in $X_x$ that admits a $k_H$-analytic structure. By  \cref{cor-germstrictiffredstrict}, $\widetilde{V_x}$ and $\widetilde{V_{i,x}}$ are all $H$-strict. But 
+    \[
+        \widetilde{V_x\cap V_{i,x}}=  \widetilde{V_x}\cap \widetilde{V_{i,x}},
+    \] 
+    so $V_x\cap V_{i,x}$ admits a $k_H$-analytic strucutre. But  $V_{i,x}$ is separated so the $k_H$-analytic structure is unique. Therefore, $V_x\cap V_{i,x}$ is $k_H$-analytic with respect to $\tau$ for any $i\in I$. So $V_x$ is $H$-strict with respect to $\tau$. 
 \end{proof}
 
 
