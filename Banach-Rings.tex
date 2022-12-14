@@ -6,7 +6,7 @@
 
 
 \chapter*{Banach rings}\label{chap-Banach}
-\section{Introduction}\label{sec-introduction}
+\section{Introduction}\label{sec-introduction-BanachRings}
 
 This section conerns the theory of Banach algebras. Our references are \cite{Berk12} and \cite{BGR}.
 
@@ -588,7 +588,7 @@ For the definitions of $\mathring{\bullet}$ and $\check{\bullet}$, we refer to \
 \end{corollary}
 \begin{proof}
 By \cref{prop-strictconvseriesradiusBanach}, we know that $A\{T\}$ is complete.
-By \cref{lma-unitmoduloreduction} and \cref{prop-strictlyconvcirccheck}, $f$ is a unit in $\mathring{A}\{T\}$ if and only if $\sum_{i=0}^{\infty} \tilde{a}_i T^i$  is a unit in $\tilde{A}[T]$. By \cref{lma-unitmoduloreduction} again, $a_0$ is a unit in $A$ if and only if $\tilde{a_0}$ is a unit in $\tilde{A}$. So we are reduced to argue that units in $\tilde{A}[T]$ are exactly units in $\tilde{A}$. This follows from the general fact about units in polynomial rings over a reduced ring.
+According to \cref{lma-unitmoduloreduction} and \cref{prop-strictlyconvcirccheck}, $f$ is a unit in $\mathring{A}\{T\}$ if and only if $\sum_{i=0}^{\infty} \tilde{a}_i T^i$  is a unit in $\tilde{A}[T]$. By \cref{lma-unitmoduloreduction} again, $a_0$ is a unit in $A$ if and only if $\tilde{a_0}$ is a unit in $\tilde{A}$. So we are reduced to argue that units in $\tilde{A}[T]$ are exactly units in $\tilde{A}$. This follows from the general fact about units in polynomial rings over a reduced ring.
 \end{proof}
 
 
@@ -607,7 +607,7 @@ By \cref{lma-unitmoduloreduction} and \cref{prop-strictlyconvcirccheck}, $f$ is 
 \section{Semi-normed modules}
 
 \begin{definition}
-    Let $(A,\|\bullet\|_A)$ be a normed ring. A \emph{semi-normed $A$-module} (resp. \emph{normed $A$-module}) is a pair $(M,\|\bullet\|_M)$ consisting of a $A$-module $M$ and a semi-norm (resp. norm) on the underlying Abelian group of $M$ such that there is a constant $C>0$ such that
+    Let $(A,\|\bullet\|_A)$ be a normed ring. A \emph{semi-normed $A$-module} (resp. \emph{normed $A$-module}) is a pair $(M,\|\bullet\|_M)$ consisting of an $A$-module $M$ and a semi-norm (resp. norm) on the underlying Abelian group of $M$ such that there is a constant $C>0$ such that
     \[
       \|fm\|_M \leq C \|f\|_A \|m\|_M
     \]
@@ -686,7 +686,7 @@ By \cref{lma-unitmoduloreduction} and \cref{prop-strictlyconvcirccheck}, $f$ is 
     \]
     is an isomorphism in $\BanCat_A$.
 
-    It remains to show that pull-backs preserve admissible epimorphisms and pushouts preserve admissible monomorphisms. We first handle the case of admissible epimorphisms. Consider a Cartesian square in $\BanCat_A$:
+    It remains to show that pullbacks preserve admissible epimorphisms and pushouts preserve admissible monomorphisms. We first handle the case of admissible epimorphisms. Consider a Cartesian square in $\BanCat_A$:
     \[
         \begin{tikzcd}
             M \arrow[r, "p"] \arrow[d, "q"] \arrow[rd, "\square", phantom] & U \arrow[d, "f"] \\
@@ -730,7 +730,7 @@ By \cref{lma-unitmoduloreduction} and \cref{prop-strictlyconvcirccheck}, $f$ is 
         \end{tikzcd}  
     \]
     with $g$ being an admissible monomorphism. We need to show that $p$ is an adimissible monomorphism. This boils down to the following: $p$ is injective with closed image and the norms on $p(V)$ obtained in the obvious ways are equivalent.
-    As in the case of pull-backs, we may let $\alpha:W\rightarrow U\oplus V$ be the  morphism $(g,-f)$ and assume that $M=\coker \alpha$. It is then easy to see that $p$ is injective. The proof that the two norms on $p(V)$ are equivalent is parallel to the argument in the pull-back case, and we omit it.
+    As in the case of pullbacks, we may let $\alpha:W\rightarrow U\oplus V$ be the  morphism $(g,-f)$ and assume that $M=\coker \alpha$. It is then easy to see that $p$ is injective. The proof that the two norms on $p(V)$ are equivalent is parallel to the argument in the pull-back case, and we omit it.
 
     It remains to verify that $p(V)$ is closed in $W$. Consider the admissibly coexact sequence in $\BanCat_A$:
     \[
@@ -765,7 +765,7 @@ By \cref{lma-unitmoduloreduction} and \cref{prop-strictlyconvcirccheck}, $f$ is 
 \begin{definition}\label{def-Berkspectrum}
     Let $(A,\|\bullet\|_A)$ be a Banach ring. A semi-norm $|\bullet|$ on $A$ is \emph{bounded} if there is a constant $C>0$ such that for any $f\in A$, $|f|\leq C\|f\|_A$.
 
-    We write $\Sp A$ for the set of bounded semi-valuations on $A$. We call $\Sp A$ the \emph{Berkovich spectrum} of $A$.
+    Write $\Sp A$ for the set of bounded semi-valuations on $A$. We call $\Sp A$ the \emph{Berkovich spectrum} of $A$.
 
     We endow $\Sp A$ with the weakest topology such that for each $f\in A$, the map $\Sp A\rightarrow \mathbb{R}_{\geq 0}$ sending $\|\bullet\|$ to $\|f\|$ is continuous.
 
@@ -879,7 +879,7 @@ By \cref{lma-supnormbddbyrho}, the Gelfand transform is well-defined.
 \begin{proposition}\label{prop-Gelfbdd}
     Let $(A,\|\bullet\|_A)$ be a Banach ring. Then the Gelfand transform
     \[
-        A\rightarrow \prod_{x\in \Sp A} \mathscr{H}(x).    
+        A\rightarrow \prod_{x\in \Sp A} \mathscr{H}(x)
     \]
     is bounded. In fact, the Gelfand transform is contractive.
 \end{proposition}
@@ -898,7 +898,7 @@ By \cref{lma-supnormbddbyrho}, the Gelfand transform is well-defined.
     
     We claim that $\|\bullet\|$ is multiplicative. As $A$ is a field, it suffices to show that $\|f^{-1}\|=\|f\|^{-1}$ for any non-zero $f\in A$. We may assume that $\|f\|^{-1}<\|f^{-1}\|$.
     
-    Let $r$ be a positive real number. Let $\varphi:A\rightarrow A\{r^{-1}T\}/(T-f)$ be the natural map. The map is injective as $A$ is a field. We endow $A\{r^{-1}T\}/(T-f)$ with the quotient semi-norm induced by $\|\bullet\|_r$. We still denote this semi-norm by $\|\bullet\|_r$.
+    Let $r$ be a positive real number. Let $\varphi:A\rightarrow A\{r^{-1}T\}/(T-f)$ be the natural map. The map is injective as $A$ is a field. We endow $A\{r^{-1}T\}/(T-f)$ with the quotient semi-norm induced by $\|\bullet\|_r$ and still denote this semi-norm by $\|\bullet\|_r$.
 
     We claim that $f-T$ is not invertible in $A\{r^{-1}T\}$ for the choice $r=\|f^{-1}\|^{-1}$. From this, it follows that 
     \[
@@ -1169,7 +1169,7 @@ Observe that when $A$ and $B$ are both noetherian, Condition~(1) is automaticall
     \[
         \|f\|_{\sigma x}=\|\sigma^{-1}(f)\|_x.  
     \]
-    In particular, the maps in both cases are well-defined. We observe that the fiber of a point $x\in \Sp A$ under $\Sp   (A\otimes_k K)\rightarrow \Sp A$ can be identified with the image of $\Sp \mathscr{H}(x)\otimes_k K$ in $\Sp A\otimes_k K$. Observe that $\Sp \mathscr{H}(x)\otimes_k K$ is just the set of maximal ideals
+    It follows that the maps in both cases are well-defined. We observe that the fiber of a point $x\in \Sp A$ under $\Sp   (A\otimes_k K)\rightarrow \Sp A$ can be identified with the image of $\Sp \mathscr{H}(x)\otimes_k K$ in $\Sp A\otimes_k K$. Observe that $\Sp \mathscr{H}(x)\otimes_k K$ is just the set of maximal ideals
      When $K/k$ is Galois, $\Gal(K/k)$ acts transitively. If $K/k$ is purely inseparable, then $\mathscr{H}(x)\otimes_k K$ is a local ring.
 \end{proof}
 

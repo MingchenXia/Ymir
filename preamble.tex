@@ -1,5 +1,8 @@
 
 \documentclass{amsbook} 
+
+
+
 %\usepackage{xr}
 \usepackage{xr-hyper}
 \usepackage[unicode]{hyperref}
@@ -306,6 +309,7 @@ linktoc=all
   \endgroup
 }
 
+
 \makeatletter
 \newcommand*{\addFileDependency}[1]{% argument=file name and extension
   \typeout{(#1)}
@@ -315,10 +319,12 @@ linktoc=all
 \makeatother
 
 
+
 \newcommand*{\myexternaldocument}[2]{%
 \externaldocument[#1]{#2}%
 \addFileDependency{#2.tex}%
 \addFileDependency{#2.aux}%
+%\addFileDependency{#2.pdf}%
 }
 
 
@@ -333,28 +339,9 @@ linktoc=all
 \myexternaldocument{Morphisms-}{Morphisms}
 \myexternaldocument{Affinoid-}{Affinoid-Algebras}
 \myexternaldocument{Berkovich-}{Berkovich-Analytic-Spaces}
+\myexternaldocument{BerkProperty-}{Properties-Berkovich-Spaces}
 %\fi
 
-\iffalse
-\externaldocument[Introduction-]{Introduction}[Introduction.pdf]
-%One variable complex analysis
-%Several variables complex analysis
-\externaldocument[Topology-]{Topology-Bornology}[Topology-Bornology.pdf]
-\externaldocument[Banach-]{Banach-Rings}[Banach-Rings.pdf]
-\externaldocument[Commutative-]{Commutative-Algebra}[Commutative-Algebra.pdf]
-\externaldocument[Local-]{Local-Algebras}[Local-Algebras.pdf]
-\externaldocument[Complex-]{Complex-Analytic-Spaces}[Complex-Analytic-Spaces.pdf]
-%Properties of space
-\externaldocument[Morphisms-]{Morphisms}[Morphisms.pdf]
-%Differential calculus
-%GAGA
-%Hilbert scheme complex analytic version
-
-%Complex differential geometry
-
-\externaldocument[Affinoid-]{Affinoid-Algebras}[Affinoid-Algebras.pdf]
-\externaldocument[Berkovich-]{Berkovich-Analytic-Spaces}[Berkovich-Analytic-Spaces.pdf]
-\fi
 
 \bibliography{Ymir}
 

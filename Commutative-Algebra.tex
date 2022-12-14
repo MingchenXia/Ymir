@@ -9,7 +9,7 @@
 \chapter*{Commutative algebras}\label{chap-commutative}
 
 
-\section{Introduction}\label{sec-introduction}
+\section{Introduction}\label{sec-introduction-Commutativealgebra}
 
 \section{Graded commutative algebra}
 Let $G$ be an Abelian group. We write the group operation of $G$ multiplicatively and denote the identity of $G$ as $1$.
@@ -189,7 +189,7 @@ Next we define the tensor product of $G$-graded modules.
 \begin{definition}
     Let $A$ be a $G$-graded ring and $M,N$ be $G$-graded $A$-modules. We define a $G$-grading on $M\otimes_A N$ as follows: for any $g\in G$, $(M\otimes_A N)_g$ is defined as the image of $\sum_{h\in G}M_h\times N_{gh^{-1}}$ in $M\otimes_A N$. We always endow $M\otimes_A N$ with this $G$-grading.
 \end{definition}
-\textcolor{red}{verify the universal property; show that this is indeed a grading}
+\textcolor{red}{Verify the universal property; show that this is indeed a grading}
 
 \begin{example}\label{ex-localizationgradedmodule}
     This is a continuition of \cref{ex-localizationgradedring}.
@@ -656,7 +656,7 @@ where $\mathfrak{m}_{\mathcal{O}}$ is the maximal $G$-homogeneous ideal of $\mat
     \[
         U_i=X\{f_{i1},\ldots,f_{in}\}
     \]
-    with $f_{ij}\in K$ being non-zero and homogeneous for $i=1,\ldots,m$ and $j=1,\ldots,n$. We may assume that $f_{in}=1$ for $i=1,\ldots,m$.
+    with $f_{ij}\in K$ being non-zero and homogeneous for $i=1,\ldots,m$ and $j=1,\ldots,n$. In addition, we may assume that $f_{in}=1$ for $i=1,\ldots,m$.
 
     Let 
     \[
@@ -992,7 +992,7 @@ The gradings refer to $\mathbb{R}_{>0}$-grading in this section. Let $k$ be a gr
 \begin{definition}
     The category $\bir_k$ is defined as follows: 
     \begin{enumerate}
-        \item the objects are pairs $(X,K)$, where $K$ is a graded field extension of $k$ and $X$ is an object in $\mathcal{T}_{K/k}$.
+        \item the objects are pairs $(X,K)$, where $K$ is a graded field extension of $k$ and $X$ is an object in $\mathcal{T}_{K/k}$;
         \item a morphism $$(X,K)$$ to $(Y,L)$ is a pair $(h,i)$, where $h:X\rightarrow Y$ is a continuous map and $i:L\rightarrow K$ is an embedding of $G$-graded fields such that the following diagram commutes:
         \[
             \begin{tikzcd}
@@ -1029,7 +1029,7 @@ Observe that $X\rightarrow Y\times_{\mathbb{P}_{L/k}}\mathbb{P}_{K/k}$ is automa
     \[
         S\subseteq R_1\times \cdots \times R_t.  
     \]
-    As $R$ is noetherian, we conclude that $S$ is finite as $R$-module.
+    Since $R$ is noetherian, we conclude that $S$ is finite as $R$-module.
 \end{proof}
 
 \begin{lemma}

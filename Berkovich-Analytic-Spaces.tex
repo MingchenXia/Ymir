@@ -6,7 +6,7 @@
 
 \chapter*{Berkovich analytic spaces}\label{chap-Berkovich}
 
-\section{Introduction}\label{sec-introduction}
+\section{Introduction}\label{sec-introduction-Berkovichspaces}
 
 
 The main references of this chapter: \cite{Berk93}, \cite{Berk12}, \cite{Tem04}, \cite{Tem00}, \cite{Duc18}.
@@ -92,7 +92,7 @@ By Condition~(2), it $W\subseteq U\subseteq V$ are three sets in $\tau$, then $\
 
     By \cref{lma-innetaffinoneaffinall}, $U$ (resp. $V$) and $W_1,\ldots,W_n$ are $k_H$-affinoid domains in $U'$ (resp. $V'$).
 
-    By \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid}, $U_i:=U\cap W_i$ (resp. $V_i:=V\cap W_i$) is a $k_H$-affinoid domain in $W_i$  for $i=1,\ldots,n$. By \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid} again, $U_i\cap V_i$ is a $k_H$-affinoid domain in $W_i$ for $i=1,\ldots,n$. So $U_i\cap V_i\in \bar{\tau}|_{U\cap V}$ for $i=1,\ldots,n$. But
+    According to \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid}, $U_i:=U\cap W_i$ (resp. $V_i:=V\cap W_i$) is a $k_H$-affinoid domain in $W_i$  for $i=1,\ldots,n$. By \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid} again, $U_i\cap V_i$ is a $k_H$-affinoid domain in $W_i$ for $i=1,\ldots,n$. So $U_i\cap V_i\in \bar{\tau}|_{U\cap V}$ for $i=1,\ldots,n$. But
     \[
         \bigcup_{i=1}^n U_i\cap V_i=(U\cap V)\cap \bigcup_{i=1}^n W_i,  
     \]
@@ -212,7 +212,7 @@ For the notion of right multiplicative system, we refer to \cite[\href{https://s
 
     \textbf{RMS1}. The identity is clear a quasi-isomorphism. It remains to verify that the composition of quasi-isomorphisms is still a quasi-isomorphism.
 
-    We take $\varphi,\psi$ as in \cref{def-strongmorphismcompo}. We will use the same notations as in \cref{def-strongmorphismcompo}. We need to show that $V\rightarrow V''$ identifies $V$ with a $k_H$-affinoid domain in $V''$. From the construction, we know that $\varphi$ identifies $V_i$ with a $k_H$-affinoid domain in $V_i'$ and $\psi$ identifies $V_i'$ with a $k_H$-affinoid domain in $V_i''$ for $i=1,\ldots,n$. In particular, $\chi(V)$ is a compact $k_H$-analytic domain in $V''$. It follows from \cref{Affinoid-prop-compactanalydomainaffinoid} in \nameref{Affinoid-chap-affinoid} that $\chi(V)$ is a $k_H$-affinoid domain in $V''$.
+    Take $\varphi,\psi$ as in \cref{def-strongmorphismcompo}. We will use the same notations as in \cref{def-strongmorphismcompo}. We need to show that $V\rightarrow V''$ identifies $V$ with a $k_H$-affinoid domain in $V''$. From the construction, we know that $\varphi$ identifies $V_i$ with a $k_H$-affinoid domain in $V_i'$ and $\psi$ identifies $V_i'$ with a $k_H$-affinoid domain in $V_i''$ for $i=1,\ldots,n$. In particular, $\chi(V)$ is a compact $k_H$-analytic domain in $V''$. It follows from \cref{Affinoid-prop-compactanalydomainaffinoid} in \nameref{Affinoid-chap-affinoid} that $\chi(V)$ is a $k_H$-affinoid domain in $V''$.
 
     \textbf{RMS2}.
     If $\varphi:(X,\mathcal{A},\tau)\rightarrow (X',\mathcal{A}',\tau')$ and $f:(\widetilde{X'},\widetilde{\mathcal{A}'},\widetilde{\tau'})\rightarrow (X',\mathcal{A}',\tau')$ are given strong morphisms of $k_H$-analytic spaces and $g$ is a quasi-isomorphism, then there are $k_H$-analytic space $(\widetilde{X},\widetilde{\mathcal{A}},\widetilde{\tau})$ and strong morphisms $\tilde{\varphi}:(\widetilde{X},\widetilde{\mathcal{A}},\widetilde{\tau})\rightarrow (\widetilde{X'},\widetilde{\mathcal{A}'},\widetilde{\tau'})$ and $f:(\widetilde{X},\widetilde{\mathcal{A}},\widetilde{\tau})\rightarrow (X,\mathcal{A},\tau)$ such that $f$ is a quasi-isomorphism and the following diagram commutes:  
@@ -335,7 +335,7 @@ Observe that $W$ is $k_H$-affinoid and $W_i$ is a $k_H$-affinoid domain in $W$ b
     \[
         V\subseteq W_1\cup \cdots\cup W_m.  
     \]
-    As $V,W_j\in \bar{\tau}$ for $j=1,\ldots,m$, by \cref{Topology-lma-netproperty1} in \nameref{Topology-chap-topology}, we can find $U_1,\ldots,U_n\in \bar{\tau}$ such that $V=U_1\cup\cdots\cup U_n$ and each $U_i$ is contained in some $W_j$. As $W_j\in \sigma$ for $j=1,\ldots,m$, it follows that $U_i\in \bar{\sigma}$ for $i=1,\ldots,n$.
+    As $V,W_j\in \bar{\tau}$ for $j=1,\ldots,m$, by \cref{Topology-lma-netproperty1} in \nameref{Topology-chap-topology}, we can find $U_1,\ldots,U_n\in \bar{\tau}$ such that $V=U_1\cup\cdots\cup U_n$ and each $U_i$ is contained in some $W_j$. Since $W_j\in \sigma$ for $j=1,\ldots,m$, it follows that $U_i\in \bar{\sigma}$ for $i=1,\ldots,n$.
 
     By \cref{lma-tauspecialanycov}, 
     \[
@@ -757,7 +757,7 @@ Observe that the Berkovich Grothendieck topology is subcanonical by \cref{prop-g
 
 Conversely, we can reformulate Kiehl's theorem.
 \begin{thm}\label{thm-Kiehlcoh}
-    Let $A$ be a $k_H$-affinoid algebra and $\mathcal{M}$ be a coherent sheaf of $\mathcal{O}_{\Sp A}$-modules. Set $M=H^0(X,\mathcal{M})$, then $M$ is a finite $A$-modue and we have a canonical isomorphism
+    Let $A$ be a $k_H$-affinoid algebra and $\mathcal{M}$ be a coherent sheaf of $\mathcal{O}_{\Sp A}$-modules. Set $M=H^0(X,\mathcal{M})$, then $M$ is a finite $A$-modue, and we have a canonical isomorphism
     \[
         \tilde{M}\cn \mathcal{M}.  
     \]
@@ -779,11 +779,11 @@ The left-hand side is defined in \cref{ex-finitemoduleinducecohsheaf}.
     \[
         \varphi_*\mathcal{O}_{\Sp B}(\Sp C)=\mathcal{O}_{\Sp B}(\varphi^{-1}(\Sp C))=\mathcal{O}_{\Sp B}(\Sp C\hat{\otimes}_A B)=C\hat{\otimes}_A B\cn C\otimes_A B.
     \]
-    Here we applied \cref{Affinoid-cor-fiberproductaffdomain} in \cref{Affinoid-chap-affinoid} and \cref{Affinoid-prop-finitemodulebasechange} in \cref{Affinoid-chap-affinoid}. So $\varphi_*\mathcal{O}_{\Sp B}\cong \widetilde{B}$.
+    Here we applied \cref{Affinoid-cor-fiberproductaffdomain} in \nameref{Affinoid-chap-affinoid} and \cref{Affinoid-prop-finitemodulebasechange} in \nameref{Affinoid-chap-affinoid}. So $\varphi_*\mathcal{O}_{\Sp B}\cong \widetilde{B}$.
 
     From this (2) trivially implies (1).
 
-    Conversely, assume (1), let $B=H^0(\Sp A,\varphi_*\mathcal{O}_{\Sp B})$. By \cref{thm-Kiehlcoh}, $B$ is a finite $A$-module. Let $B'$ denote the ring $B$ endowed with the finite Banach $A$-algebra structure as in \cref{Affinoid-prop-Banachalgebrafiniteforget} in \nameref{Affinoid-chap-affinoid}. We need to show that the identity map $B'\rightarrow B$ is admissible. Observe that the identity map is bounded by \cref{Affinoid-prop-admitobanachbdd} in \cref{Affinoid-chap-affinoid}. By \cref{Affinoid-prop-Weirestrassdomainequivdense} in \cref{Affinoid-chap-affinoid}, it suffices to show that the induced map $\Sp B\rightarrow \Sp B'$ is surjective. Let $\varphi':\Sp B'\rightarrow \Sp A$ be the natural morphism of $k_H$-affinoid spaces. Then 
+    Conversely, assume (1), let $B=H^0(\Sp A,\varphi_*\mathcal{O}_{\Sp B})$. By \cref{thm-Kiehlcoh}, $B$ is a finite $A$-module. Let $B'$ denote the ring $B$ endowed with the finite Banach $A$-algebra structure as in \cref{Affinoid-prop-Banachalgebrafiniteforget} in \nameref{Affinoid-chap-affinoid}. We need to show that the identity map $B'\rightarrow B$ is admissible. Observe that the identity map is bounded by \cref{Affinoid-prop-admitobanachbdd} in \nameref{Affinoid-chap-affinoid}. By \cref{Affinoid-prop-Weirestrassdomainequivdense} in \nameref{Affinoid-chap-affinoid}, it suffices to show that the induced map $\Sp B\rightarrow \Sp B'$ is surjective. Let $\varphi':\Sp B'\rightarrow \Sp A$ be the natural morphism of $k_H$-affinoid spaces. Then 
     \[
         \varphi_*(\mathcal{O}_{\Sp B})\cn \varphi'_*(\mathcal{O}_{\Sp B'}).
     \]
@@ -918,7 +918,7 @@ The statement in \cite[Lemma~1.3.7]{Berk93} is not correct.
 
     Let $V$ be a $k_H$-affinoid domain in $X$.
     By (1) and the compactness of $V$, we can find $n\in \mathbb{Z}_{>0}$ and $V_1,\ldots,V_n\in \tau$ such that $V\subseteq V_1\cup\cdots\cup V_n$.
-    By \cref{Topology-lma-netproperty1} in \nameref{Topology-chap-topology}, we can find $m\in \mathbb{Z}_{>0}$ and $U_1,\ldots,U_m\in \tau$ such that
+    According to \cref{Topology-lma-netproperty1} in \nameref{Topology-chap-topology}, we can find $m\in \mathbb{Z}_{>0}$ and $U_1,\ldots,U_m\in \tau$ such that
     \[
         V=U_1\cup\cdots\cup U_m  
     \]
@@ -1198,7 +1198,7 @@ In this section, when we do not specify the grading of a graded object, we mean 
 Observe that $\widetilde{(X,x)}$ is an affine open subset of $\mathbf{P}_{\widetilde{\mathscr{H}(x)}/\tilde{k}}$. This follows from \cref{Affinoid-cor-reductionfinitelygenerated} in \nameref{Affinoid-chap-affinoid}.
 
 \begin{lemma}\label{lma-reductionindepgoodgerm}
-    Let $X=\Sp A$ be a $k$-affinoid space and $x\in X$. Let $U=\Sp B$ be a $k$-affinoid space. Let $\iota:U\rightarrow X$ be an isomorphism of $U$ with an open neighbourhood of $x$.
+    Let $X=\Sp A$, $U=\Sp B$ be a $k$-affinoid spaces and $x\in X$. Let $\iota:U\rightarrow X$ be an isomorphism of $U$ with an open neighbourhood of $x$.
     We still write $\iota^{-1}(x)\in U$ as $x$.
     Then the natural morphism
     \[
@@ -1396,7 +1396,7 @@ In \cite{Tem04}, the author forgot the non-emptyness assumption.
 
     By \cref{lma-analyticdomainingood1}, we can write $Y_x$ as a finite union of $V_{i,x}:=X_x\{r_i^{-1}f_i\}$ for $i=1,\ldots,m$, where $n_i\in \mathbb{N}$, $f_i=(f_{i1},\ldots,f_{in_i})\in \mathcal{O}_{X,x}^{\times,n_i}$ and $r_i=(r_{i1},\ldots,r_{in_i})$ with $r_{ij}=|f_{ij}(x)|$.
 
-    By \cref{lma-reductioncov}, $\widetilde{V_{i,x}}$ for $i=1,\ldots,m$ covers $\widetilde{X_x}$.
+    According to \cref{lma-reductioncov}, $\widetilde{V_{i,x}}$ for $i=1,\ldots,m$ covers $\widetilde{X_x}$.
 
     By \cref{Commutative-lma-opencovlaurentrefrz} in \nameref{Commutative-chap-commutative}, we can refine this covering to a Laurent covering 
     \[
@@ -1415,7 +1415,7 @@ In \cite{Tem04}, the author forgot the non-emptyness assumption.
         \widetilde{Y_x}=\bigcup_{i=1}^m \widetilde{X_x}\{\widetilde{f_{i1}},\ldots,\widetilde{f_{in_i}}\},  
     \]
     where $m\in \mathbb{Z}_{>0}$, $n_1,\ldots,n_m\in \mathbb{N}$, $\widetilde{f_{ij}}\in \widetilde{\mathscr{H}(x)}$ are homogeneous elements for $i=1,\ldots,m$, $j=1,\ldots,n_i$.
-    We lift $\widetilde{f_{ij}}$ to $f_{ij}\in \mathcal{O}_{X,x}$, it suffices to take 
+    Lift $\widetilde{f_{ij}}$ to $f_{ij}\in \mathcal{O}_{X,x}$, it suffices to take 
     \[
         \bigcup_{i=1}^m X_x\left\{r_{i1}^{-1}f_{i1},\ldots, r_{in_i}^{-1}f_{in_i} \right\},  
     \]
@@ -1859,7 +1859,8 @@ We introduce a lemma allowing one to tell when the gluing of two affinoid spaces
 \end{proof}
 
 
-\begin{thm}\label{thm-goodgermandreduction}\textcolor{red}{This is probably problematic, we will avoid using this result!}
+\begin{thm}\label{thm-goodgermandreduction}\label{thm-test1}
+    \textcolor{red}{This is probably problematic, we will avoid using this result!}
     Let $X_x$ be a $k$-analytic germ. Then the following are equivalent:
     \begin{enumerate}
         \item $X_x$ is good;
@@ -1881,7 +1882,7 @@ We introduce a lemma allowing one to tell when the gluing of two affinoid spaces
     \[
         \mathcal{V}=\left\{\widetilde{X_x}\{f_1^{\pm 1},\ldots,f_n^{\pm 1}\}\right\}
     \] 
-    of $\widetilde{X_x}$ refining $\{\widetilde{Y_{i,x}}\}_{i\in I}$, where $n\in \mathbb{N}$ and $f_1,\ldots,f_n$ are homogeneous elements in $\widetilde{\mathscr{H}(x)}$. By \cref{thm-gradedreddomainbij}, we can lift each element in $\mathcal{V}$ to a $k$-analytic domain $V_{i,x}$ in $X_x$. After shrinking $X$, we may assume that $X=V_1\cup\cdots\cup V_n$. 
+    of $\widetilde{X_x}$ refining $\{\widetilde{Y_{i,x}}\}_{i\in I}$, where $n\in \mathbb{N}$ and $f_1,\ldots,f_n$ are homogeneous elements in $\widetilde{\mathscr{H}(x)}$. According to \cref{thm-gradedreddomainbij}, we can lift each element in $\mathcal{V}$ to a $k$-analytic domain $V_{i,x}$ in $X_x$. After shrinking $X$, we may assume that $X=V_1\cup\cdots\cup V_n$. 
     
     By induction on $n$, we reduce easily to the case $n=1$. Now it  suffices to apply \cref{lma-glueaffinetogood}.
 \end{proof}

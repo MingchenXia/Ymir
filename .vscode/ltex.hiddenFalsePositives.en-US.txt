@@ -1,0 +1,5 @@
+{"rule":"EN_UNPAIRED_BRACKETS","sentence":"^\\Q[1][Y]]#1[ [1]\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q[1][Y]]#1[ [1]\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QIntroduction- Introduction Topology- Topology-Bornology Banach- Banach-Rings Commutative- Commutative-Algebra Local- Local-Algebras Complex- Complex-Analytic-Spaces Morphisms- Morphisms Affinoid- Affinoid-Algebras Berkovich- Berkovich-Analytic-Spaces BerkProperty- Properties-Berkovich-Spaces\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\Qarchi-medean Archi-medean Tru-ding-er\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qarchi-medean Archi-medean Tru-ding-er\\E$"}
