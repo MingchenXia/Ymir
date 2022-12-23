@@ -1171,8 +1171,11 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/bigints/bigints.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT ./Introduction.tex
 INPUT Introduction.tex
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.aux
 INPUT ./Topology-Bornology.tex
 INPUT Topology-Bornology.tex
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.aux
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.aux
 INPUT ./Banach-Rings.tex
 INPUT Banach-Rings.tex
 INPUT ./Commutative-Algebra.tex

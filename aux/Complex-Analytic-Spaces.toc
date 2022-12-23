@@ -15,10 +15,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{6}{Oka's coherence theorem}}{10}{section.0.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{7}{Rückert Nullstellensatz}}{11}{section.0.7}%
+\contentsline {section}{\tocsection {}{7}{Finite mapping theorem}}{11}{section.0.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{8}{Finite limits in the category of complex analytic spaces}}{12}{section.0.8}%
+\contentsline {section}{\tocsection {}{8}{Rückert Nullstellensatz}}{13}{section.0.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{9}{Complex analytic topos}}{15}{section.0.9}%
+\contentsline {section}{\tocsection {}{9}{Finite limits in the category of complex analytic spaces}}{15}{section.0.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{17}{chapter*.2}%
+\contentsline {section}{\tocsection {}{10}{Complex analytic topos}}{17}{section.0.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{19}{chapter*.2}%

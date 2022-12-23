@@ -1,15 +1,15 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'aux/Local-Algebras.blg'
-[68] biber-darwin:340> INFO - === Fri Dec 23, 2022, 19:36:45
-[82] Biber.pm:415> INFO - Reading 'aux/Local-Algebras.bcf'
+[67] biber-darwin:340> INFO - === Fri Dec 23, 2022, 21:41:37
+[81] Biber.pm:415> INFO - Reading 'aux/Local-Algebras.bcf'
 [167] Biber.pm:952> INFO - Found 3 citekeys in bib section 0
-[180] Biber.pm:4340> INFO - Processing section 0
+[179] Biber.pm:4340> INFO - Processing section 0
 [189] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
 [191] bibtex.pm:1689> INFO - LaTeX decoding ...
-[236] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
-[291] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[291] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[291] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[291] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[294] bbl.pm:654> INFO - Writing 'aux/Local-Algebras.bbl' with encoding 'UTF-8'
-[295] bbl.pm:757> INFO - Output to aux/Local-Algebras.bbl
+[239] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
+[297] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[297] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[297] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[297] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[300] bbl.pm:654> INFO - Writing 'aux/Local-Algebras.bbl' with encoding 'UTF-8'
+[301] bbl.pm:757> INFO - Output to aux/Local-Algebras.bbl
