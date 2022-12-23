@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  14 DEC 2022 08:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  23 DEC 2022 19:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -903,28 +903,58 @@ Package bigints Info: This is Bigints by Merciadri Luca. on input line 5.
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 51.
 \c@theorem=\count461
-Package xr Info: IMPORTING LABELS FROM Introduction.aux on input line 333.
+
+
+Package xr Warning: 
+No file Introduction.aux
+LABELS NOT IMPORTED.
+ on input line 333.
 
 (Introduction.tex)
 (Introduction.aux)
-Package xr Info: IMPORTING LABELS FROM Topology-Bornology.aux on input line 334.
+No file Introduction.aux.
+
+Package xr Warning: 
+No file Topology-Bornology.aux
+LABELS NOT IMPORTED.
+ on input line 334.
+
 (Topology-Bornology.tex)
 (Topology-Bornology.aux)
-Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 335.
+No file Topology-Bornology.aux.
+
+Package xr Warning: 
+No file Banach-Rings.aux
+LABELS NOT IMPORTED.
+ on input line 335.
+
 (Banach-Rings.tex)
 (Banach-Rings.aux)
-Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 336.
+No file Banach-Rings.aux.
+
+Package xr Warning: 
+No file Commutative-Algebra.aux
+LABELS NOT IMPORTED.
+ on input line 336.
+
 (Commutative-Algebra.tex)
 (Commutative-Algebra.aux)
+No file Commutative-Algebra.aux.
 Package xr Info: IMPORTING LABELS FROM Local-Algebras.aux on input line 337.
 (Local-Algebras.tex)
 (Local-Algebras.aux)
 Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 338.
 (Complex-Analytic-Spaces.tex)
 (Complex-Analytic-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Morphisms.aux on input line 339.
+
+Package xr Warning: 
+No file Morphisms.aux
+LABELS NOT IMPORTED.
+ on input line 339.
+
 (Morphisms.tex)
 (Morphisms.aux)
+No file Morphisms.aux.
 
 Package xr Warning: 
 No file Affinoid-Algebras.aux
@@ -1092,19 +1122,47 @@ The notion of complex analytic spaces
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [6]
+ [6] [7]
 
-LaTeX Warning: Reference `Commutative-thm-Weierstrassprep' on page 1 undefined on input line 149.
+LaTeX Warning: Reference `Topology-lma-opennhfiberclosedmap' on page 1 undefined on input line 188.
 
-[7]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 168.
+
+LaTeX Warning: Reference `Topology-chap-topology' on page 8 undefined on input line 188.
+
+[8]
+
+LaTeX Warning: Reference `Topology-cor-pushforwardsheaffinite' on page 1 undefined on input line 264.
+
+
+LaTeX Warning: Reference `Topology-chap-topology' on page 9 undefined on input line 264.
+
+[9]
+
+LaTeX Warning: Reference `Commutative-thm-Weierstrassprep' on page 1 undefined on input line 296.
+
+
+LaTeX Warning: Reference `Topology-cor-pushforwardsheaffinite' on page 1 undefined on input line 298.
+
+
+LaTeX Warning: Reference `Topology-chap-topology' on page 10 undefined on input line 298.
+
+
+LaTeX Warning: Reference `Topology-thm-localstructuretopfinitemap' on page 1 undefined on input line 304.
+
+
+LaTeX Warning: Reference `Topology-chap-topology' on page 10 undefined on input line 304.
+
+[10]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 323.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
-) [8] [9] [10] [11] [12]
+) [11] [12] [13] [14] [15] [16
+
+]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 346.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 501.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1112,9 +1170,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [13
-
-] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Complex-Analytic-Spaces.aux)
+ [17] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Complex-Analytic-Spaces.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1123,18 +1179,18 @@ Package logreq Info: Writing requests to 'Complex-Analytic-Spaces.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37521 strings out of 478994
- 709576 string characters out of 5858185
- 1561933 words of memory out of 5000000
- 54042 multiletter control sequences out of 15000+600000
- 460588 words of font info for 144 fonts, out of 8000000 for 9000
+ 37313 strings out of 478994
+ 701830 string characters out of 5858185
+ 1552737 words of memory out of 5000000
+ 53802 multiletter control sequences out of 15000+600000
+ 461393 words of font info for 153 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,15n,133p,1311b,1804s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Complex-Analytic-Spaces.pdf (13 pages, 294538 bytes).
+ 132i,15n,133p,1357b,1804s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Complex-Analytic-Spaces.pdf (17 pages, 319674 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 270 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 23133 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 323 compressed objects within 4 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 23141 words of extra memory for PDF output out of 24883 (max. 10000000)
 

@@ -126,6 +126,84 @@ We do not assume that the elements in $\mathcal{B}$ be open. The covering $\math
     
 \end{proposition}
 
+\section{Closed maps and topologically finite maps}
+
+\begin{definition}
+    A map $f:X\rightarrow Y$ of topological spaces is \emph{closed} if for each closed subset $Z$ in $X$, $f(Z)$ is closed in $Y$.
+\end{definition}
+A closed map is not necessarily continuous.
+
+\begin{lemma}\label{lma-opennhfiberclosedmap}
+    Let $f:X\rightarrow Y$ be a closed map of topological spaces, then for each $y\in Y$ and any open neighbourhood $U$ of $f^{-1}(y)$ in $X$, there is an open neighbourhood $V$ of $y$ in $Y$ such that $f^{-1}(V)\subseteq U$.
+\end{lemma}
+\begin{proof}
+    It suffices to take $V=Y\setminus f(X\setminus U)$,
+\end{proof}
+\begin{lemma}\label{lma-closedmaprestricttarget}
+    Let $f:X\rightarrow Y$ be a closed map of topological spaces. Then for any subspace $V$ of $Y$, the map $f^{-1}(V)\rightarrow V$ induced by $f$ is closed.
+\end{lemma}
+\begin{proof}
+    Let $A$ be a closed subset of $U:=f^{-1}(V)$. We need to show that $f(A)$ is closed in $V$. Choose a closed subset $B$ of $X$ such that $A=B\cap U$, then $f(B)$ is closed in $Y$ and $f(A)=f(B)\cap V$ is closed in $V$.
+\end{proof}
+
+\begin{definition}
+    A continous and closed map $f:X\rightarrow Y$ of topological spaces is \emph{topologically finite} if for each $y\in Y$, the set $f^{-1}(y)$ is finite. 
+
+    A map $f:X\rightarrow Y$ of topological spaces is \emph{topologically finite at $x\in X$} if there is an open neighbourhood $U$ of $x$ in $X$ and an open neighbourhood $V$ of $f(x)$ in $Y$ such that $f(U)\subseteq V$ and the induced map $U\rightarrow V$ is topologically finite.
+\end{definition}
+
+\begin{proposition}
+    Let $f:X\rightarrow Y$ be a topologically finite map of topological spaces. Then for any subspace $V\subseteq Y$, the map $f^{-1}(V)\rightarrow V$ induced by $f$ is topologically finite.
+\end{proposition}
+\begin{proof}
+    This follows immediately from \cref{lma-closedmaprestricttarget}.
+\end{proof}
+
+\begin{thm}\label{thm-localstructuretopfinitemap}
+    Let $f:X\rightarrow Y$ be a topologically finite map of topological spaces. Assume that $X$ is Hausdorff. Let $y\in f(X)$ and $x_1,\ldots,x_n$ ($n\in \mathbb{Z}_{>0}$) denote the distinct points of $f^{-1}(y)$. Take pairwise disjoint open neighbourhoods $U_1',\ldots,U_n'$ of $x_1,\ldots,x_n$ in $X$. Then any neighbourhood $V'$ of $y$ in $Y$ contains an open neighbourhood $V$ of $y$ satisfying the following conditions:
+    \begin{enumerate}
+        \item $U_1:=f^{-1}(V)\cap U_1',\ldots, U_n:=f^{-1}(V)\cap U_n'$ are pairwise disjoint open neighbourhoods of $x_1,\ldots,x_n$ in $X$;
+        \item $f^{-1}V=\bigcup_{j=1}^n U_j$;
+        \item The maps $U_j\rightarrow V$ for $j=1,\ldots,n$ induced from $f$ are all topologically finite.
+    \end{enumerate}
+
+    Let $\mathcal{F}$ be a sheaf of sets on $X$, then we have a functorial bijection
+    \[
+        f_*\mathcal{F}(V)\cn \prod_{j=1}^n \mathcal{F}(U_j).
+    \]
+\end{thm}
+\begin{proof}
+    As $\bigcup_{j=1}^n U_j'$ is an open neighbourhood of $f^{-1}(y)$ in $X$, by \cref{lma-opennhfiberclosedmap} and \cref{lma-closedmaprestricttarget}, we can find an open neighbourhood $V\subseteq V'$ of $y$ in $Y$ such that 
+    \[
+        f^{-1}V\subseteq \bigcup_{j=1}^n U_j'.
+    \]
+    The conditions (1) and (2) are therefore satisfied.
+
+    In order to prove (3), it remains to show that the induced maps $U_j\rightarrow V$ are closed for $j=1,\ldots,n$. We may take $j=1$.
+    Let $A$ be a closed subset of $U_1$. Then $A$ is closed in $f^{-1}(V)$ by (1) and (2). It follows that $f(A)$ is closed in $V$ by \cref{lma-closedmaprestricttarget}.
+
+    The last assertion follows from (1) and (2).
+\end{proof}
+
+\begin{corollary}
+    Let $f:X\rightarrow Y$ be a topologically finite map of topological spaces. Assume that $X$ is Hausdorff. Let $x\in X$ be $U'$  be an open neighbourhood of $x$ in $X$ such that all other points in $f^{-1}(f(x))$ are in the interior of $X\setminus U'$. Then any neighbourhood $V'$ of $f(x)$ in $Y$ contains an open neighbourhood $V$ of $y$ such that for $U:=f^{-1}(V)\cap U'$ the map $g:U\rightarrow V$ induced by $f$ is topologically finite and $g^{-1}(g(x))=\{x\}$.
+\end{corollary}
+\begin{proof}
+    This follows immediately from \cref{thm-localstructuretopfinitemap}.
+\end{proof}
+
+\begin{corollary}\label{cor-pushforwardsheaffinite}
+    Let $f:X\rightarrow Y$ be a topologically finite map of topological spaces. Assume that $X$ is Hausdorff. Let $\mathcal{F}$ be a sheaf of sets on $X$, $y\in f(X)$. Denote by $x_1,\ldots,x_n$ ($n\in \mathbb{Z}_{>0}$) the distinct points of the fiber $f^{-1}(y)$. Then we have a canonical bijection
+    \[
+        (f_*\mathcal{F})_y\cn \prod_{j=1}^n \mathcal{F}_{x_j}.
+    \]
+    In particular, $f_*:\AbCat(X)\rightarrow \AbCat(Y)$ is exact.
+\end{corollary}
+\begin{proof}
+    This follows immediately from \cref{thm-localstructuretopfinitemap}.
+\end{proof}
+
+
 \section{Bornology}
 \begin{definition}
     Let $X$ be a set. A \emph{bornology} on $X$ is a collection $\mathcal{B}$ of subsets of $X$ such that

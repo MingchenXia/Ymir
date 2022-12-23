@@ -1,15 +1,15 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'aux/Complex-Analytic-Spaces.blg'
-[60] biber-darwin:340> INFO - === Wed Dec 14, 2022, 08:17:08
-[74] Biber.pm:415> INFO - Reading 'aux/Complex-Analytic-Spaces.bcf'
-[155] Biber.pm:952> INFO - Found 1 citekeys in bib section 0
-[167] Biber.pm:4340> INFO - Processing section 0
-[175] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
-[177] bibtex.pm:1689> INFO - LaTeX decoding ...
-[221] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
-[252] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[252] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[252] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[252] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[253] bbl.pm:654> INFO - Writing 'aux/Complex-Analytic-Spaces.bbl' with encoding 'UTF-8'
-[254] bbl.pm:757> INFO - Output to aux/Complex-Analytic-Spaces.bbl
+[66] biber-darwin:340> INFO - === Fri Dec 23, 2022, 19:37:23
+[80] Biber.pm:415> INFO - Reading 'aux/Complex-Analytic-Spaces.bcf'
+[166] Biber.pm:952> INFO - Found 1 citekeys in bib section 0
+[178] Biber.pm:4340> INFO - Processing section 0
+[188] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
+[190] bibtex.pm:1689> INFO - LaTeX decoding ...
+[236] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
+[272] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[272] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[272] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[272] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[274] bbl.pm:654> INFO - Writing 'aux/Complex-Analytic-Spaces.bbl' with encoding 'UTF-8'
+[274] bbl.pm:757> INFO - Output to aux/Complex-Analytic-Spaces.bbl
