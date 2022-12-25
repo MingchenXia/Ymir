@@ -7,7 +7,7 @@
 \title{Ymir}
 
 
-\chapter*{Morphisms between complex analytic spaces}\label{chap-morphismscomplex}
+
 
 
 
@@ -20,22 +20,85 @@
 
 \tableofcontents
 
+\chapter*{Morphisms between complex analytic spaces}\label{chap-morphismscomplex}
 
 
 \section{Introduction}\label{sec-introduction-morphismscomplex}
 
+\section{Quasi-finite morphisms}
 
-\section{Finite morphism}
+\begin{definition}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. We say $f$ is \emph{quasi-finite} at $x\in X$ if $x$ is isolated in $f^{-1}(f(x))$.
+    We say $f$ is \emph{quasi-finite} if $f$ is quasi-finite at all $x\in X$.
+\end{definition}
+This definition is purely topological. We will show that it is equivalent to an analytic definition.
+
+\begin{proposition}\label{prop-quasifinitechar}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $f$ is quasi-finite at $x\in X$;
+        \item $\mathcal{O}_{X,x}$ is quasi-finite over $\mathcal{O}_{Y,f(x)}$;
+        \item $\mathcal{O}_{X,x}$ is finite over $\mathcal{O}_{Y,f(x)}$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (1) $\Leftrightarrow$ (2): By \cref{ConstructionComplex-cor-isolatedpointartin} in \nameref{ConstructionComplex-chap-constructionComplex}, $f$ is quasi-finite at $x\in X$ if and only if $\mathcal{O}_{X_{f(x)},x}=\mathcal{O}_{X,x}/\mathfrak{m}_{f(x)}\mathcal{O}_{X,x}$ is artinian. In other words, $\mathcal{O}_{X,x}/\mathfrak{m}_{f(x)}\mathcal{O}_{X,x}$ is finite-dimensional over $\mathbb{C}$. The latter is equivalent to that $\mathcal{O}_{X,x}$ is quasi-finite over $\mathcal{O}_{Y,f(x)}$. 
+
+    (2) $\Leftrightarrow$ (3): This follows from \cref{Local-thm-analyticquasifiniteifffinite} in \nameref{Local-chap-local}.
+\end{proof}
+
+\section{Finite morphisms}
 
 
 \begin{definition}
     A morphism of complex analytic spaces $f:X\rightarrow Y$ is \emph{finite} if its underlying map of topological spaces is topologically finite.
-\end{definition}
-\begin{definition}
-    A morphism of complex analytic spaces $f:X\rightarrow Y$ is \emph{quasi-finite at $x\in X$} if $x$ is an isolated point in $f^{-1}(f(x))$.
 
-    A morphism of complex analytic spaces $f:X\rightarrow Y$ is \emph{quasi-finite} if it is quasi-finite at all $x\in X$.
+    We say a morphism of complex analytic spaces $f:X\rightarrow Y$ is \emph{finite at $x\in X$} if there is an open neighbourhood $U$ of $x$ in $X$ and $V$ of $f(x)$ in $Y$ such that $f(U)\subseteq V$ and the restriction $U\rightarrow V$ of $f$ is finite.
+
+    Let $S$ be a complex analytic space. A \emph{finite analytic space over $S$} is a finite morphism $f:X\rightarrow S$ of complex analytic spaces. A morphism between finite analytic spaces over $S$ is a morphism of complex analytic spaces over $S$.
 \end{definition}
+
+\begin{proposition}
+    Let $f:X\rightarrow Y$ be a finite morphism of complex analytic spaces. Then $f$ is quasi-finite.
+\end{proposition}
+\begin{proof}
+    This follows from \cref{Topology-prop-topfinitechar} in \nameref{Topology-chap-topology}.
+\end{proof}
+
+\begin{thm}\label{thm-finitealgeqfiniteanalyticspace}
+    Let $S$ be a complex analytic space. Then the functor $\Spec^{\An}_S$ defines an anti-equivalence from the category of finite $\mathcal{O}_S$-algebras to the category of finite analytic spaces over $S$.
+\end{thm}
+\begin{proof}
+    We first observe that the functor is well-defined. This follows from \cref{ConstructionComplex-cor-specanfinitetopfinite} in \nameref{ConstructionComplex-chap-constructionComplex}.
+
+    The functor is fully faithfull by \cref{ConstructionComplex-prop-morphismrelaffspaces} in \nameref{ConstructionComplex-chap-constructionComplex}. Suppose that $f:X\rightarrow S$ is a finite morphism of complex analytic spaces. We need to show that $X$ is isomorphic to $\Spec^{\An}_{S}\mathcal{A}$ for some finite $\mathcal{O}_S$-algebra $\mathcal{A}$ in $\CASCat_{/S}$.
+
+    By \cref{ConstructionComplex-prop-moduletildepush} in \nameref{ConstructionComplex-chap-constructionComplex}, we necessarily have $\mathcal{A}\cong f_*\mathcal{O}_X$. So we need to show that the natural morphism $\Spec_S^{\An} f_*\mathcal{O}_X\rightarrow X$ over $S$ is an isomorphism. The problem is local on $S$. 
+
+    Fix $s\in S$. Write $x_1,\ldots,x_n$ for the distinct points in $f^{-1}(s)$.
+    Up to shrinking $S$, we may assume that $X$ is the disjoint union of $V_1,\ldots,V_n$, where $V_i$ is an open neighbourhood of $x_i$ in $X$. 
+    We need to show that $X$ has the form $\Spec^{\An}_S \mathcal{B}$ for some $\mathcal{O}_S$-algebra $\mathcal{B}$ in $\CASCat_{/S}$.
+
+    It suffices to handle each $V_i$ separately, so we may assume that $f^{-1}(s)=\{x\}$ consists of a single point. Then $\mathcal{O}_{X,x}$ is finite over $\mathcal{O}_{S,s}$ by \cref{prop-quasifinitechar}. Up to shrinking $S$, we may assume that $\mathcal{O}_{X,x}$ spreads out to a finite $\mathcal{O}_S$-algebra $\mathcal{B}$. Let $X'=\Spec^{\An}_{S}\mathcal{B}$. There is a unique point $x'$ of $X'$ over $s$ and $X'_{x'}$ is isomorphic to $X_x$ over $S_s$. By \cref{Topology-lma-opennhfiberclosedmap} in \nameref{Topology-chap-topology}, up to shrinking $S$, we may assume that $X$ is isomorphic to $X'$ over $S$. We conclude.
+\end{proof}
+
+\begin{corollary}
+    Let $f:X\rightarrow Y$ be a finite morphism of complex analytic spaces and $\mathcal{M}$ be a coherent sheaf of $\mathcal{O}_X$-modules, then $f_*\mathcal{M}$ is coherent. Moreover, $f_*$ is exact from $\CohCat(\mathcal{O}_X)$ to
+    $\CohCat(\mathcal{O}_Y)$.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{ConstructionComplex-cor-specpushcohiscoh} in \nameref{ConstructionComplex-chap-constructionComplex} and \cref{thm-finitealgeqfiniteanalyticspace}.
+\end{proof}
+
+
+
+
+
+\printbibliography
+\end{document}
+
+
+\iffalse
 
 \begin{proposition}\label{prop-projlemma}
     Let $n\in \mathbb{N}$ and $D$ be an open neighbourhood of $0$ in $\mathbb{C}^n$. 
@@ -97,18 +160,6 @@ U \arrow[r] \arrow[rrd,"f'"] & \Gamma_f \arrow[rd] \arrow[ru] &                 
     where $\Gamma_{f'}$ denotes the graph of $f':U\rightarrow V$. As $\{x\}=f'^{-1}(y)$, we have $\mathbb{C}^k\times\{0\}$ intersects $\Gamma_f$ only at the origin. By \cref{cor-projlemma}, up to shrinking $W$ and $B$, we may guarantee that the projection $W\times B\rightarrow B$ induces a finite morphism $\Gamma_f\rightarrow B$ and the pushforward under this map preserves coherence. Observe that $U\rightarrow \Gamma_f$ is a biholomorphism, we conclude that $f'$ is finite. This proves (1). Moroever, observe that the zero-extension of $f'_*\mathcal{I}$ is the successive pushforward of $\mathcal{I}$ along $U\rightarrow U_f$ and then along $U_f\rightarrow B$. It follows that  $f'_*\mathcal{I}$ is coherent.
 \end{proof}
 
-\begin{theorem}
-    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. Write $y=f(x)$. Then the following are equivalent:
-    \begin{enumerate}
-        \item $f$ is quasi-finite at $x$;
-        \item $\mathcal{O}_{X,x}$ is finite over $\mathcal{O}_{Y,y}$.
-        \item $\dim_{\mathbb{C}}\mathcal{O}_{X,x}/\mathfrak{m}_{y}\mathcal{O}_{X,x}<\infty$.
-    \end{enumerate}
-\end{theorem}
-\begin{proof}
-
-\end{proof}
-
 
 \begin{theorem}\label{thm-finitepushcoherent}
     Let $f:X\rightarrow Y$ be a finite morphism of complex analytic spaces, then for any coherent sheaf $\mathcal{M}$ of $\mathcal{O}_X$-modules, $f_*\mathcal{M}$ is also coherent.
@@ -122,9 +173,4 @@ U \arrow[r] \arrow[rrd,"f'"] & \Gamma_f \arrow[rd] \arrow[ru] &                 
     where $f_j:U_j\rightarrow V$ is the morphism induced by $f$. Now it is clear that $(f_*\mathcal{I})|_V$ is coherent.
 \end{proof}
 
-
-
-\cite{stacks-project}
-
-\printbibliography
-\end{document}
+\fi

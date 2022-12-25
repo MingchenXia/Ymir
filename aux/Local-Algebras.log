@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  25 DEC 2022 19:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  25 DEC 2022 21:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -919,21 +919,21 @@ Package xr Info: IMPORTING LABELS FROM Topology-Bornology.aux on input line 335.
 Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 336.
 (Banach-Rings.tex)
 (Banach-Rings.aux)
-
-Package xr Warning: 
-No file Commutative-Algebra.aux
-LABELS NOT IMPORTED.
- on input line 337.
-
+Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 337.
 (Commutative-Algebra.tex)
 (Commutative-Algebra.aux)
-No file Commutative-Algebra.aux.
 Package xr Info: IMPORTING LABELS FROM Local-Algebras.aux on input line 341.
 (Local-Algebras.tex)
 (Local-Algebras.aux)
-Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 342.
+
+Package xr Warning: 
+No file Complex-Analytic-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 342.
+
 (Complex-Analytic-Spaces.tex)
 (Complex-Analytic-Spaces.aux)
+No file Complex-Analytic-Spaces.aux.
 Package xr Info: IMPORTING LABELS FROM Constructions-Complex-Spaces.aux on input line 343.
 (Constructions-Complex-Spaces.tex)
 (Constructions-Complex-Spaces.aux)
@@ -946,15 +946,9 @@ LABELS NOT IMPORTED.
 (Properties-Complex-Spaces.tex)
 (Properties-Complex-Spaces.aux)
 No file Properties-Complex-Spaces.aux.
-
-Package xr Warning: 
-No file Morphisms-Complex-Spaces.aux
-LABELS NOT IMPORTED.
- on input line 345.
-
+Package xr Info: IMPORTING LABELS FROM Morphisms-Complex-Spaces.aux on input line 345.
 (Morphisms-Complex-Spaces.tex)
 (Morphisms-Complex-Spaces.aux)
-No file Morphisms-Complex-Spaces.aux.
 
 Package xr Warning: 
 No file Affinoid-Algebras.aux
@@ -1170,10 +1164,10 @@ Package logreq Info: Writing requests to 'Local-Algebras.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37542 strings out of 478994
- 709131 string characters out of 5858185
- 1557547 words of memory out of 5000000
- 53985 multiletter control sequences out of 15000+600000
+ 37581 strings out of 478994
+ 711011 string characters out of 5858185
+ 1559196 words of memory out of 5000000
+ 54024 multiletter control sequences out of 15000+600000
  462779 words of font info for 166 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  132i,16n,133p,1000b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s

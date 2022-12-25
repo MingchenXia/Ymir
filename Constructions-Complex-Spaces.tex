@@ -4,7 +4,7 @@
 \maketitle
 \tableofcontents
 
-\chapter*{Constructions of complex analytic spaces}
+\chapter*{Constructions of complex analytic spaces}\label{chap-constructionComplex}
 
 \section{Introduction}\label{sec-introduction-constructioncomplex}
 
@@ -17,7 +17,8 @@
     \]
     is representable.
 \end{proposition}
- 
+
+
 \begin{proof}
     By the arguments of \cite[\href{https://stacks.math.columbia.edu/tag/01JJ}{Tag 01JJ}]{stacks-project}, the problem is local in $S$. So we may assume that $\mathcal{A}$ has the following form
     \[
@@ -57,15 +58,16 @@
         \end{aligned}
     \]
     Let $\pi:S\times \mathbb{C}^n\rightarrow S$ be the projection. Then $F_{\mathcal{A}}(T)$ is represented by the closed subspace of $S\times \mathbb{C}^n$ defined by the ideal $\eta(\pi^* \mathcal{I})$, which is clearly of finite type.
-
-
-    
 \end{proof}
 
 \begin{definition}
-    Let $S$ be a complex analytic space and $\mathcal{A}$ be an $\mathcal{O}_S$-module of finite presentation. Then the complex analytic space representing the functor in \cref{prop-analyticspecrep} is called the \emph{analytic spectrum} of $\mathcal{A}$. We denote it by $\Spec^{\An}_S \mathcal{A}$. By construction, there is a canonical morphism $\Spec^{\An}_S \mathcal{A}\rightarrow S$.
+    Let $S$ be a complex analytic space and $\mathcal{A}$ be an $\mathcal{O}_S$-module of finite presentation. Then the complex analytic space representing the functor $F_{\mathcal{A}}$ in \cref{prop-analyticspecrep} is called the \emph{analytic spectrum} of $\mathcal{A}$. We denote it by $\Spec^{\An}_S \mathcal{A}$. By construction, there is a canonical morphism $\Spec^{\An}_S \mathcal{A}\rightarrow S$.
+
+    By definition, we have a universal morphism $\xi\in F_{\mathcal{A}}(X)=\Hom_{\mathcal{O}_X}(\mathcal{A}_X,\mathcal{O}_X)$ with $X=\Spec^{\An}_S \mathcal{A}$. It defines a morphism of ringed spaces $X\rightarrow (|S|,\mathcal{A})$. The pull-back of an $\mathcal{A}$-module $\mathcal{M}$ is denoted by $\tilde{\mathcal{M}}$. The assignment $\mathcal{M}\mapsto \tilde{\mathcal{M}}$ is functorial in $M$.
 \end{definition}
-It is easy to see that $\Spec^{\An}_S \mathcal{A}$ is contravaraint in $\mathcal{A}$.
+It is easy to see that $\Spec^{\An}_S \mathcal{A}$ is contravaraint in $\mathcal{A}$. 
+
+
 
 \begin{proposition}\label{prop-specanbasechange}
     Let $S$ be a complex analytic space and $\mathcal{A}$ be an $\mathcal{O}_S$-module of finite presentation. Consider a morphism $g:S'\rightarrow S$ of complex analytic spaces. Then we have a Cartesian diagram
@@ -184,6 +186,103 @@ It is easy to see that $\Spec^{\An}_S \mathcal{A}$ is contravaraint in $\mathcal
     This follows from \cref{cor-finitespectrumidentification} and the fact that $\Spm_{\mathbb{C}}\mathcal{A}_s=\Spm\mathcal{A}_s$ for all $s\in S$.
 \end{proof}
 
+
+\begin{proposition}\label{prop-moduletildepush}
+    Let $S$ be a complex analytic space and $\mathcal{A}$ be a finite $\mathcal{O}_S$-algebra. Write $f:\Spec^{\An}_S \mathcal{A}$ for the structure map.
+    Then we have the following assertions:
+    \begin{enumerate}
+        \item for all $\mathcal{A}$-module $\mathcal{M}$, the natural morphism 
+        \[
+            \mathcal{M}\rightarrow f_*\tilde{\mathcal{M}}  
+        \]
+        is an isomorphism, 
+    
+        In particular, $\mathcal{A}\cn f_*\mathcal{O}_X$.
+        \item for all $\mathcal{O}_X$-module $\mathcal{F}$, the canonical morphism
+            \[
+                \widehat{f_*\mathcal{F}}\rightarrow \mathcal{F}
+            \]
+            is an isomorphism.
+    \end{enumerate}
+    In particular, the category of $\mathcal{A}$-modules is equivalent to the cateogory of $\mathcal{O}_X$-modules.
+\end{proposition}
+\begin{proof}
+    By \cref{cor-specanfinitetopfinite}, $f$ is topologically finite. 
+    Take $s\in S$. 
+    Let $x_1,\ldots,x_n$ be the distinct points of $f^{-1}(s)$ and $\mathfrak{m}_1,\ldots,\mathfrak{m}_n$ denote the maximal ideals of $\mathcal{A}_s$ corresponding to $x_1,\ldots,x_n$.
+
+    (1)    
+    By \cref{Topology-cor-pushforwardsheaffinite} in \nameref{Topology-chap-topology} and \cref{cor-finitespectrumidentification},  
+    \[
+        (f_*\tilde{\mathcal{M}})_s\cong \prod_{i=1}^n \widehat{M}_{x_i}\cong \prod_{i=1}^n \widehat{\mathcal{M}}_s\otimes_{\mathcal{A}_s}\mathcal{O}_{X,x_i}\cong \mathcal{M}_s \otimes_{\mathcal{A}_s}\prod_{i=1}^n \mathcal{A}_{s,\mathfrak{m}_i}\cn \mathcal{M}_s.
+    \]
+
+    (2) By \cref{Topology-cor-pushforwardsheaffinite} in \nameref{Topology-chap-topology},
+    \[
+        f_*\mathcal{F}_s\cong \prod_{i=1}^n \mathcal{F}_{x_i}.  
+    \]
+    It follows that 
+    \[
+        \widetilde{f_*\mathcal{M}}_{x_i}\cong f_*\mathcal{F}_s\otimes_{\mathcal{A}_s} \mathcal{O}_{X,x_i}\cong \prod_{j=1}^n \mathcal{F}_{x_j}\otimes_{\mathcal{A}_s} \mathcal{A}_{s,\mathfrak{m}_i}
+    \]
+    for $i=1,\ldots,n$. But the only non-zero term is when $j=i$, so 
+    \[
+        \widetilde{f_*\mathcal{M}}_{x_i}\cong \mathcal{F}_{x_i}  
+    \]
+    for $i=1,\ldots,n$.
+\end{proof}
+\begin{corollary}\label{cor-specpushcohiscoh}
+    Let $S$ be a complex analytic space and $\mathcal{A}$ be a finite $\mathcal{O}_S$-algebra. Write $f:\Spec^{\An}_S \mathcal{A}$ for the structure map. Then for any coherent $\mathcal{O}_X$-module $\mathcal{M}$, $f_*\mathcal{F}$ is coherent.
+
+    Moreover, $f_*$ is exact from $\CohCat(\mathcal{O}_X)$ to
+    $\CohCat(\mathcal{O}_Y)$.
+\end{corollary}
+\begin{proof}
+    The exactness of $f_*$ follows from \cref{prop-moduletildepush}.
+
+    We claim that up to shrinking $S$, we may assume that $\mathcal{M}$ has a global presentation. Fix $s\in S$ and let $x_1,\ldots,x_n$ be the distinct points of $f^{-1}(s)$.
+    
+    For each $j=1,\ldots,n$, we can find an open neighbourhood $U_j$ of $x_j$ in $X$, pairwise disjoint and an exact sequence 
+    \[
+        \mathcal{O}_{U_j}^{p_j}\rightarrow \mathcal{O}_{U_j}^{q_j}\rightarrow \mathcal{M}|_{U_j}\rightarrow 0
+    \]
+    for some $p_j,q_j\in \mathbb{Z}_{>0}$.  We may assume that $p_1=\cdots=p_n$ and $q_1=\cdots=q_n$. We denote the common values by $p$ and $q$. Then $U=U_1\cup\cdots\cup U_n$ is a neighbourhood of $f^{-1}(s)$, and we have an exact sequence 
+    \[
+        \mathcal{O}_{U}^{p}\rightarrow \mathcal{O}_{U}^{q}\rightarrow \mathcal{M}|_{U}\rightarrow 0.
+    \]
+    By \cref{Topology-lma-opennhfiberclosedmap} in \nameref{Topology-chap-topology},
+    we may assume that $U=\pi^{-1}(V)$ for some open neighbourhood $V$ of $s$ in $S$. The induced map $f':U\rightarrow V$ is finite and by \cref{Topology-cor-pushforwardsheaffinite} in \nameref{Topology-chap-topology}.
+
+    Now let us take a presentation
+    \[
+        \mathcal{O}^{p}\rightarrow \mathcal{O}^{q}\rightarrow \mathcal{M}\rightarrow 0.
+    \]
+    By \cref{prop-moduletildepush}, we have an exact sequence
+    \[
+        f_*  \mathcal{O}^{p}\rightarrow f_* \mathcal{O}^{q}\rightarrow f_* \mathcal{M}\rightarrow 0.
+    \]
+    By \cref{prop-moduletildepush} again, this can be written as
+    \[
+        \mathcal{A}^p\rightarrow \mathcal{A}^q\rightarrow   f_* \mathcal{M}\rightarrow 0.
+    \]
+    It follows that $f_*\mathcal{M}$ is coherent.
+\end{proof}
+
+\begin{proposition}\label{prop-morphismrelaffspaces}
+    Let $S$ be a complex analytic space and $\mathcal{A}$, $\mathcal{B}$ be $\mathcal{O}_S$-algebras of finite presentation. Assume that $\mathcal{A}$ is finite. Then we have a natural bijection
+    \[
+        \Hom_{\mathcal{O}_S}(\mathcal{B},\mathcal{A})\cn \Hom_{\CASCat_{/S}}(\Spec^{\An}_S \mathcal{A},\Spec^{\An}_S \mathcal{B}).  
+    \]
+\end{proposition}
+\begin{proof}
+    Let $f:X:=\Spec^{\An}_S\mathcal{A}\rightarrow S$ be the natural map.
+    We construct the bijection as
+    \[
+        \Hom_{\mathcal{O}_S}(\mathcal{B},\mathcal{A})\cn \Hom_{\mathcal{O}_S}(\mathcal{B},f_*\mathcal{O}_X)\cn \Hom_{\mathcal{O}_X}(\mathcal{B}_X,\mathcal{O}_X)\cn \Hom_{\CASCat_{/S}}(\Spec^{\An}_S \mathcal{A},\Spec^{\An}_S \mathcal{B}).
+    \]
+    The first map is a bijection by \cref{prop-moduletildepush}
+\end{proof}
+
 \begin{definition}
     Let $S$ be a complex analytic space and $\mathcal{E}$ be an $\mathcal{O}_S$-module of finite presentation. We define the \emph{vector bundle} $\mathbf{V}(\mathcal{E})$ generated by $\mathcal{E}$ as
     \[
@@ -253,7 +352,32 @@ We remind the readers that we are following Grothendieck's convention for $\math
     Let $S$ be a complex analytic space and $s\in S$. For any finite $\mathcal{O}_{S,s}$-algebra $A$, there is an open neighbourhood $U$ of $s$ in $S$ and a finite $\mathcal{O}_U$-algebra such that $\mathcal{A}_s\cong A$.
 \end{lemma}
 \begin{proof}
+    Let $s\in S$, as $\mathcal{A}_s$ is a finite $\mathcal{O}_{S,s}$-algebra, we can find finitely many generators $\sigma_{1,s},\ldots,\sigma_{n,s}$. As $\mathcal{A}_s$ is integral over $\mathcal{O}_{S,s}$, we can find unitary polynomials $F_{i,s}\in \mathcal{O}_{S,s}[X_i]$ such that $F_{i,s}(\sigma_{i,s})=0$ for $i=1,\ldots,n$. Take a sufficient small neighbourhood $U$ of $s$ so that $\sigma_{i,s}$ lifts to $\sigma_i\in \mathcal{O}_S(U)$ and $F_{i,s}$ lifts to a unitary polynomial $F_i\in H^0(U,\mathcal{O}_S[X_i])$ for $i=1,\ldots,n$. Up to shrinking $U$, we may guarantee that $\sigma_1,\ldots,\sigma_n$ generate $\mathcal{A}|_U$ at all points and $F_i(\sigma_i)=0$ for $i=1,\ldots,n$. Then $\mathcal{B}:=\mathcal{O}_U[X_1,\ldots,X_n]/(F_1,\ldots,F_n)$ is coherent and we have a surjective homomorphism $\mathcal{B}\rightarrow \mathcal{A}|_U$ sneding $X_i$ to $\sigma_i$ for $i=1,\ldots,n$. As the kenrel of this homomorphism is of finite ytpe, up to shrinking $U$, we may take finitely many $G_1,\ldots,G_m\in \mathcal{B}(U)$ that generate the kernel. Lift $G_1,\ldots,G_m$ to $H_1,\ldots,H_m\in H^0(U,\mathcal{O}_S[X_1,\ldots,X_m])$, then
+    \[
+        \mathcal{A}|_U\cong \mathcal{O}_U[X_1,\ldots,X_n]/(F_1,\ldots,F_n,G_1,\ldots,G_m).  
+    \]
+
+
    This follows from the same arguments of the proof of \cref{thm-germlocalringequivalence} Step~3.
+\end{proof}
+\begin{corollary}\label{cor-specanfinitetopfinite}
+    Let $S$ be a complex analytic space and $\mathcal{A}$ be a finite $\mathcal{O}_S$-algebra, then the map $\Spec^{\An}_S \mathcal{A}\rightarrow S$ is topologically finite.
+\end{corollary}
+\begin{proof}
+    By \cref{cor-finitespectrumidentification}, the fibers of $\Spec^{\An}_S \mathcal{A}\rightarrow S$ is finite. The map $\Spec^{\An}_S \mathcal{A}\rightarrow S$ is separated by construction. It remains to show that the map is closed.
+
+    The problem is local on $S$.
+    By the proof of \cref{lma-spreadfinitelag}, we can find a closed immersion over $S$: $\Spec^{\An}_S \mathcal{A}\rightarrow \Spec^{\An}_S\mathcal{B}$, where $\mathcal{B}=\mathcal{O}_S[X_1,\ldots,X_n]/(F_1,\ldots,F_n)$ for some $n\in \mathbb{N}$, where $F_i$ is a unitary polynomial in $\mathcal{O}_S(S)[X_i]$ for $i=1,\ldots,n$. It suffices to show that $\Spec^{\An}_S \mathcal{B}\rightarrow S$ is closed.
+
+    Observe that
+    \[
+        \Spec^{\An}_S \mathcal{B}\cong \Spec^{\An}_S \prod_{j=1}^n \mathcal{O}_S[X_j]/(F_j)
+    \]
+    in $\AnaCat_{/S}$ as can be seen from the functor of points. So the problem reduces to showing that 
+    \[
+        \Spec_S^{\An} \mathcal{O}_S[X]/(F)\rightarrow S  
+    \]
+    for a unitary polynomial is closed. This is the classical continuity of roots.
 \end{proof}
 
 \begin{corollary}\label{cor-morphismdefinedbygeneratorlocal}

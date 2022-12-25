@@ -128,8 +128,10 @@ We do not assume that the elements in $\mathcal{B}$ be open. The covering $\math
 
 \section{Closed maps and topologically finite maps}
 
-\begin{definition}
+\begin{definition}[{\cite[\href{https://stacks.math.columbia.edu/tag/004E}{Tag 004E}]{stacks-project},\cite[\href{https://stacks.math.columbia.edu/tag/0CY1}{Tag 0CY1}]{stacks-project}}]
     A map $f:X\rightarrow Y$ of topological spaces is \emph{closed} if for each closed subset $Z$ in $X$, $f(Z)$ is closed in $Y$.
+
+    A map $f:X\rightarrow Y$ of topological spaces is \emph{separated} if it is continuous and the diagonal map $\Delta:X\rightarrow X\times_Y X$ is closed.
 \end{definition}
 A closed map is not necessarily continuous.
 
@@ -147,10 +149,29 @@ A closed map is not necessarily continuous.
 \end{proof}
 
 \begin{definition}
-    A continous and closed map $f:X\rightarrow Y$ of topological spaces is \emph{topologically finite} if for each $y\in Y$, the set $f^{-1}(y)$ is finite. 
+    A $f:X\rightarrow Y$ of topological spaces is \emph{topologically finite} if 
+    \begin{enumerate}
+        \item $f$ is separated and closed;
+        \item for each $y\in Y$, the set $f^{-1}(y)$ is finite.
+    \end{enumerate}
 
     A map $f:X\rightarrow Y$ of topological spaces is \emph{topologically finite at $x\in X$} if there is an open neighbourhood $U$ of $x$ in $X$ and an open neighbourhood $V$ of $f(x)$ in $Y$ such that $f(U)\subseteq V$ and the induced map $U\rightarrow V$ is topologically finite.
 \end{definition}
+
+\begin{proposition}\label{prop-topfinitechar}
+    Let $f:X\rightarrow Y$ be a map of topological spaces. Then the following are equivalent:
+    \begin{enumerate}
+        \item $f$ is topologically finite;
+        \item $f$ is proper and all fibers of $f$ are discrete.
+    \end{enumerate}
+\end{proposition}
+Here the properness is defined as in \cite[\href{https://stacks.math.columbia.edu/tag/005O}{Tag 005O}]{stacks-project}. In particular, a proper map is always separated and hence continuous.
+\begin{proof}
+    Assume that $f$ is topologically finite. As the fibers of $f$ are finite and Hausdorff, they are discrete.
+    We need to show that $f$ is proper. This follows from \cite[\href{https://stacks.math.columbia.edu/tag/005R}{Tag 005R}]{stacks-project}.
+
+    Conversely, assume that $f$ is proper with discrete fibers. By \cite[\href{https://stacks.math.columbia.edu/tag/005R}{Tag 005R}]{stacks-project} again, the fibers of $f$ are compact and hence finite. The map $f$ is closed and separated as it is proper. So (1) follows.
+\end{proof}
 
 \begin{proposition}
     Let $f:X\rightarrow Y$ be a topologically finite map of topological spaces. Then for any subspace $V\subseteq Y$, the map $f^{-1}(V)\rightarrow V$ induced by $f$ is topologically finite.
@@ -160,7 +181,7 @@ A closed map is not necessarily continuous.
 \end{proof}
 
 \begin{thm}\label{thm-localstructuretopfinitemap}
-    Let $f:X\rightarrow Y$ be a topologically finite map of topological spaces. Assume that $X$ is Hausdorff. Let $y\in f(X)$ and $x_1,\ldots,x_n$ ($n\in \mathbb{Z}_{>0}$) denote the distinct points of $f^{-1}(y)$. Take pairwise disjoint open neighbourhoods $U_1',\ldots,U_n'$ of $x_1,\ldots,x_n$ in $X$. Then any neighbourhood $V'$ of $y$ in $Y$ contains an open neighbourhood $V$ of $y$ satisfying the following conditions:
+    Let $f:X\rightarrow Y$ be a topologically finite map of topological spaces. Let $y\in f(X)$ and $x_1,\ldots,x_n$ ($n\in \mathbb{Z}_{>0}$) denote the distinct points of $f^{-1}(y)$. Take pairwise disjoint open neighbourhoods $U_1',\ldots,U_n'$ of $x_1,\ldots,x_n$ in $X$. Then any neighbourhood $V'$ of $y$ in $Y$ contains an open neighbourhood $V$ of $y$ satisfying the following conditions:
     \begin{enumerate}
         \item $U_1:=f^{-1}(V)\cap U_1',\ldots, U_n:=f^{-1}(V)\cap U_n'$ are pairwise disjoint open neighbourhoods of $x_1,\ldots,x_n$ in $X$;
         \item $f^{-1}V=\bigcup_{j=1}^n U_j$;
@@ -172,6 +193,7 @@ A closed map is not necessarily continuous.
         f_*\mathcal{F}(V)\cn \prod_{j=1}^n \mathcal{F}(U_j).
     \]
 \end{thm}
+The existence of $U_1',\ldots,U_n'$ is guaranteed by \cite[\href{https://stacks.math.columbia.edu/tag/0CY2}{Tag 0CY2}]{stacks-project}.
 \begin{proof}
     As $\bigcup_{j=1}^n U_j'$ is an open neighbourhood of $f^{-1}(y)$ in $X$, by \cref{lma-opennhfiberclosedmap} and \cref{lma-closedmaprestricttarget}, we can find an open neighbourhood $V\subseteq V'$ of $y$ in $Y$ such that 
     \[
@@ -186,14 +208,14 @@ A closed map is not necessarily continuous.
 \end{proof}
 
 \begin{corollary}
-    Let $f:X\rightarrow Y$ be a topologically finite map of topological spaces. Assume that $X$ is Hausdorff. Let $x\in X$ be $U'$  be an open neighbourhood of $x$ in $X$ such that all other points in $f^{-1}(f(x))$ are in the interior of $X\setminus U'$. Then any neighbourhood $V'$ of $f(x)$ in $Y$ contains an open neighbourhood $V$ of $y$ such that for $U:=f^{-1}(V)\cap U'$ the map $g:U\rightarrow V$ induced by $f$ is topologically finite and $g^{-1}(g(x))=\{x\}$.
+    Let $f:X\rightarrow Y$ be a topologically finite map of topological spaces. Let $x\in X$ be $U'$  be an open neighbourhood of $x$ in $X$ such that all other points in $f^{-1}(f(x))$ are in the interior of $X\setminus U'$. Then any neighbourhood $V'$ of $f(x)$ in $Y$ contains an open neighbourhood $V$ of $y$ such that for $U:=f^{-1}(V)\cap U'$ the map $g:U\rightarrow V$ induced by $f$ is topologically finite and $g^{-1}(g(x))=\{x\}$.
 \end{corollary}
 \begin{proof}
     This follows immediately from \cref{thm-localstructuretopfinitemap}.
 \end{proof}
 
 \begin{corollary}\label{cor-pushforwardsheaffinite}
-    Let $f:X\rightarrow Y$ be a topologically finite map of topological spaces. Assume that $X$ is Hausdorff. Let $\mathcal{F}$ be a sheaf of sets on $X$, $y\in f(X)$. Denote by $x_1,\ldots,x_n$ ($n\in \mathbb{Z}_{>0}$) the distinct points of the fiber $f^{-1}(y)$. Then we have a canonical bijection
+    Let $f:X\rightarrow Y$ be a topologically finite map of topological spaces. Let $\mathcal{F}$ be a sheaf of sets on $X$, $y\in f(X)$. Denote by $x_1,\ldots,x_n$ ($n\in \mathbb{Z}_{>0}$) the distinct points of the fiber $f^{-1}(y)$. Then we have a canonical bijection
     \[
         (f_*\mathcal{F})_y\cn \prod_{j=1}^n \mathcal{F}_{x_j}.
     \]

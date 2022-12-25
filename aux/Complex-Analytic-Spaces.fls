@@ -1181,8 +1181,11 @@ INPUT ./Banach-Rings.tex
 INPUT Banach-Rings.tex
 INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Banach-Rings.aux
 INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Banach-Rings.aux
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Commutative-Algebra.aux
 INPUT ./Commutative-Algebra.tex
 INPUT Commutative-Algebra.tex
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Commutative-Algebra.aux
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Commutative-Algebra.aux
 INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Local-Algebras.aux
 INPUT ./Local-Algebras.tex
 INPUT Local-Algebras.tex
@@ -1200,8 +1203,11 @@ INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Constructions-Complex-Spac
 INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Constructions-Complex-Spaces.aux
 INPUT ./Properties-Complex-Spaces.tex
 INPUT Properties-Complex-Spaces.tex
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Morphisms-Complex-Spaces.aux
 INPUT ./Morphisms-Complex-Spaces.tex
 INPUT Morphisms-Complex-Spaces.tex
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Morphisms-Complex-Spaces.aux
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Morphisms-Complex-Spaces.aux
 INPUT ./Affinoid-Algebras.tex
 INPUT Affinoid-Algebras.tex
 INPUT Berkovich-Analytic-Spaces.aux

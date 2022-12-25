@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  25 DEC 2022 18:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  25 DEC 2022 21:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -943,9 +943,15 @@ LABELS NOT IMPORTED.
 (Local-Algebras.tex)
 (Local-Algebras.aux)
 No file Local-Algebras.aux.
-Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 342.
+
+Package xr Warning: 
+No file Complex-Analytic-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 342.
+
 (Complex-Analytic-Spaces.tex)
 (Complex-Analytic-Spaces.aux)
+No file Complex-Analytic-Spaces.aux.
 Package xr Info: IMPORTING LABELS FROM Constructions-Complex-Spaces.aux on input line 343.
 (Constructions-Complex-Spaces.tex)
 (Constructions-Complex-Spaces.aux)
@@ -958,15 +964,9 @@ LABELS NOT IMPORTED.
 (Properties-Complex-Spaces.tex)
 (Properties-Complex-Spaces.aux)
 No file Properties-Complex-Spaces.aux.
-
-Package xr Warning: 
-No file Morphisms-Complex-Spaces.aux
-LABELS NOT IMPORTED.
- on input line 345.
-
+Package xr Info: IMPORTING LABELS FROM Morphisms-Complex-Spaces.aux on input line 345.
 (Morphisms-Complex-Spaces.tex)
 (Morphisms-Complex-Spaces.aux)
-No file Morphisms-Complex-Spaces.aux.
 
 Package xr Warning: 
 No file Affinoid-Algebras.aux
@@ -1137,24 +1137,32 @@ Package microtype Info: Character `029' is missing
 
 ]
 Bibliography
-[11] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.aux)
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 247.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [11] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.aux)
 Package logreq Info: Writing requests to 'Topology-Bornology.run.xml'.
 \openout1 = `Topology-Bornology.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36955 strings out of 478994
- 694718 string characters out of 5858185
- 1542474 words of memory out of 5000000
- 53494 multiletter control sequences out of 15000+600000
- 456419 words of font info for 134 fonts, out of 8000000 for 9000
+ 36964 strings out of 478994
+ 694303 string characters out of 5858185
+ 1540528 words of memory out of 5000000
+ 53498 multiletter control sequences out of 15000+600000
+ 456489 words of font info for 132 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,7n,133p,864b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.pdf (11 pages, 212011 bytes).
+ 132i,7n,133p,795b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.pdf (11 pages, 237239 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 198 compressed objects within 2 object streams
- 59 named destinations out of 1000 (max. 500000)
- 20549 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 253 PDF objects out of 1000 (max. 8388607)
+ 222 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 21061 words of extra memory for PDF output out of 24883 (max. 10000000)
 

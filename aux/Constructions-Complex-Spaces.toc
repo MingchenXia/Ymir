@@ -7,6 +7,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{2}{Analytic spectra}}{5}{section.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{3}{Analytic germs}}{8}{section.0.3}%
+\contentsline {section}{\tocsection {}{3}{Analytic germs}}{9}{section.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{13}{chapter*.2}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{15}{chapter*.2}%
