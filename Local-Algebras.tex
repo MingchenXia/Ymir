@@ -51,13 +51,31 @@ Results regarding the completion of the analytic tensor products are certainly k
     \[
         \mathbb{C}\langle t^{-1}z\rangle =\mathbb{C}\langle t_1^{-1}z_1,\ldots,t_n^{-1}z_n \rangle:=\left\{f\in \mathbb{C}[[z_1,\ldots,z_n]]: \|f\|_t<\infty \right\}.
     \]
+    We write
+    \[
+        |f|=\sum_{\alpha \in \mathbb{N}^n}|a_{\alpha}|z^{\alpha}\in \mathbb{R}[[z_1,\dots,z_n]].
+    \]
 \end{definition}
 The construction here is a special case of \cref{Banach-ex-convseriesradius} in \nameref{Banach-chap-Banach}.
 
-Observe that $(\mathbb{C}\langle t^{-1}z\rangle ,\|\bullet\|_t)$ is a normed $\mathbb{C}$-vector space and
+Observe that $(\mathbb{C}\langle t^{-1}z\rangle ,\|\bullet\|_t)$ is a normed $\mathbb{C}$-vector space. We write
 \begin{equation}\label{eq-convpowerseriesasunion}
     \mathbb{C}\{ z_1,\ldots,z_n\}=\bigcup_{t\in \mathbb{R}_{>0}^n}\mathbb{C}\langle t^{-1}z\rangle .
 \end{equation}
+We write $\epsilon:\mathbb{C}\{ z_1,\ldots,z_n\}\rightarrow \mathbb{C}$ for the unique $\mathbb{C}$-algebra homomorphism sending $z_i$ to $0$ for all $i=1,\ldots,n$. We call this map the \emph{augmentation map} of $\mathbb{C}\{ z_1,\ldots,z_n\}$.
+
+\begin{proposition}\label{prop-majCN}
+    Let  $n\in \mathbb{N}$ and $f\in \mathbb{C}[[z_1,\ldots,z_n]]$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $f\in \mathbb{C}\{ z_1,\ldots,z_n\}$;
+        \item There exists $C,N\in \mathbb{R}_{>0}$ such that
+            \[
+                |f|(x_1,\ldots,x_n)\leq C\sum_{\alpha\in \mathbb{N}^n} N^{|\alpha|}x^{\alpha}  
+            \]
+            for all $x_1,\ldots,x_n \in \mathbb{R}_{\geq 0}$.
+    \end{enumerate}
+\end{proposition}
+If the condition in (2) is satisfied for a specific $C$ and $N$, we say that $g$ \emph{admits an upper bound of type $(C,N)$}.
 
 \begin{proposition}[Cauchy coefficients estimate]
     Let 
@@ -80,6 +98,8 @@ Observe that $(\mathbb{C}\langle t^{-1}z\rangle ,\|\bullet\|_t)$ is a normed $\m
     This is a special case of \cref{Banach-ex-convseriesradius} in 
     \nameref{Banach-chap-Banach}.
 \end{proof}
+
+
 
 
 \begin{lemma}\label{lma-unitsinconvpowerseries}
@@ -368,6 +388,7 @@ We recall the following criterion.
     This is an immediate consequence of \cref{thm-excefromderiv}.
 \end{proof}
 
+
 \section{Weierstrass preparation theorem}
 
 \begin{definition}
@@ -445,11 +466,13 @@ Observe that by definition, $\ord_{z_n}\omega=b$.
     \[
         A\cong \mathbb{C}\{ z_1,\ldots,z_n \}/I
     \]
-    as $\mathbb{C}$-algebras.
+    as $\mathbb{C}$-algebras. 
+    The augmentation map of $\mathbb{C}\{ z_1,\ldots,z_n \}$ induces a $\mathbb{C}$-algebra homomorphism $\epsilon:A\rightarrow \mathbb{C}$ called the \emph{augmentation map} of $A$.
 
     A morphism between complex analytic local algebras $A$ and $B$ is a $\mathbb{C}$-algebra homomorphism $A\rightarrow B$.
 
     The category of complex analytic local algebras is denoted by $\CLA$.
+
 \end{definition}
 
 \begin{proposition}\label{prop-converinglocalgeneral}
@@ -470,6 +493,7 @@ Observe that by definition, $\ord_{z_n}\omega=b$.
 
 Observe that a complex analytic local algebra is always local with residue field $\mathbb{C}$ and a morphism in $\CLA$ is always a local homomorphism. We will write $\mathfrak{m}_A$ for the maximal ideal in $A$.
 
+
 \begin{lemma}\label{lma-powerseriesfunctorpoint}
     Let $A$ be a complex analytic local algebra and $n\in \mathbb{N}$, then there is a natural bijection
     \[
@@ -482,6 +506,148 @@ Observe that a complex analytic local algebra is always local with residue field
 
     The uniqueness follows from \cref{lma-homopowerringanalytic}, so let us consider only the existence.
     Let $\mathbb{C}\{ z_1,\ldots,z_m \} \rightarrow A$ be a surjective morphism. Lift $w_i$ to $w_i'\in \mathbb{C}\{ z_1,\ldots,z_m \}$, it suffices to construct a morphism $\mathbb{C}\{ z_1,\ldots,z_n \}\rightarrow \mathbb{C}\{ z_1,\ldots,z_m \}$ sending $z_i$ to $w_i'$. So we may assume that $A=\mathbb{C}\{ z_1,\ldots,z_m \}$. In this case, the result follows from \cref{lma-univerpropconvspecialcase}.
+\end{proof}
+
+\begin{thm}\label{thm-analyticquasifiniteifffinite}
+    Let $\varphi:A\rightarrow B$ be a morphism of complex analytic local algebras. Then the following are equivalent:
+    \begin{enumerate}
+        \item $B$ is a quasi-finite over $A$;
+        \item $B$ is finite over $A$.
+    \end{enumerate}
+\end{thm}
+\textcolor{red}{Reproduce the part on SGA1 about quasi-finite noetherian local ring homomorphisms}
+\begin{proof}
+    (2) $\implies$ (1): This is trivial.
+
+    (1) $\implies$ (2): It suffices to show that $\mathfrak{m}_AB$ is an ideal of definition of $B$.
+    
+    \textbf{Step~1}. We reduce to the case where $A=\mathbb{C}\{t_1,\ldots,t_m\}$ and $B=\{x_1,\ldots,x_n\}$ for some $m,n\in \mathbb{N}$.
+
+    Write $A=\mathbb{C}\{t_1,\ldots,t_m\}/I$ for some $m\in \mathbb{N}$ and some ideal $I$. Then $B$ is finite (resp. quasi-finite) over $A$ if and only if it is finite (resp. quasi-finite) over $\mathbb{C}\{t_1,\ldots,t_m\}$. So we may assume that $A=\mathbb{C}\{t_1,\ldots,t_m\}$.
+
+    Write $B=\mathbb{C}\{x_1,\ldots,x_n\}/(f_1,\ldots,f_p)$ for some $n,p\in \mathbb{N}$ and $f_1,\ldots,f_p\in \mathbb{C}\{x_1,\ldots,x_n\}$. Let $u_1,\ldots,u_m$ be the images of $t_1,\ldots,t_m$ in $B$. By assumption, $(u_1,\ldots,u_m)$ is an ideal of definition of $B$. Lift $u_1,\ldots,u_m$ to $v_1,\ldots,v_m\in \mathbb{C}\{x_1,\ldots,x_n\}$. We define a $\mathbb{C}$-algebra homomorphism
+    \[
+        \Phi:\mathbb{C}\{t_1,\ldots,t_m,s_1,\ldots,s_p\}\rightarrow  \mathbb{C}\{x_1,\ldots,x_n\} 
+    \]
+    sending $t_i$ to $v_i$ and $s_j$ to $f_j$ for $i=1,\ldots,m$ and $j=1,\ldots,p$. The existence of $\Phi$ is guaranteed by \cref{lma-powerseriesfunctorpoint}.
+    
+    We have a commutative diagram
+    \[
+        \begin{tikzcd}
+            {\mathbb{C}\{t_1,\ldots,t_m,s_1,\ldots,s_p\}} \arrow[rr, "\Phi"] \arrow[d, two heads] &  & {\mathbb{C}\{x_1,\ldots,x_n\}} \arrow[d, two heads] \\
+            A \arrow[rr, "\varphi"]                                                               &  & B                                                  
+        \end{tikzcd}.  
+    \]
+    In order to show that $\varphi$ is finite, it suffices to show that $\Phi$ is. But we know that $\Phi$ is also quasi-finite, so we have finished the reduction.
+
+    \textbf{Step~2}. Assume that we have done the reduction as in Step~1. We will prove the theorem.
+
+    Take $r\in \mathbb{Z}_{>0}$ so that
+    \[
+        \mathfrak{m}_B^r\subseteq \mathfrak{m}_A B.  
+    \]
+    For $i=1,\ldots,n$, we can then write
+    \begin{equation}\label{eq-xirexp}
+        x_i^r=\sum_{j=1}^m u_j \lambda_{ji},\quad \lambda_{1i},\ldots,\lambda_{mi}\in B,
+    \end{equation}
+    where $u_j$ is the image of $t_j$ in $B$ for $j=1,\ldots,m$.
+
+    We claim that $x^{\alpha}$ with $\alpha=(\alpha_1,\ldots,\alpha_m)\in \mathbb{N}^m$ satisfying $\alpha_j<r$ for all $j=1,\ldots,m$ generates $B$ as $A$-module. We temporarily write $\sum_{\alpha \in \mathbb{N}^m}'$ for summation over such indices.
+
+    Let 
+    \[
+        f=\sum_{\alpha\in \mathbb{N}^m }a_{\alpha} x^{\alpha},\quad a_{\alpha}\in \mathbb{C}   
+    \]
+    be a general element in $B$. We want to express $f$ as an $A$-linear combination of the desired basis. Let 
+    \[
+        \rho(f):=\sum_{\alpha\in \mathbb{N}^m}' a_{\alpha}x^{\alpha}.  
+    \]
+    Then we can write
+    \[
+        \begin{aligned}
+        f=&\rho(f)+\sum_{i=1}^n x_i^r \sigma_i(f),\\
+        \sigma_i(f)=&\sum_{\substack{\alpha=(\alpha_1,\ldots,\alpha_m)\in \mathbb{N}^m \\ \alpha_1<r,\quad,\alpha_{i-1}<r,\alpha_i\geq r}} a_{\alpha}x_1^{\alpha_1}\cdots x_{i-1}^{\alpha_{i-1}}x_i^{\alpha_i-r}x_{i+1}^{\alpha_{i+1}}\cdots x_n^{\alpha_n}  \text{ for }i=1,\ldots,n.
+        \end{aligned}
+    \]
+    Substituting \eqref{eq-xirexp}, we find
+    \begin{equation}\label{eq-reccur}
+        f=\rho(f)+\sum_{j=1}^m u_j s_j(f), \quad s_j(f)=\sum_{i=1}^n \lambda_{ji}\sigma_i(f)\text{ for }j=1,\ldots,m. 
+    \end{equation}
+    Applying \eqref{eq-reccur} to $s_j(f)$, we obtain that
+    \[
+        s_j(f) = \rho(s_j(f))+\sum_{j'=1}^m u_{j'}s_{j'}(s_j(f)) 
+    \]
+    for $j=1,\ldots,m$. Substituting back to \eqref{eq-reccur}, we find
+    \[
+        f=\rho(f)+\sum_{j=1}^m u_j \rho(s_j(f))+\sum_{j_1,j_2=1}^mu_{j_1}u_{j_2}s_{j_1}(s_{j_2}(f)).  
+    \]
+    By iterating the same procedure, we find that for each $p\in \mathbb{N}$,
+    \[
+        f=\rho(f)+\sum_{j_1=1}^m u_{j_1}\rho(s_{j_1}(f))+\cdots+\sum_{j_1,\ldots,j_p=1}^m u_{j_1}\cdots u_{j_p} \rho (s_{j_1}\cdots s_{j_p}(f) )+R_p,
+    \]
+    where
+    \[
+        R_p=  \sum_{j_1,\ldots,j_p,j_{p+1}=1}^m u_{j_1}\cdots u_{j_{p+1}} s_{j_1}\cdots s_{j_p}(f)\in \mathfrak{m}_B^{p+1}.
+    \]
+    Now we can write $f-R_p$ as
+    \[
+        \sum_{\alpha\in \mathbb{N}^m}' u^{(p)}_{\alpha}(f) x^{\alpha},\quad  u^{(p)}_{\alpha}(f)\in \mathbb{C}[u_1,\ldots,u_m] 
+    \]
+    is a polynomial of degree $p$. Moreover, we can lift $u^{(p)}_{\alpha}(f)$ to a polynomial $v^{(p)}_{\alpha}(f)$ of degree $p$ in $t_1,\ldots,t_m$ and $v^{(p+1)}_{\alpha}(f)-v^{(p)}_{\alpha}(f)$ is homogeneous of degree $p+1$. So we can define
+    \[
+        v_{\alpha}(f):=\lim_{p\to\infty} v^{(p)}_{\alpha}(f) 
+    \]
+    in $\mathbb{C}[[t_1,\ldots,t_m]]$ and
+    \[
+        f=\sum_{\alpha\in \mathbb{N}^m}' \varphi(v^{(p)}_{\alpha}(f)) x^{\alpha}
+    \]
+    in  $\mathbb{C}[[x_1,\ldots,x_n]]$.
+    It suffices to show that $v_{\alpha}(f)\in A$. 
+
+    We first reduce to the case $\lambda_{ji}$ admits an upper bound of type $(1,1)$ for all $j=1,\ldots,m$, $i=1,\ldots,n$. 
+    
+    We can take $(C,N)\in \mathbb{Z}_{>0}^2$ so that $\lambda_{ji}$ admits an upper bound of type $(C,N)$  for all $j=1,\ldots,m$, $i=1,\ldots,n$. Define automorphisms $\psi:B\rightarrow B$ and $\chi:A\rightarrow A$ by
+    \[
+        \psi(x_i)=N^{-1}x_i,\quad \chi(t_j)=CN^rt_j  
+    \]
+    for all $j=1,\ldots,m$, $i=1,\ldots,n$. 
+    Let $\varphi':A\rightarrow B$ be $\psi\circ \varphi\circ \chi$. Denote $u_j'=\varphi'(t_j)$ for $j=1,\ldots,m$ and
+    \[
+        x_i^r=\sum_{j=1}^m u_j' \lambda_{ji}'  
+    \]
+    for all $i=1,\ldots,n$. Then $\lambda_{ji}'$ admits an upper bounded of type $(1,1)$. So we can deduce the results for $\varphi$ from the results for $\varphi'$.
+
+    Now after the reduction, we observe that for $c_1,\ldots,c_n\in \mathbb{R}_{\geq 0}$,
+    \[
+        |s_j(f)|(c_1,\ldots,c_n)\leq \sum_{i=1}^n |\lambda_{ji}|\cdot |\sigma_i(f)| \leq \sum_{i=1}^n \left(\sum_{\gamma \in \mathbb{N}^n} c^{\gamma} \sum_{\substack{\beta\in \mathbb{N}^n// \beta_1,\ldots,\beta_{i-1}<r,\beta_i\geq r}} |a_{\beta}| c^{\beta} c_i^{-r}\right)
+    \]
+    for $j=1,\ldots,m$.
+    Take $(D,M)\in \mathbb{Z}_{>0}^2$ such that $f$ admits an upper bound of type $(D,M)$. Then we can futher bound the coefficients of $c^{\alpha}$ in $|s_j(f)|(c_1,\ldots,c_n)$ by
+    \[
+        \sum_{i=1}^m \sum_{\substack{r\leq \beta_i\leq \alpha_i+r\\ 0\leq \beta_q\leq \alpha_q\text{ for }q\neq i}}|a_{\beta}|\leq  nD\left(M^{|\alpha|+r}+n M^{|\alpha|+r-1} +\cdots+ n^{|\alpha|}M^r\right)=DnM^r \frac{M^{|\alpha|+1}-n^{|\alpha|_1}}{M-n}.
+    \]
+    We may take $M\geq n+1$, so that the last expression is bounded from above by $Dn M^{r+1+|\alpha|}$. Then we find that $s_j(f)$ admits an upper bound of type $(DnM^{r+1},M)$ for all $j=1,\ldots,m$. So $s_{j_1}\cdots s_{j_p}(f)$ admits an upper bound of type  $((DnM^{r+1})^p,M)$ for all $p\in \mathbb{N}$ and $j_1,\ldots,j_p=1,\ldots,m$. It follows that $v_{\alpha}(f)$ admits an upper bound of type $(DM^{|\alpha|},nM^{r+1})$ for all $\alpha=(\alpha_1,\ldots,\alpha_m)\in \mathbb{N}^{m}$, $\alpha_i=0,\ldots,r-1$ for $i=1,\ldots,m$. We conclude by \cref{prop-majCN}.
+
+\end{proof}
+
+\begin{corollary}\label{cor-morphismpowertolocalsurinj}
+    Let $A$ be a complex local analytic algebra, $n\in \mathbb{N}$ and $x_1,\ldots,x_n$ a system of parameters in $A$. Let $\varphi:\mathbb{C}\{X_1,\ldots,X_n\}\rightarrow A$ be the $\mathbb{C}$-algebra homomorphism sending $X_i$ to $x_i$ for $i=1,\ldots,n$. Then 
+    \begin{enumerate}
+        \item $\varphi$ is surjective if and only if $x_1,\ldots,x_n$ generates $\mathfrak{m}_A$;
+        \item $\varphi$ is injective if and only if $\dim A=n$;
+        \item $\varphi$ is bijective if and only if $A$ is a regular local ring and $x_1,\ldots,x_n$ is a regular system of parameters.
+    \end{enumerate}
+\end{corollary}
+The existence of $\varphi$ is guaranteed by \cref{lma-powerseriesfunctorpoint}.
+
+\begin{proof}
+    Observe that $A$ is quasi-finite over $\mathbb{C}\{X_1,\ldots,X_n\}$, hence finite by  \cref{thm-analyticquasifiniteifffinite}. 
+
+    (1) The direct implication is trivial. Assume that $x_1,\ldots,x_n$ generates $\mathfrak{m}_A$. Then $\varphi$ is surjective modulo the maximal ideal of $\mathbb{C}\{X_1,\ldots,X_n\}$. It follows from Nakayama's lemma that $\varphi$ is surjective.
+
+    (2) As $\varphi$ is finite, it is integral. By going up, $\varphi$ is injective if and only if $\dim \mathbb{C}\{X_1,\ldots,X_n\}=\dim A$.
+
+    (3) This follows from (1) and (2).
 \end{proof}
 
 \begin{definition}\label{def-analytictensor}

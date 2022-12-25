@@ -101,10 +101,8 @@ Observe that $X$ is always a Hausdorff space.
 
 \begin{definition}\label{def-complexanalyticspace}
     A \emph{complex analytic space} is a locally $\mathbb{C}$-ringed space $(X,\mathcal{O}_X)$ such that 
-    \begin{enumerate}
-        \item $X$ is a Hausdorff space.
-        \item For any $x\in X$, there is an open neighbourhood $U\subseteq X$ of $x$ such that $(U,\mathcal{O}_U:=\mathcal{O}_X|_U)$ is isomorphic to a complex model space in the sense of \cref{def-complexmodelspace} in the category $\CLRSCat$.
-    \end{enumerate}
+    for any $x\in X$, there is an open neighbourhood $U\subseteq X$ of $x$ such that $(U,\mathcal{O}_U:=\mathcal{O}_X|_U)$ is isomorphic to a complex model space in the sense of \cref{def-complexmodelspace} in the category $\CLRSCat$.
+    
     When there is no risk of confusion, we also omit $\mathcal{O}_X$ from the notation say $X$ is a complex analytic space.
 
     A morphism between complex analytic spaces is a morphism of the underlying locally $\mathbb{C}$-ringed spaces. Such a morphism is also known as a \emph{holomorphic map}.
@@ -112,7 +110,7 @@ Observe that $X$ is always a Hausdorff space.
     The category of complex analytic spaces is denoted as $\CASCat$.
 \end{definition}
 \begin{remark}
-    It seems that all authors on this subject requires that complex analytic spaces be Hausdorff, which may seem unnatural from the eyes of an algebro-geometrist. Morally, Hausdorffness corresponds to separatedness in the scheme world. However, non-Hausdorff analytic spaces do not seem to play a major role, in contrast to non-separated schemes, so we stick to the current definition.
+    Most authors require $X$ to be Hausdorff as well. We do not follow this convention. We require it whenever necessary.
 \end{remark}
 \begin{remark}
     Most of the authors require extra conditions in the definition of a complex analytic space: $\sigma$-compactness, paracompactness, having countable basis etc. We will not put these constraints in the definition, instead, we choose to include them into the assumptions of the theorems.
@@ -125,6 +123,81 @@ Recall that complex analytic local algebras are defined in \cref{Local-def-compl
 
 \begin{proof}
     The problem is local, so we may assume that $X$ is a complex model space. In this case, the result follows easily from \cref{prop-Cnlocalring}.
+\end{proof}
+
+Let $X$ be a complex analytic space. It is a sheaf of $\mathbb{C}$-algebras.
+For any sheaf of local $\mathbb{C}$-algebras $\mathcal{A}$ on $X$, any open set $U\subseteq X$ and any $s\in \mathcal{A}_X(U)$. We want to construct a function $[s]:U\rightarrow \mathbb{C}$. 
+
+Take $x\in U$, there is a canonical splitting
+\begin{equation}\label{eq:Axdecomp}
+  \mathcal{A}_{x}\cong \mathbb{C}\oplus \mathfrak{m}_{x}, 
+\end{equation}
+where $\mathfrak{m}_x$ is the maximal ideal of $\mathcal{A}_{x}$. Then we define $[s](x)$ as the image of $s_x$ in the $\mathbb{C}$-factor in \eqref{eq:Axdecomp}. When there is no risk of confusion, we write $s(x)$ instead of $s$.
+
+\begin{definition}\label{def-valuesectionatapoint}
+    Let $X,\mathcal{A},U,x,s$ be as above. The value $[s](x)\in \mathbb{C}$ is called the \emph{value} of $s$ at $x$. We sometimes denote it by $s(x)$ as well.
+\end{definition}
+
+
+\begin{lemma}
+    Let $X$ be a complex analytic space. We denote by $\mathcal{C}_X$ the sheaf of continuous functions on $X$. 
+    The association $s\mapsto [s]$ in \cref{def-valuesectionatapoint} defines a homomorphism of sheaves of $\mathbb{C}$-algebras $\mathcal{O}_X\rightarrow \mathcal{C}_X$. 
+\end{lemma}
+When there is no risk of confusion, we also write $s$ instead of $[s]$.
+\begin{proof}
+    We need to show that for any open set $U\subseteq X$ and any $s\in \mathcal{O}_X(U)$, $[s]$ is a continuous function on $U$. 
+    
+    We may clearly assume that $U=X$. The problem is local on $X$, so we may assume that $X$ is a complex model space in the sense of \cref{def-complexmodelspace} defined by a coherent ideal $\mathcal{I}$ in a domain $D$ in $\mathbb{C}^n$. By further localizing, we may assume that $s$ can be lifted to a section $f\in\mathcal{O}_D(D)$. Then $[s]=f|_X$ by definition. So the assertion follows from the fact that a holomorphic function on a domain is continuous.
+\end{proof}
+
+\section{The spaces \texorpdfstring{$\mathbb{C}^n$}{Cn}}
+Fix $n\in \mathbb{N}$. In tihs section, we will study the complex analytic space $\mathbb{C}^n$. We will write $z_1,\ldots,z_n\in \mathcal{O}_{\mathbb{C}^n}(\mathbb{C}^n)$ the coordinate functions.
+
+\begin{lemma}\label{lma-coorCnintermsaug}
+    Given $a=(a_1,\ldots,a_n)\in \mathbb{C}^n$, we have
+    \[
+        a_i=z_i(a)=\epsilon_a(z_i)  
+    \]
+    for $i=1,\ldots,n$. Here $\epsilon_a:\mathcal{O}_{\mathbb{C}^n,a}\rightarrow \mathbb{C}$ is the augmentation map of $\mathcal{O}_{\mathbb{C}^n,a}$.
+\end{lemma}
+\begin{proof}
+    This follows by expanding the definitions.
+\end{proof}
+
+Given a complex analytic space $X$, we will construct a canonical map
+\begin{equation}\label{eq-varphiXglobal}
+    \varphi(X):\Hom_{\CASCat}(X,\mathbb{C}^n)\rightarrow \mathcal{O}_X(X)^n
+\end{equation}
+as follows: given a morphism $f:X\rightarrow \mathbb{C}^n$, we let $\varphi_i(f)=f^*(z_i)\in \mathcal{O}_X(X)$ for $i=1,\ldots,n$. Then we define $\varphi(X)(f)=(\varphi_1(f),\ldots,\varphi_n(f))$.
+
+
+\begin{theorem}\label{thm-hCnidentification}
+    Let $X$ be a complex analytic space. Then the map \eqref{eq-varphiXglobal} is bijective and is functorial in $X$.
+\end{theorem}
+\begin{proof}
+    The functoriality is clear. It suffices to show that \eqref{eq-varphiXglobal} is bijective.
+
+    We first show that $\varphi(X)$ is injective. Namely, $\varphi(X)(f)$ determines the morphism $f:X\rightarrow \mathbb{C}^n$. Take $x\in X$ and $a=f(x)$. By \cref{lma-coorCnintermsaug}, we have
+    \[
+        z_i(f(x))=\epsilon_{a}(\varphi_i(f))  
+    \]
+    for $i=1,\ldots,n$. So set-theoretically, $f$ is determined by $\varphi(X)(f)$.
+
+    Let $a_i=z_i(a)\in \mathbb{C}$ for $i=1,\ldots,n$. Then $z_i'=z_i-a$ for $i=1,\ldots,n$ form a regular system of parameters of $\mathcal{O}_{\mathbb{C}^n,a}$. Consider $f_x^{\#}:\mathcal{O}_{\mathbb{C}^n,a}\rightarrow \mathcal{O}_{X,x}$, then
+    \[
+        f_x^{\#}(z_i')=\varphi_i(f)_x-a_i  
+    \]
+    for $i=1,\ldots,n$. So $\varphi(X)(f)$ uniquely determines $f_x^{\#}(z_i')$. Now $f_x$ induces by completion
+    \[
+        \widehat{\mathcal{O}_{\mathbb{C}^n,a}}\cong k[[z_1',\ldots,z_n']]\rightarrow \widehat{\mathcal{O}_{X,x}}.  
+    \]
+    This map is uniquely determined by the $f_x^{\#}(z_i')$'s hence by $\varphi(X)(f)$. In particular, $f_x^{\#}:\mathcal{O}_{\mathbb{C}^n,a}\rightarrow \mathcal{O}_{X,x}$ is uniquely determined by $\varphi(X)(f)$. Hence, the morphism $f$ is uniquely determined.
+
+    Next we show that $\varphi$ is surjective. We first observe that $\varphi$ induces a morphism from the sheaf
+    \[
+          (U\subseteq X)\mapsto \Hom_{\CASCat}(U,\mathbb{C}^n)
+    \]
+    on $X$ to $\mathcal{O}_X^n$. So the surjectivity of $\varphi$ is local on $X$. It suffices to show that for $f_1,\ldots,f_n\in \mathcal{O}_X(X)$, there exists a morphism from a neighbourhood $U$ of $x$ in $X$ to $\mathbb{C}^n$ such that $\varphi_i(f)_x=f_{i,x}$ for all $i=1,\ldots,n$. Up to shrinking $X$, we may assume that $X$ is a closed subspace of an open subset $V$ in $\mathbb{C}^m$ for some $m\in \mathbb{N}$ and $f_i$ lifts to $g_i\in \mathcal{O}_U(U)$ for $i=1,\ldots,n$. Let $g:U\rightarrow \mathbb{C}^n$ be the morphism induced by $(g_1,\ldots,g_n)$. Then $\varphi_i(g)=g_i$ for $i=1,\ldots,n$. Let $f:X\rightarrow \mathbb{C}^n$ be the morphism induced by $g$. Then $\varphi_i(f)=(\varphi_i(g))|_X=g_i|_X=f_i$.
 \end{proof}
 
 \section{Open and closed immersions}
@@ -151,6 +224,10 @@ Later on, we will show that $\mathcal{I}$ is coherent after proving Oka's cohere
 
 \begin{example}\label{ex-closedsubspace}
     Let $X$ be a complex analytic space and $\mathcal{I}$ be a subsheaf of $\mathcal{O}_X$ locally generated by sections as a sheaf of $\mathcal{O}_X$-modules in the sense of \cite[\href{https://stacks.math.columbia.edu/tag/01B2}{Tag 01B2}]{stacks-project}. Set $Z=\Supp\mathcal{O}_X/\mathcal{I}$ and let $i:Z\rightarrow X$ be the inclusion map. Let $\mathcal{O}_Z$ be the unique sheaf of rings on $Z$ such that $i_*\mathcal{O}_Z=\mathcal{O}_X/\mathcal{I}$, whose existence and uniqueness is guaranteed by \cite[\href{https://stacks.math.columbia.edu/tag/01AX}{Tag 01AX}]{stacks-project}. Then $(Z,\mathcal{O}_Z)$ is a complex analytic space and $i:Z\rightarrow X$ is a closed immersion of complex analytic spaces. We say $Z$ is the \emph{closed subspace} of $X$ defined by $\mathcal{I}$.
+\end{example}
+
+\begin{example}\label{ex-closedpointanalytic}
+    Let $X$ be a complex analytic space and $x\in X$. Then $\{x\}$ is a closed analytic subspace of $X$. In fact, it corresponds to the ideal $\mathfrak{m}_x$.
 \end{example}
 
 \begin{definition}
@@ -357,168 +434,6 @@ Here we need \cref{thm-Okacoh} to guarantee that $\Ann_{\mathcal{O}_Y}(f_*\mathc
     This follows from \cref{cor-closedimmidealcoh} and \cref{ex-closedsubspace}.
 \end{proof}
 
-\section{Finite mapping theorem}
-
-\textcolor{red}{Move to the section morphisms}
-
-\begin{definition}
-    A morphism of complex analytic spaces $f:X\rightarrow Y$ is \emph{finite} if its underlying map of topological spaces is topologically finite.
-\end{definition}
-\begin{definition}
-    A morphism of complex analytic spaces $f:X\rightarrow Y$ is \emph{quasi-finite at $x\in X$} if $x$ is an isolated point in $f^{-1}(f(x))$.
-
-    A morphism of complex analytic spaces $f:X\rightarrow Y$ is \emph{quasi-finite} if it is quasi-finite at all $x\in X$.
-\end{definition}
-
-\begin{proposition}\label{prop-projlemma}
-    Let $n\in \mathbb{N}$ and $D$ be an open neighbourhood of $0$ in $\mathbb{C}^n$. 
-    Let $X$ be a closed subspace of $D$ which intersections $\{(0,\ldots,0)\}\times \mathbb{C}$ at and only at $0$. Then there is a connected open product neighbourhood $B\times W\subseteq \mathbb{C}^{n-1}\times \mathbb{C}$ of $0$ in $D$ such that 
-    \begin{enumerate}
-        \item the projection $B\times W\rightarrow B$ induces a finite morphism $h:X'\rightarrow B$ with $X'=X\cap (B\times W)$;
-        \item for any coherent sheaf $\mathcal{M}$ of $\mathcal{O}_{X'}$-modules, $h_*\mathcal{M}$ is coherent.
-    \end{enumerate}
-\end{proposition}
-\begin{proof}
-    We will denote the coordinates on $\mathbb{C}^{n-1}\times \mathbb{C}$ as $(z,w)$.
-
-    Let $\mathcal{I}$ be the ideal of $X$ in $D$. By our assumption, we can choose $f_0\in \mathcal{I}_0$ such that $\deg_w f_0<\infty$ and $f_0(0)=0$. By \cref{Local-thm-Weierstrassprep} in \nameref{Local-chap-local}, we can find a Weierstrass polynomial $\omega_0=w^b+a_1w^{b-1}+\cdots+a_b\in \mathbb{C}\{ z_1,\ldots,z_{n-1} \}[w]$ such that $f_0=e\omega_0$ for some unit $e$ in $\mathbb{C}\{ z_1,\ldots,z_{n} \}$. We choose a product neighbourhood $B\times W\subseteq \mathbb{C}^{n-1}\times \mathbb{C}$ of $0$ in $D$ such that $\omega_0$ can be represented by $\omega\in \mathcal{O}_{\mathbb{C}^{n-1}}(B)[w]$ with $\omega|_{B\times W}\in \mathcal{I}(B\times W)$. Let $\pi:A\rightarrow B$ be the Weierstrass map defined by $\omega$. Then $\pi$ is finite by \cref{thm-Weiemapfiniteandopen}. 
-    Up to shrinking $B$ and $W$, we may assume that $A\cap (B\times W)\rightarrow B$ is finite as well. Set $X':=X\cap (B\times W)$. The restriction $h:X'\rightarrow B$ of $\pi$ is then finite. This proves (1).
-
-    Let $\mathcal{I}'$ be the zero-extension of $\mathcal{I}$ to $A$. Then $\mathcal{I}'$ is coherent. It suffices to show that $\pi_*\mathcal{I}'$ is coherent. Let $y\in B$ be a point and $x_1,\ldots,x_n$ be the distinct points in $\pi^{-1}(y)$.  FOr each $j=1,\ldots,n$, we can find an open neighbourhood $U_j$ of $x_j$ in $A$, pairwise disjoint and an exact sequence 
-    \[
-        \mathcal{O}_{U_j}^{p_j}\rightarrow \mathcal{O}_{U_j}^{q_j}\rightarrow \mathcal{I}'|_{U_j}\rightarrow 0
-    \]
-    for some $p_j,q_j\in \mathbb{Z}_{>0}$.  We may assume that $p_1=\cdots=p_n$ and $q_1=\cdots=q_n$. We denote the common values by $p$ and $q$. Then $U=U_1\cup\cdots\cup U_n$ is a neighbourhood of $\pi^{-1}(y)$, and we have an exact sequence 
-    \[
-        \mathcal{O}_{U}^{p}\rightarrow \mathcal{O}_{U}^{q}\rightarrow \mathcal{I}'|_{U}\rightarrow 0.
-    \]
-    By \cref{Topology-lma-opennhfiberclosedmap} in \nameref{Topology-chap-topology}, we may assume that $U=\pi^{-1}(V)$ for some open neighbourhood $V$ of $y$ in $B$. The induced map $\pi':U\rightarrow V$ is finite and by \cref{Topology-cor-pushforwardsheaffinite} in \nameref{Topology-chap-topology}, we have an exact sequence
-    \[
-        \pi'_*\mathcal{O}_{U}^{p}\rightarrow \pi'_*\mathcal{O}_{U}^{q}\rightarrow \pi'_*\left(\mathcal{I}'|_{U}\right)=(\pi_*\mathcal{I}')|_V\rightarrow 0.
-    \]
-    By \cref{thm-Okacoh} and \cref{thm-Weierstrassiso}, the first two terms are both coherent, hence so is $(\pi_*\mathcal{I}')|_V$.
-\end{proof}
-
-\begin{corollary}\label{cor-projlemma}
-    Let $n,k\in \mathbb{N}$ and $D$ be an open neighbourhood of $0$ in $\mathbb{C}^n$. 
-    Let $X$ be a closed subspace of $D$ which intersections $\{(0,\ldots,0)\}\times \mathbb{C}^k$ at and only at $0$. Then there is a connected open product neighbourhood $B\times W\subseteq \mathbb{C}^{n-k}\times \mathbb{C}^k$ of $0$ in $D$ such that 
-    \begin{enumerate}
-        \item the projection $B\times W\rightarrow B$ induces a finite morphism $h:X'\rightarrow B$ with $X'=X\cap (B\times W)$;
-        \item for any coherent sheaf $\mathcal{M}$ of $\mathcal{O}_{X'}$-modules, $h_*\mathcal{M}$ is coherent.
-    \end{enumerate}
-\end{corollary}
-\begin{proof}
-    This follows from a repeted application of \cref{prop-projlemma}
-\end{proof}
-
-\begin{proposition}\label{prop-quasifinitefinite}
-    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. Assume that $f$ is quasi-finite at $x\in X$. Then there is an open neighbourhood $U$ of $x$ in $X$ and an open neighbourhood of $f(x)$ in $Y$ with $f(U)\subseteq V$ such that 
-    \begin{enumerate}
-        \item the induced map $f':U\rightarrow V$ is finite;
-        \item for any coherent sheaf $\mathcal{F}$ of $\mathcal{O}_U$-modules, $f'_*\mathcal{F}$ is coherent. 
-    \end{enumerate}
-\end{proposition}
-\begin{proof}
-    The assertion is local on both $X$ and $Y$. So we may assume that $U$ and $V$ are complex model spaces in domains $W\subseteq \mathbb{C}^k$ and $B\subseteq \mathbb{C}^d$ respectively with $x=0$ and $y=0$. Moreover, we may assume that $\{x\}=f'^{-1}(y)$. We have the following commutative diagram:
-    \[
-        \begin{tikzcd}
-            &                                & U\times V \arrow[dd] \arrow[r, hook] & W\times B \arrow[dd] \\
-U \arrow[r] \arrow[rrd,"f'"] & \Gamma_f \arrow[rd] \arrow[ru] &                                      &                      \\
-            &                                & V \arrow[r, hook]                    & B                   
-\end{tikzcd},
-    \]
-    where $\Gamma_{f'}$ denotes the graph of $f':U\rightarrow V$. As $\{x\}=f'^{-1}(y)$, we have $\mathbb{C}^k\times\{0\}$ intersects $\Gamma_f$ only at the origin. By \cref{cor-projlemma}, up to shrinking $W$ and $B$, we may guarantee that the projection $W\times B\rightarrow B$ induces a finite morphism $\Gamma_f\rightarrow B$ and the pushforward under this map preserves coherence. Observe that $U\rightarrow \Gamma_f$ is a biholomorphism, we conclude that $f'$ is finite. This proves (1). Moroever, observe that the zero-extension of $f'_*\mathcal{I}$ is the successive pushforward of $\mathcal{I}$ along $U\rightarrow U_f$ and then along $U_f\rightarrow B$. It follows that  $f'_*\mathcal{I}$ is coherent.
-\end{proof}
-
-\begin{theorem}
-    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. Write $y=f(x)$. Then the following are equivalent:
-    \begin{enumerate}
-        \item $f$ is quasi-finite at $x$;
-        \item $\mathcal{O}_{X,x}$ is finite over $\mathcal{O}_{Y,y}$.
-        \item $\dim_{\mathbb{C}}\mathcal{O}_{X,x}/\mathfrak{m}_{y}\mathcal{O}_{X,x}<\infty$.
-    \end{enumerate}
-\end{theorem}
-\begin{proof}
-
-\end{proof}
-
-
-\begin{theorem}\label{thm-finitepushcoherent}
-    Let $f:X\rightarrow Y$ be a finite morphism of complex analytic spaces, then for any coherent sheaf $\mathcal{M}$ of $\mathcal{O}_X$-modules, $f_*\mathcal{M}$ is also coherent.
-\end{theorem}
-\begin{proof}
-    Let $y\in Y$ and $x_1,\ldots,x_n$ be the distinct points in $f^{-1}(y)$. By \cref{prop-quasifinitefinite}, we can find an open neighbourhood $W_j$ of $x_j$ in $X$ and open neighbourhoods $V_j$ of $y$ in $Y$ with $f(W_j)\subseteq V_j$ for $j=1,\ldots,n$ such that the induced maps $W_j\rightarrow V_j$ are all finite and pushforwards along these maps preserve coherence. We may assume that $W_1,\ldots,W_n$ are pairwise disjoint.
-    Let $V=V_1\cap \cdots\cap V_n$. For each $j=1,\ldots,n$, define $U_j:=f^{-1}(V)\cap W_j$. By \cref{Topology-thm-localstructuretopfinitemap} in \nameref{Topology-chap-topology}, up to shrinking $V$ and $W$, we may guarantee that
-    \[
-        (f_*\mathcal{I})|_V\cong \prod_{j=1}^n f_{j*}(\mathcal{I}|_{U_j}),
-    \]
-    where $f_j:U_j\rightarrow V$ is the morphism induced by $f$. Now it is clear that $(f_*\mathcal{I})|_V$ is coherent.
-\end{proof}
-
-
-
-
-
-
-\section{Rückert Nullstellensatz}
-
-Let $X$ be a complex analytic space. It is a sheaf of $\mathbb{C}$-algebras.
-For any sheaf of local $\mathbb{C}$-algebras $\mathcal{A}$ on $X$, any open set $U\subseteq X$ and any $s\in \mathcal{A}_X(U)$. We want to construct a function $[s]:U\rightarrow \mathbb{C}$.
-
-Take $x\in U$, there is a canonical splitting
-\begin{equation}\label{eq:Axdecomp}
-  \mathcal{A}_{x}\cong \mathbb{C}\oplus \mathfrak{m}_{x}, 
-\end{equation}
-where $\mathfrak{m}_x$ is the maximal ideal of $\mathcal{A}_{x}$. Then we define $[s](x)$ as the image of $s_x$ in the $\mathbb{C}$-factor in \eqref{eq:Axdecomp}.
-
-\begin{definition}\label{def-valuesectionatapoint}
-    Let $X,\mathcal{A},U,x,s$ be as above. The value $[s](x)\in \mathbb{C}$ is called the \emph{value} of $s$ at $x$. We sometimes denote it by $s(x)$ as well.
-\end{definition}
-
-\begin{lemma}
-    Let $X$ be a complex analytic space. We denote by $\mathcal{C}_X$ the sheaf of continuous functions on $X$. 
-    The association $s\mapsto [s]$ in \cref{def-valuesectionatapoint} defines a homomorphism of sheaves of $\mathbb{C}$-algebras $\mathcal{O}_X\rightarrow \mathcal{C}_X$. 
-\end{lemma}
-When there is no risk of confusion, we also write $s$ instead of $[s]$.
-\begin{proof}
-    We need to show that for any open set $U\subseteq X$ and any $s\in \mathcal{O}_X(U)$, $[s]$ is a continuous function on $U$. 
-    
-    We may clearly assume that $U=X$. The problem is local on $X$, so we may assume that $X$ is a complex model space in the sense of \cref{def-complexmodelspace} defined by a coherent ideal $\mathcal{I}$ in a domain $D$ in $\mathbb{C}^n$. By further localizing, we may assume that $s$ can be lifted to a section $f\in\mathcal{O}_D(D)$. Then $[s]=f|_X$ by definition. So the assertion follows from the fact that a holomorphic function on a domain is continuous.
-\end{proof}
-
-\begin{thm}[Rückert Nullstellensatz]
-    Let $X$ be a complex analytic space and $\mathcal{F}$ be a coherent sheaf of $\mathcal{O}_X$-modules. Let $f\in \mathcal{O}_X(X)$ be a function that vanishes on $\Supp \mathcal{F}$. Then for any $x\in X$, there is an open neighbourhood $U\subseteq X$ of $x$ and $m\in \mathbb{Z}_{>0}$ such that $f^m\mathcal{F}|_U=0$.
-\end{thm}
-\begin{proof}
-    We may assume that $x\in \Supp \mathcal{F}$ as otherwise there is nothing to prove. In particular, $f(x)=0$.
-
-    \textbf{Step~1}. We first reduce the problem to a relatively simple situation.
-
-    The problem is local on $X$, so we may assume that there is a domain $D$ containing $0$ in $\mathbb{C}^n$ and a closed immersion $\iota:X\rightarrow D$ sending $x$ to $0$. Consider the closed immersion $g:V\rightarrow D\times \mathbb{C}$ induced by $\iota$ and $f$. Assume that this theorem has been proved for $w$, $B\times \mathbb{C}$, $g_*\mathcal{F}$ in place of $f$, $X$, $\mathcal{F}$ respectively, then we would find an integer $m\in \mathbb{Z}_{>0}$ such that $w^m(g_*\mathcal{F})_0=0$. In particular, $f^m\mathcal{F}_x=0$. As $\mathcal{F}$ is coherent, there is an open neighbourhood $U\subseteq X$ of $x$ such that $f^t\mathcal{F}|_U=0$.
-
-    \textbf{Step~2}. We are reduced to prove the following special case: let $D$ be a domain in $\mathbb{C}^n$ containing $0$, $\mathcal{F}$ is a coherent sheaf on $D$ whose support is contained in $\{(z,w)\in \mathbb{C}^{n-1}\times \mathbb{C}:(z,w)\in D,w=0\}$. Then there is $m\in \mathbb{Z}_{>0}$ such that $w^m\mathcal{F}_0=0$.
-
-    Let $\mathcal{G}$ be the annihilator sheaf of $\mathcal{F}$: 
-    \[
-       \mathcal{G}:=\ker \left(\mathcal{O}_D\rightarrow \Homint_{\mathcal{O}_D}(\mathcal{F},\mathcal{F})\right),
-    \]
-    where the map $\mathcal{O}_D\rightarrow \Homint_{\mathcal{O}_D}(\mathcal{F},\mathcal{F})$ sends a local section $f$ of $\mathcal{O}_D$ to the endohomomorphism of multiplying by $f$ of $\mathcal{F}$.
-    Then $\mathcal{G}$ is a coherent sheaf by Oka's coherence theorem \cref{thm-Okacoh}. So it has closed supports. But by our assumtion, the support of $\mathcal{G}$ contains all $w\neq 0$, so $\Supp \mathcal{G}=D$.
-
-    Let $f\in \mathcal{G}_0$ be a non-zero element. Write
-    \[
-      f=\sum_{j=b}^{\infty}a_jw^j,\quad a_j\in \mathcal{O}_{\mathbb{C}^{n-1},0},a_b\neq 0
-    \]
-    for some $b\in \mathbb{N}$.
-    We may assume that $b=0$ by replacing $f$ and $\mathcal{F}$ with $w^{-b}f$ and  $w^b\mathcal{F}$ respectively. We want to show that $w^m\mathcal{F}_0=0$ for some positive integer $m$. 
-    
-    When $a_0$ is a unit, namely when $a_0(0)\neq 0$, then $f$ is a unit, so $\mathcal{F}_0=0$. We make an induction on $n$. The case $n=1$ is trivial, as $a_0$ is always a unit.
-    So we may assume that $a_0(0)=0$ and $n>1$. By perturbing the coordinates in $\mathbb{C}^{n-1}$, we may assume that $a_0$ is not identically zero in the variable $z_1$. 
-    
-    Shrinking $D$, we may assume that $f$ can be lifted to a holomorphic function $g\in \mathcal{O}_D(D)$ with $g\mathcal{F}=0$. By our assumption on $a_0$, we may assume that $Z(g)\cap \{(z_1,0,\ldots,0)\in D\}=\{0\}$. Hence, $D\cap \Supp \mathcal{F}$, which is a subset of $Z(g)$ also intersects the $z_1$-axis only at the origin.
-
-    By \textcolor{red}{To be included}, we can find a product domain $B\times W\subseteq D$ with $B\subseteq \mathbb{C}$ and $W\subseteq \mathbb{C}^{n-1}$ containing $0$ such that the projection $h:(B\times W)\cap \Supp \mathcal{F}\rightarrow B$ is finite and $\mathcal{F}':=h_*(\mathcal{F}|_{B\times W})$ is a coherent sheaf of $\mathcal{O}_B$-modules. Observe that $\Supp \mathcal{F}'\subseteq \{(z_2,\ldots,z_{n-1},w)\in B:w=0\}$, we can apply the induction hypothesis to obtain $m\in \mathbb{Z}_{>0}$ such that $w^{m}\mathcal{F}'_0=0$. It follows that $w^{m}\mathcal{F}_0=0$.
-\end{proof}
 
 \section{Finite limits in the category of complex analytic spaces}
 
@@ -625,6 +540,10 @@ We can draw a Cartesian diagram
     These facts indicate that there are essential differences between the theory of analytic spaces and the theory of schemes.
 \end{remark}
 
+\begin{definition}
+    Let $f:X\rightarrow S$ be a morphism of complex analytic spaces and $s\in S$. Then the fiber $X_s$ or $f^{-1}\{s\}$ is the fiber product $X\times_{S}\{s\}$. It is a closed analytic subspace of $X$ by \cref{ex-closedpointanalytic} and ...\textcolor{red}{Include a lemma saying the base change of closed immersion is closed immersion}.
+\end{definition}
+
 Next we study the local rings of fiber products.
 \begin{theorem}
     Let $Y$ be an object in $\CASCat$ and $X_1,X_2\in \CASCat_{/Y}$. Let $(x_1,x_2)$ be a point of $X_1\times_Y X_2$, namely, $x_i\in X_i$ for $i=1,2$ and the images of $x_1$ and $x_2$ in $Y$ coincide, say $y\in Y$. 
@@ -643,70 +562,50 @@ The analytic tensor product here is defined \cref{Local-def-analytictensor} in t
     Next we handle the case where $X_2\rightarrow Y$ is a closed immersion. This case is immediately clear from the constructions of both sides.
 \end{proof}
 
-\section{Analytic spectra}
 
-\begin{proposition}\label{prop-analyticspecrep}
-    Let $S$ be a complex analytic space and $\mathcal{A}$ be an $\mathcal{O}_S$-module of finite presentation. Then the presheaf $F_{\mathcal{A}}$ on $\CASCat_{/S}$ defined by
-    \[
-        F_{\mathcal{A}}(T\xrightarrow{p} S)=\Hom_{\mathcal{O}_T}(p^*\mathcal{A},\mathcal{O}_T)  
-    \]
-    is representable.
-\end{proposition}
- 
+
+
+\iffalse
+\section{Rückert Nullstellensatz}
+
+
+
+
+\begin{thm}[Rückert Nullstellensatz]
+    Let $X$ be a complex analytic space and $\mathcal{F}$ be a coherent sheaf of $\mathcal{O}_X$-modules. Let $f\in \mathcal{O}_X(X)$ be a function that vanishes on $\Supp \mathcal{F}$. Then for any $x\in X$, there is an open neighbourhood $U\subseteq X$ of $x$ and $m\in \mathbb{Z}_{>0}$ such that $f^m\mathcal{F}|_U=0$.
+\end{thm}
 \begin{proof}
-    By the arguments of \cite[\href{https://stacks.math.columbia.edu/tag/01JJ}{Tag 01JJ}]{stacks-project}, the problem is local in $S$. So we may assume that $\mathcal{A}$ has the following form
+    We may assume that $x\in \Supp \mathcal{F}$ as otherwise there is nothing to prove. In particular, $f(x)=0$.
+
+    \textbf{Step~1}. We first reduce the problem to a relatively simple situation.
+
+    The problem is local on $X$, so we may assume that there is a domain $D$ containing $0$ in $\mathbb{C}^n$ and a closed immersion $\iota:X\rightarrow D$ sending $x$ to $0$. Consider the closed immersion $g:V\rightarrow D\times \mathbb{C}$ induced by $\iota$ and $f$. Assume that this theorem has been proved for $w$, $B\times \mathbb{C}$, $g_*\mathcal{F}$ in place of $f$, $X$, $\mathcal{F}$ respectively, then we would find an integer $m\in \mathbb{Z}_{>0}$ such that $w^m(g_*\mathcal{F})_0=0$. In particular, $f^m\mathcal{F}_x=0$. As $\mathcal{F}$ is coherent, there is an open neighbourhood $U\subseteq X$ of $x$ such that $f^t\mathcal{F}|_U=0$.
+
+    \textbf{Step~2}. We are reduced to prove the following special case: let $D$ be a domain in $\mathbb{C}^n$ containing $0$, $\mathcal{F}$ is a coherent sheaf on $D$ whose support is contained in $\{(z,w)\in \mathbb{C}^{n-1}\times \mathbb{C}:(z,w)\in D,w=0\}$. Then there is $m\in \mathbb{Z}_{>0}$ such that $w^m\mathcal{F}_0=0$.
+
+    Let $\mathcal{G}$ be the annihilator sheaf of $\mathcal{F}$: 
     \[
-        \mathcal{A}=\mathcal{O}_S[X_1,\ldots,X_n]/\mathcal{I}
-    \]   
-    for some $n\in \mathbb{N}$ and $\mathcal{I}\subseteq \mathcal{O}_S(S)[X_1,\ldots,X_n]$ an ideal sheaf of finite type. 
+       \mathcal{G}:=\ker \left(\mathcal{O}_D\rightarrow \Homint_{\mathcal{O}_D}(\mathcal{F},\mathcal{F})\right),
+    \]
+    where the map $\mathcal{O}_D\rightarrow \Homint_{\mathcal{O}_D}(\mathcal{F},\mathcal{F})$ sends a local section $f$ of $\mathcal{O}_D$ to the endohomomorphism of multiplying by $f$ of $\mathcal{F}$.
+    Then $\mathcal{G}$ is a coherent sheaf by Oka's coherence theorem \cref{thm-Okacoh}. So it has closed supports. But by our assumtion, the support of $\mathcal{G}$ contains all $w\neq 0$, so $\Supp \mathcal{G}=D$.
+
+    Let $f\in \mathcal{G}_0$ be a non-zero element. Write
+    \[
+      f=\sum_{j=b}^{\infty}a_jw^j,\quad a_j\in \mathcal{O}_{\mathbb{C}^{n-1},0},a_b\neq 0
+    \]
+    for some $b\in \mathbb{N}$.
+    We may assume that $b=0$ by replacing $f$ and $\mathcal{F}$ with $w^{-b}f$ and  $w^b\mathcal{F}$ respectively. We want to show that $w^m\mathcal{F}_0=0$ for some positive integer $m$. 
     
-    \textbf{Step~1}. We first handle the case where $\mathcal{A}=\mathcal{O}_S[X_1,\ldots,X_n]$.
-
-    In this case, we claim that $F_{\mathcal{A}}$ is represented by $S\times \mathbb{C}^n$. In fact, it suffices to observe that 
-    \[
-        F_{\mathcal{A}}(T\xrightarrow{p} S)\cn \Hom_{\mathcal{O}_T}(\mathcal{O}_T[X_1,\ldots,X_n],\mathcal{O}_T)\cn \mathcal{O}_T(T)^n = \Hom_{\CASCat}(T,\mathbb{C}^n)=\Hom_{\CASCat_{/S}}(T,S\times \mathbb{C}^n).
-    \]
-    From this proof, it is easy to see that the universal morphism is 
-    \[
-        \eta:\mathcal{O}_{S\times \mathbb{C}^n}[X_1,\ldots,X_n]\rightarrow \mathcal{O}_{S\times \mathbb{C}^n}
-    \]
-    sending $X_i$ to $z_i$, the $i$-th coordinate of $\mathbb{C}^n$.
-
-    \textbf{Step~2}. We handle the general case.
-    We have a short exact sequence
-    \[
-        0\rightarrow \mathcal{I}\rightarrow \mathcal{O}_S[X_1,\ldots,X_n]\rightarrow \mathcal{A}\rightarrow 0.
-    \]    
-    For any $p:T\rightarrow S$ in $\CASCat$, we have an exact sequence
-    \[
-        p^*\mathcal{I}\rightarrow \mathcal{O}_T[X_1,\ldots,X_n]\rightarrow p^*\mathcal{A}\rightarrow 0.
-    \]
-    We then have
-    \[
-        \begin{aligned}
-        F_{\mathcal{A}}(T)\cn & \left\{ h\in \Hom_{\mathcal{O}_T}(\mathcal{O}_T[X_1,\ldots,X_n],\mathcal{O}_T): h|_{p^*\mathcal{I}}=0  \right\}\\
-        \cn & \left\{ h\in F_{\mathcal{O}_S[X_1,\ldots,X_n]}(T): h|_{p^*\mathcal{I}}=0  \right\}.
-        \end{aligned}
-    \]
-    Let $\pi:S\times \mathbb{C}^n\rightarrow S$ be the projection. Then $F_{\mathcal{A}}(T)$ is represented by the closed subspace of $S\times \mathbb{C}^n$ defined by the ideal $\eta(\pi^* \mathcal{I})$, which is clearly of finite type.
-
-
+    When $a_0$ is a unit, namely when $a_0(0)\neq 0$, then $f$ is a unit, so $\mathcal{F}_0=0$. We make an induction on $n$. The case $n=1$ is trivial, as $a_0$ is always a unit.
+    So we may assume that $a_0(0)=0$ and $n>1$. By perturbing the coordinates in $\mathbb{C}^{n-1}$, we may assume that $a_0$ is not identically zero in the variable $z_1$. 
     
+    Shrinking $D$, we may assume that $f$ can be lifted to a holomorphic function $g\in \mathcal{O}_D(D)$ with $g\mathcal{F}=0$. By our assumption on $a_0$, we may assume that $Z(g)\cap \{(z_1,0,\ldots,0)\in D\}=\{0\}$. Hence, $D\cap \Supp \mathcal{F}$, which is a subset of $Z(g)$ also intersects the $z_1$-axis only at the origin.
+
+    By \textcolor{red}{To be included}, we can find a product domain $B\times W\subseteq D$ with $B\subseteq \mathbb{C}$ and $W\subseteq \mathbb{C}^{n-1}$ containing $0$ such that the projection $h:(B\times W)\cap \Supp \mathcal{F}\rightarrow B$ is finite and $\mathcal{F}':=h_*(\mathcal{F}|_{B\times W})$ is a coherent sheaf of $\mathcal{O}_B$-modules. Observe that $\Supp \mathcal{F}'\subseteq \{(z_2,\ldots,z_{n-1},w)\in B:w=0\}$, we can apply the induction hypothesis to obtain $m\in \mathbb{Z}_{>0}$ such that $w^{m}\mathcal{F}'_0=0$. It follows that $w^{m}\mathcal{F}_0=0$.
 \end{proof}
+\fi
 
-\begin{definition}
-    Let $S$ be a complex analytic space and $\mathcal{A}$ be an $\mathcal{O}_S$-module of finite presentation. Then the complex analytic space representing the functor in \cref{prop-analyticspecrep} is called the \emph{analytic spectrum} of $\mathcal{A}$. We denote it by $\Spec^{\An}_S \mathcal{A}$. By construction, there is a canonical morphism $\Spec^{\An}_S \mathcal{A}\rightarrow S$.
-\end{definition}
-It is easy to see that $\Spec^{\An}_S \mathcal{A}$ is contravaraint in $\mathcal{A}$.
-
-\begin{definition}
-    Let $S$ be a complex analytic space and $\mathcal{E}$ be an $\mathcal{O}_S$-module of finite presentation. We define the \emph{vector bundle} $\mathbf{V}(\mathcal{E})$ generated by $\mathcal{E}$ as
-    \[
-        \mathbf{V}(\mathcal{E})=\Spec^{\An}_S \Sym \mathcal{E}.
-    \]
-    We have a natural projection $\mathbf{V}(\mathcal{E})\rightarrow S$.
-\end{definition}
-We remind the readers that we are following Grothendieck's convention for $\mathbf{V}(\mathcal{E})$, which is different from Fulton's.
 
 
 \printbibliography

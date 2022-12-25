@@ -9,8 +9,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{3}{Weierstrass division and excellence of the ring of formal power series}}{8}{section.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{4}{Weierstrass preparation theorem}}{10}{section.0.4}%
+\contentsline {section}{\tocsection {}{4}{Weierstrass preparation theorem}}{11}{section.0.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{5}{Complex analytic local algebras}}{12}{section.0.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{15}{chapter*.2}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{19}{chapter*.2}%

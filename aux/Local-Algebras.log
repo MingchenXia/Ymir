@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  23 DEC 2022 21:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  25 DEC 2022 19:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -908,60 +908,66 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 51.
 Package xr Warning: 
 No file Introduction.aux
 LABELS NOT IMPORTED.
- on input line 333.
+ on input line 334.
 
 (Introduction.tex)
 (Introduction.aux)
 No file Introduction.aux.
-Package xr Info: IMPORTING LABELS FROM Topology-Bornology.aux on input line 334.
+Package xr Info: IMPORTING LABELS FROM Topology-Bornology.aux on input line 335.
 (Topology-Bornology.tex)
 (Topology-Bornology.aux)
-
-Package xr Warning: 
-No file Banach-Rings.aux
-LABELS NOT IMPORTED.
- on input line 335.
-
+Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 336.
 (Banach-Rings.tex)
 (Banach-Rings.aux)
-No file Banach-Rings.aux.
 
 Package xr Warning: 
 No file Commutative-Algebra.aux
 LABELS NOT IMPORTED.
- on input line 336.
+ on input line 337.
 
 (Commutative-Algebra.tex)
 (Commutative-Algebra.aux)
 No file Commutative-Algebra.aux.
-Package xr Info: IMPORTING LABELS FROM Local-Algebras.aux on input line 337.
+Package xr Info: IMPORTING LABELS FROM Local-Algebras.aux on input line 341.
 (Local-Algebras.tex)
 (Local-Algebras.aux)
-Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 338.
+Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 342.
 (Complex-Analytic-Spaces.tex)
 (Complex-Analytic-Spaces.aux)
+Package xr Info: IMPORTING LABELS FROM Constructions-Complex-Spaces.aux on input line 343.
+(Constructions-Complex-Spaces.tex)
+(Constructions-Complex-Spaces.aux)
 
 Package xr Warning: 
-No file Morphisms.aux
+No file Properties-Complex-Spaces.aux
 LABELS NOT IMPORTED.
- on input line 339.
+ on input line 344.
 
-(Morphisms.tex)
-(Morphisms.aux)
-No file Morphisms.aux.
+(Properties-Complex-Spaces.tex)
+(Properties-Complex-Spaces.aux)
+No file Properties-Complex-Spaces.aux.
+
+Package xr Warning: 
+No file Morphisms-Complex-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 345.
+
+(Morphisms-Complex-Spaces.tex)
+(Morphisms-Complex-Spaces.aux)
+No file Morphisms-Complex-Spaces.aux.
 
 Package xr Warning: 
 No file Affinoid-Algebras.aux
 LABELS NOT IMPORTED.
- on input line 340.
+ on input line 347.
 
 (Affinoid-Algebras.tex)
 (Affinoid-Algebras.aux)
 No file Affinoid-Algebras.aux.
-Package xr Info: IMPORTING LABELS FROM Berkovich-Analytic-Spaces.aux on input line 341.
+Package xr Info: IMPORTING LABELS FROM Berkovich-Analytic-Spaces.aux on input line 348.
 (Berkovich-Analytic-Spaces.tex)
 (Berkovich-Analytic-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Properties-Berkovich-Spaces.aux on input line 342.
+Package xr Info: IMPORTING LABELS FROM Properties-Berkovich-Spaces.aux on input line 349.
 (Properties-Berkovich-Spaces.tex)
 (Properties-Berkovich-Spaces.aux)
 )
@@ -1116,27 +1122,12 @@ Overfull \hbox (1.6319pt too wide) in paragraph at lines 34--35
 []\T1/lmr/bx/n/10 (-20) Definition 2.1. []\T1/lmr/m/n/10 (-20) For any $\OML/lmm/m/it/10 n \OMS/lmsy/m/n/10 2 \U/msb/m/n/10 N$\T1/lmr/m/n/10 (-20) , let $\U/msb/m/n/10 C\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 z[]; [] ; z[]\OMS/lmsy/m/n/10 g$ \T1/lmr/m/n/10 (-20) de-note the sub-ring of $\U/msb/m/n/10 C\OT1/lmr/m/n/10 (-20) [[\OML/lmm/m/it/10 z[]; [] ; z[]\OT1/lmr/m/n/10 (-20) ]]$
  []
 
-
-LaTeX Warning: Reference `Banach-ex-convseriesradius' on page 1 undefined on input line 55.
-
-
-LaTeX Warning: Reference `Banach-chap-Banach' on page 5 undefined on input line 55.
-
+[5]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
-[5]
-
-LaTeX Warning: Reference `Banach-ex-convseriesradius' on page 1 undefined on input line 80.
-
-
-LaTeX Warning: Reference `Banach-chap-Banach' on page 6 undefined on input line 81.
-
-
-LaTeX Warning: Reference `Banach-prop-inversesmallelementBanachring' on page 1 undefined on input line 95.
-
-[6]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 161.
+ [6]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 181.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
@@ -1147,13 +1138,23 @@ Overfull \hbox (6.09961pt too wide) has occurred while \output is active
  []
 
 [9]
-Overfull \hbox (3.5313pt too wide) in paragraph at lines 341--342
+Overfull \hbox (3.5313pt too wide) in paragraph at lines 361--362
 []\T1/lmr/m/n/10 (-20) We have com-puted that the com-ple-tion of $\U/msb/m/n/10 C\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 z[]; [] ; z[]\OMS/lmsy/m/n/10 g$ \T1/lmr/m/n/10 (-20) is $\U/msb/m/n/10 C\OT1/lmr/m/n/10 (-20) [[\OML/lmm/m/it/10 z[]; [] ; z[]\OT1/lmr/m/n/10 (-20) ]]$
  []
 
 [10] [11] [12] [13] [14]
+Overfull \hbox (13.41463pt too wide) detected at line 623
+\OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 s[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 f\OT1/lmr/m/n/10 )\OMS/lmsy/m/n/10 j\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 c[]; [] ; c[]\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 ^^T [] j\OML/lmm/m/it/10 ^^U[]\OMS/lmsy/m/n/10 j ^^A j\OML/lmm/m/it/10 ^^[[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 f\OT1/lmr/m/n/10 )\OMS/lmsy/m/n/10 j ^^T [] []
+ []
+
+
+Overfull \hbox (48.63803pt too wide) detected at line 628
+[] [] \OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 a[]\OMS/lmsy/m/n/10 j ^^T \OML/lmm/m/it/10 nD [] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 DnM[][]:
+ []
+
+[15] [16] [17] [18]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 592.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 758.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1161,29 +1162,26 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [15
+ [19
 
 ] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Local-Algebras.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package logreq Info: Writing requests to 'Local-Algebras.run.xml'.
 \openout1 = `Local-Algebras.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37247 strings out of 478994
- 700352 string characters out of 5858185
- 1545973 words of memory out of 5000000
- 53726 multiletter control sequences out of 15000+600000
- 461952 words of font info for 157 fonts, out of 8000000 for 9000
+ 37542 strings out of 478994
+ 709131 string characters out of 5858185
+ 1557547 words of memory out of 5000000
+ 53985 multiletter control sequences out of 15000+600000
+ 462779 words of font info for 166 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  132i,16n,133p,1000b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Local-Algebras.pdf (15 pages, 295343 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Local-Algebras.pdf (19 pages, 323630 bytes).
 PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
+ 370 PDF objects out of 1000 (max. 8388607)
+ 326 compressed objects within 4 object streams
+ 86 named destinations out of 1000 (max. 500000)
  23109 words of extra memory for PDF output out of 24883 (max. 10000000)
 

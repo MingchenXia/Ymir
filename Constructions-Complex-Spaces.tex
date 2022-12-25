@@ -1,0 +1,424 @@
+\input{preamble}
+\title{Ymir}
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter*{Constructions of complex analytic spaces}
+
+\section{Introduction}\label{sec-introduction-constructioncomplex}
+
+\section{Analytic spectra}
+
+\begin{proposition}\label{prop-analyticspecrep}
+    Let $S$ be a complex analytic space and $\mathcal{A}$ be an $\mathcal{O}_S$-module of finite presentation. Then the presheaf $F_{\mathcal{A}}$ on $\CASCat_{/S}$ defined by
+    \[
+        F_{\mathcal{A}}(T\xrightarrow{p} S)=\Hom_{\mathcal{O}_T}(p^*\mathcal{A},\mathcal{O}_T)  
+    \]
+    is representable.
+\end{proposition}
+ 
+\begin{proof}
+    By the arguments of \cite[\href{https://stacks.math.columbia.edu/tag/01JJ}{Tag 01JJ}]{stacks-project}, the problem is local in $S$. So we may assume that $\mathcal{A}$ has the following form
+    \[
+        \mathcal{A}=\mathcal{O}_S[X_1,\ldots,X_n]/\mathcal{I}
+    \]   
+    for some $n\in \mathbb{N}$ and $\mathcal{I}\subseteq \mathcal{O}_S(S)[X_1,\ldots,X_n]$ an ideal sheaf of finite type. 
+    
+    \textbf{Step~1}. We first handle the case where $\mathcal{A}=\mathcal{O}_S[X_1,\ldots,X_n]$.
+
+    In this case, we claim that $F_{\mathcal{A}}$ is represented by $S\times \mathbb{C}^n$. In fact, it suffices to observe that 
+    \[
+        \begin{split}
+        F_{\mathcal{A}}(T\xrightarrow{p} S)\cn \Hom_{\mathcal{O}_T}(\mathcal{O}_T[X_1,\ldots,X_n],\mathcal{O}_T)\cn \mathcal{O}_T(T)^n \\
+         = \Hom_{\CASCat}(T,\mathbb{C}^n)=\Hom_{\CASCat_{/S}}(T,S\times \mathbb{C}^n).
+        \end{split}
+    \]
+    From this proof, it is easy to see that the universal morphism is 
+    \[
+        \eta:\mathcal{O}_{S\times \mathbb{C}^n}[X_1,\ldots,X_n]\rightarrow \mathcal{O}_{S\times \mathbb{C}^n}
+    \]
+    sending $X_i$ to $z_i$, the $i$-th coordinate of $\mathbb{C}^n$.
+
+    \textbf{Step~2}. We handle the general case.
+    We have a short exact sequence
+    \[
+        0\rightarrow \mathcal{I}\rightarrow \mathcal{O}_S[X_1,\ldots,X_n]\rightarrow \mathcal{A}\rightarrow 0.
+    \]    
+    For any $p:T\rightarrow S$ in $\CASCat$, we have an exact sequence
+    \[
+        p^*\mathcal{I}\rightarrow \mathcal{O}_T[X_1,\ldots,X_n]\rightarrow p^*\mathcal{A}\rightarrow 0.
+    \]
+    We then have
+    \[
+        \begin{aligned}
+        F_{\mathcal{A}}(T)\cn & \left\{ h\in \Hom_{\mathcal{O}_T}(\mathcal{O}_T[X_1,\ldots,X_n],\mathcal{O}_T): h|_{p^*\mathcal{I}}=0  \right\}\\
+        \cn & \left\{ h\in F_{\mathcal{O}_S[X_1,\ldots,X_n]}(T): h|_{p^*\mathcal{I}}=0  \right\}.
+        \end{aligned}
+    \]
+    Let $\pi:S\times \mathbb{C}^n\rightarrow S$ be the projection. Then $F_{\mathcal{A}}(T)$ is represented by the closed subspace of $S\times \mathbb{C}^n$ defined by the ideal $\eta(\pi^* \mathcal{I})$, which is clearly of finite type.
+
+
+    
+\end{proof}
+
+\begin{definition}
+    Let $S$ be a complex analytic space and $\mathcal{A}$ be an $\mathcal{O}_S$-module of finite presentation. Then the complex analytic space representing the functor in \cref{prop-analyticspecrep} is called the \emph{analytic spectrum} of $\mathcal{A}$. We denote it by $\Spec^{\An}_S \mathcal{A}$. By construction, there is a canonical morphism $\Spec^{\An}_S \mathcal{A}\rightarrow S$.
+\end{definition}
+It is easy to see that $\Spec^{\An}_S \mathcal{A}$ is contravaraint in $\mathcal{A}$.
+
+\begin{proposition}\label{prop-specanbasechange}
+    Let $S$ be a complex analytic space and $\mathcal{A}$ be an $\mathcal{O}_S$-module of finite presentation. Consider a morphism $g:S'\rightarrow S$ of complex analytic spaces. Then we have a Cartesian diagram
+    \[
+        \begin{tikzcd}
+            \Spec^{\An}_{S'} g^*\mathcal{A} \arrow[d] \arrow[r] \arrow[rd, "\square", phantom] & \Spec^{\An}_S \mathcal{A} \arrow[d] \\
+            S' \arrow[r, "g"]                                                                  & S                                  
+        \end{tikzcd}
+    \]
+\end{proposition}
+\begin{proof}
+    This is clear at the level of functor of points.
+\end{proof}
+
+\begin{corollary}\label{cor-fiberspecan}
+    Let $S$ be a complex analytic space and $\mathcal{A}$ be an $\mathcal{O}_S$-module of finite presentation. Take $s\in S$. Then $\Spec^{\An}_{\{s\}} \mathcal{A}_s\cn (\Spec^{\An}_S \mathcal{A})_s$. 
+    
+    Moreover, the universal morphism $\mathcal{A}_{\Spec^{\An}_{\{s\}} \mathcal{A}_s}\rightarrow \mathcal{O}_{\Spec^{\An}_{\{s\}} \mathcal{A}_s}$ is the reduction of the universal morphism $\mathcal{A}_{\Spec^{\An}_S \mathcal{A}}\rightarrow \mathcal{O}_{\Spec^{\An}_S \mathcal{A}}$ modulo $\mathfrak{m}_s$.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{prop-specanbasechange}.
+\end{proof}
+
+
+\begin{proposition}\label{prop-specanlocalringcompletion}
+    Let $S$ be a complex analytic space and $\mathcal{A}$ be an $\mathcal{O}_S$-module of finite presentation. Take $s\in S$.
+    Write $X=\Spec^{\An}_S \mathcal{A}$ and $\mathcal{A}_s:=\mathcal{A}\otimes_{\mathcal{O}_S}\mathcal{O}_{S,s}$. Then the map from $X_s$ to 
+    \[
+        \left\{ \mathfrak{m}\in \Spm_{\mathbb{C}} \mathcal{A}_s : \mathfrak{m}\supseteq\mathfrak{m}_s  \right\}
+    \]
+    sending $x\in X_s$ to the inverse image of $\mathfrak{m}_x$ with respect to $\mathcal{A}_s\rightarrow \mathcal{O}_{X,x}$ is bijective.
+
+    If $\mathfrak{m}$ corresponds to $x\in X_s$, then the natural homomorphism $\mathcal{A}_s\rightarrow \mathcal{O}_{X,x}$ factorizes through $\mathcal{A}_{s,\mathfrak{m}}\rightarrow  \mathcal{O}_{X,x}$. The completion of the latter
+    \[
+        \widehat{\mathcal{A}_{s,\mathfrak{m}}}\rightarrow   \widehat{\mathcal{O}_{X,x}}
+    \]
+    is an isomorphism.
+\end{proposition}
+\begin{proof}
+    By \cref{cor-fiberspecan}, we have natural bijections
+    \[
+        X_s\cn \Hom_{\{s\}}(\{s\},X_s)\cn \Hom_{\mathbb{C}\text{-}\AlgCat}(\mathcal{A}_s/\mathfrak{m}_s\mathcal{A}_s, \mathbb{C}).
+    \]  
+    This gives the desired bijection.
+
+    Next we prove the latter part. The problem is local on $S$, we may assume that 
+    \[
+        \mathcal{A}=\mathcal{O}_S[X_1,\ldots,X_n]/\mathcal{I}
+    \]  
+    for some $n\in \mathbb{N}$ and some ideal $\mathcal{I}$ of finite type in $\mathcal{O}_S[X_1,\ldots,X_n]$. Recall that the universal morphism
+    \[
+        \eta:\mathcal{O}_{S\times \mathbb{C}^n}[X_1,\ldots,X_n]\rightarrow \mathcal{O}_{S\times \mathbb{C}^n}
+    \]
+    sends $X_i$ to $z_i$, the $i$-th coordinate of $\mathbb{C}^n$.
+
+    By construction, we have
+    \[
+        \mathcal{A}_s\cn \mathcal{O}_{S,s}[X_1,\ldots,X_n]/\mathcal{I}_s  
+    \]
+    and
+    \[
+        \mathcal{O}_{X,x}=\mathcal{O}_{S\times \mathbb{C}^n,x}/\mathcal{J}_x,  
+    \]
+    where
+    \[
+        \mathcal{J}_x=\eta_x\left( \mathcal{I}_s \mathcal{O}_{S\times \mathbb{C}^n,x}[X_1,\ldots,X_n] \right).   
+    \]
+    We have a commutative diagram with exact rows
+    \[
+        \begin{tikzcd}
+            0 \arrow[r] & \mathcal{I}_s \arrow[r] \arrow[d] & {\mathcal{O}_{S,s}[X_1,\ldots,X_n]} \arrow[r] \arrow[d] & \mathcal{A}_s \arrow[r] \arrow[d] & 0 \\
+            0 \arrow[r] & \mathcal{J}_x \arrow[r]           & {\mathcal{O}_{S\times \mathbb{C}^n,x}} \arrow[r]        & {\mathcal{O}_{X,x}} \arrow[r]     & 0
+        \end{tikzcd}.  
+    \]
+    The middle vertical map is induced by $\eta_x$.
+    Let $\mathfrak{p}$ be the inverse image of $\mathfrak{m}_{S\times \mathbb{C}^n,x}$ under the vertical map in the middle. Then $\mathfrak{p}$ is generated by $\mathfrak{m}_s$ and $X_1-x_1,\ldots,X_n-x_n$, where $x_i\in \mathbb{C}$ is the value of $z_i$ at $x$ for $i=1,\ldots,n$.  By localization and completion, we find a commutative diagram with exact rows
+    \[
+        \begin{tikzcd}
+            0 \arrow[r] & \widehat{(\mathcal{I}_s)_{\mathfrak{p}}} \arrow[r] \arrow[d] & {(\mathcal{O}_{S,s}[X_1,\ldots,X_n])^{\hat{}}_{\mathfrak{p}}} \arrow[r] \arrow[d] & \widehat{(\mathcal{A}_s)_{\mathfrak{m}}} \arrow[r] \arrow[d] & 0 \\
+            0 \arrow[r] & \widehat{\mathcal{J}_x} \arrow[r]           & \widehat{\mathcal{O}_{S\times \mathbb{C}^n,x}} \arrow[r]        & \widehat{\mathcal{O}_{X,x}} \arrow[r]     & 0
+        \end{tikzcd}.  
+    \]
+    Observe that
+    \[
+        (\mathcal{O}_{S,s}[X_1,\ldots,X_n])^{\hat{}}_{\mathfrak{p}}  \cong \widehat{\mathcal{O}_{S,s}}[[X_1-x_1,\ldots,X_n-x_n]]
+    \]
+    and
+    \[
+        \widehat{\mathcal{O}_{S\times \mathbb{C}^n,x}}\cong \widehat{O_{S,s}}\hat{\otimes}_k  \widehat{\mathcal{O}_{\mathbb{C}^n,(x_1,\ldots,x_n)}}\cong \widehat{\mathcal{O}_{S,s}}[[X_1-x_1,\ldots,X_n-x_n]].
+    \]
+    It is easy to see that the middle map is an isomorphism. As $\mathcal{J}_x$ is generated by $\mathcal{I}_s$, the first vertical map is also an isomorphism. Our assertion follows. 
+\end{proof}
+
+
+\begin{corollary}\label{cor-finitespectrumidentification}
+    Let $S$ be a complex analytic space and $\mathcal{A}$ be a finite $\mathcal{O}_S$-algebra. Write $X=\Spec^{\An}_S\mathcal{A}$.
+    Take $s\in S$. Then the fiber $X_s$ is finite and is in bijection with $\Spm_{\mathbb{C}} \mathcal{A}_s$. If $\mathfrak{m}$ corresponds to $x\in X_s$, then we have a natural isomorphism 
+    \[
+        \mathcal{A}_{s,\mathfrak{m}}\cn \mathcal{O}_{X,x}.  
+    \]
+\end{corollary}
+\begin{proof}
+    As $\mathcal{O}_{S,s}\rightarrow \mathcal{A}_s$ is finite, $\mathcal{A}_s$ is semi-local. On the other hand, by \cref{prop-specanlocalringcompletion}, 
+    \[
+        \mathcal{A}_{s,\mathfrak{m}}\rightarrow   \mathcal{O}_{X,x}
+    \]
+    is injective and $\mathcal{O}_{X,x}$ is quasi-finite over $\mathcal{O}_{S,s}$. 
+    Then $\mathcal{O}_{X,x}$ is finite over $\mathcal{O}_{S,s}$ by \cref{Local-thm-analyticquasifiniteifffinite} in \nameref{Local-chap-local}.
+    It follows from Nakayama's lemma that $\mathcal{A}_{s,\mathfrak{m}}\rightarrow   \mathcal{O}_{X,x}$ is also surjective.
+\end{proof}
+
+\begin{corollary}\label{cor-suppaffmorphism}
+    Let $S$ be a complex analytic space and $\mathcal{A}$ be a finite $\mathcal{O}_S$-algebra. Then the image of $\Spec^{\An}_S\mathcal{A}\rightarrow S$ is $\Supp A$.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{cor-finitespectrumidentification} and the fact that $\Spm_{\mathbb{C}}\mathcal{A}_s=\Spm\mathcal{A}_s$ for all $s\in S$.
+\end{proof}
+
+\begin{definition}
+    Let $S$ be a complex analytic space and $\mathcal{E}$ be an $\mathcal{O}_S$-module of finite presentation. We define the \emph{vector bundle} $\mathbf{V}(\mathcal{E})$ generated by $\mathcal{E}$ as
+    \[
+        \mathbf{V}(\mathcal{E})=\Spec^{\An}_S \Sym \mathcal{E}.
+    \]
+    We have a natural projection $\mathbf{V}(\mathcal{E})\rightarrow S$.
+\end{definition}
+We remind the readers that we are following Grothendieck's convention for $\mathbf{V}(\mathcal{E})$, which is different from Fulton's.
+
+
+
+\section{Analytic germs}
+
+\begin{definition}\label{def-complexgerm}
+    A \emph{pointed complex analytic space} is a pair $(X,x)$ consisting of a complex analytic space $X$ and a point $x\in X$. A morphism between pointed complex analytic spaces $(X,x)$ and $(Y,y)$ is a morphism $f:X\rightarrow Y$ of complex analytic spaces such that $f(x)=y$. The category of pointed complex analytic spaces is denoted by $\CASCat_*$. 
+    
+
+    The category of \emph{complex analytic germs} $\AnaGerCat$ is the right category of fractions of $\CASCat$ with respect to the system of morphisms $f:(X,x)\rightarrow (Y,y)$ such that $f:X\rightarrow Y$ is an open immersion. An element in $\AnaGerCat$ is called a \emph{complex analytic germ}. A complex analytic germ represented by $(X,x)$ is denoted by $X_x$.
+
+    Given a complex analytic germ $X_x$, we write $\mathcal{O}_{X,x}$ for the local ring of $X$ at $x$. Clearly, it does not depend on the choice of $(X,x)$. Given any morphism $f:X_x\rightarrow Y_y$ of complex analytic germs, we have an obvious local homomorphism $f^{\#}:\mathcal{O}_{Y,y}\rightarrow \mathcal{O}_{X,x}$.
+\end{definition}
+
+
+\begin{definition}\label{def-closedsubgerm}
+    Given a complex analytic germ $X_x$, a \emph{closed subgerm} of $X_x$ is an isomorphism class in $\AnaGerCat_{/X_x}$ of $Y_x$ represented by a closed analytic subspace of $X$ containing $x$ for any representation $(X,x)$ of $X_x$.
+
+    In particular, $X_x$ is a closed subgerm of $X_x$. A closed subgerm $Y_y$ of $X_x$ is \emph{proper} if $Y_y$ is different from $X_x$ as subgerms. 
+
+    Given a closed subgerm $Y_x$ of $X_x$, we have an induced surjective homomorphism $\mathcal{O}_{X,x}\rightarrow \mathcal{O}_{Y,y}$. The kernel is denoted by $I(Y,x)$ or $I_X(Y,x)$.
+\end{definition}
+
+\begin{thm}\label{thm-germlocalringequivalence}
+    The functor $\AnaGerCat^{\mathrm{op}}\rightarrow \CLA$ defined in \cref{def-complexgerm} is an equivalence.
+\end{thm}
+\begin{proof}
+    \textbf{Step~1}. We show that the functor is faithfully. 
+    
+    In order words, let $(X,x)$ and $(Y,y)$ be two pointed complex analytic spaces and $f,g:(X,x)\rightarrow (Y,y)$ be two morphsims inducing the same map $\mathcal{O}_{Y,y}\rightarrow  \mathcal{O}_{X,x}$, then $f$ and $g$ coincide on a neighbourhood of $x$ in $X$.
+
+    The question is open on $Y$, so we may reduce to the case where $Y$ is a complex model space.  We then further reduce to the case where $Y$ is a domain in $\mathbb{C}^n$ for some $n\in \mathbb{N}$ and then to $Y=\mathbb{C}^n$.
+
+    By \cref{Complex-thm-hCnidentification} in \nameref{Complex-chap-complex}, $f$ and $g$ can be identified with systems $(f_1,\ldots,f_n)\in \mathcal{O}_X(X)^n$ and $(g_1,\ldots,g_n)\in \mathcal{O}_X(X)^n$. The assumption $f_x^{\#}=g_x^{\#}$ menas $f_{i,x}=g_{i,x}$ for $i=1,\ldots,n$. So $f_i=g_i$ after shrinking $X$. We conclude by  \cref{Complex-thm-hCnidentification} in \nameref{Complex-chap-complex} again.
+
+    \textbf{Step~2}. We show that the functor is fully faithful. 
+    
+    In other words, let $(X,x)$ and $(Y,y)$ be two pointed complex analytic spaces and $\varphi:\mathcal{O}_{Y,y}\rightarrow \mathcal{O}_{X,x}$ be a morphism in $\CLA$. Then we can find an open neighbourhood $U$ of $x$ in $X$ and a morphism $(U,x)\rightarrow (Y,y)$ inducing $\varphi$.
+
+    The problem is local on $Y$, so we may assuem that $Y$ is a complex model space, say $Y$ is a closed subspace of a domain $V$ in $\mathbb{C}^n$ defined by a coherent ideal $\mathcal{I}$. We write $\psi:\mathcal{O}_{V,y}\rightarrow \mathcal{O}_{X,x}$ the homomorphism induced by $\varphi$, we have a commutative diagram
+    \[
+        \begin{tikzcd}
+            {\mathcal{O}_{V,y}} \arrow[d, two heads] \arrow[r, "\psi"] & {\mathcal{O}_{Y,y}} \\
+            {\mathcal{O}_{X,x}} \arrow[ru, "\varphi"]                  &                    
+        \end{tikzcd}.  
+    \]
+    Let $z_1,\ldots,z_n$ be the coordinates on $V$.
+    Let $f_{i,x}$ be the image of $z_{i,x}$ under $\psi$ for $i=1,\ldots,n$. Take an open neighbourhood $U$ of $x$ in $X$ so that $f_{i,x}$ lifts to $f_i\in \mathcal{O}_X(U)$ for $i=1,\ldots,n$. By \cref{Complex-thm-hCnidentification} in \nameref{Complex-chap-complex}, $f_1,\ldots,f_n$ then defines a morphism $g:U\rightarrow \mathbb{C}^n$. Clearly $g(x)=y$. But $g_x^{\#}$ and $\psi$ coincide on $z_{i,y}$ so $g_x^{\#}=\psi$ as $\mathcal{O}_{V,y}=\mathbb{C}\{z_{1,y}-a_1,\ldots,z_{n,y}-a_n\}$ with $a_i=\epsilon(z_{i,y})$ for $i=1,\ldots,n$. Therefore, $g_x^{\#}(\mathcal{I}_y)=0$. Up to shrinking $U$, we may guarantee that $g(U)\subseteq V$ and $g^*(\mathcal{I})=0$ on $U$. Namely, $g$ factorizes through $f:U\rightarrow Y$ and $f^*_x=\varphi$.
+
+    \textbf{Step~3}. We show that the functor is essentially surjective.
+
+    In other words, let $A$ be a complex analytic local algebra, then there is a pointed complex analytic space $(X,x)$ with $\mathcal{O}_{X,x}\cong A$ in $\CLA$.
+
+    We may assume that $A=\mathbb{C}\{z_1,\ldots,z_n\}/I$ for some $n\in \mathbb{N}$ and ideal $I$ in $\mathbb{C}\{z_1,\ldots,z_n\}$. Then $I$ is finitely generated as $\mathbb{C}\{z_1,\ldots,z_n\}$ is noetherian. Take finitely many generators $f_1,\ldots,f_m\in I$. We extend $f_1,\ldots,f_m$ to $g_1,\ldots,g_m\in \mathcal{O}_{\mathbb{C}^n}(U)$ for some open neighbourhood $U$ of $0$ in $\mathbb{C}^n$. Then the closed subspace $X$ of $U$ defined by $f_1,\ldots,f_m$ satisfies the required conditions.
+\end{proof}
+
+
+\begin{lemma}\label{lma-spreadfinitelag}
+    Let $S$ be a complex analytic space and $s\in S$. For any finite $\mathcal{O}_{S,s}$-algebra $A$, there is an open neighbourhood $U$ of $s$ in $S$ and a finite $\mathcal{O}_U$-algebra such that $\mathcal{A}_s\cong A$.
+\end{lemma}
+\begin{proof}
+   This follows from the same arguments of the proof of \cref{thm-germlocalringequivalence} Step~3.
+\end{proof}
+
+\begin{corollary}\label{cor-morphismdefinedbygeneratorlocal}
+    Let $X_x$ be a complex analytic germ, $n\in \mathbb{Z}_{>0}$ and $f_1,\ldots,f_n\in \mathcal{O}_{X,x}$ be a system of parameters. We have a morphism $X_x\rightarrow \mathbb{C}^n_0$ induced by $f_1,\ldots,f_n$. Then there is an open neighbourhood $U$ of $0$ in $\mathbb{C}^n$ and a finite $\mathcal{O}_U$-algebra $\mathcal{A}$ such that $\mathcal{A}_0\cong \mathcal{O}_{X,x}$. The space $\Spec^{\An}_{U}(\mathcal{A})$ admits a unique point $x'$ over $0$ and $X_x$ is isomorphic to $\Spec^{\An}_{U}(\mathcal{A})_{x'}$ in $\AnaGerCat_{/\mathbb{C}^n_0}$.
+\end{corollary}
+\begin{proof}
+    As $f_1,\ldots,f_n$ is a system of parameters, $\mathcal{O}_{X,x}\rightarrow \mathcal{O}_{\mathbb{C}^n,0}$ is finite. By \cref{lma-spreadfinitelag}, we can spread $\mathcal{O}_{X,x}$ to a finite $\mathcal{O}_U$-algebra on an open neighbourhood $U$ of $0$ in $\mathbb{C}^n$. Let $Y=\Spec^{\An}_{U}(\mathcal{A})$. 
+    It follows from \cref{cor-finitespectrumidentification} that $Y$ has a unique point $x'$ over $0$. By \cref{thm-germlocalringequivalence}, up to shrinking $U$, we may guarantee that $X_x$ and $Y_{x'}$ are isomorphic over $\mathbb{C}^n_0$.
+\end{proof}
+
+
+\begin{proposition}\label{prop-bijsubgermideal}
+    Let $X_x$ be a complex analytic germ.
+    The map $Y_x\mapsto I_X(Y,x)$ defines a bijection between the set of closed subgerms of $X_x$ and the set of ideals of $\mathcal{O}_{X,x}$.
+\end{proposition}
+\begin{proof}
+    We construct a reverse map. Given an ideal $I$ of $\mathcal{O}_{X,x}$, as $\mathcal{O}_{X,x}$ is noetherian, $I$ is finitely generated. We can find an open neighbourhood $U$ of $x$ in $X$ and an ideal sheaf of finite type $\mathcal{I}$ of $U$ with $\mathcal{I}_x=I$. Let $Y$ be the closed analytic subspace of $X$ defined by $\mathcal{I}$. We associated $Y_x$ with $I$. 
+    
+    It is easy to verify that this map is the inverse of the given map.
+\end{proof}
+
+\begin{definition}
+    Let $X_x$ be a complex analytic germ and $Y_x, Z_x$ be two closed subgerms of $X_x$. We say $Y_x$ is contained in $Z_x$ and write
+    $Y_x\subseteq Z_x$ if $I(Y,x)\supseteq I_X(Z,x)$. This defines a partial order on the set of closed subgerms of $X_x$.
+\end{definition}
+
+\begin{definition}
+    A complex analytic germ $X_x$ is \emph{integral} if $\mathcal{O}_{X,x}$ is integral.
+\end{definition}
+
+\begin{thm}[Nullstellensatz]\label{thm-Nullstellensatz}
+    Let $X_x$ be an integral complex analytic germ and $Y_y$ be a closed subgerm of $X_x$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $Y_x$ is a proper closed subgerm of $X_x$;
+        \item $|Y|_x$ is a proper closed subgerm of $|X|_x$. 
+    \end{enumerate}
+\end{thm}
+\begin{proof}
+    (2) $\implies$ (1): This is obvious.
+
+    (1) $\implies$ (2): Consider a proper closed subgerm $Y_x$ of $X_x$. By \cref{prop-bijsubgermideal}, $I(Y,x)\neq 0$. 
+    
+    \textbf{Step~1}. We reduce to the case $I(Y,x)=(f)$ for some non-zero element $f\in \mathcal{O}_{X,x}$.
+
+    Take a non-zero element $f\in I(Y,x)$. Let $Y'_x$ be the subgerm of $X_x$ corresponding to the ideal $(f)$ of $\mathcal{O}_{X,x}$. Then $Y_x\subseteq Y'_x$.  It suffices to show that $|Y'|_x\neq |X|_x$. We may replace $Y$ by $Y'$.
+
+    \textbf{Step~2}. We prove that $|Y|_x\neq |X|_x$. 
+
+    Note that $f$ is not a zero-divisor as $\mathcal{O}_{X,x}$ is integral. Write $n=\dim \mathcal{O}_{X,x}$.
+    By Krulls Hauptidealsatz, $\dim \mathcal{O}_{X,x}/(f)=n-1$.
+    Let $\overline{f_1},\ldots,\overline{f_{n-1}}$ be a system of parameters (\cite[\href{https://stacks.math.columbia.edu/tag/00KU}{Tag 00KU}]{stacks-project}) of $\mathcal{O}_{X,x}/(f)$. Lift them to $f_1,\ldots,f_{n-1}\in \mathcal{O}_{X,x}$. Then $(f_1,\ldots,f_{n-1},f)$ is a system of parameters of $\mathcal{O}_{X,x}$. Let $\varphi:X_x\rightarrow \mathbb{C}^n_0$ and $\psi:Y_x\rightarrow \mathbb{C}^{n-1}_0$ be the morphisms defined by these systems of parameters. We then have a commutative diagram in $\AnaGerCat$:
+    \[
+        \begin{tikzcd}
+            Y_x \arrow[r, hook] \arrow[d, "\psi"] & X_x \arrow[d, "\varphi"] \\
+            \mathbb{C}^{n-1}_0 \arrow[r, hook]    & \mathbb{C}^{n}_0        
+        \end{tikzcd}
+    \]
+    It induces a commutative diagram of topological germs:
+    \[
+        \begin{tikzcd}
+            {|Y|_x} \arrow[r, hook] \arrow[d, "|\psi|"] & {|X|_x} \arrow[d, "|\varphi|"] \\
+            \mathbb{C}^{n-1}_0 \arrow[r, hook]    & \mathbb{C}^{n}_0        
+        \end{tikzcd}
+    \]
+The morphism of topological germs of $\mathbb{C}^{n-1}_0\rightarrow \mathbb{C}^{n}_0$ is clearly not an isomorphism, so it suffices to show that $|\varphi|:|X|_x\rightarrow \mathbb{C}^{n}_0   $ is surjective, in the sense that if we represent $|\varphi|$ by a morphism $(U,x)\rightarrow (\mathbb{C}^n,0)$ from an open neighbourhood $U$ of $x$ in $X$ to $\mathbb{C}^n$, then its image contains an open neighbourhood of $0$ in $\mathbb{C}^n$.
+
+By \cref{cor-morphismdefinedbygeneratorlocal}, we may assume that $X=\Spec^{\An}_X \mathcal{A}$ for some finite $\mathcal{O}_X$-algebra $\mathcal{A}$ and $X$ has a unique point over $0$. Then by \cref{cor-finitespectrumidentification}, we have $\mathcal{A}_0\cn \mathcal{O}_{X,x}$. By \cref{Local-cor-morphismpowertolocalsurinj} in \nameref{Local-chap-local}, the natural homomorphism
+\[
+    \varphi^{\#}:\mathcal{O}_{\mathbb{C}^n,0}=\mathbb{C}\{X_1,\ldots,X_n\}\rightarrow \mathcal{A}_0
+\]
+is injective. 
+
+By \cref{cor-suppaffmorphism}, it remains to show that $\Supp \mathcal{A}$ is a neighbourhood of $s$ in $S$. But the kernel of $\mathcal{O}_S\rightarrow \mathcal{A}$ is $0$ at $s$ hence $0$ in a neighbourhood of $s$ since both $\mathcal{O}_S$ and $\mathcal{A}$ are coherent by \cref{Complex-cor-cohsheaffinitepre} in \nameref{Complex-chap-complex}.
+\end{proof}
+
+
+\begin{corollary}\label{cor-orderrelationsubgermideal}
+    Let $X_x$ be a complex analytic germ and $I,J$ be two ideals in $\mathcal{O}_{X,x}$. We let $W(I)$, $W(J)$ denote the topological germs of the closed analytic subgerms of $X_x$ defined by $I$ and $J$ respectively.
+    Then the following are equivalent:
+    \begin{enumerate}
+        \item $W(I)\subseteq W(J)$;
+        \item $J\subseteq \sqrt{I}$.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    If (2) is true, as $\mathcal{O}_{X,x}$ is noetherian, we can find $n\in \mathbb{Z}_{>0}$ such that $J^n\subseteq I$. Extend $I,J$ to coherent ideals $\mathcal{I},\mathcal{J}$ on $X$ up to shrinking $X$.
+    Then $\Supp \mathcal{O}_X/\mathcal{J}\subseteq \Supp \mathcal{O}_X/\mathcal{I}$. Hence, (1) holds.
+
+    Suppose that (1) holds. In order to prove (2), we may assume that $I$ is prime. Then the closed analytic subgerm  $Y_x$ of $X_x$ defined by $I$ is integral. Let $Z_x$ denote the closed analytic subgerm of $X_x$ defined by $J$. The intersection $Y_x\cap Z_x$ of the germs $Y_x$ and $Z_x$ is by definition the closed analytic subgerm of $X_x$ defined by $I+J$. Then
+    \[
+        |Y_x\cap Z_x|=|Y|_x\cap |Z|_x= W(I).  
+    \]
+    By \cref{thm-Nullstellensatz}, $Y_x\subseteq Z_x$. Namely, (2) holds.
+\end{proof}
+\begin{corollary}\label{cor-topgermqunilpotent}
+    Let $X_x$ be a complex analytic germ and $Y_x$ be a closed analytic subgerm. Then the following are equivalent:
+    \begin{enumerate}
+        \item $|X|_x=|Y|_x$;
+        \item $I_X(Y,x)$ is nilpotent.
+    \end{enumerate}
+    In particular, if these conditions hold, $\dim \mathcal{O}_{Y,x}=\dim \mathcal{O}_{X,x}$. 
+\end{corollary}
+\begin{proof}
+    This follows immediately from \cref{cor-orderrelationsubgermideal}.
+\end{proof}
+
+\begin{corollary}\label{cor-isolatedpointartin}
+    Let $X$ be a complex analytic space and $x\in X$. Then the following are equvalent:
+    \begin{enumerate}
+        \item $x$ is isolated in $X$;
+        \item $\mathcal{O}_{X,x}$ is artinian.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    (1) simply means that $X_x=\{x\}_x$. By \cref{cor-topgermqunilpotent}, this holds if and only if $\mathfrak{m}_x$ is nilpotent. As $\mathcal{O}_{X,x}$ is noetherian, the latter is equivalent to that $\mathcal{O}_{X,x}$ is artinian.
+\end{proof}
+
+\begin{corollary}\label{cor-analyticsubspacesamesupp}
+    Let $X$ be a complex analytic space and $Y$ be a closed analytic subspace defined by a coherent ideal $\mathcal{I}$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $|X|=|Y|$;
+        \item $\mathcal{I}$ is locally nilpotent.
+    \end{enumerate} 
+\end{corollary}
+\begin{proof}
+    This follows immediately from \cref{cor-topgermqunilpotent}.
+\end{proof}
+
+\begin{corollary}
+    Let $X$ be a complex analytic space and $f\in \mathcal{O}_X(X)$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $f(x)=0$ for all $x\in X$;
+        \item $f$ is locally nilpotent.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    This follows from \cref{cor-analyticsubspacesamesupp}, where we take $\mathcal{I}$ as the coherent ideal generated by $f$.
+\end{proof}
+
+\begin{corollary}[Rückert Nullstellensatz]
+    Let $X$ be a complex analytic space and $\mathcal{F}$ be a coherent sheaf of $\mathcal{O}_X$-modules. Let $f\in \mathcal{O}_X(X)$ be a function that vanishes on $\Supp \mathcal{F}$. Then for any $x\in X$, there is an open neighbourhood $U\subseteq X$ of $x$ and $m\in \mathbb{Z}_{>0}$ such that $f^m\mathcal{F}|_U=0$.
+\end{corollary}
+\begin{proof}
+    Let $\mathcal{G}$ be the annihilator sheaf of $\mathcal{F}$: 
+    \[
+       \mathcal{G}:=\ker \left(\mathcal{O}_X\rightarrow \Homint_{\mathcal{O}_X}(\mathcal{F},\mathcal{F})\right),
+    \]
+    where the map $\mathcal{O}_X\rightarrow \Homint_{\mathcal{O}_X}(\mathcal{F},\mathcal{F})$ sends a local section $f$ of $\mathcal{O}_X$ to the endohomomorphism of multiplying by $f$ of $\mathcal{F}$.
+    Then $\mathcal{G}$ is a coherent sheaf by Oka's coherence theorem \cref{Complex-thm-Okacoh} in \nameref{Complex-chap-complex}. Let $Y$ be the closed analytic subspace defined by $\mathcal{G}$. By our assumption, $f$ is everywhere zero on $Y$, so $f$ is locally nilpotent in $\mathcal{O}_X/\mathcal{G}\subseteq \Homint_{\mathcal{O}_X}(\mathcal{F},\mathcal{F})$. 
+\end{proof}
+
+\begin{corollary}
+    Let $X$ be a complex analytic space and $\mathcal{I}$ and $\mathcal{J}$ be coherent ideal sheaves on $X$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $\Supp \mathcal{O}_X/\mathcal{I}\subseteq \Supp \mathcal{O}_X/\mathcal{J}$;
+        \item For any $x\in X$, there is an open neighbourhood $U$ of $x$ in $X$ and $n\in \mathbb{Z}_{>0}$ such that
+            \[
+                J^n|_U\subseteq I|_U.
+            \]
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    This follows immediately from \cref{cor-orderrelationsubgermideal}.
+\end{proof}
+
+
+\printbibliography
+\end{document}

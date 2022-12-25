@@ -1,0 +1,130 @@
+\input{preamble}
+
+
+%\usepackage[color]{showkeys}
+%\definecolor{refkey}{rgb}{0,0,1}
+
+\title{Ymir}
+
+
+\chapter*{Morphisms between complex analytic spaces}\label{chap-morphismscomplex}
+
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\tableofcontents
+
+
+
+\section{Introduction}\label{sec-introduction-morphismscomplex}
+
+
+\section{Finite morphism}
+
+
+\begin{definition}
+    A morphism of complex analytic spaces $f:X\rightarrow Y$ is \emph{finite} if its underlying map of topological spaces is topologically finite.
+\end{definition}
+\begin{definition}
+    A morphism of complex analytic spaces $f:X\rightarrow Y$ is \emph{quasi-finite at $x\in X$} if $x$ is an isolated point in $f^{-1}(f(x))$.
+
+    A morphism of complex analytic spaces $f:X\rightarrow Y$ is \emph{quasi-finite} if it is quasi-finite at all $x\in X$.
+\end{definition}
+
+\begin{proposition}\label{prop-projlemma}
+    Let $n\in \mathbb{N}$ and $D$ be an open neighbourhood of $0$ in $\mathbb{C}^n$. 
+    Let $X$ be a closed subspace of $D$ which intersections $\{(0,\ldots,0)\}\times \mathbb{C}$ at and only at $0$. Then there is a connected open product neighbourhood $B\times W\subseteq \mathbb{C}^{n-1}\times \mathbb{C}$ of $0$ in $D$ such that 
+    \begin{enumerate}
+        \item the projection $B\times W\rightarrow B$ induces a finite morphism $h:X'\rightarrow B$ with $X'=X\cap (B\times W)$;
+        \item for any coherent sheaf $\mathcal{M}$ of $\mathcal{O}_{X'}$-modules, $h_*\mathcal{M}$ is coherent.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    We will denote the coordinates on $\mathbb{C}^{n-1}\times \mathbb{C}$ as $(z,w)$.
+
+    Let $\mathcal{I}$ be the ideal of $X$ in $D$. By our assumption, we can choose $f_0\in \mathcal{I}_0$ such that $\deg_w f_0<\infty$ and $f_0(0)=0$. By \cref{Local-thm-Weierstrassprep} in \nameref{Local-chap-local}, we can find a Weierstrass polynomial $\omega_0=w^b+a_1w^{b-1}+\cdots+a_b\in \mathbb{C}\{ z_1,\ldots,z_{n-1} \}[w]$ such that $f_0=e\omega_0$ for some unit $e$ in $\mathbb{C}\{ z_1,\ldots,z_{n} \}$. We choose a product neighbourhood $B\times W\subseteq \mathbb{C}^{n-1}\times \mathbb{C}$ of $0$ in $D$ such that $\omega_0$ can be represented by $\omega\in \mathcal{O}_{\mathbb{C}^{n-1}}(B)[w]$ with $\omega|_{B\times W}\in \mathcal{I}(B\times W)$. Let $\pi:A\rightarrow B$ be the Weierstrass map defined by $\omega$. Then $\pi$ is finite by \cref{thm-Weiemapfiniteandopen}. 
+    Up to shrinking $B$ and $W$, we may assume that $A\cap (B\times W)\rightarrow B$ is finite as well. Set $X':=X\cap (B\times W)$. The restriction $h:X'\rightarrow B$ of $\pi$ is then finite. This proves (1).
+
+    Let $\mathcal{I}'$ be the zero-extension of $\mathcal{I}$ to $A$. Then $\mathcal{I}'$ is coherent. It suffices to show that $\pi_*\mathcal{I}'$ is coherent. Let $y\in B$ be a point and $x_1,\ldots,x_n$ be the distinct points in $\pi^{-1}(y)$.  FOr each $j=1,\ldots,n$, we can find an open neighbourhood $U_j$ of $x_j$ in $A$, pairwise disjoint and an exact sequence 
+    \[
+        \mathcal{O}_{U_j}^{p_j}\rightarrow \mathcal{O}_{U_j}^{q_j}\rightarrow \mathcal{I}'|_{U_j}\rightarrow 0
+    \]
+    for some $p_j,q_j\in \mathbb{Z}_{>0}$.  We may assume that $p_1=\cdots=p_n$ and $q_1=\cdots=q_n$. We denote the common values by $p$ and $q$. Then $U=U_1\cup\cdots\cup U_n$ is a neighbourhood of $\pi^{-1}(y)$, and we have an exact sequence 
+    \[
+        \mathcal{O}_{U}^{p}\rightarrow \mathcal{O}_{U}^{q}\rightarrow \mathcal{I}'|_{U}\rightarrow 0.
+    \]
+    By \cref{Topology-lma-opennhfiberclosedmap} in \nameref{Topology-chap-topology}, we may assume that $U=\pi^{-1}(V)$ for some open neighbourhood $V$ of $y$ in $B$. The induced map $\pi':U\rightarrow V$ is finite and by \cref{Topology-cor-pushforwardsheaffinite} in \nameref{Topology-chap-topology}, we have an exact sequence
+    \[
+        \pi'_*\mathcal{O}_{U}^{p}\rightarrow \pi'_*\mathcal{O}_{U}^{q}\rightarrow \pi'_*\left(\mathcal{I}'|_{U}\right)=(\pi_*\mathcal{I}')|_V\rightarrow 0.
+    \]
+    By \cref{thm-Okacoh} and \cref{thm-Weierstrassiso}, the first two terms are both coherent, hence so is $(\pi_*\mathcal{I}')|_V$.
+\end{proof}
+
+\begin{corollary}\label{cor-projlemma}
+    Let $n,k\in \mathbb{N}$ and $D$ be an open neighbourhood of $0$ in $\mathbb{C}^n$. 
+    Let $X$ be a closed subspace of $D$ which intersections $\{(0,\ldots,0)\}\times \mathbb{C}^k$ at and only at $0$. Then there is a connected open product neighbourhood $B\times W\subseteq \mathbb{C}^{n-k}\times \mathbb{C}^k$ of $0$ in $D$ such that 
+    \begin{enumerate}
+        \item the projection $B\times W\rightarrow B$ induces a finite morphism $h:X'\rightarrow B$ with $X'=X\cap (B\times W)$;
+        \item for any coherent sheaf $\mathcal{M}$ of $\mathcal{O}_{X'}$-modules, $h_*\mathcal{M}$ is coherent.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    This follows from a repeted application of \cref{prop-projlemma}
+\end{proof}
+
+\begin{proposition}\label{prop-quasifinitefinite}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. Assume that $f$ is quasi-finite at $x\in X$. Then there is an open neighbourhood $U$ of $x$ in $X$ and an open neighbourhood of $f(x)$ in $Y$ with $f(U)\subseteq V$ such that 
+    \begin{enumerate}
+        \item the induced map $f':U\rightarrow V$ is finite;
+        \item for any coherent sheaf $\mathcal{F}$ of $\mathcal{O}_U$-modules, $f'_*\mathcal{F}$ is coherent. 
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    The assertion is local on both $X$ and $Y$. So we may assume that $U$ and $V$ are complex model spaces in domains $W\subseteq \mathbb{C}^k$ and $B\subseteq \mathbb{C}^d$ respectively with $x=0$ and $y=0$. Moreover, we may assume that $\{x\}=f'^{-1}(y)$. We have the following commutative diagram:
+    \[
+        \begin{tikzcd}
+            &                                & U\times V \arrow[dd] \arrow[r, hook] & W\times B \arrow[dd] \\
+U \arrow[r] \arrow[rrd,"f'"] & \Gamma_f \arrow[rd] \arrow[ru] &                                      &                      \\
+            &                                & V \arrow[r, hook]                    & B                   
+\end{tikzcd},
+    \]
+    where $\Gamma_{f'}$ denotes the graph of $f':U\rightarrow V$. As $\{x\}=f'^{-1}(y)$, we have $\mathbb{C}^k\times\{0\}$ intersects $\Gamma_f$ only at the origin. By \cref{cor-projlemma}, up to shrinking $W$ and $B$, we may guarantee that the projection $W\times B\rightarrow B$ induces a finite morphism $\Gamma_f\rightarrow B$ and the pushforward under this map preserves coherence. Observe that $U\rightarrow \Gamma_f$ is a biholomorphism, we conclude that $f'$ is finite. This proves (1). Moroever, observe that the zero-extension of $f'_*\mathcal{I}$ is the successive pushforward of $\mathcal{I}$ along $U\rightarrow U_f$ and then along $U_f\rightarrow B$. It follows that  $f'_*\mathcal{I}$ is coherent.
+\end{proof}
+
+\begin{theorem}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. Write $y=f(x)$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $f$ is quasi-finite at $x$;
+        \item $\mathcal{O}_{X,x}$ is finite over $\mathcal{O}_{Y,y}$.
+        \item $\dim_{\mathbb{C}}\mathcal{O}_{X,x}/\mathfrak{m}_{y}\mathcal{O}_{X,x}<\infty$.
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{theorem}\label{thm-finitepushcoherent}
+    Let $f:X\rightarrow Y$ be a finite morphism of complex analytic spaces, then for any coherent sheaf $\mathcal{M}$ of $\mathcal{O}_X$-modules, $f_*\mathcal{M}$ is also coherent.
+\end{theorem}
+\begin{proof}
+    Let $y\in Y$ and $x_1,\ldots,x_n$ be the distinct points in $f^{-1}(y)$. By \cref{prop-quasifinitefinite}, we can find an open neighbourhood $W_j$ of $x_j$ in $X$ and open neighbourhoods $V_j$ of $y$ in $Y$ with $f(W_j)\subseteq V_j$ for $j=1,\ldots,n$ such that the induced maps $W_j\rightarrow V_j$ are all finite and pushforwards along these maps preserve coherence. We may assume that $W_1,\ldots,W_n$ are pairwise disjoint.
+    Let $V=V_1\cap \cdots\cap V_n$. For each $j=1,\ldots,n$, define $U_j:=f^{-1}(V)\cap W_j$. By \cref{Topology-thm-localstructuretopfinitemap} in \nameref{Topology-chap-topology}, up to shrinking $V$ and $W$, we may guarantee that
+    \[
+        (f_*\mathcal{I})|_V\cong \prod_{j=1}^n f_{j*}(\mathcal{I}|_{U_j}),
+    \]
+    where $f_j:U_j\rightarrow V$ is the morphism induced by $f$. Now it is clear that $(f_*\mathcal{I})|_V$ is coherent.
+\end{proof}
+
+
+
+\cite{stacks-project}
+
+\printbibliography
+\end{document}

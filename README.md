@@ -29,7 +29,15 @@ We will freely make use of all results from Stacks Project.
 
 - [The notion of complex analytic spaces](Complex-Analytic-Spaces.pdf)
 
-> To do: include the notion of open/closed immersions.
+> To do: remove the Hausdorff assumptions.
+
+- [Constructions of complex analytic spaces](Constructions-Complex-Spaces.pdf)
+
+- [Properties of complex analytic spaces](Properties-Complex-Spaces.pdf)
+
+> To do, include everything.
+
+- [Morphisms of complex analytic spaces](Morphism-Complex-Spaces.pdf)
 
 ### Part 3 Non-Archimedean analytic spaces
 
