@@ -650,6 +650,20 @@ The existence of $\varphi$ is guaranteed by \cref{lma-powerseriesfunctorpoint}.
     (3) This follows from (1) and (2).
 \end{proof}
 
+\begin{lemma}\label{lma-finitetorsionfreeoverlocalequidim}
+    Let $A$ be an integral complex analytic local algebra and $B$ be a finite torsion-free $A$-algebra. Then for any maximal ideal $\mathfrak{m}$ of $B$,
+    $B_{\mathfrak{m}}$ is equidimensional of dimension $\dim A$.
+\end{lemma}
+\begin{proof}
+    By \cref{thm-convpowerstrictHen}, $B_{\mathfrak{m}}$ is finite over $A$ by \cite[\href{https://stacks.math.columbia.edu/tag/04GG}{Tag 04GG}]{stacks-project}(10). It is clearly torsion-free as $A$-module. So we may assume that $B$ is local. We will identify $A$ with a subring of $B$.
+
+    Let $\mathfrak{p}$ be a minimal prime ideal of $B$ and $\mathfrak{q}=\mathfrak{p}\cap A$. Then $B_{\mathfrak{p}}$ is finite torsion-free over $A_{\mathfrak{q}}$ and 
+    \[
+        \mathfrak{p}B_{\mathfrak{p}}\cap A_{\mathfrak{q}}=\mathfrak{q}A_{\mathfrak{q}}    
+    \]
+    is the maximal ideal in $A_{\mathfrak{q}}$. By going-up, $\mathfrak{p}B_{\mathfrak{p}}$ is the maximal ideal in $B_{\mathfrak{p}}$. As it is clearly minimal, we find that $\dim B_{\mathfrak{p}}=0$. So $\dim A_{\mathfrak{q}}=0$. So $\mathfrak{p}$ is necessarily the minimal prime ideal $0$ in $A$. Namely, $\mathfrak{p}\cap A=0$. But then $B/\mathfrak{p}$ is finite over $A$ and $A\rightarrow B/\mathfrak{p}$ is injective. In particular, $\dim B/\mathfrak{p}=\dim A$.
+\end{proof}
+
 \begin{definition}\label{def-analytictensor}
     Let $A_1,A_2$ be complex analytic local algebras, \emph{an analytic tensor product} of $A_1$ and $A_2$ is a complex analytic local algebra $A$ together with morphisms $A_1\rightarrow A$ and $A_2\rightarrow A$ such that for any complex analytic local algebra $C$, the induced map
     \[

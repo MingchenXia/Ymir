@@ -8,9 +8,198 @@
 
 \section{Introduction}\label{sec-introduction-propertycomplex}
 
-\section{Template}
+
+\section{Dimension}
+
+\begin{definition}
+    Let $X$ be a complex analytic space and $x\in X$, the \emph{dimension} $\dim_x X$ of $X$ at $x$ is 
+    \[
+        \dim_x X=\dim \mathcal{O}_{X,x}.
+    \]
+    We also define the \emph{dimension} of the pointed complex analytic space $(X,x)$ and the \emph{dimension} of the complex analytic germ $X_x$ as $\dim_x X$.
+\end{definition}
+
+\begin{definition}
+    Let $X$ be a complex analytic space, we say $X$ is \emph{equidimensional} at $x\in X$ if $\mathcal{O}_{X,x}$ is equidimensional.
+
+    We also say $(X,x)$ or $X_x$ is \emph{equidimensional}.
+
+    We say $X$ is \emph{equidimensional of dimension $n$} if $X$ is equidimensional of dimension $n$ at each $x\in X$.
+\end{definition}
+Recall that in general, a local ring $R$ is equidimensional if $\dim R/\mathfrak{p}=\dim R$ for all minimal prime $\mathfrak{p}$ of $R$.
+
+\begin{definition}
+    Let $X$ be a complex analytic space and $x\in X$, we say $X$ is \emph{integral} at $x$ if $\mathcal{O}_{X,x}$ is integral.
+\end{definition}
+This corresponds to the notion defined in \cref{ConstructionComplex-def-integralgerm} in \nameref{ConstructionComplex-chap-constructionComplex}.
+
+\begin{thm}\label{thm-equidimlocusopen}
+    Let $X$ be a complex analytic space and $n\in \mathbb{N}$, then the set of points $x\in X$ such that $X_x$ is equidimensional of dimension $n$ is open. 
+\end{thm}
+This is analogous to the result for noetherian cartenary schemes.
+\begin{proof}
+    Let $x\in X$ be a point such that $X_x$ is equidimensional of dimension $n$. 
+    We want to construct an open neighbourhood $V$ of $x$ in $X$ such that $X$ is equidimensional of dimension $n$ at any $y\in V$.
+
+    \textbf{Step~1}. We reduce to the case where $X$ is integral at $x$.
+
+    Let $\mathfrak{p}_1,\ldots,\mathfrak{p}_m$ be the minimal primes of $\mathcal{O}_{X,x}$. The number is finite because $\mathcal{O}_{X,x}$ is noetherian. We have
+    \[
+        \bigcap_{i=1}^m \mathfrak{p}_i=\rad \mathcal{O}_{X,x}.
+    \]
+    Take an open neighbourhood $U$ of $x$ in $X$  such that there are ideals of finite type $\mathcal{I}_1,\ldots,\mathcal{I}_m$ extending $\mathfrak{p}_1,\ldots,\mathfrak{p}_m$.  Up to shrinking $U$, we may assume that 
+    \[
+        \bigcap_{i=1}^m \mathcal{I}_i  
+    \]
+    is nilpotent. For each $i=1,\ldots,m$, let $U_i$ denote the closed analytic subspace of $U$ defined by $\mathcal{I}_i$. Then
+    \[
+        |U|=\bigcup_{i=1}^m |U_i|  
+    \]
+    by \cref{ConstructionComplex-cor-analyticsubspacesamesupp} in \nameref{ConstructionComplex-chap-constructionComplex}. 
+    As for any $y\in U$,
+    \[
+        \bigcap_{i=1}^m \mathcal{I}_{i,y} 
+    \]
+    is nilpotent, we have
+    \[
+        |\Spec \mathcal{O}_{X,y}|=|\Spec \mathcal{O}_{X,y}/\bigcap_{i=1}^m \mathcal{I}_{i,y} |=\bigcup_{i=1}^m |\Spec \mathcal{O}_{X,y}/\mathcal{I}_{i,y} |.
+    \]
+    In particular, for any $y\in U$, 
+    \[
+        \dim_y X=\dim_y U=\max_{i=1,\ldots,m} \dim_y U_i. 
+    \]
+    It suffices to handle each $W_i$ separately. 
+
+    \textbf{Step~2}. We assume that $X_x$ is integral. By \cref{ConstructionComplex-thm-morphismdefinedbygeneratorlocal} in \nameref{ConstructionComplex-chap-constructionComplex}, we may assume that  $X$ has the following structure: there is an open neighbourhood $W$ of $0$ in $\mathbb{C}^n$, a morphism $(X,x)\rightarrow (W,0)$ and a finite $\mathcal{O}_W$-algebra $\mathcal{A}$ such that $\Spec^{\An}_W \mathcal{A}$ has a unique point $x'$ over $0$ and $(\Spec^{\An}_W \mathcal{A},x')$ is isomorphic to $(X,x)$ over $(W,0)$. By \cref{Local-cor-morphismpowertolocalsurinj} in \nameref{Local-chap-local}, $\mathcal{O}_{W,0}\rightarrow \mathcal{O}_{X,x}$ is injective, hence $\mathcal{O}_{X,x}$ is torsion-free over $\mathcal{O}_{W,0}$. As the torsion sheaf is coherent, up to shrinking $X$, we may assume that $\mathcal{O}_{X,y}$ is torsion-free over $\mathcal{O}_{W,z}$, where $z$ denotes the image of $y$ in $W$. It suffices to apply \cref{Local-lma-finitetorsionfreeoverlocalequidim} in \nameref{Local-chap-local}.
+\end{proof}
+
+\begin{corollary}
+    Let $X$ be a complex analytic space and $n\in \mathbb{N}$. Then the set $\{x\in X:\dim_x X\geq n\}$ is an analytic set in $X$.
+
+    %Moreover, $x\in X$ lies in the interior of $\{x\in X:\dim_x X\geq n\}$ if and only if for all minimal prime $\mathfrak{p}$ of $\mathcal{O}_{X,x}$, we have
+    %\[
+    %    \dim \mathcal{O}_{X,x}/\mathfrak{p}\geq n.  
+    %\]
+\end{corollary}
+After introducing the analytic Zariski topology, we can reformulate this corollary as follows: the map $x\mapsto \dim_x X$ is upper semi-continuous with respect to the analytic Zariski topology.
+\begin{proof}
+    The problem is local on $X$. Fix $x\in X$ and let $\mathfrak{p}_1,\ldots,\mathfrak{p}_m$ be the minimal prime ideals of $\mathcal{O}_{X,x}$. Up to shrinking $X$, we may assume that 
+    \[
+        |X|=\bigcup_{i=1}^m |W_i|,  
+    \]
+    where $W_i$ is a closed analytic subspace of $X$ defined by a coherent $\mathcal{I}_i$ spreading $\mathfrak{p}_i$. We can guarantee that
+    \[
+        \dim_y X=\max_{i=1,\ldots,m}\dim_y W_i.   
+    \]
+    
+    This is possible as in the proof of \cref{thm-equidimlocusopen}. By \cref{thm-equidimlocusopen}, up to shrinking $X$, we may assume that $W_i$ is equidimensional of dimension $n_i$ for some $n_i\in \mathbb{N}$ for each $i=1,\ldots,m$. In particular, for each $y\in X$, we have
+    \[
+        \dim_y X=\sup_{y\in W_i} n_i.  
+    \]
+    So 
+    \[
+        \{x\in X:\dim_x X\geq n\}=\bigcup_{i: n_i\geq n} |W_i|.  
+    \]
+    The corollary follows.
+\end{proof}
+
+\begin{definition}
+    Let $X_x$ be an analytic germ and $Y_x$ be a closed analytic subgerm defined by an ideal $I\subseteq \mathcal{O}_{X,x}$.
+    \begin{enumerate}
+        \item When $Y_x$ is irreducible, namely when $I$ is a prime ideal, we define the \emph{codimension} of $Y_x$ in $X_x$ as 
+            \[
+                \codim_x(Y,X):=\het_{\mathcal{O}_{X,x}}(I).    
+            \]
+        \item In general, we define the \emph{codimension} of $Y_x$ in $X_x$ as 
+        \[
+            \codim_x(Y,X):=\inf_{Z_x\subseteq Y_x} \codim_x(Y,X),
+        \]
+        where $Z_x$ runs over closed analytic subgerms of $X_x$ contained in $Y_x$.
+    \end{enumerate}
+    We also call $\codim_x(Y,X)$ the codimension of $Y$ in $X$ at $x$.
+\end{definition}
+Observe that 
+\[
+    \codim_x(Y,X)\leq \dim_x X-\dim_x Y.
+\]
+When $X_x$ is equidimensional, $\codim_x(Y,X)$ is nothing but $\dim_x X-\dim_x Y$.
 
 
+\section{Serre's condition \texorpdfstring{$R_n$}{Rn}}
+Fix $n\in \mathbb{N}$ in this section.
+\begin{definition}
+    Let $X$ be a complex analytic space, we say $X$ \emph{satisfies $R_n$} at $x\in X$ if $\mathcal{O}_{X,x}$ satisfies $R_n$. We also say $(X,x)$ or $X_x$  \emph{satisfies $R_n$} at $x\in X$.
+
+    We say $X$  \emph{satisfies $R_n$} if $X$ satisfies $R_n$ at all points $x\in X$. 
+\end{definition}
+
+\begin{proposition}
+    
+\end{proposition}
+
+\section{Serre's condition \texorpdfstring{$S_n$}{Sn}}
+Fix $n\in \mathbb{N}$ in this section.
+\begin{definition}
+    Let $X$ be a complex analytic space, we say $X$ \emph{satisfies $S_n$} at $x\in X$ if $\mathcal{O}_{X,x}$ satisfies $R_n$. We also say $(X,x)$ or $X_x$  \emph{satisfies $S_n$} at $x\in X$.
+
+    We say $X$  \emph{satisfies $S_n$} if $X$ satisfies $S_n$ at all points $x\in X$. 
+\end{definition}
+
+\begin{proposition}
+    
+\end{proposition}
+
+\section{Reducedness}
+\begin{definition}
+    Let $X$ be a complex analytic space, we say $X$ is \emph{reduced} at $x\in X$ if $\mathcal{O}_{X,x}$ is reduced. We also say $(X,x)$ or $X_x$ is \emph{reduced} at $x\in X$.
+
+    We say $X$ is \emph{reduced} if $X$ is reduced at all points $x\in X$. 
+\end{definition}
+
+\begin{thm}\label{thm-reducedlocusopen}
+    Let $X$ be a complex analytic space. Then the set of points $x\in X$ such that $\mathcal{O}_{X,x}$ is reduced is the complement of an analytic set.
+\end{thm}
+\begin{proof}
+    
+\end{proof}
+
+\begin{corollary}\label{cor-nilradcoh}
+    Let $X$ be a complex analytic space, then the nilradical $\rad \mathcal{O}_X$ is coherent.
+\end{corollary}
+\begin{proof}
+    The problem is local on $X$. Take $x\in X$. Up to shrinking $X$, we may assume that $\mathcal{O}_{X,x}/(\rad \mathcal{O}_X)_x$ spreads to a finite $\mathcal{O}_X$-algebra $\mathcal{A}$ by \cref{ConstructionComplex-lma-spreadfinitelag} in \nameref{ConstructionComplex-chap-constructionComplex}. Up to further shrinking $X$, we may assume that $\mathcal{A}$ is the quotient of $\mathcal{O}_X$, say $\mathcal{A}\cong \mathcal{O}_X/\mathcal{I}$ for some coherent ideal $\mathcal{I}$ on $X$. As $\mathcal{I}_x$ is nilpotent by assumption, up to shrinking $X$, we may assume that $\mathcal{I}$ is also nilpotent, namely
+    \[
+        \mathcal{I}\subseteq  \rad \mathcal{O}_X. 
+    \]
+    Let $Y$ be the closed analytic subspace of $X$ defined by the ideal $\mathcal{I}$. Then $\mathcal{O}_{Y,x}\cong \mathcal{O}_{X,x}/(\rad \mathcal{O}_X)_x$ is reduced. Up to shrinking $X$, by \cref{thm-reducedlocusopen}, we may assume that $Y$ is reduced. But then for any $y\in Y$, 
+    \[
+        \mathcal{O}_{Y,y}\cong \mathcal{O}_{X,y}/\mathcal{I}_y
+    \]
+    is reduced, so
+    \[
+        \mathcal{I}_y\supseteq   (\rad \mathcal{O}_X)_y.
+    \] 
+    It follows that $\rad \mathcal{O}_X=\mathcal{I}$, hence the nilradical is coherent.
+\end{proof}
+
+\begin{corollary}[Cartan--Oka]\label{cor-CartanOka}
+    Let $X$ be a complex analytic space and $A$ be an analytic subset of $X$, then the sheaf $\mathcal{J}_A$ is coherent.
+\end{corollary}
+Recall that the sheaf $\mathcal{J}_A$ is introduced in \cref{ConstructionComplex-def-sheafidealanaset} in \nameref{ConstructionComplex-chap-constructionComplex}.
+\begin{proof}
+By   \cref{ConstructionComplex-lma-analyticsetlocallyidealsheaf} in \nameref{ConstructionComplex-chap-constructionComplex}, we may assume that $A$ is a closed analytic subspace of $X$ defined by a coherent ideal $\mathcal{I}$. By \cref{ConstructionComplex-cor-orderrelationsubgermideal} in \nameref{ConstructionComplex-chap-constructionComplex}, the sheaf $\mathcal{J}_A$ is nothing but $\sqrt{I}$, which is coherent by \cref{cor-nilradcoh}.
+\end{proof}
+
+\begin{corollary}\label{cor-reducedinduced}
+    Let $X$ be a complex analytic space and $A$ be an analytic subset of $X$, then there is a unique reduced closed analytic space $Y$ of $X$ with underlying set $A$.
+\end{corollary}
+\begin{proof}
+    The existence follows from \cref{cor-CartanOka}. The uniqueness follows from \cref{ConstructionComplex-cor-orderrelationsubgermideal} in \nameref{ConstructionComplex-chap-constructionComplex}.
+\end{proof}
+
+\begin{definition}
+    Let $X$ be a complex analytic space and $A$ be an analytic subset of $X$. The analytic space structure on $A$ defined in \cref{cor-reducedinduced} is called the \emph{reduced induced structure} on $A$.
+\end{definition}
 
 
 

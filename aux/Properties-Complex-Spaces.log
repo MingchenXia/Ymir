@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  25 DEC 2022 21:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  26 DEC 2022 19:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -908,48 +908,90 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 51.
 Package xr Warning: 
 No file Introduction.aux
 LABELS NOT IMPORTED.
- on input line 334.
+ on input line 337.
 
 (Introduction.tex)
 (Introduction.aux)
 No file Introduction.aux.
-Package xr Info: IMPORTING LABELS FROM Topology-Bornology.aux on input line 335.
+
+Package xr Warning: 
+No file Topology-Bornology.aux
+LABELS NOT IMPORTED.
+ on input line 338.
+
 (Topology-Bornology.tex)
 (Topology-Bornology.aux)
-Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 336.
+No file Topology-Bornology.aux.
+
+Package xr Warning: 
+No file Banach-Rings.aux
+LABELS NOT IMPORTED.
+ on input line 339.
+
 (Banach-Rings.tex)
 (Banach-Rings.aux)
-Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 337.
+No file Banach-Rings.aux.
+
+Package xr Warning: 
+No file Commutative-Algebra.aux
+LABELS NOT IMPORTED.
+ on input line 340.
+
 (Commutative-Algebra.tex)
 (Commutative-Algebra.aux)
-Package xr Info: IMPORTING LABELS FROM Local-Algebras.aux on input line 341.
+No file Commutative-Algebra.aux.
+
+Package xr Warning: 
+No file Local-Algebras.aux
+LABELS NOT IMPORTED.
+ on input line 344.
+
 (Local-Algebras.tex)
 (Local-Algebras.aux)
-Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 342.
+No file Local-Algebras.aux.
+
+Package xr Warning: 
+No file Complex-Analytic-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 345.
+
 (Complex-Analytic-Spaces.tex)
 (Complex-Analytic-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Constructions-Complex-Spaces.aux on input line 343.
+No file Complex-Analytic-Spaces.aux.
+
+Package xr Warning: 
+No file Constructions-Complex-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 346.
+
 (Constructions-Complex-Spaces.tex)
 (Constructions-Complex-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Properties-Complex-Spaces.aux on input line 344.
+No file Constructions-Complex-Spaces.aux.
+Package xr Info: IMPORTING LABELS FROM Properties-Complex-Spaces.aux on input line 347.
 (Properties-Complex-Spaces.tex)
 (Properties-Complex-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Morphisms-Complex-Spaces.aux on input line 345.
+
+Package xr Warning: 
+No file Morphisms-Complex-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 348.
+
 (Morphisms-Complex-Spaces.tex)
 (Morphisms-Complex-Spaces.aux)
+No file Morphisms-Complex-Spaces.aux.
 
 Package xr Warning: 
 No file Affinoid-Algebras.aux
 LABELS NOT IMPORTED.
- on input line 347.
+ on input line 350.
 
 (Affinoid-Algebras.tex)
 (Affinoid-Algebras.aux)
 No file Affinoid-Algebras.aux.
-Package xr Info: IMPORTING LABELS FROM Berkovich-Analytic-Spaces.aux on input line 348.
+Package xr Info: IMPORTING LABELS FROM Berkovich-Analytic-Spaces.aux on input line 351.
 (Berkovich-Analytic-Spaces.tex)
 (Berkovich-Analytic-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Properties-Berkovich-Spaces.aux on input line 349.
+Package xr Info: IMPORTING LABELS FROM Properties-Berkovich-Spaces.aux on input line 352.
 (Properties-Berkovich-Spaces.tex)
 (Properties-Berkovich-Spaces.aux)
 )
@@ -1081,7 +1123,16 @@ Package caption Info: End \AtBeginDocument code.
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 Contents
-(/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Properties-Complex-Spaces.toc)
+(/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Properties-Complex-Spaces.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 10.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 10.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+))
 \tf@toc=\write5
 \openout5 = `Properties-Complex-Spaces.toc'.
 
@@ -1091,11 +1142,81 @@ Contents
 
 ]
 Properties of complex analytic spaces
-[5] [6
+LaTeX Font Info:    Trying to load font information for U+euf on input line 29.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
+)
 
-]
+LaTeX Warning: Reference `ConstructionComplex-def-integralgerm' on page 1 undefined on input line 34.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 5 undefined on input line 34.
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10'.
+(microtype)             Ignoring protrusion settings for this character.
+[5]
+
+LaTeX Warning: Reference `ConstructionComplex-cor-analyticsubspacesamesupp' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 6 undefined on input line 58.
+
+
+LaTeX Warning: Reference `ConstructionComplex-thm-morphismdefinedbygeneratorlocal' on page 1 undefined on input line 73.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 6 undefined on input line 73.
+
+
+LaTeX Warning: Reference `Local-cor-morphismpowertolocalsurinj' on page 1 undefined on input line 73.
+
+
+LaTeX Warning: Reference `Local-chap-local' on page 6 undefined on input line 73.
+
+
+LaTeX Warning: Reference `Local-lma-finitetorsionfreeoverlocalequidim' on page 1 undefined on input line 73.
+
+
+LaTeX Warning: Reference `Local-chap-local' on page 6 undefined on input line 73.
+
+[6]
+
+LaTeX Warning: Reference `ConstructionComplex-lma-spreadfinitelag' on page 1 undefined on input line 170.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 7 undefined on input line 170.
+
+[7]
+
+LaTeX Warning: Reference `ConstructionComplex-def-sheafidealanaset' on page 1 undefined on input line 188.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 8 undefined on input line 188.
+
+
+LaTeX Warning: Reference `ConstructionComplex-lma-analyticsetlocallyidealsheaf' on page 1 undefined on input line 190.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 8 undefined on input line 190.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-orderrelationsubgermideal' on page 1 undefined on input line 190.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 8 undefined on input line 190.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-orderrelationsubgermideal' on page 1 undefined on input line 197.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 8 undefined on input line 197.
+
+[8]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 21.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 210.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1103,32 +1224,29 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 21.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 21.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [7] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Properties-Complex-Spaces.aux)
+ [9
+
+] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Properties-Complex-Spaces.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'Properties-Complex-Spaces.run.xml'.
 \openout1 = `Properties-Complex-Spaces.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37138 strings out of 478994
- 704105 string characters out of 5858185
- 1540584 words of memory out of 5000000
- 53822 multiletter control sequences out of 15000+600000
- 444922 words of font info for 82 fonts, out of 8000000 for 9000
+ 36856 strings out of 478994
+ 691564 string characters out of 5858185
+ 1533914 words of memory out of 5000000
+ 53444 multiletter control sequences out of 15000+600000
+ 455598 words of font info for 118 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,5n,133p,1011b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Properties-Complex-Spaces.pdf (7 pages, 119308 bytes).
+ 132i,8n,133p,1157b,1804s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Properties-Complex-Spaces.pdf (9 pages, 224923 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 16941 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 201 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 21061 words of extra memory for PDF output out of 24883 (max. 10000000)
 

@@ -1,9 +1,0 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'aux/Morphisms-Complex-Spaces.blg'
-[67] biber-darwin:340> INFO - === Sun Dec 25, 2022, 19:27:03
-[81] Biber.pm:415> INFO - Reading 'aux/Morphisms-Complex-Spaces.bcf'
-[165] Biber.pm:952> INFO - Found 0 citekeys in bib section 0
-[170] Utils.pm:395> WARN - The file 'aux/Morphisms-Complex-Spaces.bcf' does not contain any citations!
-[177] bbl.pm:654> INFO - Writing 'aux/Morphisms-Complex-Spaces.bbl' with encoding 'UTF-8'
-[177] bbl.pm:757> INFO - Output to aux/Morphisms-Complex-Spaces.bbl
-[177] Biber.pm:128> INFO - WARNINGS: 1
