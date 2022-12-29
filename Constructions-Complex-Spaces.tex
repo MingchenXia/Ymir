@@ -164,12 +164,14 @@ It is easy to see that $\Spec^{\An}_S \mathcal{A}$ is contravaraint in $\mathcal
 
 \begin{corollary}\label{cor-finitespectrumidentification}
     Let $S$ be a complex analytic space and $\mathcal{A}$ be a finite $\mathcal{O}_S$-algebra. Write $X=\Spec^{\An}_S\mathcal{A}$.
-    Take $s\in S$. Then the fiber $X_s$ is finite and is in bijection with $\Spm_{\mathbb{C}} \mathcal{A}_s$. If $\mathfrak{m}$ corresponds to $x\in X_s$, then we have a natural isomorphism 
+    Take $s\in S$. Then the fiber $X_s$ is finite and is in bijection with $\Spm_{\mathbb{C}} \mathcal{A}_s=\Spm \mathcal{A}_s$. If $\mathfrak{m}$ corresponds to $x\in X_s$, then we have a natural isomorphism 
     \[
         \mathcal{A}_{s,\mathfrak{m}}\cn \mathcal{O}_{X,x}.  
     \]
 \end{corollary}
 \begin{proof}
+    We first observe that as $\mathcal{A}_s$ is a finite $\mathcal{O}_{S,s}$-algebra, its residue fields at maximal primes are finite extensions of the residue field $\mathbb{C}$ of $\mathcal{O}_{S,s}$. So $\Spm_{\mathbb{C}} \mathcal{A}_s=\Spm \mathcal{A}_s$.
+
     As $\mathcal{O}_{S,s}\rightarrow \mathcal{A}_s$ is finite, $\mathcal{A}_s$ is semi-local. On the other hand, by \cref{prop-specanlocalringcompletion}, 
     \[
         \mathcal{A}_{s,\mathfrak{m}}\rightarrow   \mathcal{O}_{X,x}
@@ -180,7 +182,7 @@ It is easy to see that $\Spec^{\An}_S \mathcal{A}$ is contravaraint in $\mathcal
 \end{proof}
 
 \begin{corollary}\label{cor-suppaffmorphism}
-    Let $S$ be a complex analytic space and $\mathcal{A}$ be a finite $\mathcal{O}_S$-algebra. Then the image of $\Spec^{\An}_S\mathcal{A}\rightarrow S$ is $\Supp A$.
+    Let $S$ be a complex analytic space and $\mathcal{A}$ be a finite $\mathcal{O}_S$-algebra. Then the image of $\Spec^{\An}_S\mathcal{A}\rightarrow S$ is $\Supp \mathcal{A}$.
 \end{corollary}
 \begin{proof}
     This follows from \cref{cor-finitespectrumidentification} and the fact that $\Spm_{\mathbb{C}}\mathcal{A}_s=\Spm\mathcal{A}_s$ for all $s\in S$.
@@ -347,6 +349,63 @@ We remind the readers that we are following Grothendieck's convention for $\math
     We may assume that $A=\mathbb{C}\{z_1,\ldots,z_n\}/I$ for some $n\in \mathbb{N}$ and ideal $I$ in $\mathbb{C}\{z_1,\ldots,z_n\}$. Then $I$ is finitely generated as $\mathbb{C}\{z_1,\ldots,z_n\}$ is noetherian. Take finitely many generators $f_1,\ldots,f_m\in I$. We extend $f_1,\ldots,f_m$ to $g_1,\ldots,g_m\in \mathcal{O}_{\mathbb{C}^n}(U)$ for some open neighbourhood $U$ of $0$ in $\mathbb{C}^n$. Then the closed subspace $X$ of $U$ defined by $f_1,\ldots,f_m$ satisfies the required conditions.
 \end{proof}
 
+\begin{corollary}\label{cor-localisocondition}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $f$ is a local isomorphism;
+        \item $f^{\#}_x:\mathcal{O}_{Y,f(x)}\rightarrow \mathcal{O}_{X,x}$ is an isomorphism;
+        \item $\widehat{f^{\#}_x}:\hat{O}_{Y,f(x)}\rightarrow \hat{O}_{X,x}$ is an isomorphism.
+    \end{enumerate}
+\end{corollary}
+Later on, we will see that Condition~(3) means $f$ is étale at $x$.
+\begin{proof}
+    (1) $\Leftrightarrow$  (2): This follows from \cref{thm-germlocalringequivalence}.
+
+    (2) $\implies$ (3): This is clear.
+
+    (3) $\implies$ (2): As $f^{\#}_x$ is quasi-finite, the $\mathfrak{m}_x$-adic topology on $\mathcal{O}_{X,x}$ coincides with the $\mathfrak{m}_{f(x)}$-adic topology on it regarded as an $\mathcal{O}_{Y,f(x)}$-module.
+    By \cref{Local-thm-analyticquasifiniteifffinite} in 
+    \nameref{Local-chap-local}, $f^{\#}_x$ is finite. 
+    So
+    \[
+        \hat{\mathcal{O}}_{X,x}\cn \mathcal{O}_{X,x}\otimes_{\mathcal{O}_{Y,f(x)}}\hat{\mathcal{O}}_{Y,f(x)}.
+    \]
+    So (2) follows from the fact that $\hat{\mathcal{O}}_{Y,f(x)}$ is faithfully flat over $\mathcal{O}_{Y,f(x)}$, see \cite[\href{https://stacks.math.columbia.edu/tag/00MC}{Tag 00MC}]{stacks-project}.
+\end{proof}
+
+\begin{corollary}\label{cor-localimmersioncond}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $f$ is a local immersion at $x$;
+        \item $f^{\#}_x:\mathcal{O}_{Y,f(x)}\rightarrow \mathcal{O}_{X,x}$ is surjective;
+        \item $\widehat{f^{\#}_x}:\hat{O}_{Y,f(x)}\rightarrow \hat{O}_{X,x}$ is surjective;
+        \item $\mathcal{O}_{X,x}/\mathfrak{m}_{f(x)}\mathcal{O}_{X,x}\cn \mathbb{C}$.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    (1) $\implies$ (2): This is clear.
+
+    (2) $\implies$ (1): Let $I$ be the kernel of $f^{\#}_x$. Up to shrinking $X$, we may assume that $I$ spreads to a coherent ideal sheaf $\mathcal{I}$ on $Y$. Let $Y'$ be the closed analytic subspace of $Y$ defined by $\mathcal{I}$. Up to shrinking $X$, we may assume that $f$ factorizes through $f':X\rightarrow Y'$ by \cref{thm-germlocalringequivalence}. But $f'^{\#}_x$ is an isomorphism, so $f'$ is a local isomorphism by \cref{cor-localisocondition}.
+
+    (2) $\Leftrightarrow$ (3): This follows from the same arguments as in \cref{cor-localisocondition}.
+
+    (2) $\Leftrightarrow$ (4): This follows from Nakayama's lemma.
+\end{proof}
+
+\begin{corollary}\label{cor-immersiongeneralnotion}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. Then the following are equivalent:
+    \begin{enumerate}
+        \item $f$ is an immersion;
+        \item $|f|$ induces a homeomorphism of $|X|$ with a locally closed subset of $|Y|$ and for all $x\in X$, the homomorphism $f^{\#}_c:\mathcal{O}_{Y,f(x)}\rightarrow \mathcal{O}_{X,x}$ is surjective.
+    \end{enumerate}
+\end{corollary}
+The condition in (2) is the usual definition of an immersion of ringed spaces. Our notion of immersion is usually called a locally closed immersion. 
+\begin{proof}
+    (1) $\implies$ (2): This is clear by definition.
+
+    (2) $\implies$ (1): We may clearly assume that $f(X)$ is closed in $Y$. We need to show that the kernel of $\mathcal{O}_Y\rightarrow f_*\mathcal{O}_X$ is of finite type. This follows from \cref{cor-localimmersioncond}.
+\end{proof}
+
 
 \begin{lemma}\label{lma-spreadfinitelag}
     Let $S$ be a complex analytic space and $s\in S$. For any finite $\mathcal{O}_{S,s}$-algebra $A$, there is an open neighbourhood $U$ of $s$ in $S$ and a finite $\mathcal{O}_U$-algebra such that $\mathcal{A}_s\cong A$.
@@ -395,6 +454,7 @@ Next we describe the local structure of a complex analytic germ.
     Let $X_x$ be a complex analytic germ.
     The map $Y_x\mapsto I_X(Y,x)$ defines a bijection between the set of closed subgerms of $X_x$ and the set of ideals of $\mathcal{O}_{X,x}$.
 \end{proposition}
+In particular, we can view a germ $Y_x$ as a closed subscheme $\Spec \mathcal{O}_{X,x}/I_X(Y,x)$ of $\Spec \mathcal{O}_{X,x}$.
 \begin{proof}
     We construct a reverse map. Given an ideal $I$ of $\mathcal{O}_{X,x}$, as $\mathcal{O}_{X,x}$ is noetherian, $I$ is finitely generated. We can find an open neighbourhood $U$ of $x$ in $X$ and an ideal sheaf of finite type $\mathcal{I}$ of $U$ with $\mathcal{I}_x=I$. Let $Y$ be the closed analytic subspace of $X$ defined by $\mathcal{I}$. We associated $Y_x$ with $I$. 
     
@@ -557,6 +617,8 @@ By \cref{cor-suppaffmorphism}, it remains to show that $\Supp \mathcal{A}$ is a 
     \]
     We will denote the set on the right-hand side as $N_U(f_1,\ldots,f_m)$.
     A subset $A\subseteq X$ is \emph{analytic} in $X$ if it is analytic at all $x\in X$.
+
+    A subset $B\subseteq X$ is \emph{co-analytic} in $X$ if $X\setminus B$ is analytic in $X$.
 \end{definition}
 We observe that given $A\subseteq X$, the set of points $x\in X$ such that $A$ is analytic at $x$ is open. Also observe that an analytic set is necessarily closed.
 Analytic sets are clearly closed under finite intersection and finite unions.
@@ -749,6 +811,227 @@ By \cref{prop-primedecunique}, the prime compoments are uniquely determined by t
     (2) $\implies$ (1): We have $\mathcal{J}_{A,a}\neq \mathcal{J}_{A',a}$ and $\mathcal{J}_{A,a}\neq \mathcal{J}_{A'',a}$. Take $f\in \mathcal{J}_{A',a}\setminus \mathcal{J}_{A,a}$ and $g\in \mathcal{J}_{A'',a}\setminus \mathcal{J}_{A,a}$. Then $fg\in \mathcal{J}_{A',a}\cap \mathcal{J}_{A'',a}=\mathcal{J}_{A,a}$. So $\mathcal{J}_{A,a}$ is not a prime ideal.
 \end{proof}
 
+\section{Diagonal morphism}
+
+\begin{definition}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic space. The \emph{diagonal} of $f$ is by definition the morphism:
+    \[
+        \Delta_f=\Delta_{X/Y}: X\rightarrow X\times_Y X
+    \]  
+    induced by the identity maps $X\rightarrow X$ and $X\rightarrow X$.
+
+    When $Y=\mathbb{C}^0$, we write $\Delta_X$ instead of $\Delta_{X/\mathbb{C}^0}$.
+\end{definition}
+
+\begin{example}\label{ex-Cndiagonalcloim}
+    Let $n\in \mathbb{N}$.
+    The diagonal morphism $\mathbb{C}^n\rightarrow \mathbb{C}^n\times \mathbb{C}^n$ is a closed immersion corresponding to the ideal generated by $p_1^*z_1-p_2^*z_1,\ldots,p_1^*z_n-p_2^*z_n$, where $p_1,p_2:\mathbb{C}^n\times \mathbb{C}^n\rightarrow \mathbb{C}^n$ are the two projections and $z_1,\ldots,z_n$ are the coordinates on $\mathbb{C}^n$. 
+
+    This can be seen through the functor of points by \cref{Complex-thm-hCnidentification} in \nameref{Complex-chap-complex}.
+\end{example}
+
+\begin{proposition}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic space. Then $\Delta_{X/Y}$ is an immersion.
+\end{proposition}
+\begin{proof}
+    \textbf{Step~1}.    We first reduce to the case $Y=\mathbb{C}^0$.
+
+    By general abstract nonsense, we have a commutative diagram
+    \[
+        \begin{tikzcd}
+            X \arrow[r, "\Delta_{X/Y}"'] \arrow[rr, "\Delta_X", bend left] & X\times_Y X \arrow[d] \arrow[r] \arrow[rd, "\square", phantom] & X\times X \arrow[d] \\
+                                                                           & Y \arrow[r, "\Delta_Y"]                                        & Y\times Y          
+        \end{tikzcd}  
+    \]
+    So in order to show that $\Delta_{X/Y}$ is an immersion, it suffices to show that $X$ and $Y$ are.
+
+    \textbf{Step~2}. We reduce to the case $X=\mathbb{C}^n$ for some $n\in \mathbb{N}$.
+    
+    We want to show that $\Delta_X:X\rightarrow X\times X$ is an immersion.
+
+    The problem is local on $X$, so we may assume that $X$ is a complex model space, say $X$ is a closed analytic subspace of an open set $U$ in $\mathbb{C}^n$ for some $n\in \mathbb{N}$.
+    Consider the commutative diagram
+    \[
+        \begin{tikzcd}
+            X \arrow[r, "\Delta_X"] \arrow[d] & X\times X \arrow[d] \\
+            U \arrow[r, "\Delta_U"]           & U\times U          
+        \end{tikzcd}.  
+    \]
+    It suffices to show that $\Delta_U$ is an immersion. 
+    As the problem is local, it suffices to show that $\Delta_{\mathbb{C}^n}$ is an immersion.
+
+    \textbf{Step~3}. We show that $\Delta_{\mathbb{C}^n}$ is a closed immersion.
+
+    This is exactly \cref{ex-Cndiagonalcloim}.
+\end{proof}
+
+
+\section{Conormal sheaf}
+\begin{definition}
+    Let $i:X\rightarrow Y$ be an immersion of complex analytic spaces. The \emph{conormal sheaf} of $f$ is a sheaf of $\mathcal{O}_X$-modules $\mathcal{C}_f=\mathcal{C}_{X/Y}$ with $i_*\mathcal{C}_{X/Y}\cong \mathcal{I}/\mathcal{I}^2$, where $\mathcal{I}$ is the kernel of $i^{-1}\mathcal{O}_Y\rightarrow \mathcal{O}_X$.
+\end{definition}
+The conormal sheaf is defined up to a unique isomorphism. A choice of a factorization of $i$ into a closed immersion $i':X\rightarrow Z$ followed by an open immersion $j:Z\rightarrow Y$ determines a realization of $\mathcal{C}_{X/Y}$. Namely, if $\mathcal{J}$ is the ideal sheaf of $i'$, then $\mathcal{C}_{X/Y}$ is (isomorphic to) $i'^{*}\mathcal{J}$.
+
+\begin{proposition}\label{prop-conormalcoherent}
+    Let $i:X\rightarrow Y$ be an immersion of complex analytic spaces. Then $\mathcal{C}_{X/Y}$ is coherent.
+\end{proposition}
+\begin{proof}
+    We may assume that $i$ is a closed immersion defined by a coherent ideal $\mathcal{J}$. Then $\mathcal{C}_{X/Y}\cong i^*\mathcal{J}$ is coherent by \cref{Complex-cor-pullbackcoh} in \nameref{Complex-chap-complex}.
+\end{proof}
+
+
+\section{Kähler differentials}
+
+We will make free use of results and notations in \cite[\href{https://stacks.math.columbia.edu/tag/08RL}{Tag 08RL}]{stacks-project}. In particular, for a morphism $f:X\rightarrow S$ of complex analytic spaces, $\Omega_{X/S}$ denotes the sheaf of Kähler differentials and $\mathrm{d}_{X/S}:\mathcal{O}_X\rightarrow \Omega_{X/S}$ denotes the universal $S$-derivation.
+
+\textcolor{red}{Include principal parts etc. here}
+\begin{proposition}\label{prop-Kahlerdiffconormal}
+    Let $f:X\rightarrow S$ be a morphism of complex analytic spaces. Then there is a canonical isomorphism
+    \[
+        \Omega_{X/S}\cn  \mathcal{C}_{\Delta_{X/S}}.
+    \]
+\end{proposition}
+\begin{proof}
+    We first define the map in question.
+    Factorize $\Delta_{X/S}$ as $X\rightarrow W\rightarrow X\times_S X$, where $X\rightarrow W$ is a closed immersion define by a coherent ideal $\mathcal{I}$ and $W\rightarrow X\times_S X$ is an open immersion.  We have a short exact sequence
+    \[
+        0\rightarrow \mathcal{C}_{X/X\times_S X}\rightarrow \Delta_{X/S}^{-1}(\mathcal{O}_W/\mathcal{I}^2)\rightarrow \mathcal{O}_X\rightarrow 0.  
+    \]
+    Let $p_1,p_2:X\times_S X\rightarrow X$ be the two projection maps. Then the natural maps $p_i^{\#}:p_i^{-1}\mathcal{O}_X\rightarrow \mathcal{O}_{X\times_S X}$ induce $p_i^{-1}\mathcal{O}_X\rightarrow \mathcal{O}_W/\mathcal{I}^2$ for $i=1,2$. Take $\Delta^{-1}$, we find natural maps
+    \[
+        s_i:\mathcal{O}_X\rightarrow \Delta^{-1}(\mathcal{O}_W/\mathcal{J}^2).  
+    \]
+    The difference $\mathrm{d}=s_2-s_1$ is clearly an $S$-derivation. By the universal property of $\Omega_{X/S}$, we get a unique $\mathcal{O}_{X}$-linear map $\Omega_{X/S}\rightarrow \mathcal{C}_{X/X\times_S X}$.
+
+    Now in order to verify 
+    \[
+        \Omega_{X/S}\cn  \mathcal{C}_{\Delta_{X/S}}
+    \]
+    is an isomorphism, it suffices to work on each stalk. This reduces the problem to the corresponding problem of local rings, which is handled in \cite[\href{https://stacks.math.columbia.edu/tag/08S2}{Tag 08S2}]{stacks-project}.
+\end{proof}
+We will write $\mathcal{P}^{(1)}_{X/S}$ for $\Delta^{-1}(\mathcal{O}_W/\mathcal{J}^2)$ introduced in the proof.
+
+\begin{corollary}\label{cor-Kahdiffcoh}
+    Let $f:X\rightarrow S$ be a morphism of complex analytic spaces.  Then $\Omega_{X/S}$ is coherent.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{prop-Kahlerdiffconormal} and \cref{prop-conormalcoherent}.
+\end{proof}
+
+\begin{proposition}\label{prop-Omegafirstseq}
+    Let $f:X\rightarrow Y$, $g:Y\rightarrow S$ be morphisms of complex analytic spaces. Then there is a canonical exact sequence
+    \[
+        f^*\Omega_{Y/S}\rightarrow \Omega_{X/S}\rightarrow \Omega_{X/Y}\rightarrow 0.  
+    \]
+\end{proposition}
+\begin{proof}
+    The existence of the morphisms is obvious. To prove that the sequence is exact, it suffices to localize along each $x\in X$. The result then follows from the algebraic case \cite[\href{https://stacks.math.columbia.edu/tag/01UX}{Tag 01UX}]{stacks-project}.
+\end{proof}
+
+\begin{proposition}\label{prop-Omegasecondseq}
+    Let $X\rightarrow S$ be a morphism of complex analytic spaces and $i:Z\rightarrow X$ be an immersion. Then we have a canonical exact sequence
+    \[
+        \mathcal{C}_{Z/X}\rightarrow i^*\Omega_{X/S}\rightarrow \Omega_{Z/S}\rightarrow 0.  
+    \]
+\end{proposition}
+\begin{proof}
+    The existence of the morphisms is obvious. To prove that the sequence is exact, it suffices to localize along each $x\in X$. The result then follows from the algebraic case \cite[\href{https://stacks.math.columbia.edu/tag/01UZ}{Tag 01UZ}]{stacks-project}.
+\end{proof}
+
+\begin{proposition}\label{prop-Omegachangebase}
+    Let $f:X\rightarrow S$, $g:S'\rightarrow S$ be morphisms of complex analytic spaces. Consider the Cartesian diagram
+    \[
+        \begin{tikzcd}
+            X' \arrow[r, "g'"] \arrow[d, "f'"] \arrow[rd, "\square", phantom] & X \arrow[d, "f"] \\
+            S' \arrow[r, "f"]                                                 & S               
+        \end{tikzcd}.  
+    \]
+    Then we have a canonical isomorphism
+    \[
+        g'^*\Omega_{X/S}\rightarrow \Omega_{X'/S'}.  
+    \]
+\end{proposition}
+\begin{proof}
+    It suffices to show that the canonical morphism $g'^*\mathcal{P}^{(1)}_{X/S}\rightarrow \mathcal{P}^{(1)}_{X'/S'}$ is an isomorphism. For this purpose, it suffices to prove it after localizing around $x'\in X'$. But observe that the local rings of $\mathcal{P}^{(1)}_{X/S}$ are finite over the corresponding local rings of $X$, so the analytic tensor products reduce to usual tensor products. The result then follows from the corresponding algebraic results.
+\end{proof}
+
+\begin{corollary}\label{cor-Omega1sum}
+    Let $f:X\rightarrow S$, $g:X\rightarrow S$ be morphisms of complex analytic spaces. Consider the Cartesian diagram
+    \[
+        \begin{tikzcd}
+            X\times_S Y \arrow[r, "p"] \arrow[d, "q"] \arrow[rd, "\square", phantom] & X \arrow[d, "f"] \\
+            Y \arrow[r, "g"]                                                         & S               
+        \end{tikzcd}.  
+    \]
+    Then we  have a canonical isomorphism
+    \[
+        p^*\Omega_{X/S}\oplus q^*\Omega_{Y/S}\rightarrow \Omega_{X\times_S Y/S}.  
+    \]
+\end{corollary}
+\begin{proof}
+    The existence of the morphism follows from \cite[\href{https://stacks.math.columbia.edu/tag/08RU}{Tag 08RU}]{stacks-project}. By \cref{prop-Omegachangebase}, the composition 
+    \[
+        p^*\Omega_{X/S}\rightarrow \Omega_{X\times_S Y/S}\rightarrow \Omega_{X\times_S Y/Y}  
+    \]
+    is an isomorphism. In particular, $p^*\Omega_{X/S}\rightarrow \Omega_{X\times_S Y/Y}$ is injective. Similarly, we have a natural isomorphism
+    \[
+          q^*\Omega_{Y/S}\cn \Omega_{X\times_S Y/X}  
+    \]
+    By \cref{prop-Omegafirstseq}, we have a short exact sequence
+    \[
+        0\rightarrow p^*\Omega_{X/S}\rightarrow \Omega_{X\times_S Y/S} \rightarrow q^*\Omega_{Y/S}\rightarrow 0, 
+    \]
+    which clearly splits.
+\end{proof}
+
+
+\begin{example}\label{ex-OmegaCn}
+    Let $n\in \mathbb{N}$. We claim that $\Omega_{\mathbb{C}^n}$ is the free $\mathcal{O}_{\mathbb{C}^n}$-module generated by $\mathrm{d}z_1,\ldots,\mathrm{d}z_n$, where $z_1,\ldots,z_n\in \mathcal{O}_{\mathbb{C}^n}(\mathbb{C}^n)$ are the coordinates on $\mathbb{C}^n$.
+    
+    By \cref{ex-Cndiagonalcloim}, we know that $\Omega_{\mathbb{C}^n}$ is generated by $\mathrm{d}z_1,\ldots,\mathrm{d}z_n$ as an $\mathcal{O}_{\mathbb{C}^n}$-module. Assume that there is $x\in \mathbb{C}^n$, $f_{1,x},\ldots,f_{n,x}\in \mathcal{O}_{X,x}$ such that 
+    \[
+        \sum_{i=1}^n f_{i,x}\,\mathrm{d}z_i=0.
+    \]
+        We need to show that $f_{i,x}=0$ for all $i=1,\ldots,n$. We may assume that $x=0$. Observe that 
+    \[
+        \Omega^1_{\mathbb{C}^n,0}\otimes_{\mathcal{O}_{\mathbb{C}^n,0}} \mathbb{C}\cn \mathfrak{m}_{0}/\mathfrak{m}_{0}^2  
+    \]
+    by the algebraic results. Taking the residue of our linear relation at $0$, we find
+    \[
+        \sum_{i=1}^n f_{i,0} z_{i,0}\in \mathfrak{m}_0^2.  
+    \]
+    As $z_{i,0},\ldots,z_{n,0}$ form a basis of $\mathfrak{m}_0/\mathfrak{m}_0^2$, we have $f_{i,0}=0$ for $i=1,\ldots,n$.
+\end{example}
+
+\iffalse
+
+\textcolor{red}{This notion should be placed elsewhere, defined for a general ringed space}
+\begin{definition}
+    Let $i:Y\rightarrow X$ be an immersion. Then we have a natural surjective morphism
+    \[
+        i^{-1}\mathcal{O}_X\rightarrow \mathcal{O}_Y.  
+    \]
+    Write $\mathcal{J}$ for the kernel of this map. For any $n\in \mathbb{N}$, we introduce the \emph{$n$-th infinitesimal neighbourhood} of $Y$ in $X$ is the ringed space 
+    \[
+        Y^{(n)}=(Y,i^{-1}\mathcal{O}_X/\mathcal{J}^{n+1}). 
+    \] 
+    There is a canonical closed immersion $Y\rightarrow Y^{(n)}$. The structure sheaf $\mathcal{O}_{Y^{(n)}}$ is called the \emph{$n$-th conormal invariant} of $Y$ in $X$.
+
+    The kernel of the canonical map $\mathcal{O}_{Y^{(1)}}\rightarrow \mathcal{O}_Y$ is canonically isomorphic to the \emph{conormal sheaf} $\mathcal{N}^{\vee}_{Y/X}:=i^*(\mathcal{J}/\mathcal{J}^2)$.
+\end{definition}
+When $i:Y\rightarrow X$ is an immersion of complex analytic spaces, we find immediately that $Y^{(n)}$ is also a complex analytic space. The sheaf $\mathcal{N}^{\vee}_{Y/X}$ is coherent. The sheaves $\mathcal{O}_{Y^{(n)}}$ are coherent as the successive quoteints are.
+
+\begin{definition}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. Then $\Delta_{X/Y}:X\rightarrow X\times_Y X$ is an immersion. For each $n\in \mathbb{N}$, let $\Delta_f^{(n)}$ or $\Delta_{X/Y}^{(n)}$ denote the $n$-th infinitesimal neighbourhood of $\Delta$. The corresponding structure sheaf is called the \emph{$n$-th different invariant} of $f$.
+\end{definition}
+We regard $\mathcal{O}_{\Delta_{X/Y}^{(n)}}$ as an $\mathcal{O}_X$-algebra via the projection $X\times_Y X\rightarrow X$ onto the first factor. 
+
+\begin{definition}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. The \emph{sheaf of Kähler differentials} $\Omega^1_{X/Y}$ or $\Omega^1_{f}$ is the conormal sheaf of $\Delta_{X/Y}$. The difference of the two projections 
+\end{definition}
+Observe that $\Omega^1_{X/Y}$ is a coherent sheaf on $X$.
+
+\fi
 
 \printbibliography
 \end{document}

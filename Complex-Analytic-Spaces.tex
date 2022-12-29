@@ -105,10 +105,12 @@ Observe that $X$ is always a Hausdorff space.
     
     When there is no risk of confusion, we also omit $\mathcal{O}_X$ from the notation say $X$ is a complex analytic space.
 
-    A morphism between complex analytic spaces is a morphism of the underlying locally $\mathbb{C}$-ringed spaces. Such a morphism is also known as a \emph{holomorphic map}.
+    A morphism between complex analytic spaces is a morphism of the underlying  $\mathbb{C}$-ringed spaces. Such a morphism is also known as a \emph{holomorphic map}.
 
     The category of complex analytic spaces is denoted as $\CASCat$.
 \end{definition}
+Observe that a morphism of complex analytic spaces is necessarily a morphism of locally $\mathbb{C}$-ringed spaces by \cref{Local-prop-converinglocalgeneral} in \nameref{Local-chap-local}.
+
 \begin{remark}
     Most authors require $X$ to be Hausdorff as well. We do not follow this convention. We require it whenever necessary.
 \end{remark}
@@ -171,9 +173,9 @@ Given a complex analytic space $X$, we will construct a canonical map
 as follows: given a morphism $f:X\rightarrow \mathbb{C}^n$, we let $\varphi_i(f)=f^*(z_i)\in \mathcal{O}_X(X)$ for $i=1,\ldots,n$. Then we define $\varphi(X)(f)=(\varphi_1(f),\ldots,\varphi_n(f))$.
 
 
-\begin{theorem}\label{thm-hCnidentification}
+\begin{thm}\label{thm-hCnidentification}
     Let $X$ be a complex analytic space. Then the map \eqref{eq-varphiXglobal} is bijective and is functorial in $X$.
-\end{theorem}
+\end{thm}
 \begin{proof}
     The functoriality is clear. It suffices to show that \eqref{eq-varphiXglobal} is bijective.
 
@@ -233,8 +235,11 @@ Later on, we will show that $\mathcal{I}$ is coherent after proving Oka's cohere
 \begin{definition}
     A morphism $f:X\rightarrow Y$ of complex analytic spaces is an \emph{immersion} if it can be factorized aas $j\circ i$ where $i$ is a closed immersion and $j$ is an open immersion. 
 \end{definition}
+We will show in \cref{ConstructionComplex-cor-immersiongeneralnotion} in \nameref{ConstructionComplex-chap-constructionComplex} that our notion of immersion is the same as the general notion of immersions in the sense of ringed spaces.
 
-
+\begin{definition}
+    A morphism $f:X\rightarrow Y$ is a \emph{local immersion} (resp. \emph{local isomorphism}) at $x\in X$ if  there is an open neighbourhood $U$ of $x$ in $X$ such that the morphism $U\rightarrow Y$ induced by $f$ is an immersion (resp. \emph{open immersion}).
+\end{definition}
 
 \section{Weierstrass map}
 
@@ -370,7 +375,7 @@ Later on, we will show that $\mathcal{I}$ is coherent after proving Oka's cohere
 
     We will prove the coherence of $\mathcal{O}_{\mathcal{C}^n}$ by induction on $n$. The case $n=0$ is trivial. Assume that $n>0$ and the theorem has been proved for all smaller $n$. We will apply \cref{lma-formalcoherencecriterion}. Take an open set $U\subseteq \mathbb{C}^n$ and $g\in \mathcal{O}_{\mathbb{C}^n}(U)$. We need to show that $\mathcal{O}_U/g\mathcal{O}_U$ is coherent at all $x\in U$ with $g_x\neq 0$.
 
-    Fix such a point $x$, which may be assumed to be $0$. We may assume that $g(0)=0$ as otherwise, the stalk of $\mathcal{O}_U/g\mathcal{O}_U$ at $0$ is trivial. By perturbing the coordinates, we may guarantee that $g_0(0,w)$ is not identically $0$ for $w\in \mathbb{C}$. By Weierstrass preparation theorem \cref{Commutative-thm-Weierstrassprep}, there is a Weierstrass polynomial $\omega_0\in \mathcal{O}_{\mathbb{C}^{n-1},0}[w]$ such that $g_0\mathcal{O}_{\mathbb{C}^n,0}=\omega_0\mathcal{O}_{\mathbb{C}^n,0}$. Lift $\omega_0$ to $\omega\in \mathcal{O}_{\mathbb{C}^{n-1}}(B)$ for some neighbourhood $B\subseteq \mathbb{C}^{n-1}$ of $0$. In order to show the coherence of $\mathcal{O}_U/g\mathcal{O}_U$ near $0$, it suffices to show that $\mathcal{O}_{B\times \mathbb{C}}/\omega \mathcal{O}_{B\times \mathbb{C}}$ near $0$. Let $A\subseteq B\times \mathbb{C}$ be the closed subspace defined by $\omega$ and $\pi:A\rightarrow B$ be the Weierstrass map, then it suffices to show that $\mathcal{O}_{A}$ is coherent near $0$. By our inductive hypothesis, $\mathcal{O}_B$ is coherent. We claim that $\mathcal{O}_A$ is also coherent. Let $b$ be the degree of $\omega$. We recall that $\pi$ is topologically finite by \cref{thm-Weiemapfiniteandopen}.
+    Fix such a point $x$, which may be assumed to be $0$. We may assume that $g(0)=0$ as otherwise, the stalk of $\mathcal{O}_U/g\mathcal{O}_U$ at $0$ is trivial. By perturbing the coordinates, we may guarantee that $g_0(0,w)$ is not identically $0$ for $w\in \mathbb{C}$. By Weierstrass preparation theorem \cref{Local-thm-Weierstrassprep} in \nameref{Local-chap-local}, there is a Weierstrass polynomial $\omega_0\in \mathcal{O}_{\mathbb{C}^{n-1},0}[w]$ such that $g_0\mathcal{O}_{\mathbb{C}^n,0}=\omega_0\mathcal{O}_{\mathbb{C}^n,0}$. Lift $\omega_0$ to $\omega\in \mathcal{O}_{\mathbb{C}^{n-1}}(B)$ for some neighbourhood $B\subseteq \mathbb{C}^{n-1}$ of $0$. In order to show the coherence of $\mathcal{O}_U/g\mathcal{O}_U$ near $0$, it suffices to show that $\mathcal{O}_{B\times \mathbb{C}}/\omega \mathcal{O}_{B\times \mathbb{C}}$ near $0$. Let $A\subseteq B\times \mathbb{C}$ be the closed subspace defined by $\omega$ and $\pi:A\rightarrow B$ be the Weierstrass map, then it suffices to show that $\mathcal{O}_{A}$ is coherent near $0$. By our inductive hypothesis, $\mathcal{O}_B$ is coherent. We claim that $\mathcal{O}_A$ is also coherent. Let $b$ be the degree of $\omega$. We recall that $\pi$ is topologically finite by \cref{thm-Weiemapfiniteandopen}.
 
     We first prove a special case: let $p\in \mathbb{N}$ and $\varphi:\mathcal{O}_A^p\rightarrow \mathcal{O}_A$ be an $\mathcal{O}_A$-homomorphism. We show that $\ker \varphi$ is of finite type. By  \cref{thm-Weierstrassiso}, $\pi_*\mathcal{O}_A^p$ is coherent. So $\pi_*\ker \varphi$ is coherent by \cref{Topology-cor-pushforwardsheaffinite} in \nameref{Topology-chap-topology}. It follows that $\ker \varphi$ is of finite type.
 
@@ -403,6 +408,13 @@ As a corollary, we have the important Oka's coherence theorem.
     The equivalence between (1) and (2) follows from \cite[\href{https://stacks.math.columbia.edu/tag/01BZ}{Tag 01BZ}]{stacks-project} and \cref{thm-Okacoh}.
 
     The equivalence of (1) and (3) follows from \cite[\href{https://stacks.math.columbia.edu/tag/01BY}{Tag 01BY}]{stacks-project}.
+\end{proof}
+
+\begin{corollary}\label{cor-pullbackcoh}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $\mathcal{M}$ be a coherent sheaf of $\mathcal{O}_Y$-modules. Then $f^*\mathcal{M}$ is coherent.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{cor-cohsheaffinitepre} and \cite[\href{https://stacks.math.columbia.edu/tag/01BQ}{Tag 01BQ}]{stacks-project}.
 \end{proof}
 
 \begin{definition}

@@ -91,6 +91,40 @@ This definition is purely topological. We will show that it is equivalent to an 
     This follows from \cref{ConstructionComplex-cor-specpushcohiscoh} in \nameref{ConstructionComplex-chap-constructionComplex} and \cref{thm-finitealgeqfiniteanalyticspace}.
 \end{proof}
 
+\begin{corollary}
+    Let $X$ be a reduced complex analytic space. Then 
+    \begin{enumerate}
+        \item $\bar{X}$ is normal;
+        \item $p:\bar{X}\rightarrow X$ is finite and surjective;
+        \item There is a nowhere dense analytic set $Y$ in $X$ such that $p^{-1}(Y)$ is nowhere dense in $\bar{X}$ and the morphism $\bar{X}\setminus p^{-1}(Y)\rightarrow X\setminus Y$ induced by $p$ is an isomorphism.
+    \end{enumerate}
+    Conversely, these conditions determines $\bar{X}$ up to a unique isomorphism in $\CASCat_{/X}$.
+\end{corollary}
+\begin{proof}
+    These properties are established in \cref{PropertyComplex-prop-reducedspacenormalizationchar} in \nameref{PropertyComplex-chap-propcomplex}. We need to prove the uniqueness.
+
+    Let $p:X'\rightarrow X$ be a morphism satisfying the three conditions. We need to show that $X'$ is canonically isomorphic to $\bar{X}$ in $\CASCat_{/X}$.
+    By (2) and \cref{thm-finitealgeqfiniteanalyticspace}, it suffices to show that $p_*\mathcal{O}_{X'}$ is canonically isomorphic to $\bar{\mathcal{O}}_{X}$. By (1), and the universal property of normalization, there is a canonical morphism
+    \[
+        p_*\mathcal{O}_{X'}\rightarrow \bar{\mathcal{O}}_{X}
+    \]
+    of $\mathcal{O}_X$-algebras. We will show that this map is an isomorphism.
+
+    The problem is local. Let $x\in X$. By (3) and \cref{ConstructionComplex-cor-orderrelationsubgermideal} in \nameref{ConstructionComplex-chap-constructionComplex}, up to shrinking $X$, we can find $f\in \mathcal{O}_X(X)$ such that $f(y)=0$ for all $y\in Y$ and $f_x$ is a non-zero divisor in $(p_*\mathcal{O}_{X'})_x$. Up to shrinking $X$, we may assume that $f_y$ is a non-zero divsior in $(p_*\mathcal{O}_{X'})_y$ for all $y\in X$. By (3), we have
+    \[
+        \mathcal{O}_X|_{X\setminus Y}\rightarrow (p_*\mathcal{O}_{X'})|_{X\setminus Y}  
+    \]
+    is an isomorphism. It follows that 
+    \[
+        f p_*\mathcal{O}_{X'}\rightarrow \mathcal{O}_X  
+    \]
+    is injective. We then have an injective homomorphism:
+    \[
+        p_*\mathcal{O}_{X'}\rightarrow \mathcal{O}_X \xrightarrow{\times f} \mathcal{O}_X\xrightarrow{\times f^{-1}}\mathcal{O}_X[f^{-1}]. 
+    \]
+    For each $y\in X$, we deduce that $(p_*\mathcal{O}_{X'})_y$ is in the total ring of fraction of $\mathcal{O}_{X,y}[f_y^{-1}]$. But $(p_*\mathcal{O}_{X'})_y$ is finite and integral over $\mathcal{O}_{X,y}$, so is isomorphic to $\overline{\mathcal{O}_{X,y}}$ as $\mathcal{O}_{Y,y}$-algebras. 
+\end{proof}
+
 
 
 

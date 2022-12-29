@@ -4,7 +4,7 @@
 \maketitle
 \tableofcontents
 
-\chapter*{Properties of complex analytic spaces}
+\chapter*{Properties of complex analytic spaces}\label{chap-propcomplex}
 
 \section{Introduction}\label{sec-introduction-propertycomplex}
 
@@ -103,6 +103,24 @@ After introducing the analytic Zariski topology, we can reformulate this corolla
     The corollary follows.
 \end{proof}
 
+\begin{proposition}
+    Let $X,Y$ be complex analytic spaces and $x\in X$, $y\in Y$. Then
+    \[
+        \dim_{(x,y)}X\times Y=\dim_x X+\dim_y Y.  
+    \]
+\end{proposition}
+\begin{proof}
+    By \cref{Local-thm-complocalringtest} in \nameref{Local-chap-local},
+    \[
+        \hat{\mathcal{O}}_{X\times Y,(x,y)}=\hat{\mathcal{O}}_{X,x}\hat{\otimes}\hat{\mathcal{O}}_{Y,y}.  
+    \]
+    As dimension is invariant under completion by \cite[\href{https://stacks.math.columbia.edu/tag/07NV}{Tag 07NV}]{stacks-project}, it suffices to show that
+    \[
+        \dim (\mathcal{O}_{X,x}\hat{\otimes} \mathcal{O}_{Y,y}) =\dim \mathcal{O}_{X,x}+\dim \mathcal{O}_{Y,y}, 
+    \]
+    which is well-known.
+\end{proof}
+
 \begin{definition}
     Let $X_x$ be an analytic germ and $Y_x$ be a closed analytic subgerm defined by an ideal $I\subseteq \mathcal{O}_{X,x}$.
     \begin{enumerate}
@@ -124,6 +142,254 @@ Observe that
 \]
 When $X_x$ is equidimensional, $\codim_x(Y,X)$ is nothing but $\dim_x X-\dim_x Y$.
 
+Observe that 
+\begin{equation}\label{eq-codimdefrefor}
+    \codim_x(Y,X)=\codim (Y_x,\Spec \mathcal{O}_{X,x}).
+\end{equation}
+
+\begin{lemma}\label{lma-codimindp}
+    Let $X$ be a complex analytic space and $T$ be an analytic set in $X$. Let $Y_1$, $Y_2$ be two closed analytic subspaces of $X$ with underlying set $T$, then for any $x\in T$,
+    \[
+        \codim_x(Y_1,X)=\codim_x(Y_2,X).
+    \]
+\end{lemma}
+\begin{proof}
+    This follows from \eqref{eq-codimdefrefor} and \cref{ConstructionComplex-cor-orderrelationsubgermideal} in \nameref{ConstructionComplex-chap-constructionComplex}.
+\end{proof}
+
+\begin{definition}
+    Let  $X$ be a complex analytic space and $T$ be an analytic set in $X$. Take $y\in T$. We define the \emph{codimension} $\codim_y(T,X)$ as follows: up to shrinking $X$, we may take a closed analytic subspace $Y$ of $X$ with underlying set $T$ by \cref{ConstructionComplex-lma-analyticsetlocallyidealsheaf} in \nameref{ConstructionComplex-chap-constructionComplex}, we define 
+    \[
+        \codim_y(T,X):=\codim_y(Y,X).  
+    \]
+    This definition does not depend on the choices we made by \cref{lma-codimindp}.
+\end{definition}
+
+\begin{lemma}\label{lma-codimconstantlocal}
+    Let $X$ be a complex analytic space and $Y$ be a closed analytic subspace of $X$. Let $y\in Y$ be a point such that $Y_y$ is irreducible. Then there is an open neighbourhood $U$ of $y$ in $Y$ such that 
+    \[
+        \codim_z(Y,X)=\codim_y(Y,X)  
+    \]
+    for any $z\in U$.
+\end{lemma}
+\begin{proof}
+    Let $X'_y$ be an irreducible component of $X_y$ containing $Y_y$ such that 
+    \[
+        \codim_y(Y,X)=\dim_y X'-\dim_y  Y.
+    \]
+    We can then take an open neighbourhood $U$ of $x$ in $X$ such that $X'_z$ is equidimensional of dimension $n:=\dim_y X'$ for all $z\in U$ by \cref{thm-equidimlocusopen}. Then for any $z\in U$, $X'_z$ is a union of some irreducible components of $X_z$. Up to shrinking $U$, we may guarantee that for any $z\in U\cap Y$, $Y_z\subseteq X'_z$ and $\dim_z Y=\dim_y Y$. Thereofre, for $z\in Y\cap U$,
+    \[
+        \codim_z(Y,X)=\codim_z(Y,X')=\dim_z X'-\dim_z Y  
+    \]
+    is a constant.
+\end{proof}
+
+\begin{corollary}\label{cor-codimgeqnanalytic}
+    Let $X$ be a complex analytic space and $Y$ be an analytic set in $X$. For any $n\in \mathbb{N}$, 
+    \[
+        \left\{ y\in Y: \codim_y(Y,X)\leq n\right\}
+    \]
+    is an analytic set in $Y$.
+\end{corollary}
+\begin{proof}
+    The problem is local. Let $x\in Y$. Let $Y_{1,x},\ldots,Y_{m,x}$ be the irreducible components of $Y_x$ defined by prime ideals $J_1,\ldots,J_m$ in $\mathcal{O}_{Y,x}$. Take an open neighbourhood $U$ of $x$ in $X$ such that for any $y\in Y\cap U$, the ideal 
+    \[
+        \bigcap_{i=1}^m J_{i,y}  
+    \]
+    is nilpotent. By \cref{lma-codimconstantlocal}, up to shrinking $U$, we may assume that for any $y\in Y\cap U$,
+    \[
+        \codim_y(Y_i,X)=\codim_x(Y_i,X)=:c_i  
+    \]
+    for $i=1,\ldots,m$. Then 
+    \[
+        \left\{ y\in Y: \codim_y(Y,X)\leq n\right\}=\bigcup_{i:c_i\leq n} Y_i.  
+    \]
+\end{proof}
+
+\begin{corollary}\label{cor-codimgeqngerm}
+    Let $X$ be a complex analytic space and $Y$ be an analytic set in $X$. For any $n\in \mathbb{N}$ and any $y\in Y$,
+    \[
+        \left\{ y\in Y: \codim_y(Y,X)\leq n\right\}_y=\left\{\mathfrak{p}\in \Spec \mathcal{O}_{X,x}: \codim_{\mathfrak{p}}(T_x,\Spec \mathcal{O}_{X,x})\leq n \right\}.
+    \]
+\end{corollary}
+\begin{proof}
+    This is immediate from the proof of \cref{cor-codimgeqnanalytic}.
+\end{proof}
+
+\section{Smoothness}
+
+\begin{definition}
+    Let $X$ be a complex analytic space. We say $X$ is \emph{smooth} at $x\in X$ if $\mathcal{O}_{X,x}$ is regular. Otherwise, we say $X$ is \emph{singular} at $x$.
+
+    We also say $(X,x)$ or $X_x$ is \emph{smooth} (resp. \emph{singular}) at $x$.
+    
+    We say $X$ is \emph{smooth} if it is smooth at all $x\in X$. In this case, we also say $X$ is a \emph{complex manifold}.
+
+    We write $X^{\sing}$ and $X^{\reg}$ for the set of singular and smooth points of $X$ respectively.
+\end{definition}
+Other common names in the literature include: regular, simple.
+
+\begin{proposition}\label{prop-smoothchar}
+    Let $X$ be a complex analytic space and $x\in X$. THen the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is smooth at $x$;
+        \item There is an open neighbourhood $U$ of $x$ in $X$ that is isomorphic to a domain in $\mathbb{C}^n$ with $n=\dim_x X$;
+        \item $\Omega_{X,x}$ is a free $\mathcal{O}_{X,x}$-module of rank $\dim_x X$;
+        \item $\Omega_{X,x}$ is generated by $\dim_x X$ elements as an $\mathcal{O}_{X,x}$-module;
+        \item $\hat{\mathcal{O}}_{X,x}$ is regular;
+        \item $\hat{\mathcal{O}}_{X,x}\cong \mathbb{C}[[X_1,\ldots,X_n]]$ for $n=\dim_x X$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (2) $\implies$ (1): This is obvious.
+
+    (1) $\implies$ (2): Let $f_{1,x},\ldots,f_{n,x}$ be a regular system of parameters of $\mathcal{O}_{X,x}$. Up to shrinking $X$, we may lift them to $f_1,\ldots,f_n\in \mathcal{O}_X(X)$. By \cref{Complex-thm-hCnidentification} in \nameref{Complex-chap-complex}, they induce a morphism $f:(U,x)\rightarrow (\mathbb{C}^n,0)$. Observe that $f^{\#}_{x}:\hat{\mathcal{O}}_{\mathbb{C}^n,0}\rightarrow \hat{\mathcal{O}}_{U,x}$ is an isomorphism, so $f$ is a local isomorphism by \cref{ConstructionComplex-cor-localisocondition} in \nameref{ConstructionComplex-chap-constructionComplex}.
+
+    (2) $\implies$ (3): This follows from \cref{ConstructionComplex-ex-OmegaCn} in \nameref{ConstructionComplex-chap-constructionComplex}.
+
+    (3) $\implies$ (4): This is trivial.
+
+    (4) $\implies$ (1): Recall that $\Omega_X$ is coherent by \cref{ConstructionComplex-cor-Kahdiffcoh} in \nameref{ConstructionComplex-chap-constructionComplex}.
+    By Nakayama's lemma, the minimal number of generators of $\Omega_{X,x}$ is equal to $\dim_{\mathbb{C}} \Omega_{X,x}\otimes_{\mathcal{O}_{X,x}} \mathbb{C}$. By algebraic results, we know that the latter space is $\mathfrak{m}_x/\mathfrak{m}_x^2$. So we find that $\dim \mathfrak{m}_x/\mathfrak{m}_x^2=\dim\mathcal{O}_{X,x}$, implying that $\mathcal{O}_{X,x}$ is regular.
+
+    (1) $\Leftrightarrow$ (5): This follows from \cite[\href{https://stacks.math.columbia.edu/tag/07NY}{Tag 07NY}]{stacks-project}.
+
+    (2) $\implies$ (6): This is clear.
+
+    (6) $\implies$ (5): This is clear.
+\end{proof}
+
+\begin{thm}\label{thm-Xsingana}
+    Let $X$ be a complex analytic space, then $X^{\Sing}$ is an analytic set in $X$.
+\end{thm}
+\begin{proof}
+    The problem is local. Let $x\in X$.
+
+    \textbf{Step~1}. We reduce to the case where $X$ is equidimensional of dimension $n$.
+
+    Let 
+    \[
+        0=\bigcap_{i=1}^r \mathfrak{p}_i  
+    \]
+    be the primary decomposition of $0$. Up to shrinking $X$, we may assume that $\mathfrak{p}_1,\ldots,\mathfrak{p}_r$ spread to coherent ideals $\mathcal{I}_1,\ldots,\mathcal{I}_r$ on $X$ and 
+    \[
+        \bigcap_{i=1}^r\mathcal{I}_i=0.  
+    \]
+    Let $X_i$ be the closed analytic subspace of $X$ defined by $\mathcal{I}_i$ for $i=1,\ldots,n$. Then
+    \[
+        X=\bigcup_{i=1}^r X_i.  
+    \]
+    As each $X_i$ is equidimensional at $x$, say of dimension $n_i$ for $i=1,\ldots,r$. By \cref{thm-equidimlocusopen}, up to shrinking $X$, we may assume that $X_i$ is equidimensional of dimension $n_i$ for $i=1,\ldots,r$. For each
+    
+    Let $y\in X^{\reg}$, as $\mathcal{O}_{X,y}$ is regular hence integral, from 
+    \[
+        \bigcap_{i=1}^r\mathcal{I}_{i,y}=0  
+    \]
+    we find that at least one $\mathcal{I}_{i,y}$ vanishes. Then
+    \[
+        \mathcal{O}_{X_i,y}=\mathcal{O}_{X,y}  
+    \]
+    is regular. Namely, $y\in X_i^{\reg}$.
+    Conversely, if for some $i=1,\ldots,n$, we have $\mathcal{I}_{i,y}=0$ and $y\in X_i^{\reg}$, $X_i$ is a neighbourhood of $y$ in $X$, so $y\in X^{\reg}$. It follows that 
+    \[
+        X^{\sing}=\bigcap_{i=1}^r \left(\Supp \mathcal{I}_i \cup X_i^{\Sing} \right). 
+    \]
+    Recall that $\Supp \mathcal{I}_i$ is analytic for each $i=1,\ldots,n$ by \cref{ConstructionComplex-ex-closedanalyticspaceanalyt} in \nameref{ConstructionComplex-chap-constructionComplex}. 
+    
+    By \cref{ConstructionComplex-prop-analyticsettrans} in \nameref{ConstructionComplex-chap-constructionComplex}, in order to show that $X^{\sing}$ is an analytic set in $X$, it suffices to know that $X_i^{\Sing} $ is an analytic set in $X_i$ for $i=1,\ldots,n$. 
+
+    \textbf{Step~2}. Assume that $X$ is equidimensional of dimension $n$. We need to show that the locus where $\Omega_{X}$ is locally free of rank $n$ is co-analytic in $X$.
+
+    When $n=0$, the locus where $\Omega_X$ is not locally free of rank $0$ is exactly $\Supp \Omega_X$, which is analytic in $X$ by \cref{ConstructionComplex-ex-closedanalyticspaceanalyt} and \cref{ConstructionComplex-cor-Kahdiffcoh}  in \nameref{ConstructionComplex-chap-constructionComplex}.
+
+    Assume that $n\geq 1$. Let $\Omega_X^n:=\bigwedge^n \Omega_X$. Then the locus where $\Omega_X$ is locally free of rank $n$ is exactly the locus where $\Omega_X^n$ is invertible. The invertible locus of $\Omega_X^n$ is exactly the locus where the canonical map
+    \[
+        (\Omega_X^n)^{\vee}\otimes_{\mathcal{O}_X}\Omega_X^n\rightarrow \mathcal{O}_X
+    \]
+    is an isomorphism. It follows that the complement of the locus is analytic in $X$.
+\end{proof}
+
+
+\begin{thm}[Generic smoothness]\label{thm-genericsmoothintegral}
+    Let $X$ be a complex analytic space and $x\in X$. Assume that $X$ is integral at $x$, then $X^{\Sing}_x\neq |X|_x$.
+\end{thm}
+\begin{proof}
+    Let $n=\dim_x X$. The problem is local on $X$.
+    By \cref{ConstructionComplex-thm-morphismdefinedbygeneratorlocal} in \nameref{ConstructionComplex-chap-constructionComplex}, we may assume that there is a finite morphism $\varphi:(X,x)\rightarrow (V,0)$, where $V$ is an open neighbourhood of $0$ in $\mathbb{C}^n$ and there is a finite $\mathcal{O}_V$-algebra $\mathcal{A}$ with $\mathcal{A}_0=\mathcal{O}_{X,x}$ such that  there is unique point $x'$ of $\Spec^{\An}_V \mathcal{A}$ over $0$ and $(X,x)$ can be identified with $(\Spec^{\An}_V \mathcal{A},x')$.
+
+    Take $\xi\in \mathcal{O}_{X,x}=\mathcal{A}_0$ such that 
+    \[
+        \Frac \mathcal{O}_{X,x}=\Frac \mathcal{O}_{\mathbb{C}^n,0}(\xi).
+    \]
+    Let $P_0\in \mathcal{O}_{\mathbb{C}^n,0}[X]$ be the minimal polynomial of $\xi$. 
+    Up to shrinking $V$, we may assume that $\xi$ spreads to a section $f\in \mathcal{A}(V)$. Then $\mathcal{B}=\mathcal{O}_V[f]$ is a finite sub-$\mathcal{O}_V$-algebra of $\mathcal{A}$.  Up to shrinking $V$, we may assume that the kernel of $\mathcal{O}_V[X]\rightarrow \mathcal{B}$ sending $X$ to $f$ is generated by a unitary polynomial $P\in \mathcal{O}_V(V)[X]$ of degree $d:=[\Frac \mathcal{O}_{X,x}:\Frac \mathcal{O}_{\mathbb{C}^n,0}]$ that extends $P_0$. Therefore,
+    \[
+        \mathcal{B}\cong \mathcal{O}_V[X]/(P).  
+    \]
+    Let $T=\Supp \mathcal{A}/\mathcal{B}$. We endow $T$ with the structure of closed analytic subspace of $V$ induced by the annihilator of $\mathcal{A}/\mathcal{B}$.
+    Observe that $\mathcal{A}_0/\mathcal{B}_0=\mathcal{O}_{X,x}/\mathcal{O}_{\mathbb{C}^n,0}$ is torsion, so $|T|_0=\Supp \mathcal{A}_0/\mathcal{B}_0\neq \Spec \mathcal{O}_{\mathbb{C}^n,0}$. That is, $T_0\neq \mathbb{C}^n_0$ by \cref{ConstructionComplex-thm-Nullstellensatz} in \nameref{ConstructionComplex-chap-constructionComplex}. 
+    Observe that $X\setminus \varphi^{-1}(T)=\Spec_{V\setminus T}^{\An}\mathcal{B}|_{V\setminus T}$.
+
+    On the other hand, $P_0'(\xi)\neq 0$ as $\xi$ is separable. So $W(P'(f))\neq |X|_x$. Let $Z=\Supp \mathcal{O}_X/(P'(f))$, then $\varphi$ is unramified outside $T$. \textcolor{red}{Include the parts regarding unramified morphisms and étale morphisms before this section}
+    In particular, $\varphi$ is étale outside $T$ and hence a local isomorphism by \cref{ConstructionComplex-cor-localisocondition} in \nameref{ConstructionComplex-chap-constructionComplex}. In particular,
+    \[
+        X^{\sing}\subseteq Z\cup\varphi^{-1}(T)  
+    \]
+    and hence
+    \[
+        X^{\sing}_x\subseteq Z_x\cup\varphi^{-1}(T)_x. 
+    \]
+    The latter is not equal to $|X|_x$ by \cref{ConstructionComplex-cor-orderrelationsubgermideal} in \nameref{ConstructionComplex-chap-constructionComplex} and the fact that $\mathcal{O}_{X,x}$ is integral.
+\end{proof}
+
+\begin{thm}[Abhyankar]\label{thm:Abhyansinglocus}
+    Let $X$ be a complex analytic space and $x\in X$, then
+    \[
+        X^{\Sing}_x=(\Spec \mathcal{O}_{X,x})^{\Sing}.  
+    \]
+\end{thm}
+\begin{proof}
+    Let $\mathfrak{p}\in \Spec \mathcal{O}_{X,x}$. In concrete terms, we need to show that $W(\mathfrak{p})\not\subset X^{\Sing}_x$ if and only if $\Spec \mathcal{O}_{X,x}$ is regular at $\mathfrak{p}$.
+    
+    
+    The problem is local on $X$. Up to shrinking $X$, we may assume that $\mathfrak{p}$ spreads to a coherent ideal $\mathcal{I}$ on $X$. Let $Y$ be the closed analytic subspace of $X$ defined by $\mathcal{I}$. By \cref{lma-codimconstantlocal}, up to shrinking $X$, we may assume that $\codim_y(Y,X)$ is constant for $y\in Y$. We denote this common value as $p$, which is necessarily equal to the height of $\mathfrak{p}$.
+
+    As $Y_x$ is irreducible by assumption, for an analytic set $Z$ in $Y$ satisfying $Z_x\neq |Y|_x$, the following conditions are equivalent:
+    \begin{enumerate}
+        \item $|Y|_x\not\subset X^{\Sing}_x$;
+        \item $(|Y|\setminus Z)_x \not\subset X^{\Sing}_x$.
+    \end{enumerate}
+    (2) $\implies$ (1) is trivial. If (2) fails, then 
+    \[
+        |Y|_x= (|Y|\cup X^{\Sing})_x\cup Z_x.  
+    \]
+    So $|Y|_x=(|Y|\cup X^{\Sing})_x$, namely (1) holds. We apply this remark to 
+    \[
+        Z=Y^{\Sing} \cup S_{p'}(\mathcal{I}/\mathcal{I}^2), 
+    \]
+    where $p'$ is the dimension of the Zariski tangent space of $\Spec \mathcal{O}_{X,x}$ at $\mathfrak{p}$ and $S_{p'}(\mathcal{I}/\mathcal{I}^2)$ is the locus where $\mathcal{I}/\mathcal{I}^2$ is not locally free of rank $p'$. Note that neither part of $Z$ is equal to $|Y|_x$, the former follows from  \cref{thm-genericsmoothintegral} and the latter follows from \cref{ConstructionComplex-thm-Nullstellensatz} in \nameref{ConstructionComplex-chap-constructionComplex} as clearly $\mathfrak{p}\not\in S_{p'}(\mathcal{I}/\mathcal{I}^2)$. 
+    We find that $W(\mathfrak{p})\not\subset X^{\Sing}_x$ if and only if $(|Y|\setminus Z)_x \not\subset X^{\Sing}_x$.
+    
+    If $y\in |Y|\setminus Z$, then $y$ is a regular point of $Y$ and $\codim_y(Y,X)=p$. On the other hand, $\mathcal{I}/\mathcal{I}^2$ is free of rank $p'$ around $y$. But given the regularity of $\mathcal{O}_{Y,y}$, the regularity of $\mathcal{O}_{X,y}$ is equivalent to the fact that $\mathcal{I}/\mathcal{I}^2$ is free of rank $p$. Or equivalently to $p=p'$. The latter is equivalent to the regularity of $\mathfrak{p}$ in $\Spec \mathcal{O}_{X,x}$. The theorem is established.
+\end{proof}
+
+\begin{proposition}\label{prop-regularlocusproduct}
+    Let $X,Y$ be complex analytic spaces and $x\in X$, $y\in Y$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is regular at $x$ and $Y$ is regular at $y$;
+        \item $X\times Y$ is regular at $(x,y)$.
+    \end{enumerate}
+\end{proposition}
+This follows from \cref{ConstructionComplex-cor-Omega1sum} in \nameref{ConstructionComplex-chap-constructionComplex} and \cref{prop-smoothchar}.
+\iffalse
+\begin{proof}
+    By \cref{Local-thm-complocalringtest} in \nameref{Local-chap-local},
+    \[
+        \hat{\mathcal{O}}_{X\times Y,(x,y)}=\hat{\mathcal{O}}_{X,x}\hat{\otimes}\hat{\mathcal{O}}_{Y,y}.  
+    \]
+    As a noetherian local ring is regular if and only if its completion is by \cite[\href{https://stacks.math.columbia.edu/tag/07NY}{Tag 07NY}]{stacks-project}, it suffices to prove the corresponding algebraic result, which is well-known.
+\end{proof}
+\fi
 
 \section{Serre's condition \texorpdfstring{$R_n$}{Rn}}
 Fix $n\in \mathbb{N}$ in this section.
@@ -133,9 +399,58 @@ Fix $n\in \mathbb{N}$ in this section.
     We say $X$  \emph{satisfies $R_n$} if $X$ satisfies $R_n$ at all points $x\in X$. 
 \end{definition}
 
-\begin{proposition}
-    
+\begin{proposition}\label{prop-Rncompletion}
+    Let $X$ be a complex analytic space and $x\in X$. Take $n\in \mathbb{N}$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ satisfies $R_n$ at $x$;
+        \item $\hat{\mathcal{O}}_{X,x}$ satisfies $R_n$.
+    \end{enumerate}
 \end{proposition}
+\begin{proof}
+    This follows from \cite[\href{https://stacks.math.columbia.edu/tag/07NY}{Tag 07NY}]{stacks-project}.
+\end{proof}
+
+\begin{proposition}\label{prop-Rnreformulate}
+    Let $X$ be a complex analytic space, $x\in X$ and $n\in \mathbb{N}$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ satisfies $R_n$ at $x$;
+        \item $\codim_x(X^{\Sing},X)>n$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    It follows from \cref{thm:Abhyansinglocus} that (1) holds if and only if $\codim_x(X^{\Sing}_x,\Spec \mathcal{O}_{X,x})>n$, The latter condition is equivalent to (2) by definition.
+\end{proof}
+
+\begin{corollary}\label{cor-Rnlocuscoana}
+    Let $X$ be a complex analytic space and $n\in \mathbb{N}$. The 
+    \[
+        \left\{x\in X: X\text{ satisfies }R_n \text{ at }x \right\}  
+    \]
+    is co-analytic in $X$.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{prop-Rnreformulate} and \cref{cor-codimgeqnanalytic}.
+\end{proof}
+
+
+\begin{proposition}\label{prop-Rnproduct}
+    Let $X,Y$ be complex analytic spaces and $x\in X$, $y\in Y$. Take $n\in \mathbb{N}$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ satisfies $R_n$ at $x$ and $Y$ satisfies $R_n$ at $y$;
+        \item $X\times Y$ satisfies $R_n$ at $(x,y)$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    By \cref{prop-regularlocusproduct}, 
+    \[
+        (X\times Y)^{\Sing}=(X^{\Sing}\times Y)\cup (X\times Y^{\Sing}).  
+    \]
+    It follows that 
+    \[
+        \codim_{(x,y)}((X\times Y)^{\Sing},X\times Y)=  \min \left\{ \codim_x (X^{\Sing},X),\codim_y (Y^{\Sing},Y)\right\}
+    \]
+    We conclude by \cref{prop-Rnreformulate}.
+\end{proof}
 
 \section{Serre's condition \texorpdfstring{$S_n$}{Sn}}
 Fix $n\in \mathbb{N}$ in this section.
@@ -145,9 +460,122 @@ Fix $n\in \mathbb{N}$ in this section.
     We say $X$  \emph{satisfies $S_n$} if $X$ satisfies $S_n$ at all points $x\in X$. 
 \end{definition}
 
-\begin{proposition}
-    
+\begin{proposition}\label{prop-Sncompletion}
+    Let $X$ be a complex analytic space and $x\in X$. Take $n\in \mathbb{N}$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ satisfies $S_n$ at $x$;
+        \item $\hat{\mathcal{O}}_{X,x}$ satisfies $S_n$.
+    \end{enumerate}
 \end{proposition}
+\begin{proof}
+    This follows from the fact that $\mathcal{O}_{X,x}$ is the quotient of a regular local ring. \textcolor{red}{Include a reference}
+\end{proof}
+
+\begin{proposition}\label{prop-coprofgnanal}
+    Let $X$ be a complex analytic space, $\mathcal{F}$ be a coherent sheaf of $\mathcal{O}_X$-modules and $n\in \mathbb{N}$. Then 
+    \[
+        \left\{x\in X: \codep_{\mathcal{O}_{X,x}}\mathcal{F}_x> n \right\}
+    \]
+    is an analytic subset of $X$. Moreover, the germ of this set in $\Spec \mathcal{O}_{X,x}$ is equal to 
+    \[
+        \left\{\mathfrak{p}\in \Spec \mathcal{O}_{X,x}: \codep_{\mathcal{O}_{X,x,\mathfrak{p}}}\mathcal{F}_{x,\mathfrak{p}}> n \right\}. 
+    \]
+\end{proposition}
+\begin{proof}
+    \textbf{Step~1}. We reduce to the case where $X$ is smooth and equidimensional of dimension $N$.
+
+    The problem is local in $X$, so we may assume that $X$ is a complex model space. Assume that $X$ is a closed analytic subspace of a domain $U$ in $\mathbb{C}^m$ for some $m\in \mathbb{N}$. For any $x\in X$, we have
+    \[
+        \codep_{\mathcal{O}_{X,x}}\mathcal{F}_x=\codep_{\mathcal{O}_{U,x}}\mathcal{G}_x,
+    \]
+    where $\mathcal{G}$ is the zero-extension of $\mathcal{F}$ to $U$. A similar formula holds for $\codep_{\mathcal{O}_{X,x,\mathfrak{p}}}\mathcal{F}_{x,\mathfrak{p}}$. So it suffices to handle $U$ instead of $X$.
+
+    \textbf{Step~2}. We prove the result after the reduction in Step~1.
+
+    By Auslander--Buchsbaum formula, for $x\in X$,
+    \[
+        \pd_{\mathcal{O}_{X,x}} \mathcal{F}_x+\dep_{\mathcal{O}_{X,x}} \mathcal{F}_x=\dep \mathcal{O}_{X,x}=\dim \mathcal{O}_{X,x}.
+    \]
+    So the condition $\codep_{\mathcal{O}_{X,x}} \mathcal{F}_x>n$ is equivalent to
+    \[
+        \pd_{\mathcal{O}_{X,x}} \mathcal{F}_x> n+\dim \mathcal{O}_{X,x}-\dim_x \Supp\mathcal{F}.
+    \]
+    As $\mathcal{O}_{X,x}$ is regular hence equidimensional, the condition just means
+    \[
+        \pd_{\mathcal{O}_{X,x}} \mathcal{F}_x> n+\codim_x(\Supp \mathcal{F}, X).
+    \]
+    As $\mathcal{O}_{X,x}$ is regular, this condition is equivalent to the existence of an integer $r>n+\codim_x(\Supp \mathcal{F}, X)$ such that
+    \[
+        \ExtFun_{\mathcal{O}_X}^r(\mathcal{F},\mathcal{O}_X)_x\neq 0.  
+    \]
+    For each $p\in \mathbb{N}$, we introduce
+    \[
+        T_p(\mathcal{F}):=\bigcup_{r=p+1}^{N}\Supp \ExtFun_{\mathcal{O}_X}^r(\mathcal{F},\mathcal{O}_X).  
+    \]
+    Then the proceeding analysis shows that 
+    \[
+        \left\{x\in X: \codep_{\mathcal{O}_{X,x}}\mathcal{F}_x> n \right\}=\bigcup_{s=0}^{N} T_{n+s}(\mathcal{F})\cap \left\{y\in \Supp \mathcal{F}:\codim_y(\Supp \mathcal{F},X)\leq s\right\}.
+    \]
+    Observe that the right-hand side is an analyitc set in $X$ by  \cref{ConstructionComplex-ex-closedanalyticspaceanalyt} in \nameref{ConstructionComplex-chap-constructionComplex} and \cref{cor-codimgeqnanalytic}, hence so is the left-hand side.
+
+    It remains to compute the germ at $y\in X$. For $p\in \mathbb{N}$, we compute
+    \[
+        T_p(\mathcal{F})_y=  \bigcup_{r=p+1}^{N}\Supp \ExtFun_{\mathcal{O}_X}^r(\mathcal{F},\mathcal{O}_X)_y.
+    \]
+    But observe that
+    \[
+        \ExtFun_{\mathcal{O}_X}^r(\mathcal{F},\mathcal{O}_X)_y=\Ext_{\mathcal{O}_{X,y}}^r(\mathcal{F}_y,\mathcal{O}_{X,y}).
+    \]
+    Let $\widetilde{\mathcal{F}_y}$ be the coherent module on $\Spec \mathcal{O}_{X,x}$ associated with $\mathcal{F}_y$. Let $X_y=\Spec \mathcal{O}_{X,y}$
+    Then 
+    \[
+        T_p(\mathcal{F})_y=\bigcup_{r=p+1}^{N} \Supp \ExtFun_{\mathcal{O}_{X_y}}^r(\widetilde{\mathcal{F}_y},\mathcal{O}_{X_y})_y.
+    \]
+    On the other hand, by \cref{cor-codimgeqngerm}, for $s\in \mathbb{N}$,
+    \[
+        \left\{x\in \Supp \mathcal{F}:\codim_x(\Supp \mathcal{F},X)\leq s\right\}_y=  \left\{ \mathfrak{p}\in \Spec \mathcal{O}_{X,y}: \codim_{\mathfrak{p}}(\Supp \widetilde{F_y},\Spec \mathcal{O}_{X,y}) \right\}.
+    \]
+    The same argument as above shows that 
+    \[
+        \left\{x\in X: \codep_{\mathcal{O}_{X,x}}\mathcal{F}_x> n \right\}_y=\left\{\mathfrak{p}\in \Spec \mathcal{O}_{X,y}: \codep_{\mathcal{O}_{X,y,\mathfrak{p}}}\mathcal{F}_{y,\mathfrak{p}}> n \right\}. 
+    \]
+\end{proof}
+
+\begin{proposition}\label{prop-Sncomplement}
+    Let $X$ be a complex analytic space and $n\in \mathbb{N}$. Then the set of $x\in X$ such that $X$ satisfies $S_n$ at $x$ is the complement of 
+    \[
+        \bigcup_{m=0}^{\infty}\left\{ y\in Z_m :\codim_y(Z_m,X)\leq n+m \right\},  
+    \]
+    where 
+    \[
+        Z_m= \left\{x\in X: \codep \mathcal{O}_{X,x}\mathcal{F}_x> m \right\}.
+    \]
+\end{proposition}
+\begin{proof}
+    It suffices to observe that for $x\in X$, $X$ satisfies $S_n$ at $x$ if and only if
+    \[
+        \codim \left(\left\{ \mathfrak{p}\in \Spec \mathcal{O}_{X,x}: \codep \mathcal{O}_{X,x,\mathfrak{p}} \right\} ,\Spec \mathcal{O}_{X,x}\right)>n+m  
+    \]
+    for all $m\in \mathbb{N}$.
+\end{proof}
+
+\begin{corollary}\label{cor-Snlocuscoana}
+    Let $X$ be a complex analytic space and $n\in \mathbb{N}$. Then the set of $x\in X$ such that $X$ satisfies $S_n$ at $x$ is co-analytic.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{prop-Sncomplement} and \cref{prop-coprofgnanal}.
+\end{proof}
+
+\begin{proposition}\label{prop-Snproduct}
+    Let $X$, $Y$ be complex analytic spaces and $x\in X$, $y\in Y$. Take $n\in \mathbb{N}$. Assume that $X$ satisfies $S_n$ at $x$ and $Y$ satisfies $S_n$ at $y$, then $X\times Y$ satisfies $S_n$ at $(x,y)$.
+\end{proposition}
+\begin{proof}
+    By \cref{Local-thm-complocalringtest} in \nameref{Local-chap-local},
+    \[
+        \hat{\mathcal{O}}_{X\times Y,(x,y)}=\hat{\mathcal{O}}_{X,x}\hat{\otimes}\hat{\mathcal{O}}_{Y,y}.  
+    \]
+    As being $S_n$ is invariant under completion by \cite[\href{https://stacks.math.columbia.edu/tag/07NW}{Tag 07NW}]{stacks-project} and \cite[\href{https://stacks.math.columbia.edu/tag/07NV}{Tag 07NV}]{stacks-project}, it suffices to prove the corresponding algebraic result, which is known.
+\end{proof}
 
 \section{Reducedness}
 \begin{definition}
@@ -156,11 +584,25 @@ Fix $n\in \mathbb{N}$ in this section.
     We say $X$ is \emph{reduced} if $X$ is reduced at all points $x\in X$. 
 \end{definition}
 
+\begin{proposition}\label{prop-reducedcompletion}
+    Let $X$ be a complex analytic space and $x\in X$.  Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is reduced $x$;
+        \item $\hat{\mathcal{O}}_{X,x}$ is reduced.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    This follows from \cref{prop-Rncompletion} and \cref{prop-Sncompletion}.
+    
+    Otherwise, one can also argue as follows: Recall that an excellent ring is Nagata by \cite[\href{https://stacks.math.columbia.edu/tag/07QV}{Tag 07QV}]{stacks-project}.
+    A Nagata noetherian local ring is reduced if and only if its completion is by \cite[\href{https://stacks.math.columbia.edu/tag/07NZ}{Tag 07NZ}]{stacks-project}.
+\end{proof}
+
 \begin{thm}\label{thm-reducedlocusopen}
-    Let $X$ be a complex analytic space. Then the set of points $x\in X$ such that $\mathcal{O}_{X,x}$ is reduced is the complement of an analytic set.
+    Let $X$ be a complex analytic space. Then the set of points $x\in X$ such that $\mathcal{O}_{X,x}$ is reduced is co-analytic.
 \end{thm}
 \begin{proof}
-    
+    This follows from \cref{cor-Snlocuscoana} and \cref{cor-Rnlocuscoana} as reduceness is equivalent to $S_1$ and $R_0$.
 \end{proof}
 
 \begin{corollary}\label{cor-nilradcoh}
@@ -198,14 +640,252 @@ By   \cref{ConstructionComplex-lma-analyticsetlocallyidealsheaf} in \nameref{Con
 \end{proof}
 
 \begin{definition}
-    Let $X$ be a complex analytic space and $A$ be an analytic subset of $X$. The analytic space structure on $A$ defined in \cref{cor-reducedinduced} is called the \emph{reduced induced structure} on $A$.
+    Let $X$ be a complex analytic space and $A$ be an analytic subset of $X$. The analytic space structure on $A$ defined in \cref{cor-reducedinduced} is called the \emph{reduced induced structure} on $A$. In particular, $|X|$ with the reduced induced structure is denoted by $X^{\Red}$ and is called the \emph{reduced space underlying $X$}.
+\end{definition}
+
+\begin{thm}[Generic smoothness]\label{thm-gensmooth}
+    Let $X$ be a reduced complex analytic space and $x\in X$, then $X^{\Sing}_x\neq |X|_x$. In other words, $X^{\Sing}$ is nowhere dense in $|X|$. 
+\end{thm}
+\begin{proof}
+    The problem is local. Take $x\in X$. As in the proof of \cref{thm-Xsingana}, up to shrinking $X$, we may assume that there are finitely many closed analytic subsets $X_1,\ldots,X_m$ in $X$ which are irreducible at $x$ such that 
+    \[
+        X=X_1\cup\cdots\cup X_m.  
+    \]
+    As $X$ is reduced, we may also assume that $X_1,\ldots,X_m$ are all reduced. Then $X_1,\ldots,X_m$ are all integral at $x$. It follows from \cref{thm-genericsmoothintegral} that 
+    \[
+        X_i^{\Sing}\neq |X_i|_x
+    \]
+    for $i=1,\ldots,m$.
+    Let $\mathcal{I}_i$ be the coherent ideal sheaf of $X_i$ in $X$ for $i=1,\ldots,m$. It follows from the proof of \cref{thm-Xsingana} that
+    \[
+        X^{\sing}=\bigcap_{i=1}^m \left(\Supp \mathcal{I}_i \cup X_i^{\Sing} \right). 
+    \]
+    This implies $X^{\Sing}_x\neq |X|_x$: otherwise, for each $i=1,\ldots,m$, we have
+    \[
+        (\Supp \mathcal{I}_i)_x\cup (X_i^{\Sing})_x=|X|_x.  
+    \]
+    So
+    \[
+        (\Supp \mathcal{I}_i)_x= |X|_x
+    \]
+    for each $i=1,\ldots,m$. In other words,
+    \[
+        \Spec \mathcal{O}_{X,x}=\bigcup_{i=1}^m \Supp\mathcal{I}_{i,x}.
+    \]
+    Observe that $\mathcal{I}_{1,x},\ldots,\mathcal{I}_{m,x}$ are exactly the minimal primes of $\Spec   \mathcal{O}_{X,x}$. This is possible if and only if $m=1$. So we are reduced to the case where $X$ is integral at $x$. But this case is handled in \cref{thm-genericsmoothintegral}.
+\end{proof}
+
+
+\section{Normalness}
+\begin{definition}
+    Let $X$ be a complex analytic space, we say $X$ is \emph{normal} at $x\in X$ if $\mathcal{O}_{X,x}$ is normal. We also say $(X,x)$ or $X_x$ is \emph{normal} at $x\in X$.
+
+    We say $X$ is \emph{normal} if $X$ is normal at all points $x\in X$. 
+\end{definition}
+\begin{proposition}\label{prop-normalcompletion}
+    Let $X$ be a complex analytic space and $x\in X$.  Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is normal $x$;
+        \item $\hat{\mathcal{O}}_{X,x}$ is normal.
+    \end{enumerate}
+\end{proposition}
+Condition~(2) is usually known as the \emph{analytic normality} of $\mathcal{O}_{X,x}$. 
+\begin{proof}
+    This follows from \cref{prop-Rncompletion} and \cref{prop-Sncompletion}.
+\end{proof}
+
+\begin{thm}\label{thm-normallocusopen}
+    Let $X$ be a complex analytic space. Then the set of points $x\in X$ such that $\mathcal{O}_{X,x}$ is normal is co-analytic.
+\end{thm}
+\begin{proof}
+    This follows from \cref{cor-Snlocuscoana} and \cref{cor-Rnlocuscoana} as reduceness is equivalent to $S_2$ and $R_1$.
+\end{proof}
+
+\begin{proposition}\label{prop-normalspacesingcodim2}
+    Let $X$ be a normal complex analytic space. Then for any $x\in X^{\Sing}$, 
+    \[
+        \codim_x(X^{\Sing},X)\geq 2.  
+    \]
+\end{proposition}
+\begin{proof}
+    This follows from \cref{thm:Abhyansinglocus} and the corresponding algebraic result.
+\end{proof}
+
+\begin{proposition}\label{prop-normalizationcas}
+    Let $X$ be a reduced complex analytic space. Then there is a finite $\mathcal{O}_X$-algebra $\overline{\mathcal{O}}_X$ such that for each $x\in X$, $\overline{\mathcal{O}}_{X,x}$ is isomorphism to the inclusion of the integral closure $\overline{\mathcal{O}_{X,x}}$ as $\mathcal{O}_{X,x}$-algebras.
+
+    The sheaf $\overline{\mathcal{O}}_X$ is unique up to a unique isomorphism.
+\end{proposition}
+\begin{proof}
+    The uniqueness is obvious, as there are no non-trivial automorphisms of $\overline{\mathcal{O}}_{X,x}$ as an $\mathcal{O}_{X,x}$-algebra.
+
+    We prove the existence. The problem is then local on $X$. Let $x\in X$. By \cref{ConstructionComplex-lma-spreadfinitelag} in \nameref{ConstructionComplex-chap-constructionComplex}, up to shrinking $X$,
+    $\overline{\mathcal{O}_{X,x}}$ spreads to a finite $\mathcal{O}_X$-algebra $\mathcal{A}$. Let $X'=\Spec^{\An}_X\mathcal{A}$. Let $x_1',\ldots,x_m'$ be the distinct points on the fiber over $x$ of $X'\rightarrow X$. By  \cref{ConstructionComplex-cor-finitespectrumidentification} in \nameref{ConstructionComplex-chap-constructionComplex}, the points corresponds to $\Spm_{\mathbb{C}} \mathcal{A}_x$. Let $\mathfrak{p}_1,\ldots,\mathfrak{p}_{m'}$ be the minimal primes of $\mathcal{O}_{X,x}$, then 
+    \[
+        \mathcal{A}_x=\overline{\mathcal{O}_{X,x}}\cong \prod_{i=1}^{m'}   \overline{\mathcal{O}_{X,x}/\mathfrak{p}_i}.
+    \]
+    As $\mathcal{O}_{X,x}/\mathfrak{p}_i$ is Henselian, $\overline{\mathcal{O}_{X,x}/\mathfrak{p}_i}$ is in fact local for each $i=1,\ldots,m'$. As $\mathcal{O}_{X,x}/\mathfrak{p}_i$ is excellent, $\overline{\mathcal{O}_{X,x}/\mathfrak{p}_i}$ is finite over $\mathcal{O}_{X,x}/\mathfrak{p}_i$. It follows that $\Spm_{\mathbb{C}}\mathcal{A}_x=\Spm \mathcal{A}_x$. So we find that $m'=m$. Up to a renumbering, we may assume that $\mathfrak{p}_i$ corresponds to $x_i'$ for $i=1,\ldots,m$. Then by \cref{ConstructionComplex-cor-finitespectrumidentification} in \nameref{ConstructionComplex-chap-constructionComplex},
+    \[
+        \mathcal{O}_{X',x_i'}\cong  \overline{\mathcal{O}_{X,x}/\mathfrak{p}_i} 
+    \]
+    for $i=1,\ldots,m$. In particular, $X'$ is normal at $x_i'$ for all $i=1,\ldots,m$.
+    By \cref{thm-normallocusopen}, \cref{ConstructionComplex-cor-specanfinitetopfinite} in \nameref{ConstructionComplex-chap-constructionComplex} and \cref{Topology-lma-opennhfiberclosedmap} in \nameref{ConstructionComplex-chap-constructionComplex}, up to shrinking $X$, we may assume that $X'$ is normal. We observe that for each $y\in X$, $\mathcal{A}_{y}$ is the product of the local rings of points on the fiber hence normal.
+
+    For $i=1,\ldots,m$, as $\mathcal{O}_{X,x}/\mathfrak{p}_i$ is excellent, its conductor is non-zero. We can find a non-zero $f_{i,x}\in \mathcal{O}_{X,x}/\mathfrak{p}_i$ such that $f_{i,x}\overline{\mathcal{O}_{X,x}/\mathfrak{p}_i}\subseteq \mathcal{O}_{X,x}/\mathfrak{p}_i$. Take 
+    \[
+        f_x=\prod_{i=1}^m f_{i,x}.  
+    \]
+    Then $f_x$ is a non-zero divisor in $\mathcal{O}_{X,x}$ and $f_x \mathcal{A}_x\subseteq \mathcal{O}_{X,x}$. Up to shrinking $X$, we may assume that $f_x$ spreads to $f\in \mathcal{O}_X(X)$, and we have an injection
+    \[
+        f\mathcal{A}\subseteq \mathcal{O}_X.  
+    \]
+    Up to shrinking $X$, we may also assume that $\mathcal{O}_X\rightarrow \mathcal{A}$ is injective. We therefore get an injective map
+    \[
+        \mathcal{A}\xrightarrow{\times f} \mathcal{O}_X  \xrightarrow{\times f^{-1}}\mathcal{O}_X[f^{-1}]. 
+    \]
+    For each $y\in X$, we get an injective map
+    \[
+        \mathcal{A}_y\rightarrow \mathcal{O}_{X,y}[f_y^{-1}].  
+    \]
+    In particular, $\mathcal{A}_y$ is in the total ring of fraction of $\mathcal{O}_{X,y}$. As $\mathcal{A}_y$ is finite over $\mathcal{O}_{X,y}$, we have
+    \[
+        \mathcal{A}_y\subseteq \overline{\mathcal{O}_{X,y}}.
+    \]
+    On the other hand, $\mathcal{A}_y$ is normal, so equality holds. 
+\end{proof}
+
+\begin{definition}
+    Let $X$ be a reduced complex analytic space. Then $\Spec^{\An}_X \overline{\mathcal{O}}_X$ constructed in \cref{prop-normalizationcas} is called the \emph{normalization} of $X$. We denote it by $\bar{X}$.
+    Note that we have a canonical morphism $\bar{X}\rightarrow X$. 
+    
+    The normalization of $X$ is well-defined up to a unique isomorphism in $\CASCat_{/X}$.
+\end{definition}
+
+\begin{proposition}\label{prop-normalizationbranches}
+    Let $X$ be a reduced complex analytic space. For each $x\in X$, the fiber of $\bar{X}\rightarrow X$ over $x$ is in bijection with the set of minimal prime ideals in $\mathcal{O}_{X,x}$. Moreover, if $y$ corresponds to $\mathfrak{p}$, we have
+    \[
+      \mathcal{O}_{\bar{X},y}\cong  \overline{\mathcal{O}_{X,x}/\mathfrak{p}}
+    \] 
+    as $\mathcal{O}_{X,x}$-algebras.
+\end{proposition}
+\begin{proof}
+    This follows from the proof of \cref{prop-normalizationcas}.   
+\end{proof}
+
+
+
+\begin{proposition}\label{prop-reducedspacenormalizationchar}
+    Let $X$ be a reduced complex analytic space. Then 
+    \begin{enumerate}
+        \item $\bar{X}$ is normal;
+        \item $p:\bar{X}\rightarrow X$ is topologically finite and surjective;
+        \item There is a nowhere dense analytic set $Y$ in $X$ such that $p^{-1}(Y)$ is nowhere dense in $\bar{X}$ and the morphism $\bar{X}\setminus p^{-1}(Y)\rightarrow X\setminus Y$ induced by $p$ is an isomorphism.
+    \end{enumerate}
+\end{proposition}
+
+Conversely, these conditions determines $\bar{X}$ up to a unique isomorphism in $\CASCat_{/X}$. We will establish this result later.
+
+\begin{proof}
+    That $\bar{X}$ is normal follows from \cref{ConstructionComplex-cor-finitespectrumidentification} in \nameref{ConstructionComplex-chap-constructionComplex}.
+    The morphism $\bar{X}\rightarrow X$ is topologically finite by \cref{ConstructionComplex-cor-specanfinitetopfinite} in \nameref{ConstructionComplex-chap-constructionComplex}. It is surjective by \cref{ConstructionComplex-cor-suppaffmorphism} in \nameref{ConstructionComplex-chap-constructionComplex}.
+
+    Let $Y$ be the non-normal locus of $X$. It is in particular contained in $X^{\Sing}$. By \cref{prop-normalspacesingcodim2} and \cref{thm-normallocusopen}, $Y$ is a nowhere dense analytic set in $X$. It is clear that $p$ is an isomorphism outside $Y$. 
+    
+    We prove that $p^{-1}(Y)$ is nowhere dense. Let $x\in X$ and $x'$ be a point on the fiber of $\bar{X}\rightarrow X$ over $x$. Let $\mathfrak{p}'$ be the minimal prime ideal of $\mathcal{O}_{X,x}$ corresponding to $x'$. Then the morphism $\Spec \mathcal{O}_{\bar{X},x'}\rightarrow \Spec \mathcal{O}_{X,x}$ factorizes through $\Spec \mathcal{O}_{\bar{X},x'}\rightarrow \Spec \mathcal{O}_{X,x}/\mathfrak{p}'$. The map is finite and surjective. The latter is because $\mathcal{O}_{X,x}/\mathfrak{p}'\rightarrow \mathcal{O}_{\bar{X},x'}$ is injective. If $p^{-1}(Y)$ contains a neighbourhood of $x'$ in $\bar{X}$, then $|p^{-1}(Y)|_{x'}=\Spec \mathcal{O}_{\bar{X},x'}$. Then $|Y|_x=|\Spec \mathcal{O}_{X,x}/\mathfrak{p}'|$, which is a contradiction.
+
+\end{proof}
+
+
+
+\section{Unibranchness}
+\begin{definition}
+    Let $X$ be a complex analytic space, we say $X$ is \emph{unibranch} at $x\in X$ if $\mathcal{O}_{X,x}$ is unibranch. We also say $(X,x)$ or $X_x$ is \emph{unibranch} at $x\in X$.
+
+    We say $X$ is \emph{unibranch} if $X$ is unibranch at all points $x\in X$. 
+\end{definition}
+
+\begin{proposition}\label{prop-unibranchchar}
+    Let $X$ be a complex analytic space and $x\in X$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is unibranch at $x$;
+        \item $X^{\Red}$ is unibranch at $x$;
+        \item $\mathcal{O}_{X,x}$ is geometrically unibranch;
+        \item $\mathcal{O}_{X,x}^{\Red}$ is geometrically unibranch;
+        \item $\mathcal{O}_{X,x}$ has a unique minimal prime ideal;
+        \item The fiber of $\overline{X^{\Red}}\rightarrow X^{\Red}$ over $x$ consists of a single point.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (1) $\Leftrightarrow$ (3): As $\mathcal{O}_{X,x}$ is excellent, $\overline{\mathcal{O}_{X,x}^{\Red}}$ is a finite $\mathcal{O}_{X,x}^{\Red}$-algebra, so the residue field extension is finite. But the residue field of $\mathcal{O}_{X,x}$ is $\mathbb{C}$, so the residue field extension is the trivial extension.
+
+    (1) $\Leftrightarrow$ (5): This follows from \cite[\href{https://stacks.math.columbia.edu/tag/0BQ0}{Tag 0BQ0}]{stacks-project} and the fact that $\mathcal{O}_{X,x}$ is Henselian.
+
+    (1) $\Leftrightarrow$ (2): This follows from the observation that (5) holds for $\mathcal{O}_{X,x}$ if and only if (5) holds for $\mathcal{O}_{X,x}^{\Red}$. 
+
+    (3) $\Leftrightarrow$ (4): This follows from the same argument as (1) $\Leftrightarrow$ (2).
+
+    (5) $\Leftrightarrow$ (6): This follows from \cref{prop-normalizationbranches}.
+\end{proof}
+
+\begin{lemma}\label{lma-rankgeqnana}
+    Let $X$ be a complex analytic space, $\mathcal{M}$ be a coherent $\mathcal{O}_X$-module, $n\in \mathbb{N}$. Then the set
+    \[
+        \left\{x\in X: \rank_x \mathcal{M}\geq  n \right\}  
+    \]
+    is an analytic set in $X$.
+\end{lemma}
+\begin{proof}
+    The problem is local on $X$, we may assume that $\mathcal{M}$ admits a presentation
+    \[  
+        \mathcal{O}_X^p\rightarrow \mathcal{O}_X^q\rightarrow \mathcal{M}\rightarrow 0,
+    \]  
+    where $p,q\in \mathbb{N}$. Up to shrinking $X$, we may assume that the first map is given by a $p\times q$ matrix $M$ in $\mathcal{O}_X(X)$. The condition that $\rank_x \mathcal{M}\geq  n$ is the same as $\rank M_x\geq n$, which is defines an analytic set in $X$.
+\end{proof}
+\begin{corollary}\label{cor-specangeqnanalyt}
+    Let $X$ be a complex analytic space, $\mathcal{A}$ be a finite $\mathcal{O}_X$-algebra and $n\in \mathbb{N}$. Let $X'=\Spec_X^{\An}\mathcal{A}$.
+    Then the set
+    \[
+        \left\{x\in X: \# X'_x \geq n \right\}  
+    \]
+    is an analytic set in $X$.
+\end{corollary}
+\begin{proof}
+    By \cref{ConstructionComplex-cor-finitespectrumidentification} in \nameref{ConstructionComplex-chap-constructionComplex}, $\# X'_x=\rank_x \mathcal{A}$ for each $x\in X$. So the claim follows from \cref{lma-rankgeqnana}.
+\end{proof}
+
+\begin{corollary}
+    Let $X$ be a complex analytic space. Then the set 
+    \[
+        \left\{ x\in X : X \text{ is unibranch at }x \right\}  
+    \]
+    is co-analytic, whose complement is nowhere dense.
+\end{corollary}
+\begin{proof}
+    We may assume that $X$ is reduced by \cref{prop-unibranchchar}. 
+    Applying \cref{cor-specangeqnanalyt} to the normalization of $X$ with $n=2$, we conclude that the set is co-analytic. To show that its complement is nowhere dense, it suffices to observe that the latter is contained in $X^{\Sing}$, which is nowhere dense by \cref{thm-gensmooth}.
+\end{proof}
+
+\section{Cohen--Macaulay property}
+\begin{definition}
+    Let $X$ be a complex analytic space, we say $X$ is \emph{Cohen--Macaulay} at $x\in X$ if $\mathcal{O}_{X,x}$ is Cohen--Macaulay. We also say $(X,x)$ or $X_x$ is \emph{Cohen--Macaulay} at $x\in X$.
+
+    We say $X$ is \emph{Cohen--Macaulay} if $X$ is Cohen--Macaulay at all points $x\in X$. 
 \end{definition}
 
 
 
+The reduction and normalization of a Cohen--Macaylay space are not necessarily Cohen--Macaulay.
 
-
-\cite{stacks-project}
+\begin{thm}
+    Let $X$ be a complex analytic space. Then the set
+    \[
+        \left\{ x\in X: X\text{ is Cohen--Macaulay at }x \right\}  
+    \]
+    is co-analytic.
+\end{thm}
+\begin{proof}
+    The set is exactly where $\{x\in X:\codep_x \mathcal{O}_{X,x}=0\}$, which is co-analytic by \cref{prop-coprofgnanal}.
+\end{proof}
 
 \printbibliography
 \end{document}
