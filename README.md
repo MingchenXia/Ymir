@@ -33,11 +33,17 @@ We will freely make use of all results from Stacks Project.
 
 - [Constructions of complex analytic spaces](Constructions-Complex-Spaces.pdf)
 
-- [Properties of complex analytic spaces](Properties-Complex-Spaces.pdf)
+- [Local properties of complex analytic spaces](Properties-Complex-Spaces.pdf)
 
-> To do, include everything.
+> To do, include Gorenstein, local complete intersection. Products.
+
+- [Global properties of complex analytic spaces](Global-Properties-Complex-Spaces.pdf)
+
+> To do, include Stein, projective spaces.
 
 - [Morphisms of complex analytic spaces](Morphism-Complex-Spaces.pdf)
+
+> To do, include Grauert's direct image theorem. Include flat, separated, proper, smooth morphisms, etc.
 
 ### Part 3 Non-Archimedean analytic spaces
 
