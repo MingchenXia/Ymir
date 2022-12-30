@@ -225,6 +225,41 @@ The existence of $U_1',\ldots,U_n'$ is guaranteed by \cite[\href{https://stacks.
     This follows immediately from \cref{thm-localstructuretopfinitemap}.
 \end{proof}
 
+\section{Maps with discrete fibers}
+
+\begin{lemma}\label{lma-connectedcompofiberdim0basis}
+    Let $X$ be a locally connected locally compact Hausdorff topological space and $X_0$ be a Hausdorff space with a basis $\beta_0$. Consider a continuous map $f:X\rightarrow X_0$ with discrete fiber. Then there is a basis of $X$ made up of connected components of $f^{-1}U_0$ with $U_0\in \beta_0$.
+\end{lemma}
+\begin{proof}
+    Let $x\in X$ and $V$ be an open neighbourhood of $x$ in $X$. We need to find $U_0\in \beta_0$ and a component $U$ of $f^{-1}(U_0)$ such that $U\subseteq V$.
+    
+    For this purpose, we may assume that $X$ is connected. Set $x_0=f(x)$.
+    Choose an open neighbourhood $W$ of $x$ in $V$ with $\bar{W}$ compact and $B\cap f^{-1}(x_0)=\emptyset$, where $B=\bar{W}\setminus W$. Let $B_0=f(B)$, then $x_0\not\in B_0$. As $B_0$ is compact, we can find $U_0\in \beta_0$ containing $x_0$ such that $B_0\cap U_0=\emptyset$. Let $U$ be the connected component of $f^{-1}(U_0)$ containing $x$. Then $B\cap U=\emptyset$ and hence $U\subseteq W\cup (X\setminus \bar{W})$. As $X$ is connected and $W\cap U$ is non-empty, we find that $U\subseteq W$.
+\end{proof}
+
+\begin{proposition}\label{prop-fiberdiscountablebasisinh}
+    Let $X$ be a connected, locally connected, first countable, locally compact Hausdorff space and $X_0$ be a topological space with countable basis. If there is a map $f:X\rightarrow X_0$ with discrete fibers, then $X$ has countable topology as well.
+\end{proposition}
+This result is proved in \cite{Jur59}.
+
+\begin{proof}
+    Let $\beta_0$ be a countable basis for the topology on $X_0$. Let $\beta$ be the collection of open sets $U$ in $X$ such that
+    \begin{enumerate}
+        \item There is $U_0\in \beta_0$ such that $U$ is a connected component of $f^{-1}(U_0)$;
+        \item $U$ is relatively compact in $X$.
+    \end{enumerate}
+    By our assumption, any $U\in \beta$ has countable basis. By \cref{lma-connectedcompofiberdim0basis}, $\beta$ is a basis for the topology on $X$. It remains to show that $\beta$ is countable.
+
+    Let $V\in \beta$. For each $n\in \mathbb{Z}_{>0}$, $\beta^{(n)}$ denotes the collection of $U\in \beta$ with the following property: there is a map $\{1,\ldots,n\}\rightarrow \beta$, say assigning $U_i\in \beta$ to $i$ such that $U_1=V$, $U_i\cap U_{i+1}\neq \emptyset$ for $i=1,\ldots,n-1$. As $X$ is connected,
+    \[
+        \beta=\bigcup_{n=1}^{\infty}\beta^{(n)}.  
+    \]
+    It remains to show that for each $n\in \mathbb{Z}_{>0}$, $\beta^{(n)}$ is countable. We make an induction. The case $n=1$ is obvious. Assume that $n\geq 2$ and the assertion has been proved for $n-1$. Let $U_0\in \beta_0$ and $U'\in \beta^{(n-1)}$. Let $\alpha^{(n)}(U_0,U')$ denote the collection of $U\in \beta^{(n)}$ such that $U$ is a connected component of $f^{-1}(U_0)$ and $U\cap U'$ is non-empty. Then
+    \[
+        \beta^{(n)}=\bigcup_{U_0\in \beta_0,U'\in \beta^{(n-1)}}\alpha^{(n)}(U_0,U').  
+    \]
+    But each $\alpha_{(n)}(U_0,U')$ is countable as $U'$ has countable basis. It follows that $\beta^{(n)}$ is countable.
+\end{proof}
 
 \section{Bornology}
 \begin{definition}

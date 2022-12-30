@@ -17,6 +17,11 @@
         \dim_x X=\dim \mathcal{O}_{X,x}.
     \]
     We also define the \emph{dimension} of the pointed complex analytic space $(X,x)$ and the \emph{dimension} of the complex analytic germ $X_x$ as $\dim_x X$.
+
+    When $X$ is connected, the \emph{dimension} of $X$ is defined as
+    \[
+        \dim X:=\sup_{x\in X}\dim_x X.  
+    \]
 \end{definition}
 
 \begin{definition}
@@ -102,6 +107,8 @@ After introducing the analytic Zariski topology, we can reformulate this corolla
     \]
     The corollary follows.
 \end{proof}
+
+
 
 \begin{proposition}
     Let $X,Y$ be complex analytic spaces and $x\in X$, $y\in Y$. Then
@@ -215,6 +222,9 @@ Observe that
 \begin{proof}
     This is immediate from the proof of \cref{cor-codimgeqnanalytic}.
 \end{proof}
+
+
+
 
 \section{Smoothness}
 
@@ -675,6 +685,19 @@ By   \cref{ConstructionComplex-lma-analyticsetlocallyidealsheaf} in \nameref{Con
     Observe that $\mathcal{I}_{1,x},\ldots,\mathcal{I}_{m,x}$ are exactly the minimal primes of $\Spec   \mathcal{O}_{X,x}$. This is possible if and only if $m=1$. So we are reduced to the case where $X$ is integral at $x$. But this case is handled in \cref{thm-genericsmoothintegral}.
 \end{proof}
 
+\begin{proposition}
+    Let $X$ be a reduced complex analytic space and $f,g\in \mathcal{O}_X(X)$. Assume that $[f]=[g]$, then $f=g$.
+\end{proposition}
+\begin{proof}
+    It follows from \cref{ConstructionComplex-cor-nullversionfunction} in \nameref{ConstructionComplex-chap-constructionComplex} that $f-g$ is locally nilpotent. As $X$ is reduced, $f=g$.
+\end{proof}
+In particular, on a reduced complex analytic space $X$, a holomorphic function $f$ is uniquely determined by the continuous map $[f]:X\rightarrow \mathbb{C}$ associated with it. In this case, we will say $[f]$ \text{is holomorphic}.
+
+\begin{definition}
+    Let $X$ be a reduced complex analytic space. A \emph{continuous weakly holomorphic function} on $X$ is a continuous map $f:X\rightarrow \mathbb{C}$ such that $f|_{X^{\reg}}$ is holomorphic.
+
+    A \emph{weakly holomorphic function} on $X$ is $f\in \mathcal{O}_X(X^{\reg})$ which is locally bounded on $X$.
+\end{definition}
 
 \section{Normalness}
 \begin{definition}
@@ -761,6 +784,53 @@ Condition~(2) is usually known as the \emph{analytic normality} of $\mathcal{O}_
     The normalization of $X$ is well-defined up to a unique isomorphism in $\CASCat_{/X}$.
 \end{definition}
 
+We given an alternative characterization of $\overline{\mathcal{O}}_X$.
+\begin{proposition}
+    Let $X$ be a reduced complex analytic space. Then for any open set $U\subseteq X$, 
+    \[
+        \overline{\mathcal{O}}_X(U)\cn \left\{f:U\rightarrow \mathbb{C}: f\text{ is weakly holomorphic} \right\}.      
+    \]
+\end{proposition}
+
+\begin{proof}
+    We temporarily denote the sheaf stated in theproposition by $\mathcal{O}'$. From the uniqueness in \cref{prop-normalizationcas}, it suffices to show that $\mathcal{O}'_{x}$ is isomorphic to $\overline{\mathcal{O}_{X,x}}$ as $\mathcal{O}_{X,x}$-algebras for any $x\in X$.
+
+    We first observe that $\overline{\mathcal{O}}_X$ is a subsheaf of  $\mathcal{O}'$. Let $U\subseteq X$ be an open subset and $f\in \overline{\mathcal{O}}_X(U)$.  We need to show that $f$ is locally bounded around $y\in U\cap X^{\Sing}$. 
+    Take an integral equation
+    \[
+        f_y^n+a_{1,y}f_y^{n-1}+\cdots+a_{n,y}=0  
+    \]
+    with $a_{1,y},\ldots,a_{n,y}\in \mathcal{O}_{X,x}$.
+    Take an open neighbourhood $V$ of $y$ in $U$ such that $a_{1,y},\ldots,a_{n,y}$ lift to $a_1,\ldots,a_n\in \mathcal{O}_X(V)$ and
+    \[
+        (f|_V)^n +a_1f|_V^{n-1}+\cdots+ a_n=0. 
+    \] 
+    Then for any $z\in V\setminus X^{\Sing}$,
+    \[
+        |f(z)|\leq \max\{1,|a_1(z)|+\ldots+|a_n(z)|\}.  
+    \]
+
+    We show we can find a non-zero divisor $h_x\in \mathcal{O}_{X,x}$ such that 
+    \[
+        h_x\mathcal{O}'_x\subseteq \mathcal{O}_{X,x}.  
+    \]
+    Up to shrinking $X$, we may assume that $h_x$ spreads to $h\in \mathcal{O}_(X)$ and $X$ is a closed analytic subspace of a domain $\Omega \subseteq \mathbb{C}^M$ for some $M\in \mathbb{N}$. 
+
+    The problem is local, we may assume that $(X,x)=(\Spec_{W}^{\An}\mathcal{A},x')$, where $W\subseteq \mathbb{C}^N$ is an open subset with $N=\dim_x X$ and $\mathcal{A}$ is a finite $\mathcal{O}_W$-algebra, $x'$ is the unique point of $\Spec_{W}^{\An}\mathcal{A}$ over $0\in \mathbb{C}^N$. Write $\pi:(X,x)\rightarrow (\mathbb{C}^N,0)$ for the projection. By \cref{cor-specangeqnanalyt} and \cref{Topology-lma-opennhfiberclosedmap} in \nameref{Topology-chap-topology}, we may assume that 
+    . ......
+
+
+
+    
+    Choose a linear map $\ell:\mathbb{C}^M\rightarrow \mathbb{C}$ such that 
+    There is a countable dense subset $W_0$ of $W$ containing $x$, such that $\ell$ seaprates the points of $\pi^{-1}(y)$ for any $y\in W_0$. The existence of $\ell$ is clear. Let $\alpha_1,\ldots,\alpha_k$ be the holomorphic functions on $W$ given by the elementary symmetric functions of the values of $\ell$ on the fibers of $\pi$. We set
+    \[
+        P(\xi,z)=\xi^k+\sum_{j=1}^k \alpha_j(z)\xi^{k-i}.  
+    \]
+    Then $P(\ell(z),\pi(z))=0$ on $X$ as it holds on a dense subset. Let $z\in $
+
+\end{proof}
+
 \begin{proposition}\label{prop-normalizationbranches}
     Let $X$ be a reduced complex analytic space. For each $x\in X$, the fiber of $\bar{X}\rightarrow X$ over $x$ is in bijection with the set of minimal prime ideals in $\mathcal{O}_{X,x}$. Moreover, if $y$ corresponds to $\mathfrak{p}$, we have
     \[
@@ -793,6 +863,13 @@ Conversely, these conditions determines $\bar{X}$ up to a unique isomorphism in 
     
     We prove that $p^{-1}(Y)$ is nowhere dense. Let $x\in X$ and $x'$ be a point on the fiber of $\bar{X}\rightarrow X$ over $x$. Let $\mathfrak{p}'$ be the minimal prime ideal of $\mathcal{O}_{X,x}$ corresponding to $x'$. Then the morphism $\Spec \mathcal{O}_{\bar{X},x'}\rightarrow \Spec \mathcal{O}_{X,x}$ factorizes through $\Spec \mathcal{O}_{\bar{X},x'}\rightarrow \Spec \mathcal{O}_{X,x}/\mathfrak{p}'$. The map is finite and surjective. The latter is because $\mathcal{O}_{X,x}/\mathfrak{p}'\rightarrow \mathcal{O}_{\bar{X},x'}$ is injective. If $p^{-1}(Y)$ contains a neighbourhood of $x'$ in $\bar{X}$, then $|p^{-1}(Y)|_{x'}=\Spec \mathcal{O}_{\bar{X},x'}$. Then $|Y|_x=|\Spec \mathcal{O}_{X,x}/\mathfrak{p}'|$, which is a contradiction.
 
+\end{proof}
+
+\begin{proposition}[Rado, Cartan]
+    Let $X$ be a normal complex analytic space and $f:X\rightarrow \mathbb{C}$ be a continuous map. Let $Z=f^{-1}(0)$. Assume that there is $g\in \mathcal{O}_X(X\setminus Z)$ such that $[g]=f|_{X\setminus Z}$, then $f=[g]$. 
+\end{proposition}
+\begin{proof}
+    The problem is local on $X$, we may assume that $X$ is a .....
 \end{proof}
 
 
@@ -830,7 +907,7 @@ Conversely, these conditions determines $\bar{X}$ up to a unique isomorphism in 
 \begin{lemma}\label{lma-rankgeqnana}
     Let $X$ be a complex analytic space, $\mathcal{M}$ be a coherent $\mathcal{O}_X$-module, $n\in \mathbb{N}$. Then the set
     \[
-        \left\{x\in X: \rank_x \mathcal{M}\geq  n \right\}  
+        \left\{x\in X: \rank_x \mathcal{M}\leq  n \right\}  
     \]
     is an analytic set in $X$.
 \end{lemma}
@@ -839,13 +916,15 @@ Conversely, these conditions determines $\bar{X}$ up to a unique isomorphism in 
     \[  
         \mathcal{O}_X^p\rightarrow \mathcal{O}_X^q\rightarrow \mathcal{M}\rightarrow 0,
     \]  
-    where $p,q\in \mathbb{N}$. Up to shrinking $X$, we may assume that the first map is given by a $p\times q$ matrix $M$ in $\mathcal{O}_X(X)$. The condition that $\rank_x \mathcal{M}\geq  n$ is the same as $\rank M_x\geq n$, which is defines an analytic set in $X$.
+    where $p,q\in \mathbb{N}$. Up to shrinking $X$, we may assume that the first map is given by a $p\times q$ matrix $M$ in $\mathcal{O}_X(X)$. The condition that $\rank_x \mathcal{M}\leq  n$ is the same as $\rank M_x\leq n$, which is defines an analytic set in $X$.
 \end{proof}
+
+\iffalse
 \begin{corollary}\label{cor-specangeqnanalyt}
     Let $X$ be a complex analytic space, $\mathcal{A}$ be a finite $\mathcal{O}_X$-algebra and $n\in \mathbb{N}$. Let $X'=\Spec_X^{\An}\mathcal{A}$.
     Then the set
     \[
-        \left\{x\in X: \# X'_x \geq n \right\}  
+        \left\{x\in X: \# X'_x \leq n \right\}  
     \]
     is an analytic set in $X$.
 \end{corollary}
@@ -864,6 +943,7 @@ Conversely, these conditions determines $\bar{X}$ up to a unique isomorphism in 
     We may assume that $X$ is reduced by \cref{prop-unibranchchar}. 
     Applying \cref{cor-specangeqnanalyt} to the normalization of $X$ with $n=2$, we conclude that the set is co-analytic. To show that its complement is nowhere dense, it suffices to observe that the latter is contained in $X^{\Sing}$, which is nowhere dense by \cref{thm-gensmooth}.
 \end{proof}
+\fi
 
 \section{Cohen--Macaulay property}
 \begin{definition}

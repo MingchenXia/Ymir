@@ -9,8 +9,66 @@
 \section{Introduction}\label{sec-introduction-CGlobalProperty}
 
 \section{Stein spaces}
+\begin{definition}
+    Let $X$ be a complex analytic space. We say $X$ is \emph{holomorphically separable} if for any $x,y\in X$ with $x\neq y$, there is $f\in \mathcal{O}_X(X)$ with $f(x)\neq f(y)$.
+\end{definition}
+Here we regard $f$ as a continuous function $X\rightarrow \mathbb{C}$. In particular, a holomorphically separable space is Hausdorff.
+
+\begin{definition}
+    Let $X$ be a complex analytic space. We say $X$ is \emph{holomorphically spreadable} if $X$ is Hausdorff and for any $x\in X$, we can find an open neighbourhood $U$ of $x$ in $X$ such that
+    \[
+        \left\{y\in U:f(x)=f(y)\text{ for all }f\in \mathcal{O}_X(X) \right\} =\{p\}.
+    \]
+\end{definition}
+A holomorphically separable space is clearly holomorphically spreadable.
 
 
+
+\begin{proposition}
+    Let $X$ be a holomorphically spreadable complex analytic space. Then each connected component of $X$ has countable basis.
+\end{proposition}
+\begin{proof}
+    We may assume that $X$ is connected.
+    Let $F:X\rightarrow \mathbb{C}^{\mathcal{O}_X(X)}$ be the map sending $x\in X$ to $(f(x))_{f\in \mathcal{O}_X(X)}$. By our assumption, $F$ is continuous and has discrete fibers. 
+    
+    \textcolor{red}{Reproduce a theorem of Remmert}
+    %It suffices to apply \cref{Topology-prop-fiberdiscountablebasisinh} in \nameref{Topology-chap-topology}.
+\end{proof}
+
+\begin{thm}[Grauert]
+    Let $X$ be a holomorphically spreadable complex analytic space. Then there is $n\in \mathbb{N}$ a quasi-finite morphism $f:X\rightarrow \mathbb{C}^n$.
+\end{thm}
+\begin{proof}
+    
+\end{proof}
+
+\begin{definition}
+    Let $X$ be a complex analytic space. We say $X$ is \emph{holomorphically convex} if $|X|$ is Hausdorff and for any compact set $K\subseteq X$, the set 
+    \[
+        \hat{K}^X:=\left\{ x\in X: |f(x)|\leq \sup_{y\in K}|f(y)|\text{ for all }f\in \mathcal{O}_X(X) \right\}  
+    \]
+    is compact.
+
+    We say $X$ is \emph{weakly holomorphically convex} if for any quasi-compact set $K\subseteq X$, the connected components of $\hat{K}^X$ are all quasi-compact.
+\end{definition}
+\begin{proposition}
+    Let $X$ be a Hausdorff complex analytic space. Consider the following conditions:
+    \begin{enumerate}
+        \item $X$ is holomorphically convex;
+        \item For any sequence $x_i\in X$ ($i\in \mathbb{N}$) without accumulation points, there is $f\in \mathcal{O}_X(X)$ such that $|f(x_i)|$ is unbounded.
+    \end{enumerate}
+    Then (1) $\implies$ (2). The converse is true if $X$ is Lindelöf.
+\end{proposition}
+\begin{proof}
+    (1) $\implies$ (2):
+    Recall that a complex analytic space is always first countable. For a first countable Hausdorff space, compactness implies sequential compactness.
+
+    (2) $\implies$ (1): For a Lindelöf Hausdorff space, sequential compactness implies compactness. 
+\end{proof}
+
+\begin{definition}
+    Let $X$ be a complex analytic space. We say $X$ is \emph{Stein} if it is holomorphically separable and holomorphically convex.
+\end{definition}
 
 
 \cite{stacks-project}

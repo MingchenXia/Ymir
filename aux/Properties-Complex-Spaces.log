@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  29 DEC 2022 08:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  30 DEC 2022 09:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -913,32 +913,86 @@ LABELS NOT IMPORTED.
 (Introduction.tex)
 (Introduction.aux)
 No file Introduction.aux.
-Package xr Info: IMPORTING LABELS FROM Topology-Bornology.aux on input line 343.
+
+Package xr Warning: 
+No file Topology-Bornology.aux
+LABELS NOT IMPORTED.
+ on input line 343.
+
 (Topology-Bornology.tex)
 (Topology-Bornology.aux)
-Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 344.
+No file Topology-Bornology.aux.
+
+Package xr Warning: 
+No file Banach-Rings.aux
+LABELS NOT IMPORTED.
+ on input line 344.
+
 (Banach-Rings.tex)
 (Banach-Rings.aux)
-Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 345.
+No file Banach-Rings.aux.
+
+Package xr Warning: 
+No file Commutative-Algebra.aux
+LABELS NOT IMPORTED.
+ on input line 345.
+
 (Commutative-Algebra.tex)
 (Commutative-Algebra.aux)
-Package xr Info: IMPORTING LABELS FROM Local-Algebras.aux on input line 349.
+No file Commutative-Algebra.aux.
+
+Package xr Warning: 
+No file Local-Algebras.aux
+LABELS NOT IMPORTED.
+ on input line 349.
+
 (Local-Algebras.tex)
 (Local-Algebras.aux)
-Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 350.
+No file Local-Algebras.aux.
+
+Package xr Warning: 
+No file Complex-Analytic-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 350.
+
 (Complex-Analytic-Spaces.tex)
 (Complex-Analytic-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Constructions-Complex-Spaces.aux on input line 351.
+No file Complex-Analytic-Spaces.aux.
+
+Package xr Warning: 
+No file Constructions-Complex-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 351.
+
 (Constructions-Complex-Spaces.tex)
 (Constructions-Complex-Spaces.aux)
+No file Constructions-Complex-Spaces.aux.
 Package xr Info: IMPORTING LABELS FROM Properties-Complex-Spaces.aux on input line 352.
 (Properties-Complex-Spaces.tex)
 (Properties-Complex-Spaces.aux)
 
 Package xr Warning: 
-No file Morphisms-Complex-Spaces.aux
+No file Global-Properties-Complex-Spaces.aux
 LABELS NOT IMPORTED.
  on input line 353.
+
+(Global-Properties-Complex-Spaces.tex)
+(Global-Properties-Complex-Spaces.aux)
+No file Global-Properties-Complex-Spaces.aux.
+
+Package xr Warning: 
+No file Analytic-Sets.aux
+LABELS NOT IMPORTED.
+ on input line 354.
+
+(Analytic-Sets.tex)
+(Analytic-Sets.aux)
+No file Analytic-Sets.aux.
+
+Package xr Warning: 
+No file Morphisms-Complex-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 355.
 
 (Morphisms-Complex-Spaces.tex)
 (Morphisms-Complex-Spaces.aux)
@@ -947,15 +1001,15 @@ No file Morphisms-Complex-Spaces.aux.
 Package xr Warning: 
 No file Affinoid-Algebras.aux
 LABELS NOT IMPORTED.
- on input line 355.
+ on input line 357.
 
 (Affinoid-Algebras.tex)
 (Affinoid-Algebras.aux)
 No file Affinoid-Algebras.aux.
-Package xr Info: IMPORTING LABELS FROM Berkovich-Analytic-Spaces.aux on input line 356.
+Package xr Info: IMPORTING LABELS FROM Berkovich-Analytic-Spaces.aux on input line 358.
 (Berkovich-Analytic-Spaces.tex)
 (Berkovich-Analytic-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Properties-Berkovich-Spaces.aux on input line 357.
+Package xr Info: IMPORTING LABELS FROM Properties-Berkovich-Spaces.aux on input line 359.
 (Properties-Berkovich-Spaces.tex)
 (Properties-Berkovich-Spaces.aux)
 )
@@ -1105,34 +1159,280 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ] [4
 
 ]
-Properties of complex analytic spaces
-LaTeX Font Info:    Trying to load font information for U+euf on input line 29.
+Local properties of complex analytic spaces
+LaTeX Font Info:    Trying to load font information for U+euf on input line 34.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 )
+
+LaTeX Warning: Reference `ConstructionComplex-def-integralgerm' on page 1 undefined on input line 39.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 5 undefined on input line 39.
+
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [5] [6] [7] [8] [9] [10] [11]
-Overfull \hbox (52.06721pt too wide) in paragraph at lines 421--422
+[5]
+
+LaTeX Warning: Reference `ConstructionComplex-cor-analyticsubspacesamesupp' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 6 undefined on input line 63.
+
+
+LaTeX Warning: Reference `ConstructionComplex-thm-morphismdefinedbygeneratorlocal' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 6 undefined on input line 78.
+
+
+LaTeX Warning: Reference `Local-cor-morphismpowertolocalsurinj' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Reference `Local-chap-local' on page 6 undefined on input line 78.
+
+
+LaTeX Warning: Reference `Local-lma-finitetorsionfreeoverlocalequidim' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Reference `Local-chap-local' on page 6 undefined on input line 78.
+
+[6]
+
+LaTeX Warning: Reference `Local-thm-complocalringtest' on page 1 undefined on input line 120.
+
+
+LaTeX Warning: Reference `Local-chap-local' on page 7 undefined on input line 120.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-orderrelationsubgermideal' on page 1 undefined on input line 164.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 7 undefined on input line 164.
+
+
+LaTeX Warning: Reference `ConstructionComplex-lma-analyticsetlocallyidealsheaf' on page 1 undefined on input line 168.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 7 undefined on input line 168.
+
+[7] [8]
+
+LaTeX Warning: Reference `Complex-thm-hCnidentification' on page 1 undefined on input line 256.
+
+
+LaTeX Warning: Reference `Complex-chap-complex' on page 9 undefined on input line 256.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-localisocondition' on page 1 undefined on input line 256.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 9 undefined on input line 256.
+
+
+LaTeX Warning: Reference `ConstructionComplex-ex-OmegaCn' on page 1 undefined on input line 258.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 9 undefined on input line 258.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-Kahdiffcoh' on page 1 undefined on input line 262.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 9 undefined on input line 262.
+
+[9]
+
+LaTeX Warning: Reference `ConstructionComplex-ex-closedanalyticspaceanalyt' on page 1 undefined on input line 307.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 10 undefined on input line 307.
+
+
+LaTeX Warning: Reference `ConstructionComplex-prop-analyticsettrans' on page 1 undefined on input line 309.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 10 undefined on input line 309.
+
+
+LaTeX Warning: Reference `ConstructionComplex-ex-closedanalyticspaceanalyt' on page 1 undefined on input line 313.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-Kahdiffcoh' on page 1 undefined on input line 313.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 10 undefined on input line 313.
+
+
+LaTeX Warning: Reference `ConstructionComplex-thm-morphismdefinedbygeneratorlocal' on page 1 undefined on input line 328.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 10 undefined on input line 328.
+
+
+LaTeX Warning: Reference `ConstructionComplex-thm-Nullstellensatz' on page 1 undefined on input line 340.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 10 undefined on input line 340.
+
+[10]
+
+LaTeX Warning: Reference `ConstructionComplex-cor-localisocondition' on page 1 undefined on input line 344.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 11 undefined on input line 344.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-orderrelationsubgermideal' on page 1 undefined on input line 352.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 11 undefined on input line 352.
+
+
+LaTeX Warning: Reference `ConstructionComplex-thm-Nullstellensatz' on page 1 undefined on input line 380.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 11 undefined on input line 380.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-Omega1sum' on page 1 undefined on input line 393.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 11 undefined on input line 393.
+
+[11]
+Overfull \hbox (52.06721pt too wide) in paragraph at lines 431--432
 []\T1/lmr/m/n/10 (-20) It fol-lows from [][]The-o-rem 3.5[][] that (1) holds if and only if $[][]\OT1/lmr/m/n/10 (-20) (\OML/lmm/m/it/10 X[]; [] \OMS/lmsy/m/n/10 O[]\OT1/lmr/m/n/10 (-20) ) \OML/lmm/m/it/10 >
  []
 
-[12] [13]
-Overfull \hbox (14.07407pt too wide) detected at line 518
+[12]
+Overfull \hbox (14.07407pt too wide) detected at line 528
 [] \OT1/lmr/m/n/10 = [] \OML/lmm/m/it/10 T[]\OT1/lmr/m/n/10 (\OMS/lmsy/m/n/10 F\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 \ [] \OML/lmm/m/it/10 :
  []
 
 
-Overfull \hbox (38.72368pt too wide) detected at line 537
+LaTeX Warning: Reference `ConstructionComplex-ex-closedanalyticspaceanalyt' on page 1 undefined on input line 529.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 13 undefined on input line 529.
+
+[13]
+Overfull \hbox (38.72368pt too wide) detected at line 547
 [][] \OT1/lmr/m/n/10 = [] \OML/lmm/m/it/10 :
  []
 
-[14] [15] [16] [17] [18] [19] [20]
+
+LaTeX Warning: Reference `Local-thm-complocalringtest' on page 1 undefined on input line 583.
+
+
+LaTeX Warning: Reference `Local-chap-local' on page 14 undefined on input line 583.
+
+[14]
+
+LaTeX Warning: Reference `ConstructionComplex-lma-spreadfinitelag' on page 1 undefined on input line 622.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 15 undefined on input line 622.
+
+
+LaTeX Warning: Reference `ConstructionComplex-def-sheafidealanaset' on page 1 undefined on input line 640.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 15 undefined on input line 640.
+
+
+LaTeX Warning: Reference `ConstructionComplex-lma-analyticsetlocallyidealsheaf' on page 1 undefined on input line 642.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 15 undefined on input line 642.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-orderrelationsubgermideal' on page 1 undefined on input line 642.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 15 undefined on input line 642.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-orderrelationsubgermideal' on page 1 undefined on input line 649.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 15 undefined on input line 649.
+
+[15]
+
+LaTeX Warning: Reference `ConstructionComplex-cor-nullversionfunction' on page 1 undefined on input line 692.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 16 undefined on input line 692.
+
+[16]
+
+LaTeX Warning: Reference `ConstructionComplex-lma-spreadfinitelag' on page 1 undefined on input line 745.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 17 undefined on input line 745.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-finitespectrumidentification' on page 1 undefined on input line 746.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 17 undefined on input line 746.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-finitespectrumidentification' on page 1 undefined on input line 750.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 17 undefined on input line 750.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-specanfinitetopfinite' on page 1 undefined on input line 755.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 17 undefined on input line 755.
+
+
+LaTeX Warning: Reference `Topology-lma-opennhfiberclosedmap' on page 1 undefined on input line 755.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 17 undefined on input line 755.
+
+[17]
+
+LaTeX Warning: Reference `cor-specangeqnanalyt' on page 1 undefined on input line 819.
+
+
+LaTeX Warning: Reference `Topology-lma-opennhfiberclosedmap' on page 1 undefined on input line 819.
+
+
+LaTeX Warning: Reference `Topology-chap-topology' on page 18 undefined on input line 819.
+
+[18]
+
+LaTeX Warning: Reference `ConstructionComplex-cor-finitespectrumidentification' on page 1 undefined on input line 859.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 19 undefined on input line 859.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-specanfinitetopfinite' on page 1 undefined on input line 860.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 19 undefined on input line 860.
+
+
+LaTeX Warning: Reference `ConstructionComplex-cor-suppaffmorphism' on page 1 undefined on input line 860.
+
+
+LaTeX Warning: Reference `ConstructionComplex-chap-constructionComplex' on page 19 undefined on input line 860.
+
+[19] [20] [21] [22
+
+]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 890.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 970.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1140,26 +1440,27 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [21
+ [23] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Properties-Complex-Spaces.aux)
 
-] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Properties-Complex-Spaces.aux)
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'Properties-Complex-Spaces.run.xml'.
 \openout1 = `Properties-Complex-Spaces.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37640 strings out of 478994
- 713986 string characters out of 5858185
- 1563809 words of memory out of 5000000
- 54055 multiletter control sequences out of 15000+600000
- 462425 words of font info for 163 fonts, out of 8000000 for 9000
+ 37187 strings out of 478994
+ 698035 string characters out of 5858185
+ 1542221 words of memory out of 5000000
+ 53600 multiletter control sequences out of 15000+600000
+ 462259 words of font info for 161 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  132i,11n,133p,1157b,1804s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Properties-Complex-Spaces.pdf (21 pages, 330748 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Properties-Complex-Spaces.pdf (23 pages, 339906 bytes).
 PDF statistics:
- 535 PDF objects out of 1000 (max. 8388607)
- 486 compressed objects within 5 object streams
- 120 named destinations out of 1000 (max. 500000)
+ 450 PDF objects out of 1000 (max. 8388607)
+ 400 compressed objects within 4 object streams
+ 124 named destinations out of 1000 (max. 500000)
  23141 words of extra memory for PDF output out of 24883 (max. 10000000)
 
