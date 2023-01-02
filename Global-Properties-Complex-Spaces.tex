@@ -25,22 +25,30 @@ A holomorphically separable space is clearly holomorphically spreadable.
 
 
 \begin{proposition}
-    Let $X$ be a holomorphically spreadable complex analytic space. Then each connected component of $X$ has countable basis.
+    Let $X$ be an irreducible holomorphically spreadable complex analytic space. Then $X$ has countable basis.
 \end{proposition}
+The statement of this proposition in \cite[Proposition~0.37]{Fis76} is clearly wrong. I do not understand the argument of either \cite{Jur59} or \cite{Gra55}, where they claim that this result holds for connected holomorphically spreadable complex analytic spaces.
 \begin{proof}
-    We may assume that $X$ is connected.
-    Let $F:X\rightarrow \mathbb{C}^{\mathcal{O}_X(X)}$ be the map sending $x\in X$ to $(f(x))_{f\in \mathcal{O}_X(X)}$. By our assumption, $F$ is continuous and has discrete fibers. 
-    
-    \textcolor{red}{Reproduce a theorem of Remmert}
+    We may assume that $X$ is connected. Recall that by \cref{PropertyComplex-cor-caslocallyconnected} in \nameref{PropertyComplex-chap-propcomplex}, $X$ is locally connected.
+    Let $F:X\rightarrow \mathbb{C}^{\mathcal{O}_X(X)}$ be the map sending $x\in X$ to $(f(x))_{f\in \mathcal{O}_X(X)}$. By our assumption, $F$ is continuous and has discrete fibers.     
+    In particular, for each $x\in X$, we may assume take finitely many $f_1,\ldots,f_n\in \mathcal{O}_X(X)$ so that the induced morphism $F':X\rightarrow \mathbb{C}^n$ is quasi-finite at $x$. By \cref{Analytic-cor-quasifinitelocuscoana} in \nameref{Analytic-chap-AS}, we can find a nowhere dense analytic set $A$ in $X$ such that the map $X\setminus A\rightarrow \mathbb{C}^n$ induced by $F'$ is quasi-finite. Now we endow $\mathcal{O}_X(X)$ with the compact-open topology. It is a metric space. By \cref{Topology-prop-fiberdiscountablebasisinh} in \nameref{Topology-chap-topology}, $X\setminus A$ has countable basis. It follows that $\mathcal{O}_X(X\setminus A)$ is a separable metric space. Hence, so it $\mathcal{O}_X(X)$. In particular, there is a continous map with discrete fibers
+    \[
+        X\rightarrow  \mathbb{C}^{\omega}.  
+    \]
+    It follows again from \cref{Topology-prop-fiberdiscountablebasisinh} in \nameref{Topology-chap-topology} that $X$ has countable basis.
+
+    \textcolor{red}{Reproduce the proof of the local connectedness of a complex space}
     %It suffices to apply \cref{Topology-prop-fiberdiscountablebasisinh} in \nameref{Topology-chap-topology}.
 \end{proof}
 
+\iffalse
 \begin{thm}[Grauert]
     Let $X$ be a holomorphically spreadable complex analytic space. Then there is $n\in \mathbb{N}$ a quasi-finite morphism $f:X\rightarrow \mathbb{C}^n$.
 \end{thm}
 \begin{proof}
     
 \end{proof}
+\fi
 
 \begin{definition}
     Let $X$ be a complex analytic space. We say $X$ is \emph{holomorphically convex} if $|X|$ is Hausdorff and for any compact set $K\subseteq X$, the set 
@@ -70,6 +78,26 @@ A holomorphically separable space is clearly holomorphically spreadable.
     Let $X$ be a complex analytic space. We say $X$ is \emph{Stein} if it is holomorphically separable and holomorphically convex.
 \end{definition}
 
+\begin{thm}
+    Let $X$ be a complex analytic space such that $X^{\Red}$ is Stein and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Then
+    \begin{enumerate}
+        \item for each $x\in X$, the set 
+            \[
+                \{s_x:s\in H^0(X,\mathcal{F})\}
+            \]
+            generates $\mathcal{F}_x$ over $\mathcal{O}_{X,x}$;
+        \item for each $k\geq 1$,
+            \[
+                H^k(X,\mathcal{F})=0.
+            \]
+    \end{enumerate}
+\end{thm}
+The two assertions are known as Cartan Theorem~A and Cartan Theorem~B.
+
+
+\begin{proof}
+    
+\end{proof}
 
 \cite{stacks-project}
 

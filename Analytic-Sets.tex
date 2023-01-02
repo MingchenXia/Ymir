@@ -10,23 +10,263 @@
 
 \section{Remmert--Stein theorem}
 
-\begin{lemma}
-    Let $X$ be a complex analytic space and $F$ be a nowhere dense analytic set of dimension $\leq k$, where $k\in \mathbb{N}$. Let $E$ be an analytic set in $X\setminus F$ such that for any $x\in E$,
+
+\begin{lemma}\label{lma-generichypplaneintdimupp}
+    Let $n\in \mathbb{N}$ and $U$ be a relatively compact open neighbourhood of $0$ in $\mathbb{C}^n$. Let $k\in \{0,1,\ldots,n-1\}$. We write $L^k$ for the intersection of $z_1=\cdots=z_{n-k}=0$ with $U$, where $z_1,\ldots,z_n$ are the coordinates on $\mathbb{C}^n$. Let $A$ be an analytic set in $U\setminus L^k$ of dimension $\leq k$. Then for $i=0,\ldots,k$, we can find a linear subspace $L'$ of $\mathbb{C}^n$ of dimension $n-k+i$ such that 
+    \[
+        \dim L'\cap A\leq i,\quad \dim L'\cap L^k\leq i.  
+    \]
+ \end{lemma}
+ \begin{proof}
+    We make an induction on $n$. When $n=0,1$, there is nothing to prove. Let $n>1$. If $i=k$, we just take $L'=\mathbb{C}^n$. 
+    Assume $0\leq i<k$.
+
+    Let $M_1,\ldots,M_N$ be the irreducible components of $A$. We may assume that no components are single points.
+    Take a non-zero base point $p_j\in M_j$ for $j=1,\ldots,N$. Let $H$ be an $(n-1)$-dimensional linear subspace of $\mathbb{C}^n$ which does not contain $L^k$ or any of the points $p_1,\ldots,p_N$. Without loss of generality, we may guarantee that $H$ is given by $z_n=0$.
+
+    Let $k_j$ denote the dimension of $M_j$ for $j=1,\ldots,N$. Let $M_j'=M_j\cap H$ for $j=1,\ldots,N$. Observe that the dimension of $M_j'$ is either $k_j$ or $k_j-1$ for $j=1,\ldots,N$. Let 
+    \[
+        M':=\bigcup_{i=1}^N M_i'.  
+    \]
+    Then $\dim M'\leq k-1$.
+    By the inductive hypothesis, we can find a linear subspace $L'$ of $\mathbb{C}^n$ of dimension $n-k+1$ with the desired properties.
+ \end{proof}
+
+\begin{lemma}\label{lma-intersectionpundprod}
+    Let $k\leq n$ be two elements in $\mathbb{N}$ and $D=\Delta^{k}\times \Delta^{n-k}$ be the product of two unit polycylinders. Write $L$ for $\Delta^k\times \{0\}$. Consider a non-empty analytic subset $M$ of $D\setminus L$ of dimension $k$ everywhere. Assume that $M$ does not intersect a neighbourhood of $\Delta^k\times\{y\in \mathbb{C}^{n-k}: \|y\|_{L^{\infty}}=1\}$. Then for any $\epsilon>0$, $M$ meets the polycylinder $\{(x,y)\in D:\|x\|_{L^{\infty}}<\epsilon, |y|_{L^{\infty}}\in (0,1)\}$.
+\end{lemma}
+\begin{proof}
+    \textbf{Step~1}. We observe that for each $a\in \Delta^k$, the intersection
+    \[
+        \{(x,y)\in D:x=a\}\cap M  
+    \]
+    is discrete. In fact, by our assumption, the absolute values the coordinate functions of $\Delta^{n-k}$ obtain their maxima on each irreducible component of the intersection. By \cref{Morphisms-cor-takeallvalues}  in \nameref{Morphisms-chap-morphismscomplex}, these coordinates are all constant.
+
+    \textbf{Step~2}. Let $(x^1,y^1)\in M$. Then $y^1\neq 0$ by assumption. We may assume that $x^1\neq 0$ as otherwise there is nothing to prove. Let us write $x^1=(x^1_1,\ldots,x^1_k)$, $y^1=(y^1_1,\ldots,y^1_{n-k})$ with $x^1_1\neq 0$ and $y^1_1\neq 0$.
+
+    Let $b=(x^1_2,\ldots,x^1_k)$. Let $N$ be the intersection of $M$ with $\Delta\times \{b\}\times \Delta^{n-k}$. Then $N$ is non-empty and has dimension $1$ everywhere. In fact, by Krulls Hauptidealsatz, the dimension of $N$ at each point is at least $1$. By Step~1, the dimension is at most $1$.
+
+    We argue that we can take $|z_1|$ on $M$ as small as wel wish. Suppose otherwise,
+    \[
+        \sup_{z\in M}|z_1|>0.
+    \]
+    Tkae $q\in \mathbb{Z}_{>0}$ with
+    \[
+        |x_1^1|^q<|y_1^1|.    
+    \]
+    Consider the function $f:N\rightarrow \mathbb{C}$ sending $(x,y)$ to $y_1/x_1^q$. Then $f$ is a morphism of complex analytic spaces and is bounded, say
+    \[
+        \sup_{(x,y)\in  N}|f(x,y)|=C_0.  
+    \]
+    Then $C_0>1$ by our choice of $q$. But at the boundary of $D$, $|z_1|=1$, so we find that $|f(x,y)|$ obtains its maximum on each irreducible component of $N$. So in particular, $|z_1|$ obtains its infimum on each irreducible component of $N$. This contradicts the fact that $N$ has dimension $1$ everywhere.
+
+    We can now assume that $|x_1^1|<\epsilon$.
+    Now we can replace $M$ by $\{x_1^1\}\times \Delta^{k-1}\times \Delta^{n-k}$ and reduce the value of $k$ by $1$. By induction, we conclude.
+\end{proof}
+
+\begin{lemma}[Fundamental lemma]\label{lma-fundlma}
+    Let $X$ be a complex manifold and $F$ be a nowhere dense analytic set of dimension $\leq k$, where $k\in \mathbb{N}$. Let $E$ be an analytic set in $X\setminus F$ such that for any $x\in E$,
     \[
         \dim_x E=k.  
     \]
     Then
     \[
-        \left\{x\in X: \bar{E}\text{ is analytic at }x \right\}  
+        \left\{x\in F: \bar{E}\text{ is analytic at }x \right\}  
     \]
     is clopen in $X$.
 \end{lemma}
 \begin{proof}
     The given set is clearly open. It suffices to show that it is closed.
 
-    
+    Let $p\in F$ be a point in the closure of the given set. We need to show that $\bar{E}$ is analytic at $p$. The problem is local on $X$, we may assume that $X$ is a complex model space. Then it is immediate that we can reduce to the case where $X$ is a domain in $\mathbb{C}^n$ for some $n\in \mathbb{N}$. By enlarging $F$, we may assume that $F$ is defined by $y=0$, where $x,y$ denote the first $k$ and the last $n-k$ coordinates on $X\subseteq \mathbb{C}^n$. Finally, we may assume that $p=0$.
+
+    By \cref{lma-generichypplaneintdimupp}, we can take a linear subspace $L$ of $\mathbb{C}^n$ which meets $F$ and $E$ only at discrete points. We may arrange that $L$ is defined by the condition $x=0$.
+
+    Take $\epsilon,\delta>0$ so that 
+    \begin{enumerate}
+        \item 
+        \[
+            S:=\left\{(x,y)\in \mathbb{C}^k\times \mathbb{C}^{n-k}: \|x\|_{L^{\infty}}<\epsilon,\|y\|_{L^{\infty}}<\delta \right\}\subseteq D;
+        \]
+        \item
+        \[
+            \left\{(x,y)\in \mathbb{C}^k\times \mathbb{C}^{n-k}: \|x\|_{L^{\infty}}<\epsilon,\|y\|_{L^{\infty}}=\delta \right\}\cap E=\emptyset.
+        \]
+    \end{enumerate}
+    Observe that for all $a\in \mathbb{C}^k$, $\|a\|_{L^{\infty}}<\epsilon$, the intersection
+    \[
+        (\{a\}\times \mathbb{C}^{n-k})\cap E \cap \Int S 
+    \]
+    is discrete. In fact, the intersection is an analytic set in $S\setminus F$ and the absolute values of $y_1,\ldots,y_{n-k}$ take their maxima on each irreducible components by (2). So they are in fact constant.
+
+    By our assumption, there are points at which $\bar{E}$ is analytic on $Z:=\{|x|<\epsilon,y=0\}$. Let $B_0$ be a connected component of the set of such points. We can equivalently view $B_0$ as an open subset of $\{|x|<\epsilon\}$. Then for any $a\in B_0$, the set
+    \[
+        F_a:=\{(x,y)\in \mathbb{C}^n:x=a\}\cap \bar{E}\cap \Int S  
+    \]
+    is discrete. Let $(x^1,y^1)$ be a point in this set, then $\bar{E}$ is equidimensional of dimension $k$ at this point. Each irreducible component $K_j$ at $(x^1,y^1)$ is a ramified covering of order $m_j$. We define the order $m(x^1,y^1)$ as this sum. 
+
+    For each $a\in B_0$, we define $s(a)$ as the sum of multiplicities of points of $F_a$.  Then $s(a)$ is locally constant on $B_0$ and by (2), $s(a)$ is actually constant. Let $s$ be this common value.
+
+    Assume that $\bar{E}$ is not analytic at $0$.  Then $B_0$ meets $|x|=\epsilon$, say at $x'$. Let $s'$ be the number of intersection points of $\{x=x'\}\cap E$ counting mulitiplicity. 
+
+    Observe that $s'\leq s$, as otherwise, there will be more than $s$ points of $E$ over points of $B_0$ close to $x'$. But $s'\neq s$ as otherwise, we contradict \cref{lma-intersectionpundprod}.
+
+    So $s'<s$. If $x\in B_0$ converges to $x'$, then at lest one of the $s$ points of $\bar{E}$ over $x$ converges to $(x',0)$ and the coordinates $y_1,\ldots,y_{n-k}$ of this point converge to $0$. The same holds for all boundary points of $B_0$ in $\{\|x\|_{L^{\infty}}<\epsilon\}$.
+
+    We introduce $n-k$ unknowns $X_1,\ldots,X_{n-k}$ and set
+    \[
+        z=\sum_{j=1}^{n-k}y_j X_j.  
+    \]
+    If $(x,y^i)$ ($i=1,\ldots,s$) denotes the $s$-points of $\bar{E}$ lying over $x\in B_0$, then we set
+    \[
+        z^i:=  \sum_{j=1}^{n-k}y^i_j X_j
+    \]
+    for $i=1,\ldots,s$. Then $z^1\cdots z^s$ is a homogeneous polynomial of degree $s$. The coefficients are holomorphic on $B_0$ by Riemann extension theorem. As $B_0$ is not contained in $\bar{E}$, the coefficients are not all $0$.
+
+    If $x\in B_0$ converges to a boundary point of $B_0$ in $\{\|x\|_{L^{\infty}}<\epsilon\}$, then all coefficients converge to $0$. 
+
+    By \cref{Morphisms-prop-Rado} in  \nameref{Morphisms-chap-morphismscomplex}, we conclude that the boundary points of $B_0$ in the interior of $\{\|x\|_{L^{\infty}}<\epsilon\}$ lie in an analytic subset of codimension $1$. 
+
+    Let $Q(z)=(z-z^1)\cdots (z-z^s)$. Hen $Q$ is a homogeneous polynomial of degree $s$ with respect to the $u_j$'s. The coefficients are holomorphic on $x\in B_0$ and are polynomials in the $y_i$'s. The vanishing of the coordinates defines exactly the part of $\bar{E}$ over $B_0$ in the interior of $S$. But the coefficients are bounded at the boundary, so they extend to holomorphic functions everywhere and in particular on $\{\|x\|_{L^{\infty}}<\epsilon\}$. The vanishing of the coefficients define an analytic set $E'$ in $B_0\times \{\|y\|_{L^{\infty}}<\delta\}$. Each point of $E'$ belongs to the part of $\bar{E}$ lying over $B_0$. So $\bar{E}$ is analytic at each point of $\{\{(x,0):\|x\|_{L^{\infty}}<\epsilon\}<\epsilon\}$. In particular, $B_0=\{\{\|x\|_{L^{\infty}}<\epsilon\}<\epsilon\}$. This is a contradiction.   
 \end{proof}
 
+\begin{thm}\label{thm-RS1}
+    Let $X$ be a complex manifold and $F$ be a nowhere-dense analytic set in $X$ of dimension $\leq k\in \mathbb{N}$. Let $E$ be an analytic set in $X\setminus F$ all of whose irreducible components are of dimension $\geq k$ on each point. Consider a point $x\in F$ with $\dim_x F<k$. Then $\bar{E}$ is analytic at $x$.
+\end{thm}
+\begin{proof}
+    Let $r=\dim_x F$.
+    The problem is local. By \cref{PropertyComplex-thm-equidimlocusopen} in \nameref{PropertyComplex-chap-propcomplex},  we may assume that $F$ is of dimension $\leq r$ everywhere. We need to show that $\bar{E}$ is an analytic set in $X$.
+     By induction on $r$, we may clearly assume that $F$ is a complex manifold of equidimension $r$ with respect to the reduced indudced structure.
+
+    Again, as the problem is local, we may reduce to the case where $X$ is a complex model space and then to the case where $X$ is an open neighbourhood of $0$ $\mathbb{C}^n$ for some $n\in \mathbb{N}$. Let $p\in F$, we want to show that $\bar{E}$ is analytic at $p$. We may then assume that $p=0$. We can then rearrange $F$ so that $F$ is a linear subspace of dimension $r_0$. We can take a closed subspace $V$ of $X$ such that $V\setminus F$ intersects $E$ at an analytic subset of dimension $<k$. Let $E_1=E\setminus V$. Then 
+    \[
+        \overline{E_1}=\bar{E}.  
+    \]
+    As $\overline{E_1}$ is analytic at all points in $V\setminus F$, it follows from \cref{lma-fundlma} that $\overline{E_1}$ is analytic on all points of $V$. So $\bar{E}$ is analytic at points in $F$.
+
+\end{proof}
+
+\begin{thm}[Remmert--Stein]\label{thm-RS2}
+    Let $X$ be a complex analytic space and $F$ be a nowhere-dense analytic set in $X$ of dimension $\leq k\in \mathbb{N}$. Let $E$ be an analytic set in $X\setminus F$ all of whose irreducible components are of dimension $\geq k$ on each point. Then 
+    \[
+        \left\{x\in F: \bar{E}\text{ is not analytic at }x \right\}  
+    \]
+    is an analytic set of dimension $k$ at each point.
+\end{thm}
+\begin{proof}
+    The problem is local on $X$, so we may assume that $X$ is a complex model space. Then we reduce immediately to the case where $X$ is a domain in $\mathbb{C}^n$ for some $n\in \mathbb{N}$. In particular, we may assume that $X$ is a complex manifold.
+
+    Let $F'$ be set of regular points of $F$ of dimension $k$ and $F_0'\subseteq F$ be the set of points where $\bar{E}$ is analytic. Then $F_0'$ is the union of some connected components of $F_0$ by \cref{lma-fundlma}.
+
+    Let $F_1'$ be the union of the other connected components of $F'$. Observe that $G:=\overline{F_1'}$ is an analytic subset of $F$. Observe that $\bar{E}$ is analytic at no points of $G$. It suffices to show that $\bar{E}$ is analytic at all points of $F\setminus G$.
+
+    Let $p\in F\setminus G$. We show that $\bar{E}$ is 
+    If $\dim_p F<k$, we just apply \cref{thm-RS1}. So we may assume that $\dim_p F=k$. By our choice, $p\in \overline{F_0'}$. In a neighbourhood of $p$, the subset of $F$ consisting of points where $\bar{E}$ is not analytic is contained in $\overline{F_0'}\setminus F_0'$, which is an analytic set of dimension $<k$. We conclude again by \cref{thm-RS1}.
+\end{proof}
+
+
+\begin{corollary}\label{cor-fiberdimuscanatop}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $n\in \mathbb{N}$. Assume that $X$ is a complex manifold.
+    Then 
+    \[
+        \left\{ x\in X: \dim_x f^{-1}(x)\geq n \right\}  
+    \]
+    is closed.
+\end{corollary}
+\begin{proof}
+    Let $x\in X$, $\dim_x f^{-1}(x)=n$. We need to show that the fiber dimension in a neighbourhood of $x$ is at most $n$. 
+
+    The problem is local, so we may assume that $Y$ is Hausdorff. Suppose our assertion is false, then we can find a sequence $x_i\in X$ convering to $x$ such that $\dim_{x_i}f^{-1}(x_i)>d$ for all $i\in \mathbb{Z}_{>0}$. Let $E_i$ be the irreducible component of $f^{-1}(x_i)$ containing $x_i$ such that $\dim_{x_i} E_i=\dim_{x_i}f^{-1}(x_i)$ for $i\in \mathbb{Z}_{>0}$.
+
+    We may assume that $E_i$'s have the same dimension $d>n$ and $x_i$ and $x$ are all different. Let $M$ be the union of the $E_i$'s, then $M$ is an analytic set in $X\setminus f^{-1}(x)$. By \cref{thm-RS2}, $\bar{M}$ is analytic near $x$. This is absurd.
+\end{proof}
+
+
+\begin{corollary}[Remmert]\label{cor-fiberdimusczar}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $n\in \mathbb{N}$. 
+    Then 
+    \[
+        \left\{ x\in X: \dim_x f^{-1}(x)\geq n \right\}  
+    \]
+    is an analytic set in $X$.
+\end{corollary}
+This result is not stated in the correct way in Remmert's paper. In most of Remmert's papers, the notion of codimension is misused.
+\begin{proof}
+    By \cref{cor-fiberdimuscanatop}, the given set is closed. It suffices to show that it is analytic along each point on $X$. In particular, we may assume that $X$ is connected.
+
+    \textbf{Step~1}. We reduce to the case where $Y$ is a complex manifold.
+    
+    The problem is local on $Y$, so we may assume that  $Y$ is a complex model space. Then clearly, we can assume that $Y$ is a domain in $\mathbb{C}^n$ for some $n\in \mathbb{N}$. In particular, $Y$ is a complex manifold.
+
+
+    \textbf{Step~2}. We first handle the case where $X$ is a complex manifold and the rank of $\Omega_{X/Y}$ is constant.
+
+    In this case, we simply observe that $\dim_x f^{-1}(x)=\rank_x \Omega_{X/Y}$ and our assertion is obvious.
+
+    \textbf{Step~3}. The problem is local on $X$, so we may assume that $\dim X<\infty$.
+
+    Let 
+    \[
+        B=\left\{x\in X^{\reg}: \rank_x \Omega_{X/Y}>\tau \right\},  
+    \]
+    where 
+    \[
+        \tau:=  \min_{x'\in X}\rank_{x'} \Omega_{X/Y}.
+    \]
+    Then $B$ is an analytic set in $X^{\reg}$ by Step~2. The closure $\bar{B}$ is an analytic set in $X$, as this can be characterized by the condition that $\rank_x \Omega_{X/Y}>\tau$.
+    Moreover, $\dim \bar{B}<N$. 
+    
+    We may assume that $n>\tau$, as there is nothing to prove otherwise. In particular,
+    \[
+        \left\{ x\in X: \dim_x f^{-1}(x)\geq n \right\}\subseteq \bar{B}\cup X^{\Sing}.  
+    \]
+    We write $D=\bar{B}\cup X^{\Sing}$ and endow it with the reduced induced structure.
+
+    We make induction on $N:=\dim X$. The problem is trivial when $N=0$. Assume that $N\geq 1$. Then
+    \[
+        \left\{ x\in D_0: \dim_x f^{-1}(x)\geq n \right\}  
+    \]
+    is an analytic set in $D$ for each connected component $D_0$ of $D$.
+
+    We observe that
+    \[
+        \left\{ x\in X: \dim_x f^{-1}(x)\geq n \right\}=\bigcup_{D_0} \left\{ x\in D_0: \dim_x f^{-1}(x)\geq n \right\},
+    \]
+    where $D_0$ runs over all connected components of $D$ and $N-s_0$ is the dimension of $D_0$. From this it follows that $\left\{ x\in X: \dim_x f^{-1}(x)\geq n \right\}$ is analytic, as the formula union on the right-hand side is locally finite.
+\end{proof}
+\begin{corollary}\label{cor-quasifinitelocuscoana}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. Then
+    \[
+        \left\{x\in X: f\text{ is quasi-finite at }x\right\}  
+    \] 
+    is co-analytic.
+\end{corollary}
+\begin{proof}
+    This follows immediately from \cref{cor-fiberdimusczar}.
+\end{proof}
+
+As an application of Remmert--Stein theorem, we prove Chow's theorem.
+
+\begin{thm}
+    Let $n\in \mathbb{N}$ and $X$ be a closed analytic subspace of $\mathbb{P}^n$. Then $X$ is the analytification of a closed subvariety of $\mathbb{P}^n$.
+\end{thm}
+\begin{proof}
+    We may assume that $X$ is non-empty.
+    Let $\pi:\mathbb{C}^{n+1}\setminus\{0\}\rightarrow \mathbb{P}^n$ be the projection and $Y=\pi^{-1}(X)$. Then $X$ is analytic in $\mathbb{C}^{n+1}\setminus\{0\}$. By \cref{thm-RS2}, $\bar{X}$ is an analytic set in $\mathbb{C}^{n+1}$.
+
+    Choose an open ball $U$ in $\mathbb{C}^{n+1}$ centered at $0$ and finitely many holomorphic functions $f_1,\ldots,f_k\in \mathcal{O}_{\mathbb{C}^{n+1}}(U)$ such that $\bar{X}\cap U=W(f_1,\ldots,f_k)$. 
+    Let $\mathcal{P}$ be the collection of homogeneous components of the $f_i$'s. Then
+    \[
+        X=\bigcap_{f\in \mathcal{P}}W(f).  
+    \]
+    In fact, let us denote the right-hand side by $Y$ for the moment.
+    It is clear that $\bar{X}\cap U$ contains $Y\cap U$ and hence $\bar{X}\supseteq Y$. Conversely, take $x\in \bar{X}\cap U$, from the fact that $\lambda_x\in \bar{X}\cap U$ for all $\lambda\in \mathbb{C}$, $|\lambda|<1$, we find easily that all homogeneous components of the $f_i$'s vanishes at $x$. So $x\in Y$. We conclude that $\bar{X}\subseteq Y$.
+
+    Now as $\mathbb{C}[X_0,\ldots,X_n]$ is noetherian, we may take a finite subcollection $\mathcal{P}'$ of $\mathcal{P}$ such that 
+    \[
+        X=\bigcap_{f\in \mathcal{P}'}W(f). 
+    \]
+\end{proof}
 
 \cite{stacks-project}
 

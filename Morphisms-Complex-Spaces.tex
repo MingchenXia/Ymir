@@ -25,6 +25,21 @@
 
 \section{Introduction}\label{sec-introduction-morphismscomplex}
 
+\section{Open morphism}
+\begin{definition}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. We say $f$ is \emph{open} at $x\in X$ if for any neighbourhood $U$ of $x$ in $X$, $f(U)$ is a neighbourhood of $f(x)$ in $Y$.
+\end{definition}
+
+\begin{proposition}\label{prop-openmapkernelnil}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. Assume that $f$ is open at $x\in X$, then the kernel of $f_x^{\#}:\mathcal{O}_{Y,f(x)}\rightarrow \mathcal{O}_{X,x}$ is nilpotent.
+\end{proposition}
+The converse fails.
+\begin{proof}
+    Let $g_{f(x)}\in \mathcal{O}_{Y,f(x)}$ be an element in the kernel of $f_x^{\#}$. Up to shrinking $Y$, we may spread $g_{f(x)}$ to $g\in \mathcal{O}_Y(Y)$. Then $f^*g$ vanishes in a neighbourhood of $x$ in $X$. As $f$ is open at $x$, $g$ vanishes in the neighbourhood $f(U)$ of $f(x)$. By \cref{ConstructionComplex-cor-nullversionfunction} in \nameref{ConstructionComplex-chap-constructionComplex}, $g_{f(x)}$ is nilpotent.
+\end{proof}
+
+
+
 \section{Quasi-finite morphisms}
 
 \begin{definition}
@@ -59,12 +74,72 @@ This definition is purely topological. We will show that it is equivalent to an 
     Let $S$ be a complex analytic space. A \emph{finite analytic space over $S$} is a finite morphism $f:X\rightarrow S$ of complex analytic spaces. A morphism between finite analytic spaces over $S$ is a morphism of complex analytic spaces over $S$.
 \end{definition}
 
-\begin{proposition}
-    Let $f:X\rightarrow Y$ be a finite morphism of complex analytic spaces. Then $f$ is quasi-finite.
+
+\begin{proposition}\label{prop-projlemma}
+    Let $n\in \mathbb{N}$ and $D$ be an open neighbourhood of $0$ in $\mathbb{C}^n$. 
+    Let $X$ be a closed subspace of $D$ which intersections $\{(0,\ldots,0)\}\times \mathbb{C}$ at and only at $0$. Then there is a connected open product neighbourhood $B\times W\subseteq \mathbb{C}^{n-1}\times \mathbb{C}$ of $0$ in $D$ such that  the projection $B\times W\rightarrow B$ induces a finite morphism $h:X'\rightarrow B$ with $X'=X\cap (B\times W)$.
 \end{proposition}
 \begin{proof}
-    This follows from \cref{Topology-prop-topfinitechar} in \nameref{Topology-chap-topology}.
+    We will denote the coordinates on $\mathbb{C}^{n-1}\times \mathbb{C}$ as $(z,w)$.
+
+    Let $\mathcal{I}$ be the ideal of $X$ in $D$. By our assumption, we can choose $f_0\in \mathcal{I}_0$ such that $\deg_w f_0<\infty$ and $f_0(0)=0$. By \cref{Local-thm-Weierstrassprep} in \nameref{Local-chap-local}, we can find a Weierstrass polynomial $\omega_0=w^b+a_1w^{b-1}+\cdots+a_b\in \mathbb{C}\{ z_1,\ldots,z_{n-1} \}[w]$ such that $f_0=e\omega_0$ for some unit $e$ in $\mathbb{C}\{ z_1,\ldots,z_{n} \}$. We choose a product neighbourhood $B\times W\subseteq \mathbb{C}^{n-1}\times \mathbb{C}$ of $0$ in $D$ such that $\omega_0$ can be represented by $\omega\in \mathcal{O}_{\mathbb{C}^{n-1}}(B)[w]$ with $\omega|_{B\times W}\in \mathcal{I}(B\times W)$. Let $\pi:A\rightarrow B$ be the Weierstrass map defined by $\omega$. Then $\pi$ is finite by \cref{Complex-thm-Weiemapfiniteandopen} in \nameref{Complex-chap-complex}. 
+    Up to shrinking $B$ and $W$, we may assume that $A\cap (B\times W)\rightarrow B$ is finite as well. Set $X':=X\cap (B\times W)$. The restriction $h:X'\rightarrow B$ of $\pi$ is then finite.
 \end{proof}
+
+\begin{corollary}\label{cor-projlemma}
+    Let $n,k\in \mathbb{N}$ and $D$ be an open neighbourhood of $0$ in $\mathbb{C}^n$. 
+    Let $X$ be a closed subspace of $D$ which intersections $\{(0,\ldots,0)\}\times \mathbb{C}^k$ at and only at $0$. Then there is a connected open product neighbourhood $B\times W\subseteq \mathbb{C}^{n-k}\times \mathbb{C}^k$ of $0$ in $D$ such that the projection $B\times W\rightarrow B$ induces a finite morphism $h:X'\rightarrow B$ with $X'=X\cap (B\times W)$.
+\end{corollary}
+\begin{proof}
+    This follows from a repeted application of \cref{prop-projlemma}.
+\end{proof}
+
+\begin{proposition}\label{prop-finiteatpointcond}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. Then the following are equivalent:
+    \begin{enumerate}
+        \item $f$ is quasi-finite at $x$;
+        \item $f$ is finite at $x$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (2) $\implies$ (1): This follows from This follows from \cref{Topology-prop-topfinitechar} in \nameref{Topology-chap-topology}.
+
+    (1) $\implies$ (2): Write $y=f(x)$.  The assertion is local on both $X$ and $Y$. So we may assume that $U$ and $V$ are complex model spaces in domains $W\subseteq \mathbb{C}^k$ and $B\subseteq \mathbb{C}^d$ respectively with $x=0$ and $y=0$. Moreover, we may assume that $\{x\}=f'^{-1}(y)$. We have the following commutative diagram:
+    \[
+        \begin{tikzcd}
+            &                                & U\times V \arrow[dd] \arrow[r, hook] & W\times B \arrow[dd] \\
+U \arrow[r] \arrow[rrd,"f'"] & \Gamma_f \arrow[rd] \arrow[ru] &                                      &                      \\
+            &                                & V \arrow[r, hook]                    & B                   
+\end{tikzcd},
+    \]
+    where $\Gamma_{f'}$ denotes the graph of $f':U\rightarrow V$. As $\{x\}=f'^{-1}(y)$, we have $\mathbb{C}^k\times\{0\}$ intersects $\Gamma_f$ only at the origin. By \cref{cor-projlemma}, up to shrinking $W$ and $B$, we may guarantee that the projection $W\times B\rightarrow B$ induces a finite morphism $\Gamma_f\rightarrow B$ and the pushforward under this map preserves coherence. Observe that $U\rightarrow \Gamma_f$ is a biholomorphism, we conclude that $f'$ is finite. 
+\end{proof}
+
+\begin{corollary}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. The following are equivalent:
+    \begin{enumerate}
+        \item $f$ is finite;
+        \item $f$ is quasi-finite and proper.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    (1) $\implies$ (2): This follows from \cref{prop-finiteatpointcond}.
+
+    (2) $\implies$ (1): This follows from \cref{Topology-prop-topfinitechar} in \nameref{Topology-chap-topology}.
+\end{proof}
+
+\begin{corollary}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. Then the set
+    \[
+        \left\{ x\in X: f\text{ is quasi-finite at }x\right\}  
+    \]
+    is open.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{prop-finiteatpointcond}.
+\end{proof}
+
+
 
 \begin{thm}\label{thm-finitealgeqfiniteanalyticspace}
     Let $S$ be a complex analytic space. Then the functor $\Spec^{\An}_S$ defines an anti-equivalence from the category of finite $\mathcal{O}_S$-algebras to the category of finite analytic spaces over $S$.
@@ -83,7 +158,7 @@ This definition is purely topological. We will show that it is equivalent to an 
     It suffices to handle each $V_i$ separately, so we may assume that $f^{-1}(s)=\{x\}$ consists of a single point. Then $\mathcal{O}_{X,x}$ is finite over $\mathcal{O}_{S,s}$ by \cref{prop-quasifinitechar}. Up to shrinking $S$, we may assume that $\mathcal{O}_{X,x}$ spreads out to a finite $\mathcal{O}_S$-algebra $\mathcal{B}$. Let $X'=\Spec^{\An}_{S}\mathcal{B}$. There is a unique point $x'$ of $X'$ over $s$ and $X'_{x'}$ is isomorphic to $X_x$ over $S_s$. By \cref{Topology-lma-opennhfiberclosedmap} in \nameref{Topology-chap-topology}, up to shrinking $S$, we may assume that $X$ is isomorphic to $X'$ over $S$. We conclude.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}\label{cor-finitepushcoh}
     Let $f:X\rightarrow Y$ be a finite morphism of complex analytic spaces and $\mathcal{M}$ be a coherent sheaf of $\mathcal{O}_X$-modules, then $f_*\mathcal{M}$ is coherent. Moreover, $f_*$ is exact from $\CohCat(\mathcal{O}_X)$ to
     $\CohCat(\mathcal{O}_Y)$.
 \end{corollary}
@@ -125,8 +200,351 @@ This definition is purely topological. We will show that it is equivalent to an 
     For each $y\in X$, we deduce that $(p_*\mathcal{O}_{X'})_y$ is in the total ring of fraction of $\mathcal{O}_{X,y}[f_y^{-1}]$. But $(p_*\mathcal{O}_{X'})_y$ is finite and integral over $\mathcal{O}_{X,y}$, so is isomorphic to $\overline{\mathcal{O}_{X,y}}$ as $\mathcal{O}_{Y,y}$-algebras. 
 \end{proof}
 
+\begin{corollary}
+    Let $f:X\rightarrow Y$ be a finite morphism of complex analytic spaces. Assume that $x\in X$ is a point such that $(f_*\mathcal{O}_X)_{f(x)}$ is torsion-free as an $\mathcal{O}_{Y,f(x)}$-module and $Y$ is integral at $f(x)$. Then $f$ is open at $x$.
+\end{corollary}
+\begin{proof}
+    If not, we can choose open neighbourhoods $U$ of $x$ in $X$ and $V$ of $y:=f(x)$ in $Y$ such that $f(U)\subseteq V$ such that the induced morphism $g:U\rightarrow V$ is finite and $f(U)$ is not a neighbourhood of $y$ in $Y$. 
+    Up to shrinking $Y$, we can find $h\in \mathcal{O}_Y(Y)$ such that $h_y\neq 0$ while $h$ vanishes on $f(U)$. 
+     Observe that $f(U)$ is an analytic set in $Y$ by  \cref{cor-finitepushcoh}. It follows from \cref{ConstructionComplex-cor-nullversionfunction} in \nameref{ConstructionComplex-chap-constructionComplex} that there is $t\in \mathbb{Z}_{>0}$ such that
+     \[
+        h_y^t (g_*\mathcal{O}_U)_y=0.   
+     \]
+     As $\mathcal{O}_{Y,y}$ is integral, this implies that $(g_*\mathcal{O}_U)_y$ is torsion as an $\mathcal{O}_{Y,f(x)}$-module. This is a contradiction, as $(f_*\mathcal{O}_X)_y$ as an $\mathcal{O}_{Y,f(x)}$-module is torsion-free by assumption.
+\end{proof} 
+
+\begin{lemma}\label{lma-torsionfreelocuscoana}
+    Let $X$ be an integral complex analytic space and $\mathcal{M}$ be a coherent sheaf of $\mathcal{O}_X$-modules. Then
+    \[
+        \left\{x\in X: \mathcal{M}\text{ is torsion-free at }x \right\}
+    \]
+    is co-analytic in $X$.
+\end{lemma}
+\begin{proof}
+    It suffices to show that $\Supp \mathcal{T}(\mathcal{M})$ is an analytic set in $X$. As $X$ is integral, $\mathcal{T}(\mathcal{M})$ is just the kernel of the morphism $\mathcal{M}\rightarrow \mathcal{M}^{\vee\vee}$.
+\end{proof}
+
+\begin{corollary}
+    Let $f:X\rightarrow Y$ be a finite morphism of complex analytic spaces. Assume that $Y$ is integral. Let $x\in X$ be a point such that $X$ is integral at $x$ and $f$ is open at $x$, then there is an open neighbourhood $U$ of $x$ in $X$ such that $f|_U:U\rightarrow Y$ is open.
+\end{corollary}
+\begin{proof}
+    Let $y=f(x)$.
+    The problem is local on $Y$.
+    By \cref{prop-finiteatpointcond}, we may assume that $\{x\}=f^{-1}(y)$. By \cref{cor-finitepushcoh}, $f_*\mathcal{O}_X$ is coherent. By \cref{lma-torsionfreelocuscoana}, it suffices to show that it is torsion-free.
+    
+    Observe that $(f_*\mathcal{O}_{X})_y\cn \mathcal{O}_{X,x}$. By \cref{prop-openmapkernelnil}, $f^{\#}_x:\mathcal{O}_{Y,y}\rightarrow \mathcal{O}_{X,x}$ is injective. As $\mathcal{O}_{X,x}$ is integral by our assumption, we conclude.
+\end{proof}
+
+\begin{lemma}\label{lma-liftingactive}
+    Let $f:X\rightarrow Y$ be a finite morphism of reduced complex analytic spaces and $x\in X$. Assume that $x\in X$, then there is a non-zero divisor $h\in \mathfrak{m}_{f(x)}$ such that $f^{\#}_x(h)$ is a non-zero divisor in $\mathcal{O}_{X,x}$.
+\end{lemma}
+\begin{proof}
+    By \cref{prop-finiteatpointcond}, the problem is local on $X$. We may assume that $X$ can be decomposed into irreducible components at $x$:
+    \[
+        X=A_1\cup \cdots\cup A_s.    
+    \] 
+    By \cref{cor-finitepushcoh}, $B_j:=f(A_j)$ is an ananlytic set in $Y$ for $j=1,\ldots,s$. By our assumption, $x$ is not an isolated point in $A_j$, so $y$ is not an isolated point in $B_j$ for $j=1,\ldots,s$. Take a non-zero divisor $h\in \mathfrak{m}_{Y,y}$. Up to shrinking $Y$, we may assume that $h$ spreads to $g\in \mathcal{O}_Y(Y)$. Observe that $W(f^*g)\cap A_j$ is not a neighbourhood of $x$ in $A_j$ for all $j=1,\ldots,s$. So $f^{\#}_xh$ is not a zero divisor.
+\end{proof}
+
+\begin{thm}\label{thm-finitemapdim}
+    Let $f:X\rightarrow Y$ be a finite morphism of complex analytic spaces and $y\in Y$. Then
+    \[
+        \dim_y f(X)=\max_{x\in f^{-1}(y)}\dim_x X.  
+    \]
+\end{thm}
+The left-hand side makes sense because $f(X)$ is an analytic set in $Y$ by \cref{cor-finitepushcoh}.
+\begin{proof}
+    We may assume that $X$ and $Y$ are reduced and $f(X)=Y$.
+
+    \textbf{Step~1}. We reduce to the case where $f^{-1}(y)=\{x\}$ for some $x\in X$.
+
+    Let $x_1,\ldots,x_t$ be the distinct points in $f^{-1}(y)$. The problem is local on $Y$.
+    By \cref{Topology-thm-localstructuretopfinitemap} in \nameref{Topology-chap-topology} and \cref{prop-finiteatpointcond}, up to shrinking $Y$, we may assume that $X$ is the disjoint union of open neighbourhoods $U_1,\ldots,U_t$ of $x_1,\ldots,x_t$ and $U_j\rightarrow V$ is finite for each $j=1,\ldots,t$. It suffices to apply the special case to each $U_j\rightarrow V$ for $j=1,\ldots,t$.
+
+    \textbf{Step~2}. We prove the theorem after the reduction in Step~1.
+
+    We make an induction on $d:=\dim_x X$. There is nothing to prove when $d=0$. Assume that $d\geq 1$. By \cref{lma-liftingactive}, we can choose a non-zero divisor $g_y\in \mathfrak{m}_{Y,g_y}$ such that $f^{\#}_x(g_y)$ is a non-zero divisor in $\mathcal{O}_{X,x}$. Up to shrinking $Y$, we may assume that $g$ spreads to $g\in \mathcal{O}_Y(Y)$. It suffices to apply our inductive hypothesis to $W(f^{\#}_x(g_y))\subseteq W(g_y)$.
+\end{proof}
+
+\begin{corollary}\label{cor-finiteopensurjthinsetpre}
+    Let $f:X\rightarrow Y$ be a finite open surjective morphism of complex analytic spaces. Assume that $A$ is a thin subset of $X$ of order $k\in \mathbb{Z}_{>0}$, then $f(A)$ is a thin subset of $Y$ of order $k$.
+\end{corollary}
+\begin{proof}
+    We may assume that $X$ and $Y$ are reduced.
+    By \cref{prop-finiteatpointcond} and the fact that $f$ is open, the problem is local on $X$, we may assume that $A$ is an analytic subset of $X$. Let $x\in A$. It suffices to handle the case where $A$ is irreducible at $x$ and $x$ is the only point in $f^{-1}(f(x))$.
+    By \cref{cor-finitepushcoh}, $f(A)$ is an irreducible analytic subset of $Y$.
+
+    We may assume that $Y$ is irreducible at $y:=f(x)$. Then
+    \[
+        \codim_y(f(A),Y)=\dim_y Y-\dim_y f(A).  
+    \]
+    By \cref{thm-finitemapdim}, $\dim_y Y=\dim_x X$, $\dim_y f(A)=\dim_x A$. It follows that
+    \[
+        \codim_y(f(A),Y)=\dim_x X-\dim_x A  \geq \codim_x(A,X)\geq k.
+    \]
+\end{proof}
+
+\begin{proposition}\label{prop-finitemorphismopen}
+    Let $f:X\rightarrow Y$ be a finite morphism of complex analytic spaces and $x\in X$. Assume that $Y$ is irreducible at $f(x)$. Assume that $\dim_x X=\dim_{f(x)}Y$, then $f$ is open at $x$.
+\end{proposition}
+\begin{proof}
+    We may assume that $X$ and $Y$ are both reduced. Let $y=f(x)$. By \cref{prop-finiteatpointcond}, we may assume that $\{x\}=f^{-1}(y)$. By \cref{cor-finitepushcoh}, $f(X)$ is an analytic set in $Y$. By \cref{thm-finitemapdim},
+    \[
+        \dim_y f(X)=\dim_x X.  
+    \]
+    As $Y$ is irreducible at $f(x)$, we conclude that $f(X)_y=X_y$ and hence $f(X)$ is a neighbourhood of $y$.
+\end{proof}
+\begin{corollary}\label{cor-quasifiniemoropen}
+    Let $f:X\rightarrow Y$ be a quasi-finite morphism of equidimensional complex analytic spaces of dimension $d\in \mathbb{N}$. Assume that $Y$ is unibranch. Then $f$ is open. 
+\end{corollary}
+The corollary fails if $Y$ is not unibranch.
+\begin{proof}
+    By \cref{prop-finiteatpointcond}, $f$ is finite at all $x\in X$. It suffices to apply \cref{prop-finitemorphismopen}.
+\end{proof}
 
 
+\begin{lemma}\label{lma-finiteopenbranch}
+    Let $f:X\rightarrow Y$ be a finite open morphism of reduced complex analytic spaces. Assume that $Y$ is a complex manifold. Then $f$ is a branched covering.
+\end{lemma}
+\begin{proof}
+    The statement is local on $Y$, so we may assume that $Y$ is an open neighbourhood of $0$ in $\mathbb{C}^n$ for some $n\in \mathbb{N}$. By \cref{prop-finiteatpointcond}, we may assume that $\pi^{-1}\{0\}$ consists of a single point and $X$ is a closed analytic subspace of a domain $V$ in $\mathbb{C}^d$ for some $d\in \mathbb{N}$. Replacing $X$ by the graph of $f$, we may assume that $X$ is a closed analytic subspace of $V\times Y$ and $f$ is the restriction of the projection map $V\times Y\rightarrow V$.  In this case, the result follows from the local description lemma. \textcolor{red}{Reproduce CAS p72!} 
+\end{proof}
+\begin{corollary}\label{cor-localdesequidimspace}
+    Let $X$ be a equidimensional complex analytic space of dimension $d$ and $x\in X$. Then there is an open neighbourhood $U$ of $x$ in $X$ and a connected domain $V\in \mathbb{C}^d$  such that there is a branched covering $U\rightarrow V$.
+
+    In fact, given any system of parameters $f_1,\ldots,f_d\in \mathcal{O}_{X,x}$, we can define sch a morphism sending $x$ to $0$ and the corresponding local ring homomorphism at $x$ is 
+    \[
+        \mathcal{O}_{\mathbb{C}^d,0}\rightarrow \mathcal{O}_{X,x}  
+    \]
+    given by $f_1,\ldots,f_d$.
+\end{corollary}
+\begin{proof}
+    This follows from \cref{ConstructionComplex-thm-morphismdefinedbygeneratorlocal} in \nameref{ConstructionComplex-chap-constructionComplex}, \cref{lma-finiteopenbranch} and \cref{cor-quasifiniemoropen}.
+\end{proof}
+
+
+\begin{corollary}\label{cor-takeallvalues}
+    Let $X$ be a complex analytic space and $x\in X$. Assume that $X$ is unibranch at $x$. Let $f\in \mathcal{O}_{X,x}$. We assume that $f$ is not constant and $\dim_x X\geq 1$, then for any open neighbourhood $U$ of $x$ in $X$ such that $f$ spreads to $g\in \mathcal{O}_X(U)$, there is $\epsilon>0$ such that $g$ takes all values $c\in \mathbb{C}$ with $|c-f(x)|<\epsilon$.
+\end{corollary}
+\begin{proof}
+    We may assume that $X$ is reduced and $f(x)=0$. Then $f$ is a non-zero divisor in $\mathcal{O}_{X,x}$. We can find a system of parameters $f,g_1,\ldots,g_{n-1}$ with $n=\dim_x X$ such that $f,g_1,\ldots,g_{n-1}$ induce a branched covering $X\rightarrow V$ sending $x$ to $0$ after shrinking $X$, where $V$ is an open neighbourhood of $0$ in $\mathbb{C}^n$. This follows from \cref{cor-localdesequidimspace}. As the branched covering is open by \cref{prop-finitemorphismopen}, we conclude.
+\end{proof}
+
+\begin{thm}
+    Let $f:X\rightarrow Y$ be an open, finite surjective morphism of reduced complex analytic spaces, then $f$ is a branched covering.
+\end{thm}
+\begin{proof}
+    Let $x\in X$ and $y=f(x)$. As $f$ is open, it suffices to find open neighbourhoods $U$ of $x$ in $X$ and $V$ of $y$ in $Y$ such that the morphism $U\rightarrow V$ induced by $f$ is a branched covering. 
+    We first take $U$ small enough so that $U$ can be decomposed into prime components at $x$:
+    \[
+        U=X_1\cup\cdots\cup X_s.
+    \]  
+    We can assume that $X_i\cap X_j$ is thin in $U$ for $i,j=1,\ldots,s$, $i\neq j$. Up to shrinking $U$, we may assume that $U\rightarrow V$ is finite \cref{prop-finiteatpointcond} for some open neighbourhood $V$ of $y$ in $Y$. As $f$ is open, we may take $V=f(U)$.
+    Observe that $f(X_i)$ is analytic in $V$ for $i=1,\ldots,s$ by \cref{cor-finitepushcoh}. Moreover, $f(X_i)$ is irreducible at $y$ for $i=1,\ldots,s$. By \cref{PropertyComplex-thm-equidimlocusopen} in \nameref{PropertyComplex-chap-propcomplex}, we may assume that $f(X_i)$ is equidimensional of dimension $n_i\in \mathbb{N}$ for $i=1,\ldots,s$.
+    
+    By \cref{cor-localdesequidimspace}, up to shrinking $V$, we may assume that there is a branched covering $\eta_i:f(X_i)\rightarrow V_i$, where $V_i$ is a connected domain in $\mathbb{C}^{n_i}$ for $i=1,\ldots,s$. By \cref{lma-finiteopenbranch}, $\eta_i\circ f|_{X_i}$ is a branched covering for $i=1,\ldots,s$.  It follows that $X_i\rightarrow \pi(X_i)$ is a branched covering for $i=1,\ldots,s$. This readily implies that $f$ is a branched covering.
+\end{proof}
+
+\begin{definition}
+    Let $b\in \mathbb{Z}_{>0}$, $f:X\rightarrow Y$ be a $b$-sheeted branched covering with $Y$ being a connected complex manifold. Let $A$ be a thin set in $X$. Take a critical locus $T$ of $f$ containing $f(A)$. 
+    
+    Consider $g\in \mathcal{O}_X(X\setminus A)$. We define a monic polynomial
+    \[
+        \chi_g(w)(y):=\prod_{x\in f^{-1}(y)} (w-g(x))\in \mathcal{O}_Y(Y\setminus T)[w]. 
+    \]
+    By \cref{PropertyComplex-thm-Riemannextsmo} in \nameref{PropertyComplex-chap-propcomplex}, $\chi_g$ can be uniquely extended to $\chi_g\in \mathcal{O}_Y(Y\setminus f(A))[w]$. The monic polynomial $\chi_g$ is called the \emph{characteristic polynomial} of $g$ (with respect to $f$).
+\end{definition}
+
+\begin{proposition}\label{prop-charpoly}
+    Let $b\in \mathbb{Z}_{>0}$, $f:X\rightarrow Y$ be a $b$-sheeted branched covering with $Y$ being a connected complex manifold. Let $A$ be a thin set in $X$ and $g\in \mathcal{O}_X(X\setminus A)$. Let $\chi_g\in \mathcal{O}_Y(Y\setminus f(A))[w]$ be the characteristic polynomial of $g$. Then $\chi_g(g)=0$.
+
+    If either of the following conditions hold:
+    \begin{enumerate}
+        \item $f$ is locally bounded near $A$;
+        \item $A$ is thin of order $2$ in $Y$.
+    \end{enumerate}
+    Then $\chi_g$ can be uniquely extended to $\chi_g\in \mathcal{O}_Y(Y)[w]$.
+\end{proposition}
+\begin{proof}
+    Only the second part is non-trivial. By \cref{cor-finiteopensurjthinsetpre}, $f$ is open. 
+    By \cref{cor-finiteopensurjthinsetpre}, $f(A)$ is thin in $Y$ and under assumption (2), $f(A)$ is thin of order $2$ in $Y$. It suffices to apply \cref{PropertyComplex-thm-Riemannextsmo} in \nameref{PropertyComplex-chap-propcomplex}.
+\end{proof}
+
+\begin{proposition}\label{prop-determinanthol}
+    Let $b\in \mathbb{Z}_{>0}$, $f:X\rightarrow Y$ be a $b$-sheeted branched covering with $Y$ being a connected complex manifold. Let $A$ be a thin set in $X$ and $e,g\in \mathcal{O}_X(X\setminus A)$. Take a critical locus $T$ of $f$ containing $f(A)$. 
+    Consider the $b\times b$-matrice 
+    \[
+        M(y)=
+        \begin{bmatrix}
+            1 & e(x_1) & \dots & e(x_1)^{b-1}\\
+            1 & e(x_2) & \dots & e(x_2)^{b-1}\\
+            &&\ddots &\\
+            1 & e(x_b) & \dots & e(x_b)^{b-1}
+        \end{bmatrix}    
+    \]
+    and $M_i(y)$ is $M(y)$ with the $i$-th colomn replace by 
+    \[
+    \begin{bmatrix}
+        g(x_1)\\
+        g(x_2)\\
+        \vdots\\
+        g(x_b)
+    \end{bmatrix}    
+    \]
+     for
+     $i=0,\ldots,b-1$, where $y\in Y\setminus T$ and $x_1,\ldots,x_{b}$ are the distinct points in $f^{-1}(y)$. Then there are $\Delta_e,c_0,\ldots,c_{b-1}\in \mathcal{O}_Y(Y\setminus f(A))$ such that for all $y\in Y\setminus T$, 
+     \[
+        \Delta_e(y)=(\det M(y))^2,\quad c_i(y)=\det M(y)\cdot \det M_i(y) 
+     \]
+     for $i=0,\ldots,b-1$. If either of the following conditions holds:
+     \begin{enumerate}
+        \item $e$ and $g$ are locally bounded near $A$;
+        \item $A$ is thin of order $2$ in $X$,
+     \end{enumerate}
+     then we can take $\Delta_e,c_0,\ldots,c_{b-1}\in \mathcal{O}_Y(Y)$
+\end{proposition}
+The function $\Delta_e$ is called the \emph{discriminant} of $e$. We say $e$ is \emph{primitive} with respect to $f$ if $\Delta$ is not identically $0$.
+\begin{proof}
+    We first observe that $\det M(y)$ and $\det M_i(y)$ are independent of the ordering of $x_1,\ldots,x_b$ by elementary lineary algebra, where $i=1,\ldots,b$. The entries of $M(y)$ and $M_i(y)$ can all be taken to be holomorphic outside $T$, so $\Delta_e,c_0,\ldots,c_{b-1}\in \mathcal{O}_Y(Y\setminus T)$ are defined and the desired equation holds. By \cref{PropertyComplex-thm-Riemannextsmo} in \nameref{PropertyComplex-chap-propcomplex}, these functions can be extended uniquely into $\mathcal{O}_Y(Y\setminus f(A))$. 
+
+    By \cref{cor-finiteopensurjthinsetpre}, $f(A)$ is thin in $Y$ and under assumption (2), $f(A)$ is thin of order $2$ in $Y$. Applying \cref{PropertyComplex-thm-Riemannextsmo} in \nameref{PropertyComplex-chap-propcomplex}, we conclude the last assertion.
+\end{proof}
+
+
+\begin{corollary}\label{cor-existenceprimi}
+    Let $b\in \mathbb{Z}_{>0}$, $f:X\rightarrow Y$ be a $b$-sheeted branched covering with $Y$ being a connected complex manifold. A primitive element $e\in \mathcal{O}_X(X)$ exists if $X$ is holomorphically separable.
+\end{corollary}
+\begin{proof}
+    Take a critical locus $T$ of $f$. 
+    Let $y\in X\setminus T$. Let $x_1,\ldots,x_b$ be distinct points of $f^{-1}(y)$. For each $i,j=1,\ldots,b$ with $i<j$, we can find a $g_{ij}\in \mathcal{O}_X(X)$ with $g(x_i)\neq g(x_j)$. A suitable linear combination of $g_{ij}$'s works.
+\end{proof}
+
+\begin{proposition}\label{prop-univdenor}
+    Let $b\in \mathbb{Z}_{>0}$, $f:X\rightarrow Y$ be a $b$-sheeted branched covering with $Y$ being a connected complex manifold. Let $A$ be a thin set in $X$. 
+
+    Let $e\in \mathcal{O}_X(X\setminus A)$ primitive element with respect to $f$.
+    Then for each $g\in \mathcal{O}_X(X\setminus A)$, we have canonical polynomial $\Omega\in \mathcal{O}_Y(Y\setminus \pi(A))[X]$ such that 
+    \[
+        \Delta_e g=\Omega(e)  \quad \text{on }X\setminus A.
+    \]
+    If either of the following conditions holds:
+    \begin{enumerate}
+       \item $e$ and $g$ are locally bounded near $A$;
+       \item $A$ is thin of order $2$ in $X$,
+    \end{enumerate}
+    then we can take $\Omega\in \mathcal{O}_Y(Y)[X]$.
+\end{proposition}
+In the traditional terminology, $\Delta_e$ is a \emph{universal denominator} of the $\mathcal{O}_Y(Y)$-module $\mathcal{O}_X(X)$ if one of the two assumptons is satisfied.
+\begin{proof}
+    Take a critical locus $T$ of $f$ containing $f(A)$. 
+    Consider $y\in Y\setminus T$ with fibers $x_1,\ldots,x_b$. Consider the system of $b$-linear equations:
+    \[
+      \Delta_e(y)g(x_i) =c_0(y)+c_1(y)e(x_i)+\cdots+c_{b-1}(y)e(x_i)^{b-1} 
+    \]
+    for $j=1,\ldots,b$. By Cramer's rule, if we use the notations of \cref{prop-determinanthol}, if $\det M(y)\neq 0$,
+    the unique solution is then
+    \[
+        c_i(y) = (\det M(y))^{-1}\Delta(y)\det M_{i}(y)=\det M(y)\cdot \det M_i(y)
+    \]
+    for $i=0,\ldots,b-1$. From \cref{prop-determinanthol}, $c_0,\ldots,c_{b-1}\in \mathcal{O}_Y(Y\setminus \pi(A))$. It suffices to take 
+    \[
+        \Omega=c_0+c_1X+\cdots+c_{b-1}w^{b-1}.  
+    \]
+    It is obvious that on $X\setminus (A\cup W(\Delta))$, 
+    \[
+        \Delta_e g=\Omega(e).  
+    \]
+    The same holds on $X\setminus A$ by continuity. The last asertion follows from \cref{prop-determinanthol}. 
+\end{proof}
+
+
+\begin{corollary}[Riemann extension theorem]\label{cor-Riemannextgeneral}
+    Let $X$ be a reduced equidimensional complex analytic space  of dimension $n\in \mathbb{N}$ and $A$ be a thin set in $X$. Let $f\in \mathcal{O}_X(X\setminus A)$. Assume one of the following conditions holds:
+    \begin{enumerate}
+        \item $f$ is locally bounded near $A$;
+        \item $A$ is thin of order $2$.
+    \end{enumerate}   
+    Then there is an element $g\in \overline{O}_X(X)$ extending $f$.
+\end{corollary}
+\begin{proof}
+    The uniquenss is obvious, we prove the existence. The problem is local on $X$, we may assume that $X$ is holomorphically separable.
+    By \cref{cor-localdesequidimspace}, we may take a connected complex manifold $Y$ of dimension $Y$, $b\in \mathbb{Z}_{>0}$,a $b$-sheeted branched covering $f:X\rightarrow Y$. By \cref{cor-existenceprimi}, we can find a primitive element $e\in \mathcal{O}_X(X)$. By \cref{prop-univdenor} and \cref{prop-charpoly}, it suffices to take $g=\Omega(e)/\Delta_e$, where $\Omega_e$ is the polynomial in   \cref{prop-univdenor}.
+\end{proof}
+
+\begin{corollary}\label{cor-Riemannextnormal}
+    Let $X$ be a normal complex analytic space. Then the canonical map
+    \[
+        \mathcal{O}_X(X)\rightarrow \mathcal{O}_X(X^{\reg})  
+    \]
+    is an isomorphism.
+\end{corollary}
+\begin{proof}
+    By \cref{PropertyComplex-prop-reducedspacefunctiondetermineholo} in \nameref{PropertyComplex-chap-propcomplex}, the map is injective. Take $f\in \mathcal{O}_X(X^{\reg})$, we need to extend it to $g\in \mathcal{O}_X(X)$. The problem is local on $X$.
+    As $X$ is normal, it is equidimensional at all points. By shrinking $X$, we may assume that $X$ is equidimensional of some dimension $n\in \mathbb{N}$. Recall that $X^{\Sing}$ is thin of order $2$ in $X$ by \cref{PropertyComplex-prop-normalspacesingcodim2} in \nameref{PropertyComplex-chap-propcomplex}, so we can apply \cref{cor-Riemannextgeneral}.
+\end{proof}
+
+
+\begin{corollary}\label{cor-complthininconnectedconn2}
+    Let $X$ be a connected normal complex analytic space then $X^{\reg}$ is connected.
+\end{corollary}
+\begin{proof}
+    If not, we can find a continuous function $f:X^{\reg}\rightarrow \{0,1\}$ which is not constant. By \cref{cor-Riemannextnormal}, $f$ can be extended to $g\in \mathcal{O}_X(X)$. This contradicts the fact taht $X$ is connected.
+\end{proof}
+
+
+\begin{corollary}
+    Let $X$ be a connected complex analytic space. Then $X$ is path-connected.
+\end{corollary}
+\begin{proof}
+    We may assume that $X$ is reduced.
+
+    If $X$ is irreducible, after passing to the normalization, we may assume that $X$ is normal. Then clearly $X^{\reg}$ is connected. So it suffices to apply \cref{PropertyComplex-prop-pathtoXreg} in \nameref{PropertyComplex-chap-propcomplex}.
+
+    In general, take $x\in X$ and let $X'$ be the set of all points of $X$ that can be joined to $x$ by a path. Then from the previous case, $X'$ is the union of certain irreducible componenets of $X$. So is the complement $X\setminus X'$. As $X$ is connected, we find that $X=X'$.
+\end{proof}
+
+
+We given an alternative characterization of $\overline{\mathcal{O}}_X$.
+\begin{proposition}
+    Let $X$ be a reduced complex analytic space. Then for any open set $U\subseteq X$, 
+    \[
+        \overline{\mathcal{O}}_X(U)\cn \left\{f:U\rightarrow \mathbb{C}: f\text{ is weakly holomorphic} \right\}.      
+    \]
+\end{proposition}
+
+\begin{proof}
+    We temporarily denote the sheaf stated in theproposition by $\mathcal{O}'$. From the uniqueness in \cref{prop-normalizationcas}, it suffices to show that $\mathcal{O}'_{x}$ is isomorphic to $\overline{\mathcal{O}_{X,x}}$ as $\mathcal{O}_{X,x}$-algebras for any $x\in X$.
+
+    We first observe that $\overline{\mathcal{O}}_X$ is a subsheaf of  $\mathcal{O}'$. Let $U\subseteq X$ be an open subset and $f\in \overline{\mathcal{O}}_X(U)$.  We need to show that $f$ is locally bounded around $y\in U\cap X^{\Sing}$. 
+    Take an integral equation
+    \[
+        f_y^n+a_{1,y}f_y^{n-1}+\cdots+a_{n,y}=0  
+    \]
+    with $a_{1,y},\ldots,a_{n,y}\in \mathcal{O}_{X,x}$.
+    Take an open neighbourhood $V$ of $y$ in $U$ such that $a_{1,y},\ldots,a_{n,y}$ lift to $a_1,\ldots,a_n\in \mathcal{O}_X(V)$ and
+    \[
+        (f|_V)^n +a_1f|_V^{n-1}+\cdots+ a_n=0. 
+    \] 
+    Then for any $z\in V\setminus X^{\Sing}$,
+    \[
+        |f(z)|\leq \max\{1,|a_1(z)|+\ldots+|a_n(z)|\}.  
+    \]
+    So $f\in \mathcal{O}'$. 
+    
+    Conversely, let $U\subseteq X$ be an open subset and $f\in \mathcal{O}'(U)$. By \cref{PropertyComplex-prop-reducedspacenormalizationchar} in \nameref{PropertyComplex-chap-propcomplex}, $p_*\mathcal{O}_{\overline{X}}=\mathcal{O}_X$, where $p:\overline{X}\rightarrow X$ is the normalization morphism. It follows from \cref{PropertyComplex-prop-reducedspacenormalizationchar} in \nameref{PropertyComplex-chap-propcomplex} and \cref{cor-Riemannextgeneral} that $f$ can be uniquely extended to $g\in \mathcal{O}_{\overline{X}}(p^{-1}U)=\mathcal{O}_X(U)$.
+\end{proof}
+
+
+\begin{proposition}[Rado, Cartan]\label{prop-Rado}
+    Let $X$ be a normal complex analytic space and $f:X\rightarrow \mathbb{C}$ be a continuous map. Let $Z=f^{-1}(0)$. Assume that there is $g\in \mathcal{O}_X(X\setminus Z)$ such that $[g]=f|_{X\setminus Z}$, then $f=[g]$. 
+\end{proposition}
+This result is proved in \cite{Car52}.
+\begin{proof}
+    By \cref{cor-Riemannextnormal}, we may assume that $X$ is a complex manifold.
+    The problem is local on $X$, we may assume that $X$ is the unit polydisk in $\mathbb{C}^n$ for some $n\in \mathbb{N}$. By Hartogs theorem, we may assume that $n=1$.
+
+    It remains to show that a continuous function $f:\{z\in \mathbb{C}:|z|<1\}$ which  is holomorphic outside $Z:=\{f=0\}$ is holomorphic. This result is well-known.
+ \end{proof}
 
 
 \printbibliography
@@ -173,7 +591,7 @@ This definition is purely topological. We will show that it is equivalent to an 
     \end{enumerate}
 \end{corollary}
 \begin{proof}
-    This follows from a repeted application of \cref{prop-projlemma}
+    This follows from a repeted application of \cref{prop-projlemma}.
 \end{proof}
 
 \begin{proposition}\label{prop-quasifinitefinite}
