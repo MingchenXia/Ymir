@@ -547,6 +547,23 @@ This result is proved in \cite{Car52}.
  \end{proof}
 
 
+ \section{Flat morphisms}
+ The notion of flat morphisms is defined for all ringed spaces. See \cite[\href{https://stacks.math.columbia.edu/tag/02N2}{Tag 02N2}]{stacks-project}. We will make use of these notions directly.
+
+ \begin{proposition}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. Write $y=f(x)$. Let $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Then the folloiwng are equivalent:
+    \begin{enumerate}
+        \item $\mathcal{F}$ is flat at $x$ with respect to $f$;
+        \item $\mathcal{F}_x$ is a flat $\mathcal{O}_{Y,y}$-module;
+        \item For all $n\in \mathbb{N}$, 
+            \[
+                \hat{\mathcal{F}}_x\otimes_{\hat{\mathcal{O}}_{Y,y}}\hat{\mathcal{O}}_{Y,y}/\hat{\mathfrak{m}}_y^{n+1}  
+            \]
+            is a flat $\hat{\mathcal{O}}_{Y,y}/\mathfrak{m}_y^{n+1}$-module.
+    \end{enumerate}
+ \end{proposition}
+
+ 
 \printbibliography
 \end{document}
 

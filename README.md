@@ -12,48 +12,48 @@ We will freely make use of all results from Stacks Project.
 
 ### Part 1 Preliminaries
 
-- [Topology and Bornology](Topology-Bornology.pdf)
+- [Topology and Bornology](aux/Topology-Bornology.pdf)
 
 
-- [Banach rings](Banach-Rings.pdf)
+- [Banach rings](aux/Banach-Rings.pdf)
 
 > To do: include the Archimedean theory
 
-- [Commutative algebra](Commutative-Algebra.pdf)
+- [Commutative algebra](aux/Commutative-Algebra.pdf)
 
 > To do: include further details.
 
 ### Part 2 Complex analytic spaces
 
-- [Complex analytic local algebras](Local-Algebras.pdf)
+- [Complex analytic local algebras](aux/Local-Algebras.pdf)
 
-- [The notion of complex analytic spaces](Complex-Analytic-Spaces.pdf)
+- [The notion of complex analytic spaces](aux/Complex-Analytic-Spaces.pdf)
 
 > To do: remove the Hausdorff assumptions.
 
-- [Constructions of complex analytic spaces](Constructions-Complex-Spaces.pdf)
+- [Constructions of complex analytic spaces](aux/Constructions-Complex-Spaces.pdf)
 
-- [Local properties of complex analytic spaces](Properties-Complex-Spaces.pdf)
+- [Local properties of complex analytic spaces](aux/Properties-Complex-Spaces.pdf)
 
 > To do, include Gorenstein, local complete intersection. Products.
 
-- [Morphisms of complex analytic spaces](Morphism-Complex-Spaces.pdf)
+- [Morphisms of complex analytic spaces](aux/Morphism-Complex-Spaces.pdf)
 
 > To do, include Grauert's direct image theorem. Include flat, separated, proper, smooth morphisms, etc.
 
-- [Analytic sets](Analytic-Sets.pdf)
+- [Analytic sets](aux/Analytic-Sets.pdf)
 
-- [Global properties of complex analytic spaces](Global-Properties-Complex-Spaces.pdf)
+- [Global properties of complex analytic spaces](aux/Global-Properties-Complex-Spaces.pdf)
 
 > To do, include the proofs of Cartan's Theorem A and Theorem B.
 
 
 ### Part 3 Non-Archimedean analytic spaces
 
-- [Affinoid algebras](Affinoid-Algebras.pdf)
+- [Affinoid algebras](aux/Affinoid-Algebras.pdf)
 
 > To do: include Ducros' proof of the excellence of affinoid algebras
 
-- [Berkovich analytic spaces](Berkovich-Analytic-Spaces.pdf)
+- [Berkovich analytic spaces](aux/Berkovich-Analytic-Spaces.pdf)
 
 > To do: reproduce the first half of Berkovich93 PIHES. Include the theory of rigid analytic spaces.

@@ -19,42 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
-    \entry{Car52}{article}{}
-      \name{author}{1}{}{%
-        {{hash=6824495566cd1d66f7c005461ffc6038}{%
-           family={Cartan},
-           familyi={C\bibinitperiod},
-           given={Henri},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{6824495566cd1d66f7c005461ffc6038}
-      \strng{fullhash}{6824495566cd1d66f7c005461ffc6038}
-      \strng{bibnamehash}{6824495566cd1d66f7c005461ffc6038}
-      \strng{authorbibnamehash}{6824495566cd1d66f7c005461ffc6038}
-      \strng{authornamehash}{6824495566cd1d66f7c005461ffc6038}
-      \strng{authorfullhash}{6824495566cd1d66f7c005461ffc6038}
-      \field{labelalpha}{Car52}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0025-5831}
-      \field{journaltitle}{Math. Ann.}
-      \field{title}{Sur une extension d'un théorème de {R}adó}
-      \field{volume}{125}
-      \field{year}{1952}
-      \field{pages}{49\bibrangedash 50}
-      \range{pages}{2}
-      \verb{doi}
-      \verb 10.1007/BF01343105
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1007/BF01343105
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1007/BF01343105
-      \endverb
-    \endentry
     \entry{stacks-project}{misc}{}
       \name{author}{1}{}{%
         {{hash=abb7996abcbb3ba4cf4194c8dcb595ca}{%
