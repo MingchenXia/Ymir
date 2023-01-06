@@ -1,12 +1,12 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'aux/Global-Properties-Complex-Spaces.blg'
-[67] biber-darwin:340> INFO - === Fri Jan  6, 2023, 10:42:14
-[81] Biber.pm:415> INFO - Reading 'aux/Global-Properties-Complex-Spaces.bcf'
-[168] Biber.pm:952> INFO - Found 4 citekeys in bib section 0
-[181] Biber.pm:4340> INFO - Processing section 0
-[190] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
-[192] bibtex.pm:1689> INFO - LaTeX decoding ...
-[243] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
+[69] biber-darwin:340> INFO - === Fri Jan  6, 2023, 16:10:01
+[84] Biber.pm:415> INFO - Reading 'aux/Global-Properties-Complex-Spaces.bcf'
+[170] Biber.pm:952> INFO - Found 4 citekeys in bib section 0
+[183] Biber.pm:4340> INFO - Processing section 0
+[192] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
+[194] bibtex.pm:1689> INFO - LaTeX decoding ...
+[244] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
 [286] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
 [286] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
 [286] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'

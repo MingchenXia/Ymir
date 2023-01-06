@@ -1176,8 +1176,11 @@ INPUT ./Topology-Bornology.tex
 INPUT Topology-Bornology.tex
 INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.aux
 INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.aux
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Banach-Rings.aux
 INPUT ./Banach-Rings.tex
 INPUT Banach-Rings.tex
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Banach-Rings.aux
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Banach-Rings.aux
 INPUT ./Commutative-Algebra.tex
 INPUT Commutative-Algebra.tex
 INPUT ./Local-Algebras.tex
@@ -1186,11 +1189,8 @@ INPUT ./Complex-Analytic-Spaces.tex
 INPUT Complex-Analytic-Spaces.tex
 INPUT ./Constructions-Complex-Spaces.tex
 INPUT Constructions-Complex-Spaces.tex
-INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Properties-Complex-Spaces.aux
 INPUT ./Properties-Complex-Spaces.tex
 INPUT Properties-Complex-Spaces.tex
-INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Properties-Complex-Spaces.aux
-INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Properties-Complex-Spaces.aux
 INPUT ./Morphisms-Complex-Spaces.tex
 INPUT Morphisms-Complex-Spaces.tex
 INPUT ./Analytic-Sets.tex

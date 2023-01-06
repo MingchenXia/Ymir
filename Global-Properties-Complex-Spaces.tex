@@ -110,7 +110,7 @@ In general, $P^0\subseteq \Int P$, but they can be different.
     As $P$ is compact, so is $\hat{K}\cap W$.
 \end{proof}
 
-\begin{thm}
+\begin{thm}\label{thm-stonelocallyproper}
     Let $X$ be a Hausdorff complex analytic space and $(P,\pi:X\rightarrow \mathbb{C}^n)$ be a stone in $X$. Let $Q$ be the tube in $\mathbb{C}^m$ as in \cref{def-stone}. Then there are open neighbourhoods $U$ and $V$ of $P$ and $Q$ in $X$ and $\mathbb{C}^n$ respectively with $\pi(U)\subseteq V$ and $P=\pi^{-1}(Q)\cap U$ such that $\pi|_U:U\rightarrow V$ is proper.
 \end{thm}
 %Recall that a map between topological spaces is quasi-proper if the inverse image of each quasi-compact set is quasi-compact.
@@ -143,7 +143,7 @@ In general, $P^0\subseteq \Int P$, but they can be different.
 \end{definition}
 
 \begin{definition}
-    Let $X$ be a complex analytic space. An \emph{exhaustion by stones} of $X$ is a sequence $(P_i,\pi_i)_{i\in \mathbb{Z}_{>0}}$ of stones such that 
+    Let $X$ be a complex analytic space. An \emph{exhaustion of $X$ by stones} is a sequence $(P_i,\pi_i)_{i\in \mathbb{Z}_{>0}}$ of stones such that 
     \begin{enumerate}
         \item $(P_i,\pi_i)\subseteq (P_{i+1},\pi_{i+1})$ for all $i\in \mathbb{Z}_{>0}$;
         \item 
@@ -151,12 +151,13 @@ In general, $P^0\subseteq \Int P$, but they can be different.
                 X=\bigcup_{i=1}^{\infty} P_i^0.
             \]
     \end{enumerate}
+    We say $X$ is \emph{weakly holomorphically convex} if it there is an exhaustion of $X$ by stones.
 \end{definition}
 
-\begin{thm}
+\begin{thm}\label{thm-weaklyholconvchar}
     Let $X$ be a Hausdorff complex analytic space. Consider the following conditions:
     \begin{enumerate}
-        \item There is an exhaustion of $X$ by stones;
+        \item $X$ is weakly holomorphically convex;
         \item For any compact subset $K\subseteq X$, there is an open set $W\subseteq X$ such that $\hat{K}^X\cap W$ is compact.
     \end{enumerate}
     Then (1) $\implies$ (2). If $X$ admits a countable basis, then (2) $\implies$ (1).
@@ -185,35 +186,12 @@ In general, $P^0\subseteq \Int P$, but they can be different.
 \end{proof}
 
 
-\section{Holomorphical separabililty, holomorphical spreadability and holomorphical convexity}
+\section{Holomorphical separabble spaces}
 \begin{definition}
     Let $X$ be a complex analytic space. We say $X$ is \emph{holomorphically separable} if for any $x,y\in X$ with $x\neq y$, there is $f\in \mathcal{O}_X(X)$ with $f(x)\neq f(y)$.
 \end{definition}
 Here we regard $f$ as a continuous function $X\rightarrow \mathbb{C}$. In particular, a holomorphically separable space is Hausdorff.
 
-\begin{definition}
-    Let $X$ be a complex analytic space. We say $X$ is \emph{holomorphically spreadable} if $X$ is Hausdorff and for any $x\in X$, we can find an open neighbourhood $U$ of $x$ in $X$ such that
-    \[
-        \left\{y\in U:f(x)=f(y)\text{ for all }f\in \mathcal{O}_X(X) \right\} =\{p\}.
-    \]
-\end{definition}
-A holomorphically separable space is clearly holomorphically spreadable.
-
-
-
-\begin{proposition}
-    Let $X$ be an irreducible holomorphically spreadable complex analytic space. Then $X$ has countable basis.
-\end{proposition}
-The statement of this proposition in \cite[Proposition~0.37]{Fis76} is clearly wrong. I do not understand the argument of either \cite{Jur59} or \cite{Gra55}, where they claim that this result holds for connected holomorphically spreadable complex analytic spaces.
-\begin{proof}
-    We may assume that $X$ is connected. Recall that by \cref{PropertyComplex-cor-caslocallyconnected} in \nameref{PropertyComplex-chap-propcomplex}, $X$ is locally connected.
-    Let $F:X\rightarrow \mathbb{C}^{\mathcal{O}_X(X)}$ be the map sending $x\in X$ to $(f(x))_{f\in \mathcal{O}_X(X)}$. By our assumption, $F$ is continuous and has discrete fibers.     
-    In particular, for each $x\in X$, we may assume take finitely many $f_1,\ldots,f_n\in \mathcal{O}_X(X)$ so that the induced morphism $F':X\rightarrow \mathbb{C}^n$ is quasi-finite at $x$. By \cref{Analytic-cor-quasifinitelocuscoana} in \nameref{Analytic-chap-AS}, we can find a nowhere dense analytic set $A$ in $X$ such that the map $X\setminus A\rightarrow \mathbb{C}^n$ induced by $F'$ is quasi-finite. Now we endow $\mathcal{O}_X(X)$ with the compact-open topology. It is a metric space. By \cref{Topology-prop-fiberdiscountablebasisinh} in \nameref{Topology-chap-topology}, $X\setminus A$ has countable basis. It follows that $\mathcal{O}_X(X\setminus A)$ is a separable metric space. Hence, so it $\mathcal{O}_X(X)$. In particular, there is a continous map with discrete fibers
-    \[
-        X\rightarrow  \mathbb{C}^{\omega}.  
-    \]
-    It follows again from \cref{Topology-prop-fiberdiscountablebasisinh} in \nameref{Topology-chap-topology} that $X$ has countable basis.
-\end{proof}
 
 \iffalse
 \begin{thm}[Grauert]
@@ -262,7 +240,8 @@ The statement of this proposition in \cite[Proposition~0.37]{Fis76} is clearly w
 
 
 
-\section{Stein spaces}
+
+\section{Stein sets}
 
 
 \begin{definition}
@@ -294,7 +273,7 @@ The given condition is usually known as \emph{Cartan's Theorem~B}. It implies \e
 \end{proof}
 
 
-\begin{corollary}
+\begin{corollary}\label{cor-thmacohsheafquotient}
     Let $X$ be a complex analytic space and $P$ be a quasi-compact Stein set in $X$.  Let $\mathcal{F}$ be a coherent $\mathcal{O}_P$-module.
     Then there is $n\in \mathbb{Z}_{>0}$ and an epimorphism
     \[
@@ -309,8 +288,8 @@ The given condition is usually known as \emph{Cartan's Theorem~B}. It implies \e
     for some $n_i\in \mathbb{Z}_{>0}$, which is surjective on $U_i$ for each $i\in I$. By the quasi-compactness of $P$, we may assume that $I$ is a finite set. Then it suffices to set $n=\sum_{i\in I}n_i$ and consider the epimorphism $\mathcal{O}_P^n\rightarrow \mathcal{F}$ induced by the $h_i$'s.
 \end{proof}
 
-\begin{thm}
-    Let $X$ be a compact analytic space and $P\subseteq X$ be a set with the following properties:
+\begin{thm}\label{thm-blocktostein}
+    Let $X$ be a complex analytic space and $P\subseteq X$ be a set with the following properties:
     \begin{enumerate}
         \item there is an open neighbourhood $U$ of $P$ in $X$, a domain $V$ in $\mathbb{C}^m$ for some $m\in \mathbb{N}$ and a finite holomorphic morphism $\tau:U\rightarrow V$;
         \item There exists a compact tube in $\mathbb{C}^m$ contained in $V$ such that $P=\tau^{-1}(Q)$.
@@ -448,7 +427,177 @@ The given condition is usually known as \emph{Cartan's Theorem~B}. It implies \e
 \end{proof}
 
 
+\section{Analytic blocks}
 
+\begin{definition}\label{def-anablock}
+    Let $X$ be a Hausdorff complex analytic space. A stone $(P,\pi:X\rightarrow \mathbb{C}^n)$ on $X$ is an \emph{analytic block} in $X$ if there are open neighbourhoods $U$ and $V$ of $P$ and $Q$ in $X$ and $Y$ respectively, where $Q\subseteq \mathbb{C}^n$ denotes the tube associated with the stone, such that
+    \begin{enumerate}
+        \item $\pi(U)\subseteq V$;
+        \item $P=\pi^{-1}(Q)\cap U$;
+        \item $U\rightarrow V$ induced by $\pi$ is a finite morphism.
+    \end{enumerate}
+\end{definition}
+Recall that by \cref{thm-stonelocallyproper}, we can always assume that $U\rightarrow V$ is proper.
+
+\begin{proposition}
+    Let $X$ be a Hausdorff complex analytic space and $(P,\pi)$ be an analytic block in $X$. Then $P$ is a compact Stein set in $X$.
+\end{proposition}
+\begin{proof}
+    This follows from \cref{thm-blocktostein} applied to $U\rightarrow V$ in \cref{def-anablock}.
+\end{proof}
+
+\begin{proposition}\label{prop-stoneisblockunderass}
+    Let $X$ be a complex analytic space such that each compact analytic set in $X$ is finite, then every stone in $X$ is an analytic block in $X$.
+\end{proposition}
+\begin{proof}
+    Let $(P,\pi:X\rightarrow \mathbb{C}^n)$ be a stone in $X$.
+    We consider the proper morphism $\tau:U\rightarrow V$ as in \cref{thm-stonelocallyproper}. Each fiber of $\tau$ is a compact subset of $U$ and hence a compact subset of $X$. By our assumption, it is finite. It suffices to apply \cref{Topology-prop-topfinitechar} in \nameref{Topology-chap-topology} to conclude that $\tau$ is finite.
+\end{proof}
+
+\section{Holomorphically spreadable spaces}
+\begin{definition}
+    Let $X$ be a complex analytic space. We say $X$ is \emph{holomorphically spreadable} if $|X|$ is Hausdorff and for any $x\in X$, we can find an open neighbourhood $U$ of $x$ in $X$ such that
+    \[
+        \left\{y\in U:f(x)=f(y)\text{ for all }f\in \mathcal{O}_X(X) \right\} =\{x\}.
+    \]
+\end{definition}
+A holomorphically separable space is clearly holomorphically spreadable.
+
+
+
+\begin{proposition}\label{prop-holspreadablelocallyisopt}
+    Let $X$ be a holomorphically spreadable complex analytic space and $x\in X$. Then there exist finitely many $f_1,\ldots,f_n\in \mathcal{O}_X(X)$ such that $x$ is an isolated point of $W(f_1,\ldots,f_n)$.
+\end{proposition}
+\begin{proof}
+    By induction on $\dim_x X$, it suffices to prove the following claim: if $A$ is an analytic set in $X$ and $a\in A$ such that $\dim_a A\geq 1$. Then there is $f\in \mathcal{O}_X(X)$ such that $\dim_a (A\cap W(f))=\dim_a A-1$.
+
+    To prove the claim, let $A_1,\ldots,A_k$ be the irreducible components of $A$. We may assume that all of them contain $a$. Choose $a_j\in A_j$ for each $j=1,\ldots,k$ so that $a,a_1,\ldots,a_k$ are pairwise different. Then there is a function $f\in \mathcal{O}_X(X)$ with $f(a)=0$ while $f(a_j)\neq 0$ for $j=1,\ldots,k$. Then $a\in W(f)$ while $f|_{A_j}$ is not identically $0$. By Krulls Hauptidealsatz, $\dim_a (A_j\cap W(f))=\dim_a A_j-1$ for all $j=1,\ldots,k$. Observe that $A\cap W(f)$ and $\bigcup_{j=1}^k (A_j\cap W(f))$ coincide near $a$, so
+    \[
+        \dim_a (A\cap W(f))=\max_{j=1,\ldots,k} \dim_a (A_j\cap W(f))=\max_{j=1,\ldots,k}(\dim_a A_j-1)=\dim_a A-1.
+    \] 
+\end{proof}
+
+\begin{proposition}
+    Let $X$ be an irreducible holomorphically spreadable complex analytic space. Then $X$ has countable basis.
+\end{proposition}
+The statement of this proposition in \cite[Proposition~0.37]{Fis76} is clearly wrong. I do not understand the argument of either \cite{Jur59} or \cite{Gra55}, where they claim that this result holds for connected holomorphically spreadable complex analytic spaces.
+\begin{proof}
+    We may assume that $X$ is connected. Recall that by \cref{PropertyComplex-cor-caslocallyconnected} in \nameref{PropertyComplex-chap-propcomplex}, $X$ is locally connected.
+    Let $F:X\rightarrow \mathbb{C}^{\mathcal{O}_X(X)}$ be the map sending $x\in X$ to $(f(x))_{f\in \mathcal{O}_X(X)}$. By our assumption, $F$ is continuous and has discrete fibers.     
+    In particular, for each $x\in X$, we may assume take finitely many $f_1,\ldots,f_n\in \mathcal{O}_X(X)$ so that the induced morphism $F':X\rightarrow \mathbb{C}^n$ is quasi-finite at $x$. By \cref{Analytic-cor-quasifinitelocuscoana} in \nameref{Analytic-chap-AS}, we can find a nowhere dense analytic set $A$ in $X$ such that the map $X\setminus A\rightarrow \mathbb{C}^n$ induced by $F'$ is quasi-finite. Now we endow $\mathcal{O}_X(X)$ with the compact-open topology. It is a metric space. By \cref{Topology-prop-fiberdiscountablebasisinh} in \nameref{Topology-chap-topology}, $X\setminus A$ has countable basis. It follows that $\mathcal{O}_X(X\setminus A)$ is a separable metric space. Hence, so it $\mathcal{O}_X(X)$. In particular, there is a continous map with discrete fibers
+    \[
+        X\rightarrow  \mathbb{C}^{\omega}.  
+    \]
+    It follows again from \cref{Topology-prop-fiberdiscountablebasisinh} in \nameref{Topology-chap-topology} that $X$ has countable basis.
+\end{proof}
+
+\begin{proposition}\label{prop-cptanainspreadablefinite}
+    Let $X$ be a holomorphically spreadable complex analytic space. Then any compact analytic set $A$ in $X$ is finite.
+\end{proposition}
+\begin{proof}
+    Let $B$ be a connected component of $A$ and $p\in B$. We need to show that $B=\{p\}$. Take finitely many $f_1,\ldots,f_n\in \mathcal{O}_X(X)$ so that $p$ is an isolated point of $W(f_1,\ldots,f_n)$. This is possible by \cref{prop-holspreadablelocallyisopt}.
+    As $f_i$ vanishes on $B$ for each $i=1,\ldots,n$, we have $B=\{p\}$.
+\end{proof}
+\begin{corollary}\label{cor-anasetinblockcptimplfinite}
+    Let $X$ be a complex analytic space and $A$ be a compact analytic subset of $X$. Suppose that there exists an analytic block $(P,\pi:X\rightarrow \mathbb{C}^n)$ in $X$ with $A\subseteq P$, then $A$ is finite.
+\end{corollary}
+\begin{proof}
+    Take $U\subseteq X,V\subseteq \mathbb{C}^n$ as in \cref{def-anablock} so that $U\rightarrow V$ is finite. Then $U$ is clearly holomorphically spreadable. By \cref{prop-cptanainspreadablefinite}, $A$ is finite.
+\end{proof}
+
+\section{Holomorphically complete spacs}
+
+\begin{definition}
+    Let $X$ be a complex analytic space. An \emph{exhaustion of $X$ by analytic blocks} is an exhaustion of $X$ by stones $(P_i,\pi_i)_{i\in \mathbb{Z}_{>0}}$ such that $(P_i,\pi_i)$ is an analytic block for each $i\in \mathbb{Z}_{>0}$.
+
+    We say $X$ is \emph{holomorphically complete} if $X$ is Hausdorff and there is an exhaustion of $X$ by analytic stones.
+\end{definition}
+\begin{thm}
+    Let $X$ be a Hausdorff complex analytic space. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is holomorphically complete;
+        \item $X$ is weakly holomorphically convex and every compact analytic subset of $X$ is finite.
+    \end{enumerate}
+\end{thm}
+\begin{proof}
+    (1) $\implies$ (2): $X$ is weakly holomorphically convex by definition. Each compact analytic subset $A$ of $X$ is contained in some analytic block, hence finite by \cref{cor-anasetinblockcptimplfinite}.
+
+    (2) $\implies$ (1): This follows from \cref{prop-stoneisblockunderass}.
+\end{proof}
+
+\begin{lemma}\label{lma-coherentsheafclosed}
+    Let $X$ be a complex manifold and $\mathcal{I}$ be a coherent subsheaf of $\mathcal{O}_X^l$ for some $l\in \mathbb{Z}_{>0}$. Then $\mathcal{I}(X)$ is a closed subspace of $\mathcal{O}_X(X)^l$ endowed with the compact-open topology.
+\end{lemma}
+\begin{proof}
+   Let $(f_j\in \mathcal{I}(X))_{j\in \mathbb{Z}_{>0}}$ be a sequence with a limit $f\in \mathcal{O}^l_X(X)$. Let $x\in X$. It suffices to show that $f_x\in \mathcal{I}_x$. Observe that $f_x$ is the limit of $f_{jx}$ as $j\to\infty$. As $\mathcal{O}_{X,x}$ is noetherian, the submodule $\mathcal{I}_x$ of $\mathcal{O}_x^l$ is closed by \cref{Banach-cor-idealclosed} in \nameref{Banach-chap-banach}. We conclude.
+\end{proof}
+
+
+\begin{definition}\label{def-goodseminorm}
+    Let $X$ be a complex analytic space and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module.
+Let $(P,\pi:X\rightarrow \mathbb{C}^n)$ be an analytic block on $X$ with a non-zero associated tube $Q\subseteq \mathbb{C}^n$. 
+
+Choose $U\subseteq X,V\subseteq \mathbb{C}^n$ as in \cref{def-anablock} so that $\tau:U\rightarrow V$ induced by $\pi$ is finite. Then $\mathcal{G}:=\tau_*(\mathcal{F}|_U)$  is a coherent $\mathcal{O}_V$-module. By \cref{cor-thmacohsheafquotient}, we can find $l\in \mathbb{Z}_{>0}$ and an epimorphism $\mathcal{O}_Q^l\rightarrow \mathcal{G}|_Q$. It induces an epimorphism $\epsilon:H^0(Q,\mathcal{O}_{\mathbb{C}^n})^l\rightarrow H^0(Q,\mathcal{G})\cn H^0(P,\mathcal{F})$. We define a semi-norm $|\bullet|$ on $H^0(P,\mathcal{F})$ as the quotient semi-norm induced by the sup seminorm on $H^0(Q,\mathcal{O}_{\mathbb{C}^n})^l$. 
+
+A seminorm on  $H^0(P,\mathcal{F})$ defined in this way is called a \emph{good semi-norm} on  $H^0(P,\mathcal{F})$ with respect to $(P,\pi)$.
+\end{definition}
+\begin{lemma}\label{lma-goodseminormmetric}
+    Let $X$ be a complex analytic space and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module.
+Let $(P,\pi)$ be an analytic block on $X$. A good semi-norm on  $H^0(P,\mathcal{F})$ induces a metric on $H^0(P^0,\mathcal{F})$.
+\end{lemma}
+\begin{proof}
+We need to show that if $|s|=0$ for some $s\in H^0(P,\mathcal{F})$, then $s|_{P^0}=0$, where $P^0$ is the analytic interior of $P$. 
+
+We use the same notations as in \cref{def-goodseminorm}.
+We can take $h\in H^0(Q,\mathcal{O}_{\mathbb{C}^n})^l$ and $h_j\in \ker \epsilon$ for each $j\in \mathbb{Z}_{>0}$ so that $\epsilon(h)=s$ and $\|h_j-h\|_{L^{\infty}}\to 0$. So $h_j|_Q\to h|_Q$ with respect to the compact-open topology. From  \cref{lma-coherentsheafclosed}, we conclude that the image of $h|_{\Int Q}$ is $0$. Namely, $s$ vanishes on $P^0=\tau^{-1}(\Int Q)$.
+\end{proof}
+
+
+\begin{lemma}
+    Let $X$ be a complex analytic space and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module.
+Let $(P,\pi:X\rightarrow \mathbb{C}^n)$ be an analytic block on $X$ with a non-zero associated tube $Q\subseteq \mathbb{C}^n$. Consider the epimorphism of sheaves 
+\[
+    \mathcal{O}_Q^l\rightarrow \pi_*(\mathcal{F}|_P)
+\]
+as in \cref{def-goodseminorm} and endow $H^0(P^0,\mathcal{F})$ with the metric induced by the corresponding good semi-norm. Let 
+\[
+    Q_1\subseteq Q_2\subseteq \cdots
+\]
+be a compact exhaustion of $\Int Q$ by tubes with the same centers in $\mathbb{C}^n$. We get an induced map
+\[
+    \epsilon_j:H^0(Q_j,\mathcal{O}_{\mathbb{C}^n}^l) \rightarrow \pi_*(\mathcal{F}|_P)(Q_j) 
+\]
+for each $j\in \mathbb{Q}_{>0}$. We therefore get good semi-norms $|\bullet|_j$ on $H^0(P^0, \mathcal{F})$ for each $j\in \mathbb{Z}_{>0}$. Let
+\[
+    d(s_1,s_2):=\sum_{j=1}^{\infty}  2^{-j}\frac{|s_1-s_2|_j}{1+|s_1-s_2|_j}
+\]
+for each $s_1,s_2\in H^0(P^0, \mathcal{F})$. Then $d$ is a metric on  $H^0(P^0, \mathcal{F})$ and $H^0(P^0, \mathcal{F})$ is a Fréchet space with respect to this topology.
+
+Moreover, the topology does not depend on the choice of $\pi$, $\epsilon$ and the exhaustion.
+\end{lemma}
+\begin{proof}
+By \cref{lma-goodseminormmetric}, each $|\bullet|_{\nu}$ is a norm on $H^0(P^0, \mathcal{F})$. It follows that $d$ is a metric. Next we show that $H^0(P^0, \mathcal{F})$ is Fréchet. 
+Let $(s_j)_{j\in \mathbb{Z}_{>0}}$ be a Cauchy sequence in $H^0(P^0, \mathcal{F})$. We can find bounded sequences $(f_{jk}\in H^0(Q_k,\mathcal{O}^l_{\mathbb{C}^n}))_{k\in \mathbb{Z}_{>0}}$ so that $\epsilon_k(f_{jk})=s_j|_{\pi^{-1}(Q_k)\cap P}$ ($k\in \mathbb{Z}_{>0}$) for each $j\mathbb{Z}_{>0}$. By Montel's theorem, there is a subsequence of $(f_{jk})_j$ which converges uniformly on $Q_{k-1}$ to $f_k\in H^0(Q_{k-1},\mathcal{O}_{\mathbb{C}^n}^l)$. Then $\epsilon_{k-1}(f_{k+1})|_{\Int Q_{k-1}}=\epsilon_{k-1}(f_k)|_{\Int Q_{k-1}}$ for each $k\in \mathbb{Z}_{\geq 2}$. So we can glue the $f_k$'s to $s\in H^0(P^0,\mathcal{F})$. Clearly, $s_k\to s$ as $k\to\infty$.
+
+Next we show that the topology is independent of the choice of $\pi$, $\epsilon$ and the exhaustion. 
+The independence of the exhaustion is obvious. We prove the other two independence.
+Let $(P,\pi':X\rightarrow \mathbb{C}^{n'})$ be another analytic block with $\pi'=(\pi,\varphi):X\rightarrow \mathbb{C}^n\times \mathbb{C}^m$, $n'=n+m$. Let $Q^*\subseteq \mathbb{C}^m$ be a tube such that $\varphi(P)\subseteq Q^*$. Then $P=\pi'^{-1}(Q\times Q^*)\cap U$. We can find an open neighbourhood $U'$ of $P$ in $X$ and $V'$ of $Q\times Q^*$ in $\mathbb{C}^{n'}$ for which the induced map $\tau':U'\rightarrow V'$ is finite by \cref{def-anablock}. Fix an epimorphism $\mathcal{O}_{\mathbb{C}^{n'}}^{l'}|_{Q\times Q^*}\rightarrow \pi'_*(\mathcal{F}|_P)$ for some $l'\in \mathbb{Z}_{>0}$. Construct an exhanstion of $\Int Q\times \Int Q^*$ of the product type: $(Q_j\times Q_j^*)_{j\in \mathbb{Z}_{>0}}$ as in the lemma. Let $d'$ denote the induced metric on $H^0(\Int P,\mathcal{F})$.
+
+
+We will show that $d'$ and $d$ induce the same topology. Let $e_1,\ldots,e_l\in H^0(Q,\mathcal{O}_{\mathbb{C}^n}^l)$ be the standard basis.  Let $e_1',\ldots,e_l'$ be the preimages of $\epsilon(e_1),\ldots,\epsilon(e_l)\in \pi_* (\mathcal{F}|P)(Q)=\pi'_*(\mathcal{F}|_P)(Q\times Q^*)$ in $\mathcal{O}_{\mathbb{C}^{n'}}(Q\times Q^*)^{l'}$ under $\epsilon'$. Further, for $f\in \mathcal{O}_{\mathbb{C}^n}(Q_j)$, we denote by $f'\in\mathcal{O}_{\mathbb{C}^{n'}}(Q_j\times Q_j^*)$ the holomorphic extension of $f$ to $Q_j\times Q_j^*$ constant along $\{q\}\times Q_j^*$ for each $q\in Q_j$  for each $j\in \mathbb{Z}_{>0}$. The norms of 
+\[
+\mathcal{O}_{\mathbb{C}^n}(Q_j)^l\rightarrow \mathcal{O}_{\mathbb{C}^{n'}}(Q_j\times Q_j^*)^l,\quad \sum_{i=1}^l f_i e_i\mapsto \sum_{i=1}^l f_i' e_i'    
+\]
+for $j\in \mathbb{Z}_{>0}$ are bounded by a constant independent of $j$. Therefore, the identity map 
+\[
+  (H^0(P^0,\mathcal{F}),d)  \rightarrow (H^0(P^0,\mathcal{F}),d')
+\] 
+is continuous. By open mapping theorem, the map is a homeomorphism.
+\end{proof}
+
+
+
+\section{Stein spaces}
 
 Recall that compact exhaustion is defined in \cref{Topology-def-exhaustion} in \nameref{Topology-chap-topology}.
 \begin{thm}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  6 JAN 2023 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  6 JAN 2023 16:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -916,15 +916,9 @@ No file Introduction.aux.
 Package xr Info: IMPORTING LABELS FROM Topology-Bornology.aux on input line 345.
 (Topology-Bornology.tex)
 (Topology-Bornology.aux)
-
-Package xr Warning: 
-No file Banach-Rings.aux
-LABELS NOT IMPORTED.
- on input line 346.
-
+Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 346.
 (Banach-Rings.tex)
 (Banach-Rings.aux)
-No file Banach-Rings.aux.
 
 Package xr Warning: 
 No file Commutative-Algebra.aux
@@ -961,9 +955,15 @@ LABELS NOT IMPORTED.
 (Constructions-Complex-Spaces.tex)
 (Constructions-Complex-Spaces.aux)
 No file Constructions-Complex-Spaces.aux.
-Package xr Info: IMPORTING LABELS FROM Properties-Complex-Spaces.aux on input line 354.
+
+Package xr Warning: 
+No file Properties-Complex-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 354.
+
 (Properties-Complex-Spaces.tex)
 (Properties-Complex-Spaces.aux)
+No file Properties-Complex-Spaces.aux.
 
 Package xr Warning: 
 No file Morphisms-Complex-Spaces.aux
@@ -1170,29 +1170,46 @@ LaTeX Warning: Reference `Complex-thm-hCnidentification' on page 1 undefined on 
 
 LaTeX Warning: Reference `Complex-chap-complex' on page 6 undefined on input line 104.
 
-[6] [7]
-
-LaTeX Warning: Reference `Analytic-cor-quasifinitelocuscoana' on page 1 undefined on input line 211.
-
-
-LaTeX Warning: Reference `Analytic-chap-AS' on page 8 undefined on input line 211.
-
-[8]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 290.
+[6] [7] [8]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 269.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 ) [9]
 
-LaTeX Warning: Reference `Morphisms-cor-finitepushcoh' on page 1 undefined on input line 333.
+LaTeX Warning: Reference `Morphisms-cor-finitepushcoh' on page 1 undefined on input line 312.
 
 
-LaTeX Warning: Reference `Morphisms-chap-morphismscomplex' on page 10 undefined on input line 333.
+LaTeX Warning: Reference `Morphisms-chap-morphismscomplex' on page 10 undefined on input line 312.
 
 [10] [11] [12]
+
+LaTeX Warning: Reference `PropertyComplex-cor-caslocallyconnected' on page 1 undefined on input line 485.
+
+
+LaTeX Warning: Reference `PropertyComplex-chap-propcomplex' on page 13 undefined on input line 485.
+
+
+LaTeX Warning: Reference `Analytic-cor-quasifinitelocuscoana' on page 1 undefined on input line 487.
+
+
+LaTeX Warning: Reference `Analytic-chap-AS' on page 13 undefined on input line 487.
+
+[13]
+
+LaTeX Warning: Reference `Banach-chap-banach' on page 14 undefined on input line 532.
+
+[14]
+Overfull \hbox (2.56836pt too wide) in paragraph at lines 587--588
+\OML/lmm/m/it/10 H[]\OT1/lmr/m/n/10 (-20) (\OML/lmm/m/it/10 Q; \OMS/lmsy/m/n/10 O[]\OT1/lmr/m/n/10 (-20) )$ \T1/lmr/m/n/10 (-20) be the stan-dard ba-sis. Let $\OML/lmm/m/it/10 e[]; [] ; e[]$ \T1/lmr/m/n/10 (-20) be the preim-ages of $\OML/lmm/m/it/10 ^^O\OT1/lmr/m/n/10 (-20) (\OML/lmm/m/it/10 e[]\OT1/lmr/m/n/10 (-20) )\OML/lmm/m/it/10 ; [] ; ^^O\OT1/lmr/m/n/10 (-20) (\OML/lmm/m/it/10 e[]\OT1/lmr/m/n/10 (-20) ) \OMS/lmsy/m/n/10 2
+ []
+
+[15] [16
+
+]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 477.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 626.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1200,9 +1217,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [13
-
-] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Global-Properties-Complex-Spaces.aux)
+ [17] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Global-Properties-Complex-Spaces.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1211,18 +1226,18 @@ Package logreq Info: Writing requests to 'Global-Properties-Complex-Spaces.run.x
 
  ) 
 Here is how much of TeX's memory you used:
- 36999 strings out of 478994
- 693408 string characters out of 5858185
- 1537457 words of memory out of 5000000
- 53477 multiletter control sequences out of 15000+600000
- 461258 words of font info for 151 fonts, out of 8000000 for 9000
+ 37155 strings out of 478994
+ 696529 string characters out of 5858185
+ 1541897 words of memory out of 5000000
+ 53578 multiletter control sequences out of 15000+600000
+ 462652 words of font info for 166 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,11n,133p,1163b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 132i,11n,133p,917b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Global-Properties-Complex-Spaces.pdf (13 pages, 298388 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Global-Properties-Complex-Spaces.pdf (17 pages, 322938 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
- 275 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
- 23109 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 390 PDF objects out of 1000 (max. 8388607)
+ 348 compressed objects within 4 object streams
+ 104 named destinations out of 1000 (max. 500000)
+ 23141 words of extra memory for PDF output out of 24883 (max. 10000000)
 
