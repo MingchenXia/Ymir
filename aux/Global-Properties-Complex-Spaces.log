@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  2 JAN 2023 16:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  6 JAN 2023 14:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -908,56 +908,110 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 51.
 Package xr Warning: 
 No file Introduction.aux
 LABELS NOT IMPORTED.
- on input line 342.
+ on input line 344.
 
 (Introduction.tex)
 (Introduction.aux)
 No file Introduction.aux.
-Package xr Info: IMPORTING LABELS FROM Topology-Bornology.aux on input line 343.
+Package xr Info: IMPORTING LABELS FROM Topology-Bornology.aux on input line 345.
 (Topology-Bornology.tex)
 (Topology-Bornology.aux)
-Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 344.
+
+Package xr Warning: 
+No file Banach-Rings.aux
+LABELS NOT IMPORTED.
+ on input line 346.
+
 (Banach-Rings.tex)
 (Banach-Rings.aux)
-Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 345.
+No file Banach-Rings.aux.
+
+Package xr Warning: 
+No file Commutative-Algebra.aux
+LABELS NOT IMPORTED.
+ on input line 347.
+
 (Commutative-Algebra.tex)
 (Commutative-Algebra.aux)
-Package xr Info: IMPORTING LABELS FROM Local-Algebras.aux on input line 349.
+No file Commutative-Algebra.aux.
+
+Package xr Warning: 
+No file Local-Algebras.aux
+LABELS NOT IMPORTED.
+ on input line 351.
+
 (Local-Algebras.tex)
 (Local-Algebras.aux)
-Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 350.
+No file Local-Algebras.aux.
+
+Package xr Warning: 
+No file Complex-Analytic-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 352.
+
 (Complex-Analytic-Spaces.tex)
 (Complex-Analytic-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Constructions-Complex-Spaces.aux on input line 351.
+No file Complex-Analytic-Spaces.aux.
+
+Package xr Warning: 
+No file Constructions-Complex-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 353.
+
 (Constructions-Complex-Spaces.tex)
 (Constructions-Complex-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Properties-Complex-Spaces.aux on input line 352.
+No file Constructions-Complex-Spaces.aux.
+Package xr Info: IMPORTING LABELS FROM Properties-Complex-Spaces.aux on input line 354.
 (Properties-Complex-Spaces.tex)
 (Properties-Complex-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Morphisms-Complex-Spaces.aux on input line 354.
+
+Package xr Warning: 
+No file Morphisms-Complex-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 356.
+
 (Morphisms-Complex-Spaces.tex)
 (Morphisms-Complex-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Analytic-Sets.aux on input line 355.
+No file Morphisms-Complex-Spaces.aux.
+
+Package xr Warning: 
+No file Analytic-Sets.aux
+LABELS NOT IMPORTED.
+ on input line 357.
+
 (Analytic-Sets.tex)
 (Analytic-Sets.aux)
-Package xr Info: IMPORTING LABELS FROM Global-Properties-Complex-Spaces.aux on input line 356.
+No file Analytic-Sets.aux.
+Package xr Info: IMPORTING LABELS FROM Global-Properties-Complex-Spaces.aux on input line 358.
 (Global-Properties-Complex-Spaces.tex)
 (Global-Properties-Complex-Spaces.aux)
 
 Package xr Warning: 
 No file Affinoid-Algebras.aux
 LABELS NOT IMPORTED.
- on input line 359.
+ on input line 361.
 
 (Affinoid-Algebras.tex)
 (Affinoid-Algebras.aux)
 No file Affinoid-Algebras.aux.
-Package xr Info: IMPORTING LABELS FROM Berkovich-Analytic-Spaces.aux on input line 360.
+
+Package xr Warning: 
+No file Berkovich-Analytic-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 362.
+
 (Berkovich-Analytic-Spaces.tex)
 (Berkovich-Analytic-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Properties-Berkovich-Spaces.aux on input line 361.
+No file Berkovich-Analytic-Spaces.aux.
+
+Package xr Warning: 
+No file Properties-Berkovich-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 363.
+
 (Properties-Berkovich-Spaces.tex)
 (Properties-Berkovich-Spaces.aux)
+No file Properties-Berkovich-Spaces.aux.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1098,9 +1152,9 @@ Contents
 ]
 Global properties of complex analytic spaces
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 13.
+(Font)              <10> on input line 14.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 13.
+(Font)              <7> on input line 14.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1109,9 +1163,36 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [5] [6]
+ [5]
+
+LaTeX Warning: Reference `Complex-thm-hCnidentification' on page 1 undefined on input line 104.
+
+
+LaTeX Warning: Reference `Complex-chap-complex' on page 6 undefined on input line 104.
+
+[6] [7]
+
+LaTeX Warning: Reference `Analytic-cor-quasifinitelocuscoana' on page 1 undefined on input line 211.
+
+
+LaTeX Warning: Reference `Analytic-chap-AS' on page 8 undefined on input line 211.
+
+[8]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 290.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
+) [9]
+
+LaTeX Warning: Reference `Morphisms-cor-finitepushcoh' on page 1 undefined on input line 333.
+
+
+LaTeX Warning: Reference `Morphisms-chap-morphismscomplex' on page 10 undefined on input line 333.
+
+[10] [11] [12]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 104.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 477.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1119,26 +1200,29 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [7
+ [13
 
 ] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Global-Properties-Complex-Spaces.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'Global-Properties-Complex-Spaces.run.xml'.
 \openout1 = `Global-Properties-Complex-Spaces.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37474 strings out of 478994
- 714253 string characters out of 5858185
- 1559582 words of memory out of 5000000
- 54089 multiletter control sequences out of 15000+600000
- 457258 words of font info for 110 fonts, out of 8000000 for 9000
+ 36999 strings out of 478994
+ 693408 string characters out of 5858185
+ 1537457 words of memory out of 5000000
+ 53477 multiletter control sequences out of 15000+600000
+ 461258 words of font info for 151 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,6n,133p,1018b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Global-Properties-Complex-Spaces.pdf (7 pages, 218526 bytes).
+ 132i,11n,133p,1163b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Global-Properties-Complex-Spaces.pdf (13 pages, 298388 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 23085 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 312 PDF objects out of 1000 (max. 8388607)
+ 275 compressed objects within 3 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 23109 words of extra memory for PDF output out of 24883 (max. 10000000)
 

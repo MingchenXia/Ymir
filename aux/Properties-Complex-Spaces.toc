@@ -1,24 +1,22 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Local properties of complex analytic spaces}}{5}{chapter*.1}%
+\contentsline {chapter}{\tocchapter {Chapter}{}{Local properties of complex analytic spaces}}{3}{chapter*.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{1}{Introduction}}{5}{section.0.1}%
+\contentsline {section}{\tocsection {}{1}{Introduction}}{3}{section.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{2}{Dimension}}{5}{section.0.2}%
+\contentsline {section}{\tocsection {}{2}{Dimension}}{3}{section.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{3}{Smoothness}}{9}{section.0.3}%
+\contentsline {section}{\tocsection {}{3}{Smoothness}}{7}{section.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{4}{Serre's condition $R_n$}}{12}{section.0.4}%
+\contentsline {section}{\tocsection {}{4}{Serre's condition $R_n$}}{10}{section.0.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{5}{Serre's condition $S_n$}}{13}{section.0.5}%
+\contentsline {section}{\tocsection {}{5}{Serre's condition $S_n$}}{11}{section.0.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{6}{Reducedness}}{15}{section.0.6}%
+\contentsline {section}{\tocsection {}{6}{Reducedness}}{13}{section.0.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{7}{Normalness}}{18}{section.0.7}%
+\contentsline {section}{\tocsection {}{7}{Normalness}}{15}{section.0.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{8}{Unibranchness}}{21}{section.0.8}%
+\contentsline {section}{\tocsection {}{8}{Unibranchness}}{18}{section.0.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{9}{Cohen--Macaulay property}}{22}{section.0.9}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{23}{chapter*.2}%
+\contentsline {section}{\tocsection {}{9}{Cohen--Macaulay property}}{19}{section.0.9}%

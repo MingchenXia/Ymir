@@ -8,7 +8,184 @@
 
 \section{Introduction}\label{sec-introduction-CGlobalProperty}
 
-\section{Stein spaces}
+\section{Holomorphically convex hulls}
+
+\begin{definition}
+    Let $X$ be a complex analytic space and $M$ be a subset of $X$, we define the \emph{holomorphically convex hull} of $M$ in $X$ as
+    \[
+        \hat{M}^X:=  \left\{ x\in X: |f(x)|\leq \sup_{y\in M}|f(y)|\text{ for all }f\in \mathcal{O}_X(X) \right\}.  
+    \]
+\end{definition}
+
+\begin{proposition}\label{prop-convexhullprop}
+    Let $X$ be a complex analytic space and $M$ be a subset of $X$. Then the following properties hold:
+    \begin{enumerate}
+        \item $\hat{M}^X$ is closed in $X$;
+        \item $M\subseteq \hat{M}^X$ and $\widehat{\hat{M}^X}^X=\hat{M}^X$;
+        \item If $M'$ is another subset of $X$ containing $M$, then $\hat{M}^X\subseteq \hat{M'}^X$;
+        \item If $f:Y\rightarrow X$ is a morphism of complex analytic spaces, then
+             \[ 
+                \widehat{f^{-1}(M)}^Y\subseteq f^{-1}(\hat{M}^X);
+             \]
+        \item If $X'$ is another complex analytic space and $M'$ is a subset of $X'$, then
+            \[
+                \widehat{M\times M'}^{X\times X'}\subseteq \hat{M}^X\times \hat{M'}^{X'};  
+            \]
+        \item If $M'$ is another subset of $X$ and $\hat{M}^X=M$, $\hat{M'}^X=M'$, then
+            \[
+                \widehat{M\cap M'}^X=M\cap M'.    
+            \]
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (1), (2), (3), (4), (5) are obvious by definition.
+
+    (6) is a consequence of (3).
+\end{proof}
+
+\begin{example}\label{ex-tubeholhull}
+    Let $Q$ be a compact cube in $\mathbb{C}^n$ for some $n\in \mathbb{N}$, then $\hat{Q}^{\mathbb{C}^n}=Q$.
+
+    In fact, by \cref{prop-convexhullprop}(5), we may assume that $n=1$. Given $p\in \mathbb{C}\setminus Q$, we can take a closed disk $T\subseteq \mathbb{C}$ centered at $a\in \mathbb{C}$ such that $Q\subseteq T$ while $p\not\in T$. Consider $z-a\in \mathcal{O}_{\mathbb{C}}(\mathbb{C})$, then
+    \[
+        |f(p)|>\sup_{q\in Q}|f(q)|.  
+    \]
+    So $p\not\in \hat{Q}^{\mathbb{C}}$.
+\end{example}
+
+\section{Stones}
+
+\begin{definition}\label{def-stone}
+    Let $X$ be a complex analytic space. A \emph{stone} in $X$ is a pair $(P,\pi)$ consisting of 
+    \begin{enumerate}
+        \item a non-empty compact set $P$ in $X$ and
+        \item a morphism $\pi:X\rightarrow \mathbb{C}^n$ for some $n \in \mathbb{N}$
+    \end{enumerate}
+    such that there is a compact tube $Q$ in $\mathbb{C}^n$ and an open set $W$ in $X$ such that $P=\pi^{-1}(Q)\cap W$.
+
+    We call $P^0:=\pi^{-1}(\Int Q)\cap W$ the \emph{analytic interior} of the stone $(P,\pi)$. It clearly does not depend on the choice of $W$.
+\end{definition}
+We observe that $\hat{P}^X\cap W=P$. In fact, $P\subseteq \pi^{-1}(Q)$, so
+\[
+    \hat{P}^X\subseteq \pi^{-1}(\hat{Q}^{\mathbb{C}^n})=\pi^{-1}(Q)=P\cap W=P.  
+\]
+Here we applied \cref{prop-convexhullprop} and \cref{ex-tubeholhull}.
+
+In general, $P^0\subseteq \Int P$, but they can be different.
+
+\begin{thm}\label{thm-fixedcptsethullloccpt}
+    Let $X$ be a Hausdorff complex analytic space and $K\subseteq X$ be a compact subset. Then the following are equivalent:
+    \begin{enumerate}
+        \item There is an open neighbourhood $W$ of $K$ in $X$ such that $\hat{K}^X\cap W$ is compact;
+        \item There is an open relative compact neighbourhood $W$ of $K$ in $X$ such that $\partial W\cap \hat{K}=\emptyset$;
+        \item There is a stone $(P,\pi)$ in $X$ with $K\subseteq P^0$.
+    \end{enumerate}
+\end{thm}
+\begin{proof}
+    (1) $\implies$ (2): This is trivial, in fact, we may assume that $W$ in (1) is relatively compact in $X$.
+
+    (2) $\implies$ (3): As $\hat{K}^X$ is closed by \cref{prop-convexhullprop}(1) and $\partial W\cap \hat{K}^X=\emptyset$, given $p\in \partial W$, we can find $h\in \mathcal{O}_X(X)$ such that
+    \[
+        \sup_{x\in K}|h(x)|<1<|h(p)|.
+    \]
+    We will denote the left-hand side by $|h|_K$.
+    Up to raising $h$ to a power, we may assume that 
+    \[
+        \max\{|\Real h(p)|,|\Imag h(p)| \}>1. 
+    \]
+    As $\partial W$ is compact, we can find finitely many sections $h_1,\ldots,h_m\in \mathcal{O}_X(X)$ so that
+    \[
+        \max_{j=1,\ldots,m} \{|\Real h_j|_K,|\Imag h_j|_K\}<1,\quad \max_{j=1,\ldots,m} \{|\Real h_j(p)|,|\Imag h_j(p)|\}>1.  
+    \]
+    Let 
+    \[
+        Q:=\left\{ (z_1,\ldots,z_m)\in \mathbb{C}^m: |\Real z_i|\leq 1, |\Imag z_i|\leq 1\text{ for all }i=1,\ldots,m \right\}.  
+    \]
+    The sections $h_1,\ldots,h_m$ defines a homomorphism $\pi:X\rightarrow \mathbb{C}^m$ by \cref{Complex-thm-hCnidentification} in \nameref{Complex-chap-complex}. Obviously, $P=\pi^{-1}(Q)\cap W$ satisfies our assumptions.
+
+    (3) $\implies$ (1): Let $W$ be the open set as in \cref{def-stone}. As $\hat{P}^X\cap W=P$ and $K\subseteq P$, we have
+    \[
+        \hat{K}\cap W\subseteq P\cap W=P.  
+    \]
+    As $P$ is compact, so is $\hat{K}\cap W$.
+\end{proof}
+
+\begin{thm}
+    Let $X$ be a Hausdorff complex analytic space and $(P,\pi:X\rightarrow \mathbb{C}^n)$ be a stone in $X$. Let $Q$ be the tube in $\mathbb{C}^m$ as in \cref{def-stone}. Then there are open neighbourhoods $U$ and $V$ of $P$ and $Q$ in $X$ and $\mathbb{C}^n$ respectively with $\pi(U)\subseteq V$ and $P=\pi^{-1}(Q)\cap U$ such that $\pi|_U:U\rightarrow V$ is proper.
+\end{thm}
+%Recall that a map between topological spaces is quasi-proper if the inverse image of each quasi-compact set is quasi-compact.
+
+\begin{proof}
+    Let $W\subseteq X$ be the open set as in \cref{def-stone}. We may assume that $W$ is relatively compact. Then $\partial W$ and $\pi(\partial W)$ are also compact. As $\partial W\cap \pi^{-1}(Q)$ is empty, we know that $V:=\mathbb{C}^n\setminus \pi(\partial W)$ is an open neighbourhood of $Q$. The set $U:=W\cap \pi^{-1}(V)=W\setminus \pi^{-1}(\pi(\partial W))$ is open in $X$ and $\pi(U)\subseteq V$. Observe that $\pi|_U:U\rightarrow V$ is proper by \cref{Topology-lma-qcpttoHausdorffproper} in \nameref{Topology-chap-topology}.
+    
+    Furthermore,
+    \[
+        \pi^{-1}(Q)\cap U=\pi^{-1}(Q)\cap \left( W\setminus \left(\pi^{-1}(Q)\cap \pi^{-1}\pi(\partial W)\right) \right).  
+    \]
+    But $\pi^{-1}Q\cap \pi^{-1}\pi(\partial W)$ is empty as $Q\cap \pi(\partial W)$ is. It follows that $\pi^{-1}(Q)\cap U=P$ and hence $U$ is a neighbourhood of $P$.
+\end{proof}
+
+\begin{definition}
+    Let $X$ be a complex analytic space.
+    Let $(P,\pi:X\rightarrow \mathbb{C}^{n})$, $(P',\pi':X\rightarrow \mathbb{C}^{n'})$ be two stones on $X$. We say $(P,\pi)$ \emph{is contained in} $(P',\pi')$ if the following conditions are satisfied:
+    \begin{enumerate}
+        \item $P$ lies in the analytic interior of $P'$;
+        \item $n'\geq n$ and there is $q\in \mathbb{C}^{n'-n}$ such that if $Q\subseteq \mathbb{C}^n$, $\mathbb{Q}'\subseteq \mathbb{C}^{n'}$ be the tubes as in \cref{def-stone}, then
+            \[
+                Q\times\{q\}\subseteq Q'.
+            \]
+        \item There is a morphism $\varphi:X\rightarrow \mathbb{C}^{n'-n}$ such that 
+            \[
+                \pi'=(\pi,\varphi).
+            \]
+    \end{enumerate}
+    We formally write $(P,\pi)\subseteq (P',\pi')$ in this case. Clearly, this defines a partial order on the set of stones on $X$.
+\end{definition}
+
+\begin{definition}
+    Let $X$ be a complex analytic space. An \emph{exhaustion by stones} of $X$ is a sequence $(P_i,\pi_i)_{i\in \mathbb{Z}_{>0}}$ of stones such that 
+    \begin{enumerate}
+        \item $(P_i,\pi_i)\subseteq (P_{i+1},\pi_{i+1})$ for all $i\in \mathbb{Z}_{>0}$;
+        \item 
+            \[
+                X=\bigcup_{i=1}^{\infty} P_i^0.
+            \]
+    \end{enumerate}
+\end{definition}
+
+\begin{thm}
+    Let $X$ be a Hausdorff complex analytic space. Consider the following conditions:
+    \begin{enumerate}
+        \item There is an exhaustion of $X$ by stones;
+        \item For any compact subset $K\subseteq X$, there is an open set $W\subseteq X$ such that $\hat{K}^X\cap W$ is compact.
+    \end{enumerate}
+    Then (1) $\implies$ (2). If $X$ admits a countable basis, then (2) $\implies$ (1).
+\end{thm}
+\begin{proof}
+    (1) $\implies$ (2): It suffices to observe that $K\subseteq P_j^0$ when $j$ is large enough and apply \cref{thm-fixedcptsethullloccpt}.
+
+    Assume that $X$ has a countable basis.
+    (2) $\implies$ (1): 
+    Let $(K_i)$ a compact exhaustion of $X$. We construcct the stones $(P_i,\pi_i)_{i\in \mathbb{Z}_{>0}}$ so that 
+    \[
+        K_i\subseteq P_i^0
+    \] 
+    for all $i\in \mathbb{Z}_{>0}$
+    inductively. Let $P_1$ be an arbitrary stone in $X$ such that $K_1\subseteq P_1^0$. The existence of $P_1$ is guaranteed by \cref{thm-fixedcptsethullloccpt}.
+
+    Assume that we have constructed $(P_{i-1},\pi_{i-1}:X\rightarrow  \mathbb{C}^{n_{i-1}})$ for $i\geq 2$. Let $Q_{i-1}\subseteq \mathbb{C}^{n_{i-1}}$ be the associated tube. By   \cref{thm-fixedcptsethullloccpt} again, take a stone $(P_i,\pi_i^*:X\rightarrow \mathbb{C}^n)$ with $K_i\cup P_{i-1}\subseteq P_i^0$. Let $Q_i^*\subseteq \mathbb{C}^n$ be the associated tube. Let $W$ be an open subset of $X$ with 
+    \[
+        P_i=\pi_i^{*,-1}(Q_i^*)\cap W.  
+    \]
+    Choose a tube $Q_i'\subseteq \mathbb{C}^{n_{i-1}}$ with $Q_{i-1}\subseteq \Int Q_i'$ so that 
+    \[
+        \pi_{i-1}(P_i)\subseteq \Int Q_i'.
+    \]
+    Let $\pi_i:=(\pi_{i-1},\pi_i^*):X\rightarrow \mathbb{C}^{n_{i-1}+n}$ and $Q_i:=Q_i'\times Q_i^*$. Then $(P_i,\pi_i)$ is a stone and $(P_{i-1},\pi_{i-1})\subseteq (P_i,\pi_i)$.
+\end{proof}
+
+
+\section{Holomorphical separabililty, holomorphical spreadability and holomorphical convexity}
 \begin{definition}
     Let $X$ be a complex analytic space. We say $X$ is \emph{holomorphically separable} if for any $x,y\in X$ with $x\neq y$, there is $f\in \mathcal{O}_X(X)$ with $f(x)\neq f(y)$.
 \end{definition}
@@ -36,9 +213,6 @@ The statement of this proposition in \cite[Proposition~0.37]{Fis76} is clearly w
         X\rightarrow  \mathbb{C}^{\omega}.  
     \]
     It follows again from \cref{Topology-prop-fiberdiscountablebasisinh} in \nameref{Topology-chap-topology} that $X$ has countable basis.
-
-    \textcolor{red}{Reproduce the proof of the local connectedness of a complex space}
-    %It suffices to apply \cref{Topology-prop-fiberdiscountablebasisinh} in \nameref{Topology-chap-topology}.
 \end{proof}
 
 \iffalse
@@ -50,34 +224,233 @@ The statement of this proposition in \cite[Proposition~0.37]{Fis76} is clearly w
 \end{proof}
 \fi
 
+
 \begin{definition}
-    Let $X$ be a complex analytic space. We say $X$ is \emph{holomorphically convex} if $|X|$ is Hausdorff and for any compact set $K\subseteq X$, the set 
-    \[
-        \hat{K}^X:=\left\{ x\in X: |f(x)|\leq \sup_{y\in K}|f(y)|\text{ for all }f\in \mathcal{O}_X(X) \right\}  
-    \]
-    is compact.
+    Let $X$ be a complex analytic space. We say $X$ is \emph{holomorphically convex} if $|X|$ is Hausdorff and for any compact set $K\subseteq X$, $\hat{K}^X$.
 
     We say $X$ is \emph{weakly holomorphically convex} if for any quasi-compact set $K\subseteq X$, the connected components of $\hat{K}^X$ are all quasi-compact.
 \end{definition}
+
 \begin{proposition}
+    Let $X$ be a holomorphically convex complex analytic space. Then $X^{\Red}$ is holomorphically convex.
+\end{proposition}
+\begin{proof}
+    This follows immediately from the definition.
+\end{proof}
+
+\begin{proposition}\label{prop-holoconvchar}
     Let $X$ be a Hausdorff complex analytic space. Consider the following conditions:
     \begin{enumerate}
         \item $X$ is holomorphically convex;
-        \item For any sequence $x_i\in X$ ($i\in \mathbb{N}$) without accumulation points, there is $f\in \mathcal{O}_X(X)$ such that $|f(x_i)|$ is unbounded.
+        \item For any sequence $x_i\in X$ ($i\in \mathbb{Z}_{>0}$) without accumulation points, there is $f\in \mathcal{O}_X(X)$ such that $|f(x_i)|$ is unbounded.
     \end{enumerate}
     Then (1) $\implies$ (2). The converse is true if $X$ is Lindelöf.
 \end{proposition}
 \begin{proof}
-    (1) $\implies$ (2):
-    Recall that a complex analytic space is always first countable. For a first countable Hausdorff space, compactness implies sequential compactness.
-
     (2) $\implies$ (1): For a Lindelöf Hausdorff space, sequential compactness implies compactness. 
+
+    (1) $\implies$ (2): 
+    %Recall that a complex analytic space is always first countable. For a first countable Hausdorff space, compactness implies sequential compactness.
 \end{proof}
 
+\begin{corollary}
+    Let $n\in \mathbb{N}$ and $\Omega$ be a domain in $\mathbb{C}^n$. Assume that for each $p\in \partial \Omega$, there is a holomorphic function $f$ on an open neighbourhood $U$ of $\bar{\Omega}$ such that $f(p)=0$ and $f$ is non-zero on $\Omega$. Then $\Omega$ is holomorphically convex.
+\end{corollary}
+\begin{proof}
+    Let $x_i\in \Omega$ ($i\in \mathbb{Z}_{>0}$) be a sequence without accumulation points in $\Omega$. We need to construct $f\in \mathcal{O}_{\Omega}(\Omega)$ such that $(|f(x_i)|)_{i\in \mathbb{Z}_{>0}}$ is unbounded. This is clear if $x_i$ itself is unbounded. Assume that $x_i$ is bounded. Then up to passing to a subsequence, we may assume that $x_i\to p\in \partial \Omega$ as $i\to\infty$. The inverse of the function $f$ in our assumption of the corollary works.
+\end{proof}
+
+
+
+\section{Stein spaces}
+
+
 \begin{definition}
-    Let $X$ be a complex analytic space. We say $X$ is \emph{Stein} if it is holomorphically separable and holomorphically convex.
+    Let $X$ be a complex analytic space and $P$ be a closed subset of $X$. We say $P$ is a \emph{Stein set} in $X$ if for any coherent $\mathcal{O}_U$-module $\mathcal{F}$ for some open neighbourhood $U$ of $P$ in $X$, we have
+    \[
+        H^i(P,\mathcal{F})=0\quad \text{for all }i\in \mathbb{Z}_{>0}.  
+    \]
+
+    A \emph{coherent $\mathcal{O}_P$-module} is a coherent $\mathcal{O}_U$-module for some open neighbourhood $U$ of $P$ in $X$. Two coherent $\mathcal{O}_P$-modules are isomorphic if there is a small enough open neighbourhood $V$ of $P$ in $X$ such that they are isomorphic when restricted to $V$. In particular, $\mathcal{O}_P$ denotes the coherent $\mathcal{O}_P$-module defined by $\mathcal{O}_X$ on $X$.
+    
+    The germ-wise notions obviously make sense for coherent $\mathcal{O}_P$-modules.
 \end{definition}
 
+The given condition is usually known as \emph{Cartan's Theorem~B}. It implies \emph{Cartan's Theorem~A}:
+\begin{thm}[Cartan's Theorem~A]\label{thm-CartanA}
+    Let $X$ be a complex analytic space and $P$ be a Stein set in $X$. Let $\mathcal{F}$ be a coherent $\mathcal{O}_U$-module for some open neighbourhood $U$ of $P$ in $X$. Then $H^0(P,\mathcal{F})$ generates $\mathcal{F}_x$ for each $x\in P$.
+\end{thm}
+\begin{proof}
+    Fix $x\in P$. Let $\mathcal{M}$ be the coherent ideal sheaf on $U$ consisting of holomorphic functions vanishing at $x$. Then $\mathcal{F}\mathcal{M}$ is a coherent $\mathcal{O}_U$-module. It follows from Theorem~B that
+    \[
+        H^0(P,\mathcal{F})\rightarrow H^0(P,\mathcal{F}/\mathcal{F}\mathcal{M})
+    \]   
+    is surjective. Note that we can identify this map with the natural map
+    \[
+        H^0(P,\mathcal{F})\rightarrow   \mathcal{F}_x/\mathfrak{m}_x \mathcal{F}_x.
+    \]
+
+    Let $e_1,\ldots,e_m$ be a basis of $\mathcal{F}_x/\mathfrak{m}_x \mathcal{F}_x$. Lift them to $s_1,\ldots,s_m\in H^0(P,\mathcal{F})$. By Nakayama's lemma, $s_{1x},\ldots,s_{mx}$ generate the $\mathcal{O}_{X,x}$-module $\mathcal{F}_x$.
+\end{proof}
+
+
+\begin{corollary}
+    Let $X$ be a complex analytic space and $P$ be a quasi-compact Stein set in $X$.  Let $\mathcal{F}$ be a coherent $\mathcal{O}_P$-module.
+    Then there is $n\in \mathbb{Z}_{>0}$ and an epimorphism
+    \[
+        \mathcal{O}_P^n\rightarrow \mathcal{F}.  
+    \]
+\end{corollary}
+\begin{proof}
+    By \cref{thm-CartanA}, we can find an open covering $\{U_i\}_{i\in I}$ of $P$ such that there are homomorphisms
+    \[
+        h_i:\mathcal{O}_P^{n_i}\rightarrow \mathcal{F}  
+    \]
+    for some $n_i\in \mathbb{Z}_{>0}$, which is surjective on $U_i$ for each $i\in I$. By the quasi-compactness of $P$, we may assume that $I$ is a finite set. Then it suffices to set $n=\sum_{i\in I}n_i$ and consider the epimorphism $\mathcal{O}_P^n\rightarrow \mathcal{F}$ induced by the $h_i$'s.
+\end{proof}
+
+\begin{thm}
+    Let $X$ be a compact analytic space and $P\subseteq X$ be a set with the following properties:
+    \begin{enumerate}
+        \item there is an open neighbourhood $U$ of $P$ in $X$, a domain $V$ in $\mathbb{C}^m$ for some $m\in \mathbb{N}$ and a finite holomorphic morphism $\tau:U\rightarrow V$;
+        \item There exists a compact tube in $\mathbb{C}^m$ contained in $V$ such that $P=\tau^{-1}(Q)$.
+    \end{enumerate}
+    Then $P$ is a compact Stein set in $X$.
+\end{thm}
+\begin{proof}
+    As $P=\tau^{-1}(Q)$ and $\tau$ is proper, we see that $P$ is compact.
+    
+    It remains to show that $P$ is a Stein set in $X$. Let $\mathcal{F}$ be a coherent $\mathcal{O}_P$-module.
+
+    \textbf{Step~1}. We first reduce to the case where $\mathcal{F}$ is defined by a coherent $\mathcal{O}_U$-module.
+
+    Take an open neighbourhood $U'$ of $P$ in $X$ contained in $U$ such that $\mathcal{F}$ is defined by a coherent $\mathcal{O}_{U'}$-module. By \cref{Topology-lma-opennhfiberclosedmap} in \nameref{Topology-chap-topology}, we can take an open neighbourhood $V'$ of $Q$ in $V$ such that $\tau^{-1}(V')\subseteq U'$. The restriction of $\tau$ to $\tau^{-1}(V')\rightarrow V'$ is again finite.
+
+    \textbf{Step~2}. By Leray spectral sequence,
+    \[
+        H^i(P,\mathcal{F})\cong H^i(Q,(\tau|_P)_*\mathcal{F})
+    \]
+    for all $i\geq 0$. By \cref{Morphisms-cor-finitepushcoh}  in \nameref{Morphisms-chap-morphismscomplex}, $(\tau|_P)_*\mathcal{F}$ is a coherent $\mathcal{O}_Q$-module, so we are reduced to show that $Q$ is a Stein set in $\mathbb{C}^m$, which is well-known.
+\end{proof}
+
+
+
+
+\begin{definition}\label{def-Steinexhaus}
+    Let $X$ be a Hausdorff complex analytic space and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. 
+    A \emph{Stein exhaustion of $X$ relative to $\mathcal{F}$} is a compact exhaustion $(P_i)_{i\in \mathbb{Z}_{>0}}$ such that the following conditions are satisfied:
+    \begin{enumerate}
+        \item  $P_i$ is a Stein set in $X$ for each $i\in \mathbb{Z}_{>0}$;
+        \item the $\mathbb{C}$-vector space $H^0(P_i,\mathcal{F})$ admits a semi-norm $|\bullet|_i$ such that the restriction map 
+        \[
+            H^0(X,\mathcal{F})\rightarrow H^0(P_i,\mathcal{F})
+        \] 
+        has dense image with respect to the topological defined by $|\bullet|_i$ for each $i\in \mathbb{Z}_{>0}$;
+        \item The restriction map
+            \[
+                H^0(P_{i+1},\mathcal{F})\rightarrow H^0(P_i,\mathcal{F})
+            \]
+            is bounded for each $i\in \mathbb{Z}_{>0}$;
+        \item Let $i\in \mathbb{Z}_{\geq 2}$. Suppose that $(s_j)_{j\in \mathbb{Z}_{>0}}$ is a Cauchy sequence in $H^0(P_i,\mathcal{F})$, then the restricted sequence $s_j|_{P_{i-1}}$ has a limit in $H^0(P_{i-1},\mathcal{F})$;
+        \item Let $i\in \mathbb{Z}_{\geq 2}$. If $s\in H^0(P_i,\mathcal{F})$ and $|s|_i=0$, then $s|_{P_{i-1}}=0$.
+    \end{enumerate}
+
+    A \emph{Stein exhaustion of $X$} is a compact exhaustion of $X$ that is a Stein exhaustion of $X$ relative to any coherent $\mathcal{O}_X$-module.
+\end{definition}
+
+\begin{thm}
+    Let $X$ be a Hausdorff complex analytic space and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Assume that $(P_i)_{i\in \mathbb{Z}_{>0}}$ is a Stein exhaustion of $X$ relative to $\mathcal{F}$. Then
+    \[
+        H^q(X,\mathcal{F})=0\quad \text{for any }q\in \mathbb{Z}_{>0}.  
+    \]
+\end{thm}
+\begin{proof}
+    When $q\geq 2$, this follows from the general facts proved in \cref{Topology-lma-exhaustioncoh} in \nameref{Topology-chap-topology}. We will assume that $q=1$.
+
+    We may assume that $X$ is connected.
+    First observe that $X$ is necessarily paracompact. This follows from \cref{Topology-prop-paracptrefinement} in \nameref{Topology-chap-topology}. In particular, we can take a flabby resolution
+    \[
+        0\rightarrow \mathcal{F}\rightarrow \mathcal{G}^0\rightarrow \mathcal{G}^1\rightarrow \cdots.  
+    \]
+    Taking global sections, we get a complex
+    \[
+        0\rightarrow H^0(X,\mathcal{F})\xrightarrow{i} H^0(X,\mathcal{G}^0)\xrightarrow{d_0} H^0(X,\mathcal{G}^1)\xrightarrow{d_1}H^0(X,\mathcal{G}^2)\xrightarrow{d_2} \cdots.  
+    \]
+    We need to show that $\ker d_1=\Img d_0$. Let $\alpha\in \ker d_1$. We need to construct $\beta\in H^0(X,\mathcal{G}^0)$ with $d_0 \beta=\alpha$.
+
+    We take semi-norms $|\bullet|_i$ on $H^0(P_i,\mathcal{F})$ for each $i\in \mathbb{Z}_{>0}$ satisfying the conditions in \cref{def-Steinexhaus}. We may furthermore assume that the restriction $H^0(P_{i+1},\mathcal{F})\rightarrow H^0(P_i,\mathcal{F})$ is a contraction for each $i\in \mathbb{Z}_{>0}$.
+
+    For each $j\in \mathbb{Z}_{\geq 2}$, we will construct $\beta_j\in H^0(P_j,\mathcal{G}^0)$ and $\delta_j\in H^0(P_{j-1},\mathcal{F})$ such that
+    \begin{enumerate}
+        \item $(d_0|_{P_j})\beta_j=\alpha|_{P_j}$;
+        \item $(\beta_{j+1}+\delta_{j+1})|_{P_{j-1}}=(\beta_{j}+\delta_{j})|_{P_{j-1}}$.
+    \end{enumerate}
+    It suffices to take $\beta\in H^0(X,\mathcal{G}^0)$ as the section defined by the $\beta_j+\delta_j$'s.
+
+    We first construct $\beta_j$. Choose a sequence $\beta_j'\in H^0(P_j,\mathcal{G}^0)$ with 
+    \[
+        (d_0|_{P_j})\beta_j'=\alpha|_{P_j}  
+    \]
+    for each $j\in \mathbb{Z}_{>0}$. This is possible because $P_j$ is Stein. We define $\beta_j$ satisfying Condition~(1) for $j\in \mathbb{Z}_{>0}$ inductively. We begin with $\beta_1=\beta_1'$. Assume that $\beta_1,\ldots,\beta_j$ have been constructed. Let
+    \[
+        \gamma_j':=\beta'_{j+1}|_{P_j}-\beta_j. 
+    \]
+    Then
+    \[
+        (d_0|_{P_j})\gamma_j'=0.        
+    \]
+     It follows that $\gamma_j'\in H^0(P_j,\mathcal{F})$. Take $\gamma_j\in H^0(X,\mathcal{F})$ with 
+    \[
+        |\gamma_j'-\gamma_j|_{P_j}|_j\leq 2^{-j}.  
+    \]
+    Define
+    \[
+        \beta_{j+1}=\beta'_{j+1}-\gamma_i|_{P_{j+1}}. 
+    \]
+    Then clearly $\beta_{j+1}$ satisfies (1).
+
+    Next we construct the sequence $\delta_j$.
+
+    We observe that for each $j\in \mathbb{Z}_{>0}$,
+    \[
+        \left|\beta_{j+1}|_{P_j}-\beta_j  \right|_j\leq 2^{-j}.
+    \]
+    Let
+    \[
+        s^j_{k}:=\beta_{j+k}|_{P_j}-\beta_j  \in H^0(P_j,\mathcal{F})
+    \]
+    for all $j\in \mathbb{Z}_{>0}$ and $k\in \mathbb{N}$.
+    By definition,
+    \[
+        s^j_k-s^{j+1}_{k-1}|_{P_j}  =\beta_{j+1}|_{P_j}-\beta_j
+    \]
+    for all $j\in \mathbb{Z}_{>0}$ and $k\in \mathbb{Z}_{>0}$.
+
+    We claim that $(s^j_k|_{P_{j-1}})_k$ converges in $H^0(P_{j-1},\mathcal{F})$ as $k\to\infty$. 
+    By our assumption, it suffices to show that $(s^j_k)_k$ is a Cauchy sequence in $H^0(P_j,\mathcal{F})$ for each $j\in \mathbb{Z}_{>1}$.
+    We first compute
+    \[
+        \left|\beta_{j+l}|_{P_j}-\beta_{j+l-1}|_{P_j}\right|_j\leq   \left|\beta_{j+l}|_{P_{j+l-1}}-\beta_{j+l-1}\right|_{j+l-1}\leq 2^{1-j-l}
+    \]
+    for all $l\in \mathbb{Z}_{>0}$ and $j\in \mathbb{Z}_{>0}$. As a consequence for $k'>k\geq 1$, we have
+    \[
+        |s^j_k-s^j_{k'}|_j\leq \sum_{l=k+1}^k 2^{1-j-l}\leq 2^{1-j+k}.  
+    \]
+    So we conclude our claim.
+
+    Let $\delta_j$ be the limit of $s^j_k|_{P_{j-1}}$ as $k\to\infty$ for each $j\in \mathbb{Z}_{\geq 2}$. 
+    Then
+    \[
+        \lim_{k\to\infty}\left(s^j_k-s^{j+1}_{k-1}\right)|_{P_{j-1}}=\left(\delta_j-\delta_{j+1}\right)|_{P_{j-1}}  
+    \]
+    for each $j\in \mathbb{Z}_{\geq 2}$.
+    The desired identity is clear.
+\end{proof}
+
+
+
+
+Recall that compact exhaustion is defined in \cref{Topology-def-exhaustion} in \nameref{Topology-chap-topology}.
 \begin{thm}
     Let $X$ be a complex analytic space such that $X^{\Red}$ is Stein and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Then
     \begin{enumerate}

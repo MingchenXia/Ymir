@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  2 JAN 2023 16:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  6 JAN 2023 13:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -908,19 +908,19 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 51.
 Package xr Warning: 
 No file Introduction.aux
 LABELS NOT IMPORTED.
- on input line 342.
+ on input line 344.
 
 (Introduction.tex)
 (Introduction.aux)
 No file Introduction.aux.
-Package xr Info: IMPORTING LABELS FROM Topology-Bornology.aux on input line 343.
+Package xr Info: IMPORTING LABELS FROM Topology-Bornology.aux on input line 345.
 (Topology-Bornology.tex)
 (Topology-Bornology.aux)
 
 Package xr Warning: 
 No file Banach-Rings.aux
 LABELS NOT IMPORTED.
- on input line 344.
+ on input line 346.
 
 (Banach-Rings.tex)
 (Banach-Rings.aux)
@@ -929,7 +929,7 @@ No file Banach-Rings.aux.
 Package xr Warning: 
 No file Commutative-Algebra.aux
 LABELS NOT IMPORTED.
- on input line 345.
+ on input line 347.
 
 (Commutative-Algebra.tex)
 (Commutative-Algebra.aux)
@@ -938,7 +938,7 @@ No file Commutative-Algebra.aux.
 Package xr Warning: 
 No file Local-Algebras.aux
 LABELS NOT IMPORTED.
- on input line 349.
+ on input line 351.
 
 (Local-Algebras.tex)
 (Local-Algebras.aux)
@@ -947,7 +947,7 @@ No file Local-Algebras.aux.
 Package xr Warning: 
 No file Complex-Analytic-Spaces.aux
 LABELS NOT IMPORTED.
- on input line 350.
+ on input line 352.
 
 (Complex-Analytic-Spaces.tex)
 (Complex-Analytic-Spaces.aux)
@@ -956,38 +956,62 @@ No file Complex-Analytic-Spaces.aux.
 Package xr Warning: 
 No file Constructions-Complex-Spaces.aux
 LABELS NOT IMPORTED.
- on input line 351.
+ on input line 353.
 
 (Constructions-Complex-Spaces.tex)
 (Constructions-Complex-Spaces.aux)
 No file Constructions-Complex-Spaces.aux.
-Package xr Info: IMPORTING LABELS FROM Properties-Complex-Spaces.aux on input line 352.
+Package xr Info: IMPORTING LABELS FROM Properties-Complex-Spaces.aux on input line 354.
 (Properties-Complex-Spaces.tex)
 (Properties-Complex-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Morphisms-Complex-Spaces.aux on input line 354.
+
+Package xr Warning: 
+No file Morphisms-Complex-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 356.
+
 (Morphisms-Complex-Spaces.tex)
 (Morphisms-Complex-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Analytic-Sets.aux on input line 355.
+No file Morphisms-Complex-Spaces.aux.
+
+Package xr Warning: 
+No file Analytic-Sets.aux
+LABELS NOT IMPORTED.
+ on input line 357.
+
 (Analytic-Sets.tex)
 (Analytic-Sets.aux)
-Package xr Info: IMPORTING LABELS FROM Global-Properties-Complex-Spaces.aux on input line 356.
+No file Analytic-Sets.aux.
+Package xr Info: IMPORTING LABELS FROM Global-Properties-Complex-Spaces.aux on input line 358.
 (Global-Properties-Complex-Spaces.tex)
 (Global-Properties-Complex-Spaces.aux)
 
 Package xr Warning: 
 No file Affinoid-Algebras.aux
 LABELS NOT IMPORTED.
- on input line 359.
+ on input line 361.
 
 (Affinoid-Algebras.tex)
 (Affinoid-Algebras.aux)
 No file Affinoid-Algebras.aux.
-Package xr Info: IMPORTING LABELS FROM Berkovich-Analytic-Spaces.aux on input line 360.
+
+Package xr Warning: 
+No file Berkovich-Analytic-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 362.
+
 (Berkovich-Analytic-Spaces.tex)
 (Berkovich-Analytic-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Properties-Berkovich-Spaces.aux on input line 361.
+No file Berkovich-Analytic-Spaces.aux.
+
+Package xr Warning: 
+No file Properties-Berkovich-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 363.
+
 (Properties-Berkovich-Spaces.tex)
 (Properties-Berkovich-Spaces.aux)
+No file Properties-Berkovich-Spaces.aux.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1139,9 +1163,11 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [5] [6] [7] [8] [9] [10]
+ [5] [6] [7] [8] [9] [10] [11] [12
+
+]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 282.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 330.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1149,26 +1175,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [11
-
-] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.aux)
+ [13] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.aux)
 Package logreq Info: Writing requests to 'Topology-Bornology.run.xml'.
 \openout1 = `Topology-Bornology.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37139 strings out of 478994
- 698938 string characters out of 5858185
- 1546182 words of memory out of 5000000
- 53641 multiletter control sequences out of 15000+600000
+ 36969 strings out of 478994
+ 692671 string characters out of 5858185
+ 1537729 words of memory out of 5000000
+ 53462 multiletter control sequences out of 15000+600000
  457554 words of font info for 144 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,7n,133p,795b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.pdf (11 pages, 267676 bytes).
+ 132i,7n,133p,1149b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.pdf (13 pages, 276134 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 243 compressed objects within 3 object streams
- 71 named destinations out of 1000 (max. 500000)
- 21069 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 306 PDF objects out of 1000 (max. 8388607)
+ 270 compressed objects within 3 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 21077 words of extra memory for PDF output out of 24883 (max. 10000000)
 

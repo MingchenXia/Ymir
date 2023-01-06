@@ -550,22 +550,76 @@ This result is proved in \cite{Car52}.
  \section{Flat morphisms}
  The notion of flat morphisms is defined for all ringed spaces. See \cite[\href{https://stacks.math.columbia.edu/tag/02N2}{Tag 02N2}]{stacks-project}. We will make use of these notions directly.
 
- \begin{proposition}
+ \begin{proposition}\label{prop-flatnesschar}
     Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. Write $y=f(x)$. Let $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Then the folloiwng are equivalent:
     \begin{enumerate}
-        \item $\mathcal{F}$ is flat at $x$ with respect to $f$;
+        \item $\mathcal{F}$ is $f$-flat at $x$;
         \item $\mathcal{F}_x$ is a flat $\mathcal{O}_{Y,y}$-module;
         \item For all $n\in \mathbb{N}$, 
             \[
                 \hat{\mathcal{F}}_x\otimes_{\hat{\mathcal{O}}_{Y,y}}\hat{\mathcal{O}}_{Y,y}/\hat{\mathfrak{m}}_y^{n+1}  
             \]
-            is a flat $\hat{\mathcal{O}}_{Y,y}/\mathfrak{m}_y^{n+1}$-module.
+            is a flat $\hat{\mathcal{O}}_{Y,y}/\mathfrak{m}_y^{n+1}$-module;
+        \item We have
+            \[
+                \Tor_1^{\mathcal{O}_{Y,y}}(\mathbb{C},\mathcal{F}_x)=0.
+            \]
     \end{enumerate}
  \end{proposition}
+ \begin{proof}
+(1) $\Leftrightarrow$ (2): This is the definition of flatness.
 
- 
+(2) $\Leftrightarrow$ (3): This follows from \cite[\href{https://stacks.math.columbia.edu/tag/0523}{Tag 0523}]{stacks-project}.
+
+(2) $\Leftrightarrow$ (4): This follows from \cite[\href{https://stacks.math.columbia.edu/tag/00MK}{Tag 00MK}]{stacks-project}.
+ \end{proof}
+
+
+\begin{proposition}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Let $g:Y'\rightarrow Y$ be a morphism of complex analytic spaces and consider the following Cartesian diagram:
+    \[
+        \begin{tikzcd}
+            X' \arrow[r,"g'"] \arrow[d, "f'"] \arrow[rd, "\square", phantom] & X \arrow[d, "f"] \\
+            Y' \arrow[r,"g"]                                                & Y               
+        \end{tikzcd}.  
+    \]
+    Consider a point $x'\in X'$ defined by $x\in X$ and $y'\in Y'$ with common image $y\in Y$. 
+    \begin{enumerate}
+        \item If $\mathcal{F}$ is $f$-flat at $x$, then $g'^{*}\mathcal{F}$ is $f'$-flat at $x'$.
+        \item If $g'^*\mathcal{F}$ is $f'$-flat at $x'$ and $\hat{\mathcal{O}}_{Y,y}\rightarrow \hat{\mathcal{O}}_{Y',y'}$ is injective, then $\mathcal{F}$ is $f$-flat at $x$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (1) Recall that
+    \[
+        \hat{\mathcal{O}}_{X',x'}\cn   \hat{\mathcal{O}}_{X,x}\hat{\otimes}_{\hat{\mathcal{O}}_{Y,y}}\hat{\mathcal{O}}_{Y',y'}.
+    \]
+    Let $n\in \mathbb{N}$, we then find
+    \[
+        \hat{\mathcal{O}}_{X',x'}/\hat{\mathfrak{m}}_{y'}^{n+1}\hat{\mathcal{O}}_{X',x'}\cn   \hat{\mathcal{O}}_{X,x}\hat{\otimes}_{\hat{\mathcal{O}}_{Y,y}}\left(\hat{\mathcal{O}}_{Y',y'}/\hat{\mathfrak{m}}_{y'}^{n+1}\right)\cn  \hat{\mathcal{O}}_{X,x}\otimes_{\hat{\mathcal{O}}_{Y,y}}\left(\hat{\mathcal{O}}_{Y',y'}/\hat{\mathfrak{m}}_{y'}^{n+1}\right).
+    \]
+    By \cref{prop-flatnesschar}, $\hat{\mathcal{F}}_x\otimes_{\hat{\mathcal{O}}_{Y,y}}\hat{\mathcal{O}}_{Y,y}/\hat{\mathfrak{m}}_y^{n+1$} is a flat $\mathcal{O}_{Y',y'}$-module for each $n\in \mathbb{N}$. By \cref{prop-flatnesschar} again, $\mathcal{F}$ is $f'$-flat at $x'$.
+
+    (2) For each $n\in \mathbb{N}$, let $I_n$ be the inverse image of $\hat{\mathfrak{m}}_{y'}^{n+1}$ with respect to $\hat{\mathcal{O}}_{Y,y}\rightarrow \hat{\mathcal{O}}_{Y',y'}$. As the latter map is assumed to be injective, by Krull's intersection theorem, we find that
+    \[
+        \bigcap_{n\in \mathbb{N}}I_n=0.  
+    \]
+    It follows that the $I_n$'s form a basis at $0$ in $\hat{\mathcal{O}}_{Y,y}$. By \cref{prop-flatnesschar}, we are reduced to show that $\hat{\mathcal{F}}_x/I_n\hat{\mathcal{F}}_x$ is flat over $\hat{\mathcal{O}}_{Y,y}/I_n$. But by \cref{prop-flatnesschar} again, we know that its base change along $\hat{\mathcal{O}}_{Y,y}/\hat{\mathcal{O}}_{Y',y'}/\hat{\mathfrak{m}}_{y'}^{n+1}$. So we are reduced to the well-known algebraic case.
+\end{proof}
+
+
+
 \printbibliography
 \end{document}
+
+
+
+
+
+
+
+
+
 
 
 \iffalse

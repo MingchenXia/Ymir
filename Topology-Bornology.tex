@@ -173,6 +173,18 @@ Here the properness is defined as in \cite[\href{https://stacks.math.columbia.ed
     Conversely, assume that $f$ is proper with discrete fibers. By \cite[\href{https://stacks.math.columbia.edu/tag/005R}{Tag 005R}]{stacks-project} again, the fibers of $f$ are compact and hence finite. The map $f$ is closed and separated as it is proper. So (1) follows.
 \end{proof}
 
+\begin{lemma}\label{lma-qcpttoHausdorffproper}
+    Let $f:X\rightarrow Y$ be a continuous map between topologically spaces. Assume that $Y$ is Hausdorff.
+    Let $W$ be an open relative quasi-compact subset of $X$, then the map
+    \[
+        W\setminus f^{-1}(f(\partial W))\rightarrow Y\setminus f(\partial W)
+    \]
+    induced by $f$ is proper.
+\end{lemma}
+\begin{proof}
+    It is well-known that $f|_{\bar{W}}:\bar{W}\rightarrow Y$, as a continuous map from a quasi-compact space to a Hausdorff space is proper. The map in the lemma is a base change of the given map, hence is also proper. We apply \cite[\href{https://stacks.math.columbia.edu/tag/005R}{Tag 005R}]{stacks-project}.
+\end{proof}
+
 \begin{proposition}
     Let $f:X\rightarrow Y$ be a topologically finite map of topological spaces. Then for any subspace $V\subseteq Y$, the map $f^{-1}(V)\rightarrow V$ induced by $f$ is topologically finite.
 \end{proposition}
@@ -223,6 +235,42 @@ The existence of $U_1',\ldots,U_n'$ is guaranteed by \cite[\href{https://stacks.
 \end{corollary}
 \begin{proof}
     This follows immediately from \cref{thm-localstructuretopfinitemap}.
+\end{proof}
+
+
+\section{Exhaustion}
+
+\begin{definition}\label{def-exhaustion}
+    Let $X$ be a Hausdorff space. A \emph{compact exhaustion} of $X$ is a sequence of compact sets $(K_i)_{i\in \mathbb{Z}_{>0}}$ in $X$ such that 
+    \begin{enumerate}
+        \item For each $i\in \mathbb{Z}_{>0}$,
+            \[
+                K_i\subseteq \Int K_{i+1};  
+            \]
+        \item 
+            \[
+                X=\bigcup_{i=1}^{\infty}K_i.
+            \]
+    \end{enumerate}
+\end{definition}
+
+\begin{proposition}
+    Let $X$ be a locally compact Hausdorff topological space admitting a countable basis, then $X$ admits a compact exhaustion.
+\end{proposition}
+Note that in the book of Grauret--Remmert, the condition of being Hausdorff is omitted.
+\begin{proof}
+    \textcolor{red}{Include a proof}
+\end{proof}
+
+\begin{lemma}\label{lma-exhaustioncoh}
+    Let $X$ be a paracompact Hausdorff topological space and $\mathcal{F}$ be a sheaf of Abelian groups on $X$. Let $q\in \mathbb{Z}_{\geq 2}$ and $(K_i)_{i\in \mathbb{Z}_{>0}}$ be a compact exhaustion of $X$ with the following property:
+    \[
+        H^{q-1}(K_i,\mathcal{F})=H^q(K_i,\mathcal{F})=0  
+    \]
+    for all $i\in \mathbb{Z}_{>0}$. Then $H^q(X,\mathcal{F})=0$.
+\end{lemma}
+\begin{proof}
+    Grauert--Remmert P103.
 \end{proof}
 
 \section{Maps with discrete fibers}
