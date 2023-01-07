@@ -160,12 +160,12 @@ In general, $P^0\subseteq \Int P$, but they can be different.
         \item $X$ is weakly holomorphically convex;
         \item For any compact subset $K\subseteq X$, there is an open set $W\subseteq X$ such that $\hat{K}^X\cap W$ is compact.
     \end{enumerate}
-    Then (1) $\implies$ (2). If $X$ admits a countable basis, then (2) $\implies$ (1).
+    Then (1) $\implies$ (2). If $X$ is Lindelöf, then (2) $\implies$ (1).
 \end{thm}
 \begin{proof}
     (1) $\implies$ (2): It suffices to observe that $K\subseteq P_j^0$ when $j$ is large enough and apply \cref{thm-fixedcptsethullloccpt}.
 
-    Assume that $X$ has a countable basis.
+    Assume that $X$ is Lindelöf.
     (2) $\implies$ (1): 
     Let $(K_i)$ a compact exhaustion of $X$. We construcct the stones $(P_i,\pi_i)_{i\in \mathbb{Z}_{>0}}$ so that 
     \[
@@ -222,12 +222,11 @@ Here we regard $f$ as a continuous function $X\rightarrow \mathbb{C}$. In partic
         \item $X$ is holomorphically convex;
         \item For any sequence $x_i\in X$ ($i\in \mathbb{Z}_{>0}$) without accumulation points, there is $f\in \mathcal{O}_X(X)$ such that $|f(x_i)|$ is unbounded.
     \end{enumerate}
-    Then (1) $\implies$ (2). The converse is true if $X$ is Lindelöf.
+    Then (2) $\implies$ (1) if $X$ is Lindelöf.
 \end{proposition}
 \begin{proof}
     (2) $\implies$ (1): For a Lindelöf Hausdorff space, sequential compactness implies compactness. 
 
-    (1) $\implies$ (2): 
     %Recall that a complex analytic space is always first countable. For a first countable Hausdorff space, compactness implies sequential compactness.
 \end{proof}
 
@@ -337,7 +336,7 @@ The given condition is usually known as \emph{Cartan's Theorem~B}. It implies \e
     A \emph{Stein exhaustion of $X$} is a compact exhaustion of $X$ that is a Stein exhaustion of $X$ relative to any coherent $\mathcal{O}_X$-module.
 \end{definition}
 
-\begin{thm}
+\begin{thm}\label{thm-Steinexhcohvan}
     Let $X$ be a Hausdorff complex analytic space and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Assume that $(P_i)_{i\in \mathbb{Z}_{>0}}$ is a Stein exhaustion of $X$ relative to $\mathcal{F}$. Then
     \[
         H^q(X,\mathcal{F})=0\quad \text{for any }q\in \mathbb{Z}_{>0}.  
@@ -512,7 +511,7 @@ The statement of this proposition in \cite[Proposition~0.37]{Fis76} is clearly w
 
     We say $X$ is \emph{holomorphically complete} if $X$ is Hausdorff and there is an exhaustion of $X$ by analytic stones.
 \end{definition}
-\begin{thm}
+\begin{thm}\label{thm-holcomchar}
     Let $X$ be a Hausdorff complex analytic space. Then the following are equivalent:
     \begin{enumerate}
         \item $X$ is holomorphically complete;
@@ -553,7 +552,7 @@ We can take $h\in H^0(Q,\mathcal{O}_{\mathbb{C}^n})^l$ and $h_j\in \ker \epsilon
 \end{proof}
 
 
-\begin{lemma}
+\begin{lemma}\label{lma-comptopologies1}
     Let $X$ be a complex analytic space and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module.
 Let $(P,\pi:X\rightarrow \mathbb{C}^n)$ be an analytic block on $X$ with a non-zero associated tube $Q\subseteq \mathbb{C}^n$. Consider the epimorphism of sheaves 
 \[
@@ -595,33 +594,239 @@ for $j\in \mathbb{Z}_{>0}$ are bounded by a constant independent of $j$. Therefo
 is continuous. By open mapping theorem, the map is a homeomorphism.
 \end{proof}
 
+\begin{thm}\label{thm-compseminor2}
+    Let $X$ be a complex analytic space and $(P,\pi)\subseteq (P',\pi')$ be two analytic blocks on $X$ and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module, then the restriction map
+    \[
+        H^0(P',\mathcal{F}) \rightarrow H^0(P,\mathcal{F}) 
+    \]
+    with respect to any good semi-norms.
+\end{thm}
+\begin{proof}
+    We claim that there exists an analytic block $(P_1,\pi)$ such that
+    \[
+        (P,\pi)\subseteq (P_1,\pi)\subseteq (P',\pi').  
+    \]
+    Assume this claim, then we have a decomposition of the restriction map
+    \[
+        H^0(P',\mathcal{F}) \rightarrow H^0(P_1^0,\mathcal{F})\rightarrow H^0(P,\mathcal{F}).
+    \]
+    The first map is continuous if we endow $H^0(P_1^0,\mathcal{F})$ with the topology induced by $\pi'$, the second is continuous if we endow $H^0(P_1^0,\mathcal{F})$ with the topology induced by $\pi$. These topologies are identical by \cref{lma-comptopologies1}.
+    Our assertion follows.
+
+    To argue the claim, let us write $\pi:X\rightarrow \mathbb{C}^n$ and $\pi'=(\pi,\varphi):X\rightarrow \mathbb{C}^n\times \mathbb{C}^m$. Take $q\in \mathbb{C}^m$ with $Q\times\{q\}\subseteq \Int Q'$. Let $Q'':=Q'\cap (\mathbb{C}^n\times \{q\})$ and identify it with a subset of $\mathbb{C}^n$. Let $Q^*$ be the image of $Q'$ under the projection $\mathbb{C}^{n+m}\rightarrow \mathbb{C}^m$. 
+
+    Choose open neighbourhoods $U\subseteq P'^0$, $V\subseteq Q'$ of $P$ and $Q$ respectively such that $\tau:U\rightarrow V$ is finite and $U\cap \pi^{-1}(Q)=P$. Take a tube $Q_1\subseteq \mathbb{C}^n$ such that
+    \[
+        Q\subseteq \Int Q_1\subseteq Q_1\subseteq \Int Q''.  
+    \]
+    Now it suffices to set $P_1:=\pi^{-1}(Q_1)\cap U$.
+\end{proof}
+
+\begin{corollary}\label{cor-convthm}
+    Let $X$ be a complex analytic space and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Let
+    $(P,\pi)\subseteq (P',\pi')$ be analytic blocks in $X$. Then for any Cauchy sequence $(s_j)_{j\in \mathbb{Z}_{>0}}$ in $H^0(P',\mathcal{F})$, the restriction sequence $(s_j|_P)_{j\in \mathbb{Z}_{>0}}$ has a limit in $H^0(P,\mathcal{F})$.
+\end{corollary}
+\begin{proof}
+    Choose an analytic block $(P_1,\pi)$ such that
+    \[
+        (P,\pi)\subseteq (P_1,\pi)\subseteq (P',\pi').  
+    \]
+    The existence of the block $(P_1,\pi)$ is argued in the proof of \cref{thm-compseminor2}. We have a decomposition of the restriction map
+    \[
+        H^0(P',\mathcal{F}) \rightarrow H^0(P_1^0,\mathcal{F})\rightarrow H^0(P,\mathcal{F}).
+    \]
+    The first map is bounded, so the images of $(s_j)_{j\in \mathbb{Z}_{>0}}$ in $H^0(P_1^0,\mathcal{F})$ is a Cauchy sequence. As we have shown that $H^0(P_1^0,\mathcal{F})$ is a Fréchet space in \cref{lma-comptopologies1}, the sequence converges. As the second map is also continuous, it follows that $(s_j|_P)_{j\in \mathbb{Z}_{>0}}$ has a limit in $H^0(P,\mathcal{F})$.
+\end{proof}
+
+\begin{lemma}\label{lma-denseimage}
+    Let $X$ be a complex analytic space and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Let
+    $(P,\pi:X\rightarrow  \mathbb{C}^n)\subseteq (P',\pi':X\rightarrow \mathbb{C}^n\times \mathbb{C}^m)$ be analytic blocks in $X$ with tubes $Q$ and $Q'$. Choose $U'\subseteq X$ and $V'\subseteq \mathbb{C}^{n+m}$ of $P'$ and $Q'$ respectively as in \cref{def-anablock} such that $U'\rightarrow V'$ is finite. Set
+    \[
+        Q_1:=(Q\times \mathbb{C}^m)\cap Q',\quad P_1=\pi'^{-1}(Q_1)\cap U'.  
+    \]
+    Then $(P_1.\pi')$ is an analytic block in $X$ with block $Q_1$ and 
+    $H^0(P',\mathcal{F})\rightarrow H^0(P_1,\mathcal{F})$ has dense image. Here we take an epsimorphism 
+    \[
+        \mathcal{O}_{\mathbb{C}^{n+m}}^{l'}|_{Q'}\rightarrow \left(\tau' (\mathcal{F}|_{U'}) \right)_{Q'} 
+    \]
+    and it induces 
+    \[
+        \mathcal{O}_{\mathbb{C}^{n+m}}^{l'}|_{Q_1}\rightarrow \left(\tau' (\mathcal{F}|_{U'}) \right)_{Q_1},
+    \]
+    which in turn induces a good semi-norm on $H^0(P_1,\mathcal{F})$. This is the semi-norm we are using.
+
+    Moreover, there is a compact set $\tilde{P}\subseteq X$ disjoint from $P$ such that
+    \[
+        P_1=P\cup \tilde{P}.  
+    \]
+\end{lemma}
+\begin{proof}
+    We have a commutative diagram in the category of topological linear spaces:
+    \[
+        \begin{tikzcd}
+            {H^0(Q',\mathcal{O}_{\mathbb{C}^{m+n}}^l)} \arrow[r] \arrow[d] & {H^0(P',\mathcal{F})} \arrow[d] \\
+            {H^0(Q_1,\mathcal{O}_{\mathbb{C}^{m+n}}^l)} \arrow[r]          & {H^0(P_1,\mathcal{F})}         
+        \end{tikzcd}.
+    \]
+    In order to show that the right vertical map has dense image, it is enough to show that the map on the left-hand side has dense images, which is the Runge approximation.
+
+    For the last assertion, as $Q_1=(Q\times \mathbb{C}^m)\cap Q'$, we have
+    \[
+        P_1=\pi^{-1}(Q)\cap P'.  
+    \]
+    As $P\subseteq P'$ and $P\subseteq \pi^{-1}(Q)$, it follows that $P\subseteq P_1$. But there is an open neighbourhood $U$ of $P$ in $X$ so that $P=\pi^{-1}(Q)\cap U$. Hence, $\tilde{P}=P_1\setminus P$ is compact.
+\end{proof}
+
+\begin{thm}[Runge approximation]\label{thm-Rungapp}
+    Let $X$ be a complex analytic space and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Let
+    $(P,\pi:X\rightarrow  \mathbb{C}^n)\subseteq (P',\pi':X\rightarrow \mathbb{C}^n\times \mathbb{C}^m)$ be analytic blocks in $X$ with tubes $Q$ and $Q'$. Then the map 
+    \[
+        H^0(P',\mathcal{F})\rightarrow H^0(P,\mathcal{F})  
+    \]
+    has dense image with respect to a good semi-norm.
+\end{thm}
+\begin{proof}
+    We use the notations of \cref{lma-denseimage}. We extend $Q,Q_1,Q'$ to tubes $\hat{Q},\hat{Q}_1,\hat{Q}'$ and get $\hat{P},\hat{P_1},\hat{P'}$ corresponding to the original $P,P_1,P'$. The restriction map
+    \[
+        H^0(\hat{P_1}^0,\mathcal{F})\rightarrow H^0(\hat{P}^0,\mathcal{F})
+    \]
+    is a continuous morphism of Fréchet spaces.
+
+    Let $s\in H^0(P,\mathcal{F})$ be a section. Lift $s$ to $s_1\in H^0(P_1,\mathcal{F})$. Up to a suitable modification of the tubes, we can extend $s_1$ to $\hat{s_1}\in H^0(\hat{P_1},\mathcal{F})$. Then there is a sequence $(s^j\in H^0(\hat{P'},\mathcal{F}))_{j\in \mathbb{Z}_{>0}}$ such that $s^j|_{\hat{P_1}}\rightarrow \hat{s_1}$ as $j\to\infty$ in $H^0(\hat{P_1},\mathcal{F})$. It follows that $s^j|_{\hat{P}^0}\to \hat{s}_1|_{\hat{P}^0}$ in $H^0(\hat{P}^0,\mathcal{F})$. It follows that $s^j|_P\to s_1|_P=s$ sa $j\to\infty$.
+\end{proof}
+
+\begin{thm}\label{thm-AllanalybloexhisStein}
+    Let $X$ be a complex analytic space.
+    Each exhaustion of $X$ by analytic blocks is a Stein exhaustion.
+\end{thm}
+\begin{proof}
+    Let $(P_i,\pi_i)_{i\in \mathbb{Z}_{>0}}$ be an exhaustion of $X$ by analytic blocks. Take a coherent $\mathcal{O}_X$-module $\mathcal{F}$.
+
+    We verify the conditions in \cref{def-Steinexhaus}.
+    By \cref{thm-blocktostein}, $P_i$ is a compact Stein set for each $i\in \mathbb{Z}_{>0}$. So (1) is satisfied.
+    
+    On $H^0(P_i,\mathcal{F})$, we fix a good semi-norm $|\bullet|_i$ for each $i\in \mathbb{Z}_{>0}$. We may assume that $H^0(P_{i+1},\mathcal{F})\rightarrow H^0(P_i,\mathcal{F})$ is contractive for $i\in \mathbb{Z}_{>0}$.
+
+    We have already verified (3), (4) and (5).
+
+    We verify (2). It suffices to show that
+    \[
+        H^0(X,\mathcal{F})\rightarrow H^0(P_1,\mathcal{F})  
+    \]
+    has dense image. Let $s\in H^0(P_1,\mathcal{F})$ and $\delta>0$. By \cref{thm-Rungapp}, we can find $s_i\in H^0(P_i,\mathcal{F})$ for $i\in \mathbb{Z}_{>0}$ such that $s_1=s$, 
+    \[
+        \left| s_{i+1}|_{P_i}-s_i \right|_i<2^{-i}\delta
+    \]
+    for $i\in \mathbb{Z}_{>0}$. By \cref{cor-convthm}, $(s_j|_{P_i})_{j\in \mathbb{Z}_{>0}}$ has a limit $t_i\in H^0(P_i,\mathcal{F})$ for each $i\in \mathbb{Z}_{>0}$. As $H^0(P_{i+1},\mathcal{F})\rightarrow H^0(P_{i},\mathcal{F})$ is continuous for $i\in \mathbb{Z}_{>0}$, the $t_{i+1}|_{P_i}$'s are compatible and defines $t\in H^0(X,\mathcal{F})$. It is easy to see that $|t|_{P_1}-s|_1<\delta$. Thus condition (2) is satisfied.
+\end{proof}
 
 
 \section{Stein spaces}
 
-Recall that compact exhaustion is defined in \cref{Topology-def-exhaustion} in \nameref{Topology-chap-topology}.
-\begin{thm}
-    Let $X$ be a complex analytic space such that $X^{\Red}$ is Stein and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Then
+\begin{definition}
+    Let $X$ be a complex analytic space. We say that $X$ is a Stein space if $X$ is a Stein set in $X$ and $|X|$ is paracompact and Hausdorff.
+\end{definition}
+
+\begin{definition}
+    Let $X$ be a complex analytic space. An \emph{effective formal $0$-cycle} on $X$ consists of 
     \begin{enumerate}
-        \item for each $x\in X$, the set 
-            \[
-                \{s_x:s\in H^0(X,\mathcal{F})\}
-            \]
-            generates $\mathcal{F}_x$ over $\mathcal{O}_{X,x}$;
-        \item for each $k\geq 1$,
-            \[
-                H^k(X,\mathcal{F})=0.
-            \]
+        \item A disrete set $D\subseteq X$;
+        \item An integer $n_x$ for each $x\in D$.
     \end{enumerate}
-\end{thm}
-The two assertions are known as Cartan Theorem~A and Cartan Theorem~B.
+    We write the effective formal $0$-cycle as $\sum_{x\in D}n_x x$. We define the \emph{ideal sheaf} $\mathcal{O}_X(-\sum_{x\in D}n_x x)$ of an effective formal $0$-cycle as $\sum_{x\in D}n_x x$ as 
+    \[
+        \mathcal{O}_X(-\sum_{x\in D}n_x x)(U)=\left\{f\in H^0(U,\mathcal{O}_X): f_x\in \mathfrak{m}_x^{n_x}\text{ for each }x\in D\cap U \right\}
+    \]
+    for each open subset $U\subseteq X$.
+\end{definition}
+Observe that $\mathcal{O}_X(-\sum_{x\in D}n_x x)$ is a coherent $\mathcal{O}_X$-module. In fact, the problem is local, so we may assume that $D$ is finite. In this case, $D$ is an effective $0$-cycle and the result is clear.
 
-
+\begin{lemma}\label{lma-localassigngerm}
+    Let $X$ be a complex analytic space and $\sum_{x\in D}n_x x$ be an effective formal $0$-cycle on $X$. Assume that 
+    \[
+        H^0(X,\mathcal{O}_X)\rightarrow   H^0(X,\mathcal{O}_X/\mathcal{O}_X(-\sum_{x\in D}n_x x))
+    \]
+    is surjective. Suppose that for each $x\in D$, we assign $g_x\in \mathcal{O}_{X,x}$. Then there is $f\in H^0(X,\mathcal{O}_X)$ such that
+    \[
+        f_x-g_x\in \mathfrak{m}_x^{n_x}  
+    \]
+    for all $x\in D$.
+\end{lemma}
 \begin{proof}
-    
+    We define $s\in H^0(X,\mathcal{O}_X/\mathcal{O}_X(-\sum_{x\in D}n_x x))$ by $s_x=g_x$ for each $x\in D$. Lift $s$ to $f\in H^0(X,\mathcal{O}_X)$. Then $f$ clearly satisfies the required properties.
 \end{proof}
 
-\cite{stacks-project}
+\begin{proposition}\label{prop-assignvalue}
+    Let $X$ be a complex analytic space. Assume that $H^1(X,\mathcal{I})=0$ for each coherent ideal sheaf $\mathcal{I}$ on $X$. Let $(x_i\in X)_{i\in \mathbb{Z}_{>0}}$ be a sequence without accumulation points and $(c_i)_{i\in \mathbb{Z}_{>0}}$ be a sequence in $\mathbb{C}$. Then there is $f\in \mathcal{O}_X(X)$ with $f(x_i)=c_i$ for each $i\in \mathbb{Z}_{>0}$.
+\end{proposition}
+\begin{proof}
+    Consider the formal cycle $\sum_{i=1}^{\infty} x_i$. Apply \cref{lma-localassigngerm} with $g_{x_i}=c_i$.
+\end{proof}
+
+
+\begin{thm}\label{thm-Steinchar}
+    Let $X$ be a complex analytic space. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is a Stein space;
+        \item For any coherent ideal sheaf $\mathcal{I}$ on $X$, we have $H^1(X,\mathcal{I})=0$;
+        \item $X$ is holomorphically separable and holomorphically convex;
+        \item $X$ is holomorphically spreadable and weakly holomorphically convex; %and for each $x\in X$, there are $e=\dim_{\mathbb{C}}\mathfrak{m}_X/\mathfrak{m}_X^2$ functions $f_1,\ldots,f_e\in H^0(X,\mathcal{O}_X)$ such that $f_{1x},\ldots,f_{ex}$ generate $\mathfrak{m}_x$ as an $\mathcal{O}_{X,x}$-module;
+        \item $X$ is holomorphically complete.
+    \end{enumerate}
+\end{thm}
+\begin{proof}
+    (1) $\implies$ (2): This is trivial.
+
+    (2) $\implies$ (3): $X$ is holomorphicaly convex by \cref{prop-assignvalue} and \cref{prop-holoconvchar}.
+    $X$ is holomorphically separable by \cref{prop-assignvalue}.
+
+    (3) $\implies$ (4): $X$ is holomorphically spreadable and weakly holomorphically convex by definition. %Let $h_1,\ldots,h_e\in \mathfrak{m}_x$ be some generators of $\mathfrak{m}_x$, whose existence is guaranteed by Nakayama's lemma. Applying  \cref{lma-localassigngerm} to the cycle $2x$, we get $f_1,\ldots,f_e\in H^0(X,\mathcal{O}_X)$ with $f_{ix}-h_i\in\mathfrak{m}_x^2$ for each $i=1,\ldots,e$. Then $f_1,\ldots,f_e$ satisfy the required properties.
+
+    (4) $\implies$ (5): This follows from \cref{thm-holcomchar} and \cref{prop-cptanainspreadablefinite}.
+
+    (5) $\implies$ (1):This follows from \cref{thm-AllanalybloexhisStein} and \cref{thm-Steinexhcohvan}.
+\end{proof}
+
+\begin{corollary}
+    Let $X$ be a complex analytic space. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is Stein;
+        \item $X^{\Red}$ is Stein;
+        \item The normalization $\overline{X^{\Red}}$ is Stein.
+    \end{enumerate}
+\end{corollary}
+The equivalence of (1) and  (2) is due to Grauert PIHES. The difficult direction (3) implies  (2) is claimed in Grauert--Remmert, where the proof is nonsense. We follow the argument of Narasimhan here.
+
+\begin{proof}
+    (1) $\implies$ (2): This follows from Leray's spectral sequence.
+
+    (2) $\implies$ (1): By \cref{thm-Steinchar}(3), it suffices to show that the restriction map $H^0(X,\mathcal{O}_X)\rightarrow H^0(X^{\Red},\mathcal{O}_{X^{\Red}})$ is surjective.
+
+    Let $\mathcal{I}$ be the nilradical of $\mathcal{O}_X$. It is coherent by Cartan--Oka theorem.  For each $i\in \mathbb{Z}_{>0}$, we have a short exact sequence
+    \[
+        0\rightarrow \mathcal{I}^i/\mathcal{I}^{i+1}\rightarrow \mathcal{O}_X/\mathcal{I}^{i+1}\rightarrow \mathcal{O}_X/\mathcal{I}^{i}\rightarrow 0.
+    \]
+    As $\mathcal{I}^i/\mathcal{I}^{i+1}$ is a coherent $\mathcal{O}_{X^{\Red}}$-module, we conclude that 
+    \[
+        \varphi_i: H^0(X,\mathcal{O}_X/\mathcal{I}^{i+1})\rightarrow H^0(X,\mathcal{O}_X/\mathcal{I}^{i})  
+    \]
+    is surjective for each  $i\in \mathbb{Z}_{>0}$. Let $h_1\in H^0(X,\mathcal{O}_X/\mathcal{I})=H^0(X^{\Red},\mathcal{O}_{X^{\Red}})$. We want to lift it to $h\in H^0(X,\mathcal{O}_X)$.
+
+    We successively lift $h_1$ to $h_i\in H^0(X,\mathcal{O}_X/\mathcal{I}^i)$ for each $i\in \mathbb{Z}_{>0}$. Let $X_i=X\setminus \Supp \mathcal{I}^i$ of each $i\in \mathbb{Z}_{>0}$. Then clearly
+    \[
+        X=\bigcup_{i=1}^{\infty}X_i.  
+    \] 
+    It is easy to see that 
+    \[
+        h_{i+1}|_{X_i}=h_i|_{X_i}  
+    \]
+    for each $i\in \mathbb{Z}_{>0}$. It follows that we can glue the $h_i|_{X_i}$'s
+    to $h\in H^0(X,\mathcal{O}_X)$ which restricts to $h_1$.
+
+    (2) $\implies$ (3): This follows from Leray's spectral sequence as $\overline{X^{\Red}}\rightarrow X^{\Red}$ is finite by \cref{PropertyComplex-prop-reducedspacenormalizationchar} in \nameref{PropertyComplex-chap-propcomplex}.
+
+    (3) $\implies$ (2): \textcolor{red}{Reproduce Narasimhan's work}
+\end{proof}
 
 \printbibliography
 \end{document}

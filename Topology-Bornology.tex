@@ -241,7 +241,7 @@ The existence of $U_1',\ldots,U_n'$ is guaranteed by \cite[\href{https://stacks.
 \section{Exhaustion}
 
 \begin{definition}\label{def-exhaustion}
-    Let $X$ be a Hausdorff space. A \emph{compact exhaustion} of $X$ is a sequence of compact sets $(K_i)_{i\in \mathbb{Z}_{>0}}$ in $X$ such that 
+    Let $X$ be a space. A \emph{quasi-compact exhaustion}  of $X$ is a sequence of quasi-compact sets $(K_i)_{i\in \mathbb{Z}_{>0}}$ in $X$ such that 
     \begin{enumerate}
         \item For each $i\in \mathbb{Z}_{>0}$,
             \[
@@ -252,7 +252,20 @@ The existence of $U_1',\ldots,U_n'$ is guaranteed by \cite[\href{https://stacks.
                 X=\bigcup_{i=1}^{\infty}K_i.
             \]
     \end{enumerate}
+    When $X$ is Hausdorff, we also say $(K_i)_{i\in \mathbb{Z}_{>0}}$ is a \emph{compact exhaustion}.
 \end{definition}
+
+\begin{proposition}\label{prop-qcptexhaustion}
+    Let $X$ be a topological space. Then the following are equivalent:
+    \begin{enumerate}
+        \item there is a quasi-compact exhaustion of $X$;
+        \item $X$ is $\sigma$-compact and weakly locally compact;
+        \item $X$ is Lindelöf and weakly locally compact.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    \textcolor{red}{To be included.}
+\end{proof}
 
 \begin{proposition}
     Let $X$ be a locally compact Hausdorff topological space admitting a countable basis, then $X$ admits a compact exhaustion.
