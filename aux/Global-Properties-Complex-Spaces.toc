@@ -9,7 +9,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{3}{Stones}}{5}{section.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{4}{Holomorphical separabble spaces}}{8}{section.0.4}%
+\contentsline {section}{\tocsection {}{4}{Holomorphical separable spaces}}{8}{section.0.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{5}{Stein sets}}{9}{section.0.5}%
 \defcounter {refsection}{0}\relax 
