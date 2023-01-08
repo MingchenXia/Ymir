@@ -1,0 +1,15 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'aux/Morphisms-Complex-Spaces.blg'
+[101] biber-darwin:340> INFO - === Sun Jan  8, 2023, 14:31:37
+[122] Biber.pm:415> INFO - Reading 'aux/Morphisms-Complex-Spaces.bcf'
+[293] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
+[339] Biber.pm:4340> INFO - Processing section 0
+[353] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
+[357] bibtex.pm:1689> INFO - LaTeX decoding ...
+[463] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
+[518] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[518] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[518] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[518] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[526] bbl.pm:654> INFO - Writing 'aux/Morphisms-Complex-Spaces.bbl' with encoding 'UTF-8'
+[527] bbl.pm:757> INFO - Output to aux/Morphisms-Complex-Spaces.bbl

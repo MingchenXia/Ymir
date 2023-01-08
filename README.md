@@ -1,12 +1,12 @@
-
+# Ymir
 
 ## Introduction
+
 This is intended to be a [Stacks Project](https://stacks.math.columbia.edu) for complex analytic spaces and non-Archimedean analytic spaces.
 
 Ymir is a giant from Nordic mythology, who gave birth to a male and a female from his armpits. For us, Ymir contains two subclasses: a complex analytic part and a rigid analytic/Berkovich analytic part.
 
 We will freely make use of all results from Stacks Project.
- 
 
 ## Current structure
 
@@ -39,14 +39,13 @@ We will freely make use of all results from Stacks Project.
 
 - [Morphisms of complex analytic spaces](aux/Morphism-Complex-Spaces.pdf)
 
-> To do, include Grauert's direct image theorem. Include flat, separated, proper, smooth morphisms, etc.
+> To do, include Grauert's direct image theorem. Include separated, proper, smooth morphisms, etc.
 
 - [Analytic sets](aux/Analytic-Sets.pdf)
 
 - [Global properties of complex analytic spaces](aux/Global-Properties-Complex-Spaces.pdf)
 
-> To do, include the proofs of Cartan's Theorem A and Theorem B.
-
+> To do, reproduce Kiehl's proof that the flat locus is co-analytic.
 
 ### Part 3 Non-Archimedean analytic spaces
 
@@ -57,3 +56,23 @@ We will freely make use of all results from Stacks Project.
 - [Berkovich analytic spaces](aux/Berkovich-Analytic-Spaces.pdf)
 
 > To do: reproduce the first half of Berkovich93 PIHES. Include the theory of rigid analytic spaces.
+
+## Unwritten parts
+
+- GAGA (complex and non-Archimedean)
+
+- morphisms (Berkovich)
+
+- properties (Berkovich)
+
+- étale cohomology (Berkovich)
+
+- descent (complex and Berkovich)
+
+- differential calculus (complex)
+
+- Resolution of singularities (complex)
+
+- birational maps (complex)
+
+- vanishing theorems (complex)

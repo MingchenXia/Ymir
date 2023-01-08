@@ -15,6 +15,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{6}{Maps with discrete fibers}}{10}{section.0.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{7}{Bornology}}{10}{section.0.7}%
+\contentsline {section}{\tocsection {}{7}{Bornology}}{11}{section.0.7}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{13}{chapter*.2}%

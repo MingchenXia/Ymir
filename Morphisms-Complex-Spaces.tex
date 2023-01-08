@@ -266,6 +266,9 @@ The left-hand side makes sense because $f(X)$ is an analytic set in $Y$ by \cref
     We make an induction on $d:=\dim_x X$. There is nothing to prove when $d=0$. Assume that $d\geq 1$. By \cref{lma-liftingactive}, we can choose a non-zero divisor $g_y\in \mathfrak{m}_{Y,g_y}$ such that $f^{\#}_x(g_y)$ is a non-zero divisor in $\mathcal{O}_{X,x}$. Up to shrinking $Y$, we may assume that $g$ spreads to $g\in \mathcal{O}_Y(Y)$. It suffices to apply our inductive hypothesis to $W(f^{\#}_x(g_y))\subseteq W(g_y)$.
 \end{proof}
 
+
+
+
 \begin{corollary}\label{cor-finiteopensurjthinsetpre}
     Let $f:X\rightarrow Y$ be a finite open surjective morphism of complex analytic spaces. Assume that $A$ is a thin subset of $X$ of order $k\in \mathbb{Z}_{>0}$, then $f(A)$ is a thin subset of $Y$ of order $k$.
 \end{corollary}
@@ -285,7 +288,7 @@ The left-hand side makes sense because $f(X)$ is an analytic set in $Y$ by \cref
 \end{proof}
 
 \begin{proposition}\label{prop-finitemorphismopen}
-    Let $f:X\rightarrow Y$ be a finite morphism of complex analytic spaces and $x\in X$. Assume that $Y$ is irreducible at $f(x)$. Assume that $\dim_x X=\dim_{f(x)}Y$, then $f$ is open at $x$.
+    Let $f:X\rightarrow Y$ be a finite morphism of complex analytic spaces and $x\in X$. Assume that $Y$ is unibranch at $f(x)$. Assume that $\dim_x X=\dim_{f(x)}Y$, then $f$ is open at $x$.
 \end{proposition}
 \begin{proof}
     We may assume that $X$ and $Y$ are both reduced. Let $y=f(x)$. By \cref{prop-finiteatpointcond}, we may assume that $\{x\}=f^{-1}(y)$. By \cref{cor-finitepushcoh}, $f(X)$ is an analytic set in $Y$. By \cref{thm-finitemapdim},
@@ -310,7 +313,7 @@ The corollary fails if $Y$ is not unibranch.
     The statement is local on $Y$, so we may assume that $Y$ is an open neighbourhood of $0$ in $\mathbb{C}^n$ for some $n\in \mathbb{N}$. By \cref{prop-finiteatpointcond}, we may assume that $\pi^{-1}\{0\}$ consists of a single point and $X$ is a closed analytic subspace of a domain $V$ in $\mathbb{C}^d$ for some $d\in \mathbb{N}$. Replacing $X$ by the graph of $f$, we may assume that $X$ is a closed analytic subspace of $V\times Y$ and $f$ is the restriction of the projection map $V\times Y\rightarrow V$.  In this case, the result follows from the local description lemma. \textcolor{red}{Reproduce CAS p72!} 
 \end{proof}
 \begin{corollary}\label{cor-localdesequidimspace}
-    Let $X$ be a equidimensional complex analytic space of dimension $d$ and $x\in X$. Then there is an open neighbourhood $U$ of $x$ in $X$ and a connected domain $V\in \mathbb{C}^d$  such that there is a branched covering $U\rightarrow V$.
+    Let $X$ be an equidimensional complex analytic space of dimension $d$ and $x\in X$. Then there is an open neighbourhood $U$ of $x$ in $X$ and a connected domain $V\in \mathbb{C}^d$  such that there is a branched covering $U\rightarrow V$.
 
     In fact, given any system of parameters $f_1,\ldots,f_d\in \mathcal{O}_{X,x}$, we can define sch a morphism sending $x$ to $0$ and the corresponding local ring homomorphism at $x$ is 
     \[
@@ -330,8 +333,8 @@ The corollary fails if $Y$ is not unibranch.
     We may assume that $X$ is reduced and $f(x)=0$. Then $f$ is a non-zero divisor in $\mathcal{O}_{X,x}$. We can find a system of parameters $f,g_1,\ldots,g_{n-1}$ with $n=\dim_x X$ such that $f,g_1,\ldots,g_{n-1}$ induce a branched covering $X\rightarrow V$ sending $x$ to $0$ after shrinking $X$, where $V$ is an open neighbourhood of $0$ in $\mathbb{C}^n$. This follows from \cref{cor-localdesequidimspace}. As the branched covering is open by \cref{prop-finitemorphismopen}, we conclude.
 \end{proof}
 
-\begin{thm}
-    Let $f:X\rightarrow Y$ be an open, finite surjective morphism of reduced complex analytic spaces, then $f$ is a branched covering.
+\begin{thm}\label{thm-finiteopensurjbranchedcov}
+    Let $f:X\rightarrow Y$ be a finite open surjective morphism of reduced complex analytic spaces, then $f$ is a branched covering.
 \end{thm}
 \begin{proof}
     Let $x\in X$ and $y=f(x)$. As $f$ is open, it suffices to find open neighbourhoods $U$ of $x$ in $X$ and $V$ of $y$ in $Y$ such that the morphism $U\rightarrow V$ induced by $f$ is a branched covering. 
@@ -345,7 +348,9 @@ The corollary fails if $Y$ is not unibranch.
     By \cref{cor-localdesequidimspace}, up to shrinking $V$, we may assume that there is a branched covering $\eta_i:f(X_i)\rightarrow V_i$, where $V_i$ is a connected domain in $\mathbb{C}^{n_i}$ for $i=1,\ldots,s$. By \cref{lma-finiteopenbranch}, $\eta_i\circ f|_{X_i}$ is a branched covering for $i=1,\ldots,s$.  It follows that $X_i\rightarrow \pi(X_i)$ is a branched covering for $i=1,\ldots,s$. This readily implies that $f$ is a branched covering.
 \end{proof}
 
-\begin{definition}
+
+
+\begin{definition}\label{def-charpolmanifold}
     Let $b\in \mathbb{Z}_{>0}$, $f:X\rightarrow Y$ be a $b$-sheeted branched covering with $Y$ being a connected complex manifold. Let $A$ be a thin set in $X$. Take a critical locus $T$ of $f$ containing $f(A)$. 
     
     Consider $g\in \mathcal{O}_X(X\setminus A)$. We define a monic polynomial
@@ -360,7 +365,7 @@ The corollary fails if $Y$ is not unibranch.
 
     If either of the following conditions hold:
     \begin{enumerate}
-        \item $f$ is locally bounded near $A$;
+        \item $g$ is locally bounded near $A$;
         \item $A$ is thin of order $2$ in $Y$.
     \end{enumerate}
     Then $\chi_g$ can be uniquely extended to $\chi_g\in \mathcal{O}_Y(Y)[w]$.
@@ -409,6 +414,7 @@ The function $\Delta_e$ is called the \emph{discriminant} of $e$. We say $e$ is 
 
     By \cref{cor-finiteopensurjthinsetpre}, $f(A)$ is thin in $Y$ and under assumption (2), $f(A)$ is thin of order $2$ in $Y$. Applying \cref{PropertyComplex-thm-Riemannextsmo} in \nameref{PropertyComplex-chap-propcomplex}, we conclude the last assertion.
 \end{proof}
+
 
 
 \begin{corollary}\label{cor-existenceprimi}
@@ -491,6 +497,65 @@ In the traditional terminology, $\Delta_e$ is a \emph{universal denominator} of 
     If not, we can find a continuous function $f:X^{\reg}\rightarrow \{0,1\}$ which is not constant. By \cref{cor-Riemannextnormal}, $f$ can be extended to $g\in \mathcal{O}_X(X)$. This contradicts the fact taht $X$ is connected.
 \end{proof}
 
+\begin{corollary}\label{cor-normirrdimpointequal}
+    Let $X$ be an irreducible complex analytic space and $A$ be an analytic set in $X$. Suppose that there is $x\in A$ with $\dim_x A=\dim_x X$, then $A=X$.
+\end{corollary}
+\begin{proof}
+    We may assume that $X$ is irreducible.
+    By \cref{thm-finitemapdim}, we may assume that $X$ is normal.
+
+    Endow $A$ with the reduced induced structure.
+    As $\dim_x A=\dim_x X$, $\Spec \mathcal{O}_{X,x}=\Spec \mathcal{O}_{A,x}$ has a common irreducible component. By Nullstellensatz, $\Int A$ is non-empty. So $A':=A\setminus X^{\Sing}$ is non-empty and open in $X^{\reg}$. We need to show that $A'=X^{\reg}$, taking closure we then conclude.
+
+    Suppose that $A'\neq X^{\reg}$. Then $\overline{A'}\cap X^{\reg}$ is a non-empty closed in $X^{\reg}$, which is connected by \cref{cor-complthininconnectedconn2}. So 
+    \[
+        \overline{A'}\cap X^{\reg}\neq A',
+    \]
+    as otherwise, $X^{\reg}=(\overline{A'}\cap X^{\reg})\cup (X^{\reg}\setminus A')$. Take $a\in (\overline{A'}\cap X^{\reg})\setminus A'$. Take a connected neighbourhood $U$ of $a$ in $X^{\reg}$ and finitely many holomorphic functions $f_1,\ldots,f_k\in \mathcal{O}_X(U)$ so that $U\cap A=W(f_1,\ldots,f_k)$. As $U\cap A'\neq \emptyset$, $f_1,\ldots,f_k$ vanishes identically in $U$ by Identitätssatz. In particular, $a\in A'$, which is a contradiction.
+\end{proof}
+
+\begin{corollary}\label{cor-liftmorphismtonormalization}
+    Let $f:X\rightarrow Y$ be a morphism of reduced complex analytic spaces. Let $Z\subseteq Y$ be the non-normal locus. Assume that $f^{-1}(Z)$ is nowhere dense in $X$ (for example when $X$ is irreducible and $f$ is surjective), then there is a unique morphism $\bar{f}:\bar{X}\rightarrow \bar{Y}$ such that the following diagram commutes:
+    \[
+        \begin{tikzcd}
+            \bar{X} \arrow[r, "\bar{f}"] \arrow[d] & \bar{Y} \arrow[d] \\
+            X \arrow[r, "f"]                       & Y                
+        \end{tikzcd}.  
+    \]
+\end{corollary}
+Recall that $Z$ is an analytic set in $Y$ by \cref{PropertyComplex-thm-normallocusopen} in \nameref{PropertyComplex-chap-propcomplex}.
+\begin{proof}
+    The uniqueness is clear. Let $Z'$ be the inverse image of $Z$ in $\bar{Y}$ and $Z''$ be the inverse image of $Z$ in $\bar{X}$. By our assumption, $Z''$ is thin in $\bar{X}$. By construction, $\eta:\bar{Y}\setminus Z'\rightarrow Y\setminus Z$ is an isomorphism, so we get a morphism $g:\bar{X}\setminus Z''\rightarrow \bar{Y}\setminus Z'$ completion the commutative diagram
+    \[
+        \begin{tikzcd}
+            \bar{X}\setminus Z'' \arrow[r] \arrow[d] & \bar{Y}\setminus Z' \arrow[d] \\
+            X \arrow[r, "f"]                         & Y                            
+        \end{tikzcd}.  
+    \] 
+    Let $p\in Z''$. We need to extend $g$ to a neighbourhood of $p$. Choose an open neighbourhood $V\subseteq \bar{Y}$ of the preimage of $p$ in $\bar{X}$ which admits a closed immersion into a bounded domain $D\subseteq \mathbb{C}^n$ for some $n\in \mathbb{N}$. There is an open neighbourhood $U\subseteq \bar{X}$ of $p$ such that $g$ maps $U\setminus Z''\rightarrow V$. The induced morphism $U\setminus Z''\rightarrow D$ is given by bounded holomorphic functions in $\mathcal{O}_{U\setminus Z''}(U\setminus Z'')$. By \cref{cor-Riemannextgeneral}, we get an extension $U\rightarrow D$. But this morphism factorizes through $U\rightarrow V$ as $U$ is reduced, we conclude.
+\end{proof}
+
+
+\begin{corollary}\label{cor-irreduciblesetschar}
+    Let $X$ be a complex analytic space. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is irreducible;
+        \item If we write $X=Y_1\cup Y_2$ with $Y_1,Y_2$ being analytic sets in $X$, then $X=Y_1$ or $X=Y_2$.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    We may assume that $X$ is reduced.
+
+    (1) $\implies$ (2): We may assume that $X$ is normal.
+    Suppose $X=Y_1\cup Y_2$ with $Y_1,Y_2$ being analytic sets in $X$. Then $Y_1\cap Y_2$ is not empty, as otherwise, $X$ is not even connected. Let $x\in Y_1\cap Y_2$. We then have $X_x=Y_{1,x}\cup Y_{2,x}$. This contradicts the fact that $\mathcal{O}_{X,x}$ is integral unless $Y_{1,x}\subseteq Y_{2,x}$ or $Y_{1,x}\subseteq Y_{2,x}$, which is impossible by \cref{cor-normirrdimpointequal}.
+
+    (2) $\implies$ (1): Suppose that $X$ is not irreducible. Then the normalization $\bar{X}$ is not connected, say $\bar{X}=Y_1'\cup Y_2'$, where $Y_1,Y_2$ are disjoint clopen sets in $\bar{X}$. Let $\pi:\bar{X}\rightarrow X$ be the normalization morphism. Then
+    \[
+        X=\pi(Y_1')\cup \pi(Y_2').  
+    \]
+    By our assumption, either  $X=\pi(Y_1')$ or $X=\pi(Y_2')$. We assume that the former holds. From \cref{PropertyComplex-prop-reducedspacenormalizationchar} in \nameref{PropertyComplex-chap-propcomplex}, we conclude that $Y_1'=\bar{X}$, which is a contradiction.
+\end{proof}
+
 
 \begin{corollary}
     Let $X$ be a connected complex analytic space. Then $X$ is path-connected.
@@ -504,7 +569,73 @@ In the traditional terminology, $\Delta_e$ is a \emph{universal denominator} of 
 \end{proof}
 
 
-We given an alternative characterization of $\overline{\mathcal{O}}_X$.
+\begin{corollary}\label{cor-irrimplyequid}
+    Let $X$ be an irreducible complex analytic space. Then there is $n\in \mathbb{N}$ such that $X$ is equidimensional of dimension $n$.
+\end{corollary}
+\begin{proof}
+    We may assume that $X$ is reduced. By \cref{thm-finitemapdim}, we can even assume that $X$ is normal. Then $X$ is connected. In particular, $X^{\reg}$ is connected by \cref{cor-complthininconnectedconn2}. But $X^{\reg}$ is then equidimensional of some dimension $n\in \mathbb{N}$. If $\dim_x X\neq n$ for some $x\in X^{\Sing}$, by \cref{PropertyComplex-thm-equidimlocusopen} in \nameref{PropertyComplex-chap-propcomplex}, $\dim_y X=\dim_x X$ whenever $y$ is close to $x$. This is a contradiction.
+\end{proof}
+
+
+
+\begin{corollary}\label{cor-finitesurjbranchedcov2}
+    Let $f:X\rightarrow Y$ be a finite surjective morphism between irreducible reduced complex analytic spaces. Then $f$ is a branched covering.
+\end{corollary}
+\begin{proof}
+    By \cref{cor-liftmorphismtonormalization}, we have an obvious commutative diagram:
+    \[
+        \begin{tikzcd}
+            \bar{X} \arrow[d] \arrow[r, "\bar{f}"] & \bar{Y} \arrow[d] \\
+            X \arrow[r, "f"]                       & Y                
+        \end{tikzcd}.  
+    \]
+    If suffices to show that $\bar{f}$ is a branched covering, so we may assume that $X$ and $Y$ are normal.
+
+    By \cref{prop-finitemorphismopen} and \cref{cor-irrimplyequid}, $f$ is open. So it suffices to apply \cref{thm-finiteopensurjbranchedcov}.
+\end{proof}
+
+\begin{corollary}\label{cor-branchedcovcondition}
+    Let $f:X\rightarrow Y$ be a finite surjective morphism between reduced complex analytic spaces. Then the following are equivalent:
+    \begin{enumerate}
+        \item $f$ is a branched covering;
+        \item The image of each irreducible component of $X$ has an interior point;
+        \item The image of each irreducible component of $X$ is an irreducible component of $Y$.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    (1) $\implies$ (2): Let $T\subseteq Y$ be a critical locus of $f$. Then $f^{-1}(T)$ is thin in $X$. Each irreducible component $X'$ of $X$ meets $X\setminus f^{-1}(T)$. It follows that $f(X'\setminus f^{-1(T)})$ is non-empty and open in $Y$.
+
+    (2) $\implies$ (3): Let $X'$ be an irreducible component of $X$. Then $f(X)$ is an analytic set in $Y$. It is clearly irreducible. So $f(X)$ is contained in an irreducible component $Y'$ of $Y$. But as $f(X')$ has an interior point, we find that $f(X')=Y'$ by \cref{cor-normirrdimpointequal}.
+
+    (3) $\implies$ (1): The assertion is local, we may assume that the number of irreducible components of $X$ is finite. Let $X_1,\ldots,X_s$ be the irreducible components of $X$.
+    For each $i=1,\ldots,s$, the induced map $X_i\rightarrow \pi(X_i)$ is finite and hence a branched covering by \cref{cor-finitesurjbranchedcov2}. It is enough to vefity that $\pi^{-1}(\pi(X_i\cap X_j))$ is thin in $X$ for $i,j=1,\ldots,s$ and $i\neq j$. If this fials, this set contains an interior point in $X_k$ for some $k\in \{1,\ldots,s\}$. But then 
+    \[
+        X_k\subseteq \pi^{-1}(\pi(X_i\cap X_j)).  
+    \]
+    It follows that 
+    \[
+        \pi(X_i\cap X_j)\supseteq \pi(X_k).  
+    \]
+    This is impossible as $X_i\cap X_j\cap X_k$ is thin in $X_k$.
+\end{proof}
+
+
+
+\begin{definition}
+    Let $b\in \mathbb{Z}_{>0}$, $f:X\rightarrow Y$ be a $b$-sheeted branched covering with $Y$ being a normal complex analytic space. Take a critical locus $T\subseteq Y$ of $f$ containing $Y^{\Sing}$. 
+    
+    Consider $g\in \mathcal{O}_X(X)$. We define the \emph{characteristic polynomial} $\chi_g\in \mathcal{O}_Y(Y)[w]$ of $g$ (with respect to $f$) as follows: When $Y$ is connected, by \cref{cor-complthininconnectedconn2}, $Y^{\reg}$ is a connected complex manifold. We define $\chi_g\in \mathcal{O}_Y(Y^{\reg})[w]$ as in \cref{def-charpolmanifold}. We then extend $\chi_g$ to $\mathcal{O}_Y(Y^{\reg})[w]$ using \cref{cor-Riemannextnormal}. It is a monic polynomial of degree $b$. When $Y$ is not connected, we just glue the characteristic polynomials defined using each connected components. Then we find a monic polynomial $\chi_g\in \mathcal{O}_Y(Y)[w]$ of degree $b$.
+\end{definition}
+
+
+\begin{proposition}\label{prop-charpolygen}
+    Let $b\in \mathbb{Z}_{>0}$, $f:X\rightarrow Y$ be a $b$-sheeted branched covering with $Y$ being a normal complex analytic space. Let $g\in \mathcal{O}_X(X)$. Let $\chi_g\in \mathcal{O}_Y(Y)[w]$ be the characteristic polynomial of $g$. Then $\chi_g(g)=0$.
+\end{proposition}
+\begin{proof}
+    This follows immediately from \cref{prop-charpoly}.
+\end{proof}
+
+We give an alternative characterization of $\overline{\mathcal{O}}_X$.
 \begin{proposition}
     Let $X$ be a reduced complex analytic space. Then for any open set $U\subseteq X$, 
     \[
@@ -598,7 +729,7 @@ This result is proved in \cite{Car52}.
     \[
         \hat{\mathcal{O}}_{X',x'}/\hat{\mathfrak{m}}_{y'}^{n+1}\hat{\mathcal{O}}_{X',x'}\cn   \hat{\mathcal{O}}_{X,x}\hat{\otimes}_{\hat{\mathcal{O}}_{Y,y}}\left(\hat{\mathcal{O}}_{Y',y'}/\hat{\mathfrak{m}}_{y'}^{n+1}\right)\cn  \hat{\mathcal{O}}_{X,x}\otimes_{\hat{\mathcal{O}}_{Y,y}}\left(\hat{\mathcal{O}}_{Y',y'}/\hat{\mathfrak{m}}_{y'}^{n+1}\right).
     \]
-    By \cref{prop-flatnesschar}, $\hat{\mathcal{F}}_x\otimes_{\hat{\mathcal{O}}_{Y,y}}\hat{\mathcal{O}}_{Y,y}/\hat{\mathfrak{m}}_y^{n+1$} is a flat $\mathcal{O}_{Y',y'}$-module for each $n\in \mathbb{N}$. By \cref{prop-flatnesschar} again, $\mathcal{F}$ is $f'$-flat at $x'$.
+    By \cref{prop-flatnesschar}, $\hat{\mathcal{F}}_x\otimes_{\hat{\mathcal{O}}_{Y,y}}\hat{\mathcal{O}}_{Y,y}/\hat{\mathfrak{m}}_y^{n+1}$ is a flat $\mathcal{O}_{Y',y'}$-module for each $n\in \mathbb{N}$. By \cref{prop-flatnesschar} again, $\mathcal{F}$ is $f'$-flat at $x'$.
 
     (2) For each $n\in \mathbb{N}$, let $I_n$ be the inverse image of $\hat{\mathfrak{m}}_{y'}^{n+1}$ with respect to $\hat{\mathcal{O}}_{Y,y}\rightarrow \hat{\mathcal{O}}_{Y',y'}$. As the latter map is assumed to be injective, by Krull's intersection theorem, we find that
     \[

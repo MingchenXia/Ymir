@@ -47,6 +47,41 @@
       \field{pages}{vii+201}
       \range{pages}{-1}
     \endentry
+    \entry{GR77}{book}{}
+      \name{author}{2}{}{%
+        {{hash=66d7b2881ff63d1d2fa543eb83019171}{%
+           family={Grauert},
+           familyi={G\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f6401451da1f6b4e244e08973bd2f9b7}{%
+           family={Remmert},
+           familyi={R\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag, Berlin-New York}%
+      }
+      \strng{namehash}{02f3802569ea436b8df2d7ae5de04962}
+      \strng{fullhash}{02f3802569ea436b8df2d7ae5de04962}
+      \strng{bibnamehash}{02f3802569ea436b8df2d7ae5de04962}
+      \strng{authorbibnamehash}{02f3802569ea436b8df2d7ae5de04962}
+      \strng{authornamehash}{02f3802569ea436b8df2d7ae5de04962}
+      \strng{authorfullhash}{02f3802569ea436b8df2d7ae5de04962}
+      \field{labelalpha}{GR77}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3-540-08231-*}
+      \field{series}{Grundlehren der Mathematischen Wissenschaften [Fundamental Principles of Mathematical Sciences]}
+      \field{title}{Theorie der {S}teinschen {R}äume}
+      \field{volume}{227}
+      \field{year}{1977}
+      \field{pages}{xx+249}
+      \range{pages}{-1}
+    \endentry
     \entry{Gra55}{article}{}
       \name{author}{1}{}{%
         {{hash=ab12d60a54050ae140c848a7ccecc11c}{%
@@ -61,6 +96,7 @@
       \strng{authorbibnamehash}{ab12d60a54050ae140c848a7ccecc11c}
       \strng{authornamehash}{ab12d60a54050ae140c848a7ccecc11c}
       \strng{authorfullhash}{ab12d60a54050ae140c848a7ccecc11c}
+      \field{extraname}{1}
       \field{labelalpha}{Gra55}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
@@ -81,6 +117,40 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1007/BF01362369
+      \endverb
+    \endentry
+    \entry{Gra60}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ab12d60a54050ae140c848a7ccecc11c}{%
+           family={Grauert},
+           familyi={G\bibinitperiod},
+           given={Hans},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab12d60a54050ae140c848a7ccecc11c}
+      \strng{fullhash}{ab12d60a54050ae140c848a7ccecc11c}
+      \strng{bibnamehash}{ab12d60a54050ae140c848a7ccecc11c}
+      \strng{authorbibnamehash}{ab12d60a54050ae140c848a7ccecc11c}
+      \strng{authornamehash}{ab12d60a54050ae140c848a7ccecc11c}
+      \strng{authorfullhash}{ab12d60a54050ae140c848a7ccecc11c}
+      \field{extraname}{2}
+      \field{labelalpha}{Gra60}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0073-8301}
+      \field{journaltitle}{Inst. Hautes Études Sci. Publ. Math.}
+      \field{number}{5}
+      \field{title}{Ein {T}heorem der analytischen {G}arbentheorie und die {M}odulräume komplexer {S}trukturen}
+      \field{year}{1960}
+      \field{pages}{64}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb http://www.numdam.org/item?id=PMIHES_1960__5__64_0
+      \endverb
+      \verb{url}
+      \verb http://www.numdam.org/item?id=PMIHES_1960__5__64_0
       \endverb
     \endentry
     \entry{Jur59}{article}{}
@@ -118,6 +188,33 @@
       \verb{url}
       \verb https://doi.org/10.1007/BF01344153
       \endverb
+    \endentry
+    \entry{Nar62}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9cf9e9c9d1213b51d3073ccab47e6ea2}{%
+           family={Narasimhan},
+           familyi={N\bibinitperiod},
+           given={Raghavan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{9cf9e9c9d1213b51d3073ccab47e6ea2}
+      \strng{fullhash}{9cf9e9c9d1213b51d3073ccab47e6ea2}
+      \strng{bibnamehash}{9cf9e9c9d1213b51d3073ccab47e6ea2}
+      \strng{authorbibnamehash}{9cf9e9c9d1213b51d3073ccab47e6ea2}
+      \strng{authornamehash}{9cf9e9c9d1213b51d3073ccab47e6ea2}
+      \strng{authorfullhash}{9cf9e9c9d1213b51d3073ccab47e6ea2}
+      \field{labelalpha}{Nar62}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0391-173X}
+      \field{journaltitle}{Ann. Scuola Norm. Sup. Pisa Cl. Sci. (3)}
+      \field{title}{A note on {S}tein spaces and their normalisations}
+      \field{volume}{16}
+      \field{year}{1962}
+      \field{pages}{327\bibrangedash 333}
+      \range{pages}{7}
     \endentry
   \enddatalist
 \endrefsection

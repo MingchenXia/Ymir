@@ -764,14 +764,17 @@ Observe that $\mathcal{O}_X(-\sum_{x\in D}n_x x)$ is a coherent $\mathcal{O}_X$-
 \end{proof}
 
 
+
+
 \begin{thm}\label{thm-Steinchar}
-    Let $X$ be a complex analytic space. Then the following are equivalent:
+    Let $X$ be a paracompact Hausdorff complex analytic space. Then the following are equivalent:
     \begin{enumerate}
         \item $X$ is a Stein space;
         \item For any coherent ideal sheaf $\mathcal{I}$ on $X$, we have $H^1(X,\mathcal{I})=0$;
         \item $X$ is holomorphically separable and holomorphically convex;
         \item $X$ is holomorphically spreadable and weakly holomorphically convex; %and for each $x\in X$, there are $e=\dim_{\mathbb{C}}\mathfrak{m}_X/\mathfrak{m}_X^2$ functions $f_1,\ldots,f_e\in H^0(X,\mathcal{O}_X)$ such that $f_{1x},\ldots,f_{ex}$ generate $\mathfrak{m}_x$ as an $\mathcal{O}_{X,x}$-module;
-        \item $X$ is holomorphically complete.
+        \item $X$ is holomorphically complete;
+        \item $X$ is weakly holomorphically convex and every compact analytic subset of $X$ is finite.
     \end{enumerate}
 \end{thm}
 \begin{proof}
@@ -784,18 +787,74 @@ Observe that $\mathcal{O}_X(-\sum_{x\in D}n_x x)$ is a coherent $\mathcal{O}_X$-
 
     (4) $\implies$ (5): This follows from \cref{thm-holcomchar} and \cref{prop-cptanainspreadablefinite}.
 
-    (5) $\implies$ (1):This follows from \cref{thm-AllanalybloexhisStein} and \cref{thm-Steinexhcohvan}.
+    (5) $\implies$ (1): This follows from \cref{thm-AllanalybloexhisStein} and \cref{thm-Steinexhcohvan}.
+
+    (5) $\Leftrightarrow$ (6): This is just \cref{thm-holcomchar}.
 \end{proof}
 
-\begin{corollary}
-    Let $X$ be a complex analytic space. Then the following are equivalent:
+\begin{lemma}\label{lma-branchedcovstein}
+    Let $b\in \mathbb{Z}_{>0}$ and  $f:X\rightarrow Y$ be a $b$-sheeted branched covering of complex analytic spaces. Assume that $Y$ is normal, paracompact and Hausdorff. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is Stein;
+        \item $Y$ is Stein.
+    \end{enumerate}
+\end{lemma}
+The corresponding statement in Narasimhan is not correct. It is not clear to me if this holds for a general finite surjective morphism between paracompact normal Hausdorff complex analytic spaces.
+\begin{proof}
+    First observe that $X$ is necessarily Hausdorff.
+    We may assume that $Y$ is connected. Then $Y$ is $\sigma$-compact and hence $X$ is $\sigma$-compact. It follows that $X$ is paracompact by \cref{Topology-prop-paracptrefinement} in \nameref{Topology-chap-topology}.
+
+    (2) $\implies$ (1): This follows from Leray's spectral sequence.
+
+    (1) $\implies$ (2): We may assume that $X$ is connected. 
+    By \cref{thm-Steinchar}, it suffices to verify that $Y$ is holomorphically convex and every analytic set in $Y$ is finite.
+    
+    Let $(y_i\in Y)_{i\in \mathbb{Z}_{>0}}$ be a sequence without accumulation points. We can lift the sequence to $(x_i\in X)_{i\in \mathbb{Z}_{>0}}$ without accumulation points. By \cref{prop-assignvalue}, we can find $g\in \mathcal{O}_X(X)$ such that $(|g(x_i)|)_{i\in \mathbb{Z}_{>0}}$ is unbounded. Let $\chi_g\in \mathcal{O}_Y(Y)[w]$ be the characteristic polynomial of $g$. As $\chi_g(g)=0$, it follows that at least one coefficient of $\chi_g$ is unbounded along $(y_i)_{i\in \mathbb{Z}_{>0}}$. By \cref{prop-holoconvchar}, we conclude that $Y$ is holomorphically convex.
+
+    Let $T$ be an analytic set in $Y$. Then so is $f^{-1}(T)$. As $X$ is Stein, $f^{-1}(T)$ is finite, hence so is $T$.
+\end{proof}
+\begin{corollary}\label{cor-finitemorphismStein2}
+    Let $f:X\rightarrow Y$ be a finite surjective morphism of normal complex analytic spaces with $Y$ is paracompact and Hausdorff. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is Stein;
+        \item $Y$ is Stein.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    We may assume that $Y$ is connected. Again, $X$ is paracompact and Hausdorff as in the proof of \cref{lma-branchedcovstein}.
+
+    (2) $\implies$ (1): This follows from Leray's spectral sequence.
+
+    (1) $\implies$ (2): Observe that $Y$ is irreducible, so there is a connected component $X'$ of $X$ so that the restriction $X'\rightarrow Y$ is surjective. Then $X'\rightarrow Y$ is a branched covering by \cref{Morphisms-cor-branchedcovcondition} in  \nameref{Morphisms-chap-morphismscomplex}. But $X'$ is Stein as it is a connected component of a Stein space. We conclude using \cref{lma-branchedcovstein}.
+\end{proof}
+
+\begin{lemma}\label{lma-normalizationsteinanalyticsubset}
+    Let $X$ be a paracompact Hausdorff reduced complex analytic space whose normalization $\bar{X}$ is Stein. Then for any reduced closed analytic subspace $Y$ of $X$, $\bar{Y}$ is also Stein.
+\end{lemma}
+\begin{proof}
+    We write $\pi:\bar{X}\rightarrow X$ for the normalization morphism. Let $Y^1=\pi^{-1}(Y)$, the preimage is endowed with a structure of a closed analytic subspace of $X$. It follows that $Y^1$ is Stein. Its normalization $\overline{Y^1}$ is then Stein, as the normalization morphism is finite. 
+    We have commutative diagram induced by the universal property of the normalization:
+    \[
+        \begin{tikzcd}
+            \overline{Y^1} \arrow[d] \arrow[r] & \overline{Y} \arrow[ld] \\
+            Y                                  &                        
+        \end{tikzcd}.  
+    \]
+    The natural morphism $\overline{Y^1}\rightarrow Y$ is a finite as it is the composition of two finite coverings. Then morphism $\bar{Y}\rightarrow Y$ is finite, so $\overline{Y^1}\rightarrow \overline{Y}$ is finite. But its image contains a dense open subset of $\bar{Y}$, so $\overline{Y^1}\rightarrow \bar{Y}$ is surjective.  
+    Observe that $\bar{Y}$ is paracompact and Hausdorff by the same arguments as in \cref{lma-branchedcovstein}.
+    Now we can apply \cref{cor-finitemorphismStein2} to conclude that $\bar{Y}$ is Stein.
+\end{proof}
+
+\begin{corollary}\label{cor-Steinnorm}
+    Let $X$ be a paracompact Hausdorff complex analytic space. Then the following are equivalent:
     \begin{enumerate}
         \item $X$ is Stein;
         \item $X^{\Red}$ is Stein;
         \item The normalization $\overline{X^{\Red}}$ is Stein.
     \end{enumerate}
 \end{corollary}
-The equivalence of (1) and  (2) is due to Grauert PIHES. The difficult direction (3) implies  (2) is claimed in Grauert--Remmert, where the proof is nonsense. We follow the argument of Narasimhan here.
+The equivalence of (1) and  (2) is due to Grauert \cite{Gra60}. Here we follow the simplified approach in  \cite{GR77}.
+The difficult direction (3) implies  (2) is claimed in \cite{GR77}, where the proof is nonsense. We follow the argument of Narasimhan \cite{Nar62}. We remind the readers that the statements and the arguments in \cite{Nar62} contain several (fixable) mistakes.
 
 \begin{proof}
     (1) $\implies$ (2): This follows from Leray's spectral sequence.
@@ -825,7 +884,83 @@ The equivalence of (1) and  (2) is due to Grauert PIHES. The difficult direction
 
     (2) $\implies$ (3): This follows from Leray's spectral sequence as $\overline{X^{\Red}}\rightarrow X^{\Red}$ is finite by \cref{PropertyComplex-prop-reducedspacenormalizationchar} in \nameref{PropertyComplex-chap-propcomplex}.
 
-    (3) $\implies$ (2): \textcolor{red}{Reproduce Narasimhan's work}
+    (3) $\implies$ (2): We may assume that $X$ is reduced. 
+    
+    \textbf{Step~1}.
+    We first observe that it suffices to prove in the case where $\dim X<\infty$.
+    For each $k\in \mathbb{Z}_{>0}$, we let $X_k$ denote the union of the irreducible components of dimension $\leq k$. Then clearly, $X_k$ is an analytic set in $X$. We endow it with the reduced induced structure. Then $\dim X_k\leq k$.
+    The normalization $\overline{X_k}$ of $X_k$ is a disjoint union of certain connected components of $\bar{X}$ and hence Stein for each $k\in \mathbb{Z}_{>0}$. It follows that $X_k$ is Stein if the special case is established.
+
+    Let $D\subseteq X$ be a countable infinite set without accumulation points. For each $k\in \mathbb{Z}_{>0}$, we set $D_k=D\cap X_k$ and $E_{k+1}=D_{k+1}\setminus D_k$. Further we let $E_1=D_1$. We write the points of $D$ as $(x_i\in X)_{i\in \mathbb{Z}_{>0}}$. Let $h:D\rightarrow \mathbb{C}$ be the map sending $x_i$ to $i$ for each $i\in \mathbb{Z}_{>0}$. For each $k\in \mathbb{Z}_{>0}$, $h_k$ denotes the restriction of $h$ to $D_k$.
+
+    As $X_1$ is Stein, we can construct $f_1\in \mathcal{O}_{X_1}(X_1)$ with $f_1|_{E_1}=h_1$ by \cref{prop-assignvalue}. As $E_2\cup X_1$ is an analytic subset in $X_2$, we can find $f_2\in \mathcal{O}_{X_2}(X_2)$ extending $f_1$ and such that $f_2|_{E_2}=h_2$. We continue in the obvious way and construct $f_k\in \mathcal{O}_{X_k}(X_k)$ for each $k\in \mathbb{Z}_{>0}$ compatible with each other. Then the $f_k$'s glue to give $f\in \mathcal{O}_{X}(X)$ unbounded on $D$. We conclude that $X$ is Stein by \cref{prop-holoconvchar}.
+
+    \textbf{Step~2}. We assume that $\dim X<\infty$.
+
+    Let $\mathcal{I}$ be a coherent ideal sheaf on $X$. By \cref{thm-Steinchar}, it suffices to show that 
+    \[
+        H^1(X,\mathcal{I})=0.  
+    \]
+    We may assume that $X$ is connected.
+    We make an induction on $\dim X$. There is nothing to prove if $\dim X=0$. Assume that $\dim X>0$.
+
+    We write $\pi:\bar{X}\rightarrow X$ for the normalization morphism.
+    Let $\mathcal{W}$ be the conductor ideal of $\mathcal{O}_X$. Let $\mathcal{F}:=\pi^*(\mathcal{W}\mathcal{I})$. Observe that $\mathcal{F}$ is a coherent $\mathcal{O}_{\bar{X}}$-module.  By Leray spectral sequence,
+    \[
+        H^1(X,\pi_*\mathcal{F})\cong H^1(\bar{X},\mathcal{F})=0.  
+    \]
+    
+    Let $Y:=\Supp \mathcal{O}_X/\mathcal{W}\subseteq X^{\Sing}$. Then $Y$ is an analytic set in $X$. We endow $Y$ with the reduced induced structure, then $Y$ is Stein by \cref{lma-normalizationsteinanalyticsubset} and our inductive hypothesis. 
+    
+    Observe that $\pi_*\mathcal{F}$ can be identified with a subsheaf of $\mathcal{W}\cdot \overline{\mathcal{O}_X}\subseteq \mathcal{I}$.
+    Let $\mathcal{S}=(\mathcal{I}/\pi_*\mathcal{F})|_Y$. Then we have
+    \[
+        H^1(X,\mathcal{I}/\pi_*\mathcal{F})\cong H^1(Y,\mathcal{S})=0.  
+    \]
+    Consider the short exact sequence
+    \[
+        0\rightarrow \pi_*\mathcal{F}\rightarrow \mathcal{I}\rightarrow \mathcal{I}/\pi_*\mathcal{F}  \rightarrow 0.
+    \]
+    We conclude that 
+    \[
+        H^1(X,\mathcal{I})=0.  
+    \]
+\end{proof}
+
+\begin{corollary}\label{cor-SteinirrcompoiStein}
+    Let $X$ be a paracompact Hausdorff complex analytic space. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is Stein;
+        \item Each irreducible component of $X^{\Red}$ is Stein if we endow it with the reduced induced structure.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    This follows immediately from \cref{cor-Steinnorm}.
+\end{proof}
+
+\begin{corollary}
+    Let $f:X\rightarrow Y$ be a finite morphism between complex analytic spaces. Assume that $Y$ is paracompact and Hausdorff. Then 
+    \begin{enumerate}
+        \item if $Y$ is Stein, so is $X$;
+        \item if $f$ is surjective and $X$ is Stein, then $Y$ is also Stein.
+    \end{enumerate}
+\end{corollary}
+This result is due to Narasimhan \cite{Nar62}, although the statement and the proof in \cite{Nar62} are both incorrect.
+\begin{proof}
+    Observe that $X$ is paracompact and Hausdorff as in the proof of \cref{lma-branchedcovstein}. By \cref{cor-Steinnorm}, we may assume that $X$ and $Y$ are reduced.
+
+    (1) This follows from Leray's spectral sequence.
+
+    (2) We may assume that $Y$ is irreducible by \cref{cor-SteinirrcompoiStein}. Up to replacing $X$ by one of its irreducible components whose image under $f$ is $Y$, we may assume that $X$ is also irreducible.
+    
+    By \cref{Morphisms-cor-liftmorphismtonormalization} in  \nameref{Morphisms-chap-morphismscomplex}, we can find a commutative diagram 
+    \[
+        \begin{tikzcd}
+            \bar{X} \arrow[r, "\bar{f}"] \arrow[d] & \bar{Y} \arrow[d] \\
+            X \arrow[r, "f"]                       & Y                
+        \end{tikzcd}.  
+    \]
+    By \cref{cor-Steinnorm}, we are reduced to show that $\bar{X}$ is Stein if and only if $\bar{Y}$ is. But $\bar{f}:\bar{X}\rightarrow \bar{Y}$ is clearly finite and surjective. So it suffices to apply \cref{cor-finitemorphismStein2}.
 \end{proof}
 
 \printbibliography
