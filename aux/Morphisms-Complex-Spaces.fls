@@ -1211,8 +1211,11 @@ INPUT ./Morphisms-Complex-Spaces.tex
 INPUT Morphisms-Complex-Spaces.tex
 INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Morphisms-Complex-Spaces.aux
 INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Morphisms-Complex-Spaces.aux
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Analytic-Sets.aux
 INPUT ./Analytic-Sets.tex
 INPUT Analytic-Sets.tex
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Analytic-Sets.aux
+INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Analytic-Sets.aux
 INPUT /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Global-Properties-Complex-Spaces.aux
 INPUT ./Global-Properties-Complex-Spaces.tex
 INPUT Global-Properties-Complex-Spaces.tex

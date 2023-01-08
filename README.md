@@ -37,7 +37,7 @@ We will freely make use of all results from Stacks Project.
 
 > To do, include Gorenstein, local complete intersection. Products.
 
-- [Morphisms of complex analytic spaces](aux/Morphism-Complex-Spaces.pdf)
+- [Morphisms of complex analytic spaces](aux/Morphisms-Complex-Spaces.pdf)
 
 > To do, include Grauert's direct image theorem. Include separated, proper, smooth morphisms, etc.
 
