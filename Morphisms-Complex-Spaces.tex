@@ -645,7 +645,7 @@ We give an alternative characterization of $\overline{\mathcal{O}}_X$.
 \end{proposition}
 
 \begin{proof}
-    We temporarily denote the sheaf stated in theproposition by $\mathcal{O}'$. From the uniqueness in \cref{prop-normalizationcas}, it suffices to show that $\mathcal{O}'_{x}$ is isomorphic to $\overline{\mathcal{O}_{X,x}}$ as $\mathcal{O}_{X,x}$-algebras for any $x\in X$.
+    We temporarily denote the sheaf stated in theproposition by $\mathcal{O}'$. From the uniqueness in \cref{PropertyComplex-prop-normalizationcas} in \nameref{PropertyComplex-chap-propcomplex}, it suffices to show that $\mathcal{O}'_{x}$ is isomorphic to $\overline{\mathcal{O}_{X,x}}$ as $\mathcal{O}_{X,x}$-algebras for any $x\in X$.
 
     We first observe that $\overline{\mathcal{O}}_X$ is a subsheaf of  $\mathcal{O}'$. Let $U\subseteq X$ be an open subset and $f\in \overline{\mathcal{O}}_X(U)$.  We need to show that $f$ is locally bounded around $y\in U\cap X^{\Sing}$. 
     Take an integral equation
@@ -756,7 +756,7 @@ This result is proved in \cite{Car52}.
 
 \iffalse
 
-\begin{proposition}\label{prop-projlemma}
+\begin{proposition}
     Let $n\in \mathbb{N}$ and $D$ be an open neighbourhood of $0$ in $\mathbb{C}^n$. 
     Let $X$ be a closed subspace of $D$ which intersections $\{(0,\ldots,0)\}\times \mathbb{C}$ at and only at $0$. Then there is a connected open product neighbourhood $B\times W\subseteq \mathbb{C}^{n-1}\times \mathbb{C}$ of $0$ in $D$ such that 
     \begin{enumerate}
@@ -785,17 +785,6 @@ This result is proved in \cite{Car52}.
     By \cref{thm-Okacoh} and \cref{thm-Weierstrassiso}, the first two terms are both coherent, hence so is $(\pi_*\mathcal{I}')|_V$.
 \end{proof}
 
-\begin{corollary}\label{cor-projlemma}
-    Let $n,k\in \mathbb{N}$ and $D$ be an open neighbourhood of $0$ in $\mathbb{C}^n$. 
-    Let $X$ be a closed subspace of $D$ which intersections $\{(0,\ldots,0)\}\times \mathbb{C}^k$ at and only at $0$. Then there is a connected open product neighbourhood $B\times W\subseteq \mathbb{C}^{n-k}\times \mathbb{C}^k$ of $0$ in $D$ such that 
-    \begin{enumerate}
-        \item the projection $B\times W\rightarrow B$ induces a finite morphism $h:X'\rightarrow B$ with $X'=X\cap (B\times W)$;
-        \item for any coherent sheaf $\mathcal{M}$ of $\mathcal{O}_{X'}$-modules, $h_*\mathcal{M}$ is coherent.
-    \end{enumerate}
-\end{corollary}
-\begin{proof}
-    This follows from a repeted application of \cref{prop-projlemma}.
-\end{proof}
 
 \begin{proposition}\label{prop-quasifinitefinite}
     Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. Assume that $f$ is quasi-finite at $x\in X$. Then there is an open neighbourhood $U$ of $x$ in $X$ and an open neighbourhood of $f(x)$ in $Y$ with $f(U)\subseteq V$ such that 
