@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  8 JAN 2023 14:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  9 JAN 2023 17:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1122,23 +1122,23 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
  [5] [6] [7] [8]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 268.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 302.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 ) [9] [10] [11] [12] [13]
 
-LaTeX Warning: Reference `Banach-chap-banach' on page 14 undefined on input line 531.
+LaTeX Warning: Reference `Banach-chap-banach' on page 14 undefined on input line 565.
 
 [14]
-Overfull \hbox (2.56836pt too wide) in paragraph at lines 586--587
+Overfull \hbox (2.56836pt too wide) in paragraph at lines 620--621
 \OML/lmm/m/it/10 H[]\OT1/lmr/m/n/10 (-20) (\OML/lmm/m/it/10 Q; \OMS/lmsy/m/n/10 O[]\OT1/lmr/m/n/10 (-20) )$ \T1/lmr/m/n/10 (-20) be the stan-dard ba-sis. Let $\OML/lmm/m/it/10 e[]; [] ; e[]$ \T1/lmr/m/n/10 (-20) be the preim-ages of $\OML/lmm/m/it/10 ^^O\OT1/lmr/m/n/10 (-20) (\OML/lmm/m/it/10 e[]\OT1/lmr/m/n/10 (-20) )\OML/lmm/m/it/10 ; [] ; ^^O\OT1/lmr/m/n/10 (-20) (\OML/lmm/m/it/10 e[]\OT1/lmr/m/n/10 (-20) ) \OMS/lmsy/m/n/10 2
  []
 
 [15] [16] [17] [18] [19] [20] [21] [22]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 966.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1004.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1157,18 +1157,18 @@ Package logreq Info: Writing requests to 'Global-Properties-Complex-Spaces.run.x
 
  ) 
 Here is how much of TeX's memory you used:
- 37988 strings out of 478994
- 722867 string characters out of 5858185
- 1569547 words of memory out of 5000000
- 54341 multiletter control sequences out of 15000+600000
- 464053 words of font info for 181 fonts, out of 8000000 for 9000
+ 38016 strings out of 478994
+ 723439 string characters out of 5858185
+ 1569043 words of memory out of 5000000
+ 54352 multiletter control sequences out of 15000+600000
+ 464432 words of font info for 185 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  132i,16n,133p,1018b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Global-Properties-Complex-Spaces.pdf (23 pages, 368333 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Global-Properties-Complex-Spaces.pdf (23 pages, 371660 bytes).
 PDF statistics:
- 513 PDF objects out of 1000 (max. 8388607)
- 464 compressed objects within 5 object streams
- 144 named destinations out of 1000 (max. 500000)
- 23141 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 544 PDF objects out of 1000 (max. 8388607)
+ 495 compressed objects within 5 object streams
+ 153 named destinations out of 1000 (max. 500000)
+ 23149 words of extra memory for PDF output out of 24883 (max. 10000000)
 

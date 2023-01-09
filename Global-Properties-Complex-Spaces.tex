@@ -8,6 +8,39 @@
 
 \section{Introduction}\label{sec-introduction-CGlobalProperty}
 
+\section{Topological properties of complex analytic spaces}
+
+\begin{proposition}\label{prop-paracompactanalyticspace}
+    Let $X$ be a Hausdorff complex analytic space. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is paracompact;
+        \item Each connected component of $X$ is $\sigma$-compact;
+        \item Each connected component of $X$ is Lindelöf;
+        \item $X$ admits a compact exhaustion.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    (1) $\Leftrightarrow$ (2): This follows from \cref{Topology-prop-paracptrefinement} in \nameref{Topology-chap-topology}.
+    
+    (2) $\Leftrightarrow$ (3): This follows from \cref{Topology-prop-qcptexhaustion} in \nameref{Topology-chap-topology}.
+
+    (3) $\Leftrightarrow$ (4): This follows from \cref{Topology-prop-qcptexhaustion} in \nameref{Topology-chap-topology}.
+\end{proof}
+
+\begin{lemma}\label{lma-paracompactpropersurjimage}
+    Let $f:X\rightarrow Y$ be a proper surjective morphism of complex analytic spaces. Then the following are equivalent:
+    \begin{enumerate}
+        \item $X$ is paracompact and Hausdorff;
+        \item $Y$ is paracompact and Hausdorff.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    (1) $\implies$ (2): This follows from \cref{Topology-thm-Michael} in \nameref{Topology-chap-topology}.
+
+    (2) $\implies$ (1): We may assume that $Y$ is connected. Then $X$ is Hausdorff as $f$ is separated. By \cref{prop-paracompactanalyticspace}, $Y$ is $\sigma$-compact. It follows that $X$ is also $\sigma$-compact. In particular, each connected component of $X$ is also $\sigma$-compact. In particular, $X$ is paracompact.
+\end{proof}
+
+
 \section{Holomorphically convex hulls}
 
 \begin{definition}
@@ -160,12 +193,12 @@ In general, $P^0\subseteq \Int P$, but they can be different.
         \item $X$ is weakly holomorphically convex;
         \item For any compact subset $K\subseteq X$, there is an open set $W\subseteq X$ such that $\hat{K}^X\cap W$ is compact.
     \end{enumerate}
-    Then (1) $\implies$ (2). If $X$ is Lindelöf, then (2) $\implies$ (1).
+    Then (1) $\implies$ (2). If $X$ is paracompact, then (2) $\implies$ (1).
 \end{thm}
 \begin{proof}
     (1) $\implies$ (2): It suffices to observe that $K\subseteq P_j^0$ when $j$ is large enough and apply \cref{thm-fixedcptsethullloccpt}.
 
-    Assume that $X$ is Lindelöf.
+    Assume that $X$ is paracompact.
     (2) $\implies$ (1): 
     Let $(K_i)$ a compact exhaustion of $X$. We construcct the stones $(P_i,\pi_i)_{i\in \mathbb{Z}_{>0}}$ so that 
     \[
@@ -222,10 +255,11 @@ Here we regard $f$ as a continuous function $X\rightarrow \mathbb{C}$. In partic
         \item $X$ is holomorphically convex;
         \item For any sequence $x_i\in X$ ($i\in \mathbb{Z}_{>0}$) without accumulation points, there is $f\in \mathcal{O}_X(X)$ such that $|f(x_i)|$ is unbounded.
     \end{enumerate}
-    Then (2) $\implies$ (1) if $X$ is Lindelöf.
+    Then (2) $\implies$ (1) if $X$ is paracompact.
 \end{proposition}
 \begin{proof}
-    (2) $\implies$ (1): For a Lindelöf Hausdorff space, sequential compactness implies compactness. 
+    (2) $\implies$ (1): By \cref{prop-paracompactanalyticspace}, each connected component of $X$ is Lindelöf.
+    For a Lindelöf Hausdorff space, sequential compactness implies compactness. 
 
     %Recall that a complex analytic space is always first countable. For a first countable Hausdorff space, compactness implies sequential compactness.
 \end{proof}
@@ -793,7 +827,7 @@ Observe that $\mathcal{O}_X(-\sum_{x\in D}n_x x)$ is a coherent $\mathcal{O}_X$-
 \end{proof}
 
 \begin{lemma}\label{lma-branchedcovstein}
-    Let $b\in \mathbb{Z}_{>0}$ and  $f:X\rightarrow Y$ be a $b$-sheeted branched covering of complex analytic spaces. Assume that $Y$ is normal, paracompact and Hausdorff. Then the following are equivalent:
+    Let $b\in \mathbb{Z}_{>0}$ and  $f:X\rightarrow Y$ be a $b$-sheeted branched covering of complex analytic spaces. Assume that $Y$ is normal. Then the following are equivalent:
     \begin{enumerate}
         \item $X$ is Stein;
         \item $Y$ is Stein.
@@ -801,8 +835,7 @@ Observe that $\mathcal{O}_X(-\sum_{x\in D}n_x x)$ is a coherent $\mathcal{O}_X$-
 \end{lemma}
 The corresponding statement in Narasimhan is not correct. It is not clear to me if this holds for a general finite surjective morphism between paracompact normal Hausdorff complex analytic spaces.
 \begin{proof}
-    First observe that $X$ is necessarily Hausdorff.
-    We may assume that $Y$ is connected. Then $Y$ is $\sigma$-compact and hence $X$ is $\sigma$-compact. It follows that $X$ is paracompact by \cref{Topology-prop-paracptrefinement} in \nameref{Topology-chap-topology}.
+    By \cref{lma-paracompactpropersurjimage}, $X$ is paracompact and Hausdorff if and only if $Y$ is paracompact and Hausdorff.
 
     (2) $\implies$ (1): This follows from Leray's spectral sequence.
 
@@ -814,14 +847,15 @@ The corresponding statement in Narasimhan is not correct. It is not clear to me 
     Let $T$ be an analytic set in $Y$. Then so is $f^{-1}(T)$. As $X$ is Stein, $f^{-1}(T)$ is finite, hence so is $T$.
 \end{proof}
 \begin{corollary}\label{cor-finitemorphismStein2}
-    Let $f:X\rightarrow Y$ be a finite surjective morphism of normal complex analytic spaces with $Y$ is paracompact and Hausdorff. Then the following are equivalent:
+    Let $f:X\rightarrow Y$ be a finite surjective morphism of normal complex analytic spaces. Then the following are equivalent:
     \begin{enumerate}
         \item $X$ is Stein;
         \item $Y$ is Stein.
     \end{enumerate}
 \end{corollary}
 \begin{proof}
-    We may assume that $Y$ is connected. Again, $X$ is paracompact and Hausdorff as in the proof of \cref{lma-branchedcovstein}.
+    By \cref{lma-paracompactpropersurjimage}, $X$ is paracompact and Hausdorff if and only if $Y$ is paracompact and Hausdorff.
+    We may assume that $Y$ is connected. 
 
     (2) $\implies$ (1): This follows from Leray's spectral sequence.
 
@@ -829,9 +863,10 @@ The corresponding statement in Narasimhan is not correct. It is not clear to me 
 \end{proof}
 
 \begin{lemma}\label{lma-normalizationsteinanalyticsubset}
-    Let $X$ be a paracompact Hausdorff reduced complex analytic space whose normalization $\bar{X}$ is Stein. Then for any reduced closed analytic subspace $Y$ of $X$, $\bar{Y}$ is also Stein.
+    Let $X$ be a reduced complex analytic space whose normalization $\bar{X}$ is Stein. Then for any reduced closed analytic subspace $Y$ of $X$, $\bar{Y}$ is also Stein.
 \end{lemma}
 \begin{proof}
+    By \cref{lma-paracompactpropersurjimage}, $X$ is paracompact and Hausdorff.
     We write $\pi:\bar{X}\rightarrow X$ for the normalization morphism. Let $Y^1=\pi^{-1}(Y)$, the preimage is endowed with a structure of a closed analytic subspace of $X$. It follows that $Y^1$ is Stein. Its normalization $\overline{Y^1}$ is then Stein, as the normalization morphism is finite. 
     We have commutative diagram induced by the universal property of the normalization:
     \[
@@ -846,7 +881,7 @@ The corresponding statement in Narasimhan is not correct. It is not clear to me 
 \end{proof}
 
 \begin{corollary}\label{cor-Steinnorm}
-    Let $X$ be a paracompact Hausdorff complex analytic space. Then the following are equivalent:
+    Let $X$ be a complex analytic space. Then the following are equivalent:
     \begin{enumerate}
         \item $X$ is Stein;
         \item $X^{\Red}$ is Stein;
@@ -857,6 +892,8 @@ The equivalence of (1) and  (2) is due to Grauert \cite{Gra60}. Here we follow t
 The difficult direction (3) implies  (2) is claimed in \cite{GR77}, where the proof is nonsense. We follow the argument of Narasimhan \cite{Nar62}. We remind the readers that the statements and the arguments in \cite{Nar62} contain several (fixable) mistakes.
 
 \begin{proof}
+    By \cref{lma-paracompactpropersurjimage}, $X$ is paracompact and Hausdorff if and only if $\overline{X^{\Red}}$ is.
+
     (1) $\implies$ (2): This follows from Leray's spectral sequence.
 
     (2) $\implies$ (1): By \cref{thm-Steinchar}(3), it suffices to show that the restriction map $H^0(X,\mathcal{O}_X)\rightarrow H^0(X^{\Red},\mathcal{O}_{X^{\Red}})$ is surjective.
@@ -928,7 +965,7 @@ The difficult direction (3) implies  (2) is claimed in \cite{GR77}, where the pr
 \end{proof}
 
 \begin{corollary}\label{cor-SteinirrcompoiStein}
-    Let $X$ be a paracompact Hausdorff complex analytic space. Then the following are equivalent:
+    Let $X$ be a complex analytic space. Then the following are equivalent:
     \begin{enumerate}
         \item $X$ is Stein;
         \item Each irreducible component of $X^{\Red}$ is Stein if we endow it with the reduced induced structure.
@@ -939,7 +976,7 @@ The difficult direction (3) implies  (2) is claimed in \cite{GR77}, where the pr
 \end{proof}
 
 \begin{corollary}
-    Let $f:X\rightarrow Y$ be a finite morphism between complex analytic spaces. Assume that $Y$ is paracompact and Hausdorff. Then 
+    Let $f:X\rightarrow Y$ be a finite morphism between complex analytic spaces. Then 
     \begin{enumerate}
         \item if $Y$ is Stein, so is $X$;
         \item if $f$ is surjective and $X$ is Stein, then $Y$ is also Stein.
@@ -949,9 +986,10 @@ This result is due to Narasimhan \cite{Nar62}, although the statement and the pr
 \begin{proof}
     Observe that $X$ is paracompact and Hausdorff as in the proof of \cref{lma-branchedcovstein}. By \cref{cor-Steinnorm}, we may assume that $X$ and $Y$ are reduced.
 
-    (1) This follows from Leray's spectral sequence.
+    (1) Observe that $X$ is paracompact and Hausdorff as $f$ is proper. The fact that $X$ is Stein follows from Leray's spectral sequence.
 
-    (2) We may assume that $Y$ is irreducible by \cref{cor-SteinirrcompoiStein}. Up to replacing $X$ by one of its irreducible components whose image under $f$ is $Y$, we may assume that $X$ is also irreducible.
+    (2) Observe that $Y$ is by paracompact and Hausdorff by \cref{lma-paracompactpropersurjimage}.
+    We may assume that $Y$ is irreducible by \cref{cor-SteinirrcompoiStein}. Up to replacing $X$ by one of its irreducible components whose image under $f$ is $Y$, we may assume that $X$ is also irreducible.
     
     By \cref{Morphisms-cor-liftmorphismtonormalization} in  \nameref{Morphisms-chap-morphismscomplex}, we can find a commutative diagram 
     \[
