@@ -1001,5 +1001,86 @@ This result is due to Narasimhan \cite{Nar62}, although the statement and the pr
     By \cref{cor-Steinnorm}, we are reduced to show that $\bar{X}$ is Stein if and only if $\bar{Y}$ is. But $\bar{f}:\bar{X}\rightarrow \bar{Y}$ is clearly finite and surjective. So it suffices to apply \cref{cor-finitemorphismStein2}.
 \end{proof}
 
+\section{Previlaged neighbourhoods}
+
+\begin{definition}
+    Let $X$ be a topological space, $x\in X$ and $\mathcal{F}$ be a sheaf of sets on $X$. We say a neighbourhood $U$ of $x$ in $X$ is \emph{$\mathcal{F}$-previlaged at $x$} if the map
+    \[
+        H^0(U,\mathcal{F})\rightarrow \mathcal{F}_x  
+    \]
+    is injective. We also say $U$ is an \emph{$\mathcal{F}$-previlaged neighbourhood} of $x$ in $X$.
+\end{definition}
+
+\begin{proposition}\label{prop-previalsequence}
+    Let $X$ be a topological space, $x\in X$ and 
+    \[
+        0\rightarrow \mathcal{G}\rightarrow \mathcal{F}\rightarrow \mathcal{H}
+    \]
+    be an exact sequence of sheaves of Abelian groups on $X$. Let $U$ be a neighbourhood of $x$ in $X$.
+    \begin{enumerate}
+        \item If $U$ is $\mathcal{G}$-previlaged at $x$ and $\mathcal{H}$-previlaged at $x$, then it is $\mathcal{F}$-previlaged at $x$;
+        \item If $U$ is $\mathcal{F}$-previlaged at $x$, then it is $\mathcal{G}$-previlaged at $x$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    We have a commutative diagram of $\mathbb{C}$-linear spaces
+    \[
+        \begin{tikzcd}
+            0 \arrow[r] & {H^0(X,\mathcal{G})} \arrow[r] \arrow[d] & {H^0(X,\mathcal{F})} \arrow[r] \arrow[d] & {H^0(X,\mathcal{H})} \arrow[d] \\
+            0 \arrow[r] & \mathcal{G}_x \arrow[r]                  & \mathcal{F}_x \arrow[r]                  & \mathcal{H}_x                 
+        \end{tikzcd}.
+    \]
+    Both assertions follow from simple diagram chasing.
+\end{proof}
+
+
+\begin{proposition}\label{prop-previaOX}
+    Let $X$ be a reduced complex analytic space, $x\in X$ and $U$ be an open neighbourhood of $x$ in $X$. Consider the following conditions:
+    \begin{enumerate}
+        \item All irreducible components of $U$ pass through $x$;
+        \item $U$ is $\mathcal{O}_X$-previlaged at $x$.
+    \end{enumerate}
+    Then (1) implies (2). %If moreover $X$ is Stein, then (2) implies (1).
+\end{proposition}
+
+Frisch67 also claims that if $U$ is Stein, then (2) implies (1). I cannot figure out a proof.
+
+\begin{proof}
+    (1) $\implies$ (2): Let $s\in H^0(U,\mathcal{F})$ with $s_x=0$. We want to show that $s=0$. By (1), we may assume that $X$ is irreducible. Then $X^{\reg}$ is connected by \cref{Morphisms-cor-irredregularconnected}  in \nameref{Morphisms-chap-morphismscomplex}. 
+    As $s_x=0$, $s$ vanishes on a non-empty open subset of $X^{\reg}$ by \cref{PropertyComplex-thm-gensmooth} in \nameref{PropertyComplex-chap-propcomplex}. It follows that $s|_{X^{\reg}}=0$ by Identitätssatz. Hence, $s=0$.
+
+    %(2) $\implies$ (1): We may assume that $X=U$. Let $Y$ be an irreducible component of $X$ such that $x\not\in Y$. Let $\mathcal{I}$ be the coherent ideal sheaf defined by $Y$. By \cref{thm-CartanA}, $H^0(X,\mathcal{I})$ generates $\mathcal{I}_x=\mathcal{O}_{X,x}$. \textcolor{red}{Then???}
+
+\end{proof}
+
+\begin{proposition}\label{prop-previasmallnei}
+    Let $X$ be a complex analytic space, $x\in X$ and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. There is an open neighbourhood $U$ of $x$ in $X$ and finitely many analytic sets $Y_1,\ldots,Y_m$ in $X$ containing $x$ having the following property: a neighbourhood $V$ of $x$ in $X$ contained in $U$ is $\mathcal{F}$-previlaged at $x$ if $U\cap Y_i$ is $\mathcal{F}|_{Y_i}$-previlaged at $x$ for each $i=1,\ldots,m$. 
+\end{proposition}
+\begin{proof}
+    \textbf{Step~1}. Let 
+    \[
+        0\rightarrow \mathcal{G}\rightarrow \mathcal{F}\rightarrow \mathcal{H}
+    \]
+    be an exact sequence of coherent $\mathcal{O}_X$-modules. Suppose that we have proved the proposition with $\mathcal{G}$ and $\mathcal{H}$ in place of $\mathcal{F}$, let us show that the proposition also holds for $\mathcal{F}$. Let $U'$, $Y_1',\ldots,Y_{m'}'$ and $U''$, $Y_1'',\ldots,Y_{m''}''$ be the data in the proposition with respect to $\mathcal{G}$ and $\mathcal{H}$ respectively. We let $U:=U'\cap U''$, $m=m'+m''$ and
+    \[
+        Y_1=Y_1'\cap U,\ldots,Y_{m'}=Y_{m'}'\cap U, Y_{m'+1}=Y_{1}''\cap U,\ldots,Y_{m'+m''}=Y_{m''}''\cap U.  
+    \]
+    It follows from \cref{prop-previalsequence} that these data have the desired property.
+
+    \textbf{Step~2}. By Jordan--Hölder theorem, we can find an open neighbourhood $U$ of $x$ in $X$ and a finite chain of coherent $\mathcal{O}_U$-modules 
+    \[
+        0=\mathcal{F}_0\rightarrow \mathcal{F}_1\rightarrow \cdots \rightarrow \mathcal{F}_n=\mathcal{F}|_U  
+    \]
+    such that $\mathcal{F}_{i}/\mathcal{F}_{i-1}$ is isomorphic to $\mathcal{O}_{Y_i\cap U}$ for some irreducible reduced closed analytic subspace of $X$ passing through $x$ for $i=1,\ldots,n$. By Step~1, it suffices to handle the case $\mathcal{F}=\mathcal{O}_{Y_i}$ for some $i=1,\ldots,n$. 
+    
+    \textbf{Step~3}. Let $Y$ be an analytic set in $X$ endowed with the reduced induced structure passing through $x$. Let $V$ be a neighbourhood of $x$ in $X$. We need to show that $V$ is $\mathcal{O}_Y$-previlaged at $x$ if $V\cap Y$ is $\mathcal{O}_{Y}$-previlaged at $x$.
+    But both conditions are defined by the injectivity of
+    \[
+        H^0(V\cap Y,\mathcal{O}_{Y})\cong H^0(V,\mathcal{O}_Y)\rightarrow \mathcal{O}_{Y,x}.     
+    \]
+    We conclude.
+\end{proof}
+
+
 \printbibliography
 \end{document}

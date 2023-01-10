@@ -498,6 +498,8 @@ In the traditional terminology, $\Delta_e$ is a \emph{universal denominator} of 
     If not, we can find a continuous function $f:X^{\reg}\rightarrow \{0,1\}$ which is not constant. By \cref{cor-Riemannextnormal}, $f$ can be extended to $g\in \mathcal{O}_X(X)$. This contradicts the fact taht $X$ is connected.
 \end{proof}
 
+
+
 \begin{corollary}\label{cor-normirrdimpointequal}
     Let $X$ be an irreducible complex analytic space and $A$ be an analytic set in $X$. Suppose that there is $x\in A$ with $\dim_x A=\dim_x X$, then $A=X$.
 \end{corollary}
@@ -573,9 +575,19 @@ Recall that $Z$ is an analytic set in $Y$ by \cref{PropertyComplex-thm-normalloc
 \begin{corollary}\label{cor-irrimplyequid}
     Let $X$ be an irreducible complex analytic space. Then there is $n\in \mathbb{N}$ such that $X$ is equidimensional of dimension $n$.
 \end{corollary}
+We remind the readers that $X$ is not necessarily unibranch. For example, consider a nodal planar curve.
 \begin{proof}
-    We may assume that $X$ is reduced. By \cref{thm-finitemapdim}, we can even assume that $X$ is normal. Then $X$ is connected. In particular, $X^{\reg}$ is connected by \cref{cor-complthininconnectedconn2}. But $X^{\reg}$ is then equidimensional of some dimension $n\in \mathbb{N}$. If $\dim_x X\neq n$ for some $x\in X^{\Sing}$, by \cref{PropertyComplex-thm-equidimlocusopen} in \nameref{PropertyComplex-chap-propcomplex}, $\dim_y X=\dim_x X$ whenever $y$ is close to $x$. This is a contradiction.
+    We may assume that $X$ is reduced. Taking nomralization, we can even assume that $X$ is normal. Then $X$ is connected. In particular, $X^{\reg}$ is connected by \cref{cor-complthininconnectedconn2}. But $X^{\reg}$ is then equidimensional of some dimension $n\in \mathbb{N}$. If $\dim_x X\neq n$ for some $x\in X^{\Sing}$, by \cref{PropertyComplex-thm-equidimlocusopen} in \nameref{PropertyComplex-chap-propcomplex}, $\dim_y X=\dim_x X$ whenever $y$ is close to $x$. This is a contradiction.
 \end{proof}
+
+\begin{corollary}\label{cor-irredregularconnected}
+    Let $X$ be a reduced irreducible complex analytic space, then $X^{\reg}$ is connected.
+\end{corollary}
+This corollary fails if $X$ is not irreducible but only connected. For example, consider $\{(z_1,z_2)\in \mathbb{C}^2:z_1z_2=0\}$ endowed with the irreducible reduced structure.
+\begin{proof}
+    If not, we can find a continuous function $f:X^{\reg}\rightarrow \{0,1\}$ which is not constant. By \cref{cor-Riemannextgeneral} and \cref{cor-irrimplyequid}, $f$ can be extended to $g\in \overline{O}_X(X)$. As $X$ is irreducible and reduced, $\bar{X}$ is connected. It follows that $g$ is constant and hence so is $f$, which is a contradiction.
+\end{proof}
+
 
 
 
