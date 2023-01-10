@@ -234,6 +234,106 @@ This result is not stated in the correct way in Remmert's paper. In most of Remm
     \]
     where $D_0$ runs over all connected components of $D$ and $N-s_0$ is the dimension of $D_0$. From this it follows that $\left\{ x\in X: \dim_x f^{-1}(x)\geq n \right\}$ is analytic, as the formula union on the right-hand side is locally finite.
 \end{proof}
+
+\begin{corollary}\label{cor-dimforopenspread}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. Assume that $X$ is equidimensional at $x$, $Y$ is unibranch at $f(x)$ and
+    \[
+        \dim_x X-\dim_x f^{-1}(f(x))= \dim_{f(x)}Y.
+    \] 
+    Then there is an open neighbourhood $U$ of $x$ in $X$ such that $U\rightarrow Y$ induced by $f$ is open.
+\end{corollary}
+\begin{proof}
+    The problem is local on $X$. By \cref{PropertyComplex-thm-equidimlocusopen} in \nameref{PropertyComplex-chap-propcomplex}, up to shrinking $X$, we may assume that $X$ is equidimensional of dimension $\dim_x X$. By \cref{Morphisms-cor-dimformula}  in \nameref{Morphisms-chap-morphismscomplex}, 
+    \[
+        \dim_x X-\dim_z f^{-1}(f(z))\leq \dim_{f(z)}Y
+    \] 
+    for all $z\in X$. But as $\dim_z f^{-1}(f(z))$ is upper semi-continuous by \cref{cor-fiberdimusczar}, the set where equality holds is open. Our assertion follows from \cref{Morphisms-cor-dimformula}  in \nameref{Morphisms-chap-morphismscomplex}.
+\end{proof}
+
+\begin{corollary}\label{cor-morphismtoCopen}
+    Let $X$ be a complex analytic space, $x\in X$ and $f\in \mathcal{O}_X(X)$. Assume that $f(x)=0$. Consider the following conditions:
+    \begin{enumerate}
+        \item $f:X\rightarrow \mathbb{C}$ is open in a neighbourhood of $x$;
+        \item $f_x$ is a non-zero divisor in modulo each minimal prime of $\mathcal{O}_{X,x}$;
+        \item $f:X\rightarrow \mathbb{C}$ is open at $x$.
+    \end{enumerate}
+    Then (1) implies (2) implies (3). If moreover $X$ is equidimensional at $x$, then (1) is equivalent to (2).
+\end{corollary}
+\begin{proof}
+    (1) $\implies$ (2): If $f_x$ is a zero-divisor modulo some minimal prime of $\mathcal{O}_{X,x}$, then $f$ is identically $0$ on some irreducible component up to shrinking $X$. So $f$ cannot be open in a neighbourhood of $x$.
+
+    (2) $\implies$ (3): By Krulls Hauptidealsatz, 
+    \[
+        \dim_x W(f)=\dim_x X-1.  
+    \]
+    By \cref{Morphisms-cor-dimformula}  in \nameref{Morphisms-chap-morphismscomplex}, $f$ is open at $x$. 
+
+    (2) $\implies$ (1):
+    If $X$ is equidimensional at $x$, then by Krulls Hauptidealsatz, 
+    \[
+        \dim_x W(f)=\dim_x X-1.  
+    \]
+    We conclude by \cref{cor-dimforopenspread}.
+\end{proof}
+\begin{corollary}\label{cor-pullbackactiveactive}
+    Let $f:X\rightarrow Y$ be an open morphism of complex analytic spaces and $x\in X$. Assume that $Y$ is equidimensional at $f(x)$, then for any $g\in \mathfrak{m}_{Y,f(x)}$ which is a non-zero divisor modulo each minimal prime, then $f_x^{\#}(g)\in \mathfrak{m}_{X,x}$ is also a non-zero divisor modulo each minimal prime.
+\end{corollary}
+\begin{proof}
+    The problem is local on $X$ and $Y$. Up to shrinking $X$ and $Y$, we may assume that $g$ and $f$ spreads to morphisms $Y\rightarrow \mathbb{C}$ and $X\rightarrow \mathbb{C}$ such that we have a commutative diagram
+    \[
+        \begin{tikzcd}
+            X \arrow[r, "f"] \arrow[rd] & Y \arrow[d] \\
+                                        & \mathbb{C} 
+        \end{tikzcd}.  
+    \]
+    The morphism $Y\rightarrow \mathbb{C}$ is open by \cref{cor-morphismtoCopen}. It follows that $\alpha$ is also open. We conclude again by \cref{cor-morphismtoCopen}.
+\end{proof}
+
+\begin{corollary}\label{cor-openanddimformulaequiv}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. Assume that $Y$ is equidimensional. Consider the following conditions:
+    \begin{enumerate}
+        \item $f$ is open;
+        \item For any $x\in X$,
+        \[
+            \dim_x X-\dim_x f^{-1}(f(x))= \dim_{f(x)}Y.
+        \] 
+    \end{enumerate}
+    Then (1) implies (2). If moreover, $Y$ is unibranch, then (1) and (2) are equivalent.
+\end{corollary}
+\begin{proof}
+    (2) $\implies$ (1): Suppose that $Y$ is unibranch.
+    This is a consequence of \cref{Morphisms-cor-dimformulaimpliesopen}  in \nameref{Morphisms-chap-morphismscomplex}.
+
+    (1) $\implies$ (2):
+    We may assume that $Y$ is connected and $X,Y$ are reduced. Fix $x\in X$ and write $y=f(x)$.
+    We make an induction on $n=\dim Y$. When $n=0$, the assertion is trivial. Take $g\in \mathfrak{m}_{Y,y}$ which is a non-zero divisor modulo each minimal prime in $\mathcal{O}_{Y,y}$. By \cref{cor-pullbackactiveactive}, $h:=f_x^{\#}(g)\in \mathfrak{m}_{X,x}$ is also a non-zero divisor modulo each minimal prime.
+    Let $X'$ and $Y'$ be the closed analytic spaces of $X$ and $Y$ defined by $h$ and $g$ respectively. Up to shrinking $X$ and $Y$, we may assume that there is a commutative square
+    \[
+        \begin{tikzcd}
+            X' \arrow[r] \arrow[d, "f'"] & X \arrow[d, "f"] \\
+            Y' \arrow[r]                 & Y               
+        \end{tikzcd}.  
+    \]
+    By inductive hypothesis, 
+    \[
+        \dim_x X'=\dim_x X'_y+\dim_y Y'.  
+    \]
+    We conclude using Krulls Hauptidealsatz.
+\end{proof}
+
+\begin{corollary}
+    Let $f:X\rightarrow Y$ be a flat morphism of complex analytic spaces. Then $f$ is open.
+\end{corollary}
+\begin{proof}
+    \textbf{Step~1}.
+    If $Y$ is unibranch, then we conclude using \cref{cor-openanddimformulaequiv} and \cref{Morphisms-prop-flatmorphismdimformula}  in \nameref{Morphisms-chap-morphismscomplex}. 
+    
+    \textbf{Step~2}.
+    In general, we may assume that $Y$ is reduced. Let $\bar{Y}$ be the normalization of $Y$. Then $Y$ has the quotient topology with respect to $\bar{Y}\rightarrow Y$. So it suffices to show that the base change $X\times_Y \bar{Y}\rightarrow \bar{Y}$ is open. But we know that the latter is flat by \cref{Morphisms-prop-flatmorphismbasechange}  in \nameref{Morphisms-chap-morphismscomplex}. We conclude using Step~1.
+\end{proof}
+
+
+
 \begin{corollary}\label{cor-quasifinitelocuscoana}
     Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. Then
     \[

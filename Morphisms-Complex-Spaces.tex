@@ -141,6 +141,21 @@ U \arrow[r] \arrow[rrd,"f'"] & \Gamma_f \arrow[rd] \arrow[ru] &                 
 
 
 
+\begin{proposition}\label{prop-fibercodimmorphismtoprodCn}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. Let $n=\dim_x f^{-1}(f(x))$. Then there is an open neighbourhood $U$ of $x$ in $X$ and a commutative diagram
+    \[
+        \begin{tikzcd}
+            U \arrow[r] \arrow[rd, "f|_U"] & Y\times \mathbb{C}^n \arrow[d] \\
+                                           & Y                             
+            \end{tikzcd},    
+    \]
+    where the right vertical morphism is the projection such that $U\rightarrow Y\times \mathbb{C}^n$ is finite at $x$.
+\end{proposition}
+\begin{proof}
+    Take an open neighbourhood $U'$ of $x$ in $f^{-1}(f(x))$ and a morphism $U'\rightarrow \mathbb{C}^n$ finite at $x$. For example, we can take the morphism induced by the spreading of a system of parameters $f_{1,x},\ldots,f_{n,x}\in \mathcal{O}_{U',x}$. Up to shrinking $U'$, we may assume that there is an open neighbourhood $U$ of $x$ in $X$ with $U\cap f^{-1}(f(x))=U'$ and a morphism $U\rightarrow \mathbb{C}^n$ extending $U'\rightarrow \mathbb{C}^n$. The induced morphism $U\rightarrow Y\times \mathbb{C}^n$ satisfies our requirements.
+\end{proof}
+
+
 \begin{thm}\label{thm-finitealgeqfiniteanalyticspace}
     Let $S$ be a complex analytic space. Then the functor $\Spec^{\An}_S$ defines an anti-equivalence from the category of finite $\mathcal{O}_S$-algebras to the category of finite analytic spaces over $S$.
 \end{thm}
@@ -306,6 +321,51 @@ The corollary fails if $Y$ is not unibranch.
 \end{proof}
 
 
+
+\begin{corollary}\label{cor-dimformula}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. Then
+    \[
+        \dim_x X-\dim_x f^{-1}(f(x))\leq \dim_{f(x)}Y.  
+    \]
+    If equality holds and $Y$ is unibranch at $f(x)$, then $f$ is open at $x$.
+\end{corollary}
+\begin{proof}
+    Let $y=f(x)$, $m=\dim_x X_y$ and $n=\dim_y Y$. The problem is local on $X$ and $Y$, by \cref{prop-fibercodimmorphismtoprodCn}, we may assume that there are morphisms 
+    \[
+        X\rightarrow Y\times \mathbb{C}^m,\quad Y\rightarrow \mathbb{C}^n  
+    \]
+    finite at $x$ and $y$ respective. In particular, the induced morphism
+    \[
+        X\rightarrow  \mathbb{C}^{m+n} 
+    \]
+    is finite at $x$ and hence
+    \[
+        \dim_x X\leq m+n.  
+    \]
+    This proves our inequality. 
+
+    Assume that $Y$ is unibranch at $y$ and the equality holds. We want to show that $f$ is open at $x$.
+    As our problem is again local, we may assume that $X$ and $Y$ are connected.
+
+    Up to shrinking $X$ and $Y$, we can choose a domain $U\subseteq \mathbb{C}^m$ such that $X\rightarrow Y\times U$ is finite. We conclude using \cref{prop-finitemorphismopen}.
+\end{proof}
+
+\begin{corollary}\label{cor-dimformulaimpliesopen}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. Assume that $X$ is equidimensional at $x$, $Y$ is unibranch at $f(x)$ and
+    \[
+        \dim_x X-\dim_x f^{-1}(f(x))= \dim_{f(x)}Y.
+    \] 
+    Then there is an open neighbourhood $U$ of $x$ in $X$ such that $U\rightarrow Y$ induced by $f$ is open.
+\end{corollary}
+\begin{proof}
+    The problem is local on $X$. By \cref{PropertyComplex-thm-equidimlocusopen} in \nameref{PropertyComplex-chap-propcomplex}, up to shrinking $X$, we may assume that $X$ is equidimensional of dimension $\dim_x X$. By \cref{cor-dimformula}, 
+    \[
+        \dim_x X-\dim_z f^{-1}(f(z))\leq \dim_{f(z)}Y
+    \] 
+    for all $z\in X$. But as $\dim_z f^{-1}(f(z))$ is upper semi-continuous, the set where equality holds is open. Our assertion follows from \cref{cor-dimformula}.
+\end{proof}
+
+
 \begin{lemma}\label{lma-finiteopenbranch}
     Let $f:X\rightarrow Y$ be a finite open morphism of reduced complex analytic spaces. Assume that $Y$ is a complex manifold. Then $f$ is a branched covering.
 \end{lemma}
@@ -324,7 +384,6 @@ The corollary fails if $Y$ is not unibranch.
 \begin{proof}
     This follows from \cref{ConstructionComplex-thm-morphismdefinedbygeneratorlocal} in \nameref{ConstructionComplex-chap-constructionComplex}, \cref{lma-finiteopenbranch} and \cref{cor-quasifiniemoropen}.
 \end{proof}
-
 
 \begin{corollary}\label{cor-takeallvalues}
     Let $X$ be a complex analytic space and $x\in X$. Assume that $X$ is unibranch at $x$. Let $f\in \mathcal{O}_{X,x}$. We assume that $f$ is not constant and $\dim_x X\geq 1$, then for any open neighbourhood $U$ of $x$ in $X$ such that $f$ spreads to $g\in \mathcal{O}_X(U)$, there is $\epsilon>0$ such that $g$ takes all values $c\in \mathbb{C}$ with $|c-f(x)|<\epsilon$.
@@ -750,6 +809,30 @@ This result is proved in \cite{Car52}.
     \]
     It follows that the $I_n$'s form a basis at $0$ in $\hat{\mathcal{O}}_{Y,y}$. By \cref{prop-flatnesschar}, we are reduced to show that $\hat{\mathcal{F}}_x/I_n\hat{\mathcal{F}}_x$ is flat over $\hat{\mathcal{O}}_{Y,y}/I_n$. But by \cref{prop-flatnesschar} again, we know that its base change along $\hat{\mathcal{O}}_{Y,y}/\hat{\mathcal{O}}_{Y',y'}/\hat{\mathfrak{m}}_{y'}^{n+1}$. So we are reduced to the well-known algebraic case.
 \end{proof}
+
+\begin{proposition}\label{prop-flatmorphismdimformula}
+    Let $f:X\rightarrow Y$ be a flat morphism of complex analytic spaces and $x\in X$. Then
+    \[
+        \dim_x X=\dim_{f(x)} Y+\dim_x X_{f(x)}.  
+    \]
+\end{proposition}
+\begin{proof}
+    Let $y=f(x)$. We may assume that $X$ and $Y$ are reduced. We make an induction on $n=\dim_y Y$. Note that the problem is local.
+
+    When $n=0$, the result is obvious. Assume that $n>0$. Take a non-zero divisor $g\in \mathcal{O}_{Y,y}$, then $h:=f_x^{\#}(g)\in \mathcal{O}_{X,x}$ is a non-zero divisor as $f$ is flat at $x$. Let $X'$ and $Y'$ be the closed analytic spaces of $X$ and $Y$ defined by $h$ and $g$ respectively. Up to shrinking $X$ and $Y$, we may assume that there is a commutative square
+    \[
+        \begin{tikzcd}
+            X' \arrow[r] \arrow[d, "f'"] & X \arrow[d, "f"] \\
+            Y' \arrow[r]                 & Y               
+        \end{tikzcd}.  
+    \]
+    By inductive hypothesis, 
+    \[
+        \dim_x X'=\dim_x X'_y+\dim_y Y'.  
+    \]
+    We conclude using Krulls Hauptidealsatz.
+\end{proof}
+
 
 
 
