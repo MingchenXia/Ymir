@@ -69,6 +69,42 @@
       \verb https://doi.org/10.1007/978-3-642-52229-1
       \endverb
     \endentry
+    \entry{Kie67}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fea46bb24a3bd2b91c965a05df70c28d}{%
+           family={Kiehl},
+           familyi={K\bibinitperiod},
+           given={Reinhardt},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{fea46bb24a3bd2b91c965a05df70c28d}
+      \strng{fullhash}{fea46bb24a3bd2b91c965a05df70c28d}
+      \strng{bibnamehash}{fea46bb24a3bd2b91c965a05df70c28d}
+      \strng{authorbibnamehash}{fea46bb24a3bd2b91c965a05df70c28d}
+      \strng{authornamehash}{fea46bb24a3bd2b91c965a05df70c28d}
+      \strng{authorfullhash}{fea46bb24a3bd2b91c965a05df70c28d}
+      \field{labelalpha}{Kie67}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0020-9910}
+      \field{journaltitle}{Invent. Math.}
+      \field{title}{Note zu der {A}rbeit von {J}. {F}risch: ``{P}oints de platitude d'un morphisme d'espaces analytiques complexes''}
+      \field{volume}{4}
+      \field{year}{1967}
+      \field{pages}{139\bibrangedash 141}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1007/BF01425246
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01425246
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01425246
+      \endverb
+    \endentry
     \entry{stacks-project}{misc}{}
       \name{author}{1}{}{%
         {{hash=abb7996abcbb3ba4cf4194c8dcb595ca}{%
