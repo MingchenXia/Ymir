@@ -147,7 +147,7 @@ U \arrow[r] \arrow[rrd,"f'"] & \Gamma_f \arrow[rd] \arrow[ru] &                 
 \begin{proof}
     We first observe that the functor is well-defined. This follows from \cref{ConstructionComplex-cor-specanfinitetopfinite} in \nameref{ConstructionComplex-chap-constructionComplex}.
 
-    The functor is fully faithfull by \cref{ConstructionComplex-prop-morphismrelaffspaces} in \nameref{ConstructionComplex-chap-constructionComplex}. Suppose that $f:X\rightarrow S$ is a finite morphism of complex analytic spaces. We need to show that $X$ is isomorphic to $\Spec^{\An}_{S}\mathcal{A}$ for some finite $\mathcal{O}_S$-algebra $\mathcal{A}$ in $\CASCat_{/S}$.
+    The functor is fully faithful by \cref{ConstructionComplex-prop-morphismrelaffspaces} in \nameref{ConstructionComplex-chap-constructionComplex}. Suppose that $f:X\rightarrow S$ is a finite morphism of complex analytic spaces. We need to show that $X$ is isomorphic to $\Spec^{\An}_{S}\mathcal{A}$ for some finite $\mathcal{O}_S$-algebra $\mathcal{A}$ in $\CASCat_{/S}$.
 
     By \cref{ConstructionComplex-prop-moduletildepush} in \nameref{ConstructionComplex-chap-constructionComplex}, we necessarily have $\mathcal{A}\cong f_*\mathcal{O}_X$. So we need to show that the natural morphism $\Spec_S^{\An} f_*\mathcal{O}_X\rightarrow X$ over $S$ is an isomorphism. The problem is local on $S$. 
 
@@ -719,7 +719,7 @@ This result is proved in \cite{Car52}.
  \end{proof}
 
 
-\begin{proposition}
+\begin{proposition}\label{prop-flatmorphismbasechange}
     Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Let $g:Y'\rightarrow Y$ be a morphism of complex analytic spaces and consider the following Cartesian diagram:
     \[
         \begin{tikzcd}

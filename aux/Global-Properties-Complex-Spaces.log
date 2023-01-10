@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  9 JAN 2023 20:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  10 JAN 2023 16:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1136,9 +1136,13 @@ Overfull \hbox (2.56836pt too wide) in paragraph at lines 620--621
 \OML/lmm/m/it/10 H[]\OT1/lmr/m/n/10 (-20) (\OML/lmm/m/it/10 Q; \OMS/lmsy/m/n/10 O[]\OT1/lmr/m/n/10 (-20) )$ \T1/lmr/m/n/10 (-20) be the stan-dard ba-sis. Let $\OML/lmm/m/it/10 e[]; [] ; e[]$ \T1/lmr/m/n/10 (-20) be the preim-ages of $\OML/lmm/m/it/10 ^^O\OT1/lmr/m/n/10 (-20) (\OML/lmm/m/it/10 e[]\OT1/lmr/m/n/10 (-20) )\OML/lmm/m/it/10 ; [] ; ^^O\OT1/lmr/m/n/10 (-20) (\OML/lmm/m/it/10 e[]\OT1/lmr/m/n/10 (-20) ) \OMS/lmsy/m/n/10 2
  []
 
-[15] [16] [17] [18] [19] [20] [21] [22] [23] [24]
+[15] [16] [17] [18] [19] [20] [21] [22]
+
+LaTeX Warning: Reference `prop-previalsequence' on page 1 undefined on input line 1038.
+
+[23] [24] [25] [26]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1083.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1201.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1146,7 +1150,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [25
+ [27
 
 ] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Global-Properties-Complex-Spaces.aux)
 
@@ -1157,18 +1161,18 @@ Package logreq Info: Writing requests to 'Global-Properties-Complex-Spaces.run.x
 
  ) 
 Here is how much of TeX's memory you used:
- 38132 strings out of 478994
- 726170 string characters out of 5858185
- 1572702 words of memory out of 5000000
- 54453 multiletter control sequences out of 15000+600000
- 464620 words of font info for 187 fonts, out of 8000000 for 9000
+ 38228 strings out of 478994
+ 728984 string characters out of 5858185
+ 1574366 words of memory out of 5000000
+ 54538 multiletter control sequences out of 15000+600000
+ 464573 words of font info for 187 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,16n,133p,1018b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Global-Properties-Complex-Spaces.pdf (25 pages, 381498 bytes).
+ 132i,18n,133p,1018b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Global-Properties-Complex-Spaces.pdf (27 pages, 399144 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 525 compressed objects within 6 object streams
- 164 named destinations out of 1000 (max. 500000)
+ 629 PDF objects out of 1000 (max. 8388607)
+ 574 compressed objects within 6 object streams
+ 175 named destinations out of 1000 (max. 500000)
  23157 words of extra memory for PDF output out of 24883 (max. 10000000)
 

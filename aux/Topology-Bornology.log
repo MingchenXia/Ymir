@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  9 JAN 2023 16:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  10 JAN 2023 14:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1121,11 +1121,11 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [5] [6] [7] [8] [9] [10] [11] [12
+ [5] [6] [7] [8] [9] [10] [11] [12] [13] [14
 
 ]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 348.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 455.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1133,24 +1133,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [13] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.aux)
+ [15] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.aux)
 Package logreq Info: Writing requests to 'Topology-Bornology.run.xml'.
 \openout1 = `Topology-Bornology.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37605 strings out of 478994
- 715154 string characters out of 5858185
- 1566208 words of memory out of 5000000
- 54087 multiletter control sequences out of 15000+600000
- 457861 words of font info for 147 fonts, out of 8000000 for 9000
+ 37831 strings out of 478994
+ 720466 string characters out of 5858185
+ 1570357 words of memory out of 5000000
+ 54269 multiletter control sequences out of 15000+600000
+ 459092 words of font info for 161 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,7n,133p,1004b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 132i,15n,133p,1004b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.pdf (13 pages, 277312 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.pdf (15 pages, 294959 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
- 85 named destinations out of 1000 (max. 500000)
- 21077 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 348 PDF objects out of 1000 (max. 8388607)
+ 309 compressed objects within 4 object streams
+ 101 named destinations out of 1000 (max. 500000)
+ 21093 words of extra memory for PDF output out of 24883 (max. 10000000)
 

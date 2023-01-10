@@ -15,6 +15,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{6}{Maps with discrete fibers}}{10}{section.0.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{7}{Bornology}}{11}{section.0.7}%
+\contentsline {section}{\tocsection {}{7}{Previlaged neighbourhoods}}{11}{section.0.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{13}{chapter*.2}%
+\contentsline {section}{\tocsection {}{8}{Stratification}}{11}{section.0.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{9}{Bornology}}{13}{section.0.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{15}{chapter*.2}%

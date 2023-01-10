@@ -47,6 +47,42 @@
       \field{pages}{vii+201}
       \range{pages}{-1}
     \endentry
+    \entry{Fri67}{article}{}
+      \name{author}{1}{}{%
+        {{hash=299b9053bffa44399aed5bfaea3a47ab}{%
+           family={Frisch},
+           familyi={F\bibinitperiod},
+           given={Jacques},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{299b9053bffa44399aed5bfaea3a47ab}
+      \strng{fullhash}{299b9053bffa44399aed5bfaea3a47ab}
+      \strng{bibnamehash}{299b9053bffa44399aed5bfaea3a47ab}
+      \strng{authorbibnamehash}{299b9053bffa44399aed5bfaea3a47ab}
+      \strng{authornamehash}{299b9053bffa44399aed5bfaea3a47ab}
+      \strng{authorfullhash}{299b9053bffa44399aed5bfaea3a47ab}
+      \field{labelalpha}{Fri67}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0020-9910}
+      \field{journaltitle}{Invent. Math.}
+      \field{title}{Points de platitude d'un morphisme d'espaces analytiques complexes}
+      \field{volume}{4}
+      \field{year}{1967}
+      \field{pages}{118\bibrangedash 138}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1007/BF01425245
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01425245
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01425245
+      \endverb
+    \endentry
     \entry{GR77}{book}{}
       \name{author}{2}{}{%
         {{hash=66d7b2881ff63d1d2fa543eb83019171}{%
@@ -189,6 +225,42 @@
       \verb https://doi.org/10.1007/BF01344153
       \endverb
     \endentry
+    \entry{Kie67}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fea46bb24a3bd2b91c965a05df70c28d}{%
+           family={Kiehl},
+           familyi={K\bibinitperiod},
+           given={Reinhardt},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{fea46bb24a3bd2b91c965a05df70c28d}
+      \strng{fullhash}{fea46bb24a3bd2b91c965a05df70c28d}
+      \strng{bibnamehash}{fea46bb24a3bd2b91c965a05df70c28d}
+      \strng{authorbibnamehash}{fea46bb24a3bd2b91c965a05df70c28d}
+      \strng{authornamehash}{fea46bb24a3bd2b91c965a05df70c28d}
+      \strng{authorfullhash}{fea46bb24a3bd2b91c965a05df70c28d}
+      \field{labelalpha}{Kie67}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0020-9910}
+      \field{journaltitle}{Invent. Math.}
+      \field{title}{Note zu der {A}rbeit von {J}. {F}risch: ``{P}oints de platitude d'un morphisme d'espaces analytiques complexes''}
+      \field{volume}{4}
+      \field{year}{1967}
+      \field{pages}{139\bibrangedash 141}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1007/BF01425246
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01425246
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01425246
+      \endverb
+    \endentry
     \entry{Nar62}{article}{}
       \name{author}{1}{}{%
         {{hash=9cf9e9c9d1213b51d3073ccab47e6ea2}{%
@@ -215,6 +287,30 @@
       \field{year}{1962}
       \field{pages}{327\bibrangedash 333}
       \range{pages}{7}
+    \endentry
+    \entry{stacks-project}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=abb7996abcbb3ba4cf4194c8dcb595ca}{%
+           family={{Stacks Project Authors}},
+           familyi={S\bibinitperiod},
+           given={The},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{abb7996abcbb3ba4cf4194c8dcb595ca}
+      \strng{fullhash}{abb7996abcbb3ba4cf4194c8dcb595ca}
+      \strng{bibnamehash}{abb7996abcbb3ba4cf4194c8dcb595ca}
+      \strng{authorbibnamehash}{abb7996abcbb3ba4cf4194c8dcb595ca}
+      \strng{authornamehash}{abb7996abcbb3ba4cf4194c8dcb595ca}
+      \strng{authorfullhash}{abb7996abcbb3ba4cf4194c8dcb595ca}
+      \field{labelalpha}{Stacks}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://stacks.math.columbia.edu}}
+      \field{shorthand}{Stacks}
+      \field{title}{Stacks Project}
+      \field{year}{2020}
     \endentry
   \enddatalist
 \endrefsection

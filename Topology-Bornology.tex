@@ -327,6 +327,113 @@ This result is proved in \cite{Jur59}.
     But each $\alpha_{(n)}(U_0,U')$ is countable as $U'$ has countable basis. It follows that $\beta^{(n)}$ is countable.
 \end{proof}
 
+\section{Previlaged neighbourhoods}
+\begin{definition}
+    Let $X$ be a topological space, $x\in X$ and $\mathcal{F}$ be a sheaf of sets on $X$. We say a neighbourhood $U$ of $x$ in $X$ is \emph{$\mathcal{F}$-previlaged at $x$} if the map
+    \[
+        H^0(U,\mathcal{F})\rightarrow \mathcal{F}_x  
+    \]
+    is injective. We also say $U$ is an \emph{$\mathcal{F}$-previlaged neighbourhood} of $x$ in $X$.
+\end{definition}
+
+\begin{proposition}\label{prop-previalsequence}
+    Let $X$ be a topological space, $x\in X$ and 
+    \[
+        0\rightarrow \mathcal{G}\rightarrow \mathcal{F}\rightarrow \mathcal{H}
+    \]
+    be an exact sequence of sheaves of Abelian groups on $X$. Let $U$ be a neighbourhood of $x$ in $X$.
+    \begin{enumerate}
+        \item If $U$ is $\mathcal{G}$-previlaged at $x$ and $\mathcal{H}$-previlaged at $x$, then it is $\mathcal{F}$-previlaged at $x$;
+        \item If $U$ is $\mathcal{F}$-previlaged at $x$, then it is $\mathcal{G}$-previlaged at $x$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    We have a commutative diagram of $\mathbb{C}$-linear spaces
+    \[
+        \begin{tikzcd}
+            0 \arrow[r] & {H^0(X,\mathcal{G})} \arrow[r] \arrow[d] & {H^0(X,\mathcal{F})} \arrow[r] \arrow[d] & {H^0(X,\mathcal{H})} \arrow[d] \\
+            0 \arrow[r] & \mathcal{G}_x \arrow[r]                  & \mathcal{F}_x \arrow[r]                  & \mathcal{H}_x                 
+        \end{tikzcd}.
+    \]
+    Both assertions follow from simple diagram chasing.
+\end{proof}
+\section{Stratification}
+
+
+
+\begin{definition}
+    Let $M$ be a real analytic manifold and $\Omega$ be an open subset of $M$. A \emph{stratification} $\mathcal{N}$ of $\Omega$ is a finite collection of connected locally closed analytic submanifold of $\Omega$ such that
+    \begin{enumerate}
+        \item $\Omega$ is a disjoint union of the elements in $\mathcal{N}$;
+        \item for each $\Gamma\in \mathcal{N}$, $(\bar{\Gamma}\setminus \Gamma)\cap \Omega$ is the union of elements in $\mathcal{N}$ of strictly smaller dimensions.
+    \end{enumerate}
+    Elements in $\mathcal{N}$ are called the \emph{strata} of the stratification.
+
+    For each open subset $U\subseteq \Omega$, we write $\mathcal{N}(U)$ for the collection of subsets of $U$ consisting of all connected components of $U\cap \Gamma$ for all $\Gamma\in \mathcal{N}$.
+
+    Take $x\in \Omega$, an open neighbourhood $U$ of $x$ in $\Omega$ is \emph{normal} with respect to $\mathcal{N}$ if 
+    \begin{enumerate}
+        \item $\mathcal{N}(U)$ is a stratification of $U$;
+        \item for each $\Gamma\in \mathcal{N}(U)$, $x\in \bar{\Gamma}$.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    Let $X$ be a real analytic space. For each $x\in X$, we temporarily write $\mathcal{J}_a$ for the smallest family of germs of analytic subspaces of $X$ stable under finite union, finite intersection, complement and contains all germs of the form $\{f<0\}_a$ for some $f\in \mathcal{O}_{X,x}$.
+
+    A subset $A$ of $X$ is \emph{real semi-analytic} if for all $x\in X$, $A_x\in \mathcal{J}_x$.
+\end{definition}
+
+\begin{thm}\label{thm-refinesemianatostratification}
+    Let $X$ be a real analytic manifold, $x\in X$. Suppose that $\{A_0,\ldots,A_m\}$ is a finite collection of real semi-analytic subsets of $X$. Then there is a stratification $\mathcal{N}$ of an open neighbourhood $U$ of $x$ in $X$ compatible with $A_i$ in the sense that each stratum is either contained in $A_i$ or is disjoint from $A_i$ for $i=1,\ldots,m$ such that each $y\in U$ admits a fundamental system of normal neighbourhoods with respect to $\mathcal{N}$.
+\end{thm}
+\begin{proof}
+    \textcolor{red}{Include the ref.}
+\end{proof}
+
+
+\begin{proposition}\label{prop-fundamentalsysmopnhprevi}
+    Let $X$ be a real analytic space, $A$ be a semi-analytic set in $X$, $x\in A$. Let $Y_1,\ldots,Y_m$ be finitely many analytic sets in $X$ passing $x$. Then there is a fundamental system $\mathcal{B}$ of neighbourhoods of $a$ in $A$ such that for each $V\in \mathcal{B}$, there is a fundamental system $\mathcal{B}_V$ of open neighbourhoods of $V$ in $X$ so that for any $W\in \mathcal{B}_V$, $W\cap Y_i$ is $\mathcal{O}_{Y_i}$-previlaged at $x$ for $i=1,\ldots,m$.
+\end{proposition}
+\begin{proof}
+    The problem is local on $X$, we may assume that $X=\mathbb{R}^n$ for some $n\in \mathbb{N}$ and $x=0$. Let $U$ be an open neighbourhood of $0$ in $\mathbb{R}^n$ compatible with the collection $\{A,Y_1,\ldots,Y_m\}$ and such that each $y\in U$ admits a fundamental system $\mathcal{U}(x)$ of normal neighbourhoods with respect to $\mathcal{N}$. The existence of $U$ is guaranteed by \cref{thm-refinesemianatostratification}.
+    Let
+    \[
+        \mathcal{B}=\left\{Q\cap A: Q\in \mathcal{U}(0)\right\}.  
+    \]
+    Suppose $V\in \mathcal{B}$, say $B=Q\cap A$ with $Q\in \mathcal{U}(0)$. 
+    
+    Let $\Omega$ be a neighbourhood of $V$ in $\mathbb{R}^n$, we need to construct an open neighbourhood $W$ of $V$ in $\mathbb{R}^n$ contained in $\Omega$ such that $W\cap Y_i$ is $\mathcal{O}_{Y_i}$-previlaged at $x$ for $i=1,\ldots,m$.
+
+    For each $y\in V$, we let $Q(y)$ be an open neighbourhood of $x$ in $\mathbb{R}^n$ normal with respect to $\mathcal{N}$ and contained in $\Omega$.
+    Let $W=\bigcup_{x\in V}Q(x)$.
+
+    Fix $i\in \{1,\ldots,m\}$. We will verify that $W\cap Y_i$ is $\mathcal{O}_{Y_i}$-previlaged at $x$.
+
+    Let $f\in \mathcal{O}_{Y_i}(W\cap Y_i)$ assume that $f$ vanishes in a neighbourhood of $0$, then we claim that $f=0$ on $W\cap Y_i$. Now $Y_i\cap Q$ is a finite union of strata of $\mathcal{N}(Q)$ which are connected manifolds whose closures contain $0$ and either contained in or disjoint from $A$. It is clear that $f$ vanishes on all strata contained in $A\cap Y_i\cap Q$, hence on $A\cap Y\cap  Q$. Also, $f$ vanishes on $Y\cap Q(0)$, so it remains to prove that if $b\in V$, $b\neq 0$, then $f$ vanishes on $Y\cap Q(b)$. 
+
+    Let $\Gamma$ be a stratum of $\mathcal{N}(Q(b))$ contained in $Y$. Then $b\in \bar{\Gamma}$. Take a stratum $\Gamma'$ of $\mathcal{N}(Q)$ so that $\Gamma$ is a connected component of $Q(b)\cap \Gamma'$. We may assume that $b$ is on the boundary of $A$ and $\Gamma'\cap A=\emptyset$. As $A\cap \Gamma\cap Q(b)$ is a union of strata of $\mathcal{N}(Q(b))$, one of them, say $\Gamma_1$ contains $b$. It is the intersection of a stratum $\Gamma_1'$ of $\mathcal{N}(Q)$ with $Q(b)$. Let $C$ be the connected component of $\Gamma'\cap W$ containing $\Gamma$. Consider the set
+    \[
+        E=\left\{ x\in \Gamma_1'\cap V : \Gamma'_{1,x}\subseteq \overline{C_x} \right\}.    
+    \]
+    Then $b\in E$ as $\Gamma_1'\cap Q(b)\subseteq \bar{\Gamma}\cap Q(b)\subseteq \bar{C}\cap Q(b)$. Moreover, $E$ is an open subset of $\Gamma_1'\cap V$ by definition. We claim that $E$ is also closed. 
+    
+    Let us postpone the proof of the claim. As $\Gamma_1'$ is connected, we have $E=\Gamma_1'\cap V$. So 
+    \[
+        \Gamma_1'\cap V\subseteq \bar{C}\cap V  
+    \]
+    and 
+    \[
+        \Gamma_1'\cap W\subseteq \bar{C}\cap W.
+    \]
+    But $a\in \overline{\Gamma_1}$, so $a\in \bar{C}$ and $f$ vanishes on a clopen subset of $C$, namely $Q(a)\cap C$, so $f$ vanishes on $C$. In particular on $\Gamma$.
+    
+    
+    It remains to verify the claim.
+    In fact, we show that if $y\in \bar{E}\cap \Gamma_1'\cap V$, then $\Gamma_1'\cap Q(y)\subseteq \bar{C}\cap Q(y)$. To see this, observe that there is $z\in E\cap Q(y)$, so there is a non-empty open subset of $\Gamma_1'\cap Q(y)$ contained in $\bar{C}\cap Q(y)$. But $\Lambda\cap Q(y)$ is a stratum of $\mathcal{N}(Q(y))$ as $y\in \Gamma_1'$, our claim follows since $\bar{C}\cap Q(y)$ is a union of strata of $\mathcal{N}(Q(y))$.
+\end{proof}
+
+
 \section{Bornology}
 \begin{definition}
     Let $X$ be a set. A \emph{bornology} on $X$ is a collection $\mathcal{B}$ of subsets of $X$ such that
