@@ -1219,11 +1219,13 @@ This theorem was first proved by Frisch in \cite{Fri67}. Here we are following t
         \item $f$ admits no sections on an open subset $V$ of $Y$.
     \end{enumerate}
 \end{lemma}
+Here we say a subset of $Y$ is \emph{negligible} if its intersection with $Y^{\reg}$ is an at most countable union of connected locally closed submanifolds with empty interior.
+
 \begin{proof}
    The problem is local on $Y$. We may assume that $Y$ is a complex model space. Then we reduce to the case where $Y$ is a complex manifold. We may also assume that $X$ is reduced. Then $X$ is a locally finite union of locally closed complex manifolds such that $f|_{X_i}$ has constant rank. So we may assume that $f:X\rightarrow Y$ is a morphism of connected complex manifolds of constant rank. Therefore, $f(X)$ is a submanifold of $Y$ and $f$ is a submersion onto $f(X)$. In this case, $f(X)$ is negligible if and only if its interior is empty. In other words, $f$ is nowhere a submersion. The assertion follows.
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}[Generic flatness]\label{thm-genflatness1}
     Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Assume that $Y$ is reduced and $X$ has countable basis. Then the image of the non-flat locus in $Y$ is negligible.
 \end{theorem}
 \begin{proof}
@@ -1585,12 +1587,22 @@ for each $q\in \mathbb{N}$. It follows that $R^qf_*\mathcal{F}$ is coherent.
     This follows immediately from \cref{thm-properdirectimage} with $Y=\mathbb{C}^0$.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}\label{cor-analyticsetpropimage}
     Let $f:X\rightarrow Y$ be a proper morphism. Assume that $Z$ is an analytic set in $X$, then $f(Z)$ is an analytic set in $Y$. 
 \end{corollary}
 \begin{proof}
     We may assume that $Z=X$. Then $f(X)=\Supp f_*\mathcal{O}_X$. But $f_*\mathcal{O}_X$ is coherent by \cref{thm-properdirectimage}, so $f(X)$ is an analytic set in $Y$.
 \end{proof}
+
+
+\begin{corollary}[Generic flatness]
+    Let $f:X\rightarrow Y$ be a proper morphism of complex analytic space and $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Assume that $Y$ is reduced. Then the image of the non-flat locus of $\mathcal{F}$ in $Y$ is a nowhere dense analytic subset.
+\end{corollary}
+\begin{proof}
+The problem is local on $Y$, we may assume that $Y$ is a complex model space. In particular, $Y$ has countable basis. After further shrinking $Y$, we may assume that $X$ is covered by finitely many relative charts. In particular, $X$ has countable basis. The image of the flat locus of $\mathcal{F}$ in $Y$ is an analytic set by \cref{cor-analyticsetpropimage} and \cref{thm-flatlocuscoana}. It is nowhere dense by \cref{thm-genflatness} and the fact that $Y$ is a Baire space. 
+\end{proof}
+
+
 
 \printbibliography
 \end{document}
