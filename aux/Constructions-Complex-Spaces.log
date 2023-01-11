@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  8 JAN 2023 14:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  11 JAN 2023 15:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -940,9 +940,15 @@ LABELS NOT IMPORTED.
 (Properties-Complex-Spaces.tex)
 (Properties-Complex-Spaces.aux)
 No file Properties-Complex-Spaces.aux.
-Package xr Info: IMPORTING LABELS FROM Morphisms-Complex-Spaces.aux on input line 356.
+
+Package xr Warning: 
+No file Morphisms-Complex-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 356.
+
 (Morphisms-Complex-Spaces.tex)
 (Morphisms-Complex-Spaces.aux)
+No file Morphisms-Complex-Spaces.aux.
 
 Package xr Warning: 
 No file Analytic-Sets.aux
@@ -1162,10 +1168,10 @@ Package logreq Info: Writing requests to 'Constructions-Complex-Spaces.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38322 strings out of 478994
- 730362 string characters out of 5858185
- 1576501 words of memory out of 5000000
- 54700 multiletter control sequences out of 15000+600000
+ 38293 strings out of 478994
+ 729647 string characters out of 5858185
+ 1575260 words of memory out of 5000000
+ 54671 multiletter control sequences out of 15000+600000
  472512 words of font info for 181 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  132i,25n,133p,1252b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  10 JAN 2023 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  11 JAN 2023 15:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -922,24 +922,60 @@ Package xr Info: IMPORTING LABELS FROM Banach-Rings.aux on input line 346.
 Package xr Info: IMPORTING LABELS FROM Commutative-Algebra.aux on input line 347.
 (Commutative-Algebra.tex)
 (Commutative-Algebra.aux)
-Package xr Info: IMPORTING LABELS FROM Local-Algebras.aux on input line 351.
+
+Package xr Warning: 
+No file Local-Algebras.aux
+LABELS NOT IMPORTED.
+ on input line 351.
+
 (Local-Algebras.tex)
 (Local-Algebras.aux)
-Package xr Info: IMPORTING LABELS FROM Complex-Analytic-Spaces.aux on input line 352.
+No file Local-Algebras.aux.
+
+Package xr Warning: 
+No file Complex-Analytic-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 352.
+
 (Complex-Analytic-Spaces.tex)
 (Complex-Analytic-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Constructions-Complex-Spaces.aux on input line 353.
+No file Complex-Analytic-Spaces.aux.
+
+Package xr Warning: 
+No file Constructions-Complex-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 353.
+
 (Constructions-Complex-Spaces.tex)
 (Constructions-Complex-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Properties-Complex-Spaces.aux on input line 354.
+No file Constructions-Complex-Spaces.aux.
+
+Package xr Warning: 
+No file Properties-Complex-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 354.
+
 (Properties-Complex-Spaces.tex)
 (Properties-Complex-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Morphisms-Complex-Spaces.aux on input line 356.
+No file Properties-Complex-Spaces.aux.
+
+Package xr Warning: 
+No file Morphisms-Complex-Spaces.aux
+LABELS NOT IMPORTED.
+ on input line 356.
+
 (Morphisms-Complex-Spaces.tex)
 (Morphisms-Complex-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Analytic-Sets.aux on input line 357.
+No file Morphisms-Complex-Spaces.aux.
+
+Package xr Warning: 
+No file Analytic-Sets.aux
+LABELS NOT IMPORTED.
+ on input line 357.
+
 (Analytic-Sets.tex)
 (Analytic-Sets.aux)
+No file Analytic-Sets.aux.
 Package xr Info: IMPORTING LABELS FROM Global-Properties-Complex-Spaces.aux on input line 358.
 (Global-Properties-Complex-Spaces.tex)
 (Global-Properties-Complex-Spaces.aux)
@@ -1139,13 +1175,13 @@ Package logreq Info: Writing requests to 'Topology-Bornology.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37831 strings out of 478994
- 720466 string characters out of 5858185
- 1570357 words of memory out of 5000000
- 54269 multiletter control sequences out of 15000+600000
+ 37421 strings out of 478994
+ 705501 string characters out of 5858185
+ 1551387 words of memory out of 5000000
+ 53859 multiletter control sequences out of 15000+600000
  459092 words of font info for 161 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
- 132i,15n,133p,1004b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 132i,15n,133p,795b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
 Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Topology-Bornology.pdf (15 pages, 294959 bytes).
 PDF statistics:

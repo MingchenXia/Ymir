@@ -5,7 +5,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{1}{Introduction}}{5}{section.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\tocsection {}{2}{Open morphism}}{5}{section.0.2}%
+\contentsline {section}{\tocsection {}{2}{Open morphisms}}{5}{section.0.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{3}{Quasi-finite morphisms}}{5}{section.0.3}%
 \defcounter {refsection}{0}\relax 
@@ -13,4 +13,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{5}{Flat morphisms}}{19}{section.0.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{21}{chapter*.2}%
+\contentsline {section}{\tocsection {}{6}{Separated morphisms}}{21}{section.0.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{7}{Proper morphisms}}{21}{section.0.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{23}{chapter*.2}%

@@ -1,17 +1,17 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'aux/Global-Properties-Complex-Spaces.blg'
-[62] biber-darwin:340> INFO - === Tue Jan 10, 2023, 16:49:10
-[75] Biber.pm:415> INFO - Reading 'aux/Global-Properties-Complex-Spaces.bcf'
-[162] Biber.pm:952> INFO - Found 9 citekeys in bib section 0
-[174] Biber.pm:4340> INFO - Processing section 0
-[182] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
-[185] bibtex.pm:1689> INFO - LaTeX decoding ...
-[242] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
-[290] Utils.pm:395> WARN - ISBN '3-540-08231-*' in entry 'GR77' is invalid - run biber with '--validate_datamodel' for details.
-[312] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[312] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[312] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[312] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[321] bbl.pm:654> INFO - Writing 'aux/Global-Properties-Complex-Spaces.bbl' with encoding 'UTF-8'
-[324] bbl.pm:757> INFO - Output to aux/Global-Properties-Complex-Spaces.bbl
-[324] Biber.pm:128> INFO - WARNINGS: 1
+[65] biber-darwin:340> INFO - === Wed Jan 11, 2023, 15:49:06
+[78] Biber.pm:415> INFO - Reading 'aux/Global-Properties-Complex-Spaces.bcf'
+[168] Biber.pm:952> INFO - Found 9 citekeys in bib section 0
+[182] Biber.pm:4340> INFO - Processing section 0
+[191] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
+[194] bibtex.pm:1689> INFO - LaTeX decoding ...
+[252] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
+[303] Utils.pm:395> WARN - ISBN '3-540-08231-*' in entry 'GR77' is invalid - run biber with '--validate_datamodel' for details.
+[325] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[325] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[325] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[325] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[336] bbl.pm:654> INFO - Writing 'aux/Global-Properties-Complex-Spaces.bbl' with encoding 'UTF-8'
+[339] bbl.pm:757> INFO - Output to aux/Global-Properties-Complex-Spaces.bbl
+[339] Biber.pm:128> INFO - WARNINGS: 1

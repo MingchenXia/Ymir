@@ -25,4 +25,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\tocsection {}{11}{Flat locus}}{22}{section.0.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{27}{chapter*.2}%
+\contentsline {section}{\tocsection {}{12}{Grauert's proper image theorem}}{27}{section.0.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{35}{chapter*.2}%

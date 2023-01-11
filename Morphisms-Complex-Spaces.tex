@@ -25,7 +25,7 @@
 
 \section{Introduction}\label{sec-introduction-morphismscomplex}
 
-\section{Open morphism}
+\section{Open morphisms}
 \begin{definition}
     Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. We say $f$ is \emph{open} at $x\in X$ if for any neighbourhood $U$ of $x$ in $X$, $f(U)$ is a neighbourhood of $f(x)$ in $Y$.
 \end{definition}
@@ -834,7 +834,65 @@ This result is proved in \cite{Car52}.
 \end{proof}
 
 
+\section{Separated morphisms}
 
+Recall that the notion of separated maps between topological spaces is defined in \cite[\href{https://stacks.math.columbia.edu/tag/0CY1}{Tag 0CY1}]{stacks-project}.
+
+\begin{definition}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. We say $f$ is \emph{separated} if $|f|:|X|\rightarrow |Y|$ is separated.
+
+    If $Y$ is the final object $\mathbb{C}^0$, we also say $X$ is \emph{separated}.
+\end{definition}
+\begin{proposition}\label{prop-separatedchar}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. Then the following are equivalent:
+    \begin{enumerate}
+        \item $f$ is separated;
+        \item $\Delta_{X/Y}:X\rightarrow X\times_Y X$ is closed;
+        \item $\Delta_{X/Y}:X\rightarrow X\times_Y X$ is a closed immersion.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    Recall that finite limits in $\CASCat$ commute with the forgetful functor to $\TopCat$ by \cref{Complex-cor-CASCatfinitecom} in \nameref{Complex-chap-complex}.
+
+    (1) $\equiv$ (2): The undelrying morphism of topological spaces of $\Delta_{X/Y}$ is identified with
+    \[
+        |X|\rightarrow |X|\times_{|Y|} |X|,  
+    \]
+    the topological diagonal. It suffices to apply \cite[\href{https://stacks.math.columbia.edu/tag/0CY2}{Tag 0CY2}]{stacks-project}.
+
+    (2) $\equiv$ (3): We have shown that $\Delta_{X/Y}$ is always an immersion in \cref{ConstructionComplex-prop-diagoimm} in \nameref{ConstructionComplex-chap-constructionComplex}, so $\Delta_{X/Y}$ is a closed immersion if and only if it is closed.
+\end{proof}
+\begin{corollary}
+    Let $X$ be a complex analytic space.
+    The following are equivalent:
+    \begin{enumerate}
+        \item $X$ is separated;
+        \item $X$ is Hausdorff.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    This follows immediately from \cref{prop-separatedchar}.
+\end{proof}
+
+\textcolor{red}{Valuative criterion}
+
+\section{Proper morphisms}
+
+Recall that the notion of separated maps between topological spaces is defined in \cite[\href{https://stacks.math.columbia.edu/tag/01W1}{Tag 01W1}]{stacks-project}.
+
+\begin{definition}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces. We say $f$ is \emph{proper} if $|f|:|X|\rightarrow |Y|$ is proper.
+
+    If $Y$ is the final object $\mathbb{C}^0$, we also say $X$ is \emph{proper}.
+\end{definition}
+
+\textcolor{red}{Valuative criterion}
+
+
+\begin{definition}
+    Let $f:X\rightarrow Y$ be a morphism of complex analytic spaces and $x\in X$. A \emph{relative chart} at $x$ is a closed immersion $U\rightarrow \Delta^n(r)\times V$, where $U$ is an open neighbourhood of $x$ in $X$, $V$ is an open neighbourhood of $f(x)$ in $Y$, $n\in \mathbb{N}$, $r>0$ such that $f(U)\subseteq V$ and the composition $U\rightarrow \Delta^n(r)\times V\rightarrow V$ is the restriction of $f$. 
+\end{definition}
+Recall that $\Delta^n(r)=(\Delta(r))^n$ is $n$-fold product of the disk of radius $r$.
 
 \printbibliography
 \end{document}

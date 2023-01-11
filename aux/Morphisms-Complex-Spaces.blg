@@ -1,15 +1,15 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'aux/Morphisms-Complex-Spaces.blg'
-[69] biber-darwin:340> INFO - === Tue Jan 10, 2023, 17:00:22
+[70] biber-darwin:340> INFO - === Wed Jan 11, 2023, 15:53:23
 [84] Biber.pm:415> INFO - Reading 'aux/Morphisms-Complex-Spaces.bcf'
-[171] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
-[185] Biber.pm:4340> INFO - Processing section 0
-[193] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
-[196] bibtex.pm:1689> INFO - LaTeX decoding ...
-[255] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
-[293] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[294] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[294] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[294] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[299] bbl.pm:654> INFO - Writing 'aux/Morphisms-Complex-Spaces.bbl' with encoding 'UTF-8'
-[300] bbl.pm:757> INFO - Output to aux/Morphisms-Complex-Spaces.bbl
+[172] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
+[186] Biber.pm:4340> INFO - Processing section 0
+[196] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
+[198] bibtex.pm:1689> INFO - LaTeX decoding ...
+[257] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
+[295] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[295] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[295] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[295] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[301] bbl.pm:654> INFO - Writing 'aux/Morphisms-Complex-Spaces.bbl' with encoding 'UTF-8'
+[302] bbl.pm:757> INFO - Output to aux/Morphisms-Complex-Spaces.bbl

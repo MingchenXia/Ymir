@@ -1,15 +1,15 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'aux/Local-Algebras.blg'
-[102] biber-darwin:340> INFO - === Sun Jan  8, 2023, 14:30:19
-[124] Biber.pm:415> INFO - Reading 'aux/Local-Algebras.bcf'
-[276] Biber.pm:952> INFO - Found 3 citekeys in bib section 0
-[307] Biber.pm:4340> INFO - Processing section 0
-[320] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
-[331] bibtex.pm:1689> INFO - LaTeX decoding ...
-[446] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
-[561] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[561] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[561] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[562] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[568] bbl.pm:654> INFO - Writing 'aux/Local-Algebras.bbl' with encoding 'UTF-8'
-[572] bbl.pm:757> INFO - Output to aux/Local-Algebras.bbl
+[127] biber-darwin:340> INFO - === Wed Jan 11, 2023, 15:51:13
+[147] Biber.pm:415> INFO - Reading 'aux/Local-Algebras.bcf'
+[341] Biber.pm:952> INFO - Found 3 citekeys in bib section 0
+[375] Biber.pm:4340> INFO - Processing section 0
+[388] Biber.pm:4531> INFO - Looking for bibtex format file 'Ymir.bib' for section 0
+[391] bibtex.pm:1689> INFO - LaTeX decoding ...
+[570] bibtex.pm:1494> INFO - Found BibTeX data source 'Ymir.bib'
+[655] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[655] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[655] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[655] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[659] bbl.pm:654> INFO - Writing 'aux/Local-Algebras.bbl' with encoding 'UTF-8'
+[661] bbl.pm:757> INFO - Output to aux/Local-Algebras.bbl

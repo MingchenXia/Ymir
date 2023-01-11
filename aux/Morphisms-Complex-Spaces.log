@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  10 JAN 2023 20:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.7)  11 JAN 2023 15:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -937,9 +937,15 @@ Package xr Info: IMPORTING LABELS FROM Properties-Complex-Spaces.aux on input li
 Package xr Info: IMPORTING LABELS FROM Morphisms-Complex-Spaces.aux on input line 356.
 (Morphisms-Complex-Spaces.tex)
 (Morphisms-Complex-Spaces.aux)
-Package xr Info: IMPORTING LABELS FROM Analytic-Sets.aux on input line 357.
+
+Package xr Warning: 
+No file Analytic-Sets.aux
+LABELS NOT IMPORTED.
+ on input line 357.
+
 (Analytic-Sets.tex)
 (Analytic-Sets.aux)
+No file Analytic-Sets.aux.
 Package xr Info: IMPORTING LABELS FROM Global-Properties-Complex-Spaces.aux on input line 358.
 (Global-Properties-Complex-Spaces.tex)
 (Global-Properties-Complex-Spaces.aux)
@@ -1132,9 +1138,11 @@ Overfull \hbox (3.2651pt too wide) detected at line 803
 [] [] \OML/lmm/m/it/10 :
  []
 
-[20]
+[20] [21] [22
+
+]
 Bibliography
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 839.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 897.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1142,26 +1150,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [21
-
-] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Morphisms-Complex-Spaces.aux)
+ [23] (/Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Morphisms-Complex-Spaces.aux)
 Package logreq Info: Writing requests to 'Morphisms-Complex-Spaces.run.xml'.
 \openout1 = `Morphisms-Complex-Spaces.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38229 strings out of 478994
- 730406 string characters out of 5858185
- 1578604 words of memory out of 5000000
- 54619 multiletter control sequences out of 15000+600000
+ 38226 strings out of 478994
+ 730059 string characters out of 5858185
+ 1578042 words of memory out of 5000000
+ 54602 multiletter control sequences out of 15000+600000
  463620 words of font info for 179 fonts, out of 8000000 for 9000
  1304 hyphenation exceptions out of 8191
  132i,15n,133p,1010b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Morphisms-Complex-Spaces.pdf (21 pages, 344975 bytes).
+Output written on /Users/mingchen/Documents/LaTeX_Github/Ymir/aux/Morphisms-Complex-Spaces.pdf (23 pages, 349949 bytes).
 PDF statistics:
- 503 PDF objects out of 1000 (max. 8388607)
- 456 compressed objects within 5 object streams
- 111 named destinations out of 1000 (max. 500000)
- 23109 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 546 PDF objects out of 1000 (max. 8388607)
+ 497 compressed objects within 5 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 23125 words of extra memory for PDF output out of 24883 (max. 10000000)
 
